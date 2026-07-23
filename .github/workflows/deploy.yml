@@ -20,15 +20,22 @@ jobs:
         run: npm run validate
       - name: Build indexes
         run: npm run build:indexes
-      - name: Upload to Cloudflare KV (if secrets present)
+      - name: Upload to Cloudflare KV and optional Worker deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
+          WORKER_DEPLOY: ${{ secrets.WORKER_DEPLOY }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ] || [ -z "$KV_NAMESPACE_ID" ]; then
-            echo "Secrets not fully configured; skipping KV upload (exit 0)."
+            echo "Secrets not fully configured; skipping KV upload and Worker deploy (exit 0)."
             exit 0
           fi
           npm install -g wrangler
           node --experimental-strip-types scripts/upload-kv.ts
+          if [ "$WORKER_DEPLOY" = "true" ]; then
+            echo "WORKER_DEPLOY=true; deploying Worker..."
+            (cd worker && npm ci && npx wrangler deploy)
+          else
+            echo "WORKER_DEPLOY not true; KV uploaded only."
+          fi

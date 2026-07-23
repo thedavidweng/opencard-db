@@ -46,4 +46,17 @@ describe("card schema contract", () => {
       assert.ok(card.id.startsWith(`${card.country}-`));
     }
   });
+
+  it("detects path/id mismatch and duplicate ids", async () => {
+    const { expectedIdFromPath } = await import("../../scripts/lib.ts");
+    const cards = await loadAllCards();
+    const seen = new Map<string, string>();
+    for (const { file, card } of cards) {
+      const expected = expectedIdFromPath(file);
+      assert.equal(card.id, expected.id);
+      assert.equal(card.country, expected.country);
+      assert.equal(seen.has(card.id), false, `duplicate id ${card.id}`);
+      seen.set(card.id, file);
+    }
+  });
 });

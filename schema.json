@@ -44,7 +44,8 @@
     },
     "country": {
       "type": "string",
-      "enum": ["us", "ca", "cn"]
+      "pattern": "^[a-z]{2}$",
+      "description": "ISO-ish market code (us, ca, cn, …). New countries need a data/ directory only; no enum bump."
     },
     "issuer": { "type": "string", "minLength": 1 },
     "issuer_id": {
