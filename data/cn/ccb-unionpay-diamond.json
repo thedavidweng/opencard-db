@@ -1,0 +1,109 @@
+{
+  "id": "cn-ccb-unionpay-diamond",
+  "schema_version": "1.0.0",
+  "name": "建设银行银联钻石卡",
+  "localized_names": {
+    "zh-Hans": "建设银行银联钻石卡",
+    "en": "CCB UnionPay Diamond Card"
+  },
+  "country": "cn",
+  "issuer": "中国建设银行",
+  "issuer_id": "ccb",
+  "network": "unionpay",
+  "network_tier": "diamond",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "CNY",
+    "first_year": null,
+    "waiver_conditions": "年费与减免以建行钻石卡产品页为准。"
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": null },
+    "notes": "以建设银行信用卡业务规定为准。"
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "境外交易相关费用以建行及银联规则为准。"
+  },
+  "credit_required": {
+    "score_band": "unknown",
+    "notes": "高阶卡种审批门槛较高。"
+  },
+  "rewards": {
+    "currency": "ccb_points",
+    "currency_label": "建行积分/龙卡积分",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "按建行积分规则累计。"
+    },
+    "categories": [],
+    "redemption_notes": "以建行积分兑换规则为准。"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "unionpay-diamond-package",
+      "title": "银联钻石权益",
+      "title_zh": "银联钻石权益",
+      "category": "other",
+      "source": "network",
+      "description": "银联钻石级网络权益包（礼宾、出行等），以银联与建行当期公布为准。",
+      "network_tier_required": "diamond"
+    },
+    {
+      "id": "airport-lounge",
+      "title": "机场及出行贵宾服务",
+      "title_zh": "机场及出行贵宾服务",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "建行钻石卡配套贵宾厅/礼宾次数，以产品说明为准。"
+    },
+    {
+      "id": "concierge",
+      "title": "专属礼宾服务",
+      "title_zh": "专属礼宾服务",
+      "category": "other",
+      "source": "issuer",
+      "description": "高端客户礼宾与出行安排协助。"
+    },
+    {
+      "id": "travel-insurance",
+      "title": "旅行保险",
+      "title_zh": "旅行保险",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "符合条件的旅行意外等保障。",
+      "details": {
+        "conditions": "详见建行保险说明"
+      }
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "建行/银联钻石合作贵宾厅",
+      "visits_per_year": null,
+      "notes": "钻石级次数通常高于白金；以官方为准。"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.ccb.com/",
+  "image": {
+    "url": null,
+    "attribution": "© 中国建设银行",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.ccb.com/",
+    "https://en.ccb.com/"
+  ],
+  "notes": "用于验证 network_tier=diamond 与银联高阶权益建模；具体卡种名称与年费请对照建行官方产品列表更新。"
+}

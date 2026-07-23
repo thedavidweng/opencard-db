@@ -1,0 +1,97 @@
+{
+  "id": "ca-amex-cobalt",
+  "schema_version": "1.0.0",
+  "name": "American Express Cobalt® Card",
+  "localized_names": {
+    "en": "American Express Cobalt® Card",
+    "fr": "Carte American Express Cobalt®"
+  },
+  "country": "ca",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 12.99,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "Monthly fee model; first months often promotional — confirm on Amex Canada."
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": "variable" },
+    "notes": "See Amex Canada product page for current rates."
+  },
+  "fx_fee": { "percent": 2.5, "notes": "Foreign conversion fee typically applies; confirm current percentage." },
+  "credit_required": {
+    "score_band": "good",
+    "notes": "Canadian credit approval criteria apply."
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other purchases"
+    },
+    "categories": [
+      {
+        "label": "Groceries, dining, transit, and select streaming (earn rates per Amex Canada)",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards Canada transfer and travel redemption options."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "CAD",
+    "months": null,
+    "description": "Welcome bonus varies; verify on American Express Canada apply page.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for eligible purchases against theft or damage for a limited period.",
+      "details": {
+        "conditions": "See Amex Canada Certificate of Insurance."
+      }
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Buyer's Assurance / Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extends manufacturer warranty on eligible purchases."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
+    "https://www.americanexpress.com/ca/en/credit-cards/"
+  ],
+  "notes": "Cobalt is the product name, not a Network Tier."
+}

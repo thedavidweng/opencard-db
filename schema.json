@@ -1,0 +1,305 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/thedavidweng/opencard-db/schema.json",
+  "title": "OpenCard DB Card",
+  "description": "A single credit card product offering. Network Tier is a free-form network package slug (not a product name). Issuer and Network are independent fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "schema_version",
+    "name",
+    "country",
+    "issuer",
+    "issuer_id",
+    "network",
+    "network_tier",
+    "type",
+    "status",
+    "annual_fee",
+    "rewards",
+    "benefits",
+    "official_url",
+    "last_verified",
+    "sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Stable Card Id: {country}-{slug}"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "localized_names": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "propertyNames": { "pattern": "^[a-z]{2}(-[A-Za-z]+)?$" }
+    },
+    "country": {
+      "type": "string",
+      "enum": ["us", "ca", "cn"]
+    },
+    "issuer": { "type": "string", "minLength": 1 },
+    "issuer_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "network": {
+      "type": "string",
+      "enum": ["visa", "mastercard", "amex", "discover", "unionpay", "jcb", "other"]
+    },
+    "network_tier": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Network package slug (infinite, signature, world_elite, diamond, none, …). Not product names like Cobalt/Gold."
+    },
+    "additional_networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["network", "network_tier"],
+        "properties": {
+          "network": {
+            "type": "string",
+            "enum": ["visa", "mastercard", "amex", "discover", "unionpay", "jcb", "other"]
+          },
+          "network_tier": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "type": {
+      "type": "string",
+      "enum": ["credit", "charge", "debit", "other"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "invite_only", "discontinued", "unknown"]
+    },
+    "annual_fee": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["amount", "currency"],
+      "properties": {
+        "amount": { "type": ["number", "null"] },
+        "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "first_year": { "type": ["number", "null"] },
+        "waiver_conditions": { "type": ["string", "null"] }
+      }
+    },
+    "apr": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "purchase": { "$ref": "#/$defs/aprRange" },
+        "cash_advance": { "$ref": "#/$defs/aprRange" },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "fx_fee": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "percent": { "type": ["number", "null"] },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "credit_required": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "score_band": {
+          "type": ["string", "null"],
+          "enum": [
+            "excellent",
+            "good_to_excellent",
+            "good",
+            "fair",
+            "limited",
+            "unknown",
+            null
+          ]
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "rewards": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currency", "structure", "base_rate"],
+      "properties": {
+        "currency": { "type": "string", "minLength": 1 },
+        "currency_label": { "type": "string" },
+        "structure": {
+          "type": "string",
+          "enum": ["single", "multi", "choice"]
+        },
+        "base_rate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["points_per_dollar"],
+          "properties": {
+            "points_per_dollar": { "type": ["number", "null"] },
+            "description": { "type": ["string", "null"] }
+          }
+        },
+        "categories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "points_per_dollar"],
+            "properties": {
+              "label": { "type": "string" },
+              "points_per_dollar": { "type": ["number", "null"] },
+              "cap": {
+                "type": ["object", "null"],
+                "additionalProperties": false,
+                "properties": {
+                  "amount": { "type": ["number", "null"] },
+                  "currency": { "type": "string" },
+                  "period": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "redemption_notes": { "type": ["string", "null"] }
+      }
+    },
+    "signup_bonus": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "amount": { "type": ["number", "null"] },
+        "unit": { "type": ["string", "null"] },
+        "spend_required": { "type": ["number", "null"] },
+        "spend_currency": { "type": ["string", "null"] },
+        "months": { "type": ["number", "null"] },
+        "description": { "type": ["string", "null"] },
+        "as_of": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      }
+    },
+    "benefits": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/benefit" }
+    },
+    "travel_perks": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "lounge_access": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "program": { "type": ["string", "null"] },
+            "visits_per_year": { "type": ["number", "null"] },
+            "notes": { "type": ["string", "null"] }
+          }
+        },
+        "tsa_precheck_credit": { "$ref": "#/$defs/creditPerk" },
+        "global_entry_credit": { "$ref": "#/$defs/creditPerk" },
+        "free_checked_bags": { "type": ["string", "null"] },
+        "hotel_status": { "type": ["string", "null"] },
+        "other": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "official_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "image": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": ["string", "null"], "format": "uri" },
+        "attribution": { "type": ["string", "null"] },
+        "local_path": { "type": ["string", "null"] }
+      }
+    },
+    "bin_hints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "last_verified": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "format": "uri" }
+    },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "aprRange": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": ["number", "null"] },
+        "max": { "type": ["number", "null"] },
+        "type": {
+          "type": ["string", "null"],
+          "enum": ["variable", "fixed", null]
+        }
+      }
+    },
+    "creditPerk": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "amount": { "type": ["number", "null"] },
+        "currency": { "type": ["string", "null"] },
+        "period": { "type": ["string", "null"] }
+      }
+    },
+    "benefit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "category", "source", "description"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "title_zh": { "type": ["string", "null"] },
+        "category": {
+          "type": "string",
+          "enum": [
+            "insurance",
+            "lounge",
+            "credit",
+            "waiver",
+            "acceleration",
+            "other"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "enum": ["network", "issuer", "co-brand"]
+        },
+        "description": { "type": "string" },
+        "details": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "network_tier_required": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "id": "us-amex-gold",
+  "schema_version": "1.0.0",
+  "name": "American Express® Gold Card",
+  "localized_names": { "en": "American Express® Gold Card" },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 325,
+    "currency": "USD",
+    "first_year": 325,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": "variable" },
+    "notes": "See American Express for current APR; product terms vary by offer."
+  },
+  "fx_fee": { "percent": 2.7, "notes": "Foreign transaction fee may apply; confirm current terms." },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Restaurants worldwide",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 25000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Flights booked directly with airlines or via Amex Travel",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Transfer partners and statement credits via Amex Travel; rates vary."
+  },
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "points",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Welcome offer varies by channel; confirm on official apply page.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "dining-credit",
+      "title": "Uber Cash / dining credit bundle",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Monthly Uber Cash and periodic dining statement credits when enrolled; exact amounts change with offer terms."
+    },
+    {
+      "id": "dunkin-credit",
+      "title": "Dunkin' statement credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Monthly Dunkin' credit when enrolled; terms apply."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers eligible purchases against accidental damage or theft for a limited period.",
+      "details": {
+        "conditions": "See American Express Guide to Benefits."
+      }
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary coverage on eligible rentals when paid with the card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
+    "https://www.americanexpress.com/us/credit-cards/"
+  ],
+  "notes": "Product name Gold is not a Network Tier; network_tier is none for Amex network packages."
+}

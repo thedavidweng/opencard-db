@@ -1,0 +1,128 @@
+{
+  "id": "us-chase-sapphire-preferred",
+  "schema_version": "1.0.0",
+  "name": "Chase Sapphire Preferred® Card",
+  "localized_names": { "en": "Chase Sapphire Preferred® Card" },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": 19.99, "max": 28.49, "type": "variable" },
+    "notes": "Variable APR; see current Chase offer for exact range."
+  },
+  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Chase generally targets good-to-excellent credit."
+  },
+  "rewards": {
+    "currency": "ultimate_rewards",
+    "currency_label": "Ultimate Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other purchases"
+    },
+    "categories": [
+      {
+        "label": "Travel booked through Chase Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Dining including eligible delivery services",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Select streaming services",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Online grocery purchases (excluding Target, Walmart, wholesale clubs)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Other travel",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary."
+  },
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "points",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn bonus Ultimate Rewards points after meeting minimum spend; offer varies.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation/Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for eligible prepaid trip costs when a covered reason cancels or interrupts travel.",
+      "details": {
+        "conditions": "Must charge eligible trip costs to the card; see Guide to Benefits."
+      }
+    },
+    {
+      "id": "baggage-delay",
+      "title": "Baggage Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement for essential purchases when baggage is delayed."
+    },
+    {
+      "id": "primary-rental-cdw",
+      "title": "Primary Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Primary CDW on eligible rentals when you decline the rental company's collision coverage and pay with the card."
+    },
+    {
+      "id": "doorstep-delivery",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary DashPass subscription for a promotional period; terms apply."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": ["No foreign transaction fees"]
+  },
+  "official_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+  "image": {
+    "url": "https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+    "https://www.chase.com/personal/credit-cards/sapphire/preferred"
+  ],
+  "notes": "Signup bonus and APR ranges change frequently; verify on official page before publishing comparisons."
+}

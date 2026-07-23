@@ -1,0 +1,120 @@
+{
+  "id": "ca-td-aeroplan-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "TD® Aeroplan® Visa Infinite*",
+  "localized_names": {
+    "en": "TD® Aeroplan® Visa Infinite*",
+    "fr": "Visa Infinite* TDMD AéroplanMD"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 139,
+    "currency": "CAD",
+    "first_year": 139,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": "variable" },
+    "notes": "See TD Canada Trust for current rates."
+  },
+  "fx_fee": {
+    "percent": 2.5,
+    "notes": "Foreign currency conversion fee typically applies; confirm current TD terms."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "aeroplan",
+    "currency_label": "Aeroplan points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x Aeroplan points on other purchases"
+    },
+    "categories": [
+      {
+        "label": "Air Canada and eligible Aeroplan partners (elevated earn)",
+        "points_per_dollar": 1.5,
+        "cap": null
+      },
+      {
+        "label": "Grocery and gas (elevated earn per TD grid)",
+        "points_per_dollar": 1.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem via Aeroplan for flights, hotels, and partners."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "CAD",
+    "months": null,
+    "description": "Welcome Aeroplan bonus varies by offer; see TD apply page.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "aeroplan-family-sharing",
+      "title": "Aeroplan family sharing / companion benefits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Aeroplan program benefits tied to cardholder status; confirm current TD × Aeroplan perks."
+    },
+    {
+      "id": "travel-medical",
+      "title": "Travel Medical Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Emergency medical insurance for eligible trips; age and duration limits apply.",
+      "details": {
+        "conditions": "See TD certificate of insurance."
+      }
+    },
+    {
+      "id": "flight-delay",
+      "title": "Flight Delay and Baggage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for eligible flight delays and delayed/lost baggage when fare is charged to the card."
+    },
+    {
+      "id": "visa-infinite-concierge",
+      "title": "Visa Infinite Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "Concierge services available to Visa Infinite cardholders in Canada.",
+      "network_tier_required": "infinite"
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
+  "image": {
+    "url": null,
+    "attribution": "© The Toronto-Dominion Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
+    "https://www.td.com/ca/en/personal-banking/products/credit-cards"
+  ],
+  "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada."
+}

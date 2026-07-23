@@ -1,0 +1,118 @@
+{
+  "id": "cn-cmb-classic-platinum",
+  "schema_version": "1.0.0",
+  "name": "招商银行经典白金卡",
+  "localized_names": {
+    "zh-Hans": "招商银行经典白金卡",
+    "en": "China Merchants Bank Classic Platinum Card"
+  },
+  "country": "cn",
+  "issuer": "招商银行",
+  "issuer_id": "cmb",
+  "network": "unionpay",
+  "network_tier": "platinum",
+  "additional_networks": [],
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 3600,
+    "currency": "CNY",
+    "first_year": 3600,
+    "waiver_conditions": "消费达标或指定条件可减免年费；以招行当期规则为准。"
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": null },
+    "notes": "中国大陆信用卡利息与分期费率以招行最新公告为准。"
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "境外交易与货币兑换费用以招行及银联/合作网络规则为准。"
+  },
+  "credit_required": {
+    "score_band": "unknown",
+    "notes": "需符合招行信用卡审批条件。"
+  },
+  "rewards": {
+    "currency": "cmb_points",
+    "currency_label": "招商银行积分",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "按招行积分规则累计；不同商户类别倍率不同。"
+    },
+    "categories": [],
+    "redemption_notes": "积分兑换礼品、航空里程等，以招行积分商城为准。"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": "CNY",
+    "months": null,
+    "description": "开卡礼与首刷礼以招行当期活动为准。",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "airport-lounge",
+      "title": "机场贵宾厅",
+      "title_zh": "机场贵宾厅",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "指定次数机场/高铁贵宾厅或休息室权益，具体次数与合作机构以招行公告为准。"
+    },
+    {
+      "id": "annual-fee-waiver",
+      "title": "消费达标免年费",
+      "title_zh": "消费达标免年费",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "满足招行规定的刷卡金额或其他条件可减免年费。"
+    },
+    {
+      "id": "travel-insurance",
+      "title": "旅行意外保险",
+      "title_zh": "旅行意外保险",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "使用本卡支付交通费用等条件下的旅行意外保障，保额与条款以保单/招行说明为准。",
+      "details": {
+        "conditions": "详见招商银行信用卡保险说明"
+      }
+    },
+    {
+      "id": "unionpay-platinum-perks",
+      "title": "银联白金权益包",
+      "title_zh": "银联白金权益包",
+      "category": "other",
+      "source": "network",
+      "description": "银联白金级网络权益（如有），以银联与招行当期说明为准。",
+      "network_tier_required": "platinum"
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "招行/合作贵宾厅",
+      "visits_per_year": null,
+      "notes": "次数与机场列表以招行最新规则为准。"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://creditcard.cmbchina.com/",
+  "image": {
+    "url": null,
+    "attribution": "© 招商银行",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://creditcard.cmbchina.com/",
+    "https://www.cmbchina.com/"
+  ],
+  "notes": "经典白金系列具体产品线、年费与贵宾厅次数请以招行产品页为准；本记录为代表性银联白金结构样例。"
+}

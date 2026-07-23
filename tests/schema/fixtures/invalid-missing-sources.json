@@ -1,0 +1,22 @@
+{
+  "id": "us-invalid-missing-sources",
+  "schema_version": "1.0.0",
+  "name": "Invalid Card",
+  "country": "us",
+  "issuer": "Test",
+  "issuer_id": "test",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": { "amount": 0, "currency": "USD" },
+  "rewards": {
+    "currency": "points",
+    "structure": "single",
+    "base_rate": { "points_per_dollar": 1 }
+  },
+  "benefits": [],
+  "official_url": "https://example.com",
+  "last_verified": "2026-07-23",
+  "sources": []
+}

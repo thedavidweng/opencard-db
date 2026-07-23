@@ -1,0 +1,115 @@
+{
+  "id": "cn-icbc-amex-platinum",
+  "schema_version": "1.0.0",
+  "name": "工商银行牡丹运通白金卡",
+  "localized_names": {
+    "zh-Hans": "工商银行牡丹运通白金卡",
+    "en": "ICBC Peony American Express Platinum Card"
+  },
+  "country": "cn",
+  "issuer": "中国工商银行",
+  "issuer_id": "icbc",
+  "network": "amex",
+  "network_tier": "none",
+  "additional_networks": [
+    {
+      "network": "unionpay",
+      "network_tier": "platinum"
+    }
+  ],
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 2000,
+    "currency": "CNY",
+    "first_year": 2000,
+    "waiver_conditions": "达标减免规则以工行当期产品说明为准。"
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": null },
+    "notes": "利率与分期以工商银行公告为准。"
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "境外交易费用以工行与运通/银联规则为准。"
+  },
+  "credit_required": {
+    "score_band": "unknown",
+    "notes": "需符合工行信用卡审批条件。"
+  },
+  "rewards": {
+    "currency": "icbc_points",
+    "currency_label": "工行积分",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "按工行积分规则累计。"
+    },
+    "categories": [],
+    "redemption_notes": "积分兑换以工行积分体系为准。"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "amex-platinum-lifestyle",
+      "title": "运通白金礼遇",
+      "title_zh": "运通白金礼遇",
+      "category": "other",
+      "source": "network",
+      "description": "美国运通网络相关礼遇（如有），以运通与工行说明为准。产品名中的「白金」不是 Network Tier 字段值。"
+    },
+    {
+      "id": "unionpay-platinum",
+      "title": "银联白金权益",
+      "title_zh": "银联白金权益",
+      "category": "other",
+      "source": "network",
+      "description": "双标卡银联侧白金级权益（如适用）。",
+      "network_tier_required": "platinum"
+    },
+    {
+      "id": "airport-lounge",
+      "title": "机场贵宾服务",
+      "title_zh": "机场贵宾服务",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "工行提供的机场贵宾厅或礼宾服务，次数以产品页为准。"
+    },
+    {
+      "id": "travel-insurance",
+      "title": "旅行保险",
+      "title_zh": "旅行保险",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "符合条件的旅行意外或行程类保障。",
+      "details": {
+        "conditions": "详见工商银行保险条款"
+      }
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "工行/合作贵宾厅",
+      "visits_per_year": null,
+      "notes": null
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.icbc.com.cn/icbc/%E4%BF%A1%E7%94%A8%E5%8D%A1/",
+  "image": {
+    "url": null,
+    "attribution": "© 中国工商银行",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.icbc.com.cn/icbc/%E4%BF%A1%E7%94%A8%E5%8D%A1/",
+    "https://www.icbc.com.cn/"
+  ],
+  "notes": "Issuer=工行, Network=amex（发卡组织独立）。双标时银联侧在 additional_networks。具体产品线名称以工行最新卡种为准。"
+}

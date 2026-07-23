@@ -1,0 +1,106 @@
+{
+  "id": "us-capital-one-venture",
+  "schema_version": "1.0.0",
+  "name": "Capital One Venture Rewards Credit Card",
+  "localized_names": { "en": "Capital One Venture Rewards Credit Card" },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "First-year annual fee $0 on many offers; confirm current terms."
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": "variable" },
+    "notes": "Variable APR; see Capital One for current range."
+  },
+  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Capital One miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2x miles on every purchase"
+    },
+    "categories": [
+      {
+        "label": "Hotels and rental cars booked through Capital One Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles redeem for travel statement credits or transfer to partners."
+  },
+  "signup_bonus": {
+    "amount": 75000,
+    "unit": "miles",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Welcome bonus miles after meeting minimum spend; offer varies.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "tsa-global-entry",
+      "title": "Global Entry or TSA PreCheck credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit for Global Entry or TSA PreCheck application fee when charged to the card; cadence per Capital One terms."
+    },
+    {
+      "id": "travel-accident",
+      "title": "Travel Accident Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for eligible accidents on common carriers when fare is charged to the card."
+    },
+    {
+      "id": "car-rental-insurance",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary CDW on eligible rentals when paid with the card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": {
+      "amount": null,
+      "currency": "USD",
+      "period": "see_issuer_terms"
+    },
+    "global_entry_credit": {
+      "amount": null,
+      "currency": "USD",
+      "period": "see_issuer_terms"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": ["No foreign transaction fees"]
+  },
+  "official_url": "https://www.capitalone.com/credit-cards/venture/",
+  "image": {
+    "url": null,
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/venture/",
+    "https://www.capitalone.com/credit-cards/"
+  ],
+  "notes": "Venture X is a separate product; this record is the Venture Rewards card."
+}
