@@ -1,0 +1,146 @@
+{
+  "id": "us-capital-one-venture-x",
+  "schema_version": "1.0.0",
+  "name": "Capital One Venture X Rewards Credit Card",
+  "localized_names": {
+    "en": "Capital One Venture X Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 395,
+    "currency": "USD",
+    "first_year": 395,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Variable purchase APR from Capital One product page."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "Capital One lists credit level Excellent."
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Capital One miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2x miles on every purchase"
+    },
+    "categories": [
+      {
+        "label": "Hotels and rental cars booked through Capital One Travel",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Flights and vacation rentals booked through Capital One Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Capital One Entertainment purchases",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles redeem via Capital One Travel or transfer partners; 10,000 anniversary bonus miles after each account anniversary."
+  },
+  "signup_bonus": {
+    "amount": 75000,
+    "unit": "miles",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Welcome bonus marketed as 75,000 miles (spend threshold/months vary by current Capital One offer — confirm on product page).",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "annual-travel-credit",
+      "title": "$300 Capital One Travel credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$300 annual credit for hotels, flights, vacation rentals and related Capital One Travel purchases."
+    },
+    {
+      "id": "anniversary-miles",
+      "title": "10,000 anniversary bonus miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 10,000 bonus miles after each account anniversary, starting with the first."
+    },
+    {
+      "id": "capital-one-lounges",
+      "title": "Capital One Lounges and Landings access",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Primary cardholders: access to Capital One Lounge and Landing locations subject to space; guest and authorized-user policies updated in 2026 — confirm current terms."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass lounges",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Access to 1,300+ participating Priority Pass lounges worldwide after enrollment; guest rules may differ from Capital One Lounges."
+    },
+    {
+      "id": "tsa-global-entry",
+      "title": "TSA PreCheck or Global Entry credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit for TSA PreCheck or Global Entry application fee when charged to the card; amount/cadence per Capital One terms."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Capital One Lounges/Landings + Priority Pass",
+      "visits_per_year": null,
+      "notes": "Primary cardholder complimentary access; AU/guest fees or spend unlocks may apply after 2026 policy changes."
+    },
+    "tsa_precheck_credit": {
+      "amount": null,
+      "currency": "USD",
+      "period": "see_issuer_terms"
+    },
+    "global_entry_credit": {
+      "amount": null,
+      "currency": "USD",
+      "period": "see_issuer_terms"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "$300 Capital One Travel credit",
+      "10,000 anniversary miles",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.capitalone.com/credit-cards/venture-x/",
+  "image": {
+    "url": "https://ecm.capitalone.com/WCM/card/products/venture-x-card-art.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/venture-x/"
+  ],
+  "notes": "Distinct from Capital One Venture Rewards. Lounge guest/AU rules changed in 2026 — verify before citing access for guests."
+}
