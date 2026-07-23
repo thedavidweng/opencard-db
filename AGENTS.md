@@ -2,7 +2,7 @@
 
 ### Issue tracker
 
-Issues live in this repo's GitHub Issues (`gh` CLI). See `docs/agents/issue-tracker.md`.
+Issues and product specs (PRDs) live in this repo's GitHub Issues (`gh` CLI). See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
@@ -10,7 +10,7 @@ Standard five-role vocabulary (`needs-triage`, `needs-info`, `ready-for-agent`, 
 
 ### Domain docs
 
-Single-context. Product design: `docs/superpowers/specs/2026-07-23-opencard-db-design.md`. See `docs/agents/domain.md`.
+Single-context. Glossary: `CONTEXT.md`. ADRs: `docs/adr/`. Product spec: [Spec: OpenCard DB v1 production system](https://github.com/thedavidweng/opencard-db/issues/10). See `docs/agents/domain.md`.
 
 ### Wayfinding
 

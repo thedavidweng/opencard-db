@@ -17,9 +17,9 @@ Open-source, structured, community-maintainable **credit card product metadata**
 
 ## Design
 
-Full production design (locked for v1):
-
-- [`docs/superpowers/specs/2026-07-23-opencard-db-design.md`](docs/superpowers/specs/2026-07-23-opencard-db-design.md)
+- **Spec (PRD):** [Spec: OpenCard DB v1 production system](https://github.com/thedavidweng/opencard-db/issues/10)
+- **Glossary:** [`CONTEXT.md`](CONTEXT.md)
+- **ADRs:** [`docs/adr/`](docs/adr/)
 
 ## Licenses
 
