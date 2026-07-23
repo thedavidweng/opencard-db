@@ -1,0 +1,89 @@
+{
+  "id": "us-citi-custom-cash",
+  "schema_version": "1.0.0",
+  "name": "Citi Custom Cash® Card",
+  "localized_names": {
+    "en": "Citi Custom Cash® Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See Citi Important Terms for current APR; intro APR may apply."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Confirm foreign purchase fee on current Citi pricing disclosures."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "thankyou_points",
+    "currency_label": "ThankYou Points / cash back",
+    "structure": "choice",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on other purchases"
+    },
+    "categories": [
+      {
+        "label": "Top eligible spend category each billing cycle",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 500,
+          "currency": "USD",
+          "period": "billing_cycle"
+        }
+      }
+    ],
+    "redemption_notes": "Earn 5% cash back on your highest eligible spend category each billing cycle up to $500 spent, then typically 1%."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Cash back welcome bonus after qualifying purchases; amount and spend threshold are personalized on Citi.com and vary by channel.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "mastercard-id-theft",
+      "title": "Mastercard ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "ID theft monitoring/protection benefits offered through Mastercard; enrollment and terms apply."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
+  "image": {
+    "url": null,
+    "attribution": "© Citibank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-custom-cash-credit-card"
+  ],
+  "notes": "Citi personalizes APR/bonus on-page; network tier assumed Mastercard World — confirm on card art/Guide to Benefits. Prefer official image URL when available."
+}
