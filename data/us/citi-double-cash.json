@@ -1,0 +1,79 @@
+{
+  "id": "us-citi-double-cash",
+  "schema_version": "1.0.0",
+  "name": "Citi Double Cash® Card",
+  "localized_names": {
+    "en": "Citi Double Cash® Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See Citi Important Terms; rates personalized."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign purchase fee percentage is disclosed on Citi pricing table (value personalized in HTML); confirm current percentage in Important Terms."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back: 1% when you buy plus an additional 1% as you pay"
+    },
+    "categories": [],
+    "redemption_notes": "No category enrollment; no stated earn caps on the product page."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Cash back bonus after qualifying purchases; dollar amount personalized on Citi.com.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "mastercard-id-theft",
+      "title": "Mastercard ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "ID theft protection program offered by Mastercard; terms apply."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+  "image": {
+    "url": null,
+    "attribution": "© Citibank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-double-cash-credit-card"
+  ],
+  "notes": "Classic 1%+1% cash-back structure; bonus and FX fee percent are dynamically inserted — verify Important Terms before quoting exact figures."
+}
