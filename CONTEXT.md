@@ -25,8 +25,8 @@ _Avoid_: deleted, archived as the only model, is_active boolean alone
 ### Parties
 
 **Issuer**:
-The bank or lender brand that extends credit and markets the Card (Chase, Amex, 招商银行, RBC). Display name in `issuer`; stable slug in `issuer_id`. The same brand may also be a Network (closed-loop).
-_Avoid_: co-brand partner, legal entity name as primary identity, bank (when you mean Network)
+The bank or lender brand that extends credit and markets the Card (Chase, Amex, Scotiabank, 招商银行, RBC). Display name in `issuer`; stable slug in `issuer_id`. **Independent of Network.** When Amex both issues and runs the network, both fields are Amex. When a bank issues an Amex Card, Issuer is the bank and Network is Amex (e.g. Scotiabank + Amex).
+_Avoid_: co-brand partner; conflating Issuer with Network; legal entity name as primary identity
 
 **Co-brand Partner**:
 A non-issuer brand attached to the product (airline, hotel, retailer). Not an Issuer; perks from them use Benefit Source `co-brand`.
@@ -35,12 +35,12 @@ _Avoid_: second issuer, co-issuer (unless legally true and still modeled as part
 ### Network
 
 **Network**:
-The card network brand that carries the product (`visa`, `mastercard`, `amex`, `discover`, `unionpay`, …). Dual-network Cards have one primary Network plus zero or more Additional Networks. Closed-loop brands (Amex, Discover) are both Issuer and Network on the same Card.
-_Avoid_: scheme (except when quoting external docs), payment rail
+The card network / 发卡组织 that carries the product (`visa`, `mastercard`, `amex`, `discover`, `unionpay`, …). Always a separate field from Issuer — never assumed equal for Amex or Discover. Dual-network Cards have one primary Network plus zero or more Additional Networks.
+_Avoid_: scheme (except when quoting external docs); treating Network as “same as Issuer”
 
 **Network Tier**:
-A free-form lowercase slug for the network product tier on this Card (e.g. `infinite`, `signature`, `world_elite`, `world`, `diamond`, `platinum`, `standard`, `none`). First-class and **global** — not China-only. Conventions are documented, not a closed schema enum. For open networks (Visa/MC/UnionPay), use the network package name. For closed-loop (Amex/Discover), use the product’s tier-like name when that is how the network packages benefits (`gold`, `platinum`, `cobalt`, …) or `none` if not meaningful.
-_Avoid_: card level, grade, 等级 as a free-floating field outside Network; embedding network name inside the tier string (`visa:infinite`)
+A free-form lowercase slug for the **network product package** (e.g. Visa `infinite` / `signature`, Mastercard `world_elite` / `world`, UnionPay `diamond` / `platinum`, or `none` when there is no network package). First-class and **global**. Not a closed schema enum. **Product marketing names** (Cobalt, Gold, Platinum, Sapphire Preferred, etc.) live in the Card **name**, never as Network Tier.
+_Avoid_: product line names as tiers; card level; embedding network inside the tier string (`visa:infinite`)
 
 **Additional Network**:
 A secondary Network + Network Tier pair on the same Card (common for dual-brand 双标 products). Does not create a second Card.

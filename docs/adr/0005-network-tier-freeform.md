@@ -1,9 +1,16 @@
 # Network Tier is a free-form global slug, not a closed enum
 
-`network_tier` is a lowercase string with documented conventions (`infinite`, `signature`, `world_elite`, `diamond`, `platinum`, `standard`, `none`, …). JSON Schema does not enumerate an exhaustive closed set. New network packages can be added without a schema major version. Indexes group by exact string match.
+`network_tier` is a lowercase string with documented conventions for **network packages** (`infinite`, `signature`, `world_elite`, `world`, `diamond`, `platinum` for UnionPay-style packages, `standard`, `none`, …). JSON Schema does not use an exhaustive closed enum. New network packages can be added without a schema major version. Indexes group by exact string match.
 
-For open networks (Visa, Mastercard, UnionPay), the slug reflects the network product package. For closed-loop networks (Amex, Discover), the slug reflects the product’s tier-like packaging when useful, else `none`. Do not encode the network name into the tier string (avoid `visa:infinite`); `network` is a separate field.
+**Issuer and Network are independent fields.** Amex and Discover are networks (发卡组织). The issuing bank is always recorded separately. Examples:
+
+- Amex-issued Amex Card → `issuer_id=amex`, `network=amex`, `network_tier` usually `none` (unless a true network package applies).
+- Scotiabank-issued Amex Card → `issuer_id=scotiabank`, `network=amex`, `network_tier` usually `none`.
+
+**Product names are not Network Tiers.** Cobalt, Gold, Platinum, Sapphire Preferred, etc. belong in the Card `name` (and slug), not in `network_tier`.
+
+Do not encode the network name into the tier string (avoid `visa:infinite`); `network` is a separate field.
 
 **Status:** accepted
 
-**Considered options:** closed JSON Schema enum; hierarchical `network:tier` codes. Rejected because tiers change faster than schema PRs, and hierarchical codes duplicate `network`.
+**Considered options:** closed JSON Schema enum; hierarchical `network:tier` codes; using product line names (Gold/Cobalt) as Network Tier for Amex. Rejected: enums lag reality; hierarchical codes duplicate `network`; product names are not network packages.
