@@ -4,6 +4,10 @@
 
 Issues live in this repo's GitHub Issues (`gh` CLI). See `docs/agents/issue-tracker.md`.
 
+### Triage labels
+
+Standard five-role vocabulary (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
 ### Domain docs
 
 Single-context. Product design: `docs/superpowers/specs/2026-07-23-opencard-db-design.md`. See `docs/agents/domain.md`.
