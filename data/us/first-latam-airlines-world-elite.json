@@ -102,8 +102,6 @@
   ],
   "travel_perks": {
     "lounge_access": {
-      "program": null,
-      "visits_per_year": null,
       "notes": "LATAM Airlines-operated VIP Lounges (up to 2 accesses, World Elite only)"
     },
     "tsa_precheck_credit": null,
