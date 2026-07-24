@@ -13,58 +13,138 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 70,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 70,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 27.49,
       "type": "variable"
     },
-    "notes": "See Bank of America for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 27.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "notes": "Variable APR on purchases and balance transfers based on creditworthiness. $70 for the company and $25 per additional card."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No international transaction fees."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "excellent",
+    "notes": "Requires excellent credit per NerdWallet."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "alaska_mileage_plan",
+    "currency_label": "Alaska Mileage Plan miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Alaska Airlines and Hawaiian Airlines purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas, EV charging, shipping, local transit (including rideshare)",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points are Alaska Mileage Plan miles. Redeem for flights on Alaska Airlines, Hawaiian Airlines, oneworld Alliance members, and Global Partners to 1,000+ destinations. No blackout dates on Alaska/Hawaiian flights. 10% rewards bonus on all points if company has eligible BofA small business account."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 70000,
+    "unit": "miles",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Limited-time offer: 70,000 bonus miles and a $99 Companion Fare (plus taxes and fees from $23) after $4,000 in purchases within first 90 days.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "companion-fare",
+      "title": "$99 Companion Fare (Annual)",
+      "category": "other",
+      "source": "co-brand",
+      "description": "$99 Companion Fare (plus taxes and fees from $23) every year after spending $6,000 on purchases with your card."
+    },
+    {
+      "id": "free-checked-bag",
+      "title": "Free Checked Bag",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Free checked bag for cardholder and up to 6 guests on same reservation when paying for Alaska/Hawaiian Airlines flight with card."
+    },
+    {
+      "id": "preferred-boarding",
+      "title": "Preferred Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Preferred boarding when paying for Alaska/Hawaiian Airlines flight with card."
+    },
+    {
+      "id": "inflight-discount",
+      "title": "20% Back on Inflight Purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "20% back on Alaska Airlines and Hawaiian Airlines inflight purchases when paying with card."
+    },
+    {
+      "id": "lounge-discount",
+      "title": "$100 off Alaska Lounge+ Membership",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "$100 off annual Alaska Lounge+ Membership purchased with card."
+    },
+    {
+      "id": "boa-bonus",
+      "title": "10% Rewards Bonus with BofA Small Business Account",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "10% rewards bonus on all points earned if company has eligible Bank of America small business account."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No International Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No international transaction fees on purchases made outside the U.S."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": null,
+    "free_checked_bags": "Free checked bag for cardholder and up to 6 guests on same reservation on Alaska/Hawaiian Airlines flights",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Annual $99 Companion Fare (plus taxes/fees from $23) after $6,000 spend per anniversary year",
+      "Preferred boarding on Alaska/Hawaiian Airlines",
+      "20% back on inflight purchases",
+      "$100 off Alaska Lounge+ Membership",
+      "10% rewards bonus with eligible BofA small business account"
+    ]
   },
-  "official_url": "https://www.alaskaair.com/atmosrewards/content/credit-cards",
+  "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
   "image": {
     "url": null,
     "attribution": "© Bank of America",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
-    "https://www.alaskaair.com/atmosrewards/content/credit-cards"
+    "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=95 but value not confirmed in page text."
+  "notes": "Atmos Rewards is the August 2025 rebrand of Alaska Airlines credit cards. Visa Signature Business. Issued by Bank of America."
 }
