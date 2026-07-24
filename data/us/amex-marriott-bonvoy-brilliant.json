@@ -1,0 +1,219 @@
+{
+  "id": "us-amex-marriott-bonvoy-brilliant",
+  "schema_version": "1.0.0",
+  "name": "Marriott Bonvoy Brilliant\u00ae American Express\u00ae Card",
+  "localized_names": { "en": "Marriott Bonvoy Brilliant\u00ae American Express\u00ae Card" },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 650,
+    "currency": "USD",
+    "first_year": 650,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": null },
+    "cash_advance": { "min": null, "max": null, "type": null },
+    "notes": "Current APRs were not available from the official card page static content at verification time; see American Express for current Rates and Fees."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees from American Express when using the Card on purchases abroad."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "marriott_bonvoy_points",
+    "currency_label": "Marriott Bonvoy points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2X points on all other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Eligible purchases at hotels participating in Marriott Bonvoy",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Restaurants worldwide",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Flights booked directly with airlines",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Marriott Bonvoy points can be redeemed for Marriott Bonvoy stays and other travel options; terms apply."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "brilliant-dining-credit",
+      "title": "$300 Brilliant Dining Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Each calendar year, get up to $300, up to $25 per month, in statement credits for eligible restaurant purchases worldwide made on the Card."
+    },
+    {
+      "id": "free-night-award",
+      "title": "Marriott Bonvoy Brilliant Free Night Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 1 Free Night Award every year after the Card renewal month for one night with a redemption level at or under 85,000 Marriott Bonvoy points at participating hotels."
+    },
+    {
+      "id": "platinum-elite-status",
+      "title": "Marriott Bonvoy Platinum Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Marriott Bonvoy Platinum Elite status, including eligible room upgrades when available and a 50% Bonus Points on stays benefit."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No foreign transaction fees from American Express when using the Card on purchases abroad."
+    },
+    {
+      "id": "brilliant-earned-choice-award",
+      "title": "Brilliant Earned Choice Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Each calendar year after spending $60,000 on eligible purchases, the Card Member is eligible to select one Brilliant Earned Choice Award benefit."
+    },
+    {
+      "id": "property-credit",
+      "title": "$100 Marriott Bonvoy Property Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Receive up to a $100 property credit for qualifying charges at The Ritz-Carlton or St. Regis when booking direct using a special rate for a 2-night minimum stay."
+    },
+    {
+      "id": "global-entry-tsa-precheck-credit",
+      "title": "Fee Credit for Global Entry or TSA PreCheck",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive either a $120 statement credit for Global Entry or up to $85 for TSA PreCheck through an official enrollment provider; only one credit is given in a 4-year period."
+    },
+    {
+      "id": "elite-night-credits",
+      "title": "25 Elite Night Credits",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Each calendar year, receive 25 Elite Night Credits toward the next level of Marriott Bonvoy Brilliant American Express Card Elite status."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Enroll in Priority Pass with an unlimited number of visits to over 1,300 airport lounges in over 130 countries."
+    },
+    {
+      "id": "premium-internet-access",
+      "title": "Premium Internet Access",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive free in-room premium Internet access; booking requirements apply."
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for damage to or theft of a rental vehicle in a covered territory when the eligible Card is used to reserve and pay for the entire rental and the rental company's collision damage waiver is declined."
+    },
+    {
+      "id": "baggage-insurance",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for lost, damaged, or stolen baggage when the entire fare for a common carrier vehicle ticket is purchased on an eligible Card."
+    },
+    {
+      "id": "trip-cancellation-interruption",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round trip is purchased entirely with an eligible Card and a covered reason cancels or interrupts the trip, coverage can reimburse non-refundable expenses up to $10,000 per trip and up to $20,000 per eligible Card per 12 consecutive month period."
+    },
+    {
+      "id": "trip-delay",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round trip is paid for entirely with an eligible Card and a covered reason delays the trip more than 6 hours, coverage can reimburse certain additional expenses up to $500 per trip, with a maximum of 2 claims per eligible Card per 12 consecutive month period."
+    },
+    {
+      "id": "return-protection",
+      "title": "Return Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Eligible purchases may be returned to American Express if the seller will not take them back up to 90 days from the date of purchase, subject to limits and terms."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Purchase Protection is listed as an included Card benefit; terms, conditions, and limitations apply."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extended Warranty is listed as an included Card benefit; terms, conditions, and limitations apply."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement for repair or replacement costs following damage or theft, up to $800 per claim with a limit of 2 approved claims per 12-month period, when the eligible wireless bill requirements are met; a $50 deductible applies."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Priority Pass",
+      "visits_per_year": null,
+      "notes": "Enrollment required; Amex describes an unlimited number of Priority Pass visits."
+    },
+    "tsa_precheck_credit": { "amount": 85, "currency": "USD", "period": "4_years" },
+    "global_entry_credit": { "amount": 120, "currency": "USD", "period": "4_years" },
+    "free_checked_bags": null,
+    "hotel_status": "Marriott Bonvoy Platinum Elite status",
+    "other": [
+      "No foreign transaction fees",
+      "$300 Brilliant Dining Credit",
+      "Annual Free Night Award up to 85,000 Marriott Bonvoy points",
+      "$100 Marriott Bonvoy Property Credit",
+      "25 Elite Night Credits each calendar year",
+      "Premium Internet Access"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/",
+  "image": {
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000313_480x304_straight_withname.png",
+    "attribution": "\u00a9 American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/"
+  ],
+  "notes": "Official Amex card page did not expose a stable public welcome-offer amount in static content at verification time; signup_bonus is null. Product name Brilliant is not a network tier; network_tier is none for Amex."
+}
