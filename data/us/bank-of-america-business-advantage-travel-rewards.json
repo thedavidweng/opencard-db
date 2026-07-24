@@ -24,11 +24,11 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Bank of America for current APR; terms vary by applicant/offer."
+    "notes": "APR not available from page text; page uses dynamic placeholders (ProdStanMinRate% to ProdStanMaxRate% Variable APR). See Bank of America for current APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No international transaction fees."
   },
   "credit_required": {
     "score_band": null,
@@ -36,24 +36,85 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "Points (redeemable for statement credit toward travel and dining)",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.5,
+      "description": "1.5 points for every $1 spent on everyday purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Travel purchases at the Bank of America Travel Center",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for statement credit to offset travel and dining purchases. Redemptions start at 2,500 points. No blackout dates at the Bank of America Travel Center. Preferred Rewards for Business members earn up to 75% more rewards (25% Gold, 50% Platinum, 75% Platinum Honors)."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 5000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 50,000 online bonus points after you make at least $5,000 in purchases in the first 90 days of your account opening, which can be redeemed for a $500 statement credit towards travel or dining purchases.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Enjoy no annual fee and no international transaction fees while earning points on all purchases."
+    },
+    {
+      "id": "no-international-transaction-fees",
+      "title": "No International Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No international transaction fees on purchases made outside the U.S."
+    },
+    {
+      "id": "preferred-rewards-for-business",
+      "title": "Preferred Rewards for Business Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Enroll in Preferred Rewards for Business for no fee and earn up to 75% more rewards. Gold tier (25%), Platinum tier (50%), Platinum Honors tier (75%) with qualifying BofA business checking account and combined balance thresholds."
+    },
+    {
+      "id": "travel-and-emergency-services",
+      "title": "Travel and Emergency Services",
+      "category": "insurance",
+      "source": "network",
+      "description": "Travel services include auto rental coverage and $1 million in travel accident insurance, auto rental insurance, emergency ticket replacement, lost-luggage assistance and legal and medical referrals when away from home."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Additional Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Maintain a fleet of cards for your employees at no additional cost with ability to monitor all transactions."
+    },
+    {
+      "id": "free-business-credit-scores",
+      "title": "Free Access to Business Credit Scores",
+      "category": "other",
+      "source": "issuer",
+      "description": "View your Dun & Bradstreet business credit scores for free within Business Advantage 360."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "No annual fee and no international transaction fees",
+      "Employee cards at no additional cost",
+      "Preferred Rewards for Business bonus up to 75%"
+    ]
   },
   "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/travel-rewards-business-credit-card",
   "image": {
@@ -67,5 +128,5 @@
     "https://www.bankofamerica.com/smallbusiness/credit-cards/products/travel-rewards-business-credit-card",
     "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Business Advantage Travel Rewards World Mastercard. $0 annual fee, no international transaction fees. 3 points/$1 on travel at BofA Travel Center, 1.5 points/$1 on all other purchases. 50,000 bonus points after $5,000 in 90 days ($500 statement credit). APR not extractable (dynamic placeholders on page)."
 }
