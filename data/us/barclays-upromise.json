@@ -20,30 +20,37 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 18.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "Purchases – 18.49% to 29.49%, based on your creditworthiness and other factors. This APR will vary with the market based on the Prime Rate. Balance transfers – 0% introductory APR for the first fifteen billing cycles following each balance transfer that posts to your account within 45 days of account opening. After that, 18.49% to 29.49%."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on international purchases."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "cash_back",
+    "currency_label": "Cash Back Rewards",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.25,
+      "description": "Earn 1.25% cash back rewards on purchases if Upromise Program account is not linked to a College Savings Plan. Earn 1.529% cash back rewards when linked to an eligible College Savings Plan."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Upromise Round Up lets you round up purchases to the nearest dollar; total Round Up Amount is considered a purchase and converted to cash back rewards."
   },
   "signup_bonus": {
     "amount": 100.0,
@@ -51,10 +58,39 @@
     "spend_required": 500.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "$100 Bonus Cash Back Rewards after spending $500 on purchases in the first 90 days",
+    "description": "Earn $100 Bonus Cash Back Rewards after spending $500 on purchases in the first 90 days",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for charges you did not authorize."
+    },
+    {
+      "id": "fico-score",
+      "title": "Free online access to your FICO Credit Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free online access to your FICO Credit Score lets you keep an eye on your credit score and get email alerts when we learn that your score has changed."
+    },
+    {
+      "id": "intro-balance-transfer",
+      "title": "Low Intro Balance Transfer Offer",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% introductory APR for 15 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 18.49% to 29.49%. There is a fee for balance transfers."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -74,5 +110,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/upromise-world-mastercard/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Barclays product page on 2026-07-24."
 }
