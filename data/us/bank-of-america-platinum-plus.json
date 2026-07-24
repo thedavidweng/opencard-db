@@ -24,29 +24,71 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Bank of America for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Page shows placeholder values (ProdIntroAprRate%, ProdBillingCycles, ProdStanMinRate%, ProdStanMaxRate%, ProdCashMaxRate%) instead of actual rates. Low Introductory APR offer on purchases for first ProdBillingCycles billing cycles. Variable APR on purchases after intro expires and on all balance transfers. Cash Advance Variable APR. Actual numeric rates not visible in fetched page text."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not visible in fetched page text."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "none",
+    "currency_label": "No rewards program (low-interest card)",
     "structure": "single",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "description": "This is a low-interest card, not a rewards card."
     },
     "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "redemption_notes": "No rewards program described on page."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 300.0,
+    "unit": "USD",
+    "spend_required": 3000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Get a $300 online statement credit after you make at least $3,000 in purchases in the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "mastercard-easy-saving",
+      "title": "Mastercard Easy Saving® Program",
+      "category": "other",
+      "source": "issuer",
+      "description": "No coupons. No codes. Just automatic rebates when you pay with your card."
+    },
+    {
+      "id": "free-business-credit-scores",
+      "title": "Free Access to Business Credit Scores",
+      "category": "other",
+      "source": "issuer",
+      "description": "View your Dun & Bradstreet business credit scores for free within Business Advantage 360."
+    },
+    {
+      "id": "purchase-security",
+      "title": "Purchase Security",
+      "category": "other",
+      "source": "issuer",
+      "description": "Additional protection covers certain purchases against loss, damage, theft or fire."
+    },
+    {
+      "id": "low-intro-apr",
+      "title": "Low Introductory APR Offer",
+      "category": "other",
+      "source": "issuer",
+      "description": "Low introductory APR on purchases for the first ProdBillingCycles billing cycles. Competitive APR to save money on interest."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -67,5 +109,5 @@
     "https://www.bankofamerica.com/smallbusiness/credit-cards/products/platinum-plus-business-credit-card",
     "https://business.bankofamerica.com/en/credit-cards/platinum-plus"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official BofA product page and business portal. Annual fee $0 confirmed ('Enjoy no annual fee'). APR values shown as server-side placeholders (ProdStanMinRate% etc.) — actual numeric rates not available in fetched text. $300 statement credit bonus after $3,000 spend in 90 days. No rewards program (low-interest card)."
 }
