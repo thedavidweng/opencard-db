@@ -1,0 +1,70 @@
+{
+  "id": "us-web-bank-gemini",
+  "schema_version": "1.0.0",
+  "name": "Earn Crypto Rewards with the Gemini Credit Card®",
+  "localized_names": {
+    "en": "Earn Crypto Rewards with the Gemini Credit Card®"
+  },
+  "country": "us",
+  "issuer": "WebBank",
+  "issuer_id": "webbank",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See WebBank for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Confirm foreign transaction fee on official terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Rewards currency (see official product page)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earn rates left unset pending structured extract from official page."
+    },
+    "categories": [],
+    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.gemini.com/credit-card",
+  "image": {
+    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+    "attribution": "© WebBank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.gemini.com/credit-card"
+  ],
+  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+}
