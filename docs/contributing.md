@@ -21,7 +21,7 @@ Easier review, clearer Sources, fewer merge conflicts.
    Add card: us-my-card-slug
    ```
    (or `Update card: …` when editing an existing card)
-6. For images: paste an **official bank URL**, or drop a PNG/JPG into `images/` named `us-my-card-slug.png`. CI converts uploads to optimized WebP.
+6. For images: official bank URL when stable, or — **best local mirror** — Apple Pay `cardBackgroundCombined@2x.png` from your Mac Wallet (`images/us-my-card-slug.png` → CI **lossless WebP**, native size). See `images/README.md` and `docs/research/apple-pay-card-art.md`. Do not scrape Apple remotely.
 7. Wait for checks: Validate, PR Triage, and (if you uploaded images) Optimize Images.
 
 CI will **comment and label** the PR if the title or form fields are incomplete (`needs-info`, `US` / `CA` / `CN`, etc.).
@@ -33,7 +33,7 @@ CI will **comment and label** the PR if the title or form fields are incomplete 
 3. Valid against root `schema.json` (`npm run validate`)
 4. At least one official **Source** URL (product page and/or terms)
 5. `last_verified` set to the date you checked official pages
-6. Images are optional; prefer official URLs when available. See `images/README.md` (API falls back to a generic card face when missing)
+6. Images are optional. Prefer official issuer URLs when stable; for local mirrors, Apple Pay @2x → lossless WebP is the graduation-level bar (`images/README.md`). CI: `npm run optimize:images`
 
 ## Domain rules (see CONTEXT.md)
 

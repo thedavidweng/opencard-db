@@ -1,19 +1,24 @@
 /**
- * Optimize card face images under images/ to WebP.
- * - Max width 800px
- * - WebP quality ~80
- * - Writes `{basename}.webp` next to / replacing raster uploads
- * - Leaves README.md alone
+ * Optimize card face images under images/ to lossless WebP.
+ *
+ * Normative source: Apple Pay `cardBackgroundCombined@2x.png`
+ * (issuer digital wallet art, typically ~1536×969 lineage / Retina @2x).
+ * Convert raster uploads → lossless WebP at native dimensions (no downscale).
+ *
+ * Leaves README.md, SVG sources, and existing .webp alone.
  */
-import { mkdir, readdir, rename, rm, stat } from "node:fs/promises";
+import { mkdir, readdir, rename, rm } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const imagesDir = path.join(root, "images");
-const MAX_WIDTH = 800;
-const WEBP_QUALITY = 80;
+
+/** Lossless WebP — preserve Apple Pay @2x fidelity. */
+export const WEBP_LOSSLESS = true;
+/** sharp effort 0–6; higher = smaller lossless files, slower CI. */
+export const WEBP_EFFORT = 6;
 const RASTER = /\.(png|jpe?g|gif|tiff?)$/i;
 
 export type OptimizeResult = {
@@ -58,14 +63,9 @@ export async function optimizeImages(
     if (RASTER.test(file)) {
       const outPath = file.replace(RASTER, ".webp");
       const img = sharp(file, { failOn: "none" });
-      const meta = await img.metadata();
-      const width = meta.width ?? MAX_WIDTH;
-      const pipeline =
-        width > MAX_WIDTH
-          ? img.resize({ width: MAX_WIDTH, withoutEnlargement: true })
-          : img;
       const tmp = `${outPath}.tmp`;
-      await pipeline.webp({ quality: WEBP_QUALITY, effort: 4 }).toFile(tmp);
+      // Native dimensions — do not resize; Apple Pay @2x is the quality bar.
+      await img.webp({ lossless: WEBP_LOSSLESS, effort: WEBP_EFFORT }).toFile(tmp);
       await rename(tmp, outPath);
       written.push(outPath);
       await rm(file);
@@ -73,26 +73,7 @@ export async function optimizeImages(
       continue;
     }
 
-    if (file.toLowerCase().endsWith(".webp")) {
-      const meta = await sharp(file, { failOn: "none" }).metadata();
-      const width = meta.width ?? 0;
-      const st = await stat(file);
-      if (width > MAX_WIDTH || st.size > 350_000) {
-        const img = sharp(file, { failOn: "none" });
-        const pipeline =
-          width > MAX_WIDTH
-            ? img.resize({ width: MAX_WIDTH, withoutEnlargement: true })
-            : img;
-        const tmp = `${file}.tmp`;
-        await pipeline.webp({ quality: WEBP_QUALITY, effort: 4 }).toFile(tmp);
-        await rename(tmp, file);
-        written.push(file);
-      } else {
-        skipped.push(file);
-      }
-      continue;
-    }
-
+    // Existing WebP (including default-card.webp): leave untouched.
     skipped.push(file);
   }
 

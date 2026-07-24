@@ -40,17 +40,28 @@
 - **Terms / benefits page:** https://www.example-bank.com/cards/example/terms
 - **Last verified (YYYY-MM-DD):** 2026-07-24
 
-### 3. Card image (pick one)
+### 3. Card image (pick the best you can)
 
-- [ ] **A. Official image URL** (preferred)
+Graduation bar for local mirrors: **Apple Pay** digital wallet art (`cardBackgroundCombined@2x.png` → CI **lossless WebP** at native size). Prefer this over random screenshots or unknown crops. See `docs/research/apple-pay-card-art.md`.
+
+- [ ] **A. Official issuer image URL** (stable product-page art)
   - **Image URL:** https://www.example-bank.com/cardart/example.png
-- [ ] **B. Upload a local file in this PR**
-  1. Add the file under `images/` named like `us-example-card.png` (or `.jpg`)
-  2. CI will convert it to optimized WebP automatically
-  - **Local path after upload:** `images/us-example-card.png`
-- [ ] **C. No image yet** (reviewers may still merge; `image.url` can be `null`)
+- [ ] **B. Apple Pay extract (preferred local mirror — “graduation-level”)**
+  1. On a Mac with the card in Wallet, copy  
+     `~/Library/Passes/Cards/*.pkpass/cardBackgroundCombined@2x.png`
+  2. Rename to `{card-id}.png` (e.g. `us-example-card.png`) and add under `images/`
+  3. CI converts to **lossless WebP** (no 800px downscale)
+  4. Set `image.local_path` to `images/us-example-card.webp` after CI
+  5. **Attribution:** `© Issuer (Apple Pay digital card art)`
+- [ ] **C. Other local upload** (marketing PNG/JPG when no Apple Pay / official URL)
+  1. Add under `images/` named like `us-example-card.png`
+  2. CI still emits lossless WebP — note the source in Notes
+  - **Local path after upload:** `images/us-example-card.webp`
+- [ ] **D. No image yet** (reviewers may still merge; `image.url` can be `null`)
 
-<!-- Optional: paste / drop a preview image here (GitHub upload). This is only a preview — prefer A or B above for the database. -->
+- [ ] **TODO (optional follow-up):** If this PR ships without an Apple Pay face, open a follow-up when someone who holds the card can extract it
+
+<!-- Optional: paste / drop a preview image here (GitHub upload). Preview only — use A–C for the database. -->
 
 
 ### 4. Quick facts (helps reviewers)
