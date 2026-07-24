@@ -13,66 +13,212 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": 150.0,
+    "amount": 550,
     "currency": "USD",
-    "first_year": 0.0,
-    "waiver_conditions": "$0 intro annual fee for the first year, then regular annual fee"
+    "first_year": 550,
+    "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "See American Express for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR based on creditworthiness and the Prime Rate. Cash advance APR 28.74%. Penalty APR 29.99%. Accurate as of 07/24/26."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fees from American Express."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated; Amex generally requires good to excellent credit."
   },
   "rewards": {
-    "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
+    "currency": "hilton_honors_points",
+    "currency_label": "Hilton Honors Bonus Points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 3,
+      "description": "3x on all other eligible purchases"
     },
-    "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "categories": [
+      {
+        "label": "Hilton hotels and resorts",
+        "points_per_dollar": 14,
+        "cap": null
+      },
+      {
+        "label": "Flights booked directly with airlines or AmexTravel.com, and car rentals",
+        "points_per_dollar": 7,
+        "cap": null
+      },
+      {
+        "label": "U.S. restaurants, including takeout and delivery",
+        "points_per_dollar": 7,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors."
   },
   "signup_bonus": {
-    "amount": 130000.0,
-    "unit": "points",
-    "spend_required": 3000.0,
+    "amount": 175000,
+    "unit": "hilton_honors_bonus_points",
+    "spend_required": 6000,
     "spend_currency": "USD",
     "months": 6,
-    "description": "earn 130,000 Hilton Honors Bonus Points after you spend $3,000 in eligible purchases on your Card in the first 6 months",
-    "as_of": "2026-07-24"
+    "description": "Earn 175,000 Hilton Honors Bonus Points after spending $6,000 in first 6 months. Offer ends 07/29/2026.",
+    "as_of": "2026-07-23"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "hilton-diamond-status",
+      "title": "Hilton Honors Diamond Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Hilton Honors Diamond status. 100% Bonus on Base Points per stay, Premium Wi-Fi, space-available room upgrades, executive lounge access at select properties."
+    },
+    {
+      "id": "hilton-resort-credit",
+      "title": "$400 Hilton Resort Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Up to $200 in statement credits semi-annually (Jan-Jun and Jul-Dec), up to $400/year, on eligible purchases at participating Hilton Resorts charged to room and paid with Aspire Card."
+    },
+    {
+      "id": "annual-free-night",
+      "title": "Annual Free Night Reward",
+      "category": "other",
+      "source": "co-brand",
+      "description": "One Free Night Reward from Hilton Honors in first year and every year upon Card renewal. Redeemable for one standard accommodation. Expires one year from issuance."
+    },
+    {
+      "id": "spend-free-night",
+      "title": "Spend-Based Free Night Rewards",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn a Free Night Reward after $30,000 spend in a calendar year, and another after $60,000 total spend in that year."
+    },
+    {
+      "id": "flight-credit",
+      "title": "$200 Flight Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $50 in statement credits each calendar quarter, up to $200/year, on eligible airfare purchases made directly with an airline or through AmexTravel.com."
+    },
+    {
+      "id": "clear-plus-credit",
+      "title": "$219 CLEAR+ Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $219 in statement credits per calendar year for CLEAR+ Membership paid with the Aspire Card. Enrollment required."
+    },
+    {
+      "id": "property-credit",
+      "title": "$100 Property Credit at Waldorf Astoria & Conrad",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Up to $100 property credit per booking for 2-night minimum stays at Waldorf Astoria and Conrad Hotels when booked through HiltonHonorsAspireCard.com."
+    },
+    {
+      "id": "national-car-rental-status",
+      "title": "National Car Rental Emerald Club Executive Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary National Car Rental Emerald Club Executive status with Executive Area Access for full-size reservations and above in USA and Canada."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees from American Express."
+    },
+    {
+      "id": "car-rental-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary coverage for damage or theft of rental vehicle. Not available in Australia, Italy, and New Zealand."
+    },
+    {
+      "id": "premium-global-assist",
+      "title": "Premium Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 medical, legal, financial, and emergency coordination when traveling more than 100 miles from home. Emergency medical transportation may be provided at no cost if approved."
+    },
+    {
+      "id": "baggage-insurance",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for lost, damaged, or stolen baggage. Up to $3,000 combined for checked and carry-on baggage."
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If round-trip paid with Card and covered reason delays trip more than 6 hours, reimburses up to $500 per trip, max 2 claims per 12 months."
+    },
+    {
+      "id": "trip-cancellation-insurance",
+      "title": "Trip Cancellation & Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses non-refundable expenses up to $10,000 per trip and $20,000 per 12 months for covered cancellations or interruptions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against accidental damage or theft for up to 90 days."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extends Original Manufacturer's Warranty for up to one additional year on covered purchases."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
-    "hotel_status": null,
-    "other": []
+    "hotel_status": "Hilton Honors Diamond Status (complimentary)",
+    "other": [
+      "No foreign transaction fees",
+      "$400 Hilton Resort Credit (semi-annually)",
+      "$200 Flight Credit (quarterly)",
+      "$219 CLEAR+ Credit",
+      "$100 Property Credit at Waldorf Astoria & Conrad",
+      "Annual Free Night Reward + spend-based Free Night Rewards ($30K and $60K)",
+      "National Car Rental Emerald Club Executive Status",
+      "Premium Global Assist Hotline",
+      "Trip Delay Insurance ($500/trip)",
+      "Trip Cancellation & Interruption Insurance ($10,000/trip)"
+    ]
   },
-  "official_url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
   "image": {
     "url": null,
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
-    "https://www.hilton.com/en/hilton-honors/credit-cards/"
+    "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-aspire-credit-card/36182-11-0"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Product name Aspire is not a Network Tier; network_tier is none for Amex network packages. Annual fee $550. Signup bonus and benefits verified on official Amex product page."
 }
