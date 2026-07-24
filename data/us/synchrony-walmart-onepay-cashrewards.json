@@ -20,24 +20,24 @@
   },
   "apr": {
     "purchase": {
-      "min": 20.99,
-      "max": 31.49,
+      "min": 20.24,
+      "max": 30.74,
       "type": "variable"
     },
     "cash_advance": {
-      "min": 22.99,
-      "max": 32.99,
+      "min": 22.24,
+      "max": 32.24,
       "type": "variable"
     },
-    "notes": "20.99% or 31.49% based on creditworthiness. Varies with Prime Rate. Minimum interest charge $2.00. Late payment fee up to $41."
+    "notes": "20.24% for Account Type 1 or 30.74% for Account Type 2 when you open your account, based on your creditworthiness and other factors. After that, your APR will vary with the market based on the Prime Rate. APR will not exceed 35.99%. Cash advance APR: 22.24% for Account Type 1 or 32.24% for Account Type 2. Minimum interest charge $2.00. Late payment fee up to $41. Returned payment fee up to $41. Cash advance fee: either $10 or 5% of the amount, whichever is greater. Information accurate as of January 1, 2026."
   },
   "fx_fee": {
     "percent": 0,
-    "notes": "No foreign transaction fee. Non-USD transactions converted using exchange rates from transaction/processing date."
+    "notes": "No foreign transaction fee. Non-USD transactions converted to U.S. dollars using exchange rates from the transaction or processing date."
   },
   "credit_required": {
-    "score_band": "fair",
-    "notes": "Not explicitly stated; WalletHub reports 640+ credit score needed. If not approved for CashRewards, may be considered for OnePay Walmart Spend Card (store-only)."
+    "score_band": "unknown",
+    "notes": "Not explicitly stated on official pages. APR is based on creditworthiness and other factors. If not approved for CashRewards, may be considered for OnePay Walmart Spend Card (store-only). Prior 'fair' rating was based on third-party (WalletHub) — not verified from official source."
   },
   "rewards": {
     "currency": "onepay_points",
@@ -59,16 +59,16 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Cash back earned as OnePay Points. Redeemable as statement credit, electronic deposit into OnePay deposit account, or eligible gift cards. 100 points = $1.00. Minimum 25 points for redemption. Walmart+ membership ($12.95/month or $98/year) required for 5% rate."
+    "redemption_notes": "Cash back is earned as points on purchases made with your OnePay CashRewards Mastercard, which can be redeemed as a statement credit, as a deposit into a OnePay deposit account, or other available options. Must have at least 25 points to make a redemption. OnePay Points redeemed for a statement credit or electronic deposit redeem at a value of $0.01 per OnePay Point. Walmart+ membership required for 5% rate."
   },
   "signup_bonus": {
     "amount": 35,
     "unit": "USD cash back",
-    "spend_required": 75,
+    "spend_required": null,
     "spend_currency": "USD",
-    "months": 1,
-    "description": "Get $35 cash back after spending $75 on purchases within 30 days after card opening. Awarded as points redeemable into OnePay deposit account or as statement credit.",
-    "as_of": "2026-07-23"
+    "months": null,
+    "description": "Get $35 cash back upon account opening. Awarded as points, which you can redeem into a OnePay deposit account or as a statement credit. Offer valid for new accounts only; each account is only eligible for one Welcome Bonus.",
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -83,28 +83,35 @@
       "title": "No Foreign Transaction Fee",
       "category": "other",
       "source": "issuer",
-      "description": "No foreign transaction fee charged on non-USD purchases."
+      "description": "No foreign transaction fee is charged. Non-USD transactions are converted to U.S. dollars using exchange rates from the transaction or processing date."
     },
     {
       "id": "spending-insights",
       "title": "Spending Insights",
       "category": "other",
       "source": "issuer",
-      "description": "Get insights about everyday credit card spending habits through the OnePay app."
+      "description": "Get insights about your everyday credit card spending habits."
     },
     {
       "id": "card-lock",
       "title": "Card Lock",
       "category": "other",
       "source": "issuer",
-      "description": "Lock your credit card if lost or stolen via the OnePay app."
+      "description": "Lock your credit card if it's lost or stolen in just a few taps."
     },
     {
       "id": "free-credit-score",
       "title": "Free Credit Score",
       "category": "other",
       "source": "issuer",
-      "description": "OnePay Credit Score provides real-time updates and insights into your credit, for free."
+      "description": "OnePay Credit Score provides real-time updates and deeper insights into your credit, for free."
+    },
+    {
+      "id": "world-mastercard-benefits",
+      "title": "World Mastercard Perks and Benefits",
+      "category": "other",
+      "source": "network",
+      "description": "World Mastercard offers even more perks and benefits powered by the global Mastercard Network."
     }
   ],
   "travel_perks": {
@@ -125,10 +132,11 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.onepay.com/credit-card",
-    "https://www.onepay.com/help-center/articles/about-the-onepay-credit-card"
+    "https://www.onepay.com/help-center/articles/about-the-onepay-credit-card",
+    "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e079073.pdf"
   ],
-  "notes": "Issued by Synchrony Bank. Official product page is on onepay.com (Synchrony does not host a dedicated page on synchrony.com for this card). World Mastercard."
+  "notes": "Issued by Synchrony Bank. World Mastercard. CORRECTION: APR updated from rates PDF (20.24%/30.74% purchase, 22.24%/32.24% cash advance) — prior values of 20.99%/31.49% and 22.99%/32.99% were incorrect. Signup bonus updated: product page says '$35 cash back upon account opening' with no spend requirement mentioned (prior version cited $75 spend in 30 days — not found on official pages). Credit score band changed from 'fair' to 'unknown' — prior 'fair' was based on third-party WalletHub, not official source."
 }
