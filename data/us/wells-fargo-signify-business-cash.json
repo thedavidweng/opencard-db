@@ -108,8 +108,6 @@
   ],
   "travel_perks": {
     "lounge_access": {
-      "program": null,
-      "visits_per_year": null,
       "notes": "Priority Pass complimentary membership (pay-as-you-go visit fees)"
     },
     "tsa_precheck_credit": null,
