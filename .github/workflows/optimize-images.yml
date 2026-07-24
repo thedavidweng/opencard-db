@@ -1,13 +1,36 @@
-# Convert uploaded card faces to lossless WebP (Apple Pay @2x fidelity)
+# Convert uploaded card faces to lossless WebP (Apple Pay @2x fidelity).
+# Only runs when the PR actually adds/changes raster files under images/
+# (not README, .webp, or unrelated paths).
 
 name: Optimize Images
 
 on:
   pull_request:
     paths:
-      - "images/**"
-      - "scripts/optimize-images.ts"
-      - ".github/workflows/optimize-images.yml"
+      - "images/*.png"
+      - "images/*.PNG"
+      - "images/*.jpg"
+      - "images/*.JPG"
+      - "images/*.jpeg"
+      - "images/*.JPEG"
+      - "images/*.gif"
+      - "images/*.GIF"
+      - "images/*.tif"
+      - "images/*.tiff"
+      - "images/*.TIF"
+      - "images/*.TIFF"
+      - "images/**/*.png"
+      - "images/**/*.PNG"
+      - "images/**/*.jpg"
+      - "images/**/*.JPG"
+      - "images/**/*.jpeg"
+      - "images/**/*.JPEG"
+      - "images/**/*.gif"
+      - "images/**/*.GIF"
+      - "images/**/*.tif"
+      - "images/**/*.tiff"
+      - "images/**/*.TIF"
+      - "images/**/*.TIFF"
 
 permissions:
   contents: write
@@ -18,7 +41,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Cheap gate: skip the sharp/npm job if the path filter matched a rename
+  # edge case or non-raster somehow. Avoids wasting minutes on npm ci.
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      needs_optimize: ${{ steps.check.outputs.needs_optimize }}
+    steps:
+      - name: Check PR for raster uploads under images/
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          files=$(gh pr diff "${{ github.event.pull_request.number }}" --name-only --repo "${{ github.repository }}" || true)
+          if printf '%s\n' "$files" | grep -qiE '^images/.+\.(png|jpe?g|gif|tiff?)$'; then
+            echo "Raster image(s) in PR — will optimize."
+            echo "needs_optimize=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No raster uploads under images/ — skipping optimize job."
+            echo "needs_optimize=false" >> "$GITHUB_OUTPUT"
+          fi
+
   optimize:
+    needs: gate
+    if: needs.gate.outputs.needs_optimize == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR branch
