@@ -29,15 +29,15 @@
       "max": 29.49,
       "type": "variable"
     },
-    "notes": "16.49% to 34.49% variable APR based on creditworthiness. Penalty APR up to 33.49%. Maximum APR 35.99%. Per Cardholder Agreement dated 2026-04-01."
+    "notes": "16.49% to 34.49% variable APR based on creditworthiness. Penalty APR up to 33.49%. Maximum APR 35.99%. Per Cardholder Agreement dated 2026-04-01. APR not re-verified from page on 2026-07-24 (support page returned 403). Preserved from prior verification."
   },
   "fx_fee": {
     "percent": 0,
-    "notes": "No foreign transaction fees."
+    "notes": "No foreign transaction fees. Stated on product page: 'No foreign transaction fees'."
   },
   "credit_required": {
     "score_band": "good_to_excellent",
-    "notes": "Typically good to excellent credit. Wide APR range (16.49-34.49%) suggests acceptance across a broad credit spectrum."
+    "notes": "Typically good to excellent credit. Wide APR range (16.49-34.49%) suggests acceptance across a broad credit spectrum. Score band not explicitly stated on product page; preserved from prior verification."
   },
   "rewards": {
     "currency": "crypto",
@@ -45,11 +45,11 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
-      "description": "1% back in crypto on all other qualifying purchases"
+      "description": "1% back in crypto on all other qualifying purchases (Everything else 1% crypto back)."
     },
     "categories": [
       {
-        "label": "Gas, EV charging & transit (taxis, rideshare)",
+        "label": "Gas, EV & Transit",
         "points_per_dollar": 4,
         "cap": {
           "amount": 300,
@@ -58,12 +58,12 @@
         }
       },
       {
-        "label": "Dining (restaurants, bars, fast food)",
+        "label": "Dining",
         "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Groceries (traditional grocery and specialty food stores)",
+        "label": "Groceries",
         "points_per_dollar": 2,
         "cap": null
       }
@@ -77,42 +77,49 @@
       "title": "No Annual Fee",
       "category": "waiver",
       "source": "issuer",
-      "description": "No annual fee."
+      "description": "No annual fee. Stated on product page: 'No annual fee'."
     },
     {
       "id": "no-fx-fees",
       "title": "No Foreign Transaction Fees",
       "category": "other",
       "source": "issuer",
-      "description": "No foreign transaction fees on purchases made outside the U.S."
+      "description": "No foreign transaction fees. Stated on product page."
     },
     {
       "id": "instant-crypto-rewards",
       "title": "Instant Crypto Rewards Deposit",
       "category": "acceleration",
       "source": "co-brand",
-      "description": "Crypto rewards instantly deposited into Gemini account within minutes of swiping card (some transactions post 24-72 hours later)."
+      "description": "Rewards are instantly deposited into Gemini account. Some exclusions apply to instant rewards in which rewards are deposited when the transaction posts."
     },
     {
       "id": "flexible-crypto-selection",
       "title": "Flexible Crypto Reward Selection",
       "category": "other",
       "source": "co-brand",
-      "description": "Choose from bitcoin or 50+ cryptos available on Gemini. Change crypto reward as often as desired."
+      "description": "Earn bitcoin or 50+ cryptos available on Gemini. Easily change the crypto you want to earn, as often as you want."
     },
     {
       "id": "merchant-rewards",
       "title": "10% Back at Select Merchants",
       "category": "acceleration",
       "source": "co-brand",
-      "description": "Earn 10% back in crypto at select merchants through Gemini Merchant Reward Program. Subject to monthly spend limits."
+      "description": "Earn 10% Back on the Internet's Favorite Brands. 10% Vault Rewards are available on up to a limited value in spend per month and varies depending on the merchant offer."
     },
     {
       "id": "referral-program",
       "title": "Credit Card Referral Program",
       "category": "acceleration",
       "source": "co-brand",
-      "description": "Get $50 in crypto per referral and $250 bonus per 5 referrals. Up to 50 referrals per year (up to $5,000 in crypto)."
+      "description": "Get $50 in crypto for each referral and an extra $250 bonus each time you make 5 referrals. Up to 50 referrals per year (up to $5,000 in crypto)."
+    },
+    {
+      "id": "mastercard-world-elite",
+      "title": "Mastercard World Elite",
+      "category": "other",
+      "source": "network",
+      "description": "Mastercard World Elite benefits. Stated on product page: 'Mastercard® World Elite'."
     }
   ],
   "travel_perks": {
@@ -133,10 +140,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.gemini.com/credit-card",
     "https://support.gemini.com/hc/en-us/articles/4405135674779-What-rewards-tiers-are-available-on-the-Gemini-Credit-Card"
   ],
-  "notes": "Issued by WebBank, managed by Gemini. World Elite Mastercard. No current signup bonus (prior $200 bitcoin offer discontinued). Rewards paid in cryptocurrency."
+  "notes": "Gemini Credit Card issued by WebBank. Mastercard World Elite. No annual fee, no foreign transaction fees. 4% crypto back on Gas/EV/Transit (up to $300/month), 3% Dining, 2% Groceries, 1% everything else. Rewards in bitcoin or 50+ cryptos, instantly deposited. APR values preserved from prior verification (support page returned 403 on 2026-07-24)."
 }
