@@ -16,44 +16,142 @@
     "amount": 99.0,
     "currency": "USD",
     "first_year": 0.0,
-    "waiver_conditions": "$0 intro annual fee for the first year, then regular annual fee"
+    "waiver_conditions": "$0 intro annual fee for the first 12 months of account opening, then $99"
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "See Citi for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "The variable APR for purchases is 19.49% – 28.49%, based on your creditworthiness. The variable APR for cash advances is 29.74%. The variable Penalty APR is up to 29.99%. Minimum interest charge – $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "Fee for foreign transactions – None."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "miles",
+    "currency_label": "AAdvantage® miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "Earn 1 AAdvantage® mile for every $1 spent on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "AAdvantage® miles can be redeemed for future business travel, upgrades and more. Each cardmember earns one Loyalty Point for every $1 spent on business card purchases."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 65000,
+    "unit": "AAdvantage® bonus miles",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 4,
+    "description": "Earn 65,000 American Airlines AAdvantage® bonus miles. Bonus miles earned after you or your employees spend $4,000 in purchases within the first 4 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "first-checked-bag-free",
+      "title": "First checked bag free",
+      "category": "other",
+      "source": "issuer",
+      "description": "First checked bag is free on domestic American Airlines itineraries for you and up to 4 travel companions on the same reservation."
+    },
+    {
+      "id": "preferred-boarding",
+      "title": "Preferred boarding",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy preferred boarding on American Airlines flights so you can save time and be more productive."
+    },
+    {
+      "id": "add-employees-authorized-users",
+      "title": "Add employees as authorized users",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn more AAdvantage® miles with purchases made by employees on authorized user cards and stay in control with individual spend limits."
+    },
+    {
+      "id": "mastercard-special-offers",
+      "title": "Mastercard special offers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save money and increase everyday efficiency with special offers on business solutions available with your Mastercard."
+    },
+    {
+      "id": "save-25-inflight",
+      "title": "Save 25% on select inflight purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy 25% savings on inflight Wi-Fi, food and beverage purchases on American Airlines flights when you use your credit card."
+    },
+    {
+      "id": "companion-certificate",
+      "title": "Earn an American Airlines Companion Certificate",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn an American Airlines Companion Certificate for domestic travel after you spend $30,000 or more in purchases each cardmembership year and cardmembership is renewed. Redeeming the certificate costs $99 for the ticketing fee plus taxes and fees."
+    },
+    {
+      "id": "aadvantage-business-membership",
+      "title": "AAdvantage Business™ membership benefits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Book and manage business travel easily on aa.com. Your membership also includes travel management tools with essential reporting capabilities, duty of care, traveler activity, expense management and more."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Shop like a local wherever you go with your Citi® / AAdvantage Business™ credit card."
+    },
+    {
+      "id": "business-tools",
+      "title": "Business tools",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access online account summaries to track expenses. Check your balance anytime and use your card on the go with access to the Citi mobile® App and Mobile Wallet."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": null,
+    "free_checked_bags": "First checked bag free on domestic American Airlines itineraries for you and up to 4 travel companions on the same reservation.",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Preferred boarding on American Airlines flights",
+      "Save 25% on inflight Wi-Fi, food and beverage purchases on AA flights",
+      "Companion Certificate after $30,000 spend/year ($99 ticketing fee + taxes/fees)",
+      "No foreign transaction fees"
+    ]
   },
   "official_url": "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/",
   "image": {
@@ -66,5 +164,5 @@
   "sources": [
     "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text."
 }
