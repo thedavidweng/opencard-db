@@ -1,9 +1,9 @@
 {
   "id": "us-chase-united-club",
   "schema_version": "1.0.0",
-  "name": "United Club Credit Card",
+  "name": "United Club Card",
   "localized_names": {
-    "en": "United Club Credit Card"
+    "en": "United Club Card"
   },
   "country": "us",
   "issuer": "Chase",
@@ -20,30 +20,57 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.74,
+      "max": 28.24,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "19.74% to 28.24% variable APR (Min. of (6.75+12.99) and 29.99% to Min. of (6.75+21.49) and 29.99%)."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not explicitly stated on product page."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "mileageplus_miles",
+    "currency_label": "MileagePlus miles",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.0,
+      "description": "1x mile on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles redeemable via MileagePlus program for United flights and partner awards."
   },
   "signup_bonus": {
     "amount": 80000.0,
@@ -51,15 +78,104 @@
     "spend_required": 5000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 80,000 bonus miles after you spend $5,000 on purchases in the first 3 months",
+    "description": "Earn 80,000 bonus miles after you spend $5,000 on purchases in the first 3 months your account is open. Plus, earn 10,000 bonus miles after you add an authorized user in the first 3 months.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "unlimited-united-club-access",
+      "title": "Unlimited United Club access for you and a guest",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Your card includes United Club card membership — a $750+ value. Plus, unlock All Access membership when you reach Premier Gold status or spend $50,000 annually. Starting with your first anniversary, earn 4 United Club one-time passes when you have United Club All Access Membership and an authorized user."
+    },
+    {
+      "id": "free-first-second-checked-bags",
+      "title": "Free first and second checked bags",
+      "category": "other",
+      "source": "issuer",
+      "description": "The primary Cardmember and one companion can each check a first and second standard bags for free - save up to $440 per roundtrip."
+    },
+    {
+      "id": "premier-access",
+      "title": "Premier Access travel services",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive preferential treatment to ease your way through the airport with priority check-in, security screening, boarding, and baggage handling privileges (where available)."
+    },
+    {
+      "id": "award-flight-discount",
+      "title": "10,000-mile award flight discount",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn a 10,000-mile award flight discount after $20,000 in purchases to use toward an eligible award flight - up to two times each calendar year."
+    },
+    {
+      "id": "renowned-hotels-credit",
+      "title": "Up to $200 in credits annually (Renowned Hotels and Resorts)",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to $200 back in statement credits each anniversary year on prepaid hotel stays purchased directly through Renowned Hotels and Resorts for United Cardmembers."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "Up to $150 in credits on rideshare purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enroll to receive up to $150 back as statement credits each calendar year on rideshare purchases when you pay with your United Club Card."
+    },
+    {
+      "id": "avis-budget-credit",
+      "title": "Up to $100 in United travel credits (Avis/Budget)",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to $100 in United travel credits annually when you book Avis or Budget car rentals directly through cars.united.com and pay with your United Club Card."
+    },
+    {
+      "id": "instacart-credit",
+      "title": "Up to $240 in Instacart credits each calendar year",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to $240 in Instacart credits each calendar year for purchases made directly through Instacart. Terms apply."
+    },
+    {
+      "id": "jsx-credit",
+      "title": "Up to $200 in credits annually on JSX",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to $200 in credits annually on flights purchased directly through JSX with your United Club Card."
+    },
+    {
+      "id": "save-10-percent-mileage-flights",
+      "title": "Save 10% or more when booking flights with miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save 10% or more when booking flights with miles. Premier members save even more."
+    },
+    {
+      "id": "card-bonus-pqp",
+      "title": "1,500 Card Bonus PQP each year",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get a jump start on earning Premier status with 1,500 Card Bonus Premier qualifying points (PQP) each year. Awarded within 8 weeks of February 1."
+    },
+    {
+      "id": "pqp-earning",
+      "title": "Earn PQP on purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 1 Premier Qualifying Point (PQP) for every $15 spent on purchases with your Club Card."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Unlimited United Club access for cardmember and guest ($750+ value)"
+    },
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": null,
+    "free_checked_bags": "Free first and second checked bags for primary cardmember and one companion (save up to $440 per roundtrip)",
     "hotel_status": null,
     "other": []
   },
@@ -74,5 +190,5 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/united/club-infinite"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Chase product page 2026-07-24. Name updated to 'United Club Card'. APR 19.74%-28.24% variable confirmed. Annual fee $695 confirmed. Signup bonus confirmed (80,000 miles after $5,000 in 3 months, plus 10,000 for adding authorized user). FX fee not explicitly stated on page."
 }
