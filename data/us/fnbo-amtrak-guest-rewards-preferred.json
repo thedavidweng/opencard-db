@@ -1,0 +1,70 @@
+{
+  "id": "us-fnbo-amtrak-guest-rewards-preferred",
+  "schema_version": "1.0.0",
+  "name": "Amtrak Guest Rewards Preferred",
+  "localized_names": {
+    "en": "Amtrak Guest Rewards Preferred"
+  },
+  "country": "us",
+  "issuer": "First National Bank of Omaha",
+  "issuer_id": "fnbo",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See First National Bank of Omaha for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Confirm foreign transaction fee on official terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Rewards currency (see official product page)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earn rates left unset pending structured extract from official page."
+    },
+    "categories": [],
+    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.amtrak.com/Apply",
+  "image": {
+    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+    "attribution": "© First National Bank of Omaha",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.amtrak.com/Apply"
+  ],
+  "notes": "Conservative scaffold: official product HTML was not fully fetchable from the automation environment (403/timeout/DNS). Sources cite the official issuer/partner URL; fee/earn/signup left null or unconfirmed — human spot-check required before merge. Third-party clue DBs were not used as sources."
+}
