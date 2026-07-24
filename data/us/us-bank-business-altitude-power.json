@@ -13,9 +13,9 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": 0.0,
+    "amount": null,
     "currency": "USD",
-    "first_year": 0.0,
+    "first_year": null,
     "waiver_conditions": null
   },
   "apr": {
@@ -24,11 +24,11 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See U.S. Bank for current APR; terms vary by applicant/offer."
+    "notes": "APR not displayed on product page; terms link (applications.usbank.com/pdap/terms) failed to fetch. See U.S. Bank for current APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fees when making purchases outside the United States."
   },
   "credit_required": {
     "score_band": null,
@@ -36,19 +36,71 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "Altitude Points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 2,
+      "description": "2X points on all purchases. No caps or limits on total rewards earned."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Maximum Point value applies to Points redeemed for a deposit into an eligible U.S. Bank Account. Redemption value may differ for travel, merchandise, gift cards, and/or statement credit. Points will expire if there is no reward, purchase, or balance activity on your account for 12 consecutive statement cycles. Cardmembers may transfer points between Business Altitude Connect, Business Altitude Power, Altitude Go, and Altitude Connect cards."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 75000,
+    "unit": "points",
+    "spend_required": 10000,
+    "spend_currency": "USD",
+    "months": 4,
+    "description": "Earn 75,000 bonus points (up to a $750 value) after spending $10,000 on the Account Owner's card in the first 120 days of opening your account.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "priority-pass-digital",
+      "title": "Priority Pass™ Digital Annual Membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Priority Pass™ Digital annual membership gives you access to over 1,700 VIP airport lounges and experiences worldwide."
+    },
+    {
+      "id": "spend-management",
+      "title": "U.S. Bank Spend Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Take control of your card spend with U.S. Bank Spend Management - a game-changing platform for monitoring and managing business expenses."
+    },
+    {
+      "id": "extendpay-offer",
+      "title": "ExtendPay® Plan $0 Fee Offer",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening. Not all accounts are eligible for ExtendPay Plans."
+    },
+    {
+      "id": "transfer-points",
+      "title": "Transfer Points Between Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem points sooner when you transfer points between your business and personal Altitude credit cards. Points do not expire as long as the account remains active."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Priority Pass™ Digital annual membership — access to over 1,700 VIP airport lounges and experiences worldwide"
+    },
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
@@ -67,5 +119,5 @@
     "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-world-elite-mastercard.html",
     "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-credit-card.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Product page fetched successfully. Annual fee and APR not displayed on page; terms link (applications.usbank.com/pdap/terms) failed to fetch. Page title confirms 'Visa Signature®' tier. The product URL mentions 'world-elite-mastercard' but the actual page content says 'Visa Signature® Card'."
 }
