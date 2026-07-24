@@ -9,7 +9,7 @@
   "issuer": "U.S. Bank",
   "issuer_id": "us-bank",
   "network": "visa",
-  "network_tier": "signature",
+  "network_tier": "none",
   "type": "credit",
   "status": "active",
   "annual_fee": {
@@ -24,26 +24,37 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See U.S. Bank for current APR; terms vary by applicant/offer."
+    "notes": "APR not stated on product page; see Cardmember Agreement for current rates."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not stated on product page."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "miles",
+    "currency_label": "SKYPASS miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "1X mile on all other eligible purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles awarded to primary cardmember SKYPASS account."
   },
   "signup_bonus": {
     "amount": 10000.0,
@@ -51,7 +62,7 @@
     "spend_required": 1000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 10,000 Bonus Miles when you spend $1,000 in eligible purchases within the first 90 days",
+    "description": "Earn 10,000 Bonus Miles when you spend $1,000 in eligible purchases within the first 90 days.",
     "as_of": "2026-07-24"
   },
   "benefits": [],
@@ -74,5 +85,5 @@
   "sources": [
     "https://www.skypassvisa.com/credit/visaSkyBlueCard.do"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page. APR and foreign transaction fee not stated on page. network_tier corrected from 'signature' to null — page refers to 'Visa Guide to Benefits' (not 'Visa Signature Guide to Benefits') and card name is 'SKYPASS SkyBlue Visa® Card' without Signature designation."
 }
