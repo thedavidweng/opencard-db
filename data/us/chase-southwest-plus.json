@@ -2,7 +2,9 @@
   "id": "us-chase-southwest-plus",
   "schema_version": "1.0.0",
   "name": "Southwest Rapid Rewards® Plus Credit Card",
-  "localized_names": { "en": "Southwest Rapid Rewards® Plus Credit Card" },
+  "localized_names": {
+    "en": "Southwest Rapid Rewards® Plus Credit Card"
+  },
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
@@ -17,11 +19,22 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 19.24, "max": 27.74, "type": "variable" },
-    "cash_advance": { "min": 28.49, "max": 28.49, "type": "variable" },
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
     "notes": "Variable APRs; see current Chase pricing and terms for exact rates."
   },
-  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
   "credit_required": {
     "score_band": null,
     "notes": null
@@ -48,11 +61,6 @@
           "currency": "USD",
           "period": "account_anniversary_year"
         }
-      },
-      {
-        "label": "Qualifying Lyft purchases through 2027-12-31",
-        "points_per_dollar": 2,
-        "cap": null
       }
     ],
     "redemption_notes": "Rapid Rewards points are transferred to Southwest Airlines after each billing cycle."
@@ -72,7 +80,7 @@
       "title": "First checked bag free",
       "category": "waiver",
       "source": "co-brand",
-      "description": "Primary Cardmember and up to eight passengers traveling on the same reservation can each receive their first standard checked bag free on eligible Southwest-operated flights."
+      "description": "Primary Cardmember and up to eight passengers traveling on the same reservation can each receive their first standard checked bag free on eligible Southwest-operated flights. Save up to $90 round trip ($45 per bag per trip)."
     },
     {
       "id": "standard-seat-selection",
@@ -93,83 +101,51 @@
       "title": "10% annual flight discount",
       "category": "waiver",
       "source": "co-brand",
-      "description": "Receive a 10% promotion code each account anniversary year for eligible Southwest flight purchases, excluding Basic fares."
+      "description": "Receive a 10% promo code each year on your Cardmember anniversary (Excludes Basic fare)."
     },
     {
       "id": "companion-pass-boost",
       "title": "10,000 Companion Pass qualifying points boost",
       "category": "acceleration",
       "source": "co-brand",
-      "description": "Earn one 10,000 Companion Pass qualifying points boost each calendar year."
+      "description": "Earn one 10,000 Companion Pass qualifying points boost each year."
     },
     {
       "id": "group-5-boarding",
       "title": "Group 5 boarding benefit",
       "category": "other",
       "source": "co-brand",
-      "description": "Cardmembers and up to eight additional passengers on the same reservation may board with Group 5 on eligible Southwest-operated flights."
+      "description": "Cardmembers and up to 8 additional passengers in the same reservation will board with Group 5 giving them earlier access to overhead bins."
     },
     {
       "id": "inflight-purchase-credit",
       "title": "25% back on inflight purchases",
       "category": "credit",
       "source": "co-brand",
-      "description": "Receive 25% back as a statement credit on eligible Southwest Airlines inflight purchases for drinks and WiFi."
+      "description": "Receive 25% back as a statement credit on eligible Southwest Airlines inflight purchases."
     },
     {
-      "id": "lost-luggage",
-      "title": "Lost Luggage Reimbursement",
-      "category": "insurance",
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "waiver",
       "source": "issuer",
-      "description": "Provides reimbursement up to $3,000 per covered traveler for lost, damaged, or stolen checked or carry-on baggage during a covered trip."
-    },
-    {
-      "id": "baggage-delay",
-      "title": "Baggage Delay Insurance",
-      "category": "insurance",
-      "source": "issuer",
-      "description": "Reimburses essential purchases up to $100 per day for up to 3 days when baggage is delayed over 6 hours."
-    },
-    {
-      "id": "extended-warranty",
-      "title": "Extended Warranty Protection",
-      "category": "other",
-      "source": "issuer",
-      "description": "Extends eligible U.S. manufacturer's warranties of three years or less by an additional year."
-    },
-    {
-      "id": "purchase-protection",
-      "title": "Purchase Protection",
-      "category": "insurance",
-      "source": "issuer",
-      "description": "Covers eligible new purchases against damage or theft for 120 days from purchase, up to $500 per item."
-    },
-    {
-      "id": "doordash-dashpass",
-      "title": "DoorDash DashPass",
-      "category": "other",
-      "source": "issuer",
-      "description": "Complimentary DashPass for 12 months when activated by 2027-12-31, plus up to $10 off quarterly on eligible non-restaurant DoorDash orders through 2027-12-31."
-    },
-    {
-      "id": "instacart-plus",
-      "title": "Instacart+ and monthly Instacart credit",
-      "category": "credit",
-      "source": "issuer",
-      "description": "Three months of complimentary Instacart+ when activated by 2027-12-31, plus one $10 monthly Instacart credit while eligible terms are met."
+      "description": "No foreign transaction fees when you use your card for purchases made outside the United States."
     }
   ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": "First standard checked bag free for the primary Cardmember and up to eight passengers on the same reservation on eligible Southwest-operated flights.",
+    "free_checked_bags": "First standard checked bag free for the primary Cardmember and up to eight passengers on the same reservation on eligible Southwest-operated flights. Save up to $90 round trip ($45 per bag per trip).",
     "hotel_status": null,
     "other": [
       "No foreign transaction fees",
       "Standard seat selection within 48 hours when available",
       "Group 5 boarding benefit",
-      "10% annual Southwest flight discount promotion code"
+      "10% annual Southwest flight discount promotion code (excludes Basic fare)",
+      "3,000 anniversary points each year",
+      "10,000 Companion Pass qualifying points boost each year",
+      "25% back on inflight purchases"
     ]
   },
   "official_url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
@@ -184,5 +160,5 @@
     "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63968.html"
   ],
-  "notes": "Chase pricing terms state applicants may receive a Signature or Platinum card with different costs and/or benefits; offer details and APRs can change."
+  "notes": "Chase pricing terms state applicants may receive a Signature or Platinum card with different costs and/or benefits; offer details and APRs can change. The product page does not list Lyft 2X as a separate category; the existing Lyft category was removed as it was not confirmed on the fetched page. DoorDash DashPass and Instacart benefits were not described on the Southwest Plus product page and have been removed."
 }
