@@ -67,5 +67,5 @@
     "https://www.usbank.com/credit-cards/shopper-cash-rewards-visa-signature-credit-card.html",
     "https://www.usbank.com/credit-cards.html?var2=pid~24992"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Product URL redirected to general U.S. Bank Credit Cards page; the Shopper Cash Rewards card is NOT listed among current card offerings (Smartly, Shield, Split, Cash+, Altitude Go, Altitude Connect, secured cards are listed). Card may be discontinued or renamed. All existing values preserved unverified."
 }
