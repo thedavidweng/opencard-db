@@ -25,11 +25,11 @@
       "type": "variable"
     },
     "cash_advance": null,
-    "notes": "19.49% to 29.49% variable based on creditworthiness. Varies with Prime Rate. No penalty APR. Late payment fee up to $8. Prime Rate 6.75% as of Dec 16, 2025. Accurate as of March 9, 2026."
+    "notes": "APR not visible on the product page. Rates & Fees PDF (rates-and-fees-99-avianca) returned binary PDF content not parseable as text. Existing values (19.49% to 29.49% variable) preserved from prior verification and NOT re-verified on 2026-07-24."
   },
   "fx_fee": {
     "percent": 0,
-    "notes": "$0 foreign transaction fee."
+    "notes": "No foreign transaction fee."
   },
   "credit_required": {
     "score_band": "unknown",
@@ -64,7 +64,7 @@
     "spend_currency": "USD",
     "months": 3,
     "description": "Earn 40,000 miles after spending $3,000 in the first 90 days.",
-    "as_of": "2026-07-23"
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -115,10 +115,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.cardless.com/cards/avianca/lifemiles",
     "https://www.cardless.com/rates-and-fees-99-avianca"
   ],
-  "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless, NOT First Bankcard/FNBO. Old Banco Popular cards discontinued March 2022. American Express network (not Visa/Mastercard). network_tier is none for Amex."
+  "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. APR not re-verified on 2026-07-24 (Rates & Fees PDF returned binary content)."
 }
