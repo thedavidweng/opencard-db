@@ -1,0 +1,104 @@
+{
+  "id": "us-capital-one-ventureone",
+  "schema_version": "1.0.0",
+  "name": "Capital One VentureOne Rewards Credit Card",
+  "localized_names": { "en": "Capital One VentureOne Rewards Credit Card" },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": null },
+    "notes": "Capital One lists a low intro APR for 15 months; see current important rates and disclosures."
+  },
+  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Capital One miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.25,
+      "description": "1.25x miles on every purchase"
+    },
+    "categories": [
+      {
+        "label": "Capital One Entertainment purchases",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Hotels and rental cars booked through Capital One Travel",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles can be redeemed for travel and transferred to 15+ travel loyalty programs."
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "miles",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "20,000 bonus miles after spending $500 on purchases within the first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No transaction fee when making purchases outside of the United States."
+    },
+    {
+      "id": "transfer-miles",
+      "title": "Transfer miles to travel partners",
+      "category": "other",
+      "source": "issuer",
+      "description": "Transfer miles to a choice of 15+ travel loyalty programs."
+    },
+    {
+      "id": "redeem-miles-for-travel",
+      "title": "Redeem miles for travel",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem miles through Capital One Travel or for reimbursement of past travel purchases."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": ["No foreign transaction fees"]
+  },
+  "official_url": "https://www.capitalone.com/credit-cards/ventureone/",
+  "image": {
+    "url": "https://ecm.capitalone.com/WCM/card/products/ventureone_cardart_prim_323x203.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/ventureone/",
+    "https://www.capitalone.com/assets/shell/page_models/card/resourceapi/credit-cards/ventureone.json",
+    "https://www.capitalone.com/credit-cards/"
+  ],
+  "notes": "Distinct from Capital One Venture Rewards and Capital One Venture X Rewards; official VentureOne page lists annual benefits and travel benefits as none."
+}
