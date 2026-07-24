@@ -105,11 +105,7 @@
       "description": "When you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver (CDW), you can be covered for Damage to or Theft of a Rental Vehicle. Secondary coverage; does not include liability coverage. Not available for vehicles rented in Australia, Italy, and New Zealand.",
       "details": {
         "type": "secondary",
-        "exclusions": [
-          "Australia",
-          "Italy",
-          "New Zealand"
-        ]
+        "exclusions": "['Australia', 'Italy', 'New Zealand']"
       }
     },
     {
