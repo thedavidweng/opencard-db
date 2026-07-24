@@ -20,33 +20,93 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.49,
+      "max": 26.49,
       "type": "variable"
     },
-    "notes": "See Discover for current APR; terms vary by applicant/offer."
+    "notes": "0% intro APR for 15 months on purchases and balance transfers; 17.49% to 26.49% variable APR after that; Balance Transfer Fee applies."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not stated on the product page."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "cash_back",
+    "currency_label": "cash back",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "Earn unlimited 1% cash back on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Gas stations and restaurants",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back won't expire for the life of the account. Cashback Match: unlimited dollar-for-dollar match of all cash back earned at end of first year, automatically. No limit to how much Discover will match."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "cashback-match",
+      "title": "Unlimited Cashback Match",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "You're never responsible for unauthorized purchases on your Discover Card."
+    },
+    {
+      "id": "ssn-alerts",
+      "title": "Free Social Security Number Alerts",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an alert if we find your Social Security number on the dark web. Sign up to activate this free benefit."
+    },
+    {
+      "id": "freeze-account",
+      "title": "Freeze Your Account",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you misplace your card, you can prevent new purchases and cash advances in seconds with the on/off switch on our mobile app and website."
+    },
+    {
+      "id": "fico-score",
+      "title": "FICO Score and More",
+      "category": "other",
+      "source": "issuer",
+      "description": "It's free and checking your score doesn't hurt your credit."
+    },
+    {
+      "id": "customer-service",
+      "title": "Real Human Customer Service 24/7",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can talk to a real human on our customer service team any time."
+    },
+    {
+      "id": "tap-to-pay",
+      "title": "Tap to Pay",
+      "category": "other",
+      "source": "network",
+      "description": "It's fast and easy to pay with your contactless Discover Card."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +126,5 @@
   "sources": [
     "https://www.discover.com/credit-cards/cash-back/chrome/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Discover it Chrome. No annual fee. 2% cash back at gas stations and restaurants on up to $1,000 combined each quarter, 1% on all other purchases. 0% intro APR for 15 months, then 17.49%-26.49% variable. Cashback Match in first year. FX fee not stated on page."
 }
