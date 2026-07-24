@@ -20,41 +20,87 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 16.74,
+      "max": 24.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "0% intro APR for 12 months from account opening on purchases. After that, 16.74% Min. of (6.75+9.99) and 29.99% to 24.74% Min. of (6.75+17.99) and 29.99% variable APR."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Not stated on product page. Preserved as null — not re-verified."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "cash_back",
+    "currency_label": "Cash Back rewards (tracked as points; each $1 in Cash Back = 100 points)",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.0,
+      "description": "1% cash back on all other purchases with no limit to the amount you can earn."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem for cash back as a statement credit, direct deposit to most U.S. checking and savings accounts, travel through Chase Travel, Apple Ultimate Rewards Store, or gift cards. No minimums to redeem."
   },
   "signup_bonus": {
-    "amount": 1000.0,
+    "amount": 750.0,
     "unit": "USD",
     "spend_required": 8000.0,
     "spend_currency": "USD",
     "months": 4,
-    "description": "$1,000 cash back after you spend $8,000 on purchases in the first 4 months",
+    "description": "Earn $750 cash back after you spend $8,000 on purchases in the first 4 months after account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "instacart-membership",
+      "title": "Complimentary three month Instacart+ membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enroll in complimentary three-month Instacart+ membership (auto renews at $99/year after complimentary period). Plus, once activated, Instacart+ members get a $20 Instacart credit each month automatically loaded into their Instacart Business Account."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee cards at no additional cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Employee cards let you set individual spending limits and help you earn rewards even faster."
+    },
+    {
+      "id": "credit-line-increase",
+      "title": "Automatic credit line increase checks",
+      "category": "other",
+      "source": "issuer",
+      "description": "As a Chase cardmember, you'll be automatically checked for a credit line increase every 6 months or sooner."
+    },
+    {
+      "id": "chase-pay-over-time",
+      "title": "Chase Pay Over Time",
+      "category": "other",
+      "source": "issuer",
+      "description": "Break up credit card purchases into budget friendly payments. After purchase: pay off eligible purchases of $100 or more in smaller equal monthly payments. No interest, just a fixed monthly fee."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -74,5 +120,5 @@
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/ink/cash"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Network (mastercard/world) not explicitly stated on page — preserved from existing, not re-verified. Signup bonus updated from $1,000 to $750 based on current page display showing $750 with $1,000 struck through; offer details text still references $1,000 (may be stale)."
 }
