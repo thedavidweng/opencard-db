@@ -1,0 +1,79 @@
+{
+  "id": "us-wells-fargo-choice-privileges-select",
+  "schema_version": "1.0.0",
+  "name": "Choice Hotels Points Earning Mastercards",
+  "localized_names": {
+    "en": "Choice Hotels Points Earning Mastercards"
+  },
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See Wells Fargo for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Confirm foreign transaction fee on official terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Rewards currency (see official product page)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earn rates left unset pending structured extract from official page."
+    },
+    "categories": [],
+    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+  },
+  "signup_bonus": {
+    "amount": 60000.0,
+    "unit": "points",
+    "spend_required": 3000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "EARN 60,000 BONUS POINTS when you spend $3,000 in purchases in the first 3 months",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
+  "image": {
+    "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-7-26_v2/images/Products/ChoicePrivileges/choice_privileges_social_banner_1220x627_english.jpg",
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
+    "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards/?sub_channel=WEB&vendor_code=WF"
+  ],
+  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+}
