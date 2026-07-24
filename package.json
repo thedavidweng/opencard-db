@@ -8,14 +8,10 @@
   "scripts": {
     "validate": "node --experimental-strip-types scripts/validate.ts",
     "build:indexes": "node --experimental-strip-types scripts/build-indexes.ts",
-<<<<<<< HEAD
-    "test": "node --experimental-strip-types --test tests/schema/schema.test.ts tests/indexes/indexes.test.ts tests/api/api.contract.test.ts tests/api/card-image.test.ts",
-    "embed:default-card": "node --experimental-strip-types scripts/embed-default-card.ts",
-=======
     "optimize:images": "node --experimental-strip-types scripts/optimize-images.ts",
     "triage:pr": "node --experimental-strip-types scripts/run-pr-triage.ts",
-    "test": "node --experimental-strip-types --test tests/schema/schema.test.ts tests/indexes/indexes.test.ts tests/api/api.contract.test.ts tests/pr/pr-triage.test.ts tests/pr/optimize-images.test.ts",
->>>>>>> f3956da (Improve beginner PR flow with triage, titles, and image WebP CI)
+    "embed:default-card": "node --experimental-strip-types scripts/embed-default-card.ts",
+    "test": "node --experimental-strip-types --test tests/schema/schema.test.ts tests/indexes/indexes.test.ts tests/api/api.contract.test.ts tests/api/card-image.test.ts tests/pr/pr-triage.test.ts tests/pr/optimize-images.test.ts",
     "worker:dev": "npm run dev --prefix worker",
     "worker:deploy": "npm run deploy --prefix worker"
   },
