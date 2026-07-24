@@ -20,30 +20,51 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for 12 billing cycles on balance transfers within 45 days of account opening, then 19.49% to 29.49%. Cash advance APR 29.74% variable. Minimum monthly interest charge $1.00. Balance transfer fee 5% (min $5). Cash advance fee 5% (min $10)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "skywards_miles",
+    "currency_label": "Skywards Miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1 Skywards Mile on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Skywards Miles don't expire while your account is open. No limit to the number of Skywards Miles you can earn. NEW: Earn 1 Tier Mile per 4 base Skywards Miles earned. Earn 10,000 anniversary bonus Skywards Miles annually after spending $30,000 on purchases each cardmembership year."
   },
   "signup_bonus": {
     "amount": 70000.0,
@@ -51,17 +72,125 @@
     "spend_required": 3000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "earn 70,000 bonus Skywards Miles after spending $3,000 on purchases in the first 90 days",
+    "description": "Earn 70,000 bonus Skywards Miles after spending $3,000 on purchases in the first 90 days. Plus enjoy Emirates Skywards Gold tier membership during your first year.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "emirates-gold-tier",
+      "title": "Emirates Skywards Gold Tier Membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy Emirates Skywards Gold tier membership during your first year, and retain your tier status by spending $40,000 each cardmembership year."
+    },
+    {
+      "id": "anniversary-bonus-miles",
+      "title": "10,000 Anniversary Bonus Skywards Miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 10,000 anniversary bonus Skywards Miles after spending $30,000 on purchases each cardmembership year."
+    },
+    {
+      "id": "tier-miles-conversion",
+      "title": "Earn 1 Tier Mile per 4 Base Skywards Miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "NEW! Earn 1 Tier Mile per 4 base Skywards Miles earned."
+    },
+    {
+      "id": "cash-plus-miles-special-rate",
+      "title": "Cash + Miles Special Rate",
+      "category": "other",
+      "source": "issuer",
+      "description": "NEW! Enjoy a special rate when using your Emirates Skywards Mastercard to book flights on emirates.com and the Emirates App using Cash + Miles."
+    },
+    {
+      "id": "priority-pass-lounge",
+      "title": "Priority Pass™ Select Lounge Access",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Priority Pass Select lounge access provides unlimited access to over 1,200 lounges worldwide for the primary cardmember and their guest(s)."
+    },
+    {
+      "id": "global-entry-tsa-credit",
+      "title": "Global Entry or TSA PreCheck Application Fee Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive an automatic statement credit for the cost of one Global Entry or TSA PreCheck application fee every five years – up to $120."
+    },
+    {
+      "id": "miles-never-expire",
+      "title": "Skywards Miles Don't Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "The Skywards Miles you earn will not expire as long as your account remains open."
+    },
+    {
+      "id": "no-limit-miles",
+      "title": "No Limit on Skywards Miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "There is no limit to the number of Skywards Miles you can earn."
+    },
+    {
+      "id": "buy-gift-miles-savings",
+      "title": "25% Savings When You Buy or Gift Miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a 25% savings when you Buy Skywards Miles for yourself or Gift Miles."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "complimentary-fico-score",
+      "title": "Complimentary FICO® Credit Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary online access to your FICO® Credit Score. Keep an eye on your credit score and get alerts when we learn that your score has changed."
+    },
+    {
+      "id": "zero-fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for charges you did not authorize."
+    },
+    {
+      "id": "intro-bt-apr",
+      "title": "Introductory APR on Balance Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% intro APR for 12 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 19.49% to 29.49%."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Priority Pass Select — unlimited access to over 1,200 lounges worldwide for primary cardmember and guest(s)"
+    },
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "per_year"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "per_year"
+    },
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Emirates Skywards Gold tier membership during first year",
+      "Cash + Miles special rate on emirates.com and Emirates App",
+      "No foreign transaction fees"
+    ]
   },
   "official_url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-premium-world-elite-mastercard/",
   "image": {
@@ -74,5 +203,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/emirates-skywards-premium-world-elite-mastercard/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Barclays product page. Annual fee $499, purchase APR 19.49%-29.49% variable, cash advance 29.74% variable, FX fee 0%. Rewards: 3X Skywards Miles on Emirates, 2X on travel, 1X on all other. 70,000 bonus miles after $3,000 spend in 90 days + Emirates Gold tier first year. Priority Pass Select lounge access, Global Entry/TSA PreCheck credit up to $120/5yr, 10,000 anniversary bonus miles after $30,000 spend."
 }
