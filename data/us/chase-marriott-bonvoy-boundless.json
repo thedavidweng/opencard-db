@@ -1,0 +1,155 @@
+{
+  "id": "us-chase-marriott-bonvoy-boundless",
+  "schema_version": "1.0.0",
+  "name": "Marriott Bonvoy Boundless® Credit Card",
+  "localized_names": { "en": "Marriott Bonvoy Boundless® Credit Card" },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": 19.24, "max": 27.74, "type": "variable" },
+    "cash_advance": { "min": 28.49, "max": 28.49, "type": "variable" },
+    "notes": "Variable APRs from Chase pricing terms; purchase APR varies based on creditworthiness and Prime Rate."
+  },
+  "fx_fee": { "percent": 0, "notes": "Foreign transaction fees: none." },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "marriott_bonvoy",
+    "currency_label": "Marriott Bonvoy points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2x points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Hotels participating in Marriott Bonvoy",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Combined grocery stores, gas stations, and dining purchases",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "account_year"
+        }
+      }
+    ],
+    "redemption_notes": "Points transfer to Marriott Bonvoy after each billing cycle; points do not expire with card earning activity or other qualifying Marriott Bonvoy activity every 24 months."
+  },
+  "signup_bonus": {
+    "amount": 125000,
+    "unit": "Marriott Bonvoy points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 125,000 bonus points plus 1 Free Night Award after spending $3,000 on eligible purchases within 3 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "anniversary-free-night",
+      "title": "Anniversary Free Night Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Free Night Award each year after account anniversary, valid for a one-night hotel stay at a property with a redemption level up to 35,000 points; resort fees may apply."
+    },
+    {
+      "id": "airline-credits",
+      "title": "Limited-time airline statement credits",
+      "category": "credit",
+      "source": "issuer",
+      "description": "New cardmembers who apply during the Chase promotional period can earn up to $100 in statement credits after qualifying eligible airline purchases."
+    },
+    {
+      "id": "silver-elite-status",
+      "title": "Automatic Marriott Bonvoy Silver Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic Silver Elite Status each calendar year as a cardmember, subject to account and Marriott Bonvoy terms."
+    },
+    {
+      "id": "elite-night-credits",
+      "title": "15 Elite Night Credits",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Receive 15 Elite Night Credits toward Marriott Bonvoy Elite Status each calendar year, subject to program restrictions."
+    },
+    {
+      "id": "elite-night-spend",
+      "title": "1 Elite Night Credit for every $5,000 spent",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 1 Elite Night Credit toward Marriott Bonvoy Elite Status for each $5,000 in eligible purchases."
+    },
+    {
+      "id": "path-to-gold",
+      "title": "Path to Gold Elite Status",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn Marriott Bonvoy Gold Elite Status after spending $35,000 on purchases in a calendar year."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the United States."
+    },
+    {
+      "id": "travel-purchase-coverage",
+      "title": "Travel and purchase coverage",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Includes baggage delay insurance, lost luggage reimbursement, trip delay reimbursement, and purchase protection when eligible terms are met."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary DashPass for 12 months when activated with the card during the Chase promotional period; terms apply."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Automatic Marriott Bonvoy Silver Elite Status; path to Gold Elite Status after $35,000 in purchases each calendar year.",
+    "other": [
+      "No foreign transaction fees",
+      "Annual Free Night Award up to 35,000 points",
+      "15 Elite Night Credits each calendar year",
+      "Up to 17x total points at participating Marriott Bonvoy hotels when including Marriott Bonvoy member and Silver Elite earnings"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
+  "image": {
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/marriott-bonvoy-boundless-card.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64508.html"
+  ],
+  "notes": "Offers, APRs, and benefit terms can change; verified against Chase pages on last_verified date."
+}
