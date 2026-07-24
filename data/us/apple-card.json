@@ -1,0 +1,70 @@
+{
+  "id": "us-apple-card",
+  "schema_version": "1.0.0",
+  "name": "Apple Card",
+  "localized_names": {
+    "en": "Apple Card"
+  },
+  "country": "us",
+  "issuer": "Goldman Sachs",
+  "issuer_id": "goldman-sachs",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See Goldman Sachs for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Confirm foreign transaction fee on official terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Rewards currency (see official product page)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earn rates left unset pending structured extract from official page."
+    },
+    "categories": [],
+    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.apple.com/apple-card/",
+  "image": {
+    "url": "https://www.apple.com/v/apple-card/n/images/meta/og__dtukeczp0ygm_overview.png?202605221100",
+    "attribution": "© Goldman Sachs",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.apple.com/apple-card/"
+  ],
+  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=$0 but value not confirmed in page text."
+}
