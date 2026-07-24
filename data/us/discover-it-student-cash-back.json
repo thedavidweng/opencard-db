@@ -20,33 +20,65 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 16.49,
+      "max": 25.49,
       "type": "variable"
     },
-    "notes": "See Discover for current APR; terms vary by applicant/offer."
+    "notes": "0% intro APR for 6 months on purchases; 16.49% to 25.49% variable APR after that."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not stated on the product page. Page FAQ mentions checking for foreign transaction fees if traveling outside the U.S."
   },
   "credit_required": {
     "score_band": null,
-    "notes": null
+    "notes": "No credit score required to apply. Page states: 'No credit score required to apply.'"
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "cash_back",
+    "currency_label": "cash back",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "Earn 1% cash back on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "5% cash back rotating quarterly categories (activation required)",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": null,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Cashback Match: unlimited dollar-for-dollar match of all cash back earned at end of first year, automatically. No limit to how much Discover will match."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "cashback-match",
+      "title": "Unlimited Cashback Match",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match. So you could turn $50 cash back to $100. Or you could turn $100 cash back to $200."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "You're never responsible for unauthorized purchases on your Discover Card."
+    },
+    {
+      "id": "no-credit-score-required",
+      "title": "No Credit Score Required to Apply",
+      "category": "other",
+      "source": "issuer",
+      "description": "No credit score required to apply. We may use credit scores if available."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +98,5 @@
   "sources": [
     "https://www.discover.com/credit-cards/student-credit-card/it-card/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Discover it Student Cash Back. No annual fee. No credit score required to apply. 5% cash back on rotating quarterly categories (activation required) up to quarterly maximum, 1% on all other purchases. 0% intro APR for 6 months, then 16.49%-25.49% variable. Cashback Match in first year. FX fee not stated on page."
 }
