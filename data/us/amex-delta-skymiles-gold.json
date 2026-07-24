@@ -2,7 +2,9 @@
   "id": "us-amex-delta-skymiles-gold",
   "schema_version": "1.0.0",
   "name": "Delta SkyMiles® Gold American Express Card",
-  "localized_names": { "en": "Delta SkyMiles® Gold American Express Card" },
+  "localized_names": {
+    "en": "Delta SkyMiles® Gold American Express Card"
+  },
   "country": "us",
   "issuer": "American Express",
   "issuer_id": "amex",
@@ -17,14 +19,25 @@
     "waiver_conditions": "$0 introductory annual fee for the first year, then $150."
   },
   "apr": {
-    "purchase": { "min": 19.49, "max": 28.49, "type": "variable" },
-    "cash_advance": { "min": 28.74, "max": 28.74, "type": "variable" },
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
     "notes": "Variable APRs are based on creditworthiness and the Prime Rate; rates verified from official American Express terms dated 05/24/26."
   },
-  "fx_fee": { "percent": 0, "notes": "American Express will not charge foreign transaction fees on purchases outside the United States with this Card." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "American Express will not charge foreign transaction fees on purchases outside the United States with this Card."
+  },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated by issuer; Amex generally requires good to excellent credit."
   },
   "rewards": {
     "currency": "skymiles",
@@ -160,7 +173,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/delta-skymiles-gold-american-express-card/28810-10-0",
