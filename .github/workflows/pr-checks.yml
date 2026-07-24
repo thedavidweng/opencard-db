@@ -146,7 +146,7 @@ jobs:
           PR: ${{ github.event.pull_request.number }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
-          # Other open PRs — used to detect duplicate Add/Update card work.
+          # Other open PRs — used to detect duplicate card(add|update) work.
           gh pr list --state open --limit 200 \
             --json number,title,url,author \
             --jq '[.[] | {number, title, url, author: .author.login}]' \

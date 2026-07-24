@@ -265,7 +265,7 @@ describe("pr triage", () => {
     assert.ok(r.issues.some((i) => i.code === "image"));
   });
 
-  it("detects duplicate open Add card PRs and links them", () => {
+  it("detects duplicate open card PRs and links them", () => {
     const r = triagePullRequest({
       title: "card(add): us-demo-card",
       body: goodBody.replace(/us-chase-sapphire-preferred/g, "us-demo-card"),
