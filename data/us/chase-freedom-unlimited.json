@@ -2,7 +2,9 @@
   "id": "us-chase-freedom-unlimited",
   "schema_version": "1.0.0",
   "name": "Chase Freedom Unlimited® Credit Card",
-  "localized_names": { "en": "Chase Freedom Unlimited® Credit Card" },
+  "localized_names": {
+    "en": "Chase Freedom Unlimited® Credit Card"
+  },
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
@@ -17,17 +19,25 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 18.24, "max": 27.74, "type": "variable" },
-    "cash_advance": { "min": 28.49, "max": 28.49, "type": "variable" },
-    "notes": "0% intro APR for 15 months from account opening on purchases and balance transfers; see current Chase pricing and terms for exact rates."
+    "purchase": {
+      "min": 18.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months from account opening on purchases and balance transfers; after that, a variable APR of 18.24% to 27.74% based on creditworthiness. APRs vary with the market based on the Prime Rate."
   },
   "fx_fee": {
     "percent": 3,
-    "notes": "Foreign transaction fee is 3% of each transaction in U.S. dollars."
+    "notes": "Foreign transaction fee is 3% of the amount of each transaction in U.S. dollars."
   },
   "credit_required": {
     "score_band": null,
-    "notes": null
+    "notes": "No credit score band published on the official product page or pricing and terms."
   },
   "rewards": {
     "currency": "ultimate_rewards",
@@ -35,7 +45,7 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.5,
-      "description": "1.5% cash back on all other purchases"
+      "description": "Unlimited 1.5% cash back on all other purchases"
     },
     "categories": [
       {
@@ -59,7 +69,7 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Cash Back rewards do not expire as long as the account is open; there is no minimum to redeem for cash back."
+    "redemption_notes": "Cash Back rewards do not expire as long as your account is open. There is no minimum to redeem for cash back."
   },
   "signup_bonus": {
     "amount": 20000,
@@ -67,51 +77,69 @@
     "spend_required": 500,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn a $200 cash back bonus, awarded as 20,000 bonus points, after spending $500 on purchases in the first 3 months from account opening.",
+    "description": "Earn a $200 bonus (20,000 bonus points, redeemable for $200 cash back) after you spend $500 on purchases in the first 3 months from account opening.",
     "as_of": "2026-07-24"
   },
   "benefits": [
+    {
+      "id": "zero-liability",
+      "title": "Zero Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You won't be held responsible for unauthorized charges made with your card or account information."
+    },
     {
       "id": "purchase-protection",
       "title": "Purchase Protection",
       "category": "insurance",
       "source": "issuer",
-      "description": "Covers eligible new purchases for 120 days against damage or theft, up to $500 per item."
+      "description": "Covers eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item. Specific limitations apply to New York residents (coverage period is 90 days).",
+      "details": {
+        "coverage_limit": "$500 per item",
+        "duration": "120 days (90 days for New York residents)"
+      }
     },
     {
       "id": "extended-warranty",
       "title": "Extended Warranty Protection",
       "category": "insurance",
       "source": "issuer",
-      "description": "Extends eligible U.S. manufacturer's warranties of three years or less by one additional year, up to four years from the purchase date."
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
     },
     {
       "id": "trip-cancellation",
       "title": "Trip Cancellation and Interruption Insurance",
       "category": "insurance",
       "source": "issuer",
-      "description": "Reimburses up to $1,500 per covered traveler and $6,000 per trip for eligible prepaid, non-refundable passenger fares when a covered situation cancels or interrupts a trip."
+      "description": "You can be reimbursed up to $1,500 per covered traveler and $6,000 per trip for your pre-paid, non-refundable passenger fares, if your trip is canceled or cut short by sickness, severe weather or other covered situations."
     },
     {
       "id": "auto-rental-coverage",
       "title": "Auto Rental Coverage",
       "category": "insurance",
       "source": "issuer",
-      "description": "Provides reimbursement for theft and collision damage for most rental vehicles when the card is used and the rental company's collision insurance is declined; coverage is secondary in the U.S."
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage provides reimbursement for theft and collision damage for most rental vehicles. In the U.S., coverage is secondary to your personal insurance."
     },
     {
-      "id": "zero-liability",
-      "title": "Zero Liability Protection",
+      "id": "travel-emergency-assistance",
+      "title": "Travel and Emergency Assistance",
       "category": "other",
       "source": "issuer",
-      "description": "You will not be held responsible for unauthorized charges made with your card or account information."
+      "description": "If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services. You will be responsible for the cost of any goods or services obtained."
     },
     {
-      "id": "doorstep-delivery",
+      "id": "fraud-monitoring",
+      "title": "24/7 Fraud Monitoring",
+      "category": "other",
+      "source": "issuer",
+      "description": "Chase helps safeguard your credit card purchases using sophisticated fraud monitoring. They monitor for fraud 24/7 and can text, email or call you if there are unusual purchases on your credit card."
+    },
+    {
+      "id": "doordash-dashpass",
       "title": "DoorDash DashPass",
       "category": "other",
       "source": "issuer",
-      "description": "Complimentary 6 months of DashPass when activated by December 31, 2027, then automatic enrollment at the current monthly rate unless canceled."
+      "description": "Get 6 months of complimentary access to DashPass, a membership for both DoorDash and Caviar, which unlocks $0 delivery fees and lower service fees on eligible orders. After that, you are automatically enrolled in DashPass at the current monthly rate. Activate by December 31, 2027."
     },
     {
       "id": "doordash-quarterly-discount",
@@ -125,7 +153,7 @@
       "title": "Spend Instantly",
       "category": "other",
       "source": "issuer",
-      "description": "After approval, cardmembers can receive instant access by adding the card to a digital wallet."
+      "description": "After approval, receive instant access to your card by adding it to a digital wallet, like Apple Pay®, Google Pay™ or Samsung Pay."
     }
   ],
   "travel_perks": {
@@ -134,7 +162,10 @@
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": ["Travel and emergency assistance"]
+    "other": [
+      "Trip Cancellation and Interruption Insurance",
+      "Travel and Emergency Assistance"
+    ]
   },
   "official_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
   "image": {
