@@ -8,63 +8,144 @@
   "country": "us",
   "issuer": "Wells Fargo",
   "issuer_id": "wells-fargo",
-  "network": "visa",
-  "network_tier": "signature",
+  "network": "mastercard",
+  "network_tier": "world_elite",
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 18.49,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "See Wells Fargo for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "18.49%, 23.49%, or 28.49% based on creditworthiness. Varies with Prime Rate. No penalty APR. Minimum interest charge $1.00. Late payment fee up to $40."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fee for purchases converted to U.S. dollars."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated; three APR tiers suggest creditworthiness-based approval. May not be eligible if opened a One Key, One Key+, or Hotels.com Card within the last 48 months."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "onekeycash",
+    "currency_label": "OneKeyCash",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.5,
+      "description": "1.5% OneKeyCash on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Expedia, Hotels.com, and Vrbo bookings",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas stations, grocery stores, and dining",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "OneKeyCash is not redeemable for cash and can only be used on Expedia, Hotels.com, and Vrbo. The 3% rate on Expedia/Hotels.com/Vrbo is 1.5% base plus 1.5% bonus. Must be logged into the primary cardholder's One Key member account."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 250,
+    "unit": "USD OneKeyCash",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn $250 in OneKeyCash after spending $1,000 on purchases in the first 3 months from account opening.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "$0 annual fee."
+    },
+    {
+      "id": "no-fx-fee",
+      "title": "No Foreign Transaction Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees for purchases converted to U.S. dollars."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cellular Telephone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to $1,000 cell phone protection against damage, theft, or unintended separation. $25 deductible."
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation and Interruption Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement for nonrefundable common carrier fare if trip is canceled or interrupted for a covered reason."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "network",
+      "description": "Reimbursement of up to $50,000 for covered damage or theft of eligible rental vehicle."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Travel Accident Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to $1,000,000 travel accident insurance when purchasing airline or common carrier tickets with the card."
+    },
+    {
+      "id": "one-key-silver-status",
+      "title": "Automatic One Key Silver Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic One Key Silver membership with Silver Member Prices: 15%+ savings on 10,000+ hotels. Unlock Gold status at $15,000 annual spend."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
-    "hotel_status": null,
-    "other": []
+    "hotel_status": "Automatic One Key Silver status (15%+ savings on 10,000+ hotels). Gold status unlocked at $15,000 annual spend.",
+    "other": [
+      "No foreign transaction fees",
+      "Cellular Telephone Protection up to $1,000 ($25 deductible)",
+      "Trip Cancellation and Interruption Protection",
+      "Auto Rental Collision Damage Waiver up to $50,000",
+      "Travel Accident Insurance up to $1,000,000"
+    ]
   },
-  "official_url": "https://www.expedia.com/one-key-cards",
+  "official_url": "https://creditcards.wellsfargo.com/one-key-credit-card/",
   "image": {
     "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
     "attribution": "© Wells Fargo",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
-    "https://www.expedia.com/one-key-cards"
+    "https://creditcards.wellsfargo.com/one-key-credit-card/",
+    "https://www.wellsfargo.com/credit-cards/terms/onekey/"
   ],
-  "notes": "Conservative scaffold: official product HTML was not fully fetchable from the automation environment (403/timeout/DNS). Sources cite the official issuer/partner URL; fee/earn/signup left null or unconfirmed — human spot-check required before merge. Third-party clue DBs were not used as sources."
+  "notes": "Issued by Wells Fargo. Official product page is on creditcards.wellsfargo.com (not expedia.com co-branded page). World Elite Mastercard."
 }
