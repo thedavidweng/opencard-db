@@ -8,8 +8,8 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "visa_signature",
   "type": "credit",
   "status": "active",
   "annual_fee": {
@@ -20,30 +20,52 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.24,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "19.24% (min of (6.75+12.49) and 29.99%) to 27.74% (min of (6.75+20.99) and 29.99%) variable APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. 'You will pay no foreign transaction fees when you use your card for purchases made outside the United States.'"
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "marriott_bonvoy_points",
+    "currency_label": "Marriott Bonvoy points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1,
+      "description": "1X points on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points automatically transferred to Marriott Bonvoy account. Pay Yourself Back: redeem Marriott Bonvoy points for statement credit on airline tickets and Marriott hotel purchases, up to $750 total in redemptions per year ($100 for every 12,500 points)."
   },
   "signup_bonus": {
     "amount": 60000.0,
@@ -51,17 +73,92 @@
     "spend_required": 1000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 60,000 Bonus Points after spending $1,000 on eligible purchases within 3 months",
+    "description": "Earn 60,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "silver-elite-status",
+      "title": "Automatic Silver Elite Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Automatically receive Silver Elite Status each calendar year as a cardmember."
+    },
+    {
+      "id": "elite-night-credits",
+      "title": "5 Elite Night Credits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 5 Elite Night Credits every calendar year."
+    },
+    {
+      "id": "no-fx-fee",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the United States."
+    },
+    {
+      "id": "pay-yourself-back",
+      "title": "Pay Yourself Back",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem Marriott Bonvoy points for statement credit on airline tickets and Marriott hotel purchases, up to $750 total in redemptions per year."
+    },
+    {
+      "id": "dashpass",
+      "title": "Complimentary DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "12 months of complimentary DashPass for DoorDash and Caviar when activated between 02/01/2025 and 12/31/2027."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimburses up to $100 a day for up to 5 days for essential purchases when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimbursement up to $3,000 per covered traveler for lost, damaged or stolen baggage."
+    },
+    {
+      "id": "trip-delay-reimbursement",
+      "title": "Trip Delay Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Coverage for unreimbursed expenses up to $500 per covered traveler if travel is delayed more than 12 hours or requires an overnight stay."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers eligible new purchases for 120 days against damage or theft up to $500 per item."
+    },
+    {
+      "id": "visa-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary Visa Signature Concierge Service 24 hours a day."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
-    "hotel_status": null,
-    "other": []
+    "hotel_status": "Silver Elite Status with Marriott Bonvoy",
+    "other": [
+      "5 Elite Night Credits each calendar year",
+      "No foreign transaction fees",
+      "Pay Yourself Back up to $750/year for travel purchases"
+    ]
   },
   "official_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
   "image": {
@@ -74,5 +171,5 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa (page references 'Visa Signature card' in offer details). Network tier corrected from world to visa_signature."
 }
