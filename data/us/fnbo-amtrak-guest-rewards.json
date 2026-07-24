@@ -127,7 +127,6 @@
   "travel_perks": {
     "lounge_access": {
       "program": "Amtrak Station Lounge Pass",
-      "visits_per_year": null,
       "notes": "Station lounge pass upon account opening and card anniversary."
     },
     "tsa_precheck_credit": null,
