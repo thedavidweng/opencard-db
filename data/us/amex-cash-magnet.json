@@ -2,7 +2,9 @@
   "id": "us-amex-cash-magnet",
   "schema_version": "1.0.0",
   "name": "American Express Cash Magnet® Card",
-  "localized_names": { "en": "American Express Cash Magnet® Card" },
+  "localized_names": {
+    "en": "American Express Cash Magnet® Card"
+  },
   "country": "us",
   "issuer": "American Express",
   "issuer_id": "amex",
@@ -17,7 +19,11 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": "variable" },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
     "notes": "Cardmember agreement states purchase APR is variable at Prime Rate + 12.74% to Prime Rate + 21.74%; see American Express for current terms."
   },
   "fx_fee": {
