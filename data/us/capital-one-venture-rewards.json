@@ -1,9 +1,9 @@
 {
   "id": "us-capital-one-venture-rewards",
   "schema_version": "1.0.0",
-  "name": "Venture Rewards Travel Card — Apply Today",
+  "name": "Venture Rewards from Capital One",
   "localized_names": {
-    "en": "Venture Rewards Travel Card — Apply Today"
+    "en": "Venture Rewards from Capital One"
   },
   "country": "us",
   "issuer": "Capital One",
@@ -20,30 +20,37 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "19.49% - 28.49% variable APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. You won't pay a transaction fee when making purchases outside of the United States."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "excellent",
+    "notes": "Excellent Credit indicated on page."
   },
   "rewards": {
     "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
+    "currency_label": "Capital One miles",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "points_per_dollar": 2.0,
+      "description": "Get unlimited 2X miles per dollar on every purchase, every day."
     },
-    "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem miles for travel, cash back, gift cards, experiences and more. Transfer miles to 15+ travel loyalty programs. Miles don't expire for the life of the account."
   },
   "signup_bonus": {
     "amount": 75000.0,
@@ -51,17 +58,93 @@
     "spend_required": 4000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 75,000 bonus miles once you spend $4,000 on purchases within the first 3 months",
+    "description": "Earn 75,000 bonus miles once you spend $4,000 on purchases within the first 3 months from account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "You won't pay a transaction fee when making purchases outside of the United States."
+    },
+    {
+      "id": "global-entry-tsa-precheck",
+      "title": "Global Entry or TSA PreCheck credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to a $120 statement credit when you use your Venture card to apply for Global Entry or TSA PreCheck®."
+    },
+    {
+      "id": "hertz-five-star",
+      "title": "Hertz Five Star status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Eligible Venture cardholders receive complimentary Hertz® Five Star status. Skip the rental counter and choose from a wider selection of cars."
+    },
+    {
+      "id": "lifestyle-collection",
+      "title": "Lifestyle Collection $50 experience credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a $50 experience credit on every Lifestyle Collection stay. Plus, enjoy room upgrades, early check-in, and late checkout when available."
+    },
+    {
+      "id": "capital-one-travel",
+      "title": "Capital One Travel",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 5X miles on hotels and rental cars booked through Capital One Travel. Save an average of 15% on flights using price prediction and free price drop protection. Price match guarantee on flights, hotels and rental cars."
+    },
+    {
+      "id": "capital-one-entertainment",
+      "title": "Capital One Entertainment",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access cardholder-only VIP packages and thousands of tickets to events in sports, music, dining, theater and more, plus redeem your rewards for tickets and packages."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Travel accident insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get automatic insurance for a covered loss at no extra charge when you use your credit card to purchase your fare."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "other",
+      "source": "issuer",
+      "description": "Rent an eligible vehicle with your credit card and you can be covered for damage due to collision or theft."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "You'll get additional warranty protection at no charge on eligible items that are purchased with your credit card."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your card is lost or stolen, you can get an emergency replacement and a cash advance."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
+    "tsa_precheck_credit": {},
+    "global_entry_credit": {},
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Hertz Five Star status",
+      "$50 experience credit on Lifestyle Collection stays",
+      "Travel accident insurance",
+      "Auto Rental Collision Damage Waiver"
+    ]
   },
   "official_url": "https://www.capitalone.com/credit-cards/venture/",
   "image": {
@@ -74,5 +157,5 @@
   "sources": [
     "https://www.capitalone.com/credit-cards/venture/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Capital One product page on 2026-07-24. Corrected name from 'Venture Rewards Travel Card — Apply Today' to 'Venture Rewards from Capital One' per page heading."
 }
