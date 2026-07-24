@@ -2,7 +2,9 @@
   "id": "us-bank-of-america-premium-rewards",
   "schema_version": "1.0.0",
   "name": "Bank of America® Premium Rewards® credit card",
-  "localized_names": { "en": "Bank of America® Premium Rewards® credit card" },
+  "localized_names": {
+    "en": "Bank of America® Premium Rewards® credit card"
+  },
   "country": "us",
   "issuer": "Bank of America",
   "issuer_id": "bank-of-america",
@@ -17,10 +19,17 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 19.49, "max": 27.49, "type": "variable" },
+    "purchase": {
+      "min": 19.49,
+      "max": 27.49,
+      "type": "variable"
+    },
     "notes": "Variable APR for purchases and balance transfers; see current Bank of America offer for exact terms."
   },
-  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
   "credit_required": {
     "score_band": null,
     "notes": null
@@ -62,21 +71,21 @@
       "title": "Airline Incidental Statement Credits",
       "category": "credit",
       "source": "issuer",
-      "description": "Up to $100 annually in statement credits for qualifying airline incidental purchases such as seat upgrades, baggage fees, in-flight services, and airline lounge fees."
+      "description": "Up to $100 annually in statement credits for qualifying airline incidental purchases such as seat upgrades, baggage fees, in-flight services, and airline lounge fees; part of up to $200 in combined Airline Incidental and TSA PreCheck/Global Entry Statement Credits."
     },
     {
       "id": "airport-security-credit",
       "title": "TSA PreCheck or Global Entry statement credit",
       "category": "credit",
       "source": "issuer",
-      "description": "Up to $100 in Airport Security Statement Credits for TSA PreCheck or Global Entry application fees every four years."
+      "description": "Receive up to $100 in statement credits for TSA PreCheck or Global Entry Application fees, every four years; part of up to $200 in combined Airline Incidental and TSA PreCheck/Global Entry Statement Credits."
     },
     {
       "id": "travel-insurance-protections",
-      "title": "Travel insurance protections",
+      "title": "Travel protections",
       "category": "insurance",
       "source": "network",
-      "description": "Travel protections to assist with trip delays, cancellations and interruptions, baggage delays, lost luggage, and emergency evacuation and transportation.",
+      "description": "Travel Insurance protections to assist with trip delays, cancellations and interruptions, baggage delays, lost luggage and emergency evacuation and transportation.",
       "network_tier_required": "signature"
     },
     {
@@ -84,7 +93,7 @@
       "title": "Purchase protections",
       "category": "insurance",
       "source": "network",
-      "description": "Purchase Security, Warranty Manager Service, and Return Protection for eligible purchases.",
+      "description": "Shop with confidence, with excellent purchase protections like Warranty Manager Service, Return Protection and Purchase Security. These can help with repair, replacement or reimbursement on purchases, or extend the manufacturers' warranty.",
       "network_tier_required": "signature"
     },
     {
@@ -92,7 +101,7 @@
       "title": "Auto Rental Collision Damage Waiver",
       "category": "insurance",
       "source": "network",
-      "description": "Reimbursement for damage due to collision or theft on eligible rentals; coverage is supplemental to and in excess of other insurance when the rental agency's collision/loss damage waiver is declined.",
+      "description": "Feel safer on the road with our 24/7 Roadside Dispatch Program, plus added protection with Auto Rental Collision Damage Waiver.",
       "network_tier_required": "signature"
     },
     {
@@ -100,7 +109,7 @@
       "title": "Visa Signature Luxury Hotel Collection",
       "category": "other",
       "source": "network",
-      "description": "Access to the Visa Signature Luxury Hotel Collection when booking with the Premium Rewards card.",
+      "description": "Enjoy a premium set of benefits when you use your Premium Rewards card to book through the Visa Signature Luxury Hotel Collection.",
       "network_tier_required": "signature"
     },
     {
@@ -108,7 +117,7 @@
       "title": "Visa Signature concierge service",
       "category": "other",
       "source": "network",
-      "description": "Access to concierges who can help with travel planning, restaurant recommendations, and event reservations.",
+      "description": "The Visa Signature concierge service gives you access to concierges who can help with travel planning, restaurant recommendations and event reservations.",
       "network_tier_required": "signature"
     }
   ],
@@ -128,7 +137,7 @@
     "hotel_status": null,
     "other": [
       "No foreign transaction fees",
-      "Up to $100 annual Airline Incidental Statement Credits",
+      "Up to $100 annual Airline Incidental Statement Credits (part of $200 combined with TSA/Global Entry)",
       "Visa Signature Luxury Hotel Collection",
       "Visa Signature concierge service"
     ]
@@ -145,5 +154,5 @@
     "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
     "https://www.bankofamerica.com/salesservices/productProperties?campaignID=4079485&poCode=UN&locale=en_US&failquiet=true"
   ],
-  "notes": "Preferred Rewards relationship bonuses can increase earn rates for eligible clients; base earn rates are shown here."
+  "notes": "Preferred Rewards relationship bonuses can increase earn rates for eligible clients; base earn rates are shown here. Product page was temporarily unavailable at verification time; facts verified from the Bank of America product properties (terms) JSON endpoint."
 }
