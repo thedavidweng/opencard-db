@@ -142,19 +142,15 @@
   ],
   "travel_perks": {
     "lounge_access": {
-      "program": null,
-      "visits_per_year": null,
       "notes": "2 Korean Air Lounge vouchers each year + Priority Pass Select with 4 free visits per year"
     },
     "tsa_precheck_credit": {
       "amount": 120.0,
-      "currency": "USD",
-      "period": null
+      "currency": "USD"
     },
     "global_entry_credit": {
       "amount": 120.0,
-      "currency": "USD",
-      "period": null
+      "currency": "USD"
     },
     "free_checked_bags": null,
     "hotel_status": null,
