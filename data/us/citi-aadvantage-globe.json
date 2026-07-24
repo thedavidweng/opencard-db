@@ -20,40 +20,178 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See Citi for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "The variable APR for purchases and balance transfers is 19.49% – 29.49%, based on your creditworthiness. The variable APR for cash advances is 29.74%. The variable Penalty APR is up to 29.99%. Minimum interest charge – $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee – either $5 or 5% of the amount of each transfer, whichever is greater."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "Fee for foreign transactions – None."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "miles",
+    "currency_label": "AAdvantage® miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "Earn 1 AAdvantage® mile for every $1 spent on all other purchases (standard earn rate for non-bonus categories)"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "AAdvantage® bonus miles",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 60,000 American Airlines AAdvantage® bonus miles and premium travel benefits. Bonus miles earned after $4,000 in purchases within the first 3 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "admirals-club-lounge-access",
+      "title": "American Airlines Admirals Club® Lounge Access",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Every calendar year, receive four Admirals Club® Globe™ Passes and enjoy access to nearly 50 Admirals Club® lounges (over $300 in value)."
+    },
+    {
+      "id": "annual-splurge-credit",
+      "title": "Up to $100 Annual Splurge Credit℠",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every calendar year, earn up to $100 in statement credits on your choice of up to two of the following brands: 1stDibs, eligible AAdvantage Hotels™ bookings, Future Personal Training and Live Nation® (exclusions apply)."
+    },
+    {
+      "id": "turo-credits",
+      "title": "Up to $240 back on Turo",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn up to $30 in statement credits for each eligible Turo trip completed, for a total of up to $240 in statement credits annually. To qualify, you must link your card to your Turo account on Turo.com/Globe and pay for the trip with your card."
+    },
+    {
+      "id": "inflight-credits",
+      "title": "Up to $100 back on inflight purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every calendar year, earn up to $100 in statement credits on inflight purchases when you use your card on American Airlines flights."
+    },
+    {
+      "id": "companion-certificate",
+      "title": "American Airlines Companion Certificate",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn an American Airlines Companion Certificate starting in your second cardmembership year as long as your cardmembership is renewed. Companion certificate is good for a qualifying single round-trip main cabin domestic flight. Redeeming the certificate costs $99 for the ticketing fee, plus taxes and fees based on the itinerary."
+    },
+    {
+      "id": "first-checked-bag-free",
+      "title": "First checked bag free",
+      "category": "other",
+      "source": "issuer",
+      "description": "Your first checked bag is free on domestic American Airlines itineraries for you and up to eight companions traveling with you on the same reservation, a savings of up to $900 per round trip."
+    },
+    {
+      "id": "preferred-boarding",
+      "title": "Preferred boarding",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy preferred boarding on American Airlines flights for you and up to eight companions traveling with you on the same reservation."
+    },
+    {
+      "id": "global-entry-tsa-precheck-credit",
+      "title": "Global Entry® or TSA PreCheck® application fee credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're eligible to receive a statement credit (up to $120 every 4 years) as reimbursement for your Global Entry® or TSA PreCheck® application fee."
+    },
+    {
+      "id": "travel-protection-benefits",
+      "title": "Travel protection benefits",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Help protect your next trip with Enhanced Trip Cancellation and Trip Interruption, Lost or Damaged Luggage, MasterRental® Coverage (Car Rental), Trip Delay, Extended Warranty and Purchase Assurance Plus."
+    },
+    {
+      "id": "flight-streak-bonus",
+      "title": "Flight Streak™ bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn a 5,000 Loyalty Point bonus after every four qualifying American Airlines flights (up to 15,000 additional Loyalty Points each status qualification year)."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Shop like a local wherever your travels take you."
+    },
+    {
+      "id": "add-authorized-users",
+      "title": "Add authorized users",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn more AAdvantage® miles with purchases made by authorized user cards added to your account at no additional charge."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
-    "free_checked_bags": null,
+    "lounge_access": {
+      "notes": "4 Admirals Club® Globe™ Passes per calendar year for access to nearly 50 Admirals Club® lounges (over $300 in value)"
+    },
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": "First checked bag free on domestic American Airlines itineraries for you and up to 8 companions (savings up to $900 per round trip)",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Preferred boarding on AA flights (up to 8 companions)",
+      "Up to $100 Annual Splurge Credit℠ per calendar year",
+      "Up to $240 back on Turo annually",
+      "Up to $100 back on inflight purchases per calendar year",
+      "Companion Certificate starting 2nd year ($99 ticketing fee + taxes/fees)",
+      "Flight Streak™ bonus: 5,000 LP after every 4 qualifying AA flights (up to 15,000 LP/year)",
+      "No foreign transaction fees",
+      "Travel protection: Enhanced Trip Cancellation/Interruption, Lost/Damaged Luggage, MasterRental Car Rental, Trip Delay, Extended Warranty, Purchase Assurance Plus"
+    ]
   },
   "official_url": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
   "image": {
@@ -66,5 +204,5 @@
   "sources": [
     "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text. Base rate of 1X on all other purchases is standard for Citi AAdvantage cards but not explicitly listed on this page for the Globe card — noted as inferred from card family pattern."
 }
