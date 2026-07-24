@@ -8,7 +8,7 @@
   "country": "us",
   "issuer": "Barclays",
   "issuer_id": "barclays",
-  "network": "mastercard",
+  "network": "visa",
   "network_tier": "world",
   "type": "credit",
   "status": "active",
@@ -20,15 +20,20 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.24,
+      "max": 29.99,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": null
+    },
+    "notes": "Variable APR is 19.24% to 29.99% for purchases and balance transfers. Variable APR for cash advances is 29.99%. APRs vary with the market based on the Prime Rate. 0% introductory APR on balance transfers made within 45 days of account opening for the first 15 billing cycles. 0% promotional APR on all 'Wyndham Timeshare Purchases' for 6 billing cycles. Minimum monthly interest charge $1.00. Balance transfer fee: 5% (min. $5). Cash advance fee: 5% (min. $10)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "Disclosure states 'Foreign transaction fee: 0%.' Page also states 'No Foreign Transaction Fees On international purchases.'"
   },
   "credit_required": {
     "score_band": null,
@@ -36,31 +41,92 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "Wyndham Rewards points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1 point per $1 spent on all other purchases (excluding Vacation Club down payments)."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Earn 5 points per $1 spent on eligible purchases made at Hotels by Wyndham, including hotels through Wyndham Travel Bundles.",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Earn 3 points per $1 spent on eligible Vacation Club, dining and grocery store purchases (excluding Target and Walmart), as well as eligible gas and EV charging purchases.",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem 10% fewer Wyndham Rewards points for free nights, starting at just 6,750 points. Can redeem points for online merchandise, gift cards, experiences. Wyndham Rewards GOLD member level included."
   },
   "signup_bonus": {
-    "amount": 30000.0,
+    "amount": 75000.0,
     "unit": "points",
     "spend_required": 1000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 30,000 bonus points after spending $1,000 on purchases in the first 90 days",
+    "description": "Earn 30,000 bonus points after spending $1,000 on purchases in the first 90 days and also earn 45,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days. Total up to 75,000 bonus points.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "wyndham-gold-status",
+      "title": "Wyndham Rewards GOLD Member Level",
+      "category": "other",
+      "source": "issuer",
+      "description": "Automatically receive a Wyndham Rewards GOLD member level and enjoy perks like preferred room selection, late checkout, and more."
+    },
+    {
+      "id": "save-15-buy-points",
+      "title": "Save 15% When You Buy Points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy a 15% discount-or best available offer-when you purchase points with your Wyndham Rewards Earner Card."
+    },
+    {
+      "id": "anniversary-bonus",
+      "title": "Anniversary Bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 7,500 bonus points each anniversary year after spending $15,000 on eligible purchases."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for charges you did not authorize."
+    },
+    {
+      "id": "earn-free-nights-faster",
+      "title": "Earn Free Nights Faster",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem 10% fewer Wyndham Rewards points for free nights, which means you can book free nights starting at just 6,750 points."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "cardmember-booking-discount",
+      "title": "Cardmember Booking Discount",
+      "category": "other",
+      "source": "issuer",
+      "description": "Wyndham Rewards Earner Card members can save even more on the Standard Rate for stays at participating Hotels by Wyndham and hotels in Wyndham Travel Bundles."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
-    "hotel_status": null,
+    "hotel_status": "Wyndham Rewards GOLD",
     "other": []
   },
   "official_url": "https://www.wyndhamrewardscreditcard.com/#earner",
@@ -74,5 +140,5 @@
   "sources": [
     "https://www.wyndhamrewardscreditcard.com/#earner"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Network corrected from 'mastercard' to 'visa' based on page text: 'issued by Barclays Bank Delaware pursuant to a license by Visa U.S.A. Inc.' network_tier 'world' preserved but NOT re-verified — page does not state a specific Visa tier for the Earner card. Signup bonus updated from 30,000 to 75,000 (total) to reflect full offer including Wyndham stay bonus."
 }
