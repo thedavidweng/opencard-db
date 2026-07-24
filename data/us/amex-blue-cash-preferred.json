@@ -1,0 +1,135 @@
+{
+  "id": "us-amex-blue-cash-preferred",
+  "schema_version": "1.0.0",
+  "name": "Blue Cash Preferred® Card",
+  "localized_names": { "en": "Blue Cash Preferred® Card" },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "$0 intro annual fee for the first year, then $95"
+  },
+  "apr": {
+    "purchase": { "min": 19.49, "max": 28.49, "type": "variable" },
+    "cash_advance": { "min": 28.74, "max": 28.74, "type": "variable" },
+    "notes": "0% introductory APR for purchases for the first 12 months from account opening; see current American Express terms."
+  },
+  "fx_fee": {
+    "percent": 2.7,
+    "notes": "2.7% of each transaction after conversion to US dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "reward_dollars",
+    "currency_label": "Reward Dollars",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.01,
+      "description": "1% cash back on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 0.06,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Select U.S. streaming subscriptions",
+        "points_per_dollar": 0.06,
+        "cap": null
+      },
+      {
+        "label": "Transit",
+        "points_per_dollar": 0.03,
+        "cap": null
+      },
+      {
+        "label": "U.S. gas stations",
+        "points_per_dollar": 0.03,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back is received as Reward Dollars redeemable for statement credits or at Amazon.com checkout."
+  },
+  "signup_bonus": {
+    "amount": 150,
+    "unit": "reward_dollars",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn $150 cash back after making $3,000 or more in eligible purchases within the first 6 months of Card Membership; offers may vary.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "disney-streaming-credit",
+      "title": "$120 Disney Streaming Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Enrollment required; up to $10 in statement credits each month after qualifying purchases at eligible Disney+, Hulu, or ESPN streaming sites."
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage on eligible rentals when paid with the card, subject to terms and exclusions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers eligible purchases against accidental damage or theft for a limited period, subject to terms and exclusions."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extends eligible manufacturers' warranties on covered purchases, subject to terms and exclusions."
+    },
+    {
+      "id": "return-protection",
+      "title": "Return Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "May provide reimbursement for eligible purchases when a merchant will not accept a return, subject to terms and exclusions."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/",
+  "image": {
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000264_480x304_straight_withname.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/blue-cash-preferred-credit-card/36195-11-0/"
+  ],
+  "notes": "Product name Blue Cash Preferred is not a Network Tier; network_tier is none for Amex network packages. Welcome offers and APR ranges may vary by channel."
+}
