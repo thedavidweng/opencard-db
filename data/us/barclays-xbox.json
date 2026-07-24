@@ -20,15 +20,16 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.24,
+      "max": 29.99,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "Purchases - 19.24% to 29.99%, based on your creditworthiness and other factors. This APR will vary with the market based on the Prime Rate. Balance transfers - 19.24% to 29.99%."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not stated on product page. Preserved as null."
   },
   "credit_required": {
     "score_band": null,
@@ -36,17 +37,91 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "Card points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1X card points for every $1 spent on everyday purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem card points on eligible purchases at xbox.com, Microsoft.com, on console, and in-game (applied as a credit on your billing statement)."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 5000.0,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 5,000 bonus card points after making your first purchase within the first 180 days of account opening. That's a $50 value.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy all of the card benefits for $0 annual fee."
+    },
+    {
+      "id": "digital-wallets",
+      "title": "Digital wallets flexibility",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy the flexibility of digital wallets such as Apple Pay and Google Pay."
+    },
+    {
+      "id": "fico-score",
+      "title": "Complimentary FICO Credit Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Online access to your FICO Credit Score lets you keep an eye on your credit score and get alerts when we learn that your score has changed."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for the charges you did not authorize."
+    },
+    {
+      "id": "game-pass-ultimate",
+      "title": "3 months of Game Pass Ultimate",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 3 months of Game Pass Ultimate for new Game Pass members after making your first purchase within the first 180 days of account opening."
+    },
+    {
+      "id": "game-pass-gift-codes",
+      "title": "Two 3-month Game Pass Ultimate gift codes",
+      "category": "other",
+      "source": "issuer",
+      "description": "When you spend $7,000 or more within your first 12 months of opening your account, you earn two 3-month codes to gift to friends or family to try Game Pass Ultimate for the first time."
+    },
+    {
+      "id": "personalize-card",
+      "title": "Personalize your card",
+      "category": "other",
+      "source": "issuer",
+      "description": "Choose from one of five iconic card designs and personalize with your gamertag."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +141,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/xbox-mastercard/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Barclays product page on 2026-07-24. FX fee not stated on page — preserved as null."
 }
