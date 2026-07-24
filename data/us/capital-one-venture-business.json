@@ -20,30 +20,41 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 24.49,
+      "max": 24.49,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "notes": "24.49% variable APR on purchases. Cash advance APR not stated on product page."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on purchases made outside of the United States."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "excellent",
+    "notes": "Excellent credit required."
   },
   "rewards": {
     "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
-    "structure": "single",
+    "currency_label": "Capital One miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "points_per_dollar": 2.0,
+      "description": "Unlimited 2X miles on every purchase."
     },
-    "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem miles through travel site, or get reimbursed for travel expenses made with your card. May transfer miles to 15+ partners."
   },
   "signup_bonus": {
     "amount": 100000.0,
@@ -51,17 +62,114 @@
     "spend_required": 10000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 100,000 bonus miles when you spend $10,000 in the first 3 months",
+    "description": "Earn 100,000 bonus miles when you spend $10,000 in the first 3 months.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "annual-travel-credit",
+      "title": "$50 Annual Travel Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive an annual $50 travel credit for bookings through Capital One Business Travel."
+    },
+    {
+      "id": "annual-advertising-software-credit",
+      "title": "$50 Annual Statement Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an annual $50 statement credit for purchases at qualifying advertising or software merchants."
+    },
+    {
+      "id": "global-entry-tsa-precheck",
+      "title": "Up to $120 Global Entry or TSA PreCheck Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to a $120 credit for Global Entry or TSA PreCheck every 4 years."
+    },
+    {
+      "id": "hertz-five-star",
+      "title": "Hertz Five Star Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Skip the counter at select locations, enjoy a wider selection of rental cars and more, just for being a Venture Business cardholder."
+    },
+    {
+      "id": "lifestyle-collection",
+      "title": "Lifestyle Collection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Unlock premium benefits with every stay, like a $50 experience credit, room upgrades when available and more."
+    },
+    {
+      "id": "flexible-miles-redemption",
+      "title": "Flexible Miles Redemption",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem your miles through our travel site, or get reimbursed for travel expenses made with your card—plus you may be able to transfer miles to one of our 15+ partners."
+    },
+    {
+      "id": "capital-one-business-travel",
+      "title": "Capital One Business Travel Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary access to an all-in-one business travel management solution."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay zero foreign transaction fees on purchases made outside of the United States."
+    },
+    {
+      "id": "free-employee-cards",
+      "title": "Free Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Track employee spending while earning all the rewards from their purchases."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get free additional warranty and protection on eligible items you purchase with your card."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your card is lost or stolen, you can get an emergency replacement and a cash advance."
+    },
+    {
+      "id": "virtual-cards",
+      "title": "Virtual Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Make safer payments online without exposing your actual card number with merchants."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Hertz Five Star Status",
+      "Lifestyle Collection hotel benefits",
+      "No Foreign Transaction Fees"
+    ]
   },
   "official_url": "https://www.capitalone.com/small-business/credit-cards/venture-business/",
   "image": {
@@ -74,5 +182,5 @@
   "sources": [
     "https://www.capitalone.com/small-business/credit-cards/venture-business/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Capital One product page. APR confirmed at 24.49% variable. Credit required: Excellent. Network not explicitly stated on page but Visa referenced in benefits section; network_tier preserved as signature (not re-verified from page)."
 }
