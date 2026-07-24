@@ -8,8 +8,8 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "none",
   "type": "credit",
   "status": "active",
   "annual_fee": {
@@ -20,33 +20,111 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 18.24,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "18.24% Min. of (6.75+11.49) and 29.99% to 27.74% Min. of (6.75+20.99) and 29.99% variable APR. 0% promotional APR for 6 months on select Disney vacation packages from the date of purchase, after that a variable APR applies."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Not stated on product page. Preserved as null — not re-verified."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "disney_rewards_dollars",
+    "currency_label": "Disney Rewards Dollars",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.0,
+      "description": "1% in Disney Rewards Dollars on all other card purchases."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem Rewards Dollars toward Disney experiences such as Disney Theme Park Tickets, Resort stays, shopping, dining and more in the U.S. No block-out dates when redeeming Rewards Dollars. Can use Pay Yourself Back to redeem Rewards Dollars for statement credit toward airline purchases."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 300.0,
+    "unit": "USD",
+    "spend_required": 500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Get a $200 Disney Gift Card eGift to use today upon approval + earn a $100 statement credit after you spend $500 on purchases in the first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "disney-vacation-financing",
+      "title": "Special Disney Vacation Financing",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy 0% promotional APR for 6 months on select Disney vacation packages from the date of purchase, after that a variable APR applies."
+    },
+    {
+      "id": "disney-store-savings",
+      "title": "10% savings at DisneyStore.com",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save 10% on select purchases at DisneyStore.com when you use your Disney Premier Visa Card."
+    },
+    {
+      "id": "disney-parks-merchandise-savings",
+      "title": "10% off select merchandise at Disney Parks",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 10% off select merchandise purchases at select locations at the Disneyland Resort and Walt Disney World Resort when you use your Disney Premier Visa Card."
+    },
+    {
+      "id": "disney-parks-dining-savings",
+      "title": "10% off select dining at Disney Parks",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 10% off select dining locations most days at the Disneyland Resort and Walt Disney World Resort when you use your Disney Premier Visa Card."
+    },
+    {
+      "id": "disney-card-designs",
+      "title": "Disney Card Designs",
+      "category": "other",
+      "source": "issuer",
+      "description": "Choose from more than a dozen designs celebrating Disney storytelling. Once you have the card, you can change your design at any time."
+    },
+    {
+      "id": "pay-yourself-back",
+      "title": "Pay Yourself Back for airline purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can use Pay Yourself Back to redeem Rewards Dollars for a statement credit toward airline purchases made directly with the airline with your Disney Premier Visa Card, including airline travel to any destination, on any airline - with no block-out dates."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +144,5 @@
   "sources": [
     "https://creditcards.chase.com/rewards-credit-cards/disney/premier"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa based on page title 'Disney® Premier Visa® Card'. Network tier set to null (was 'world' tied to mastercard assumption; page does not state a Visa tier)."
 }
