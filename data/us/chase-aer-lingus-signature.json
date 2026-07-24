@@ -8,8 +8,8 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "signature",
   "type": "credit",
   "status": "active",
   "annual_fee": {
@@ -20,48 +20,125 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.24,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "notes": "19.24% to 27.74% variable APR. APR is Min of (Prime + 12.49%) and 29.99% to Min of (Prime + 20.99%) and 29.99%."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on card purchases."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "avios",
+    "currency_label": "Avios",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1 Avios for every $1 spent on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Avios can be redeemed through Aer Lingus, British Airways, and Iberia loyalty programs."
   },
   "signup_bonus": {
     "amount": 75000.0,
-    "unit": "points",
+    "unit": "avios",
     "spend_required": 5000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 75,000 Avios after you spend $5,000 on purchases within the first 3 months",
+    "description": "Earn 75,000 Avios after you spend $5,000 on purchases within the first 3 months of account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "companion-ticket",
+      "title": "Economy Companion Ticket",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every calendar year you make purchases of $30,000 on your Aer Lingus Visa Signature Card, you'll receive an economy companion ticket good for 12 months."
+    },
+    {
+      "id": "priority-boarding",
+      "title": "Priority Boarding",
+      "category": "other",
+      "source": "issuer",
+      "description": "You and any authorized users on your account are eligible for Priority Boarding on Aer Lingus flights departing from and returning to the US from Ireland, subject to availability."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on card purchases."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimburses you up to $100 a day for up to 3 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Provides reimbursement up to $3,000 per covered traveler for the cost to repair or replace checked or carry-on baggage that is lost, damaged or stolen during a covered trip."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get one-year complimentary DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fees on eligible orders. Activate by Dec 31, 2027."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Economy Companion Ticket after $30,000 spend per calendar year",
+      "Priority Boarding on Aer Lingus flights",
+      "No Foreign Transaction Fees"
+    ]
   },
   "official_url": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
   "image": {
@@ -74,5 +151,5 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa (page states Visa Signature). Rewards currency corrected from ultimate_rewards to avios. Signup bonus unit corrected from points to avios."
 }
