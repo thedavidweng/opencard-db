@@ -30,6 +30,20 @@ Local issuer mirrors are for **identification only**. They may be optimized (e.g
 
 The **generic** `default-card.*` files are original OpenCard placeholders (not bank artwork) and ship with the repository for API fallbacks.
 
+## High-resolution digital art (Apple Pay)
+
+Bank **digital wallet art** (what Apple Wallet shows) is often sharper than marketing-page photos. There is **no public Apple Pay card-art API** to scrape — see `docs/research/apple-pay-card-art.md`.
+
+If you already have the Card in Apple Pay on a Mac, you may extract the face from your local Wallet bundle for an optional mirror:
+
+```bash
+# Own cards only. Typical asset:
+# ~/Library/Passes/Cards/<id>.pkpass/cardBackgroundCombined@2x.png
+# Product label for naming: pass.json → "description"
+```
+
+Prefer an official issuer `image.url` when it is clear and stable. Local mirrors remain bank copyright (below). Do not treat Apple, PayPal, or community card-art repos as Schema **Sources**.
+
 ## Attribution
 
 If you add a local issuer mirror:
