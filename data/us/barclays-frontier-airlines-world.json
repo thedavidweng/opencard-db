@@ -20,38 +20,140 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": null
+    },
+    "notes": "APR for purchases: 19.49% to 29.49% variable based on creditworthiness. 0% introductory APR on balance transfers for first 15 billing cycles within 45 days of account opening, then 19.49% to 29.49%. APR for cash advances: 29.74% variable. APRs vary with the market based on the Prime Rate. Minimum monthly interest charge $1.00. Balance transfer fee: 5% (min. $5). Cash advance fee: 5% (min. $10)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "Disclosure states 'Foreign transaction fee: 0%.' Page also states 'No foreign transaction fees on international purchases.'"
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "miles",
+    "currency_label": "Frontier Miles / Travel Miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1x miles on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Earn up to 15x miles on eligible purchases at flyfrontier.com (10 miles for being a Frontier Miles member and 5 miles for using the card).",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Earn 3x miles on eligible restaurant purchases.",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles never expire as long as card account is open and in good standing. No blackout dates on award travel. Award travel can be booked for one-way tickets once a minimum of 5,000 Travel Miles have been earned and round trip tickets once 10,000 Travel Miles earned."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 60000.0,
+    "unit": "miles",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 60,000 Travel Miles after spending $1,000 on purchases and paying the annual fee in full, both within the first 90 days of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "two-free-checked-bags",
+      "title": "Two Free Checked Bags",
+      "category": "other",
+      "source": "issuer",
+      "description": "Two free checked bags on eligible Frontier flights."
+    },
+    {
+      "id": "hundred-flight-voucher",
+      "title": "$100 Flight Voucher Every Anniversary",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn a $100 Flight Voucher every account anniversary after spending $2,500 or more on purchases with your card during your cardmembership year."
+    },
+    {
+      "id": "instant-elite-gold-status",
+      "title": "Instant Elite Gold Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Unlock Instant Elite Gold Status after first purchase with your card, in the first 90 days after account opening. To maintain Elite Gold for 12 months, must spend $3,000 in Net Purchases in first 90 days."
+    },
+    {
+      "id": "miles-never-expire",
+      "title": "Miles Never Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "Miles never expire as long as your card account is open and in good standing."
+    },
+    {
+      "id": "no-blackout-dates",
+      "title": "No Blackout Dates",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem miles any day with no blackouts on award travel."
+    },
+    {
+      "id": "award-redemption-fee-waiver",
+      "title": "Award Redemption Fee Waiver",
+      "category": "other",
+      "source": "issuer",
+      "description": "Award redemption fee waiver when you book an award ticket and use your Frontier Airlines World Mastercard to pay the related taxes and fees, starting from $5.60 for a one-way ticket."
+    },
+    {
+      "id": "priority-boarding",
+      "title": "Priority Boarding",
+      "category": "other",
+      "source": "issuer",
+      "description": "Priority boarding allows cardmembers to enjoy Group 4 boarding."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "fico-score-access",
+      "title": "Complimentary FICO Credit Score Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary online access to your FICO Credit Score lets you keep an eye on your credit score and get alerts when we learn that your score has changed."
+    },
+    {
+      "id": "companion-travel-elite-platinum",
+      "title": "Free Companion Travel at Elite Platinum Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Unlock Free Companion Travel at Elite Platinum Status. Reach Elite Status faster by earning 1 Elite Status Point for every $1 spent on your card. Government fees apply."
+    },
+    {
+      "id": "free-seat-upgrades",
+      "title": "Free Seat Upgrades with Elite Gold Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free seat upgrades with Elite Gold Status."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": null,
+    "free_checked_bags": "True",
     "hotel_status": null,
     "other": []
   },
@@ -66,5 +168,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/frontier-airlines-world-mastercard/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "network_tier 'world' confirmed from page: 'Frontier Airlines World Mastercard®'. All rates/fees/benefits verified from fetched page."
 }
