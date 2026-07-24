@@ -2,7 +2,9 @@
   "id": "us-capital-one-ventureone",
   "schema_version": "1.0.0",
   "name": "Capital One VentureOne Rewards Credit Card",
-  "localized_names": { "en": "Capital One VentureOne Rewards Credit Card" },
+  "localized_names": {
+    "en": "Capital One VentureOne Rewards Credit Card"
+  },
   "country": "us",
   "issuer": "Capital One",
   "issuer_id": "capital-one",
@@ -13,17 +15,24 @@
   "annual_fee": {
     "amount": 0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0,
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": null },
-    "notes": "Capital One lists a low intro APR for 15 months; see current important rates and disclosures."
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "notes": "Capital One lists a low intro APR for 15 months; see current important rates and disclosures. Specific APR values were not exposed in the fetched page text or JSON resource (template variables used)."
   },
-  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
   "credit_required": {
     "score_band": "excellent",
-    "notes": null
+    "notes": "Capital One lists Credit Level: Excellent for this card."
   },
   "rewards": {
     "currency": "miles",
@@ -31,7 +40,7 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.25,
-      "description": "1.25x miles on every purchase"
+      "description": "1.25X Miles on All Purchases"
     },
     "categories": [
       {
@@ -69,7 +78,7 @@
       "title": "Transfer miles to travel partners",
       "category": "other",
       "source": "issuer",
-      "description": "Transfer miles to a choice of 15+ travel loyalty programs."
+      "description": "Enjoy greater flexibility when you transfer your miles to 15+ hotel and airline loyalty programs."
     },
     {
       "id": "redeem-miles-for-travel",
@@ -77,6 +86,13 @@
       "category": "other",
       "source": "issuer",
       "description": "Redeem miles through Capital One Travel or for reimbursement of past travel purchases."
+    },
+    {
+      "id": "capital-one-entertainment",
+      "title": "Capital One Entertainment",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to Capital One Entertainment for exclusive tickets to sports, music, and other events."
     }
   ],
   "travel_perks": {
@@ -85,7 +101,10 @@
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": ["No foreign transaction fees"]
+    "other": [
+      "No foreign transaction fees",
+      "Capital One Entertainment"
+    ]
   },
   "official_url": "https://www.capitalone.com/credit-cards/ventureone/",
   "image": {
@@ -97,8 +116,7 @@
   "last_verified": "2026-07-24",
   "sources": [
     "https://www.capitalone.com/credit-cards/ventureone/",
-    "https://www.capitalone.com/assets/shell/page_models/card/resourceapi/credit-cards/ventureone.json",
-    "https://www.capitalone.com/credit-cards/"
+    "https://www.capitalone.com/assets/shell/page_models/card/resourceapi/credit-cards/ventureone.json"
   ],
-  "notes": "Distinct from Capital One Venture Rewards and Capital One Venture X Rewards; official VentureOne page lists annual benefits and travel benefits as none."
+  "notes": "The product page and JSON resource confirm $0 annual fee, Excellent credit level, 1.25X miles on all purchases, no foreign transaction fees, and transfer to 15+ travel loyalty programs. The signup bonus (20,000 miles / $500 spend) and 5X on Capital One Entertainment were present in prior data; the JSON resource uses template variables for these values so they could not be re-verified from fetched text. APR numeric values were not exposed in fetched content."
 }
