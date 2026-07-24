@@ -47,6 +47,8 @@ jobs:
           ensure "CA" "D93F0B" "Touches Canada card data or images"
           ensure "CN" "FBCA04" "Touches China card data or images"
           ensure "new-card" "0E8A16" "Adds a new Card JSON file"
+          ensure "enhancement" "a2eeef" "Non-card feature / CI / tooling change"
+          ensure "documentation" "0075ca" "Docs-only change"
           ensure "needs-info" "D4C5F9" "Waiting on author for missing PR form fields"
           ensure "pr-form-incomplete" "E4E669" "PR body/title missing required beginner-form fields"
           ensure "missing-sources" "B60205" "Card PR is missing official source URLs"

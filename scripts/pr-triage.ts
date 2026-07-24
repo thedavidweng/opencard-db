@@ -169,9 +169,15 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     const verified = field(body, "Last verified (YYYY-MM-DD)");
     const imageUrl = field(body, "Image URL");
     const localPath = field(body, "Local path after upload");
+    // Template options A–D (also accept legacy “B. Upload a local file”).
     const noImage = checkboxChecked(body, "No image yet");
-    const optA = checkboxChecked(body, "A. Official image URL");
-    const optB = checkboxChecked(body, "B. Upload a local file");
+    const optOfficial =
+      checkboxChecked(body, "A. Official issuer image URL") ||
+      checkboxChecked(body, "A. Official image URL");
+    const optApplePay = checkboxChecked(body, "B. Apple Pay extract");
+    const optOtherUpload =
+      checkboxChecked(body, "C. Other local upload") ||
+      checkboxChecked(body, "B. Upload a local file");
 
     if (isPlaceholder(cardId)) missing.push("Card ID");
     if (isPlaceholder(product) && isPlaceholder(terms)) {
@@ -188,15 +194,18 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     const hasImageFile = changedFiles.some((f) =>
       /^images\/.+\.(png|jpe?g|gif|webp)$/i.test(f),
     );
+    const localUploadOk =
+      hasImageFile || (localPath != null && !isPlaceholder(localPath));
     const hasImage =
       noImage ||
-      (optA && imageUrl && !isPlaceholder(imageUrl)) ||
-      (optB && (hasImageFile || (localPath && !isPlaceholder(localPath)))) ||
-      (imageUrl && !isPlaceholder(imageUrl)) ||
+      (optOfficial && imageUrl != null && !isPlaceholder(imageUrl)) ||
+      (optApplePay && localUploadOk) ||
+      (optOtherUpload && localUploadOk) ||
+      (imageUrl != null && !isPlaceholder(imageUrl)) ||
       hasImageFile;
     if (!hasImage) {
       missing.push(
-        "Card image (official URL, uploaded `images/` file, or check “No image yet”)",
+        "Card image (official URL, Apple Pay / local `images/` upload, or check “No image yet”)",
       );
     }
 
@@ -213,8 +222,24 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     else labelsRemove.push(r);
   }
 
+  // Card vs feature separation:
+  // - add-card → new-card (+ region from data/images paths)
+  // - non-card meta → documentation | enhancement (never new-card)
   if (isNewCard) labelsAdd.push("new-card");
   else labelsRemove.push("new-card");
+
+  const isDocsMeta =
+    !isCardPr && titleInfo.kind === "meta" && /^docs(\(|:)/i.test(title.trim());
+  const isFeatureMeta =
+    !isCardPr &&
+    titleInfo.kind === "meta" &&
+    /^(ci|chore|fix|test|refactor)(\(|:)/i.test(title.trim());
+
+  if (isDocsMeta) labelsAdd.push("documentation");
+  else labelsRemove.push("documentation");
+
+  if (isFeatureMeta) labelsAdd.push("enhancement");
+  else labelsRemove.push("enhancement");
 
   if (!titleInfo.ok) labelsAdd.push("title-needs-fix");
   else labelsRemove.push("title-needs-fix");
@@ -262,7 +287,10 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     "- Copy [`templates/card.template.json`](../blob/main/templates/card.template.json) → `data/{country}/{slug}.json`",
   );
   lines.push(
-    "- Prefer an official image URL; uploads under `images/` are auto-converted to WebP by CI",
+    "- Images: official URL, or Apple Pay `cardBackgroundCombined@2x.png` under `images/` (CI → lossless WebP). Prefer Apple Pay extracts over unknown crops.",
+  );
+  lines.push(
+    "- Labels: new cards get `new-card` (+ `US`/`CA`/`CN`); feature/CI work gets `enhancement`; docs get `documentation`.",
   );
   if (suggestedTitle) {
     lines.push(`- Suggested title from your files/form: \`${suggestedTitle}\``);

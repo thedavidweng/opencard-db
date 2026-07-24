@@ -27,12 +27,13 @@ const goodBody = `
 - **Terms / benefits page:** https://www.chase.com/personal/credit-cards/sapphire/preferred
 - **Last verified (YYYY-MM-DD):** 2026-07-24
 
-### 3. Card image (pick one)
+### 3. Card image (pick the best you can)
 
-- [x] **A. Official image URL** (preferred)
+- [x] **A. Official issuer image URL** (stable product-page art)
   - **Image URL:** https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png
-- [ ] **B. Upload a local file in this PR**
-- [ ] **C. No image yet**
+- [ ] **B. Apple Pay extract (preferred local mirror — “graduation-level”)**
+- [ ] **C. Other local upload**
+- [ ] **D. No image yet**
 `;
 
 describe("pr triage", () => {
@@ -69,6 +70,38 @@ describe("pr triage", () => {
     assert.ok(r.labelsAdd.includes("US"));
     assert.ok(r.labelsAdd.includes("new-card"));
     assert.ok(!r.labelsAdd.includes("needs-info"));
+    assert.ok(!r.labelsAdd.includes("enhancement"));
+    assert.ok(r.labelsRemove.includes("enhancement"));
+  });
+
+  it("labels feature/CI PRs as enhancement, not new-card", () => {
+    const r = triagePullRequest({
+      title: "ci: lossless Apple Pay WebP pipeline",
+      body: "- [x] **Not a card** (docs / CI / code) — skip the Card form below",
+      changedFiles: [
+        "scripts/optimize-images.ts",
+        ".github/workflows/optimize-images.yml",
+      ],
+    });
+    assert.equal(r.titleOk, true);
+    assert.equal(r.isCardPr, false);
+    assert.equal(r.isNewCard, false);
+    assert.equal(r.missing.length, 0);
+    assert.ok(r.labelsAdd.includes("enhancement"));
+    assert.ok(!r.labelsAdd.includes("new-card"));
+    assert.ok(r.labelsRemove.includes("new-card"));
+    assert.ok(!r.labelsAdd.includes("documentation"));
+  });
+
+  it("labels docs PRs as documentation, not new-card", () => {
+    const r = triagePullRequest({
+      title: "docs: explain Apple Pay card art",
+      body: "- [x] **Not a card** (docs / CI / code)",
+      changedFiles: ["docs/research/apple-pay-card-art.md", "images/README.md"],
+    });
+    assert.ok(r.labelsAdd.includes("documentation"));
+    assert.ok(!r.labelsAdd.includes("new-card"));
+    assert.ok(!r.labelsAdd.includes("enhancement"));
   });
 
   it("flags placeholder sources and bad title", () => {
@@ -99,17 +132,46 @@ describe("pr triage", () => {
 
   it("accepts no-image checkbox", () => {
     const body = goodBody
-      .replace("- [x] **A. Official image URL**", "- [ ] **A. Official image URL**")
+      .replace(
+        "- [x] **A. Official issuer image URL**",
+        "- [ ] **A. Official issuer image URL**",
+      )
       .replace(
         "- **Image URL:** https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png",
         "- **Image URL:** ",
       )
-      .replace("- [ ] **C. No image yet**", "- [x] **C. No image yet**");
+      .replace("- [ ] **D. No image yet**", "- [x] **D. No image yet**");
     const r = triagePullRequest({
       title: "Add card: us-chase-sapphire-preferred",
       body,
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
     });
     assert.equal(r.missing.length, 0);
+  });
+
+  it("accepts Apple Pay local upload checkbox with images/ file", () => {
+    const body = goodBody
+      .replace(
+        "- [x] **A. Official issuer image URL**",
+        "- [ ] **A. Official issuer image URL**",
+      )
+      .replace(
+        "- **Image URL:** https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png",
+        "- **Image URL:** ",
+      )
+      .replace(
+        "- [ ] **B. Apple Pay extract",
+        "- [x] **B. Apple Pay extract",
+      );
+    const r = triagePullRequest({
+      title: "Add card: us-chase-sapphire-preferred",
+      body,
+      changedFiles: [
+        "data/us/chase-sapphire-preferred.json",
+        "images/us-chase-sapphire-preferred.png",
+      ],
+    });
+    assert.equal(r.missing.length, 0);
+    assert.ok(r.labelsAdd.includes("new-card"));
   });
 });
