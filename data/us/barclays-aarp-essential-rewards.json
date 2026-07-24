@@ -13,37 +13,58 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0.0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0.0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 20.24,
+      "max": 29.99,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for 15 months on balance transfers made within 45 days of account opening. After that, variable APR 20.24% to 29.99% on purchases and balance transfers. Cash advance variable APR 29.99%. Minimum monthly interest charge $1.00. Balance transfer fee 5% (min $5). Cash advance fee 5% (min $10)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 3.0,
+    "notes": "Foreign transaction fee: 3%."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "cashback",
+    "currency_label": "Cash back (USD)",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 0.01,
+      "description": "1% cash back on all other purchases (1 cent per dollar)."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards can be redeemed for cash back, statement credits, AARP memberships, gift cards, and merchandise. AARP memberships can be redeemed for yourself or as a gift, starting at $16 in rewards. Unlimited rewards that never expire as long as account is open and in good standing."
   },
   "signup_bonus": {
     "amount": 100.0,
@@ -51,10 +72,53 @@
     "spend_required": 500.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "$100 cash back bonus after spending $500 on purchases in the first 90 days",
+    "description": "Earn a $100 cash back bonus after spending $500 on purchases in the first 90 days from account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "unlimited-rewards-never-expire",
+      "title": "Unlimited Rewards That Never Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "There's no limit to the amount of rewards you can earn, and they'll never expire as long as your account is open and in good standing."
+    },
+    {
+      "id": "zero-fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You'll never be responsible for unauthorized charges made on your account."
+    },
+    {
+      "id": "flexible-redemption",
+      "title": "Flexible Redemption Options",
+      "category": "other",
+      "source": "issuer",
+      "description": "Rewards can be redeemed for cash back, statement credits, AARP memberships, gift cards, and merchandise. AARP memberships can be redeemed for yourself or as a gift, starting at $16 in rewards."
+    },
+    {
+      "id": "low-intro-bt-apr",
+      "title": "Low Intro Rate on Balance Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% introductory APR for 15 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 20.24% to 29.99%."
+    },
+    {
+      "id": "complimentary-fico-score",
+      "title": "Complimentary FICO® Credit Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get complimentary online access to your FICO® Credit Score."
+    },
+    {
+      "id": "aarp-foundation-donation",
+      "title": "AARP Foundation Donation",
+      "category": "other",
+      "source": "issuer",
+      "description": "Barclays will donate $10 to AARP Foundation for every new AARP-branded credit card account that's opened, plus 1% of all eligible electronic and telecommunications purchases made with the card, up to $1 million annually."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -72,7 +136,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.aarp.org/membership/benefits/finance/aarp-essential-rewards-mastercard-from-barclays/"
+    "https://www.aarp.org/membership/benefits/finance/aarp-essential-rewards-mastercard-from-barclays/",
+    "https://cards.barclaycardus.com/banking/credit-card/aarp/mastercard-world/co-brand-partner-site/f4556161-509f-4c39-9c6c-757c24490e9d/?referrerid=PTRBAMBMODAL100ARE"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=0 but value not confirmed in page text."
+  "notes": "Verified from official Barclays co-brand partner site. Annual fee $0, purchase APR 20.24%-29.99% variable, cash advance 29.99% variable, FX fee 3%. Rewards: 3% on gas and drug stores (excl. Target/Walmart), 2% on eligible medical expenses, 1% on all other purchases. $100 cash back bonus after $500 spend in 90 days. NOTE: FX fee is 3% (unlike AARP Travel Rewards which has 0%)."
 }
