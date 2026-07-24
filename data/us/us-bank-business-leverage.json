@@ -16,7 +16,7 @@
     "amount": 95.0,
     "currency": "USD",
     "first_year": 0.0,
-    "waiver_conditions": "$0 intro annual fee for the first year, then regular annual fee"
+    "waiver_conditions": "$0 intro annual fee for the first year, then $95 thereafter."
   },
   "apr": {
     "purchase": {
@@ -24,11 +24,11 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See U.S. Bank for current APR; terms vary by applicant/offer."
+    "notes": "APR not displayed on product page. See U.S. Bank for current APR; terms vary by applicant/offer."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fees on international inventory, supply or travel expenses."
   },
   "credit_required": {
     "score_band": null,
@@ -36,17 +36,65 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "U.S. Bank Business Leverage Points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "1X point per dollar spent on all other eligible purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Maximum Point value applies to Points redeemed for a deposit into an eligible U.S. Bank Account. Redemption value may differ for travel, merchandise, gift cards, and/or statement credit. Points will expire five years from the end of the calendar quarter in which they were earned. No limit to the total points you can earn."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "points",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 4,
+    "description": "Earn up to $600 in rewards (60,000 bonus points) when you spend $6,000 in eligible purchases on the Account Owner's card within the first 120 days of opening your account.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "free-employee-cards",
+      "title": "Free Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free employee cards included with the account."
+    },
+    {
+      "id": "spend-management",
+      "title": "U.S. Bank Spend Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Take control of your card spend with U.S. Bank Spend Management – a game-changing platform for monitoring and managing business expenses."
+    },
+    {
+      "id": "extendpay-offer",
+      "title": "ExtendPay® Plan $0 Fee Offer",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening. Not all accounts are eligible for ExtendPay Plans."
+    },
+    {
+      "id": "no-rewards-limits",
+      "title": "No Rewards Limits",
+      "category": "other",
+      "source": "issuer",
+      "description": "There is no limit to the total points you can earn."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +114,5 @@
   "sources": [
     "https://www.usbank.com/business-banking/business-credit-cards/business-leverage-rewards-credit-card.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Product page fetched successfully. Annual fee confirmed as $0 intro first year, $95 thereafter. APR not displayed on page. Signup bonus is 60,000 bonus points (up to $600 in rewards) after $6,000 spend in 120 days."
 }
