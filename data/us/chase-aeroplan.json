@@ -20,30 +20,51 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.74,
+      "max": 28.24,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "notes": "19.74% to 28.24% variable APR. APR is Min of (Prime + 12.99%) and 29.99% to Min of (Prime + 21.49%) and 29.99%."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees when you use your card for purchases made outside the United States."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "aeroplan_points",
+    "currency_label": "Aeroplan points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.0,
+      "description": "1X points for each dollar spent on all other purchases. Points do not expire as long as your Aeroplan Credit Card account is open."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points can be redeemed for flight rewards through the Aeroplan program. Pay Yourself Back allows redeeming points for statement credit on travel, dining, grocery store and gas station purchases within last 90 days. 500 bonus points for every $2,000 spent in a calendar month, up to 1,500 points per month."
   },
   "signup_bonus": {
     "amount": 60000.0,
@@ -51,17 +72,101 @@
     "spend_required": 3000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 60,000 bonus points after spending $3,000 on purchases in the first 3 months",
+    "description": "Earn 60,000 bonus points after spending $3,000 on purchases in the first 3 months your account is open.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "aeroplan-25k-status",
+      "title": "Aeroplan 25K Status for New Cardmembers",
+      "category": "other",
+      "source": "issuer",
+      "description": "New cardmembers will automatically receive Aeroplan 25K Status for the remainder of the calendar year, plus the following calendar year. Keep your Aeroplan 25K Status with $15,000 in account spend during a calendar year."
+    },
+    {
+      "id": "aeroplan-35k-status",
+      "title": "Upgrade to Aeroplan 35K Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Achieve Aeroplan 35K Status after spending $75,000 on purchases made during a calendar year."
+    },
+    {
+      "id": "status-qualifying-credits",
+      "title": "Up to 25,000 Status Qualifying Credits (SQC)",
+      "category": "other",
+      "source": "issuer",
+      "description": "Primary Cardmembers can get up to 25,000 Status Qualifying Credits (SQC) each calendar year (5,000 SQC as a bonus, 10,000 SQC with $25,000 in net purchases, and another 10,000 SQC with $50,000 in net purchases on the card account)."
+    },
+    {
+      "id": "free-first-checked-bag",
+      "title": "Free First Checked Bags",
+      "category": "other",
+      "source": "issuer",
+      "description": "Cardmembers and travel companions (up to eight) traveling on the same reservation will all enjoy free first checked bags (up to 50lb) when travel originates on an Air Canada flight."
+    },
+    {
+      "id": "preferred-pricing",
+      "title": "Preferred Pricing on Flight Rewards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive access to preferred pricing on flight rewards. As the Primary Cardmember, you can often book flight rewards for even fewer points."
+    },
+    {
+      "id": "pay-yourself-back",
+      "title": "Pay Yourself Back",
+      "category": "other",
+      "source": "issuer",
+      "description": "Turn your recent travel, dining, grocery store and gas station purchases into a statement credit. Select eligible transactions that posted to your account within the last 90 days to redeem."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "You will pay no foreign transaction fees when you use your card for purchases made outside the United States."
+    },
+    {
+      "id": "global-entry-tsa-precheck-nexus-credit",
+      "title": "Global Entry or TSA PreCheck or NEXUS Fee Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a statement credit of up to $120 every 4 years as a reimbursement for the application fee charged to your Aeroplan Card."
+    },
+    {
+      "id": "mastercard-concierge",
+      "title": "Mastercard 24/7 Concierge",
+      "category": "other",
+      "source": "issuer",
+      "description": "Need to locate hard to find items or even reserve that perfect table? Our concierge is there to help. To contact the concierge, call the number on the back of your card."
+    },
+    {
+      "id": "10pct-ur-transfer-bonus",
+      "title": "10% Bonus on Ultimate Rewards Points Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Chase Aeroplan credit cardmembers get a 10% transfer bonus after transferring 50,000 or more Ultimate Rewards points in a single transaction from an eligible Chase credit card to their Aeroplan account. Maximum of 25,000 Aeroplan bonus points per calendar year."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
-    "free_checked_bags": null,
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": "Free first checked bag for cardmember and up to 8 companions on Air Canada flights",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Aeroplan 25K Status for new cardmembers",
+      "Preferred Pricing on flight rewards",
+      "No Foreign Transaction Fees",
+      "Mastercard 24/7 Concierge"
+    ]
   },
   "official_url": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
   "image": {
@@ -74,5 +179,5 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Network confirmed as Mastercard (page references World Mastercard Concierge and Mastercard trademarks). Rewards currency corrected from ultimate_rewards to aeroplan_points."
 }
