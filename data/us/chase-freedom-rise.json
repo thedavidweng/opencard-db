@@ -20,33 +20,67 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 18.24,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 18.24% to 27.74% variable based on creditworthiness. Cash Advance APR 28.49% variable. Penalty APR up to 29.99%. Variable APRs based on 6.75% Prime Rate as of 3/24/2026. Maximum APR 29.99%."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 3.0,
+    "notes": "3% of the amount of each transaction in U.S. dollars."
   },
   "credit_required": {
     "score_band": null,
-    "notes": null
+    "notes": "Best for: New to Credit and Students. Having at least $250 in Chase checking or savings accounts increases chances of approval."
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "cash_back",
+    "currency_label": "Cash Back rewards (tracked as points; each $1 in Cash Back = 100 points)",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.5,
+      "description": "1.5% Cash Back on all purchases."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash Back rewards tracked as points; each $1 in Cash Back = 100 points."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 25.0,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$25 statement credit after setting up automatic payments during the first 3 months from account opening and remaining enrolled for at least 90 consecutive days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "auto-payment-credit",
+      "title": "$25 Statement Credit for Automatic Payments",
+      "category": "other",
+      "source": "issuer",
+      "description": "$25 statement credit after you set up automatic payments during the first 3 months from account opening and remain enrolled for at least 90 consecutive days."
+    },
+    {
+      "id": "dining-bonus",
+      "title": "3% Cash Back on Dining (Limited Time)",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 3% cash back total on dining purchases (restaurants including takeout and eligible delivery) for new cardmembers within first 6 months, or until $6,000 in dining purchases, whichever occurs first. 1.5% additional on top of base 1.5%."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -64,7 +98,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise"
+    "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64795.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page and pricing & terms page. Annual fee $0, purchase APR 18.24%-27.74% variable, cash advance APR 28.49%, penalty APR up to 29.99%, foreign transaction fee 3%. 3% dining bonus (capped at $6,000 in first 6 months), 1.5% base on all other purchases. $25 statement credit for auto payments enrollment."
 }
