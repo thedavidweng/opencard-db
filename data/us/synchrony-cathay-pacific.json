@@ -20,40 +20,117 @@
   },
   "apr": {
     "purchase": {
+      "min": 24.99,
+      "max": 30.99,
+      "type": "variable"
+    },
+    "cash_advance": {
       "min": null,
       "max": null,
       "type": "variable"
     },
-    "notes": "See Synchrony for current APR; terms vary by applicant/offer."
+    "notes": "New Accounts as of 01/26: Variable Purchase APR 24.99%, 27.99% or 30.99%. Cash APR 34.99% and 5% Fee ($10 min). Variable Bal Trans APR 24.99%, 27.99% or 30.99% and 5% Fee ($5 min). Variable Penalty APR 34.99%, 37.99% or 39.99%. Min Interest Charge $2."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "miles",
+    "currency_label": "Asia Miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1 per USD1 from spend on everything else, where Mastercard is accepted worldwide."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem Asia Miles for flights with Cathay Pacific, oneworld and partner airlines; hotels; car rentals; lifestyle awards. 10% redemption discount on hotel and experiences awards with Asia Miles."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 38000.0,
+    "unit": "miles",
+    "spend_required": 3000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 38,000 bonus Asia Miles when you open an account and spend USD 3,000 in the first 90 days of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "business-class-lounge-redemption",
+      "title": "Business Class lounge redemption",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Primary cardholders may use their Asia Miles to redeem access to Cathay Pacific Business Class lounges."
+    },
+    {
+      "id": "redemption-discount",
+      "title": "10% redemption discount on hotel and experiences awards",
+      "category": "other",
+      "source": "issuer",
+      "description": "10% redemption discount on hotel and experiences awards with Asia Miles."
+    },
+    {
+      "id": "priority-check-in",
+      "title": "Priority check-in",
+      "category": "other",
+      "source": "issuer",
+      "description": "Primary cardholders may check in at Premium Economy class airport check-in counters. Travel companion(s) can also enjoy this benefit when travelling with the Primary cardholder."
+    },
+    {
+      "id": "priority-boarding",
+      "title": "Priority boarding",
+      "category": "other",
+      "source": "issuer",
+      "description": "Primary cardholders can enjoy the same boarding line as Premium Economy class passengers on flights operated by Cathay Pacific."
+    },
+    {
+      "id": "flight-discount",
+      "title": "Save up to 15% on eligible flights",
+      "category": "other",
+      "source": "issuer",
+      "description": "From now until Dec 31, 2026, enter promotion code and pay with your Cathay World Elite Mastercard to enjoy up to 15% savings on eligible flights when making your flight booking on select fare classes."
+    },
+    {
+      "id": "status-points",
+      "title": "Earn 10 Status Points per USD5,000 spent",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 10 Status Points for every USD5,000 in eligible purchases made each month, up to a maximum of 100 Status Points per calendar year."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Business Class lounge redemption using Asia Miles"
+    },
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Priority check-in at Premium Economy counters",
+      "Priority boarding with Premium Economy line",
+      "Save up to 15% on eligible flights with promo code (until Dec 31, 2026)",
+      "10% redemption discount on hotel and experiences awards with Asia Miles",
+      "Earn 10 Status Points per USD5,000 spent monthly (max 100/year)"
+    ]
   },
   "official_url": "https://pay.cathaypacific.com/en_US/offers/uscreditcard.html",
   "image": {
@@ -66,5 +143,5 @@
   "sources": [
     "https://pay.cathaypacific.com/en_US/offers/uscreditcard.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page. Card name on page is 'The Cathay World Elite Mastercard®'. Issued by Synchrony Bank. Rewards currency is Asia Miles."
 }
