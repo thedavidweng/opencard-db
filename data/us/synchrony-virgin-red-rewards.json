@@ -9,62 +9,134 @@
   "issuer": "Synchrony",
   "issuer_id": "synchrony",
   "network": "mastercard",
-  "network_tier": "world",
+  "network_tier": "world_elite",
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 99,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 99,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.74,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See Synchrony for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "19.74%, 23.74%, or 27.74% based on creditworthiness. Varies with Prime Rate. Penalty APR up to 37.74%. Minimum interest charge $2.00."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fee. Mastercard converts non-USD transactions."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated; three APR tiers suggest creditworthiness-based approval. Typically requires good to excellent credit."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "virgin_points",
+    "currency_label": "Virgin Points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "1x Virgin Point per $1 on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Virgin Atlantic, Virgin Hotels, Virgin Voyages",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores, dining, select streaming, EV charging",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Virgin Points redeemable for travel (flights, hotels, cruises), movie tickets, experiences, and charitable causes through Virgin Red. Points do not expire. Requires Virgin Red membership account."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "virgin_points",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 60,000 Virgin Points when you spend $4,000 in the first 90 days. Additional 2,500 points for adding an authorized user (up to 10,000 total).",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "personal-perks",
+      "title": "Personal Perks (Big Spend Bonus)",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Spend $15,000/year for one Personal Perk (companion seat, cabin upgrade, free night, or bar tab credit). Spend $30,000 to select two."
+    },
+    {
+      "id": "tier-points",
+      "title": "Virgin Atlantic Flying Club Tier Points",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 25 Tier Points when you spend $2,500 in a month. Maximum 50 Tier Points per month."
+    },
+    {
+      "id": "third-night-free",
+      "title": "Third Night Free at Virgin Hotels",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Book two nights and get third night free at participating Virgin Hotels once per year."
+    },
+    {
+      "id": "anniversary-boost",
+      "title": "Anniversary Points Boost",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Earn 5,000 Virgin Points every year upon card renewal."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made abroad."
+    },
+    {
+      "id": "points-no-expiry",
+      "title": "Virgin Points Don't Expire",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Virgin Points do not expire while the rewards program account is open and in good standing."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
-    "hotel_status": null,
-    "other": []
+    "hotel_status": "Third night free at participating Virgin Hotels once per year; priority room upgrade available as a Personal Perk",
+    "other": [
+      "Virgin Atlantic Flying Club Tier Points (25 per $2,500 spent, max 50/month)",
+      "Personal Perks at $15k/$30k spend (companion seat, cabin upgrade, free night, or bar tab)",
+      "5,000 anniversary points boost on renewal"
+    ]
   },
-  "official_url": "https://www.virgin.com/en-us/virgin-red/rewards-credit-card",
+  "official_url": "https://www.synchrony.com/s/partner/virgin-red-rewards-card/benefits",
   "image": {
     "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
     "attribution": "© Synchrony",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
-    "https://www.virgin.com/en-us/virgin-red/rewards-credit-card"
+    "https://www.synchrony.com/s/partner/virgin-red-rewards-card/benefits",
+    "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e074512.html"
   ],
-  "notes": "Conservative scaffold: official product HTML was not fully fetchable from the automation environment (403/timeout/DNS). Sources cite the official issuer/partner URL; fee/earn/signup left null or unconfirmed — human spot-check required before merge. Third-party clue DBs were not used as sources."
+  "notes": "Issued by Synchrony Bank. Official product/benefits page is on synchrony.com (not virgin.com co-branded page). World Elite Mastercard."
 }
