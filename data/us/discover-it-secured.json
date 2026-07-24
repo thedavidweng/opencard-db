@@ -24,29 +24,99 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Discover for current APR; terms vary by applicant/offer."
+    "notes": "APR not visible on product page or terms page. Both pages returned same content without explicit APR numbers."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not mentioned on fetched pages."
   },
   "credit_required": {
     "score_band": null,
-    "notes": null
+    "notes": "No credit score required to apply: We may use credit scores if available."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "cashback",
+    "currency_label": "Cash Back (USD)",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 0.01,
+      "description": "1% cash back on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Unlimited Cashback Match: Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "cashback-match",
+      "title": "Unlimited Cashback Match",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
+    },
+    {
+      "id": "refundable-deposit",
+      "title": "Refundable Deposit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Refundable deposits as low as $49 unlock credit lines starting at $200. Deposit amount will be $49, $99, or $200 based on creditworthiness."
+    },
+    {
+      "id": "no-credit-score-required",
+      "title": "No Credit Score Required to Apply",
+      "category": "other",
+      "source": "issuer",
+      "description": "No credit score required to apply. We may use credit scores if available."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're never responsible for unauthorized purchases on your Discover Card."
+    },
+    {
+      "id": "ssn-alerts",
+      "title": "Free Social Security Number Alerts",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an alert if we find your Social Security number on the dark web. Sign up to activate this free benefit."
+    },
+    {
+      "id": "freeze-account",
+      "title": "Freeze Your Account",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you misplace your card, you can prevent new purchases and cash advances in seconds with the on/off switch on our mobile app and website."
+    },
+    {
+      "id": "fico-score",
+      "title": "FICO Score and More",
+      "category": "other",
+      "source": "issuer",
+      "description": "It's free and checking your score doesn't hurt your credit."
+    },
+    {
+      "id": "customer-service",
+      "title": "Real Human Customer Service 24/7",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can talk to a real human on our customer service team any time."
+    },
+    {
+      "id": "tap-to-pay",
+      "title": "Tap to Pay",
+      "category": "other",
+      "source": "issuer",
+      "description": "It's fast and easy to pay with your contactless Discover Card."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -67,5 +137,5 @@
     "https://www.discover.com/credit-cards/secured/",
     "https://www.discover.com/credit-cards/secured-credit-card/?iq_id=dp-dbr-inet-acceptance-pdisplay"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Both product_url and terms_url fetched; both returned identical content. Annual fee preserved as $0 from existing JSON — not explicitly stated on page text (page mentions $0 Fraud Liability but not $0 annual fee). APR and FX fee not visible on fetched pages. Rewards structure: 5% rotating quarterly categories (activate required, quarterly cap) + 1% everything else + Cashback Match in first year."
 }
