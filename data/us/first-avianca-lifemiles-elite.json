@@ -106,7 +106,6 @@
   "travel_perks": {
     "lounge_access": {
       "program": "Avianca Silver Elite Lounge Access",
-      "visits_per_year": null,
       "notes": "Lounge access via Avianca Silver elite status."
     },
     "tsa_precheck_credit": null,
