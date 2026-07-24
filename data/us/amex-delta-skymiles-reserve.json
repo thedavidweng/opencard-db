@@ -287,8 +287,6 @@
   ],
   "travel_perks": {
     "lounge_access": {
-      "program": null,
-      "visits_per_year": null,
       "notes": "Delta Sky Club: 15 visits per Medallion Year when flying Delta; unlimited access after $75,000 spend in a calendar year. The Centurion Lounge: complimentary access when booking Delta flight with Reserve Card."
     },
     "tsa_precheck_credit": {
