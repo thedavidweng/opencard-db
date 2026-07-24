@@ -20,40 +20,133 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.49,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See PNC for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "Introductory 0% APR for the first 9 billing cycles following account opening on purchases. Then a variable APR, currently 17.49% to 27.74%, based on creditworthiness. This APR will vary with the market based on the prime rate."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not stated on product page."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "cashback",
+    "currency_label": "cash back (USD)",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 0.015,
+      "description": "Earn unlimited 1.5% cash back on all net purchases. No category restrictions and no caps on the cash back you can earn."
     },
     "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "redemption_notes": "No category restrictions and no caps on the cash back you can earn."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 400.0,
+    "unit": "statement_credit",
+    "spend_required": 3000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn a $400 Statement Credit after making at least $3,000 in net purchases during the first three billing cycles following account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "zero-liability",
+      "title": "Zero Liability Fraud Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your Visa Business card is ever lost or stolen, your company is protected against fraudulent use of the card, including transactions made via telephone or on the internet."
+    },
+    {
+      "id": "extended-protection",
+      "title": "Extended Protection (Warranty)",
+      "category": "other",
+      "source": "issuer",
+      "description": "Doubles the time period of the original manufacturer's written U.S. warranty up to one (1) full year on warranties of three years or less."
+    },
+    {
+      "id": "purchase-security",
+      "title": "Purchase Security",
+      "category": "other",
+      "source": "issuer",
+      "description": "Will replace, repair, or reimburse you for eligible items of personal property in the event of theft or damage within the first 90 days of purchase."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Lost Luggage Reimbursement."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Travel Accident Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Travel Accident Insurance."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "other",
+      "source": "issuer",
+      "description": "Auto Rental Collision Damage Waiver."
+    },
+    {
+      "id": "roadside-dispatch",
+      "title": "Roadside Dispatch",
+      "category": "other",
+      "source": "issuer",
+      "description": "Roadside Dispatch."
+    },
+    {
+      "id": "visa-signature-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "issuer",
+      "description": "Visa Signature Concierge."
+    },
+    {
+      "id": "emergency-card-replacement",
+      "title": "Emergency Card Replacement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Emergency Card Replacement."
+    },
+    {
+      "id": "emergency-cash-disbursement",
+      "title": "Emergency Cash Disbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Emergency Cash Disbursement."
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel and Emergency Assistance Services",
+      "category": "other",
+      "source": "issuer",
+      "description": "Travel and Emergency Assistance Services."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Lost Luggage Reimbursement",
+      "Travel Accident Insurance",
+      "Auto Rental Collision Damage Waiver",
+      "Roadside Dispatch",
+      "Visa Signature Concierge"
+    ]
   },
   "official_url": "https://www.pnc.com/en/small-business/borrowing/business-credit-cards/pnc-cash-rewards-visa-signature-business-credit-card.html",
   "image": {
@@ -66,5 +159,5 @@
   "sources": [
     "https://www.pnc.com/en/small-business/borrowing/business-credit-cards/pnc-cash-rewards-visa-signature-business-credit-card.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=0 but value not confirmed in page text."
+  "notes": "Verified from official product page. Annual fee not stated on page text (rates PDF not accessible). Page title references 'PNC Business Cash Rewards' but legal disclosure confirms 'PNC Cash Rewards Visa Signature Business Credit Card'."
 }
