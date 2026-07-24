@@ -13,9 +13,9 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 95.0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 95.0,
     "waiver_conditions": null
   },
   "apr": {
@@ -24,11 +24,12 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See American Express for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "APR for Purchases: Prime Rate + 12.74% to Prime Rate + 21.74% (variable). APR for Cash Advances: Prime Rate + 21.99% (variable). Specific numeric APR not computed as Prime Rate value not stated on page."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 2.7,
+    "notes": "2.7% of each transaction after conversion to US dollars."
   },
   "credit_required": {
     "score_band": null,
@@ -36,17 +37,33 @@
   },
   "rewards": {
     "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
+    "currency_label": "Membership Rewards points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1 Membership Rewards point per $1 on eligible purchases. 50% extra points when you make 30 or more purchases in a billing period."
     },
     "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "redemption_notes": "50% extra Membership Rewards points on purchases when 30 or more separate purchases are made in a billing period. Specific earn categories not verified from fetched pages."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 15000.0,
+    "unit": "Membership Rewards points",
+    "spend_required": 2000.0,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 15,000 Membership Rewards points after you make eligible purchases totaling $2,000 or more within your first 6 months of Card Membership.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "extra-points-30-purchases",
+      "title": "50% Extra Points Benefit",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you make 30 or more separate purchases of goods or services in a billing period with your Amex EveryDay Preferred Credit Card, you earn 50% extra Membership Rewards points on those purchases less returns and credits with a date in that billing period."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -64,7 +81,9 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/card/amex-everyday-preferred/"
+    "https://www.americanexpress.com/us/credit-cards/card/amex-everyday-preferred/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/amex-everyday-preferred-credit-card/90001-11-0",
+    "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q4-pdf-cmas/cps-lending/amex-everyday-preferred-12-31-2025.pdf"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=95 but value not confirmed in page text."
+  "notes": "Product page returned empty content. Terms page returned 'offer may no longer be available.' Key facts (annual fee, APR formula, FX fee, signup bonus, 50% extra points) verified from official Amex cardmember agreement and terms page via web search snippets. Rewards categories (e.g., supermarket bonus) not verified from fetched pages — left empty. Image URL preserved from existing JSON, not re-verified."
 }
