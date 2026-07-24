@@ -24,26 +24,26 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "notes": "APR not visible on the product page; disclosures link is javascript-rendered. Terms URL not provided in batch."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not visible on the product page."
   },
   "credit_required": {
     "score_band": null,
-    "notes": null
+    "notes": "Page states 'Credit Level: REBUILDING'. Secured card requiring refundable security deposit."
   },
   "rewards": {
-    "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
+    "currency": "none",
+    "currency_label": "No rewards program",
     "structure": "single",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "description": "No rewards mentioned on the product page. This is a credit-building secured card."
     },
     "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "redemption_notes": "No rewards program. Card is designed for building/rebuilding credit."
   },
   "signup_bonus": null,
   "benefits": [],
@@ -66,5 +66,5 @@
   "sources": [
     "https://www.capitalone.com/credit-cards/platinum-secured/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=$0 but value not confirmed in page text."
+  "notes": "Secured credit card for building/rebuilding credit. Credit Level: REBUILDING per page. Security deposit: $49, $99, or $200 minimum opens account with initial credit line of at least $200; max deposit $1,000. APR, annual fee, and FX fee not visible on the product page (disclosures behind javascript link). Network/tier (visa/signature) preserved from existing JSON but not re-verified on page. No rewards program mentioned on page."
 }
