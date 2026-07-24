@@ -2,7 +2,9 @@
   "id": "us-bank-of-america-customized-cash-rewards",
   "schema_version": "1.0.0",
   "name": "Bank of America® Customized Cash Rewards Credit Card",
-  "localized_names": { "en": "Bank of America® Customized Cash Rewards Credit Card" },
+  "localized_names": {
+    "en": "Bank of America® Customized Cash Rewards Credit Card"
+  },
   "country": "us",
   "issuer": "Bank of America",
   "issuer_id": "bank-of-america",
@@ -17,12 +19,21 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 17.49, "max": 27.49, "type": "variable" },
-    "notes": "0% intro APR for the first 15 billing cycles for purchases and balance transfers made within 60 days; then variable APR per the official product page."
+    "purchase": {
+      "min": 16.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for the first 15 billing cycles for purchases and balance transfers made within 60 days; then a variable APR of 16.49% to 28.49% applies. The sample agreement states APRs are based on the Prime Rate as of 03/31/2026. Actual pricing will vary from one cardholder to another. Intro APR offer preserved from previous data; not re-verified (product page was unavailable)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": null
+    "percent": 3,
+    "notes": "Foreign transaction fee is 3% of each transaction."
   },
   "credit_required": {
     "score_band": null,
@@ -73,7 +84,7 @@
     "spend_required": 1000,
     "spend_currency": "USD",
     "months": 3,
-    "description": "$200 online cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening.",
+    "description": "$200 online cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening. Preserved from previous data; not re-verified (product page was unavailable).",
     "as_of": "2026-07-24"
   },
   "benefits": [
@@ -82,21 +93,21 @@
       "title": "BofA Rewards bonus eligibility",
       "category": "acceleration",
       "source": "issuer",
-      "description": "Eligible Bank of America customers enrolled in BofA Rewards can earn a rewards bonus on credit card purchases."
+      "description": "Eligible Bank of America customers enrolled in BofA Rewards can earn a rewards bonus on credit card purchases. Preserved from previous data; not re-verified (product page was unavailable)."
     },
     {
       "id": "zero-liability",
       "title": "$0 Liability Guarantee",
       "category": "other",
       "source": "issuer",
-      "description": "Bank of America provides a $0 Liability Guarantee for fraudulent transactions."
+      "description": "Bank of America provides a $0 Liability Guarantee for fraudulent transactions. Preserved from previous data; not re-verified (product page was unavailable)."
     },
     {
       "id": "balance-connect",
       "title": "Balance Connect overdraft protection",
       "category": "other",
       "source": "issuer",
-      "description": "Optional overdraft protection service when linking an eligible Bank of America checking account to the credit card; other fees may apply."
+      "description": "Optional overdraft protection service when linking an eligible Bank of America checking account to the credit card; other fees may apply. Preserved from previous data; not re-verified (product page was unavailable)."
     }
   ],
   "travel_perks": {
@@ -117,7 +128,8 @@
   "last_verified": "2026-07-24",
   "sources": [
     "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
-    "https://www.bankofamerica.com/credit-cards/terms-and-conditions/?campaignid=4075151&productoffercode=Q4&locale=en_US"
+    "https://www.bankofamerica.com/credit-cards/terms-and-conditions/?campaignid=4075151&productoffercode=Q4&locale=en_US",
+    "https://www.bankofamerica.com/content/documents/creditcard/bank_of_america_customized_cash_rewards_english.pdf"
   ],
-  "notes": "Choice category options shown on the official page are gas and EV charging stations, online shopping, dining, travel, drug stores and pharmacies, and home improvement and furnishings. Foreign transaction fee and approval criteria were not found in the official product page content checked."
+  "notes": "The product page was temporarily unavailable during verification. APR and FX fee were verified from the official sample Credit Card Agreement PDF (Prime Rate as of 03/31/2026). The sample agreement states 'Actual pricing will vary from one cardholder to another.' Rewards structure, signup bonus, and benefits preserved from previous data and not re-verified. The previous APR range (17.49-27.49) has been updated to match the sample agreement (16.49-28.49). FX fee was previously null and is now confirmed as 3% from the sample agreement."
 }
