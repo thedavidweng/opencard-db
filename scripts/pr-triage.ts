@@ -34,11 +34,16 @@ function escapeRegExp(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+/**
+ * Read a `**Label:** value` form field from the PR body.
+ * Values are same-line only — never spill into the next bullet
+ * (empty `**Product page:**` must not capture the Terms line below).
+ */
 function field(body: string, label: string): string | null {
   const re = new RegExp(
-    String.raw`\*\*${escapeRegExp(label)}:\*\*\s*(?:` +
-      // `value` or bare value until end of line
-      String.raw`\`([^\`]+)\`|(.+))`,
+    String.raw`\*\*${escapeRegExp(label)}:\*\*[ \t]*(?:` +
+      // `value` or bare remainder of the same line (may be empty)
+      String.raw`\`([^\`\n]*)\`|([^\n]*))`,
     "i",
   );
   const m = body.match(re);

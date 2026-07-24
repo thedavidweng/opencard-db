@@ -38,7 +38,7 @@
 
 - **Product page:** https://www.example-bank.com/cards/example
 - **Terms / benefits page:** https://www.example-bank.com/cards/example/terms
-- **Last verified (YYYY-MM-DD):** 2026-07-24
+- **Last verified (YYYY-MM-DD):** YYYY-MM-DD
 
 ### 3. Card image (pick the best you can)
 

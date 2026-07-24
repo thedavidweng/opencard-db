@@ -174,4 +174,85 @@ describe("pr triage", () => {
     assert.equal(r.missing.length, 0);
     assert.ok(r.labelsAdd.includes("new-card"));
   });
+
+  it("flags empty Product/Terms lines (must not swallow the next bullet)", () => {
+    const r = triagePullRequest({
+      title: "Add card: us-demo-card",
+      body: `
+- [x] **New card**
+- **Card ID:** \`us-demo-card\`
+- **Product page:**
+- **Terms / benefits page:**
+- **Last verified (YYYY-MM-DD):** 2026-07-24
+- [x] **D. No image yet**
+`,
+      changedFiles: ["data/us/demo-card.json"],
+    });
+    assert.ok(r.isNewCard);
+    assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
+    assert.ok(r.labelsAdd.includes("needs-info"));
+    assert.ok(r.labelsAdd.includes("missing-sources"));
+    assert.ok(r.labelsAdd.includes("pr-form-incomplete"));
+  });
+
+  it("flags missing image choice on new-card PRs", () => {
+    const r = triagePullRequest({
+      title: "Add card: us-demo-card",
+      body: `
+- [x] **New card**
+- **Card ID:** \`us-demo-card\`
+- **Product page:** https://creditcards.chase.com/demo
+- **Terms / benefits page:** https://chase.com/demo/terms
+- **Last verified (YYYY-MM-DD):** 2026-07-24
+- [ ] **A. Official issuer image URL**
+  - **Image URL:**
+- [ ] **B. Apple Pay extract**
+- [ ] **C. Other local upload**
+- [ ] **D. No image yet**
+`,
+      changedFiles: ["data/us/demo-card.json"],
+    });
+    assert.ok(r.missing.some((m) => m.toLowerCase().includes("image")));
+    assert.ok(r.labelsAdd.includes("needs-info"));
+  });
+
+  it("flags empty-body new-card PR with data file (CI must fail)", () => {
+    const r = triagePullRequest({
+      title: "Add card: us-demo-card",
+      body: "",
+      changedFiles: ["data/us/demo-card.json"],
+    });
+    assert.equal(r.isNewCard, true);
+    assert.ok(r.missing.includes("Card ID"));
+    assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
+    assert.ok(r.missing.includes("Last verified (YYYY-MM-DD)"));
+    assert.ok(r.missing.some((m) => m.toLowerCase().includes("image")));
+    assert.ok(r.labelsAdd.includes("needs-info"));
+    assert.ok(r.labelsAdd.includes("new-card"));
+  });
+
+  it("flags untouched PR template placeholders for a new card", () => {
+    // Mirrors .github/PULL_REQUEST_TEMPLATE.md defaults contributors forget to edit.
+    const r = triagePullRequest({
+      title: "Add card: us-demo-card",
+      body: `
+- [x] **New card** (add a file under \`data/us/\`, \`data/ca/\`, or \`data/cn/\`)
+- **Card ID:** \`us-example-card\`
+- **Product page:** https://www.example-bank.com/cards/example
+- **Terms / benefits page:** https://www.example-bank.com/cards/example/terms
+- **Last verified (YYYY-MM-DD):** YYYY-MM-DD
+- [ ] **A. Official issuer image URL**
+  - **Image URL:** https://www.example-bank.com/cardart/example.png
+- [ ] **B. Apple Pay extract**
+- [ ] **C. Other local upload**
+- [ ] **D. No image yet**
+`,
+      changedFiles: ["data/us/demo-card.json"],
+    });
+    assert.ok(r.missing.includes("Card ID"));
+    assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
+    assert.ok(r.missing.includes("Last verified (YYYY-MM-DD)"));
+    assert.ok(r.missing.some((m) => m.toLowerCase().includes("image")));
+    assert.ok(r.labelsAdd.includes("needs-info"));
+  });
 });
