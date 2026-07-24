@@ -309,7 +309,6 @@
   "travel_perks": {
     "lounge_access": {
       "program": "Priority Pass",
-      "visits_per_year": null,
       "notes": "Enrollment required; Amex describes an unlimited number of Priority Pass visits to over 1,300 airport lounges in over 130 countries."
     },
     "tsa_precheck_credit": {
