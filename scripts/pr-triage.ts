@@ -78,7 +78,18 @@ export const COMPLETENESS_LABELS = [
 
 const CARD_TITLE =
   /^(Add|Update) card:\s*([a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*)$/;
-const META_TITLE = /^(docs|ci|chore|fix|test|refactor)(\(.+\))?:\s.+/i;
+
+/** Conventional Commits 1.0 — used only for non-card (feature/docs/CI) PRs. */
+const CONVENTIONAL_TYPES =
+  "feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert";
+const CONVENTIONAL_TITLE = new RegExp(
+  String.raw`^(${CONVENTIONAL_TYPES})(\([a-z0-9][a-z0-9._/-]*\))?(!)?:\s\S.+`,
+  "i",
+);
+
+const TITLE_HELP =
+  "Card PRs use `Add card: us-my-card` / `Update card: us-my-card`. " +
+  "Everything else uses Conventional Commits, e.g. `feat: …`, `fix(api): …`, `docs: …`, `ci: …`.";
 const CARD_ID_RE = /^[a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -147,19 +158,18 @@ export function parseTitle(title: string): {
       cardId: card[2],
     };
   }
-  if (META_TITLE.test(t)) {
+  if (CONVENTIONAL_TITLE.test(t)) {
     return {
       ok: true,
       kind: "meta",
-      message: "Title matches non-card convention.",
+      message: "Title matches Conventional Commits (non-card).",
       cardId: null,
     };
   }
   return {
     ok: false,
     kind: "invalid",
-    message:
-      "Title must look like `Add card: us-my-card`, `Update card: us-my-card`, or `docs: …` / `ci: …`.",
+    message: TITLE_HELP,
     cardId: null,
   };
 }
@@ -298,7 +308,7 @@ export function triagePullRequest(input: TriageInput): TriageResult {
       severity: "error",
       message: suggestedTitle
         ? `PR title format looks wrong. Try renaming the title to \`${suggestedTitle}\` (copy-paste is fine).`
-        : "PR title format looks wrong. Use `Add card: us-my-card`, `Update card: us-my-card`, or for non-card work `docs: …` / `ci: …`.",
+        : `PR title format looks wrong. ${TITLE_HELP}`,
     });
   }
 
@@ -520,12 +530,14 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   if (isNewCard) classificationLabelsAdd.push("new-card");
   else classificationLabelsRemove.push("new-card");
 
-  const isDocsMeta =
-    !isCardPr && titleInfo.kind === "meta" && /^docs(\(|:)/i.test(title.trim());
+  const conventionalMatch = title.trim().match(CONVENTIONAL_TITLE);
+  const conventionalType = conventionalMatch?.[1]?.toLowerCase() ?? "";
+  const isDocsMeta = !isCardPr && titleInfo.kind === "meta" && conventionalType === "docs";
   const isFeatureMeta =
     !isCardPr &&
     titleInfo.kind === "meta" &&
-    /^(ci|chore|fix|test|refactor)(\(|:)/i.test(title.trim());
+    conventionalType !== "" &&
+    conventionalType !== "docs";
 
   if (isDocsMeta) classificationLabelsAdd.push("documentation");
   else classificationLabelsRemove.push("documentation");
@@ -611,7 +623,10 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   lines.push("");
   lines.push("<details><summary>Beginner cheat-sheet</summary>");
   lines.push("");
-  lines.push("- Title: `Add card: us-my-card` or `Update card: us-my-card`");
+  lines.push("- **Cards (not Conventional Commits):** `Add card: us-my-card` or `Update card: us-my-card`");
+  lines.push(
+    "- **Everything else (Conventional Commits):** `feat: …` / `fix(scope): …` / `docs: …` / `ci: …` / `chore: …` / …",
+  );
   lines.push("- One card per PR; id = `{country}-{slug}` matching `data/{country}/{slug}.json`");
   lines.push("- Official Sources required; `last_verified` = the day you checked");
   lines.push(

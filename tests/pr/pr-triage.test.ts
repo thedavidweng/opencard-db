@@ -44,11 +44,28 @@ const updateBody = goodBody
   .replace("2026-07-24", "2026-07-28");
 
 describe("pr triage", () => {
-  it("parses card and meta titles", () => {
+  it("parses card and Conventional Commits titles", () => {
     assert.equal(parseTitle("Add card: us-amex-gold").ok, true);
     assert.equal(parseTitle("Update card: ca-amex-cobalt").kind, "update-card");
     assert.equal(parseTitle("docs: fix contributing").ok, true);
+    assert.equal(parseTitle("feat(pr-checks): detect duplicates").ok, true);
+    assert.equal(parseTitle("feat(pr-checks): detect duplicates").kind, "meta");
+    assert.equal(parseTitle("fix!: breaking payment path").ok, true);
     assert.equal(parseTitle("Add a new sapphire card").ok, false);
+    assert.equal(parseTitle("feat add cards without colon").ok, false);
+  });
+
+  it("labels feat: PRs as enhancement (Conventional Commits)", () => {
+    const r = triagePullRequest({
+      title: "feat(pr-checks): duplicate card PRs + last_verified comparison",
+      body: "- [x] **Not a card** (docs / CI / code) — skip the Card form below",
+      changedFiles: ["scripts/pr-triage.ts", ".github/workflows/pr-checks.yml"],
+    });
+    assert.equal(r.titleOk, true);
+    assert.equal(r.isCardPr, false);
+    assert.ok(r.classificationLabelsAdd.includes("enhancement"));
+    assert.ok(!r.classificationLabelsAdd.includes("new-card"));
+    assert.equal(r.issues.filter((i) => i.severity === "error").length, 0);
   });
 
   it("detects regions from paths", () => {

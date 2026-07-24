@@ -16,11 +16,11 @@ Easier review, clearer Sources, fewer merge conflicts.
    Use `data/ca/` or `data/cn/` for those markets. Rename the file; never commit `example-card`.
 3. Edit the JSON (id must be `{country}-{slug}`, matching the file path).
 4. Open a Pull Request — GitHub pre-fills a **form**. Replace the example values.
-5. Set the **PR title** to exactly:
+5. Set the **PR title** using the **card prefix** (this is **not** a Conventional Commit):
    ```text
    Add card: us-my-card-slug
    ```
-   (or `Update card: …` when editing an existing card)
+   (or `Update card: …` when editing an existing card). Feature/docs/CI PRs use Conventional Commits instead — see the cheatsheet below.
 6. For images: official bank URL when stable, or — **best local mirror** — Apple Pay `cardBackgroundCombined@2x.png` from your Mac Wallet (`images/us-my-card-slug.png` → CI **lossless WebP**, native size). See `images/README.md` and `docs/research/apple-pay-card-art.md`. Do not scrape Apple remotely.
 7. Wait for checks:
    - **Validate** — schema / tests
@@ -61,11 +61,30 @@ npm run optimize:images   # if you added files under images/
 
 ## PR title cheatsheet
 
+Two separate conventions — don’t mix them.
+
+### Card PRs (dedicated prefix)
+
 | Kind | Title format |
 |------|----------------|
 | New card | `Add card: us-my-card` |
 | Update card | `Update card: us-my-card` |
-| Docs / CI / chore | `docs: …` / `ci: …` / `chore: …` |
+
+Always `Add card:` / `Update card:` + the Card Id. **Do not** use `feat:` for adding a card.
+
+### Non-card PRs (Conventional Commits)
+
+| Kind | Title format |
+|------|----------------|
+| Feature | `feat: …` or `feat(scope): …` |
+| Bug fix | `fix: …` |
+| Docs | `docs: …` |
+| CI / tooling | `ci: …` / `chore: …` / `build: …` |
+| Other | `refactor:` / `test:` / `perf:` / `style:` / `revert:` |
+
+Examples: `feat(pr-checks): detect duplicate card PRs`, `docs: explain Apple Pay extracts`.
+
+**Form check** rejects titles that match neither family (that’s why a bare `feat: …` must follow Conventional Commits spelling, and card work must use `Add card:`).
 
 ## Licenses
 
