@@ -303,25 +303,39 @@ export function triagePullRequest(input: TriageInput): TriageResult {
 
   const lines: string[] = [];
   lines.push("<!-- opencard-form-check -->");
-  lines.push("### PR Form check");
-  lines.push("");
   if (missing.length === 0 && titleInfo.ok) {
+    lines.push("### PR Form check passed");
+    lines.push("");
     lines.push("> [!TIP]");
     lines.push(
       "> Form looks complete enough for review. Thanks! Maintainers may still ask follow-ups.",
     );
   } else {
-    lines.push("> [!IMPORTANT]");
+    lines.push("### PR Form check failed");
+    lines.push("");
+    const author = (process.env.PR_AUTHOR ?? "").replace(/^@/, "").trim();
+    if (author) {
+      lines.push(`@${author} thanks for the pull request.`);
+      lines.push("");
+    }
     lines.push(
-      "> The **Form check** CI job failed. Fix the items below, then push a new commit (or edit the PR title/body). This comment updates automatically.",
+      "The **Form check** CI job failed because required fields look incomplete (same idea as Homebrew’s incomplete-PR helper: CI fails **and** we leave this comment so you can fix it in place).",
     );
     lines.push("");
     lines.push(
-      "> *(The separate **Labels** job only classifies the PR — `new-card` / `US` / `enhancement` / … — and does not fail on missing fields.)*",
+      "**Please edit this pull request** (title and/or description) — do **not** open a new PR.",
     );
     lines.push("");
     lines.push("**Missing / invalid:**");
     for (const m of missing) lines.push(`- ${m}`);
+    lines.push("");
+    lines.push(
+      "After you fix the items, push a commit or edit the PR body. This comment updates automatically.",
+    );
+    lines.push("");
+    lines.push(
+      "> The separate **Labels** check only classifies the PR (`new-card` / `US` / `enhancement` / …) and stays green even when the form is incomplete.",
+    );
   }
   lines.push("");
   lines.push("<details><summary>Title &amp; form cheat-sheet</summary>");
@@ -335,7 +349,7 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     "- Images: official URL, or Apple Pay `cardBackgroundCombined@2x.png` under `images/` (CI → lossless WebP). Prefer Apple Pay extracts over unknown crops.",
   );
   lines.push(
-    "- CI: **Labels** = what kind of PR; **Form check** = required fields filled.",
+    "- CI: **Labels** = what kind of PR; **Form check** = required fields filled (+ this comment when incomplete).",
   );
   if (suggestedTitle) {
     lines.push(`- Suggested title from your files/form: \`${suggestedTitle}\``);

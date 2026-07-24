@@ -25,7 +25,7 @@ Easier review, clearer Sources, fewer merge conflicts.
 7. Wait for checks:
    - **Validate** — schema / tests
    - **Labels** — classifies the PR (`new-card`, `US`/`CA`/`CN`, `enhancement`, …). Always green.
-   - **Form check** — required title + beginner form fields. **Fails** if something is missing (and leaves a sticky comment).
+   - **Form check** — required title + beginner form fields. **Fails** if something is missing, and posts a **sticky PR comment** listing what to fix (Homebrew-style). Edit the same PR — do not open a new one.
    - **Optimize Images** — only if you uploaded a raster under `images/`
 
 If **Form check** is red, expand the sticky comment and fill the listed fields — you do not need to worry about Labels for that.

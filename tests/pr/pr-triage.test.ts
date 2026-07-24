@@ -116,7 +116,25 @@ describe("pr triage", () => {
     assert.ok(r.completenessLabelsAdd.includes("needs-info"));
     assert.ok(r.completenessLabelsAdd.includes("pr-form-incomplete"));
     assert.ok(!r.classificationLabelsAdd.includes("needs-info"));
-    assert.match(r.commentMarkdown, /Form check/);
+    assert.match(r.commentMarkdown, /Form check failed/);
+    assert.match(r.commentMarkdown, /Missing \/ invalid/);
+  });
+
+  it("mentions the PR author in the incomplete form comment when PR_AUTHOR is set", () => {
+    const prev = process.env.PR_AUTHOR;
+    process.env.PR_AUTHOR = "contributor123";
+    try {
+      const r = triagePullRequest({
+        title: "Add card: us-demo-card",
+        body: "",
+        changedFiles: ["data/us/demo-card.json"],
+      });
+      assert.match(r.commentMarkdown, /@contributor123/);
+      assert.match(r.commentMarkdown, /do \*\*not\*\* open a new PR/i);
+    } finally {
+      if (prev === undefined) delete process.env.PR_AUTHOR;
+      else process.env.PR_AUTHOR = prev;
+    }
   });
 
   it("flags placeholder sources and bad title", () => {
