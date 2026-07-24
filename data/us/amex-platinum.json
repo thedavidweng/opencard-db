@@ -63,11 +63,11 @@
   "signup_bonus": {
     "amount": null,
     "unit": "points",
-    "spend_required": 3000,
+    "spend_required": null,
     "spend_currency": "USD",
-    "months": 6,
-    "description": "Welcome Membership Rewards points after meeting minimum spend within first 6 months; amount and eligibility vary by offer and channel.",
-    "as_of": "2026-07-23"
+    "months": null,
+    "description": "Welcome Membership Rewards points are personalized; Amex product HTML bundles other cards' spend language. Do not treat a single spend figure as authoritative without the live welcome module. Third-party trackers (e.g. credit-card-bonuses-api) often show ~100,000 points after $8,000 in 6 months — discovery clue only.",
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -144,10 +144,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/platinum/",
     "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png"
   ],
-  "notes": "Credits and lounge entitlements are highly offer- and enrollment-dependent; verify on the official Platinum page and Card member materials."
+  "notes": "Credits and lounge entitlements are offer/enrollment-dependent. Cross-checked fee $895 and 5x flight/hotel earn against Amex official page; welcome bonus left null after third-party cross-check showed conflict with polluted $3,000 spend text in page bundle."
 }
