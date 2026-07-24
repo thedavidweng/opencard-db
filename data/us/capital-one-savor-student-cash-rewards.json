@@ -1,9 +1,9 @@
 {
   "id": "us-capital-one-savor-student-cash-rewards",
   "schema_version": "1.0.0",
-  "name": "Savor Student Credit Card",
+  "name": "Savor Rewards for Students",
   "localized_names": {
-    "en": "Savor Student Credit Card"
+    "en": "Savor Rewards for Students"
   },
   "country": "us",
   "issuer": "Capital One",
@@ -13,9 +13,9 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0.0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0.0,
     "waiver_conditions": null
   },
   "apr": {
@@ -24,26 +24,47 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "notes": "APR not visible on fetched product page; disclosures behind javascript overlay. See Capital One for current APR."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not visible on fetched product page; disclosures behind javascript overlay."
   },
   "credit_required": {
     "score_band": null,
-    "notes": null
+    "notes": "For students currently enrolled or admitted and planning to enroll in the next 3 months at an accredited university, community college or other higher education institution."
   },
   "rewards": {
-    "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
-    "structure": "single",
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "points_per_dollar": 1.0,
+      "description": "1% cash back on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Unlimited 3% cash back at grocery stores and on dining. 3% on entertainment and popular streaming. 1% on all other purchases."
   },
   "signup_bonus": {
     "amount": 100.0,
@@ -51,7 +72,7 @@
     "spend_required": 300.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "$100 cash bonus after spending $300 on purchases within the first 3 months",
+    "description": "$100 cash bonus after spending $300 on purchases within the first 3 months from account opening. Limited time offer.",
     "as_of": "2026-07-24"
   },
   "benefits": [],
@@ -72,7 +93,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.capitalone.com/credit-cards/savor-student/"
+    "https://www.capitalone.com/credit-cards/savor-student/",
+    "https://www.capitalone.com/credit-cards/fair-and-building/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=$0 but value not confirmed in page text."
+  "notes": "Verified from official Capital One product page and fair-and-building listing page. Annual fee $0 (confirmed from fair-and-building listing). $100 cash bonus after $300 spend in 3 months. 3% cash back at grocery stores, dining, entertainment, and popular streaming; 1% on all other purchases. APR and foreign transaction fee not visible on fetched pages. Name updated to 'Savor Rewards for Students' per official page."
 }
