@@ -24,11 +24,12 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "Page is a template with blank APR values. Disclosure text: 'the variable APR is % to %' and 'The variable APR for cash advances is %.' Values not populated on fetched page."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "Page states 'No foreign transaction fees means you don't pay additional transaction fees on international purchases.'"
   },
   "credit_required": {
     "score_band": null,
@@ -36,22 +37,77 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "Atmos™ Rewards points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "1x Points on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "3x Points on eligible Hawaiian Airlines and Alaska Airlines purchases",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "2x Points on gas, dining, and eligible grocery store purchases",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Atmos Rewards points never expire. Award flights starting at 17,500 Points from West Coast, 25,000 Points from East Coast for Hawaii destinations."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 80000.0,
+    "unit": "points",
+    "spend_required": 2500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 80,000 Atmos™ Rewards points after spending $2,500 on purchases within the first 90 days",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "two-free-checked-bags",
+      "title": "Two Free Checked Bags",
+      "category": "other",
+      "source": "issuer",
+      "description": "Two free checked bags on eligible flights for the primary cardmember when you use your card to purchase eligible tickets directly from Hawaiian Airlines and Alaska Airlines."
+    },
+    {
+      "id": "fifty-off-companion-discount",
+      "title": "50%-Off Companion Discount",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a one-time 50%-off companion discount for roundtrip coach travel between Hawaii and North America destinations on Hawaiian Airlines operated flights or roundtrip North America coach travel on Alaska Airlines operated flights."
+    },
+    {
+      "id": "hundred-companion-discount",
+      "title": "$100 Companion Discount",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive an annual $100 companion discount for roundtrip coach travel between Hawaii and North America destinations on Hawaiian Airlines operated flights or roundtrip North America coach travel on Alaska Airlines operated flights."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees means you don't pay additional transaction fees on international purchases."
+    },
+    {
+      "id": "points-never-expire",
+      "title": "Points Never Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "Atmos Rewards points never expire, so you can redeem them anytime."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": null,
+    "free_checked_bags": "True",
     "hotel_status": null,
     "other": []
   },
@@ -66,5 +122,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/credit-card/hawaiian-airlines/child/hawaiian-hcl-inflight-landing-page/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Annual fee amount of $1.00 preserved from existing JSON but NOT re-verified — the fetched page is a template with blank fee/APR values. APR values remain null (template blanks). FX fee, rewards, signup bonus, and benefits verified from page text."
 }
