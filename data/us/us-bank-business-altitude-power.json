@@ -97,8 +97,6 @@
   ],
   "travel_perks": {
     "lounge_access": {
-      "program": null,
-      "visits_per_year": null,
       "notes": "Priority Pass™ Digital annual membership — access to over 1,700 VIP airport lounges and experiences worldwide"
     },
     "tsa_precheck_credit": null,
