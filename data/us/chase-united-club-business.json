@@ -173,8 +173,6 @@
   ],
   "travel_perks": {
     "lounge_access": {
-      "program": null,
-      "visits_per_year": null,
       "notes": "Unlimited United Club access for cardmember and guest ($750+ value)"
     },
     "tsa_precheck_credit": null,
