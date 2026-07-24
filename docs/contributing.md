@@ -16,18 +16,18 @@ Easier review, clearer Sources, fewer merge conflicts.
    Use `data/ca/` or `data/cn/` for those markets. Rename the file; never commit `example-card`.
 3. Edit the JSON (id must be `{country}-{slug}`, matching the file path).
 4. Open a Pull Request — GitHub pre-fills a **form**. Replace the example values.
-5. Set the **PR title** using the **card prefix** (this is **not** a Conventional Commit):
+5. Set the **PR title** with Conventional Commits — cards use type `card` + scope:
    ```text
-   Add card: us-my-card-slug
+   card(add): us-my-card-slug
    ```
-   (or `Update card: …` when editing an existing card). Feature/docs/CI PRs use Conventional Commits instead — see the cheatsheet below.
+   (or `card(update): …` when editing an existing card). Feature/docs/CI PRs use `feat:` / `fix:` / `docs:` / … — see the cheatsheet below.
 6. For images: official bank URL when stable, or — **best local mirror** — Apple Pay `cardBackgroundCombined@2x.png` from your Mac Wallet (`images/us-my-card-slug.png` → CI **lossless WebP**, native size). See `images/README.md` and `docs/research/apple-pay-card-art.md`. Do not scrape Apple remotely.
 7. Wait for checks:
    - **Validate** — schema / tests
    - **Labels** — classifies the PR (`new-card`, `US`/`CA`/`CN`, `enhancement`, …). Always green.
    - **Form check** — required title + beginner form fields. **Fails** if something is missing, and posts a **sticky PR comment** listing what to fix (Homebrew-style). Also catches:
-     - duplicate open Add/Update PRs for the same card (links the other PR)
-     - Add vs Update mismatches (card already on / missing from main)
+     - duplicate open card(add|update) PRs for the same card (links the other PR)
+     - add vs update mismatches (card already on / missing from main)
      - Update PRs whose **Last verified** is not **newer** than the version on main
    - **Optimize Images** — only if you uploaded a raster under `images/`
 
@@ -61,30 +61,23 @@ npm run optimize:images   # if you added files under images/
 
 ## PR title cheatsheet
 
-Two separate conventions — don’t mix them.
-
-### Card PRs (dedicated prefix)
+One Conventional Commits system for every PR.
 
 | Kind | Title format |
 |------|----------------|
-| New card | `Add card: us-my-card` |
-| Update card | `Update card: us-my-card` |
-
-Always `Add card:` / `Update card:` + the Card Id. **Do not** use `feat:` for adding a card.
-
-### Non-card PRs (Conventional Commits)
-
-| Kind | Title format |
-|------|----------------|
+| New card | `card(add): us-my-card` |
+| Update card | `card(update): us-my-card` |
 | Feature | `feat: …` or `feat(scope): …` |
 | Bug fix | `fix: …` |
 | Docs | `docs: …` |
 | CI / tooling | `ci: …` / `chore: …` / `build: …` |
 | Other | `refactor:` / `test:` / `perf:` / `style:` / `revert:` |
 
-Examples: `feat(pr-checks): detect duplicate card PRs`, `docs: explain Apple Pay extracts`.
+Examples: `card(add): us-chase-sapphire-preferred`, `feat(pr-checks): detect duplicate card PRs`, `docs: explain Apple Pay extracts`.
 
-**Form check** rejects titles that match neither family (that’s why a bare `feat: …` must follow Conventional Commits spelling, and card work must use `Add card:`).
+**Do not** use `feat:` for adding a card — reserve type `card` with scope `add` or `update`. Legacy titles `Add card:` / `Update card:` still pass Form check so older open PRs keep working.
+
+**Form check** rejects titles that are not Conventional Commits (wrong spelling of `feat: …`, bare `card:` without scope, etc.).
 
 ## Licenses
 

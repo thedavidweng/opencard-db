@@ -1,12 +1,13 @@
 <!--
 ═══════════════════════════════════════════════════════════
   PR TITLE (required) — put ONE line in the title box above
+  One Conventional Commits system for every PR:
 
-  ── Card PRs (dedicated prefix — NOT Conventional Commits) ──
-  New card:     Add card: us-your-card-slug
-  Update card:  Update card: us-your-card-slug
+  ── Cards (type `card` + scope) ──
+  New card:     card(add): us-your-card-slug
+  Update card:  card(update): us-your-card-slug
 
-  ── Everything else (Conventional Commits) ──
+  ── Everything else ──
   feat: short summary
   fix: short summary
   docs: short summary
@@ -18,7 +19,8 @@
   Rules for cards:
   • Lowercase country + slug: us / ca / cn
   • One card per PR
-  • Example: Add card: us-chase-sapphire-preferred
+  • Example: card(add): us-chase-sapphire-preferred
+  • Legacy Add/Update card: … still accepted
 ═══════════════════════════════════════════════════════════
 -->
 

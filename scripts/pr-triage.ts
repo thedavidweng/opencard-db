@@ -76,10 +76,14 @@ export const COMPLETENESS_LABELS = [
   "duplicate",
 ] as const;
 
+/** Preferred: Conventional Commits with type `card` + scope add|update. */
 const CARD_TITLE =
+  /^card\((add|update)\):\s*([a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*)$/i;
+/** Legacy prose titles — still accepted so open PRs keep working. */
+const CARD_TITLE_LEGACY =
   /^(Add|Update) card:\s*([a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*)$/;
 
-/** Conventional Commits 1.0 — used only for non-card (feature/docs/CI) PRs. */
+/** Conventional Commits for non-card work (`card` is reserved — use card(add|update):). */
 const CONVENTIONAL_TYPES =
   "feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert";
 const CONVENTIONAL_TITLE = new RegExp(
@@ -88,8 +92,42 @@ const CONVENTIONAL_TITLE = new RegExp(
 );
 
 const TITLE_HELP =
-  "Card PRs use `Add card: us-my-card` / `Update card: us-my-card`. " +
-  "Everything else uses Conventional Commits, e.g. `feat: …`, `fix(api): …`, `docs: …`, `ci: …`.";
+  "One Conventional Commits system for every PR: " +
+  "cards use `card(add): us-my-card` / `card(update): us-my-card`; " +
+  "everything else uses `feat:` / `fix:` / `docs:` / `ci:` / … " +
+  "(optional scope, e.g. `feat(pr-checks): …`).";
+
+export function formatCardTitle(
+  kind: "add" | "update",
+  cardId: string,
+): string {
+  return `card(${kind}): ${cardId}`;
+}
+
+export function parseCardTitle(title: string): {
+  kind: "add-card" | "update-card";
+  cardId: string;
+  legacy: boolean;
+} | null {
+  const t = title.trim();
+  const modern = t.match(CARD_TITLE);
+  if (modern) {
+    return {
+      kind: modern[1].toLowerCase() === "add" ? "add-card" : "update-card",
+      cardId: modern[2].toLowerCase(),
+      legacy: false,
+    };
+  }
+  const legacy = t.match(CARD_TITLE_LEGACY);
+  if (legacy) {
+    return {
+      kind: legacy[1] === "Add" ? "add-card" : "update-card",
+      cardId: legacy[2].toLowerCase(),
+      legacy: true,
+    };
+  }
+  return null;
+}
 const CARD_ID_RE = /^[a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -149,13 +187,25 @@ export function parseTitle(title: string): {
   cardId: string | null;
 } {
   const t = title.trim();
-  const card = t.match(CARD_TITLE);
+  const card = parseCardTitle(t);
   if (card) {
     return {
       ok: true,
-      kind: card[1] === "Add" ? "add-card" : "update-card",
-      message: "Title matches card convention.",
-      cardId: card[2],
+      kind: card.kind,
+      message: card.legacy
+        ? "Title matches legacy card format (prefer `card(add|update): …`)."
+        : "Title matches Conventional Commits card format.",
+      cardId: card.cardId,
+    };
+  }
+  // Reject bare `card:` / wrong scope so people don't invent formats.
+  if (/^card(\b|\()/i.test(t)) {
+    return {
+      ok: false,
+      kind: "invalid",
+      message:
+        "Card titles must be `card(add): us-my-card` or `card(update): us-my-card` (Conventional Commits type `card` + scope).",
+      cardId: null,
     };
   }
   if (CONVENTIONAL_TITLE.test(t)) {
@@ -178,21 +228,16 @@ export function suggestTitle(
   changedFiles: string[],
   body: string,
 ): string | null {
+  const kind: "add" | "update" = checkboxChecked(body, "Update existing card")
+    ? "update"
+    : "add";
   const fromField = field(body, "Card ID");
   if (fromField && !PLACEHOLDER_RE.test(fromField) && CARD_ID_RE.test(fromField)) {
-    const kind = checkboxChecked(body, "Update existing card")
-      ? "Update"
-      : "Add";
-    return `${kind} card: ${fromField}`;
+    return formatCardTitle(kind, fromField);
   }
   for (const f of changedFiles) {
     const m = f.match(/^data\/([a-z]{2})\/([a-z0-9-]+)\.json$/);
-    if (m) {
-      const kind = checkboxChecked(body, "Update existing card")
-        ? "Update"
-        : "Add";
-      return `${kind} card: ${m[1]}-${m[2]}`;
-    }
+    if (m) return formatCardTitle(kind, `${m[1]}-${m[2]}`);
   }
   return null;
 }
@@ -227,8 +272,8 @@ export function findDuplicatePrs(
   for (const pr of openPrs) {
     if (currentPrNumber != null && pr.number === currentPrNumber) continue;
     if (seen.has(pr.number)) continue;
-    const titleMatch = pr.title.trim().match(CARD_TITLE);
-    const titleId = titleMatch?.[2]?.toLowerCase();
+    const parsed = parseCardTitle(pr.title);
+    const titleId = parsed?.cardId;
     const hit =
       (titleId && ids.has(titleId)) ||
       [...ids].some((id) => pr.title.toLowerCase().includes(id));
@@ -444,14 +489,14 @@ export function triagePullRequest(input: TriageInput): TriageResult {
         note({
           code: "already-exists",
           severity: "error",
-          message: `Card \`${pathId}\` **already exists** on the base branch (\`${p}\`). This should be an **Update** PR — change the title to \`Update card: ${pathId}\` and check **Update existing card** instead of opening a second “Add”.`,
+          message: `Card \`${pathId}\` **already exists** on the base branch (\`${p}\`). This should be an **update** PR — change the title to \`${formatCardTitle("update", pathId)}\` and check **Update existing card** instead of opening a second add.`,
         });
       }
       if (isUpdateCard && !isNewCard && !base.exists) {
         note({
           code: "does-not-exist",
           severity: "error",
-          message: `Card \`${pathId}\` is **not** on the base branch yet (\`${p}\` is new). Use title \`Add card: ${pathId}\` and check **New card**.`,
+          message: `Card \`${pathId}\` is **not** on the base branch yet (\`${p}\` is new). Use title \`${formatCardTitle("add", pathId)}\` and check **New card**.`,
         });
       }
 
@@ -623,9 +668,11 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   lines.push("");
   lines.push("<details><summary>Beginner cheat-sheet</summary>");
   lines.push("");
-  lines.push("- **Cards (not Conventional Commits):** `Add card: us-my-card` or `Update card: us-my-card`");
   lines.push(
-    "- **Everything else (Conventional Commits):** `feat: …` / `fix(scope): …` / `docs: …` / `ci: …` / `chore: …` / …",
+    "- **Cards:** `card(add): us-my-card` or `card(update): us-my-card`",
+  );
+  lines.push(
+    "- **Everything else:** `feat: …` / `fix(scope): …` / `docs: …` / `ci: …` / `chore: …` / …",
   );
   lines.push("- One card per PR; id = `{country}-{slug}` matching `data/{country}/{slug}.json`");
   lines.push("- Official Sources required; `last_verified` = the day you checked");

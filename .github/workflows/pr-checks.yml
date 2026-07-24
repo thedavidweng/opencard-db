@@ -131,7 +131,7 @@ jobs:
           ensure "needs-info" "D4C5F9" "Waiting on author for missing PR form fields"
           ensure "pr-form-incomplete" "E4E669" "PR body/title missing required beginner-form fields"
           ensure "missing-sources" "B60205" "Card PR is missing official source URLs"
-          ensure "title-needs-fix" "F9D0C4" "PR title must be Add/Update card: … or Conventional Commits (feat:/fix:/docs:/…)"
+          ensure "title-needs-fix" "F9D0C4" "PR title must be Conventional Commits: card(add|update): … or feat:/fix:/docs:/…"
           ensure "duplicate" "cfd3d7" "Likely duplicates another open card PR"
 
       - name: Collect changed files

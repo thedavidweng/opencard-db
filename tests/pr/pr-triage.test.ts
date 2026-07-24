@@ -45,12 +45,18 @@ const updateBody = goodBody
 
 describe("pr triage", () => {
   it("parses card and Conventional Commits titles", () => {
+    assert.equal(parseTitle("card(add): us-amex-gold").ok, true);
+    assert.equal(parseTitle("card(add): us-amex-gold").kind, "add-card");
+    assert.equal(parseTitle("card(update): ca-amex-cobalt").kind, "update-card");
+    // Legacy prose titles still accepted
     assert.equal(parseTitle("Add card: us-amex-gold").ok, true);
     assert.equal(parseTitle("Update card: ca-amex-cobalt").kind, "update-card");
     assert.equal(parseTitle("docs: fix contributing").ok, true);
     assert.equal(parseTitle("feat(pr-checks): detect duplicates").ok, true);
     assert.equal(parseTitle("feat(pr-checks): detect duplicates").kind, "meta");
     assert.equal(parseTitle("fix!: breaking payment path").ok, true);
+    assert.equal(parseTitle("card: us-amex-gold").ok, false);
+    assert.equal(parseTitle("card(new): us-amex-gold").ok, false);
     assert.equal(parseTitle("Add a new sapphire card").ok, false);
     assert.equal(parseTitle("feat add cards without colon").ok, false);
   });
@@ -78,13 +84,13 @@ describe("pr triage", () => {
   it("suggests title from body card id", () => {
     assert.equal(
       suggestTitle(["data/us/chase-sapphire-preferred.json"], goodBody),
-      "Add card: us-chase-sapphire-preferred",
+      "card(add): us-chase-sapphire-preferred",
     );
   });
 
   it("passes a complete new-card PR when the file is new on base", () => {
     const r = triagePullRequest({
-      title: "Add card: us-chase-sapphire-preferred",
+      title: "card(add): us-chase-sapphire-preferred",
       body: goodBody,
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
       baseCards: {
@@ -126,7 +132,7 @@ describe("pr triage", () => {
 
   it("keeps classification labels when form is incomplete", () => {
     const r = triagePullRequest({
-      title: "Add card: us-demo-card",
+      title: "card(add): us-demo-card",
       body: "",
       changedFiles: ["data/us/demo-card.json"],
     });
@@ -140,7 +146,7 @@ describe("pr triage", () => {
     process.env.PR_AUTHOR = "contributor123";
     try {
       const r = triagePullRequest({
-        title: "Add card: us-demo-card",
+        title: "card(add): us-demo-card",
         body: "",
         changedFiles: ["data/us/demo-card.json"],
       });
@@ -195,7 +201,7 @@ describe("pr triage", () => {
       )
       .replace("- [ ] **D. No image yet**", "- [x] **D. No image yet**");
     const r = triagePullRequest({
-      title: "Add card: us-chase-sapphire-preferred",
+      title: "card(add): us-chase-sapphire-preferred",
       body,
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
       baseCards: {
@@ -211,7 +217,7 @@ describe("pr triage", () => {
 
   it("flags empty Product/Terms lines without swallowing the next bullet", () => {
     const r = triagePullRequest({
-      title: "Add card: us-demo-card",
+      title: "card(add): us-demo-card",
       body: `
 - [x] **New card**
 - **Card ID:** \`us-demo-card\`
@@ -234,7 +240,7 @@ describe("pr triage", () => {
 
   it("flags missing image choice on new-card PRs", () => {
     const r = triagePullRequest({
-      title: "Add card: us-demo-card",
+      title: "card(add): us-demo-card",
       body: `
 - [x] **New card**
 - **Card ID:** \`us-demo-card\`
@@ -261,14 +267,14 @@ describe("pr triage", () => {
 
   it("detects duplicate open Add card PRs and links them", () => {
     const r = triagePullRequest({
-      title: "Add card: us-demo-card",
+      title: "card(add): us-demo-card",
       body: goodBody.replace(/us-chase-sapphire-preferred/g, "us-demo-card"),
       changedFiles: ["data/us/demo-card.json"],
       currentPrNumber: 99,
       openCardPrs: [
         {
           number: 42,
-          title: "Add card: us-demo-card",
+          title: "card(add): us-demo-card",
           url: "https://github.com/thedavidweng/opencard-db/pull/42",
           author: "other-dev",
         },
@@ -294,12 +300,12 @@ describe("pr triage", () => {
       [
         {
           number: 99,
-          title: "Add card: us-demo-card",
+          title: "card(add): us-demo-card",
           url: "https://example/99",
         },
         {
           number: 7,
-          title: "Add card: us-demo-card",
+          title: "card(add): us-demo-card",
           url: "https://example/7",
         },
       ],
@@ -313,7 +319,7 @@ describe("pr triage", () => {
 
   it("rejects Add when the card already exists on the base branch", () => {
     const r = triagePullRequest({
-      title: "Add card: us-chase-sapphire-preferred",
+      title: "card(add): us-chase-sapphire-preferred",
       body: goodBody,
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
       baseCards: {
@@ -325,12 +331,12 @@ describe("pr triage", () => {
       },
     });
     assert.ok(r.issues.some((i) => i.code === "already-exists"));
-    assert.match(r.commentMarkdown, /Update card:/);
+    assert.match(r.commentMarkdown, /card\(update\):/);
   });
 
   it("rejects Update when last_verified is not newer than base", () => {
     const same = triagePullRequest({
-      title: "Update card: us-chase-sapphire-preferred",
+      title: "card(update): us-chase-sapphire-preferred",
       body: updateBody.replace("2026-07-28", "2026-07-10"),
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
       baseCards: {
@@ -344,7 +350,7 @@ describe("pr triage", () => {
     assert.ok(same.issues.some((i) => i.code === "last-verified-unchanged"));
 
     const older = triagePullRequest({
-      title: "Update card: us-chase-sapphire-preferred",
+      title: "card(update): us-chase-sapphire-preferred",
       body: updateBody.replace("2026-07-28", "2026-07-01"),
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
       baseCards: {
@@ -361,7 +367,7 @@ describe("pr triage", () => {
 
   it("accepts Update when last_verified is newer than base", () => {
     const r = triagePullRequest({
-      title: "Update card: us-chase-sapphire-preferred",
+      title: "card(update): us-chase-sapphire-preferred",
       body: updateBody,
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
       baseCards: {
@@ -378,7 +384,7 @@ describe("pr triage", () => {
 
   it("rejects Update when the card does not exist on base", () => {
     const r = triagePullRequest({
-      title: "Update card: us-brand-new-card",
+      title: "card(update): us-brand-new-card",
       body: updateBody.replace(/us-chase-sapphire-preferred/g, "us-brand-new-card"),
       changedFiles: ["data/us/brand-new-card.json"],
       baseCards: {
