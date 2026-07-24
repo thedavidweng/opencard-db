@@ -64,11 +64,11 @@
   "signup_bonus": {
     "amount": 75000,
     "unit": "miles",
-    "spend_required": null,
+    "spend_required": 4000,
     "spend_currency": "USD",
-    "months": null,
-    "description": "Welcome bonus marketed as 75,000 miles (spend threshold/months vary by current Capital One offer — confirm on product page).",
-    "as_of": "2026-07-23"
+    "months": 3,
+    "description": "Welcome bonus marketed as 75,000 miles after spending $4,000 in the first 3 months on common Capital One offers (spend tokens are dynamic on the product page); confirm on Apply Now. Cross-checked vs credit-card-db-api and credit-card-bonuses-api as clues only.",
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -138,9 +138,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.capitalone.com/credit-cards/venture-x/"
   ],
-  "notes": "Distinct from Capital One Venture Rewards. Lounge guest/AU rules changed in 2026 — verify before citing access for guests."
+  "notes": "Distinct from Capital One Venture Rewards. Lounge guest/AU rules changed in 2026. Network Visa Infinite confirmed on Capital One page. Spend threshold filled after third-party corroboration + Capital One offer copy pointing at ESB spend tokens; still verify on live apply flow."
 }
