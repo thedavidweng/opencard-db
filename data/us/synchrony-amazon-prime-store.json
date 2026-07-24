@@ -24,11 +24,11 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Synchrony for current APR; terms vary by applicant/offer."
+    "notes": "APR not visible on fetched pages. Amazon product page returned garbled content; Synchrony servicing page did not display rates."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not mentioned on fetched pages."
   },
   "credit_required": {
     "score_band": null,
@@ -36,14 +36,14 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency_label": "Amazon rewards points (% back benefit)",
     "structure": "single",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "description": "% Back Benefit: purchases result in rewards points equal to the applicable % of such purchases. Specific rate not visible on fetched pages."
     },
     "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "redemption_notes": "Rewards points earned via % back benefit. Redemption details not visible on fetched pages."
   },
   "signup_bonus": null,
   "benefits": [],
@@ -64,7 +64,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.amazon.com/Synchrony-Bank-Amazon-com-Store-Card/dp/B008A0GNA8"
+    "https://www.amazon.com/Synchrony-Bank-Amazon-com-Store-Card/dp/B008A0GNA8",
+    "https://www.mysynchrony.com/amazon"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Amazon product page (B008A0GNA8) returned garbled/empty content on fetch. Synchrony servicing page (mysynchrony.com/amazon) confirmed card is 'Amazon Store Card' issued by Synchrony Bank with a '% back benefit' rewards structure but did not display APR, annual fee, or specific earn rates. Most numeric fields preserved as null/unverified. network=mastercard and network_tier=world not re-verified (store card may not be Mastercard network)."
 }
