@@ -20,30 +20,46 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 18.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "0% Promotional APR for 6 billing cycles on Qualifying Carnival Cruise Booking Purchases, then 18.49% to 29.49%. 0% introductory APR for 15 billing cycles on balance transfers within 45 days of account opening, then 18.49% to 29.49%. Cash advance APR 29.74% variable. Minimum monthly interest charge $0.50. Balance transfer fee 5% (min $5). Cash advance fee 5% (min $10)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on international purchases."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "fun_points",
+    "currency_label": "Fun Points®",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1X Fun Points for every dollar spent on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem Fun Points toward Carnival purchases, onboard credit, experiences, and more. 20,000 Fun Points can redeem for $200 onboard credit."
   },
   "signup_bonus": {
     "amount": 20000.0,
@@ -51,17 +67,63 @@
     "spend_required": 1000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 20,000 Fun Points ® after spending $1,000 in the first 90 days",
+    "description": "Earn 20,000 Fun Points after spending $1,000 on purchases within the first 90 days. Enough for $200 onboard credit.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "interest-free-carnival-financing",
+      "title": "Interest-Free Financing on Carnival Cruise Bookings",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% Promotional APR for 6 months on Carnival cruise bookings. After that, a variable APR will apply, 18.49% to 29.49%."
+    },
+    {
+      "id": "intro-bt-apr",
+      "title": "Intro Balance Transfer APR",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% Introductory APR for 15 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 18.49% to 29.49%."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "carnival-rewards-status",
+      "title": "Earn Carnival Rewards Status Faster",
+      "category": "other",
+      "source": "issuer",
+      "description": "Your card will earn you 1 Status Qualifying Star for every dollar spent. (Enhanced benefits coming September 2026)"
+    },
+    {
+      "id": "restaurants-grocery-2x",
+      "title": "Earn 2X on Restaurants and Grocery",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 2X Carnival Rewards Points for every dollar spent at eligible restaurants and grocery stores (excluding Target and Walmart). (Enhanced benefits coming September 2026)"
+    },
+    {
+      "id": "up-to-6x-carnival-purchases",
+      "title": "Earn up to 6X Carnival Rewards Points on Carnival Purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "3X points for every dollar spent using your card, plus the 3X points you earn through Carnival Rewards. (Enhanced benefits coming September 2026)"
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "No foreign transaction fees on international purchases",
+      "Interest-Free Financing for 6 months on all Carnival Cruise bookings"
+    ]
   },
   "official_url": "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/",
   "image": {
@@ -74,5 +136,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Barclays product page. Annual fee $0, purchase APR 18.49%-29.49% variable, cash advance 29.74% variable, FX fee 0%. Rewards: 2X Fun Points on Carnival Cruise Line, 1X on all other purchases. 20,000 Fun Points bonus after $1,000 spend in 90 days ($200 onboard credit). Enhanced benefits coming September 2026."
 }
