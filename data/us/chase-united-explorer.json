@@ -8,60 +8,267 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "signature",
   "type": "credit",
   "status": "active",
   "annual_fee": {
     "amount": 150.0,
     "currency": "USD",
     "first_year": 0.0,
-    "waiver_conditions": "$0 intro annual fee for the first year, then regular annual fee"
+    "waiver_conditions": "$0 intro annual fee for the first year, then $150"
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.74,
+      "max": 29.99,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "notes": "19.74% (Min. of (6.75+12.99) and 29.99%) to 28.24% (Min. of (6.75+21.49) and 29.99%) variable APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fees. Purchases made with your Explorer Card outside the U.S. will not be subject to foreign transaction fees."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "mileageplus_miles",
+    "currency_label": "United MileagePlus miles",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1,
+      "description": "1x mile on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Eligible United flights",
+        "points_per_dollar": 9,
+        "cap": null
+      },
+      {
+        "label": "All other eligible United purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Hotel stays booked with the hotel",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Dining including eligible delivery services",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles earned automatically transferred to United MileagePlus after end of each billing cycle. Miles can be used for flights on United and other airline partners, hotel stays, car rentals, merchandise, eGift cards and more. No blackout dates on United-operated flights."
   },
   "signup_bonus": {
-    "amount": 50000.0,
+    "amount": 60000.0,
     "unit": "miles",
     "spend_required": 3000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months",
+    "description": "Earn 50,000 bonus miles after you spend $3,000 on purchases in the first 3 months your account is open. Plus, earn 10,000 bonus miles after you add an authorized user to your account in the first 3 months your account is open. Total up to 60,000 bonus miles.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "free-checked-bag",
+      "title": "Free First Checked Bag",
+      "category": "other",
+      "source": "co-brand",
+      "description": "The primary Cardmember and one companion can each check a first standard bag for free - save up to $200 per roundtrip."
+    },
+    {
+      "id": "united-club-passes",
+      "title": "2 United Club One-Time Passes Per Year",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Two United Club one-time passes per year - Over a $100 value. Relax in comfort while waiting for your flight with complimentary beverages, snacks, high-speed Wi-Fi and more."
+    },
+    {
+      "id": "priority-boarding",
+      "title": "Priority Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "The primary Cardmember and companions on the same reservation will be invited to board United-operated flights prior to general boarding."
+    },
+    {
+      "id": "inflight-25-back",
+      "title": "25% Back on United Inflight Purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "25% back as a statement credit on purchases of food, beverages and Wi-Fi on board United-operated flights and on Club premium drinks when you pay with your Explorer Card."
+    },
+    {
+      "id": "global-entry-credit",
+      "title": "Global Entry / TSA PreCheck / NEXUS Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $120 as a statement credit for Global Entry, TSA Precheck or NEXUS every 4 years as reimbursement for the application fee when charged to your card."
+    },
+    {
+      "id": "united-travel-credit",
+      "title": "$100 United Travel Credit",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn $100 in United TravelBank cash after you spend $10,000 with your United Explorer Card within a calendar year."
+    },
+    {
+      "id": "united-hotels-credit",
+      "title": "Up to $100 in United Hotels Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive $50 back as a statement credit on both your 1st and 2nd prepaid hotel stays purchased directly through United Hotels, up to $100 each anniversary year."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "Up to $60 in Rideshare Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enroll to receive up to $5 back as a statement credit each month on rideshare purchases, up to $60 each calendar year. Yearly opt-in is required."
+    },
+    {
+      "id": "avis-budget-credit",
+      "title": "Up to $50 in Avis/Budget Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive $25 in United TravelBank cash, up to $50 each anniversary year, for 1st and 2nd Avis or Budget car rental booked directly through cars.united.com."
+    },
+    {
+      "id": "instacart-credit",
+      "title": "Up to $120 in Instacart Credits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a $10 Instacart credit monthly, up to $120 total each calendar year, for purchases made directly through Instacart. Benefits end 12/31/27."
+    },
+    {
+      "id": "jsx-credit",
+      "title": "Up to $100 in JSX Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Get up to $100 back as a statement credit each anniversary year when you book flights directly with JSX using your Explorer Card."
+    },
+    {
+      "id": "award-flight-discount",
+      "title": "10,000-Mile Award Flight Discount",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn a 10,000-mile award flight discount after spending $20,000 each calendar year to use toward an eligible award flight."
+    },
+    {
+      "id": "award-pricing",
+      "title": "Save 10%+ When Booking Flights with Miles",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 10% or more when booking flights with miles. Premier members save even more."
+    },
+    {
+      "id": "pqf-earning",
+      "title": "Premier Qualifying Points Earning",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 1 Premier Qualifying Point (PQP) for every $20 in net purchases up to a maximum of 1,000 PQP within the calendar year."
+    },
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "insurance",
+      "source": "network",
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage is primary and provides reimbursement up to $60,000 for theft and collision damage for most rental vehicles with an MSRP of $125,000 or less."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses you up to $100 a day for up to 3 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Provides reimbursement up to $3,000 per covered traveler for the cost to repair or replace checked or carry-on baggage that is lost, damaged or stolen during a covered trip."
+    },
+    {
+      "id": "trip-cancellation-insurance",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "You can be reimbursed up to $1,500 per covered traveler and $6,000 per trip for your pre-paid, non-refundable passenger fares, if your trip is canceled or cut short by sickness, severe weather or other covered situations."
+    },
+    {
+      "id": "trip-delay-reimbursement",
+      "title": "Trip Delay Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If your common carrier travel is delayed more than 12 hours or requires an overnight stay, you are covered for unreimbursed expenses, such as meals and lodging, up to $500 per covered traveler."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $10,000 per item."
+    },
+    {
+      "id": "visa-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "Get complimentary Visa Signature Concierge Service 24 hours a day. Find tickets to the top sports and entertainment events, make dinner reservations and even get help sending the perfect gift."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Purchases made with your Explorer Card outside the U.S. will not be subject to foreign transaction fees."
+    },
+    {
+      "id": "instacart-plus",
+      "title": "3-Month Complimentary Instacart+ Membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get complimentary Instacart+ Membership for three months, including unlimited deliveries with $0 delivery fees on eligible orders. After that, automatically enrolled in Instacart+ at 25% off the annual rate. Benefits end 12/31/27."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
-    "free_checked_bags": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "2 United Club one-time passes per year"
+    },
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": "Free first checked bag for primary Cardmember and one companion",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Priority boarding on United-operated flights",
+      "25% back on United inflight food/beverage/Wi-Fi and Club premium drinks",
+      "Save 10%+ when booking award flights with miles",
+      "Visa Signature Concierge Service"
+    ]
   },
   "official_url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
   "image": {
@@ -74,5 +281,5 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "United Explorer Card from Chase. Corrected network from mastercard to visa and tier from world to signature based on page evidence (Visa Signature Concierge Service mentioned as benefit). $0 intro annual fee first year, then $150. No foreign transaction fees. Signup bonus updated to 60,000 total (50,000 + 10,000 AU)."
 }
