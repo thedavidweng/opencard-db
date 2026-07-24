@@ -1,9 +1,9 @@
 {
   "id": "us-first-cardless-qatar-infinite",
   "schema_version": "1.0.0",
-  "name": "Qatar Airways Privilege Club Credit Cards",
+  "name": "Qatar Airways Privilege Club Credit Card (Infinite)",
   "localized_names": {
-    "en": "Qatar Airways Privilege Club Credit Cards"
+    "en": "Qatar Airways Privilege Club Credit Card (Infinite)"
   },
   "country": "us",
   "issuer": "First Bankcard",
@@ -24,36 +24,181 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See First Bankcard for current APR; terms vary by applicant/offer."
+    "notes": "APR not displayed on the compare page. See Rates & Fees PDF at https://legal.cardless.com/schumer/premium-499-qatar/rates_and_fees.pdf for full pricing details (PDF was binary and not text-extractable)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fee."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "avios",
+    "currency_label": "Avios",
+    "structure": "multi",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "description": "Avios when you use your Privilege Club Card everywhere else."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "You'll get 2 Qpoints for every 1,500 Avios you earn using your card. Miles do not expire for as long as you use your card."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "Avios",
+    "spend_required": 5000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn up to 50,000 Avios: 25,000 Avios after your first transaction + 25,000 Avios after spending a total of $5,000 in the first 90 days. Plus 150 Qpoints after spending a total of $5,000 in the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "miles-no-expiry",
+      "title": "Miles do not expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "Miles do not expire for as long as you use your card."
+    },
+    {
+      "id": "no-foreign-transaction-fee",
+      "title": "No foreign transaction fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fee."
+    },
+    {
+      "id": "visa-zero-liability",
+      "title": "Visa Zero Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "Visa Zero Liability protection."
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel Emergency Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Travel Emergency Assistance."
+    },
+    {
+      "id": "roadside-dispatch",
+      "title": "Roadside Dispatch®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Roadside Dispatch® service."
+    },
+    {
+      "id": "extended-warranty-protection",
+      "title": "Extended Warranty Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Extended Warranty Protection."
+    },
+    {
+      "id": "purchase-security",
+      "title": "Purchase Security",
+      "category": "other",
+      "source": "issuer",
+      "description": "Purchase Security."
+    },
+    {
+      "id": "return-protection",
+      "title": "Return Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Return Protection."
+    },
+    {
+      "id": "visa-infinite-concierge",
+      "title": "Visa Infinite Concierge",
+      "category": "other",
+      "source": "issuer",
+      "description": "Visa Infinite Concierge service."
+    },
+    {
+      "id": "visa-infinite-luxury-hotel-collection",
+      "title": "Visa Infinite Luxury Hotel Collection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Visa Infinite Luxury Hotel Collection."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto rental collision damage waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Auto rental collision damage waiver."
+    },
+    {
+      "id": "car-rental-discounts",
+      "title": "Car rental discounts",
+      "category": "other",
+      "source": "issuer",
+      "description": "Car rental discounts."
+    },
+    {
+      "id": "trip-cancellation-interruption",
+      "title": "Trip Cancellation or Interruption",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Trip Cancellation or Interruption coverage."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Lost Luggage Reimbursement."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Travel Accident Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Travel Accident Insurance."
+    },
+    {
+      "id": "privilege-club-gold-first-year",
+      "title": "First year Privilege Club Gold status (oneworld Sapphire)",
+      "category": "other",
+      "source": "issuer",
+      "description": "In your first year, experience Privilege Club Gold with access to benefits: 75% tier bonus on eligible flights, Priority stand-by, Priority check-in & boarding, Preferred seats, 20kg extra baggage allowance, Lounge access, 40 Qcredits to redeem for upgrades/excess baggage and more, Al Maha 'meet and assist' service, Discount on online redemptions. oneworld tier: Sapphire."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Lounge access (via first year Privilege Club Gold status)"
+    },
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": null,
-    "hotel_status": null,
-    "other": []
+    "free_checked_bags": "20kg extra baggage allowance (via first year Privilege Club Gold status)",
+    "hotel_status": "Visa Infinite Luxury Hotel Collection",
+    "other": [
+      "No foreign transaction fee",
+      "Visa Infinite Concierge",
+      "Auto rental collision damage waiver",
+      "Car rental discounts",
+      "Trip Cancellation or Interruption",
+      "Lost Luggage Reimbursement",
+      "Travel Accident Insurance",
+      "First year Privilege Club Gold (oneworld Sapphire): 75% tier bonus, priority stand-by/check-in/boarding, preferred seats, 40 Qcredits, Al Maha meet & assist, discount on online redemptions"
+    ]
   },
   "official_url": "https://qatarairways.cardless.com/compare",
   "image": {
@@ -64,7 +209,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://qatarairways.cardless.com/compare"
+    "https://qatarairways.cardless.com/compare",
+    "https://legal.cardless.com/schumer/premium-499-qatar/rates_and_fees.pdf"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official compare page on 2026-07-24. The page lists two cards (Signature at $99 and Infinite at $499); this entry is for the Infinite card. APR details not on the compare page — the Rates & Fees PDF (legal.cardless.com/schumer/premium-499-qatar/rates_and_fees.pdf) was fetched but returned binary PDF content not text-extractable. 'Cardless makes the Qatar Airways Privilege Club Credit Cards' — Cardless is the platform, backed by Visa. Name updated to specify '(Infinite)' variant."
 }
