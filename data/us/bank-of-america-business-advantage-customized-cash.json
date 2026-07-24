@@ -8,8 +8,8 @@
   "country": "us",
   "issuer": "Bank of America",
   "issuer_id": "bank-of-america",
-  "network": "visa",
-  "network_tier": "signature",
+  "network": "mastercard",
+  "network_tier": "none",
   "type": "credit",
   "status": "active",
   "annual_fee": {
@@ -24,26 +24,45 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Bank of America for current APR; terms vary by applicant/offer."
+    "notes": "APR not available from page text; page uses dynamic placeholders (ProdStanMinRate% to ProdStanMaxRate% Variable APR). See Bank of America for current APR."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "International transaction fee not stated on the product page."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Choice category (gas stations & EV charging stations, office supply stores, travel, TV/telecom & wireless, computer services, or business consulting services)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 50000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Dining purchases",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 50000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "3% and 2% cash back on the first $50,000 in combined choice category/dining purchases each calendar year, 1% thereafter. Redeem cash rewards as a deposit into eligible Bank of America checking or savings account, as a card statement credit, or as a check. Preferred Rewards for Business members earn up to 75% more rewards."
   },
   "signup_bonus": {
     "amount": 500.0,
@@ -51,17 +70,56 @@
     "spend_required": 5000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "$500 cash rewards bonus after you make at least $5,000 in purchases within 90 days",
+    "description": "Get a $500 cash rewards bonus after you make at least $5,000 in purchases within 90 days of your account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Enjoy no annual fee while earning cash back."
+    },
+    {
+      "id": "preferred-rewards-for-business",
+      "title": "Preferred Rewards for Business Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Earn up to 75% more cash back with Preferred Rewards for Business. Platinum Honors members earn up to 5.25% in choice category, 3.5% on dining, and 1.75% on all other purchases on the first $50,000 in combined purchases each calendar year."
+    },
+    {
+      "id": "travel-and-emergency-services",
+      "title": "Travel and Emergency Services",
+      "category": "insurance",
+      "source": "network",
+      "description": "Travel services include auto rental coverage and $1 million in travel accident insurance, auto rental insurance, emergency ticket replacement, lost luggage assistance and legal and medical referrals when away from home."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Additional Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Maintain a fleet of cards for your employees at no additional cost with ability to monitor all transactions."
+    },
+    {
+      "id": "free-business-credit-scores",
+      "title": "Free Access to Business Credit Scores",
+      "category": "other",
+      "source": "issuer",
+      "description": "View your Dun & Bradstreet business credit scores for free within Business Advantage 360."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Employee cards at no additional cost",
+      "Preferred Rewards for Business bonus up to 75%"
+    ]
   },
   "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/cash-rewards-business-credit-card",
   "image": {
@@ -75,5 +133,5 @@
     "https://www.bankofamerica.com/smallbusiness/credit-cards/products/cash-rewards-business-credit-card",
     "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Business Advantage Customized Cash Rewards Mastercard. $0 annual fee. 3% cash back in choice category, 2% on dining, 1% on all other (first $50K combined per calendar year, 1% thereafter). $500 cash rewards bonus after $5,000 in 90 days. network corrected from 'visa' to 'mastercard' and network_tier from 'signature' to 'none' — page clearly says 'Mastercard®' without 'World' or 'Visa Signature'. APR not extractable (dynamic placeholders). FX fee not stated on page."
 }
