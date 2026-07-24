@@ -1,9 +1,9 @@
 {
   "id": "us-chase-amazon-prime",
   "schema_version": "1.0.0",
-  "name": "Amazon.com: Prime Visa",
+  "name": "Prime Visa",
   "localized_names": {
-    "en": "Amazon.com: Prime Visa"
+    "en": "Prime Visa"
   },
   "country": "us",
   "issuer": "Chase",
@@ -20,41 +20,128 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 18.74,
+      "max": 27.49,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 18.74% to 27.49% variable based on creditworthiness. Cash Advance APR 28.49% variable. Penalty APR up to 29.99%. Variable APRs based on 6.75% Prime Rate. Maximum APR 29.99%."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. You will pay no foreign transaction fees when you use your card for purchases made outside the United States."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "cash_back",
+    "currency_label": "% back rewards (tracked as points; each $1 in % back rewards = 100 points)",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.0,
+      "description": "1% back on all other purchases anywhere Visa is accepted."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points as soon as the next day with daily rewards at Amazon.com. No minimum rewards balance to redeem. Can also redeem for cash back, gift cards, and travel at Chase.com. Every 100 points = $1.00 when redeemed at Amazon.com or Chase.com."
   },
   "signup_bonus": {
-    "amount": 300.0,
+    "amount": 150.0,
     "unit": "USD",
-    "spend_required": 600.0,
+    "spend_required": null,
     "spend_currency": "USD",
-    "months": 3,
-    "description": "$300 cash-back bonus for spending $600 over the first 3 months",
+    "months": null,
+    "description": "$150 Amazon Gift Card instantly loaded into your Amazon account's Gift Card Balance on approval of your credit card application. Prime members only.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "prime-card-bonus",
+      "title": "Prime Card Bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Eligible Prime cardmembers earn 10% back or more on a rotating selection of items and categories on Amazon.com. Limited-time offers."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item."
+    },
+    {
+      "id": "baggage-delay",
+      "title": "Baggage Delay Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimburses you up to $100 a day for up to 3 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "zero-liability",
+      "title": "Zero Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Zero Liability means you won't be held responsible for unauthorized charges made with your card or account information."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you have a roadside emergency, call the service provider to dispatch the help you need. Roadside service fees will be billed to your card at time of dispatch."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Travel Accident Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "When you pay for your air, bus, train or cruise transportation with your card, you are eligible to receive up to $500,000 in accidental death or dismemberment coverage."
+    },
+    {
+      "id": "lost-luggage",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Provides reimbursement up to $3,000 per covered traveler for the cost to repair or replace checked or carry-on baggage that is lost, damaged or stolen during a covered trip."
+    },
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "other",
+      "source": "issuer",
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage provides reimbursement for theft and collision damage for most rental vehicles."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "You will pay no foreign transaction fees when you use your card for purchases made outside the United States."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -72,7 +159,9 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.amazon.com/dp/BT00LN946S"
+    "https://www.amazon.com/dp/BT00LN946S",
+    "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC59329.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Amazon product page (amazon.com/dp/BT00LN946S) returned HTTP 500 on fetch; data verified from official Chase product page at creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards and Chase pricing & terms page. Annual fee $0, purchase APR 18.74%-27.49% variable, cash advance 28.49%, penalty up to 29.99%, no foreign transaction fees. Signup bonus updated from $300/$600/3mo to $150 Amazon Gift Card on approval (no spend required). 5% back at Amazon/Whole Foods/Chase Travel (Prime members), 2% at gas/restaurants/transit, 1% on all other. Name updated to 'Prime Visa'."
 }
