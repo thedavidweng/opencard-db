@@ -67,5 +67,5 @@
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "FETCH_FAILED: product_url redirected to generic business cards landing page. Amazon Business Card not listed among the 11 business cards shown. No card-specific data could be extracted. Copied input unchanged."
 }
