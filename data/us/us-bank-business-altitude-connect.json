@@ -16,7 +16,7 @@
     "amount": 0.0,
     "currency": "USD",
     "first_year": 0.0,
-    "waiver_conditions": null
+    "waiver_conditions": "$0 introductory annual fee for the first year, then a fee per year thereafter (specific ongoing fee shown as placeholder on page, not a numeric value)."
   },
   "apr": {
     "purchase": {
@@ -24,11 +24,12 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See U.S. Bank for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "APR not stated on product page. Preserved as null — not re-verified."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees when making purchases outside the United States."
   },
   "credit_required": {
     "score_band": null,
@@ -36,24 +37,136 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "Altitude points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "1 point for all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points toward merchandise, statement credit, deposit to qualifying U.S. Bank account, gift cards and travel, or redeem instantly with Real-Time Rewards. Points do not expire as long as account remains active. Can transfer points between business and personal Altitude cards."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 75000.0,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Business travel is more rewarding with 75,000 bonus points. Spend requirement not stated on product page.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "rideshare-statement-credit",
+      "title": "$25 statement credit for taxi or rideshare",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a $25 statement credit after three consecutive monthly taxi or rideshare transactions paid for with your card."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass™ Digital airport lounge access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Priority Pass™ Digital annual membership with access to more than 1,800 VIP lounges worldwide, plus four complimentary visits per membership year."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy no foreign transaction fees when making purchases outside the United States."
+    },
+    {
+      "id": "free-employee-cards",
+      "title": "Free employee cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Plus, free employee cards."
+    },
+    {
+      "id": "spend-management",
+      "title": "U.S. Bank Spend Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Take control of your card spend with U.S. Bank Spend Management – a game-changing platform for monitoring and managing business expenses."
+    },
+    {
+      "id": "transfer-points",
+      "title": "Transfer points with personal card",
+      "category": "other",
+      "source": "issuer",
+      "description": "Transfer points between your business and personal Altitude cards so you can redeem points sooner. Works with personal U.S. Bank Altitude® Go or Altitude® Connect card."
+    },
+    {
+      "id": "extendpay",
+      "title": "Pay over time with U.S. Bank ExtendPay® Plan",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening. Not all accounts are eligible for ExtendPay Plans."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto rental collision damage waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Auto rental collision damage waiver included."
+    },
+    {
+      "id": "lost-luggage-insurance",
+      "title": "Lost luggage insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Lost luggage insurance included."
+    },
+    {
+      "id": "travel-assistance",
+      "title": "Travel assistance services",
+      "category": "other",
+      "source": "issuer",
+      "description": "Travel assistance services included."
+    },
+    {
+      "id": "real-time-rewards",
+      "title": "Real-Time Rewards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Business Altitude Connect Card is eligible for Real Time Rewards, enabling you to instantly turn your business purchases into rewards from your mobile device."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Priority Pass™ Digital annual membership with 4 complimentary visits per year"
+    },
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "No foreign transaction fees",
+      "$25 statement credit after 3 consecutive monthly taxi/rideshare transactions",
+      "Auto rental collision damage waiver",
+      "Lost luggage insurance",
+      "Travel assistance services"
+    ]
   },
   "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-world-elite-mastercard.html",
   "image": {
@@ -67,5 +180,5 @@
     "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-world-elite-mastercard.html",
     "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-credit-card.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official U.S. Bank product page. Page title says 'U.S. Bank Business Altitude® Connect Visa Signature® Card' — confirms visa/signature (URL mentions 'world-elite-mastercard' but page content clearly states Visa Signature). Annual fee: $0 intro first year, ongoing fee shown as placeholder. Signup bonus spend requirement not stated on page. APR not stated on page."
 }
