@@ -20,15 +20,16 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 16.74,
+      "max": 24.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "0% intro APR for 12 months from account opening on purchases. After that, 16.74% (min of (6.75+9.99) and 29.99%) to 24.74% (min of (6.75+17.99) and 29.99%) variable APR."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not explicitly stated on product page."
   },
   "credit_required": {
     "score_band": null,
@@ -36,14 +37,20 @@
   },
   "rewards": {
     "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
-    "structure": "multi",
+    "currency_label": "Ultimate Rewards points / cash back (100 points = $1 cash back)",
+    "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on every purchase. Cash Back rewards tracked as points; each $1 in Cash Back = 100 points."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem for cash back, gift cards, travel and more through Chase Ultimate Rewards. No minimums to redeem."
   },
   "signup_bonus": {
     "amount": 1000.0,
@@ -51,10 +58,74 @@
     "spend_required": 8000.0,
     "spend_currency": "USD",
     "months": 4,
-    "description": "$1,000 cash back after you spend $8,000 on purchases in the first 4 months",
+    "description": "Earn $1,000 cash back after you spend $8,000 on purchases in the first 4 months after account opening. (Main page shows $750 with $1,000 struck through; offer details confirm $1,000.)",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "intro-apr",
+      "title": "0% Intro APR for 12 months",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% intro APR for 12 months from account opening on purchases."
+    },
+    {
+      "id": "lyft-cashback",
+      "title": "5% Cash Back on Lyft rides",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 5% total cash back on Lyft rides through September 30, 2027."
+    },
+    {
+      "id": "instacart-membership",
+      "title": "Complimentary 3-month Instacart+ membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary 3-month Instacart+ membership when activated between 5/1/2025 and 12/31/2027."
+    },
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "other",
+      "source": "issuer",
+      "description": "Coverage is primary when renting for business purposes and provides reimbursement up to $60,000 for theft and collision damage for most rental vehicles with an MSRP of $125,000 or less."
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel and Emergency Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Provides legal and medical referrals and access to other travel and emergency assistance services."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Roadside service fees billed to card at time of dispatch."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers eligible new purchases for 120 days against damage or theft up to $10,000 per item."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Extends manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from date of purchase."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee cards at no additional cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Employee cards let you set individual spending limits and help you earn rewards even faster."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -74,5 +145,5 @@
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/ink/unlimited"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Network (mastercard) and network_tier (world) not explicitly stated on product page; preserved from existing JSON. FX fee not stated on page; preserved as null. Signup bonus: main page shows '$750' with '$1,000' struck through; offer details confirm '$1,000 Cash Back'."
 }
