@@ -13,7 +13,7 @@ Easier review, clearer Sources, fewer merge conflicts.
 3. Valid against root `schema.json` (`npm run validate`)
 4. At least one official **Source** URL (product page and/or terms)
 5. `last_verified` set to the date you checked official pages
-6. Prefer official image URLs; see `images/README.md` for local mirrors
+6. Images are optional; prefer official URLs when available. See `images/README.md` (API falls back to a generic card face when missing)
 
 ## Domain rules (see CONTEXT.md)
 
