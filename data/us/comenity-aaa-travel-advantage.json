@@ -1,52 +1,83 @@
 {
   "id": "us-comenity-aaa-travel-advantage",
   "schema_version": "1.0.0",
-  "name": "AAA Credit Card",
+  "name": "AAA Travel Advantage Visa Signature Credit Card",
   "localized_names": {
-    "en": "AAA Credit Card"
+    "en": "AAA Travel Advantage Visa Signature Credit Card"
   },
   "country": "us",
-  "issuer": "Comenity",
+  "issuer": "Comenity Capital Bank",
   "issuer_id": "comenity",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "signature",
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0.0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0.0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.49,
+      "max": 31.49,
       "type": "variable"
     },
-    "notes": "See Comenity for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 32.49,
+      "max": 32.49,
+      "type": "variable"
+    },
+    "notes": "Variable Purchase APR of 17.49% - 31.49% based on your credit worthiness at the time of account opening and the Prime Rate. Variable Cash Advance APR of 32.49%, based on Prime Rate. Minimum Interest Charge is $3.00. Balance Transfer Fee of the greater of $10 or 5% of the transfer. Cash Advance Fee of the greater of $10 or 5% of the advance."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "0% foreign transaction fees stated on page."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "cashback",
+    "currency_label": "Cash Back (USD)",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 0.01,
+      "description": "1% cash back on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back can be redeemed as statement credits, direct deposit, rewards and qualifying purchases at participating AAA locations. This rewards program is provided by Comenity Capital Bank."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fee",
+      "title": "No Foreign Transaction Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% fees Foreign transaction fees — you won't be charged a foreign transaction fee when you travel abroad."
+    },
+    {
+      "id": "double-cash-back-member-first",
+      "title": "Double Cash Back on Member First Purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn double cash back on all Member First purchases when you use your AAA Visa Signature credit card. AAA Travel Advantage cardholders earn 6% (normally 3%). Valid for AAA members on purchases made at AAA or directly with Member First. Offer valid 6/1/26 - 6/30/26."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -58,13 +89,14 @@
   "official_url": "https://www.ace.aaa.com/financial/aaa-credit-card.html",
   "image": {
     "url": "https://www.ace.aaa.com/content/dam/ace/new30-cards/getty-1286018041-mom-and-daughter-shopping-online-1200x800.jpg",
-    "attribution": "© Comenity",
+    "attribution": "© Comenity Capital Bank",
     "local_path": null
   },
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.ace.aaa.com/financial/aaa-credit-card.html"
+    "https://www.ace.aaa.com/financial/aaa-credit-card.html",
+    "https://finance.aaa.com/credit-card/travel"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=0 but value not confirmed in page text."
+  "notes": "Original product_url (ace.aaa.com) returned empty content. Card details verified from official AAA financial page at finance.aaa.com/credit-card/travel. Corrections: network changed from mastercard to visa, network_tier changed from world to signature, issuer updated to Comenity Capital Bank, name updated to AAA Travel Advantage Visa Signature Credit Card — all based on page text. APR and fee details from footnote 3 on finance.aaa.com page."
 }
