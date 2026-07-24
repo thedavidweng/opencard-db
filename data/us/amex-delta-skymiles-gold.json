@@ -1,0 +1,172 @@
+{
+  "id": "us-amex-delta-skymiles-gold",
+  "schema_version": "1.0.0",
+  "name": "Delta SkyMiles® Gold American Express Card",
+  "localized_names": { "en": "Delta SkyMiles® Gold American Express Card" },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 150,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "$0 introductory annual fee for the first year, then $150."
+  },
+  "apr": {
+    "purchase": { "min": 19.49, "max": 28.49, "type": "variable" },
+    "cash_advance": { "min": 28.74, "max": 28.74, "type": "variable" },
+    "notes": "Variable APRs are based on creditworthiness and the Prime Rate; rates verified from official American Express terms dated 05/24/26."
+  },
+  "fx_fee": { "percent": 0, "notes": "American Express will not charge foreign transaction fees on purchases outside the United States with this Card." },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "skymiles",
+    "currency_label": "Delta SkyMiles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x mile on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Delta purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Restaurants worldwide, plus takeout and delivery in the U.S.",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "SkyMiles program rules apply. Card Members can use eligible SkyMiles benefits such as TakeOff 15 and Pay with Miles subject to Delta terms."
+  },
+  "signup_bonus": {
+    "amount": 80000,
+    "unit": "miles",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Welcome offer as high as 80,000 bonus miles after eligible purchases; exact offer is disclosed before accepting the Card and offers vary.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "delta-flight-credit",
+      "title": "$200 Delta Flight Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Earn a $200 Delta eCredit after $10,000 or more in eligible purchases in a calendar year; limit one credit per calendar year per Card Account."
+    },
+    {
+      "id": "delta-stays-credit",
+      "title": "$100 Delta Stays Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Earn up to $100 in statement credits per calendar year for eligible prepaid hotel or vacation rental bookings through Delta Stays."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "$120 Rideshare Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "After the first Card renewal and enrollment, eligible Card Accounts can earn up to $10 in statement credits per month on eligible U.S. rideshare purchases with select providers, for up to $120 per calendar year."
+    },
+    {
+      "id": "checked-bag-fee-waiver",
+      "title": "First and Second Checked Bag Free",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "First checked bag fee waiver on eligible Delta flights for the Basic Card Member and up to eight companions on the same reservation; Basic Card Members can also receive a second checked bag free on eligible domestic Delta-operated flights."
+    },
+    {
+      "id": "priority-boarding",
+      "title": "Zone 5 Priority Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Basic Card Members receive Zone 5 Priority Boarding on eligible Delta and Delta Connection carrier-operated flights when the Card Member's SkyMiles number is included on the reservation."
+    },
+    {
+      "id": "takeoff-15",
+      "title": "TakeOff 15",
+      "category": "other",
+      "source": "co-brand",
+      "description": "At least 15% off the mileage portion of eligible Delta and Delta Connection award tickets booked through delta.com or the Fly Delta app."
+    },
+    {
+      "id": "inflight-purchase-credit",
+      "title": "20% Back on In-Flight Purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Receive 20% back as a statement credit on eligible pre-purchased meals and in-flight food and beverage purchases on Delta-operated flights charged to the Card."
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can provide secondary coverage for damage to or theft of an eligible rental vehicle when the rental is reserved and paid for with the Card and the rental company's collision damage waiver is declined."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can provide coverage for lost, damaged, or stolen baggage when traveling on a common carrier vehicle and the entire fare is charged to the eligible Card."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can extend the original manufacturer's warranty for up to one extra year for covered purchases made on the eligible Card."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can help protect covered purchases made on the eligible Card against accidental damage or theft for up to 90 days from the covered purchase date."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "First checked bag free on eligible Delta flights for the Basic Card Member and up to eight companions on the same reservation; second checked bag free on eligible domestic Delta-operated flights for Basic Card Members.",
+    "hotel_status": null,
+    "other": [
+      "Zone 5 Priority Boarding on eligible Delta and Delta Connection flights",
+      "TakeOff 15 award travel discount on eligible Delta-operated award tickets",
+      "Pay with Miles on eligible Delta flights"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/delta-skymiles-gold-american-express-card/28810-10-0",
+    "https://www.americanexpress.com/en-us/account/get-started/deltagold/uncover-your-benefits",
+    "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
+    "https://www.delta.com/us/en/baggage/checked-baggage/first-checked-bag-free"
+  ],
+  "notes": "Product name Gold is not a Network Tier; network_tier is none for Amex network packages. Delta SkyMiles benefits and offers are subject to American Express and Delta terms."
+}
