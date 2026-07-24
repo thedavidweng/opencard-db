@@ -67,5 +67,5 @@
     "https://www.rakuten.com/american-express-card/",
     "https://www.rakuten.com/american-express-card"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=0 but value not confirmed in page text."
+  "notes": "FETCH_FAILED: Both product_url and terms_url returned empty content (JavaScript-rendered page). All existing values preserved unchanged."
 }
