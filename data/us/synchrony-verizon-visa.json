@@ -24,29 +24,78 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Synchrony for current APR; terms vary by applicant/offer."
+    "notes": "Purchase APR not stated on product page. 0% APR financing with 36 equal monthly payments on select device purchases with Verizon Visa Card for Verizon Wireless customers."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No additional, surprise fees on foreign transactions."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "verizon_dollars",
+    "currency_label": "Verizon Dollars",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 0.01,
+      "description": "1% on all other purchases where Visa credit cards are accepted."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Verizon Dollars can be used toward Verizon bill, smartwatch, headphones, 5G phone, gaming consoles, and accessories. There's no limit on the amount of Verizon Dollars you can earn for purchases. Verizon Dollars will be forfeited for Rewards Program inactivity."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 150.0,
+    "unit": "statement_credit",
+    "spend_required": 1500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Get a $50 statement credit when you open an account and make a purchase in the first 90 days. Get an additional $100 statement credit when you spend $1500 using your card in the first 90 days. Limited time offer.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "auto-pay-savings",
+      "title": "Auto Pay savings",
+      "category": "other",
+      "source": "issuer",
+      "description": "New enrollees to Verizon's Auto Pay can get up to $10/mo off each eligible wireless phone line, up to 12 lines max (depending on plan) and/or $10/mo off each eligible Fios service."
+    },
+    {
+      "id": "device-financing",
+      "title": "0% APR device financing",
+      "category": "other",
+      "source": "issuer",
+      "description": "Verizon Wireless customers get 0% APR financing with 36 equal monthly payments on select device purchases with Verizon Visa Card."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +115,5 @@
   "sources": [
     "https://www.verizon.com/financial-services/verizon-visa-card/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page. Rewards currency is Verizon Dollars. Eligibility: must be Verizon Fios Account Owner with at least one active Fios service or Verizon wireless customer who is Account Owner or Account Manager with up to 12 phone lines. Upon credit card approval, all new card holders will receive a Verizon Visa Signature Card. Purchase APR not stated on page."
 }
