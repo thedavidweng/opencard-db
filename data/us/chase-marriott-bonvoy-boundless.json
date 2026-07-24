@@ -2,7 +2,9 @@
   "id": "us-chase-marriott-bonvoy-boundless",
   "schema_version": "1.0.0",
   "name": "Marriott Bonvoy Boundless® Credit Card",
-  "localized_names": { "en": "Marriott Bonvoy Boundless® Credit Card" },
+  "localized_names": {
+    "en": "Marriott Bonvoy Boundless® Credit Card"
+  },
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
@@ -17,11 +19,22 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 19.24, "max": 27.74, "type": "variable" },
-    "cash_advance": { "min": 28.49, "max": 28.49, "type": "variable" },
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
     "notes": "Variable APRs from Chase pricing terms; purchase APR varies based on creditworthiness and Prime Rate."
   },
-  "fx_fee": { "percent": 0, "notes": "Foreign transaction fees: none." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fees: none."
+  },
   "credit_required": {
     "score_band": null,
     "notes": null
@@ -50,7 +63,7 @@
         }
       }
     ],
-    "redemption_notes": "Points transfer to Marriott Bonvoy after each billing cycle; points do not expire with card earning activity or other qualifying Marriott Bonvoy activity every 24 months."
+    "redemption_notes": "Points transfer to Marriott Bonvoy after each billing cycle; points do not expire as long as you make purchases on your credit card every 24 months."
   },
   "signup_bonus": {
     "amount": 125000,
@@ -58,7 +71,7 @@
     "spend_required": 3000,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 125,000 bonus points plus 1 Free Night Award after spending $3,000 on eligible purchases within 3 months of account opening.",
+    "description": "Earn 125,000 bonus points plus 1 Free Night Award after spending $3,000 on eligible purchases within 3 months of account opening. Each Free Night Award is valid for a one-night stay at properties with a redemption level up to 50,000 points per night.",
     "as_of": "2026-07-24"
   },
   "benefits": [
@@ -67,35 +80,35 @@
       "title": "Anniversary Free Night Award",
       "category": "other",
       "source": "co-brand",
-      "description": "Free Night Award each year after account anniversary, valid for a one-night hotel stay at a property with a redemption level up to 35,000 points; resort fees may apply."
+      "description": "Free Night Award each year after account anniversary, valid for a one-night hotel stay at a property with a redemption level up to 35,000 points. Certain hotels have resort fees."
     },
     {
       "id": "airline-credits",
-      "title": "Limited-time airline statement credits",
+      "title": "Up to $100 in airline statement credits",
       "category": "credit",
       "source": "issuer",
-      "description": "New cardmembers who apply during the Chase promotional period can earn up to $100 in statement credits after qualifying eligible airline purchases."
+      "description": "Special Offer through 6/30/2027: Get up to $100 in statement credits after spending $500 on eligible airline purchases. Earn up to $50 in statement credits semi-annually after spending $250 on eligible purchases made directly with airlines."
     },
     {
       "id": "silver-elite-status",
       "title": "Automatic Marriott Bonvoy Silver Elite Status",
       "category": "other",
       "source": "co-brand",
-      "description": "Automatic Silver Elite Status each calendar year as a cardmember, subject to account and Marriott Bonvoy terms."
+      "description": "You will automatically receive Silver Elite Status each calendar year as a cardmember."
     },
     {
       "id": "elite-night-credits",
       "title": "15 Elite Night Credits",
       "category": "acceleration",
       "source": "co-brand",
-      "description": "Receive 15 Elite Night Credits toward Marriott Bonvoy Elite Status each calendar year, subject to program restrictions."
+      "description": "Receive 15 Elite Night Credits towards the next level of Marriott Bonvoy Elite Status each calendar year. Restrictions apply."
     },
     {
       "id": "elite-night-spend",
       "title": "1 Elite Night Credit for every $5,000 spent",
       "category": "acceleration",
       "source": "co-brand",
-      "description": "Earn 1 Elite Night Credit toward Marriott Bonvoy Elite Status for each $5,000 in eligible purchases."
+      "description": "Earn 1 Elite Night Credit towards Marriott Bonvoy Elite Status for each $5,000 in eligible purchases."
     },
     {
       "id": "path-to-gold",
@@ -109,21 +122,42 @@
       "title": "No foreign transaction fees",
       "category": "waiver",
       "source": "issuer",
-      "description": "No foreign transaction fees on purchases made outside the United States."
+      "description": "You will pay no foreign transaction fees when you use your card for purchases made outside the United States."
     },
     {
-      "id": "travel-purchase-coverage",
-      "title": "Travel and purchase coverage",
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
       "category": "insurance",
       "source": "issuer",
-      "description": "Includes baggage delay insurance, lost luggage reimbursement, trip delay reimbursement, and purchase protection when eligible terms are met."
+      "description": "Reimburses you up to $100 a day for up to 5 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Provides reimbursement up to $3,000 per covered traveler for the cost to repair or replace checked or carry-on baggage that is lost, damaged or stolen during a covered trip."
+    },
+    {
+      "id": "trip-delay-reimbursement",
+      "title": "Trip Delay Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If your common carrier travel is delayed more than 12 hours or requires an overnight stay, you are covered for unreimbursed expenses, such as meals and lodging, up to $500 per covered traveler."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item."
     },
     {
       "id": "doordash-dashpass",
       "title": "DoorDash DashPass",
       "category": "other",
       "source": "issuer",
-      "description": "Complimentary DashPass for 12 months when activated with the card during the Chase promotional period; terms apply."
+      "description": "Get one-year complimentary DashPass for both DoorDash and Caviar, providing unlimited deliveries with $0 delivery fees and lower service fees on eligible orders. Activate by Dec 31, 2027."
     }
   ],
   "travel_perks": {
@@ -136,7 +170,9 @@
       "No foreign transaction fees",
       "Annual Free Night Award up to 35,000 points",
       "15 Elite Night Credits each calendar year",
-      "Up to 17x total points at participating Marriott Bonvoy hotels when including Marriott Bonvoy member and Silver Elite earnings"
+      "Up to 17x total points at participating Marriott Bonvoy hotels when including Marriott Bonvoy member and Silver Elite earnings",
+      "Up to $100 in airline statement credits (special offer through 6/30/2027)",
+      "DoorDash DashPass (activate by Dec 31, 2027)"
     ]
   },
   "official_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
@@ -151,5 +187,5 @@
     "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64508.html"
   ],
-  "notes": "Offers, APRs, and benefit terms can change; verified against Chase pages on last_verified date."
+  "notes": "Offers, APRs, and benefit terms can change; verified against Chase pages on last_verified date. New cardmember Free Night Award is valid up to 50,000 points; anniversary Free Night Award is valid up to 35,000 points."
 }
