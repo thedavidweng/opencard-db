@@ -1,0 +1,100 @@
+# Optimize uploaded card images to WebP (Astro-style asset pipeline)
+
+name: Optimize Images
+
+on:
+  pull_request:
+    paths:
+      - "images/**"
+      - "scripts/optimize-images.ts"
+      - ".github/workflows/optimize-images.yml"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: optimize-images-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Optimize images → WebP
+        id: opt
+        run: |
+          node --experimental-strip-types scripts/optimize-images.ts | tee /tmp/opt.json
+          written=$(node -e "const j=require('/tmp/opt.json'); console.log((j.written||[]).length)")
+          echo "written=$written" >> "$GITHUB_OUTPUT"
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git status --porcelain | grep -q .; then
+            echo "dirty=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "dirty=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit optimized WebP (same-repo PRs only)
+        if: >-
+          steps.changes.outputs.dirty == 'true' &&
+          github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/
+          git commit -m "ci: optimize card images to WebP"
+          git push
+
+      - name: Comment when fork PR needs a local optimize pass
+        if: >-
+          steps.changes.outputs.dirty == 'true' &&
+          github.event.pull_request.head.repo.full_name != github.repository
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          cat > /tmp/img-comment.md <<'EOF'
+          <!-- opencard-image-opt -->
+          ### Image optimization needed
+
+          This PR adds raster images under `images/`. Because the branch lives on a **fork**, CI cannot push WebP files back automatically.
+
+          On your machine (or in a Codespace):
+
+          ```bash
+          npm ci
+          npm run optimize:images
+          git add images/
+          git commit -m "ci: optimize card images to WebP"
+          git push
+          ```
+
+          Spec: max width 800px, WebP quality ~80, bank copyright still applies (see `images/README.md`).
+          EOF
+          # upsert
+          list=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate)
+          id=$(echo "$list" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);const x=j.find(c=>String(c.body).includes('opencard-image-opt')); console.log(x?x.id:'')})")
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -F body=@/tmp/img-comment.md
+          else
+            gh pr comment "$PR" --body-file /tmp/img-comment.md
+          fi
+          exit 1

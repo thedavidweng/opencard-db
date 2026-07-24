@@ -1,0 +1,68 @@
+{
+  "id": "us-example-card",
+  "schema_version": "1.0.0",
+  "name": "Example Card Name",
+  "localized_names": {
+    "en": "Example Card Name"
+  },
+  "country": "us",
+  "issuer": "Example Bank",
+  "issuer_id": "example-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": "variable" },
+    "notes": "See issuer pricing page for current APR."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other purchases"
+    },
+    "categories": [],
+    "redemption_notes": null
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Replace with current official welcome offer, or leave nulls if unknown.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.example-bank.com/cards/example",
+  "image": {
+    "url": "https://www.example-bank.com/cardart/example.png",
+    "attribution": "© Example Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.example-bank.com/cards/example",
+    "https://www.example-bank.com/cards/example/terms"
+  ],
+  "notes": "Delete this template file after copying. Never commit example-card.json to data/."
+}
