@@ -16,28 +16,23 @@
     "amount": 70,
     "currency": "USD",
     "first_year": 70,
-    "waiver_conditions": null
+    "waiver_conditions": "$70 for the company and $25 per additional card."
   },
   "apr": {
     "purchase": {
-      "min": 19.49,
-      "max": 27.49,
+      "min": null,
+      "max": null,
       "type": "variable"
     },
-    "cash_advance": {
-      "min": 27.49,
-      "max": 27.49,
-      "type": "variable"
-    },
-    "notes": "Variable APR on purchases and balance transfers based on creditworthiness. $70 for the company and $25 per additional card."
+    "notes": "APR not available from page text; page uses dynamic placeholders (ProdStanMinRate% to ProdStanMaxRate% Variable APR). See Bank of America for current APR."
   },
   "fx_fee": {
     "percent": 0,
     "notes": "No international transaction fees."
   },
   "credit_required": {
-    "score_band": "excellent",
-    "notes": "Requires excellent credit per NerdWallet."
+    "score_band": null,
+    "notes": "Not stated on the official product page."
   },
   "rewards": {
     "currency": "alaska_mileage_plan",
@@ -45,7 +40,7 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
-      "description": "1 point per $1 on all other purchases"
+      "description": "1 point for every $1 spent on all other purchases"
     },
     "categories": [
       {
@@ -68,7 +63,7 @@
     "spend_currency": "USD",
     "months": 3,
     "description": "Limited-time offer: 70,000 bonus miles and a $99 Companion Fare (plus taxes and fees from $23) after $4,000 in purchases within first 90 days.",
-    "as_of": "2026-07-23"
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -76,14 +71,14 @@
       "title": "$99 Companion Fare (Annual)",
       "category": "other",
       "source": "co-brand",
-      "description": "$99 Companion Fare (plus taxes and fees from $23) every year after spending $6,000 on purchases with your card."
+      "description": "$99 Companion Fare (plus taxes and fees from $23) every year that you spend at least $6,000 on purchases with your card."
     },
     {
       "id": "free-checked-bag",
       "title": "Free Checked Bag",
       "category": "waiver",
       "source": "co-brand",
-      "description": "Free checked bag for cardholder and up to 6 guests on same reservation when paying for Alaska/Hawaiian Airlines flight with card."
+      "description": "Free checked bag and preferred boarding benefits for any cardholder when the Atmos Rewards Business Card is used to purchase Alaska Airlines or Hawaiian Airlines tickets."
     },
     {
       "id": "preferred-boarding",
@@ -111,7 +106,7 @@
       "title": "10% Rewards Bonus with BofA Small Business Account",
       "category": "acceleration",
       "source": "issuer",
-      "description": "10% rewards bonus on all points earned if company has eligible Bank of America small business account."
+      "description": "10% rewards bonus on all points earned from card purchases if your company has an eligible Bank of America small business account."
     },
     {
       "id": "no-ftf",
@@ -125,10 +120,10 @@
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": "Free checked bag for cardholder and up to 6 guests on same reservation on Alaska/Hawaiian Airlines flights",
+    "free_checked_bags": "Free checked bag for cardholder when paying for Alaska/Hawaiian Airlines flight with card",
     "hotel_status": null,
     "other": [
-      "Annual $99 Companion Fare (plus taxes/fees from $23) after $6,000 spend per anniversary year",
+      "Annual $99 Companion Fare (plus taxes/fees from $23) after $6,000 spend per year",
       "Preferred boarding on Alaska/Hawaiian Airlines",
       "20% back on inflight purchases",
       "$100 off Alaska Lounge+ Membership",
@@ -142,9 +137,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
   ],
-  "notes": "Atmos Rewards is the August 2025 rebrand of Alaska Airlines credit cards. Visa Signature Business. Issued by Bank of America."
+  "notes": "Atmos Rewards Visa Signature Business Card (rebrand of Alaska Airlines credit cards). $70 annual fee for company + $25 per card. 3X Alaska/Hawaiian, 2X gas/EV/shipping/transit, 1X other. 70K bonus miles + $99 Companion Fare after $4K in 90 days. No international transaction fees. APR not extractable (dynamic placeholders). credit_required set to null (was 'excellent' from NerdWallet, not from official page)."
 }
