@@ -24,28 +24,36 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "notes": "APR not displayed on product page; rates are behind a JavaScript disclosure link."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not visible on product page."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "excellent",
+    "notes": "Credit Level: EXCELLENT. Existing or previous cardmembers not eligible if they received a new cardmember bonus for this product in the past 48 months."
   },
   "rewards": {
-    "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
+    "currency": "cash_back",
+    "currency_label": "Cash back (USD)",
     "structure": "single",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "description": "Earn unlimited 1.5% cash back on every purchase."
     },
     "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "redemption_notes": "Cash back earned depends on credit limit and purchase activity."
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 200.0,
+    "unit": "cash_bonus_usd",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Earn a $200 cash bonus. This one-time bonus is available by clicking the Apply Now button on this page. Existing or previous cardmembers are not eligible if they have received a new cardmember bonus for this product in the past 48 months.",
+    "as_of": "2026-07-24"
+  },
   "benefits": [],
   "travel_perks": {
     "lounge_access": null,
@@ -66,5 +74,5 @@
   "sources": [
     "https://www.capitalone.com/credit-cards/quicksilver/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=$0 but value not confirmed in page text."
+  "notes": "Page confirms 1.5% cash back and $200 cash bonus. Credit level: EXCELLENT. Annual fee, APR, and FX fee are behind JavaScript disclosure links and not extractable from fetched text. network=visa and network_tier=signature not re-verified on page (preserved from existing JSON). Spend requirement for signup bonus not stated on page."
 }
