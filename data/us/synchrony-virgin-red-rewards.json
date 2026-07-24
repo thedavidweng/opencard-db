@@ -29,15 +29,15 @@
       "max": 29.74,
       "type": "variable"
     },
-    "notes": "19.74%, 23.74%, or 27.74% based on creditworthiness. Varies with Prime Rate. Penalty APR up to 37.74%. Minimum interest charge $2.00."
+    "notes": "19.74%, 23.74%, or 27.74% based on creditworthiness. Varies with Prime Rate. Penalty APR up to 37.74%. Minimum interest charge $2.00. PRESERVED from prior verification (2026-07-23); terms_url fetch failed on 2026-07-24, not re-verified."
   },
   "fx_fee": {
     "percent": 0,
-    "notes": "No foreign transaction fee. Mastercard converts non-USD transactions."
+    "notes": "No foreign transaction fees. 'Popping abroad? You're free to travel with no foreign transaction fees.'"
   },
   "credit_required": {
     "score_band": "good_to_excellent",
-    "notes": "Not explicitly stated; three APR tiers suggest creditworthiness-based approval. Typically requires good to excellent credit."
+    "notes": "Not explicitly stated on page; three APR tiers suggest creditworthiness-based approval. Typically requires good to excellent credit. PRESERVED from prior verification."
   },
   "rewards": {
     "currency": "virgin_points",
@@ -45,7 +45,7 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
-      "description": "1x Virgin Point per $1 on all other purchases"
+      "description": "1 Virgin Point per $1 on everything else, anywhere Mastercard is accepted"
     },
     "categories": [
       {
@@ -54,12 +54,12 @@
         "cap": null
       },
       {
-        "label": "Grocery stores, dining, select streaming, EV charging",
+        "label": "Grocery stores, dining, select streaming services, EV charging",
         "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Virgin Points redeemable for travel (flights, hotels, cruises), movie tickets, experiences, and charitable causes through Virgin Red. Points do not expire. Requires Virgin Red membership account."
+    "redemption_notes": "Virgin Points redeemable for travel (flights, hotels, cruises), movie tickets, family days out, epic experiences, and charitable causes through Virgin Red. Points do not expire. Select streaming services include: Amazon Music, Apple TV/Music, Audible, DirecTV Stream, Disney+, ESPN+, Fubo TV, HBO Max, Hulu, iHeartRadio, Kindle Unlimited, Luminary, MLB.tv, NBA League Pass, Netflix, NHL.tv, Pandora, Paramount+, Peacock, Prime Video, Showtime, Sling TV, SiriusXM, Spotify, Stitcher, Tidal, YouTube (Music/TV), and YouTube Premium."
   },
   "signup_bonus": {
     "amount": 60000,
@@ -67,7 +67,7 @@
     "spend_required": 4000,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 60,000 Virgin Points when you spend $4,000 in the first 90 days. Additional 2,500 points for adding an authorized user (up to 10,000 total).",
+    "description": "Earn 60,000 Virgin Points when you spend $4,000 in the first 90 days. Additional 2,500 points for adding an authorized user (up to 10,000 total). PRESERVED from prior verification (2026-07-23); not visible on benefits page fetched 2026-07-24.",
     "as_of": "2026-07-23"
   },
   "benefits": [
@@ -76,7 +76,7 @@
       "title": "Personal Perks (Big Spend Bonus)",
       "category": "other",
       "source": "co-brand",
-      "description": "Spend $15,000/year for one Personal Perk (companion seat, cabin upgrade, free night, or bar tab credit). Spend $30,000 to select two."
+      "description": "Spend $15,000 in a year and earn one Personal Perk from Virgin Atlantic, Virgin Hotels or Virgin Voyages. Spend $30,000 and select one more. Maximum two per cardholder year. Options include: companion seat voucher or cabin upgrade voucher (Virgin Atlantic), one free night stay or priority room upgrade (Virgin Hotels), up to $300 bar tab credit or Blue Extras perks package (Virgin Voyages)."
     },
     {
       "id": "tier-points",
@@ -90,28 +90,63 @@
       "title": "Third Night Free at Virgin Hotels",
       "category": "other",
       "source": "co-brand",
-      "description": "Book two nights and get third night free at participating Virgin Hotels once per year."
+      "description": "Book two nights and get your third night free at participating Virgin Hotels properties once a year."
+    },
+    {
+      "id": "additional-cardholder-bonus",
+      "title": "Cards for Friends & Family",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Earn 2,500 Virgin Points when you add a loved one as an additional account user, up to 10,000 points total."
     },
     {
       "id": "anniversary-boost",
       "title": "Anniversary Points Boost",
       "category": "acceleration",
       "source": "issuer",
-      "description": "Earn 5,000 Virgin Points every year upon card renewal."
+      "description": "Earn 5,000 Virgin Points every year upon card renewal. Posts to Rewards Program Account within 1-2 Statement Periods if account is open and in good standing."
     },
     {
       "id": "no-fx-fees",
       "title": "No Foreign Transaction Fees",
       "category": "other",
       "source": "issuer",
-      "description": "No foreign transaction fees on purchases made abroad."
+      "description": "No foreign transaction fees. Travel with no foreign transaction fees."
     },
     {
       "id": "points-no-expiry",
       "title": "Virgin Points Don't Expire",
       "category": "other",
       "source": "co-brand",
-      "description": "Virgin Points do not expire while the rewards program account is open and in good standing."
+      "description": "Virgin Points don't expire. Points kept on ice until you're ready to spend them."
+    },
+    {
+      "id": "mastercard-global-service",
+      "title": "Mastercard Global Service",
+      "category": "other",
+      "source": "network",
+      "description": "Get emergency assistance virtually anytime, anywhere and in any language. Report a lost or stolen card, get an emergency replacement and more. 24/7 assistance at 1-800-MASTERCARD."
+    },
+    {
+      "id": "mastercard-id-theft-protection",
+      "title": "Mastercard ID Theft Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Detects and helps quickly resolve ID theft events, 24/7. Provided by Iris Powered by Generali."
+    },
+    {
+      "id": "mastercard-priceless",
+      "title": "Mastercard Priceless Experiences",
+      "category": "other",
+      "source": "network",
+      "description": "Indulge your passions in culture, dining, sports, entertainment, shopping, the environment and more with one-of-a-kind Priceless Experiences curated to create unforgettable memories."
+    },
+    {
+      "id": "world-elite-concierge",
+      "title": "World Elite Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "A personal assistant ready to help 24/7, worldwide."
     }
   ],
   "travel_perks": {
@@ -123,7 +158,8 @@
     "other": [
       "Virgin Atlantic Flying Club Tier Points (25 per $2,500 spent, max 50/month)",
       "Personal Perks at $15k/$30k spend (companion seat, cabin upgrade, free night, or bar tab)",
-      "5,000 anniversary points boost on renewal"
+      "5,000 anniversary points boost on renewal",
+      "Mastercard World Elite benefits: Global Service, ID Theft Protection, Priceless, Concierge"
     ]
   },
   "official_url": "https://www.synchrony.com/s/partner/virgin-red-rewards-card/benefits",
@@ -133,10 +169,11 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.synchrony.com/s/partner/virgin-red-rewards-card/benefits",
+    "https://virginredrewardscard.syf.com/benefitsdetails",
     "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e074512.html"
   ],
-  "notes": "Issued by Synchrony Bank. Official product/benefits page is on synchrony.com (not virgin.com co-branded page). World Elite Mastercard."
+  "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page."
 }
