@@ -1,0 +1,123 @@
+{
+  "id": "us-bank-of-america-customized-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "Bank of America® Customized Cash Rewards Credit Card",
+  "localized_names": { "en": "Bank of America® Customized Cash Rewards Credit Card" },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": 17.49, "max": 27.49, "type": "variable" },
+    "notes": "0% intro APR for the first 15 billing cycles for purchases and balance transfers made within 60 days; then variable APR per the official product page."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "cash back",
+    "structure": "choice",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% cash back on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Choice category for the first year",
+        "points_per_dollar": 6,
+        "cap": {
+          "amount": 2500,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      },
+      {
+        "label": "Choice category after the first year",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 2500,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      },
+      {
+        "label": "Grocery stores and wholesale clubs",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 2500,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Cash rewards can be redeemed for statement credits, deposits to eligible Bank of America accounts, eligible Merrill accounts, qualifying 529 contributions, checks, Amazon.com, or PayPal; some redemption methods have a $25 minimum."
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "cash_rewards",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 online cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "bofa-rewards-bonus",
+      "title": "BofA Rewards bonus eligibility",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Eligible Bank of America customers enrolled in BofA Rewards can earn a rewards bonus on credit card purchases."
+    },
+    {
+      "id": "zero-liability",
+      "title": "$0 Liability Guarantee",
+      "category": "other",
+      "source": "issuer",
+      "description": "Bank of America provides a $0 Liability Guarantee for fraudulent transactions."
+    },
+    {
+      "id": "balance-connect",
+      "title": "Balance Connect overdraft protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Optional overdraft protection service when linking an eligible Bank of America checking account to the credit card; other fees may apply."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+  "image": {
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8ckn_cshsigcm_v_250x158.png",
+    "attribution": "© Bank of America Corporation",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+    "https://www.bankofamerica.com/credit-cards/terms-and-conditions/?campaignid=4075151&productoffercode=Q4&locale=en_US"
+  ],
+  "notes": "Choice category options shown on the official page are gas and EV charging stations, online shopping, dining, travel, drug stores and pharmacies, and home improvement and furnishings. Foreign transaction fee and approval criteria were not found in the official product page content checked."
+}
