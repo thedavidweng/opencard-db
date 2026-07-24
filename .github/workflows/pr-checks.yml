@@ -187,7 +187,10 @@ jobs:
           export PR_FILES="$(cat /tmp/pr-files.txt)"
           export PR_TRIAGE_MODE=check
           export PR_AUTHOR
+          # Mask exit 1 from incomplete forms — we still need the JSON to write the comment.
+          set +e
           node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage-comment.json
+          set -e
           node -e "const t=require('/tmp/triage-comment.json'); require('fs').writeFileSync('/tmp/form-comment.md', t.commentMarkdown)"
           echo "----- comment preview -----"
           cat /tmp/form-comment.md
