@@ -1,9 +1,9 @@
 {
   "id": "us-capital-one-venture-x-business",
   "schema_version": "1.0.0",
-  "name": "Venture X Business Card",
+  "name": "Venture X Business",
   "localized_names": {
-    "en": "Venture X Business Card"
+    "en": "Venture X Business"
   },
   "country": "us",
   "issuer": "Capital One",
@@ -24,26 +24,38 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "Purchase APR not stated on product page. Card is designed to be paid in full; you have the option to carry over a portion of your balance with interest if needed."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. Pay zero foreign transaction fees on purchases made outside of the United States."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "excellent",
+    "notes": "Excellent credit indicated on page."
   },
   "rewards": {
     "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
-    "structure": "single",
+    "currency_label": "Capital One miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "points_per_dollar": 2.0,
+      "description": "Earn unlimited 2X miles on every purchase, everywhere, no limits or category restrictions."
     },
-    "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem miles through travel site, get reimbursed for travel expenses, or transfer miles to 15+ partners."
   },
   "signup_bonus": {
     "amount": 150000.0,
@@ -51,17 +63,107 @@
     "spend_required": 30000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 150,000 bonus miles when you spend $30,000 in the first 3 months",
+    "description": "Earn 150,000 bonus miles when you spend $30,000 in the first 3 months, which is equal to $1,500 in travel.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "annual-travel-credit",
+      "title": "$300 annual travel credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive an annual $300 credit for bookings through Capital One Business Travel."
+    },
+    {
+      "id": "anniversary-bonus-miles",
+      "title": "10,000 bonus miles every year",
+      "category": "other",
+      "source": "issuer",
+      "description": "You'll also get 10,000 bonus miles every year, starting on your first anniversary."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay zero foreign transaction fees on purchases made outside of the United States."
+    },
+    {
+      "id": "global-entry-tsa-precheck",
+      "title": "Global Entry or TSA PreCheck credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to a $120 statement credit on Global Entry or TSA PreCheck®."
+    },
+    {
+      "id": "lounge-access",
+      "title": "Airport lounge access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Explore a network of 1,300+ lounges worldwide. Access to Capital One Lounges and Landing, and Priority Pass."
+    },
+    {
+      "id": "premier-collection",
+      "title": "Premier Collection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Elevate your stay at luxury hotels, resorts and vacation rentals from the Premier Collection with a $100 experience credit and other premium benefits on every booking."
+    },
+    {
+      "id": "hertz-presidents-circle",
+      "title": "Hertz President's Circle status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Skip the counter at select locations, enjoy a wider selection of rental cars and more, just for being a Venture X Business cardholder."
+    },
+    {
+      "id": "capital-one-business-travel",
+      "title": "Capital One Business Travel",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save time and money with complimentary access to an all-in-one business travel management solution."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 fraud liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your card is lost or stolen, you can get an emergency replacement and a cash advance."
+    },
+    {
+      "id": "free-employee-cards",
+      "title": "Free employee and virtual cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Empower your team to make purchases while earning rewards on their transactions, with free employee and virtual cards."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get free additional warranty and protection on eligible items you purchase with your card."
+    },
+    {
+      "id": "expense-management",
+      "title": "Expense Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "You and your employees can quickly add expense details—including receipts and notes—for faster reporting."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
+    "lounge_access": {},
+    "tsa_precheck_credit": {},
+    "global_entry_credit": {},
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "$300 annual travel credit",
+      "10,000 anniversary bonus miles",
+      "Hertz President's Circle status",
+      "Premier Collection $100 experience credit"
+    ]
   },
   "official_url": "https://www.capitalone.com/small-business/credit-cards/venture-x-business/",
   "image": {
@@ -74,5 +176,5 @@
   "sources": [
     "https://www.capitalone.com/small-business/credit-cards/venture-x-business/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Capital One product page on 2026-07-24. Purchase APR not stated on page — preserved as null. Corrected name from 'Venture X Business Card' to 'Venture X Business' per page heading."
 }
