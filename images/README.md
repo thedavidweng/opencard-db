@@ -30,7 +30,7 @@ npm run embed:default-card
 1. On a Mac that already has the card in Wallet, copy  
    `~/Library/Passes/Cards/<id>.pkpass/cardBackgroundCombined@2x.png`
 2. Rename to the Card Id, e.g. `us-chase-sapphire-preferred.png`, and add under `images/`.
-3. CI runs **Optimize Images**: **lossless WebP**, **native dimensions** (no 800px downscale) — fidelity matched to Apple Pay @2x.
+3. CI runs **Optimize Images** only when the PR includes a raster under `images/` (`.png` / `.jpg` / …). Docs-only or `.webp`-only changes skip that workflow. Conversion is **lossless WebP**, **native dimensions** (no 800px downscale) — fidelity matched to Apple Pay @2x.
 4. Set `image.local_path` to `images/us-chase-sapphire-preferred.webp` after CI (or run `npm run optimize:images` locally first).
 5. Attribution example: `© Chase (Apple Pay digital card art)`.
 

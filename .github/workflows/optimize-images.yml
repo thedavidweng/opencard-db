@@ -6,31 +6,21 @@ name: Optimize Images
 
 on:
   pull_request:
+    # Workflow is skipped entirely unless a raster under images/ changed.
+    # README / .webp / script-only edits do not trigger this workflow.
     paths:
-      - "images/*.png"
-      - "images/*.PNG"
-      - "images/*.jpg"
-      - "images/*.JPG"
-      - "images/*.jpeg"
-      - "images/*.JPEG"
-      - "images/*.gif"
-      - "images/*.GIF"
-      - "images/*.tif"
-      - "images/*.tiff"
-      - "images/*.TIF"
-      - "images/*.TIFF"
-      - "images/**/*.png"
-      - "images/**/*.PNG"
-      - "images/**/*.jpg"
-      - "images/**/*.JPG"
-      - "images/**/*.jpeg"
-      - "images/**/*.JPEG"
-      - "images/**/*.gif"
-      - "images/**/*.GIF"
-      - "images/**/*.tif"
-      - "images/**/*.tiff"
-      - "images/**/*.TIF"
-      - "images/**/*.TIFF"
+      - "images/**.png"
+      - "images/**.PNG"
+      - "images/**.jpg"
+      - "images/**.JPG"
+      - "images/**.jpeg"
+      - "images/**.JPEG"
+      - "images/**.gif"
+      - "images/**.GIF"
+      - "images/**.tif"
+      - "images/**.TIF"
+      - "images/**.tiff"
+      - "images/**.TIFF"
 
 permissions:
   contents: write
