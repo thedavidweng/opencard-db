@@ -24,29 +24,86 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Citi for current APR; terms vary by applicant/offer."
+    "notes": "Page shows intro APR and variable APR ranges as dynamic placeholders (%) — actual numbers not rendered in fetched text. Pricing details: 'Variable cash advance APR — %.' 'Variable Penalty APR up to %.' 'Fee for foreign purchases — % of the U.S. dollar amount of each purchase.' See Citi for current rates."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Page mentions 'Fee for foreign purchases — % of the U.S. dollar amount of each purchase' but actual percentage not rendered in fetched text."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "FAQ: 'it's generally recommended to have a credit score in the good to the excellent range to apply for the Citi® Diamond Preferred® Credit Card.'"
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "none",
+    "currency_label": "none",
     "structure": "single",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "description": "While the Citi® Diamond Preferred® Credit Card does not earn rewards, it does offer benefits such as a low intro balance transfer fee, no annual fee, Citi® Flex Pay, access to Merchant Offers, free access to your FICO® Score and $0 liability on unauthorized charges."
     },
     "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "redemption_notes": null
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "There is no annual fee with the Citi® Diamond Preferred® Credit Card."
+    },
+    {
+      "id": "citi-flex-pay",
+      "title": "Citi® Flex Pay",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay over time with a fixed monthly payment. Available on eligible purchases of $75 or more using an eligible Citi® credit card."
+    },
+    {
+      "id": "fico-score",
+      "title": "Free Access to FICO® Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free access to your FICO® Score online to review your credit history."
+    },
+    {
+      "id": "mastercard-id-theft-protection",
+      "title": "Mastercard® ID Theft Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "The ID Theft Protection program offered by Mastercard® helps eliminate the worry of identity theft by monitoring the information you choose to protect and alerting you if suspicious activity is found."
+    },
+    {
+      "id": "citi-quick-lock",
+      "title": "Citi® Quick Lock",
+      "category": "other",
+      "source": "issuer",
+      "description": "Use Citi® Quick Lock in the Citi Mobile® App or at citi.com to instantly block new charges while allowing recurring transactions to continue without disruption."
+    },
+    {
+      "id": "citi-entertainment",
+      "title": "Citi Entertainment®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Entertainment access program available to eligible Citi® credit card and Citibank® Debit Card customers. Special access to purchase tickets to thousands of events, including presale tickets and exclusive experiences."
+    },
+    {
+      "id": "citi-travel",
+      "title": "Citi Travel®",
+      "category": "other",
+      "source": "issuer",
+      "description": "With Citi Travel®, you can book flights, hotels, car rentals and attractions using your eligible Citi card. Access to over 1.4 million hotels and resorts available worldwide."
+    },
+    {
+      "id": "zero-liability",
+      "title": "$0 Liability for Unauthorized Charges",
+      "category": "other",
+      "source": "issuer",
+      "description": "The Citi® Diamond Preferred® Credit Card comes with all the benefits of a Citi credit card, including a payment due date of your choice, 24/7 customer service and $0 liability for unauthorized charges."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +123,5 @@
   "sources": [
     "https://www.citi.com/credit-cards/citi-diamond-preferred-credit-card"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Citi product page. Annual fee confirmed as $0 from FAQ. Card does not earn rewards (stated in FAQ). APR numbers rendered as dynamic placeholders (%) in fetched text — actual values not visible. Credit score: good to excellent recommended. Low intro balance transfer fee mentioned but exact fee not rendered."
 }
