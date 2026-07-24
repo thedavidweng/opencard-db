@@ -13,58 +13,122 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 20.99,
+      "max": 31.49,
       "type": "variable"
     },
-    "notes": "See Synchrony for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 22.99,
+      "max": 32.99,
+      "type": "variable"
+    },
+    "notes": "20.99% or 31.49% based on creditworthiness. Varies with Prime Rate. Minimum interest charge $2.00. Late payment fee up to $41."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fee. Non-USD transactions converted using exchange rates from transaction/processing date."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "fair",
+    "notes": "Not explicitly stated; WalletHub reports 640+ credit score needed. If not approved for CashRewards, may be considered for OnePay Walmart Spend Card (store-only)."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "onepay_points",
+    "currency_label": "OnePay Points (redeemable as cash back)",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.5,
+      "description": "1.5% cash back on all other purchases anywhere Mastercard is accepted"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Walmart purchases (Walmart+ members)",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Walmart purchases (non-Walmart+ members)",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back earned as OnePay Points. Redeemable as statement credit, electronic deposit into OnePay deposit account, or eligible gift cards. 100 points = $1.00. Minimum 25 points for redemption. Walmart+ membership ($12.95/month or $98/year) required for 5% rate."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 35,
+    "unit": "USD cash back",
+    "spend_required": 75,
+    "spend_currency": "USD",
+    "months": 1,
+    "description": "Get $35 cash back after spending $75 on purchases within 30 days after card opening. Awarded as points redeemable into OnePay deposit account or as statement credit.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No annual fee for the OnePay CashRewards Card."
+    },
+    {
+      "id": "no-fx-fee",
+      "title": "No Foreign Transaction Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fee charged on non-USD purchases."
+    },
+    {
+      "id": "spending-insights",
+      "title": "Spending Insights",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get insights about everyday credit card spending habits through the OnePay app."
+    },
+    {
+      "id": "card-lock",
+      "title": "Card Lock",
+      "category": "other",
+      "source": "issuer",
+      "description": "Lock your credit card if lost or stolen via the OnePay app."
+    },
+    {
+      "id": "free-credit-score",
+      "title": "Free Credit Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "OnePay Credit Score provides real-time updates and insights into your credit, for free."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "No foreign transaction fee",
+      "World Mastercard network benefits"
+    ]
   },
-  "official_url": "https://www.walmart.com/cp/walmart-rewards-card/1088705",
+  "official_url": "https://www.onepay.com/credit-card",
   "image": {
     "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
     "attribution": "© Synchrony",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
-    "https://www.walmart.com/cp/walmart-rewards-card/1088705"
+    "https://www.onepay.com/credit-card",
+    "https://www.onepay.com/help-center/articles/about-the-onepay-credit-card"
   ],
-  "notes": "Conservative scaffold: official product HTML was not fully fetchable from the automation environment (403/timeout/DNS). Sources cite the official issuer/partner URL; fee/earn/signup left null or unconfirmed — human spot-check required before merge. Third-party clue DBs were not used as sources."
+  "notes": "Issued by Synchrony Bank. Official product page is on onepay.com (Synchrony does not host a dedicated page on synchrony.com for this card). World Mastercard."
 }
