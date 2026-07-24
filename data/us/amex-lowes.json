@@ -67,5 +67,5 @@
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/lowes-credit-cards/",
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "FETCH_FAILED: The product_url resolves to a general Amex business credit cards listing page with no Lowe's-specific card information. The page lists 11 business cards (Business Platinum, Business Gold, Graphite Business Cash, Blue Business Cash, Blue Business Plus, Delta SkyMiles Reserve/Gold/Platinum Business, Business Green Rewards, Marriott Bonvoy Business, Hilton Honors Business) but no Lowe's card. All card-specific fields remain null pending a valid product page."
 }
