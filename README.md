@@ -52,7 +52,7 @@ Official free instance (when deployed): requires a meaningful `User-Agent` or `X
 
 - **Code:** [MIT](LICENSE)
 - **Data** (`data/**`): [CC BY 4.0](LICENSE-DATA)
-- **Images:** bank copyright — see [`images/README.md`](images/README.md)
+- **Images:** optional; issuer art stays bank copyright. Missing faces use a generic OpenCard placeholder via the API — see [`images/README.md`](images/README.md)
 
 ## Status
 
