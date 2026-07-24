@@ -29,15 +29,15 @@
       "max": 28.49,
       "type": "variable"
     },
-    "notes": "18.49%, 23.49%, or 28.49% based on creditworthiness. Varies with Prime Rate. No penalty APR. Minimum interest charge $1.00. Late payment fee up to $40."
+    "notes": "18.49%, 23.49%, or 28.49% based on your creditworthiness. This APR will vary with the market based on the U.S. Prime Rate. Balance Transfer APR: 18.49%, 23.49%, or 28.49%. Cash Advance APR: 28.49%. Minimum interest charge $1.00. Balance transfer fee: up to 5% with a minimum of $5. Cash advance fee: either $10 or 5% of the amount, whichever is greater. Late payment fee up to $40. No penalty APR. Information correct as of December 2025."
   },
   "fx_fee": {
     "percent": 0,
-    "notes": "No foreign transaction fee for purchases converted to U.S. dollars."
+    "notes": "No foreign transaction fee for purchases converted to U.S. dollars. Foreign Currency Conversion/Foreign Transaction: None."
   },
   "credit_required": {
-    "score_band": "good_to_excellent",
-    "notes": "Not explicitly stated; three APR tiers suggest creditworthiness-based approval. May not be eligible if opened a One Key, One Key+, or Hotels.com Card within the last 48 months."
+    "score_band": "unknown",
+    "notes": "Not explicitly stated. Three APR tiers (18.49%, 23.49%, 28.49%) based on creditworthiness. May not be eligible if opened a One Key, One Key+, or Hotels.com Card within the last 48 months."
   },
   "rewards": {
     "currency": "onekeycash",
@@ -45,7 +45,7 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.5,
-      "description": "1.5% OneKeyCash on all other purchases"
+      "description": "1.5% OneKeyCash on other purchases"
     },
     "categories": [
       {
@@ -59,7 +59,7 @@
         "cap": null
       }
     ],
-    "redemption_notes": "OneKeyCash is not redeemable for cash and can only be used on Expedia, Hotels.com, and Vrbo. The 3% rate on Expedia/Hotels.com/Vrbo is 1.5% base plus 1.5% bonus. Must be logged into the primary cardholder's One Key member account."
+    "redemption_notes": "OneKeyCash is not redeemable for cash and can only be used on Expedia, Hotels.com, and Vrbo. The 3% rate on Expedia/Hotels.com/Vrbo is 1.5% base plus 1.5% bonus. Must be logged into the primary cardholder's One Key member account. 3% on gas/grocery/dining is also 1.5% base plus 1.5% bonus."
   },
   "signup_bonus": {
     "amount": 250,
@@ -67,8 +67,8 @@
     "spend_required": 1000,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn $250 in OneKeyCash after spending $1,000 on purchases in the first 3 months from account opening.",
-    "as_of": "2026-07-23"
+    "description": "Earn $250 in OneKeyCash after you spend $1,000 on purchases in the first 3 months from account opening. OneKeyCash earned through the introductory offer will post to your account within 1-2 billing periods after it is earned.",
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -83,42 +83,42 @@
       "title": "No Foreign Transaction Fee",
       "category": "other",
       "source": "issuer",
-      "description": "No foreign transaction fees for purchases converted to U.S. dollars."
+      "description": "Use your card when you travel and pay no foreign transaction fees for purchases converted to U.S. dollars."
     },
     {
       "id": "cell-phone-protection",
       "title": "Cellular Telephone Protection",
       "category": "insurance",
       "source": "issuer",
-      "description": "Up to $1,000 cell phone protection against damage, theft, or unintended separation. $25 deductible."
+      "description": "Up to $1,000 of cell phone protection against damage, theft, or unintended separation. Subject to a $25 deductible. Allowable maximum of two paid claims per 12-month period. Each approved claim has a benefit limit of $1,000. Does not cover cell phones that are lost."
     },
     {
       "id": "trip-cancellation",
       "title": "Trip Cancellation and Interruption Protection",
       "category": "insurance",
       "source": "issuer",
-      "description": "Reimbursement for nonrefundable common carrier fare if trip is canceled or interrupted for a covered reason."
+      "description": "Receive reimbursement for the nonrefundable cost of your common carrier fare if your trip is canceled or interrupted for a covered reason. Coverage is secondary."
     },
     {
       "id": "auto-rental-cdw",
       "title": "Auto Rental Collision Damage Waiver",
       "category": "insurance",
       "source": "network",
-      "description": "Reimbursement of up to $50,000 for covered damage or theft of eligible rental vehicle."
+      "description": "Pay for rental transactions with your eligible credit card and receive reimbursement of up to $50,000 if covered damage to or theft of your eligible rental vehicle occurs. Coverage is primary (except for New York Residents)."
     },
     {
       "id": "travel-accident-insurance",
       "title": "Travel Accident Insurance",
       "category": "insurance",
       "source": "issuer",
-      "description": "Up to $1,000,000 travel accident insurance when purchasing airline or common carrier tickets with the card."
+      "description": "Get Travel Accident Insurance protection of up to $1,000,000 when you purchase your airline or other common carrier tickets with your eligible credit card."
     },
     {
       "id": "one-key-silver-status",
       "title": "Automatic One Key Silver Status",
       "category": "other",
       "source": "co-brand",
-      "description": "Automatic One Key Silver membership with Silver Member Prices: 15%+ savings on 10,000+ hotels. Unlock Gold status at $15,000 annual spend."
+      "description": "Automatic One Key Silver membership with Silver Member Prices: savings of 15% or more on over 10,000 hotels worldwide. Unlock Gold when you spend $15,000 per calendar year."
     }
   ],
   "travel_perks": {
@@ -142,10 +142,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://creditcards.wellsfargo.com/one-key-credit-card/",
-    "https://www.wellsfargo.com/credit-cards/terms/onekey/"
+    "https://www.wellsfargo.com/credit-cards/terms/onekey/?FPID=21231JIXE50000&product_code=CC&subproduct_code=OW&cx_nm=CXNAME_CSMPD&sub_channel=WEB&vendor_code=WF"
   ],
-  "notes": "Issued by Wells Fargo. Official product page is on creditcards.wellsfargo.com (not expedia.com co-branded page). World Elite Mastercard."
+  "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages."
 }
