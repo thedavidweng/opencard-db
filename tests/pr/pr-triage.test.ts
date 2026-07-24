@@ -67,11 +67,11 @@ describe("pr triage", () => {
     assert.equal(r.titleOk, true);
     assert.deepEqual(r.regions, ["US"]);
     assert.equal(r.missing.length, 0);
-    assert.ok(r.labelsAdd.includes("US"));
-    assert.ok(r.labelsAdd.includes("new-card"));
-    assert.ok(!r.labelsAdd.includes("needs-info"));
-    assert.ok(!r.labelsAdd.includes("enhancement"));
-    assert.ok(r.labelsRemove.includes("enhancement"));
+    assert.ok(r.classificationLabelsAdd.includes("US"));
+    assert.ok(r.classificationLabelsAdd.includes("new-card"));
+    assert.ok(!r.completenessLabelsAdd.includes("needs-info"));
+    assert.ok(!r.classificationLabelsAdd.includes("enhancement"));
+    assert.ok(r.classificationLabelsRemove.includes("enhancement"));
   });
 
   it("labels feature/CI PRs as enhancement, not new-card", () => {
@@ -87,10 +87,11 @@ describe("pr triage", () => {
     assert.equal(r.isCardPr, false);
     assert.equal(r.isNewCard, false);
     assert.equal(r.missing.length, 0);
-    assert.ok(r.labelsAdd.includes("enhancement"));
-    assert.ok(!r.labelsAdd.includes("new-card"));
-    assert.ok(r.labelsRemove.includes("new-card"));
-    assert.ok(!r.labelsAdd.includes("documentation"));
+    assert.ok(r.classificationLabelsAdd.includes("enhancement"));
+    assert.ok(!r.classificationLabelsAdd.includes("new-card"));
+    assert.ok(r.classificationLabelsRemove.includes("new-card"));
+    assert.ok(!r.classificationLabelsAdd.includes("documentation"));
+    assert.equal(r.completenessLabelsAdd.length, 0);
   });
 
   it("labels docs PRs as documentation, not new-card", () => {
@@ -99,9 +100,23 @@ describe("pr triage", () => {
       body: "- [x] **Not a card** (docs / CI / code)",
       changedFiles: ["docs/research/apple-pay-card-art.md", "images/README.md"],
     });
-    assert.ok(r.labelsAdd.includes("documentation"));
-    assert.ok(!r.labelsAdd.includes("new-card"));
-    assert.ok(!r.labelsAdd.includes("enhancement"));
+    assert.ok(r.classificationLabelsAdd.includes("documentation"));
+    assert.ok(!r.classificationLabelsAdd.includes("new-card"));
+    assert.ok(!r.classificationLabelsAdd.includes("enhancement"));
+  });
+
+  it("keeps classification labels when form is incomplete", () => {
+    const r = triagePullRequest({
+      title: "Add card: us-demo-card",
+      body: "",
+      changedFiles: ["data/us/demo-card.json"],
+    });
+    assert.ok(r.classificationLabelsAdd.includes("new-card"));
+    assert.ok(r.classificationLabelsAdd.includes("US"));
+    assert.ok(r.completenessLabelsAdd.includes("needs-info"));
+    assert.ok(r.completenessLabelsAdd.includes("pr-form-incomplete"));
+    assert.ok(!r.classificationLabelsAdd.includes("needs-info"));
+    assert.match(r.commentMarkdown, /Form check/);
   });
 
   it("flags placeholder sources and bad title", () => {
@@ -127,7 +142,9 @@ describe("pr triage", () => {
     assert.ok(r.missing.some((m) => m.includes("Card ID")));
     assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
     assert.ok(r.labelsAdd.includes("needs-info"));
+    assert.ok(r.completenessLabelsAdd.includes("needs-info"));
     assert.ok(r.labelsAdd.includes("title-needs-fix"));
+    assert.ok(r.completenessLabelsAdd.includes("title-needs-fix"));
   });
 
   it("accepts no-image checkbox", () => {

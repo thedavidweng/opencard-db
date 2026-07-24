@@ -22,9 +22,13 @@ Easier review, clearer Sources, fewer merge conflicts.
    ```
    (or `Update card: …` when editing an existing card)
 6. For images: official bank URL when stable, or — **best local mirror** — Apple Pay `cardBackgroundCombined@2x.png` from your Mac Wallet (`images/us-my-card-slug.png` → CI **lossless WebP**, native size). See `images/README.md` and `docs/research/apple-pay-card-art.md`. Do not scrape Apple remotely.
-7. Wait for checks: Validate, PR Triage, and (if you uploaded images) Optimize Images.
+7. Wait for checks:
+   - **Validate** — schema / tests
+   - **Labels** — classifies the PR (`new-card`, `US`/`CA`/`CN`, `enhancement`, …). Always green.
+   - **Form check** — required title + beginner form fields. **Fails** if something is missing (and leaves a sticky comment).
+   - **Optimize Images** — only if you uploaded a raster under `images/`
 
-CI will **comment and label** the PR if the title or form fields are incomplete (`needs-info`, `US` / `CA` / `CN`, etc.).
+If **Form check** is red, expand the sticky comment and fill the listed fields — you do not need to worry about Labels for that.
 
 ## Requirements
 

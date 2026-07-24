@@ -18,10 +18,35 @@ export type TriageResult = {
   isCardPr: boolean;
   isNewCard: boolean;
   missing: string[];
+  /** Kind / region only — used by the Labels CI job (never fails the PR). */
+  classificationLabelsAdd: string[];
+  classificationLabelsRemove: string[];
+  /** Form / title completeness — used by the Form check CI job. */
+  completenessLabelsAdd: string[];
+  completenessLabelsRemove: string[];
+  /** Union of both (tests / legacy). */
   labelsAdd: string[];
   labelsRemove: string[];
   commentMarkdown: string;
 };
+
+/** Labels that classify what the PR is (not whether the form is complete). */
+export const CLASSIFICATION_LABELS = [
+  "US",
+  "CA",
+  "CN",
+  "new-card",
+  "enhancement",
+  "documentation",
+] as const;
+
+/** Labels that signal missing title/form fields. */
+export const COMPLETENESS_LABELS = [
+  "needs-info",
+  "pr-form-incomplete",
+  "missing-sources",
+  "title-needs-fix",
+] as const;
 
 const CARD_TITLE =
   /^(Add|Update) card:\s*([a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*)$/;
@@ -219,19 +244,19 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     }
   }
 
-  const labelsAdd: string[] = [];
-  const labelsRemove: string[] = [];
+  const classificationLabelsAdd: string[] = [];
+  const classificationLabelsRemove: string[] = [];
 
   for (const r of ["US", "CA", "CN"] as const) {
-    if (regions.includes(r)) labelsAdd.push(r);
-    else labelsRemove.push(r);
+    if (regions.includes(r)) classificationLabelsAdd.push(r);
+    else classificationLabelsRemove.push(r);
   }
 
   // Card vs feature separation:
   // - add-card → new-card (+ region from data/images paths)
   // - non-card meta → documentation | enhancement (never new-card)
-  if (isNewCard) labelsAdd.push("new-card");
-  else labelsRemove.push("new-card");
+  if (isNewCard) classificationLabelsAdd.push("new-card");
+  else classificationLabelsRemove.push("new-card");
 
   const isDocsMeta =
     !isCardPr && titleInfo.kind === "meta" && /^docs(\(|:)/i.test(title.trim());
@@ -240,44 +265,59 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     titleInfo.kind === "meta" &&
     /^(ci|chore|fix|test|refactor)(\(|:)/i.test(title.trim());
 
-  if (isDocsMeta) labelsAdd.push("documentation");
-  else labelsRemove.push("documentation");
+  if (isDocsMeta) classificationLabelsAdd.push("documentation");
+  else classificationLabelsRemove.push("documentation");
 
-  if (isFeatureMeta) labelsAdd.push("enhancement");
-  else labelsRemove.push("enhancement");
+  if (isFeatureMeta) classificationLabelsAdd.push("enhancement");
+  else classificationLabelsRemove.push("enhancement");
 
-  if (!titleInfo.ok) labelsAdd.push("title-needs-fix");
-  else labelsRemove.push("title-needs-fix");
+  const completenessLabelsAdd: string[] = [];
+  const completenessLabelsRemove: string[] = [];
+
+  if (!titleInfo.ok) completenessLabelsAdd.push("title-needs-fix");
+  else completenessLabelsRemove.push("title-needs-fix");
 
   if (missing.length > 0) {
-    labelsAdd.push("needs-info");
-    labelsAdd.push("pr-form-incomplete");
+    completenessLabelsAdd.push("needs-info");
+    completenessLabelsAdd.push("pr-form-incomplete");
   } else {
-    labelsRemove.push("needs-info");
-    labelsRemove.push("pr-form-incomplete");
+    completenessLabelsRemove.push("needs-info");
+    completenessLabelsRemove.push("pr-form-incomplete");
   }
 
-  if (
-    missing.some((m) => m.toLowerCase().includes("source"))
-  ) {
-    labelsAdd.push("missing-sources");
+  if (missing.some((m) => m.toLowerCase().includes("source"))) {
+    completenessLabelsAdd.push("missing-sources");
   } else {
-    labelsRemove.push("missing-sources");
+    completenessLabelsRemove.push("missing-sources");
   }
+
+  const labelsAdd = [
+    ...new Set([...classificationLabelsAdd, ...completenessLabelsAdd]),
+  ];
+  const labelsRemove = [
+    ...new Set([
+      ...classificationLabelsRemove,
+      ...completenessLabelsRemove,
+    ]),
+  ].filter((l) => !labelsAdd.includes(l));
 
   const lines: string[] = [];
-  lines.push("<!-- opencard-triage -->");
-  lines.push("### OpenCard PR helper");
+  lines.push("<!-- opencard-form-check -->");
+  lines.push("### PR Form check");
   lines.push("");
   if (missing.length === 0 && titleInfo.ok) {
     lines.push("> [!TIP]");
     lines.push(
-      "> Looks complete enough for review. Thanks! Maintainers may still ask follow-ups.",
+      "> Form looks complete enough for review. Thanks! Maintainers may still ask follow-ups.",
     );
   } else {
     lines.push("> [!IMPORTANT]");
     lines.push(
-      "> Please fix the items below, then push a new commit (or edit the PR title/body). This comment updates automatically.",
+      "> The **Form check** CI job failed. Fix the items below, then push a new commit (or edit the PR title/body). This comment updates automatically.",
+    );
+    lines.push("");
+    lines.push(
+      "> *(The separate **Labels** job only classifies the PR — `new-card` / `US` / `enhancement` / … — and does not fail on missing fields.)*",
     );
     lines.push("");
     lines.push("**Missing / invalid:**");
@@ -295,7 +335,7 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     "- Images: official URL, or Apple Pay `cardBackgroundCombined@2x.png` under `images/` (CI → lossless WebP). Prefer Apple Pay extracts over unknown crops.",
   );
   lines.push(
-    "- Labels: new cards get `new-card` (+ `US`/`CA`/`CN`); feature/CI work gets `enhancement`; docs get `documentation`.",
+    "- CI: **Labels** = what kind of PR; **Form check** = required fields filled.",
   );
   if (suggestedTitle) {
     lines.push(`- Suggested title from your files/form: \`${suggestedTitle}\``);
@@ -312,10 +352,16 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     isCardPr,
     isNewCard,
     missing,
-    labelsAdd: [...new Set(labelsAdd)],
-    labelsRemove: [...new Set(labelsRemove)].filter(
-      (l) => !labelsAdd.includes(l),
+    classificationLabelsAdd: [...new Set(classificationLabelsAdd)],
+    classificationLabelsRemove: [...new Set(classificationLabelsRemove)].filter(
+      (l) => !classificationLabelsAdd.includes(l),
     ),
+    completenessLabelsAdd: [...new Set(completenessLabelsAdd)],
+    completenessLabelsRemove: [...new Set(completenessLabelsRemove)].filter(
+      (l) => !completenessLabelsAdd.includes(l),
+    ),
+    labelsAdd,
+    labelsRemove,
     commentMarkdown: lines.join("\n"),
   };
 }
