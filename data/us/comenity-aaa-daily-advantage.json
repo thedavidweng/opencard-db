@@ -1,51 +1,107 @@
 {
   "id": "us-comenity-aaa-daily-advantage",
   "schema_version": "1.0.0",
-  "name": "AAA Credit Card",
+  "name": "AAA Daily Advantage Visa Signature® Credit Card",
   "localized_names": {
-    "en": "AAA Credit Card"
+    "en": "AAA Daily Advantage Visa Signature® Credit Card"
   },
   "country": "us",
-  "issuer": "Comenity",
+  "issuer": "Comenity Capital Bank",
   "issuer_id": "comenity",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "signature",
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0.0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0.0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.49,
+      "max": 31.49,
       "type": "variable"
     },
-    "notes": "See Comenity for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 32.49,
+      "max": 32.49,
+      "type": "variable"
+    },
+    "notes": "Annual Percentage Rate (APR) for Purchases: 17.49% to 31.49%, based upon your creditworthiness. This APR will vary with the market based on the Prime Rate. APR for Balance Transfers: 17.49% to 31.49%. APR for Cash Advances: 32.49%. Minimum Interest Charge: $3.00. Balance Transfer Fee: Either $10 or 5% of the amount of each transfer, whichever is greater. Cash Advance Fee: Either $10.00 or 5.0% of the amount of each cash advance, whichever is greater. Late Payment Fee: Up to $41.00. Returned Payment Fee: Up to $41.00."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "Foreign Transaction: None. 0% Foreign transaction fees."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "cash_back",
+    "currency_label": "Cash Back",
+    "structure": "multi",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "description": "1% cash back on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": {
+          "amount": 500.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": {
+          "amount": 500.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": {
+          "amount": 500.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash Back can be redeemed as Statement Credits, Direct Deposit, Rewards and qualifying purchases at participating AAA locations. Cash back rewards will expire 5 years after the date that they are posted to your Cash Back balance."
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "USD statement credit",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Start earning today with a $100 statement credit after you spend $1,000 on your card in the first 90 days of account opening.",
+    "as_of": "2026-07-24"
+  },
   "benefits": [],
   "travel_perks": {
     "lounge_access": null,
@@ -64,7 +120,9 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.ace.aaa.com/financial/aaa-credit-card.html"
+    "https://www.ace.aaa.com/financial/aaa-credit-card.html",
+    "https://finance.aaa.com/credit-card",
+    "https://d.comenity.net/legaldocs/advantage/legal-documents/cca"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=0 but value not confirmed in page text."
+  "notes": "The original product_url (ace.aaa.com) returned empty content (JavaScript-rendered page). Data verified from finance.aaa.com/credit-card (official AAA financial page) and d.comenity.net legal docs (official Comenity Capital Bank credit card agreement). Name updated from 'AAA Credit Card' to 'AAA Daily Advantage Visa Signature® Credit Card'. Network tier updated from 'world' to 'signature' based on official page stating 'Visa Signature®'. Issuer updated from 'Comenity' to 'Comenity Capital Bank' per official legal docs."
 }
