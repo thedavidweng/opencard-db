@@ -138,5 +138,6 @@ jobs:
 
       - name: Fail when title or required form fields are incomplete
         run: |
-          code=$(node -e "const t=require('/tmp/triage.json'); process.exit((!t.titleOk || (t.missing||[]).length)?1:0)")
-          exit "$code"
+          # Exit directly from node — do not capture process.exit() via $(...),
+          # which only captures stdout and leaves an empty exit argument.
+          node -e "const t=require('/tmp/triage.json'); process.exit((!t.titleOk || (t.missing||[]).length) ? 1 : 0)"
