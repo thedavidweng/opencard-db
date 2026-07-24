@@ -10,13 +10,13 @@
   "issuer_id": "capital-one",
   "network": "visa",
   "network_tier": "signature",
-  "type": "credit",
+  "type": "charge",
   "status": "active",
   "annual_fee": {
     "amount": 150.0,
     "currency": "USD",
     "first_year": 150.0,
-    "waiver_conditions": null
+    "waiver_conditions": "Annual fee refunded every year you spend at least $150,000."
   },
   "apr": {
     "purchase": {
@@ -24,26 +24,33 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "Purchase APR not stated on product page. Card is a charge card designed to be paid in full; you have the option to carry over a portion of your balance with interest if needed."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. Pay zero foreign transaction fees on purchases made outside of the United States."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "excellent",
+    "notes": "Credit Level: Excellent."
   },
   "rewards": {
-    "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
+    "currency": "cash_back",
+    "currency_label": "Cash back",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "points_per_dollar": 2.0,
+      "description": "Earn unlimited 2% cash back for your business on every purchase, everywhere, no limits or category restrictions."
     },
-    "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Get cash back rewards for any amount at any time with no expiration date for the life of the account. Redeem through statement credit or check."
   },
   "signup_bonus": {
     "amount": 2000.0,
@@ -51,10 +58,81 @@
     "spend_required": 30000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "$2,000 cash bonus when you spend $30,000 in the first 3 months",
+    "description": "Earn a $2,000 cash bonus when you spend $30,000 in the first 3 months. Earn an additional $2,000 bonus for every $500,000 spent in the first year. Plus a one-time $500 Capital One Business Travel credit when you spend $30,000 in the first 3 months.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "annual-fee-refund",
+      "title": "Annual fee refund",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get your $150 annual fee refunded every year you spend at least $150,000."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay zero foreign transaction fees on purchases made outside of the United States."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 fraud liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your card is lost or stolen, you can get an emergency replacement and a cash advance."
+    },
+    {
+      "id": "free-employee-cards",
+      "title": "Free employee cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Track employee spending while earning all the rewards from their purchases."
+    },
+    {
+      "id": "virtual-card-numbers",
+      "title": "Virtual card numbers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Make safer payments online without exposing your actual card number with merchants."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get free additional warranty and protection on eligible items that you purchase with your card."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Our business cards offer services to help you during auto-related emergencies, such as jump-starting, tire changing and towing."
+    },
+    {
+      "id": "year-end-summaries",
+      "title": "Year-end summaries",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an itemized report of your spending to simplify budgeting and tax time."
+    },
+    {
+      "id": "capital-one-business-travel",
+      "title": "Capital One Business Travel",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save time and money with complimentary access to an all-in-one business travel management solution."
+    },
+    {
+      "id": "accounts-payable-expense-management",
+      "title": "Accounts Payable and Expense Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to Accounts Payable and Expense Management solutions integrated directly within your Capital One Business account."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -74,5 +152,5 @@
   "sources": [
     "https://www.capitalone.com/small-business/credit-cards/spark-cash-plus/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Capital One product page on 2026-07-24. Changed type from 'credit' to 'charge' per page describing it as 'Spark Cash Plus charge card' and 'designed to be paid in full'. Purchase APR not stated — preserved as null. Corrected rewards currency from 'miles' to 'cash_back' per page."
 }
