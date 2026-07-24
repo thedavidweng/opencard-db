@@ -1,9 +1,9 @@
 {
   "id": "us-barclays-aadvantage-aviator-world-elite-business",
   "schema_version": "1.0.0",
-  "name": "AAdvantage® Aviator® Business World Elite Mastercard®",
+  "name": "AAdvantage® Aviator® World Elite Business Mastercard®",
   "localized_names": {
-    "en": "AAdvantage® Aviator® Business World Elite Mastercard®"
+    "en": "AAdvantage® Aviator® World Elite Business Mastercard®"
   },
   "country": "us",
   "issuer": "Barclays",
@@ -67,5 +67,5 @@
     "https://creditcards.aa.com/barclay-credit-card-aviator-business-american-airlines-aadvantage/",
     "https://creditcards.aa.com/barclay-credit-cards-aviator-american-airlines-aadvantage/aviator-business/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures. Clue listed annual_fee=95 but value not confirmed in page text."
+  "notes": "FETCH_FAILED: Both the product_url and terms_url resolve to a legacy Barclays page that only states the issuing bank has changed from Barclays to Citibank, N.A. (Citi). No card-specific details (APR, fees, rewards, benefits, signup bonus) are available on the page. The page says: 'The bank that issues the AAdvantage® Aviator® Mastercard® has changed from Barclays Bank Delaware (Barclays) to Citibank, N.A. (Citi).' All card-specific fields remain null. The card name 'AAdvantage® Aviator® World Elite Business Mastercard®' and network_tier 'world_elite' are confirmed from the page title."
 }
