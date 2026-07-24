@@ -1,9 +1,9 @@
 {
   "id": "us-barclays-jetblue",
   "schema_version": "1.0.0",
-  "name": "See if you pre",
+  "name": "JetBlue Card",
   "localized_names": {
-    "en": "See if you pre"
+    "en": "JetBlue Card"
   },
   "country": "us",
   "issuer": "Barclays",
@@ -20,15 +20,20 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See Barclays for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": null
+    },
+    "notes": "APR for purchases: 19.49% to 29.49% variable based on creditworthiness. 0% introductory APR on balance transfers for first 12 billing cycles within 45 days of account opening, then 19.49% to 29.49%. APR for cash advances: 29.74%. APRs vary with the market based on the Prime Rate. Minimum monthly interest charge $1.00. Balance transfer fee: 5% (min. $5). Cash advance fee: 5% (min. $10)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "Disclosure states 'Foreign transaction fee: 0%.' Page also states 'No foreign transaction fees on international purchases.'"
   },
   "credit_required": {
     "score_band": null,
@@ -36,14 +41,25 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "TrueBlue points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "1X points on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "3X points on eligible JetBlue purchases",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "2X points at restaurants and eligible grocery stores",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points never expire. No blackout dates — any seat, any time on JetBlue-operated flights. Points pooling with family and friends. Cash + Points starting from as few as 500 points."
   },
   "signup_bonus": {
     "amount": 10000.0,
@@ -51,10 +67,81 @@
     "spend_required": 1000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 10,000 bonus points after spending $1,000 on purchases in the first 90 days",
+    "description": "Earn 10,000 bonus points after spending $1,000 on purchases in the first 90 days.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "fifty-off-inflight",
+      "title": "50% Savings on Inflight Purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "50% savings on eligible inflight purchases on JetBlue-operated flights."
+    },
+    {
+      "id": "mosaic-status-faster",
+      "title": "Mosaic Status Faster",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn toward Mosaic with every purchase."
+    },
+    {
+      "id": "no-blackout-dates",
+      "title": "No Blackout Dates",
+      "category": "other",
+      "source": "issuer",
+      "description": "Any seat, any time, on JetBlue-operated flights."
+    },
+    {
+      "id": "redeem-any-seat",
+      "title": "Redeem for Any Seat, Any Time",
+      "category": "other",
+      "source": "issuer",
+      "description": "Points required for an Award flight will vary based on the published base fare at the time of booking."
+    },
+    {
+      "id": "points-never-expire",
+      "title": "Points Never Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "Your points will be ready whenever you are."
+    },
+    {
+      "id": "points-pooling",
+      "title": "Points Pooling",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn & share points with family and friends."
+    },
+    {
+      "id": "cash-plus-points",
+      "title": "Cash + Points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay for your flight with almost any combination of dollars and TrueBlue points – starting with as few as 500 points."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Means you're not responsible for unauthorized charges."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "points-payback",
+      "title": "Points Payback",
+      "category": "other",
+      "source": "issuer",
+      "description": "Points Payback allows you to redeem points for a statement credit."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -74,5 +161,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/jetblue-card/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Name corrected from 'See if you pre' to 'JetBlue Card' based on page H1 heading. network_tier 'world' preserved but NOT re-verified — page does not explicitly state 'World' tier. All rates/fees/benefits verified from fetched page."
 }
