@@ -31,10 +31,12 @@ Browse Cards offline under `data/{us,ca,cn}/`.
 | Path | Purpose |
 |------|---------|
 | `data/{us,ca,cn}/` | One JSON file per Card (system of record) |
+| `templates/card.template.json` | Beginner starter Card JSON |
 | `schema.json` | JSON Schema contract |
-| `scripts/` | Validate + build KV indexes |
+| `scripts/` | Validate, indexes, PR triage, image optimize |
+| `images/` | Optional local card-face mirrors (CI → WebP) |
 | `worker/` | Cloudflare Worker `/v1` API |
-| `tests/` | Schema, index, and API contract tests |
+| `tests/` | Schema, index, API, and PR UX contract tests |
 
 ## API (self-host or official)
 

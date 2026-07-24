@@ -22,6 +22,16 @@ npm i -D sharp
 npm run embed:default-card
 ```
 
+## Uploading in a Pull Request
+
+1. Name the file after the card id, e.g. `us-chase-sapphire-preferred.png` (`.jpg` / `.gif` also OK).
+2. Add it under this `images/` folder in your PR.
+3. CI runs **Optimize Images**: converts to **WebP**, max width **800px**, quality ~80 (same idea as Astro/image pipelines).
+4. Set `image.local_path` in the card JSON to `images/us-chase-sapphire-preferred.webp` after CI finishes (or run `npm run optimize:images` locally first).
+5. Keep `image.attribution` with the issuer copyright notice.
+
+You can also paste a preview into the PR description on GitHub; that preview is **not** stored in the database — use an official URL or an `images/` upload for the Card record.
+
 ## Copyright
 
 All **issuer** card face artwork remains the **copyright of the issuing bank or network**. OpenCard DB does **not** claim ownership of those images and does not relicense them under MIT or CC BY 4.0.
