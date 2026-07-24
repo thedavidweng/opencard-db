@@ -147,6 +147,20 @@
       }
     },
     {
+      "id": "travel-emergency-assistance",
+      "title": "Travel and Emergency Assistance Services",
+      "category": "other",
+      "source": "issuer",
+      "description": "Available for covered Wells Fargo cardholders. Count on emergency assistance while traveling anywhere in the world."
+    },
+    {
+      "id": "roadside-dispatch",
+      "title": "Roadside Dispatch®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Available whenever you're in need of a tow - for eligible Wells Fargo cardholders 24/7 with no membership required."
+    },
+    {
       "id": "visa-signature-concierge",
       "title": "Visa Signature Concierge Services",
       "category": "other",
@@ -173,7 +187,9 @@
       "No foreign transaction fee",
       "$50 annual airline statement credit",
       "Visa Signature Luxury Hotel Collection",
-      "Visa Signature Concierge Services"
+      "Visa Signature Concierge Services",
+      "Travel and Emergency Assistance Services",
+      "Roadside Dispatch"
     ]
   },
   "official_url": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card",
@@ -185,7 +201,7 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card/",
+    "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card",
     "https://www.wellsfargo.com/credit-cards/autograph-journey-visa/terms/?product_code=CC&subproduct_code=MT"
   ],
   "notes": "Distinct from the no-annual-fee Wells Fargo Autograph Card; Autograph Journey has a $95 annual fee and travel-focused earn rates."
