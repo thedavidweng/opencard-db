@@ -1,9 +1,9 @@
 {
   "id": "us-discover-it-cash-back-18-month-intro-balance-transfer-offer",
   "schema_version": "1.0.0",
-  "name": "Cash Back Credit Cards",
+  "name": "Discover it Cash Back Credit Card",
   "localized_names": {
-    "en": "Cash Back Credit Cards"
+    "en": "Discover it Cash Back Credit Card"
   },
   "country": "us",
   "issuer": "Discover",
@@ -20,33 +20,106 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.49,
+      "max": 26.49,
       "type": "variable"
     },
-    "notes": "See Discover for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months on purchases and balance transfers; 17.49% to 26.49% variable APR after that. Cash Advance APR: 28.49% variable. Cash advance fee: Either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee: 3% fee on the amounts transferred within the first 15 months; 5% on the amount of each transferred balance that posts to your account at a Promotional APR that we may offer you. Annual Fee: $0."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not explicitly stated on the page."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "cash_back",
+    "currency_label": "Cash Back",
     "structure": "single",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "description": "Earn 1% cash back on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": {
+          "amount": null,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back redemption options may include a statement credit, a cash deposit into your bank account, gift cards, and payment for purchases. Rewards won't expire for the life of the account. Unlimited Cashback Match: Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": null,
+    "unit": "Cashback Match",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": 12,
+    "description": "Unlimited Cashback Match: Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match. No purchase minimums.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "cashback-match",
+      "title": "Unlimited Cashback Match",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
+    },
+    {
+      "id": "zero-fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're never responsible for unauthorized purchases on your Discover Card."
+    },
+    {
+      "id": "ssn-alerts",
+      "title": "Free Social Security number alerts",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an alert if we find your Social Security number on the dark web. Sign up to activate this free benefit."
+    },
+    {
+      "id": "freeze-account",
+      "title": "Freeze your account",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you misplace your card, you can prevent new purchases and cash advances in seconds with the on/off switch on our mobile app and website."
+    },
+    {
+      "id": "fico-score",
+      "title": "FICO® Score and more",
+      "category": "other",
+      "source": "issuer",
+      "description": "It's free and checking your score doesn't hurt your credit."
+    },
+    {
+      "id": "customer-service-24-7",
+      "title": "Real human customer service 24/7",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can talk to a real human on our customer service team any time."
+    },
+    {
+      "id": "tap-to-pay",
+      "title": "Tap to pay",
+      "category": "other",
+      "source": "issuer",
+      "description": "It's fast and easy to pay with your contactless Discover Card."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +139,5 @@
   "sources": [
     "https://www.discover.com/credit-cards/cash-back/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page on 2026-07-24. The page lists two cards (Discover it Cash Back and Discover it Chrome Gas & Restaurants); this entry focuses on the Discover it Cash Back card. The card slug references '18-month intro balance transfer offer' but the page currently shows 15 months intro APR. FX fee not stated on page. Name updated from 'Cash Back Credit Cards' (page title) to 'Discover it Cash Back Credit Card' (specific card name on page)."
 }
