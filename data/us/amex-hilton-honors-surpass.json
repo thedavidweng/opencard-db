@@ -13,66 +13,177 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": 150.0,
+    "amount": 150,
     "currency": "USD",
-    "first_year": 0.0,
-    "waiver_conditions": "$0 intro annual fee for the first year, then regular annual fee"
+    "first_year": 0,
+    "waiver_conditions": "$0 introductory annual fee for the first year, then $150."
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "See American Express for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR based on creditworthiness and the Prime Rate. Cash advance APR 28.74%. Penalty APR 29.99%. Accurate as of 07/24/26."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fees from American Express."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated; Amex generally requires good to excellent credit."
   },
   "rewards": {
-    "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
+    "currency": "hilton_honors_points",
+    "currency_label": "Hilton Honors Bonus Points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 3,
+      "description": "3x on all other eligible purchases"
     },
-    "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "categories": [
+      {
+        "label": "Hilton hotels and resorts",
+        "points_per_dollar": 12,
+        "cap": null
+      },
+      {
+        "label": "U.S. restaurants, including takeout and delivery",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "U.S. gas stations",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "U.S. online retail purchases",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors."
   },
   "signup_bonus": {
-    "amount": 130000.0,
-    "unit": "points",
-    "spend_required": 3000.0,
+    "amount": 130000,
+    "unit": "hilton_honors_bonus_points",
+    "spend_required": 3000,
     "spend_currency": "USD",
     "months": 6,
-    "description": "earn 130,000 Hilton Honors Bonus Points after you spend $3,000 in eligible purchases on your Card in the first 6 months",
-    "as_of": "2026-07-24"
+    "description": "Earn 130,000 Hilton Honors Bonus Points after spending $3,000 in first 6 months.",
+    "as_of": "2026-07-23"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "hilton-gold-status",
+      "title": "Hilton Honors Gold Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Hilton Honors Gold status. 80% Bonus on Base Points per stay, space-available room upgrades, daily food and beverage credit or complimentary continental breakfast. Spend $40,000 in a calendar year to upgrade to Diamond Status."
+    },
+    {
+      "id": "hilton-credit",
+      "title": "$200 Hilton Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Up to $50 in statement credits each quarter for purchases directly with Hilton properties, up to $200/year."
+    },
+    {
+      "id": "free-night-reward",
+      "title": "Free Night Reward after $15K Spend",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn one Free Night Reward after spending $15,000 on eligible purchases in a calendar year. Redeemable for one standard accommodation. Expires one year from issuance."
+    },
+    {
+      "id": "national-car-rental-status",
+      "title": "National Car Rental Emerald Club Executive Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary National Car Rental Emerald Club Executive status with Executive Area Access."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees from American Express."
+    },
+    {
+      "id": "car-rental-insurance",
+      "title": "Car Rental Loss & Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary coverage for damage or theft of rental vehicle. Not available in Australia, Italy, and New Zealand."
+    },
+    {
+      "id": "global-assist",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 emergency assistance when traveling more than 100 miles from home."
+    },
+    {
+      "id": "baggage-insurance",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for lost, damaged, or stolen baggage. Up to $1,250 for carry-on and $500 for checked baggage."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against accidental damage or theft for up to 90 days. Up to $1,000 per purchase, $50,000 per calendar year."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Matches Original Manufacturer's Warranty for up to one additional year on covered purchases."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
-    "hotel_status": null,
-    "other": []
+    "hotel_status": "Hilton Honors Gold Status (complimentary); upgrade to Diamond after $40,000 spend in a calendar year",
+    "other": [
+      "No foreign transaction fees",
+      "$200 Hilton Credit ($50/quarter)",
+      "Free Night Reward after $15,000 spend",
+      "National Car Rental Emerald Club Executive Status",
+      "Baggage Insurance Plan",
+      "Car Rental Loss & Damage Insurance",
+      "Global Assist Hotline"
+    ]
   },
-  "official_url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
   "image": {
     "url": null,
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
-    "https://www.hilton.com/en/hilton-honors/credit-cards/"
+    "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-surpass-credit-card/36182-11-0/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Product name Surpass is not a Network Tier; network_tier is none for Amex network packages. $0 intro annual fee first year, then $150. Signup bonus and benefits verified on official Amex product page."
 }
