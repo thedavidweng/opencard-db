@@ -1,0 +1,73 @@
+{
+  "id": "us-amex-cash-magnet",
+  "schema_version": "1.0.0",
+  "name": "American Express Cash Magnet® Card",
+  "localized_names": { "en": "American Express Cash Magnet® Card" },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": null, "max": null, "type": "variable" },
+    "notes": "Cardmember agreement states purchase APR is variable at Prime Rate + 12.74% to Prime Rate + 21.74%; see American Express for current terms."
+  },
+  "fx_fee": {
+    "percent": 2.7,
+    "notes": "Foreign transaction fee is 2.7% of each transaction after conversion to U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on purchases"
+    },
+    "categories": [],
+    "redemption_notes": null
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "intro-plan-it-fees",
+      "title": "Buy Now, Pay Later intro Plan It fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "$0 Buy Now, Pay Later intro Plan It fees on plans created during the first 15 months from the date of account opening; terms apply."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/cash-magnet/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/cash-magnet.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/cash-magnet/",
+    "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q1-pdf-cmas/cps-lending/amex-cash-magnet-04-17-2025.pdf"
+  ],
+  "notes": "Welcome/signup bonus is null because the official product page did not publish a stable cash signup bonus; the page only showed a Buy Now, Pay Later intro Plan It fee offer."
+}
