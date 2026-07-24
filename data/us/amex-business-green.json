@@ -24,11 +24,11 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See American Express for current APR; terms vary by applicant/offer."
+    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not mentioned on product page."
   },
   "credit_required": {
     "score_band": null,
@@ -36,17 +36,38 @@
   },
   "rewards": {
     "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
+    "currency_label": "Membership Rewards points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 1,
+      "description": "1X points on other eligible purchases made using your Business Green Rewards Card."
     },
-    "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "categories": [
+      {
+        "label": "Flights & Prepaid Hotels on AmexTravel.com",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards points can be used for travel, gift cards, statement credits, and more."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "pay-over-time",
+      "title": "Pay Over Time Feature",
+      "category": "other",
+      "source": "issuer",
+      "description": "The Pay Over Time feature lets you carry a balance with interest on eligible charges, up to your Pay Over Time Limit. Eligible charges will be automatically added to a Pay Over Time balance."
+    },
+    {
+      "id": "no-preset-spending-limit",
+      "title": "No Preset Spending Limit",
+      "category": "other",
+      "source": "issuer",
+      "description": "The spending limit is flexible. Unlike a traditional card with a set limit, the amount you can spend adapts based on factors such as your purchase, payment, and credit history."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +87,5 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page. Page does not display annual fee, APR, or welcome offer in static HTML. Only earn rates and basic benefits (Pay Over Time, No Preset Spending Limit) are visible."
 }
