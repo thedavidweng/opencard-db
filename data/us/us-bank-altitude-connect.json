@@ -24,36 +24,127 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See U.S. Bank for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "0% intro APR on purchases and balance transfers for the first 15 billing cycles. After that, a variable APR applies (specific rate shown as placeholder on page, not a numeric value)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees when making purchases outside the United States."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "In general, our credit card products are for customers with a credit score in the good to excellent range."
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "Altitude points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "1X point on all other eligible purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Choose from several rewards options: deposit to eligible U.S. Bank account, travel, merchandise, charitable donations, gift cards. Points do not expire as long as account is active. Real-Time Rewards available for instant redemption."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 20000.0,
+    "unit": "points",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 20,000 bonus points. Just spend $1,000 in Net Purchases in the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "airport-lounge-access",
+      "title": "Airport lounge access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy airport lounge access and TSA PreCheck® plus, have peace of mind with travel protections."
+    },
+    {
+      "id": "tsa-precheck",
+      "title": "TSA PreCheck®",
+      "category": "other",
+      "source": "issuer",
+      "description": "TSA PreCheck® benefit included."
+    },
+    {
+      "id": "global-connectivity",
+      "title": "Global Connectivity",
+      "category": "other",
+      "source": "issuer",
+      "description": "Stay connected in over 175 countries with complimentary GigSky global mobile data plans."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy no foreign transaction fees when making purchases outside the United States."
+    },
+    {
+      "id": "extendpay",
+      "title": "Pay over time with U.S. Bank ExtendPay® Plan",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening."
+    },
+    {
+      "id": "real-time-rewards",
+      "title": "Real-Time Rewards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Shop nearly anywhere and redeem points instantly for your purchases from your mobile device. Must register card and have enough points to cover entire purchase."
+    }
+  ],
   "travel_perks": {
-    "lounge_access": null,
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Airport lounge access"
+    },
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "No foreign transaction fees",
+      "Global Connectivity — complimentary GigSky global mobile data in 175+ countries",
+      "Travel protections"
+    ]
   },
   "official_url": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
   "image": {
@@ -66,5 +157,5 @@
   "sources": [
     "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official U.S. Bank product page. Visa Signature confirmed from page title. APR specific rate not available (shown as placeholder on page). Credit required 'good to excellent' from FAQ section."
 }
