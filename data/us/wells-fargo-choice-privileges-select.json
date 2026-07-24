@@ -118,8 +118,8 @@
   ],
   "travel_perks": {
     "lounge_access": null,
-    "tsa_precheck_credit": {},
-    "global_entry_credit": {},
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": "Choice Privileges Platinum Elite (20 Elite Qualifying Nights/year)",
     "other": [
