@@ -6,65 +6,119 @@
     "en": "Avianca LifeMiles"
   },
   "country": "us",
-  "issuer": "First Bankcard",
-  "issuer_id": "first-bankcard",
-  "network": "mastercard",
-  "network_tier": "world",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
+  "network": "amex",
+  "network_tier": "none",
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 99,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 99,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See First Bankcard for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "19.49% to 29.49% variable based on creditworthiness. Varies with Prime Rate. No penalty APR. Late payment fee up to $8. Prime Rate 6.75% as of Dec 16, 2025. Accurate as of March 9, 2026."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "$0 foreign transaction fee."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "unknown",
+    "notes": "Not explicitly stated by issuer. Offers subject to credit approval."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "lifemiles",
+    "currency_label": "LifeMiles (Avianca frequent flyer miles)",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "1x mile per $1 on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Avianca airlines and LifeMiles purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Groceries and restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles do not expire for as long as you use your card. 5% redemption discount on Avianca airlines flights booked through lifemiles.com."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 40000,
+    "unit": "lifemiles",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 40,000 miles after spending $3,000 in the first 90 days.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "avianca-silver-status",
+      "title": "Avianca Silver Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Avianca Silver elite status with lounge access, premium seat selection, additional checked bags, and priority boarding. Auto-renews each year if card is active."
+    },
+    {
+      "id": "redemption-discount",
+      "title": "5% Redemption Discount on Avianca Flights",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "5% redemption discount on Avianca airlines flights booked through lifemiles.com."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fee on purchases made outside the US."
+    },
+    {
+      "id": "miles-no-expire",
+      "title": "Miles Do Not Expire",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Miles do not expire for as long as you use your card."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
-    "free_checked_bags": null,
+    "free_checked_bags": "Yes — via Avianca Silver elite status (additional checked bags)",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Avianca Silver elite status (lounge access, premium seat selection, priority boarding)",
+      "5% redemption discount on Avianca award flights",
+      "No foreign transaction fees"
+    ]
   },
-  "official_url": "https://www.lifemiles.com/discover/landing-page/avianca-lifemiles-creditcard",
+  "official_url": "https://www.cardless.com/cards/avianca/lifemiles",
   "image": {
     "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
     "attribution": "© First Bankcard",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-23",
   "sources": [
-    "https://www.lifemiles.com/discover/landing-page/avianca-lifemiles-creditcard"
+    "https://www.cardless.com/cards/avianca/lifemiles",
+    "https://www.cardless.com/rates-and-fees-99-avianca"
   ],
-  "notes": "Conservative scaffold: official product HTML was not fully fetchable from the automation environment (403/timeout/DNS). Sources cite the official issuer/partner URL; fee/earn/signup left null or unconfirmed — human spot-check required before merge. Third-party clue DBs were not used as sources."
+  "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless, NOT First Bankcard/FNBO. Old Banco Popular cards discontinued March 2022. American Express network (not Visa/Mastercard). network_tier is none for Amex."
 }
