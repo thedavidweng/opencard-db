@@ -20,30 +20,46 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.24,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "notes": "19.24% to 27.74% variable APR. APR is Min of (Prime + 12.49%) and 29.99% to Min of (Prime + 20.99%) and 29.99%."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees when you use your card for purchases made outside the United States."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "ihg_points",
+    "currency_label": "IHG One Rewards points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 3.0,
+      "description": "Earn 3X points per $1 spent on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for free nights at IHG Hotels and Resorts. Redeem 3 nights, get 4th night free on consecutive four-night stays. Anniversary Free Night each year with 40,000 point redemption cap. Free nights at 4,700+ IHG properties globally."
   },
   "signup_bonus": {
     "amount": 140000.0,
@@ -51,17 +67,107 @@
     "spend_required": 4000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 140,000 Bonus Points after spending $4,000 in the first 3 months",
+    "description": "Earn 140,000 Bonus Points after spending $4,000 in the first 3 months from account opening. Plus, earn 10,000 bonus points after you add an employee card in the first 3 months.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "platinum-elite-status",
+      "title": "Automatic Platinum Elite Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "As an IHG One Rewards Premier Business credit cardmember, you qualify for automatic IHG One Rewards Platinum Elite status for as long as you remain a Premier Business cardmember."
+    },
+    {
+      "id": "anniversary-free-night",
+      "title": "Anniversary Free Night",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earned each account anniversary year with a current point redemption cap of 40,000 points. You can also use existing points to redeem your Anniversary Night at hotels above the 40,000 point redemption level."
+    },
+    {
+      "id": "fourth-night-free",
+      "title": "Redeem 3 Nights, Get 4th Night Free",
+      "category": "other",
+      "source": "issuer",
+      "description": "When you redeem points for a consecutive four-night IHG hotel stay, you can receive a fourth Reward Night free redeemable at that same hotel during that same stay."
+    },
+    {
+      "id": "100-statement-credit-10k-bonus",
+      "title": "$100 Statement Credit and 10,000 Bonus Points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn a $100 statement credit and 10,000 bonus points each calendar year after you spend $20,000."
+    },
+    {
+      "id": "save-20-percent-points",
+      "title": "Save 20% on Reward Points Purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save 20% when you purchase points with your IHG One Rewards Premier Business Credit Card."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "You will pay no foreign transaction fees when you use your card for purchases made outside the United States."
+    },
+    {
+      "id": "global-entry-tsa-precheck-nexus-credit",
+      "title": "Global Entry, TSA PreCheck or NEXUS Statement Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Statement Credit of up to $120 every 4 years as reimbursement for the application fee charged to your card."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $10,000 per item."
+    },
+    {
+      "id": "trip-cancellation-insurance",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your trip is canceled or cut short by sickness, severe weather and other covered situations, you can be reimbursed up to $1,500 per person and $6,000 per trip for your pre-paid, non-refundable travel expenses."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get one-year complimentary DashPass, membership for both DoorDash and Caviar. Activate by Dec 31, 2027. Plus, DashPass members get up to $10 off quarterly on non-restaurant DoorDash orders through Dec 31, 2027."
+    },
+    {
+      "id": "instacart-credit",
+      "title": "Instacart Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a monthly $10 Instacart credit, up to $120 annually, plus a complimentary 3-month Instacart+ membership. Benefits end 12/31/27."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
     "free_checked_bags": null,
-    "hotel_status": null,
-    "other": []
+    "hotel_status": "Automatic IHG One Rewards Platinum Elite Status",
+    "other": [
+      "Anniversary Free Night (up to 40,000 points)",
+      "Fourth Night Free on reward stays",
+      "No Foreign Transaction Fees"
+    ]
   },
   "official_url": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier",
   "image": {
@@ -74,5 +180,5 @@
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/IHG/business-premier"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Rewards currency corrected from ultimate_rewards to ihg_points. Network preserved as mastercard/world (page references Mastercard trademarks)."
 }
