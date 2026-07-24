@@ -33,7 +33,7 @@ Browse Cards offline under `data/{us,ca,cn}/`.
 | `data/{us,ca,cn}/` | One JSON file per Card (system of record) |
 | `templates/card.template.json` | Beginner starter Card JSON |
 | `schema.json` | JSON Schema contract |
-| `scripts/` | Validate, indexes, PR triage, image optimize |
+| `scripts/` | Validate, indexes, PR Labels / Form check, image optimize |
 | `images/` | Optional local card-face mirrors (CI → WebP) |
 | `worker/` | Cloudflare Worker `/v1` API |
 | `tests/` | Schema, index, API, and PR UX contract tests |
