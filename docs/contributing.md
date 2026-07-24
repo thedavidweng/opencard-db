@@ -25,10 +25,13 @@ Easier review, clearer Sources, fewer merge conflicts.
 7. Wait for checks:
    - **Validate** — schema / tests
    - **Labels** — classifies the PR (`new-card`, `US`/`CA`/`CN`, `enhancement`, …). Always green.
-   - **Form check** — required title + beginner form fields. **Fails** if something is missing, and posts a **sticky PR comment** listing what to fix (Homebrew-style). Edit the same PR — do not open a new one.
+   - **Form check** — required title + beginner form fields. **Fails** if something is missing, and posts a **sticky PR comment** listing what to fix (Homebrew-style). Also catches:
+     - duplicate open Add/Update PRs for the same card (links the other PR)
+     - Add vs Update mismatches (card already on / missing from main)
+     - Update PRs whose **Last verified** is not **newer** than the version on main
    - **Optimize Images** — only if you uploaded a raster under `images/`
 
-If **Form check** is red, expand the sticky comment and fill the listed fields — you do not need to worry about Labels for that.
+If **Form check** is red, expand the sticky comment and follow the numbered fixes — edit **this** PR; don’t open a duplicate.
 
 ## Requirements
 

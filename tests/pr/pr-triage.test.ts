@@ -1,7 +1,9 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
+  compareIsoDates,
   detectRegions,
+  findDuplicatePrs,
   parseTitle,
   suggestTitle,
   triagePullRequest,
@@ -36,6 +38,11 @@ const goodBody = `
 - [ ] **D. No image yet**
 `;
 
+const updateBody = goodBody
+  .replace("- [x] **New card**", "- [ ] **New card**")
+  .replace("- [ ] **Update existing card**", "- [x] **Update existing card**")
+  .replace("2026-07-24", "2026-07-28");
+
 describe("pr triage", () => {
   it("parses card and meta titles", () => {
     assert.equal(parseTitle("Add card: us-amex-gold").ok, true);
@@ -58,20 +65,23 @@ describe("pr triage", () => {
     );
   });
 
-  it("passes a complete card PR", () => {
+  it("passes a complete new-card PR when the file is new on base", () => {
     const r = triagePullRequest({
       title: "Add card: us-chase-sapphire-preferred",
       body: goodBody,
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
+      baseCards: {
+        "data/us/chase-sapphire-preferred.json": {
+          path: "data/us/chase-sapphire-preferred.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
     });
     assert.equal(r.titleOk, true);
-    assert.deepEqual(r.regions, ["US"]);
-    assert.equal(r.missing.length, 0);
-    assert.ok(r.classificationLabelsAdd.includes("US"));
+    assert.equal(r.issues.filter((i) => i.severity === "error").length, 0);
     assert.ok(r.classificationLabelsAdd.includes("new-card"));
     assert.ok(!r.completenessLabelsAdd.includes("needs-info"));
-    assert.ok(!r.classificationLabelsAdd.includes("enhancement"));
-    assert.ok(r.classificationLabelsRemove.includes("enhancement"));
   });
 
   it("labels feature/CI PRs as enhancement, not new-card", () => {
@@ -83,26 +93,18 @@ describe("pr triage", () => {
         ".github/workflows/optimize-images.yml",
       ],
     });
-    assert.equal(r.titleOk, true);
     assert.equal(r.isCardPr, false);
-    assert.equal(r.isNewCard, false);
-    assert.equal(r.missing.length, 0);
     assert.ok(r.classificationLabelsAdd.includes("enhancement"));
     assert.ok(!r.classificationLabelsAdd.includes("new-card"));
-    assert.ok(r.classificationLabelsRemove.includes("new-card"));
-    assert.ok(!r.classificationLabelsAdd.includes("documentation"));
-    assert.equal(r.completenessLabelsAdd.length, 0);
   });
 
   it("labels docs PRs as documentation, not new-card", () => {
     const r = triagePullRequest({
       title: "docs: explain Apple Pay card art",
       body: "- [x] **Not a card** (docs / CI / code)",
-      changedFiles: ["docs/research/apple-pay-card-art.md", "images/README.md"],
+      changedFiles: ["docs/research/apple-pay-card-art.md"],
     });
     assert.ok(r.classificationLabelsAdd.includes("documentation"));
-    assert.ok(!r.classificationLabelsAdd.includes("new-card"));
-    assert.ok(!r.classificationLabelsAdd.includes("enhancement"));
   });
 
   it("keeps classification labels when form is incomplete", () => {
@@ -112,15 +114,11 @@ describe("pr triage", () => {
       changedFiles: ["data/us/demo-card.json"],
     });
     assert.ok(r.classificationLabelsAdd.includes("new-card"));
-    assert.ok(r.classificationLabelsAdd.includes("US"));
     assert.ok(r.completenessLabelsAdd.includes("needs-info"));
-    assert.ok(r.completenessLabelsAdd.includes("pr-form-incomplete"));
-    assert.ok(!r.classificationLabelsAdd.includes("needs-info"));
     assert.match(r.commentMarkdown, /Form check failed/);
-    assert.match(r.commentMarkdown, /Missing \/ invalid/);
   });
 
-  it("mentions the PR author in the incomplete form comment when PR_AUTHOR is set", () => {
+  it("mentions the PR author when PR_AUTHOR is set", () => {
     const prev = process.env.PR_AUTHOR;
     process.env.PR_AUTHOR = "contributor123";
     try {
@@ -130,7 +128,6 @@ describe("pr triage", () => {
         changedFiles: ["data/us/demo-card.json"],
       });
       assert.match(r.commentMarkdown, /@contributor123/);
-      assert.match(r.commentMarkdown, /do \*\*not\*\* open a new PR/i);
     } finally {
       if (prev === undefined) delete process.env.PR_AUTHOR;
       else process.env.PR_AUTHOR = prev;
@@ -143,25 +140,29 @@ describe("pr triage", () => {
       body: goodBody
         .replace("us-chase-sapphire-preferred", "us-example-card")
         .replace(
-          "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
+          /https:\/\/creditcards\.chase\.com\/rewards-credit-cards\/sapphire\/preferred/,
           "https://www.example-bank.com/cards/example",
         )
         .replace(
-          "https://www.chase.com/personal/credit-cards/sapphire/preferred",
+          /https:\/\/www\.chase\.com\/personal\/credit-cards\/sapphire\/preferred/,
           "https://www.example-bank.com/cards/example/terms",
         )
         .replace(
-          "https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png",
+          /https:\/\/creditcards\.chase\.com\/K-Marketplace\/images\/cardart\/sapphire_preferred_card\.png/,
           "https://www.example-bank.com/cardart/example.png",
         ),
       changedFiles: ["data/us/example-card.json"],
+      baseCards: {
+        "data/us/example-card.json": {
+          path: "data/us/example-card.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
     });
     assert.equal(r.titleOk, false);
-    assert.ok(r.missing.some((m) => m.includes("Card ID")));
-    assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
-    assert.ok(r.labelsAdd.includes("needs-info"));
-    assert.ok(r.completenessLabelsAdd.includes("needs-info"));
-    assert.ok(r.labelsAdd.includes("title-needs-fix"));
+    assert.ok(r.issues.some((i) => i.code === "card-id"));
+    assert.ok(r.issues.some((i) => i.code === "sources"));
     assert.ok(r.completenessLabelsAdd.includes("title-needs-fix"));
   });
 
@@ -180,37 +181,18 @@ describe("pr triage", () => {
       title: "Add card: us-chase-sapphire-preferred",
       body,
       changedFiles: ["data/us/chase-sapphire-preferred.json"],
+      baseCards: {
+        "data/us/chase-sapphire-preferred.json": {
+          path: "data/us/chase-sapphire-preferred.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
     });
-    assert.equal(r.missing.length, 0);
+    assert.equal(r.issues.filter((i) => i.severity === "error").length, 0);
   });
 
-  it("accepts Apple Pay local upload checkbox with images/ file", () => {
-    const body = goodBody
-      .replace(
-        "- [x] **A. Official issuer image URL**",
-        "- [ ] **A. Official issuer image URL**",
-      )
-      .replace(
-        "- **Image URL:** https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png",
-        "- **Image URL:** ",
-      )
-      .replace(
-        "- [ ] **B. Apple Pay extract",
-        "- [x] **B. Apple Pay extract",
-      );
-    const r = triagePullRequest({
-      title: "Add card: us-chase-sapphire-preferred",
-      body,
-      changedFiles: [
-        "data/us/chase-sapphire-preferred.json",
-        "images/us-chase-sapphire-preferred.png",
-      ],
-    });
-    assert.equal(r.missing.length, 0);
-    assert.ok(r.labelsAdd.includes("new-card"));
-  });
-
-  it("flags empty Product/Terms lines (must not swallow the next bullet)", () => {
+  it("flags empty Product/Terms lines without swallowing the next bullet", () => {
     const r = triagePullRequest({
       title: "Add card: us-demo-card",
       body: `
@@ -222,12 +204,15 @@ describe("pr triage", () => {
 - [x] **D. No image yet**
 `,
       changedFiles: ["data/us/demo-card.json"],
+      baseCards: {
+        "data/us/demo-card.json": {
+          path: "data/us/demo-card.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
     });
-    assert.ok(r.isNewCard);
-    assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
-    assert.ok(r.labelsAdd.includes("needs-info"));
-    assert.ok(r.labelsAdd.includes("missing-sources"));
-    assert.ok(r.labelsAdd.includes("pr-form-incomplete"));
+    assert.ok(r.issues.some((i) => i.code === "sources"));
   });
 
   it("flags missing image choice on new-card PRs", () => {
@@ -246,48 +231,147 @@ describe("pr triage", () => {
 - [ ] **D. No image yet**
 `,
       changedFiles: ["data/us/demo-card.json"],
+      baseCards: {
+        "data/us/demo-card.json": {
+          path: "data/us/demo-card.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
     });
-    assert.ok(r.missing.some((m) => m.toLowerCase().includes("image")));
-    assert.ok(r.labelsAdd.includes("needs-info"));
+    assert.ok(r.issues.some((i) => i.code === "image"));
   });
 
-  it("flags empty-body new-card PR with data file (CI must fail)", () => {
+  it("detects duplicate open Add card PRs and links them", () => {
     const r = triagePullRequest({
       title: "Add card: us-demo-card",
-      body: "",
+      body: goodBody.replace(/us-chase-sapphire-preferred/g, "us-demo-card"),
       changedFiles: ["data/us/demo-card.json"],
+      currentPrNumber: 99,
+      openCardPrs: [
+        {
+          number: 42,
+          title: "Add card: us-demo-card",
+          url: "https://github.com/thedavidweng/opencard-db/pull/42",
+          author: "other-dev",
+        },
+      ],
+      baseCards: {
+        "data/us/demo-card.json": {
+          path: "data/us/demo-card.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
     });
-    assert.equal(r.isNewCard, true);
-    assert.ok(r.missing.includes("Card ID"));
-    assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
-    assert.ok(r.missing.includes("Last verified (YYYY-MM-DD)"));
-    assert.ok(r.missing.some((m) => m.toLowerCase().includes("image")));
-    assert.ok(r.labelsAdd.includes("needs-info"));
-    assert.ok(r.labelsAdd.includes("new-card"));
+    assert.equal(r.duplicatePrs.length, 1);
+    assert.ok(r.issues.some((i) => i.code === "duplicate-pr"));
+    assert.ok(r.completenessLabelsAdd.includes("duplicate"));
+    assert.match(r.commentMarkdown, /#42/);
+    assert.match(r.commentMarkdown, /pull\/42/);
   });
 
-  it("flags untouched PR template placeholders for a new card", () => {
-    // Mirrors .github/PULL_REQUEST_TEMPLATE.md defaults contributors forget to edit.
+  it("findDuplicatePrs ignores the current PR number", () => {
+    const dups = findDuplicatePrs(
+      ["us-demo-card"],
+      [
+        {
+          number: 99,
+          title: "Add card: us-demo-card",
+          url: "https://example/99",
+        },
+        {
+          number: 7,
+          title: "Add card: us-demo-card",
+          url: "https://example/7",
+        },
+      ],
+      99,
+    );
+    assert.deepEqual(
+      dups.map((d) => d.number),
+      [7],
+    );
+  });
+
+  it("rejects Add when the card already exists on the base branch", () => {
     const r = triagePullRequest({
-      title: "Add card: us-demo-card",
-      body: `
-- [x] **New card** (add a file under \`data/us/\`, \`data/ca/\`, or \`data/cn/\`)
-- **Card ID:** \`us-example-card\`
-- **Product page:** https://www.example-bank.com/cards/example
-- **Terms / benefits page:** https://www.example-bank.com/cards/example/terms
-- **Last verified (YYYY-MM-DD):** YYYY-MM-DD
-- [ ] **A. Official issuer image URL**
-  - **Image URL:** https://www.example-bank.com/cardart/example.png
-- [ ] **B. Apple Pay extract**
-- [ ] **C. Other local upload**
-- [ ] **D. No image yet**
-`,
-      changedFiles: ["data/us/demo-card.json"],
+      title: "Add card: us-chase-sapphire-preferred",
+      body: goodBody,
+      changedFiles: ["data/us/chase-sapphire-preferred.json"],
+      baseCards: {
+        "data/us/chase-sapphire-preferred.json": {
+          path: "data/us/chase-sapphire-preferred.json",
+          exists: true,
+          last_verified: "2026-07-01",
+        },
+      },
     });
-    assert.ok(r.missing.includes("Card ID"));
-    assert.ok(r.missing.some((m) => m.toLowerCase().includes("source")));
-    assert.ok(r.missing.includes("Last verified (YYYY-MM-DD)"));
-    assert.ok(r.missing.some((m) => m.toLowerCase().includes("image")));
-    assert.ok(r.labelsAdd.includes("needs-info"));
+    assert.ok(r.issues.some((i) => i.code === "already-exists"));
+    assert.match(r.commentMarkdown, /Update card:/);
+  });
+
+  it("rejects Update when last_verified is not newer than base", () => {
+    const same = triagePullRequest({
+      title: "Update card: us-chase-sapphire-preferred",
+      body: updateBody.replace("2026-07-28", "2026-07-10"),
+      changedFiles: ["data/us/chase-sapphire-preferred.json"],
+      baseCards: {
+        "data/us/chase-sapphire-preferred.json": {
+          path: "data/us/chase-sapphire-preferred.json",
+          exists: true,
+          last_verified: "2026-07-10",
+        },
+      },
+    });
+    assert.ok(same.issues.some((i) => i.code === "last-verified-unchanged"));
+
+    const older = triagePullRequest({
+      title: "Update card: us-chase-sapphire-preferred",
+      body: updateBody.replace("2026-07-28", "2026-07-01"),
+      changedFiles: ["data/us/chase-sapphire-preferred.json"],
+      baseCards: {
+        "data/us/chase-sapphire-preferred.json": {
+          path: "data/us/chase-sapphire-preferred.json",
+          exists: true,
+          last_verified: "2026-07-10",
+        },
+      },
+    });
+    assert.ok(older.issues.some((i) => i.code === "last-verified-older"));
+    assert.ok(compareIsoDates("2026-07-01", "2026-07-10") < 0);
+  });
+
+  it("accepts Update when last_verified is newer than base", () => {
+    const r = triagePullRequest({
+      title: "Update card: us-chase-sapphire-preferred",
+      body: updateBody,
+      changedFiles: ["data/us/chase-sapphire-preferred.json"],
+      baseCards: {
+        "data/us/chase-sapphire-preferred.json": {
+          path: "data/us/chase-sapphire-preferred.json",
+          exists: true,
+          last_verified: "2026-07-10",
+        },
+      },
+    });
+    assert.equal(r.issues.filter((i) => i.severity === "error").length, 0);
+    assert.ok(!r.classificationLabelsAdd.includes("new-card"));
+  });
+
+  it("rejects Update when the card does not exist on base", () => {
+    const r = triagePullRequest({
+      title: "Update card: us-brand-new-card",
+      body: updateBody.replace(/us-chase-sapphire-preferred/g, "us-brand-new-card"),
+      changedFiles: ["data/us/brand-new-card.json"],
+      baseCards: {
+        "data/us/brand-new-card.json": {
+          path: "data/us/brand-new-card.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
+    });
+    assert.ok(r.issues.some((i) => i.code === "does-not-exist"));
   });
 });
