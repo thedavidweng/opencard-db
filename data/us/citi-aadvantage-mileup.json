@@ -9,44 +9,97 @@
   "issuer": "Citi",
   "issuer_id": "citi",
   "network": "mastercard",
-  "network_tier": "world_elite",
+  "network_tier": "none",
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": 500.0,
+    "amount": 0.0,
     "currency": "USD",
-    "first_year": 500.0,
+    "first_year": 0.0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "notes": "See Citi for current APR; terms vary by applicant/offer."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR for purchases and balance transfers 19.49%–29.49% based on creditworthiness. Cash advance APR 29.74% variable. Penalty APR up to 29.99%. Minimum interest charge $0.50. Citi Flex Pay Plan Fee up to 1.72% monthly."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 3.0,
+    "notes": "3% of the U.S. dollar amount of each transaction."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "aadvantage_miles",
+    "currency_label": "AAdvantage® miles",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1.0,
+      "description": "1 AAdvantage® mile for every $1 spent on all other purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earn AAdvantage® miles on eligible purchases. Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster. No mileage cap — no limit to the number of AAdvantage® miles you can earn."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 15000.0,
+    "unit": "aadvantage_miles",
+    "spend_required": 500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 15,000 American Airlines AAdvantage® bonus miles after $500 in purchases within the first 3 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "inflight-savings",
+      "title": "25% Savings on Inflight Food and Beverage",
+      "category": "other",
+      "source": "issuer",
+      "description": "25% savings on inflight food and beverage purchases on American Airlines flights when you use your credit card."
+    },
+    {
+      "id": "authorized-users",
+      "title": "Add Authorized Users at No Additional Charge",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn more AAdvantage® miles with purchases made by authorized users added to your account at no additional charge."
+    },
+    {
+      "id": "no-mileage-cap",
+      "title": "No Mileage Cap",
+      "category": "other",
+      "source": "issuer",
+      "description": "No limit to the number of AAdvantage® miles you can earn."
+    },
+    {
+      "id": "loyalty-points",
+      "title": "AAdvantage Loyalty Points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -67,5 +120,5 @@
     "https://creditcards.aa.com/citi-mileup-card-american-airlines-direct/",
     "https://creditcards.aa.com/credit-cards/citi-mileup-card-american-airlines-direct/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "CORRECTIONS: Annual fee corrected from $500 to $0 (page says '$0 annual fee', 'Annual fee – none'). network_tier changed from world_elite to null (page does not specify Mastercard tier for MileUp card). Verified from official AA credit cards page. Purchase APR 19.49%-29.49% variable, cash advance 29.74%, penalty up to 29.99%, foreign transaction fee 3%. 15,000 bonus miles after $500 spend in 3 months. 2x at grocery stores, 2x on AA purchases, 1x on all other."
 }
