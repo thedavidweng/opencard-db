@@ -1,9 +1,9 @@
 {
   "id": "us-wells-fargo-reflect",
   "schema_version": "1.0.0",
-  "name": "Our Lowest and Longest Intro APR for 21 Months",
+  "name": "Wells Fargo Reflect® Card",
   "localized_names": {
-    "en": "Our Lowest and Longest Intro APR for 21 Months"
+    "en": "Wells Fargo Reflect® Card"
   },
   "country": "us",
   "issuer": "Wells Fargo",
@@ -20,33 +20,70 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.49,
+      "max": 28.24,
       "type": "variable"
     },
-    "notes": "See Wells Fargo for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "0% intro APR for 21 months from account opening on purchases and qualifying balance transfers. 17.49%, 23.99% or 28.24% variable APR thereafter. Balance transfers made within 120 days from account opening qualify for the introductory rate."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 3.0,
+    "notes": "Foreign Currency Conversion fee of 3% for each transaction amount converted to U.S. dollars."
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "none",
+    "currency_label": "No rewards program (balance transfer / low APR card)",
     "structure": "single",
     "base_rate": {
       "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "description": "No rewards earn rate advertised; card is focused on low intro APR / balance transfer."
     },
     "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "redemption_notes": "No rewards program advertised on product page."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "cellular-telephone-protection",
+      "title": "Cellular Telephone Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $600 of cell phone protection against damage or theft. Subject to a $25 deductible."
+    },
+    {
+      "id": "roadside-dispatch",
+      "title": "Roadside Dispatch®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Available whenever you're in need of a tow – for eligible Wells Fargo cardholders 24/7 with no membership required."
+    },
+    {
+      "id": "my-wells-fargo-deals",
+      "title": "My Wells Fargo Deals",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to personalized deals from a variety of merchants. Activate deals, then shop, dine, or enjoy an experience using an eligible Wells Fargo credit card to earn cash back as an account credit."
+    },
+    {
+      "id": "zero-liability-protection",
+      "title": "Zero Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Built-in protection features ensure that you won't be held responsible for unauthorized transactions, as long as they're reported promptly."
+    },
+    {
+      "id": "credit-close-up",
+      "title": "Credit Close-Up®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enroll to receive monthly FICO® Score updates and personalized credit insights. Complimentary to Wells Fargo Online® customers."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -67,5 +104,5 @@
     "https://creditcards.wellsfargo.com/reflect-visa-credit-card/",
     "https://creditcards.wellsfargo.com/reflect-visa-credit-card/?sub_channel=WEB&vendor_code=WF"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Wells Fargo product page 2026-07-24. Name updated to 'Wells Fargo Reflect® Card'. APR (17.49%-28.24% variable, 0% intro 21 months) and 3% FX fee confirmed from page."
 }
