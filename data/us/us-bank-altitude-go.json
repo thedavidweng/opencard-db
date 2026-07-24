@@ -24,11 +24,11 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See U.S. Bank for current APR; terms vary by applicant/offer."
+    "notes": "0% intro APR on purchases and balance transfers for the first 15 billing cycles. After that, a variable APR applies (amount not displayed on page). Introductory rate does not apply to Cash Advances. Balance Transfer fee of 5% of each transfer amount, $5 minimum."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not displayed on page."
   },
   "credit_required": {
     "score_band": null,
@@ -36,17 +36,54 @@
   },
   "rewards": {
     "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency_label": "U.S. Bank Altitude Go Points",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "1X point on all other eligible purchases."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points can be redeemed through the U.S. Bank Rewards Center. Refer to Program Rules for official list of qualifying streaming services merchants."
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "points",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 20,000 bonus points after you make $1,000 or more in total eligible Net Purchases within 90 days of Account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "streaming-credit",
+      "title": "$15 Streaming Services Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "An automatic statement credit of $15 per 12-month period for annual streaming service purchases, applied within 2 statement billing cycles following 11 consecutive calendar months of eligible streaming service purchases such as Netflix, Hulu, Apple Music, if the Account is in good standing."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -64,7 +101,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html"
+    "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
+    "https://www.usbank.com/credit-cards.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Product URL redirected to general U.S. Bank Credit Cards page, but the Altitude Go card IS listed there with full details. Annual fee amount not displayed (shown as placeholder $). APR shown as 0% intro for 15 billing cycles then variable (specific rate not displayed)."
 }
