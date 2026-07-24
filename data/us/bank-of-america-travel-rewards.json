@@ -95,7 +95,11 @@
     ]
   },
   "official_url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
-  "image": null,
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
