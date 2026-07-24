@@ -24,36 +24,214 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See American Express for current APR; terms vary by applicant/offer."
+    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No Foreign Transaction Fees — 'Use your Delta SkyMiles® Platinum Business Card globally without incurring foreign transaction fees.'"
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
+    "currency": "delta_skymiles",
+    "currency_label": "Delta SkyMiles",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 1,
+      "description": "1X miles on other purchases made using the Delta SkyMiles® Platinum Business Card."
     },
-    "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "categories": [
+      {
+        "label": "Delta & Hotels",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Eligible Transit, U.S. Shipping, & Large Purchases",
+        "points_per_dollar": 1.5,
+        "cap": {
+          "amount": 100000,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "resy-credit",
+      "title": "$120 Resy Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn up to $120 in statement credits annually after making eligible Resy purchases on your Card. Up to $10 per month in statement credits on eligible purchases at over 10,000 qualifying U.S. Resy restaurants. Enrollment Required."
+    },
+    {
+      "id": "delta-stays-statement-credit",
+      "title": "Up to $200 Delta Stays Statement Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Annual statement credit of up to $200 after using your Card to book prepaid hotels or vacation rentals through Delta Stays on delta.com."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "$120 Rideshare Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Earn up to $10 back in statement credits each month on U.S. rideshare purchases with select providers. Up to $120 back annually. Enrollment Required."
+    },
+    {
+      "id": "mqd-boost",
+      "title": "Medallion Qualification Dollars (MQD) Boost",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Get $1 MQD for each $20 in purchases on your Card in a calendar year, getting you closer to Medallion Status for next Medallion Year quicker."
+    },
+    {
+      "id": "mqd-headstart",
+      "title": "MQD Headstart",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Receive $2,500 Medallion Qualification Dollars with MQD Headstart each Medallion Qualification Year."
+    },
+    {
+      "id": "companion-certificate",
+      "title": "Annual Companion Certificate",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive a Companion Certificate on a Delta Main domestic, Caribbean, or Central American round-trip flight each year after renewal of your Card. Requires payment of government-imposed taxes and fees of between $22 and $250."
+    },
+    {
+      "id": "take-15-off-award-travel",
+      "title": "Take 15% Off Award Travel",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 15% anytime you book Award Travel with miles on Delta flights when using delta.com and the Fly Delta app. Discount not applicable to partner-operated flights or to taxes and fees."
+    },
+    {
+      "id": "complimentary-upgrade-list",
+      "title": "Complimentary Upgrade List",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Card Members with an eligible ticket will be added to the Complimentary Upgrade list, after Delta SkyMiles Medallion Members and Reserve Card Members."
+    },
+    {
+      "id": "check-two-bags-free",
+      "title": "Check Two Bags Free",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "First checked bag flies free on international and domestic Delta flights. Second bag flies free on domestic Delta flights too."
+    },
+    {
+      "id": "zone-5-priority-boarding",
+      "title": "Zone 5 Priority Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Board early, secure a spot for your carry-on, and enjoy plenty of time to settle in before takeoff on your next Delta flight with Zone 5 Priority Boarding."
+    },
+    {
+      "id": "global-entry-tsa-precheck-credit",
+      "title": "Fee Credit for Global Entry or TSA PreCheck",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive either a $120 statement credit for a Global Entry application fee or a statement credit up to $85 for a TSA PreCheck application fee every 4 years, when charged to your Card."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Use your Delta SkyMiles® Platinum Business Card globally without incurring foreign transaction fees."
+    },
+    {
+      "id": "pay-with-miles",
+      "title": "Pay with Miles",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Take up to $50 off the cost of your flight for every 5,000 miles you redeem with Pay with Miles when you book on delta.com."
+    },
+    {
+      "id": "hertz-five-star-status",
+      "title": "Hertz Five Star Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Transform your car rental experience with Hertz Five Star Status, compliments of your Card. Enrollment in Hertz Gold Plus Rewards required."
+    },
+    {
+      "id": "expanded-buying-power",
+      "title": "Expanded Buying Power",
+      "category": "other",
+      "source": "issuer",
+      "description": "Gives you the freedom to spend above your credit limit and get business done. The amount you can spend above your credit limit is flexible."
+    },
+    {
+      "id": "global-assist-hotline",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "Whenever you travel more than 100 miles from home, Global Assist Hotline is available for 24/7 emergency assistance and coordination services, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Let employees buy what they need within limits you set. You'll earn miles on their purchases, and receive real-time alerts."
+    },
+    {
+      "id": "connect-to-quickbooks",
+      "title": "Connect to QuickBooks",
+      "category": "other",
+      "source": "issuer",
+      "description": "Streamline expenses from your enrolled Business Card when your transactions are sent to your Intuit QuickBooks."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "The terms of the Original Manufacturer's Warranty can be extended up to one additional year. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can help protect Covered Purchases for up to 90 days from the Covered Purchase date if it is stolen or accidentally damaged. Coverage limited up to $1,000 per Covered Purchase, up to $50,000 per Card Member account per calendar year."
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a covered reason delays your trip more than 6 hours, can help reimburse certain additional expenses purchased on the same Eligible Card, up to $300 per trip, maximum 2 claims per Eligible Card per 12 consecutive month period. Coverage provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for up to $1,250 for carry-on Baggage and up to $500 for checked Baggage, in excess of coverage provided by the Common Carrier. For New York State residents, $10,000 aggregate maximum limit for all Covered Persons per Covered Trip."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
-    "free_checked_bags": null,
+    "tsa_precheck_credit": {},
+    "global_entry_credit": {},
+    "free_checked_bags": "True",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Hertz Five Star Status",
+      "Annual Companion Certificate",
+      "Zone 5 Priority Boarding",
+      "Complimentary Upgrade List",
+      "Take 15% Off Award Travel",
+      "MQD Headstart ($2,500)",
+      "MQD Boost ($1 MQD per $20 spent)"
+    ]
   },
   "official_url": "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-platinum/",
   "image": {
@@ -66,5 +244,5 @@
   "sources": [
     "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-platinum/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page. APR not shown on page (behind Rates & Fees link). Welcome offer not displayed in page text. Rewards currency is Delta SkyMiles (not Membership Rewards)."
 }
