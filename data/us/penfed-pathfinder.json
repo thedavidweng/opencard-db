@@ -134,7 +134,6 @@
   "travel_perks": {
     "lounge_access": {
       "program": "Priority Pass Select",
-      "visits_per_year": null,
       "notes": "Complimentary annual membership; access to 1,200+ VIP lounges worldwide; accompanying guest included; lounge visit fees apply"
     },
     "tsa_precheck_credit": {
