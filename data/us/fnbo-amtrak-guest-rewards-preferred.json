@@ -29,11 +29,11 @@
       "max": 27.99,
       "type": "variable"
     },
-    "notes": "26.49% variable APR. Official FNBO Summary of Credit Terms is JS-rendered; APR confirmed via third-party reviews. Balance Transfer Fee: 5% (min $10). Cash Advance Fee: 5% (min $5)."
+    "notes": "APR not visible on the product page (Summary of Credit Terms is a JS-rendered link at firstbankcard.com/lynx). Existing values (26.49% purchase, 27.99% cash advance, variable) preserved from prior verification and NOT re-verified on 2026-07-24. Balance Transfer Fee: 5% (min $10). Cash Advance Fee: 5% (min $5)."
   },
   "fx_fee": {
     "percent": 0,
-    "notes": "No foreign transaction fees on purchases made outside the United States."
+    "notes": "No foreign transaction fees on purchases made with your card outside the United States."
   },
   "credit_required": {
     "score_band": "unknown",
@@ -68,7 +68,7 @@
     "spend_currency": "USD",
     "months": 3,
     "description": "Earn up to 30,000 bonus points: 25,000 points after spending $1,500, plus 5,000 points after adding an authorized user. All within first 3 billing cycles. Apply by 9/2/26.",
-    "as_of": "2026-07-23"
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -125,7 +125,7 @@
       "title": "No Foreign Transaction Fees",
       "category": "other",
       "source": "issuer",
-      "description": "No foreign transaction fees on purchases made outside the United States."
+      "description": "No foreign transaction fees on purchases made with your card outside the United States."
     }
   ],
   "travel_perks": {
@@ -148,10 +148,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "https://media.amtrak.com/2022/10/amtrak-and-first-national-bank-of-omaha-launch-two-new-amtrak-guest-rewards-mastercards/"
   ],
-  "notes": "Issued by FNBO. $99 annual fee. Preferred tier with companion coupon, one-class upgrade, station lounge pass, and 20% onboard rebate. No foreign transaction fees."
+  "notes": "Issued by FNBO. $99 annual fee. Preferred tier with companion coupon, one-class upgrade, station lounge pass, and 20% onboard rebate. No foreign transaction fees. APR not re-verified on 2026-07-24 (Summary of Credit Terms is JS-rendered)."
 }
