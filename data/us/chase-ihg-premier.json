@@ -2,7 +2,9 @@
   "id": "us-chase-ihg-premier",
   "schema_version": "1.0.0",
   "name": "IHG One Rewards Premier Credit Card",
-  "localized_names": { "en": "IHG One Rewards Premier Credit Card" },
+  "localized_names": {
+    "en": "IHG One Rewards Premier Credit Card"
+  },
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
@@ -17,11 +19,22 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 19.24, "max": 27.74, "type": "variable" },
-    "cash_advance": { "min": 28.49, "max": 28.49, "type": "variable" },
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
     "notes": "Purchase and cash advance APRs vary with the market based on the Prime Rate."
   },
-  "fx_fee": { "percent": 0, "notes": "Foreign transaction fee: None." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fee: None."
+  },
   "credit_required": {
     "score_band": null,
     "notes": null
@@ -111,6 +124,20 @@
       "description": "Qualify for Diamond Elite Status through December 31 of the following year after $40,000 or more in purchases each calendar year."
     },
     {
+      "id": "save-20-percent-points-purchases",
+      "title": "Save 20% on Reward Points Purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 20% when you purchase points with your IHG One Rewards Premier credit card."
+    },
+    {
+      "id": "early-access-reward-night-sales",
+      "title": "Early Access to IHG Reward Night Sales",
+      "category": "other",
+      "source": "co-brand",
+      "description": "As an IHG One Rewards Cardmember, you are eligible for early access to Reward Night sales each year."
+    },
+    {
       "id": "global-entry-tsa-nexus",
       "title": "Global Entry, TSA PreCheck or NEXUS statement credit",
       "category": "credit",
@@ -151,6 +178,20 @@
       "category": "insurance",
       "source": "issuer",
       "description": "Reimburses eligible prepaid, non-refundable travel expenses up to $5,000 per covered traveler and $10,000 per trip for covered cancellations or interruptions."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get one-year complimentary DashPass for both DoorDash and Caviar, providing unlimited deliveries with $0 delivery fees and lower service fees on eligible orders. Activate by Dec 31, 2027. Plus, DashPass members get up to $10 off quarterly on non-restaurant DoorDash orders through Dec 31, 2027."
+    },
+    {
+      "id": "instacart-credit",
+      "title": "Instacart+ and monthly Instacart credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive a monthly $10 Instacart credit, up to $120 annually, plus a complimentary 3-month Instacart+ membership. Benefits end 12/31/27."
     }
   ],
   "travel_perks": {
@@ -171,7 +212,11 @@
       "Anniversary Free Night with a current point redemption cap of 40,000 points",
       "Redeem 3 Nights, Get 4th Night Free on eligible IHG reward stays",
       "Up to $50 United TravelBank Cash each calendar year after registration",
-      "No foreign transaction fees"
+      "No foreign transaction fees",
+      "Save 20% on Reward Points Purchases",
+      "Early Access to IHG Reward Night Sales",
+      "DoorDash DashPass (activate by Dec 31, 2027)",
+      "Instacart monthly $10 credit up to $120 annually (ends 12/31/27)"
     ]
   },
   "official_url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
