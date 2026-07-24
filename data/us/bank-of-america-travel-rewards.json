@@ -2,7 +2,9 @@
   "id": "us-bank-of-america-travel-rewards",
   "schema_version": "1.0.0",
   "name": "Bank of America® Travel Rewards Credit Card",
-  "localized_names": { "en": "Bank of America® Travel Rewards Credit Card" },
+  "localized_names": {
+    "en": "Bank of America® Travel Rewards Credit Card"
+  },
   "country": "us",
   "issuer": "Bank of America",
   "issuer_id": "bank-of-america",
@@ -17,11 +19,18 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 17.49, "max": 27.49, "type": "variable" },
+    "purchase": {
+      "min": 17.49,
+      "max": 27.49,
+      "type": "variable"
+    },
     "cash_advance": null,
     "notes": "0% intro APR for the first 15 billing cycles for purchases and qualifying balance transfers; then a variable APR applies."
   },
-  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
   "credit_required": {
     "score_band": null,
     "notes": null
@@ -81,7 +90,9 @@
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": ["No foreign transaction fees"]
+    "other": [
+      "No foreign transaction fees"
+    ]
   },
   "official_url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
   "image": null,
