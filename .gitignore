@@ -1,17 +1,14 @@
 # Dependencies
 node_modules/
-
 # Build / generated indexes
 dist/
 *.tsbuildinfo
-
 # Environment / secrets
 .env
 .env.*
 !.env.example
 .dev.vars
 .wrangler/
-
 # OS / editor
 .DS_Store
 Thumbs.db
@@ -19,10 +16,9 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
-
 # Test / coverage
 coverage/
-
 # Logs
 *.log
 npm-debug.log*
+clues/raw/

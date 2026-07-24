@@ -11,7 +11,8 @@
     "test": "node --experimental-strip-types --test tests/schema/schema.test.ts tests/indexes/indexes.test.ts tests/api/api.contract.test.ts tests/api/card-image.test.ts",
     "embed:default-card": "node --experimental-strip-types scripts/embed-default-card.ts",
     "worker:dev": "npm run dev --prefix worker",
-    "worker:deploy": "npm run deploy --prefix worker"
+    "worker:deploy": "npm run deploy --prefix worker",
+    "clues:wishlist": "node --experimental-strip-types scripts/clues/build-wishlist.ts"
   },
   "engines": {
     "node": ">=20"

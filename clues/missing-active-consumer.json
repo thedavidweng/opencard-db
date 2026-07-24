@@ -1,0 +1,3144 @@
+{
+  "note": "Third-party discovery clues only. Never use these URLs as Card sources unless they are official issuer/network pages. Always re-verify on the issuer site before merging.",
+  "generated_at": "2026-07-24",
+  "count": 165,
+  "cards": [
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Prime Visa",
+      "issuer": "AMAZON.COM",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/596f3680-378f-4997-9e57-4db39fd85249?name=Amazon-Prime-Rewards&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcash-back&impression_pageview_id=c4ee89d9-2413-4a2f-9106-a1483814636d&impression_position=8&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=e71618f8-7827-492f-b441-ae148b9d3c6d&shopping_finish_id=98bc0a04ea294dd4a66fd91f61996fa9",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.62,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/596f3680-378f-4997-9e57-4db39fd85249/3caf6644a53331a7ae8754a86521afa854212eeccd62136e0ef3c6abd3dfe110.jpg",
+      "proposed_id": "us-amazon-prime-visa",
+      "country": "us",
+      "norm": "amazoncomprimevisa",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "American Airlines AAdvantage® MileUp®",
+      "issuer": "AMERICAN AIRLINES",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/736c6dc2-2900-4616-bda0-7a43778a2a14?name=Citibank-American-Airlines-AAdvantage-MileUp&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fno-annual-fee&impression_pageview_id=704fabef-6c39-419c-995b-11fd1521741d&impression_position=9&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=878d5981-9824-44ce-8ed4-12e771998987&shopping_finish_id=6abd3d2bb8e04785930419fba04b066c",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/736c6dc2-2900-4616-bda0-7a43778a2a14/6a876e17f5e9ce2c444fe40a5f2e2337cb7bd7dc8072a8ef1f8849942cb7fb25.jpg",
+      "proposed_id": "us-american-airlines-aadvantage-mileup",
+      "country": "us",
+      "norm": "americanairlinesamericanairlinesaadvantagemileup",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Blue Cash Everyday",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/blue-cash-everyday.webp",
+      "proposed_id": "us-amex-blue-cash-everyday",
+      "country": "us",
+      "norm": "americanexpressbluecasheveryday",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Blue Cash Everyday® Card from American Express",
+      "issuer": "AMERICAN EXPRESS",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/5ed2eb69-5e8c-4014-b8b7-23c4d600591c?name=American-Express-Blue-Cash&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fno-credit&impression_pageview_id=1f3825f7-3df1-4318-b6fd-2b8d4b9b8887&impression_position=0&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=d46d583f-a94c-4a37-b560-e1fd0ae2b8d1&shopping_finish_id=9c0e656c94a643199e99d7cfe3aa4f03",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/5ed2eb69-5e8c-4014-b8b7-23c4d600591c/bfccadb4c5dc3dc5a88464e70bf2c7339280bf494e9c8fad0ee4e5230c465dc4.jpg",
+      "proposed_id": "us-amex-blue-cash-everyday-card-from-american-express",
+      "country": "us",
+      "norm": "americanexpressbluecasheverydayfromamericanexpress",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Blue Cash Preferred",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/blue-cash-preferred.webp",
+      "proposed_id": "us-amex-blue-cash-preferred",
+      "country": "us",
+      "norm": "americanexpressbluecashpreferred",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Blue Cash Preferred® Card from American Express",
+      "issuer": "AMERICAN EXPRESS",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/2681330d-450d-4f71-af38-3cb16f592c02?name=American-Express-Blue-Cash-Preferred&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgood-credit&impression_pageview_id=4076390a-e142-48c9-96d5-6eaa27bea3e5&impression_position=4&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=be6a8858-8fc3-49a7-a3d4-5d0c12a46f43&shopping_finish_id=1858f8904e014a258d4ca80b19644dbe",
+      "annual_fee": "$95",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/2681330d-450d-4f71-af38-3cb16f592c02/596f22094df609999878f43629debc8d416e18334ea8f5e68f9d92a72dd0b912.jpg",
+      "proposed_id": "us-amex-blue-cash-preferred-card-from-american-express",
+      "country": "us",
+      "norm": "americanexpressbluecashpreferredfromamericanexpress",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Blue Cash Preferred (Morgan Stanley)",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://us.etrade.com/l/morgan-stanley-blue-cash-preferred",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/blue-cash-preferred-morgan-stanley.png",
+      "proposed_id": "us-amex-blue-cash-preferred-morgan-stanley",
+      "country": "us",
+      "norm": "americanexpressbluecashpreferredmorganstanley",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "American Express® Business Gold Card",
+      "issuer": "AMERICAN EXPRESS",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/19638239-f957-40ec-80a3-675b0ba943d8?name=American-Express-Gold-Card-from-OPEN&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Frestaurants&impression_pageview_id=8bcd5899-b2eb-410d-a9a5-970a1a052bbd&impression_position=4&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=c4296d77-7048-401a-9e11-9d90fdc6b11d&shopping_finish_id=5a31093c12d44feeb166bed2614c2431",
+      "annual_fee": "$375",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.55,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/19638239-f957-40ec-80a3-675b0ba943d8/ec5e67c58d45cbdd19e968b3a3ae46fcdf302d9e00cd72c033848e40f7b16207.jpg",
+      "proposed_id": "us-amex-business-gold",
+      "country": "us",
+      "norm": "americanexpressamericanexpressbusinessgold",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Cash Magnet",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/cash-magnet/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/cash-magnet.webp",
+      "proposed_id": "us-amex-cash-magnet",
+      "country": "us",
+      "norm": "americanexpresscashmagnet",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Delta SkyMiles Blue",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/delta-skymiles-blue.jpg",
+      "proposed_id": "us-amex-delta-skymiles-blue",
+      "country": "us",
+      "norm": "americanexpressdeltaskymilesblue",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Delta SkyMiles Gold",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
+      "annual_fee": 150,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/delta-skymiles-gold.jpg",
+      "proposed_id": "us-amex-delta-skymiles-gold",
+      "country": "us",
+      "norm": "americanexpressdeltaskymilesgold",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Delta SkyMiles Platinum",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-platinum-american-express-card/",
+      "annual_fee": 350,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/delta-skymiles-platinum.webp",
+      "proposed_id": "us-amex-delta-skymiles-platinum",
+      "country": "us",
+      "norm": "americanexpressdeltaskymilesplatinum",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Delta SkyMiles Reserve",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+      "annual_fee": 650,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/delta-skymiles-reserve.webp",
+      "proposed_id": "us-amex-delta-skymiles-reserve",
+      "country": "us",
+      "norm": "americanexpressdeltaskymilesreserve",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Green",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/green/",
+      "annual_fee": 150,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/green.webp",
+      "proposed_id": "us-amex-green",
+      "country": "us",
+      "norm": "americanexpressgreen",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Hilton Honors",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/hilton-honors.png",
+      "proposed_id": "us-amex-hilton-honors",
+      "country": "us",
+      "norm": "americanexpresshiltonhonors",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Hilton Honors American Express Card",
+      "issuer": "AMERICAN EXPRESS",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/b50e07b0-058a-4031-8cae-d928b5a72ab9?name=Hilton-HHonors-American-Express&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fno-annual-fee&impression_pageview_id=704fabef-6c39-419c-995b-11fd1521741d&impression_position=10&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=762ef1af-c280-43ae-afea-d45e6780c1c1&shopping_finish_id=d9f12c4f36e449feb8a0e15b6a0f5453",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/b50e07b0-058a-4031-8cae-d928b5a72ab9/d05a5a59c664ea42b3792aec64d2610b6844feb208ba04ab2bf5e315ebaa7f48.jpg",
+      "proposed_id": "us-amex-hilton-honors-american-express",
+      "country": "us",
+      "norm": "americanexpresshiltonhonorsamericanexpress",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "The Hilton Honors American Express Business Card",
+      "issuer": "AMERICAN EXPRESS",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/e5ef2288-3c56-4c12-8cfc-a83d8c539b9c?name=American-Express-Hilton-Honors-Business&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fhotel&impression_pageview_id=efd9db40-eb9b-4502-a37e-3d0eb0e34a8a&impression_position=3&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=3e74fb35-a6e6-4d23-9ca0-d4610d91685e&shopping_finish_id=2476ad599a3840cc9667e8f08ab0a14c",
+      "annual_fee": "$195",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/e5ef2288-3c56-4c12-8cfc-a83d8c539b9c/39f476acb066468c2bd1454f0aef9589c6e14712f1b691d38eccd462f696772d.jpg",
+      "proposed_id": "us-amex-hilton-honors-american-express-business",
+      "country": "us",
+      "norm": "americanexpressthehiltonhonorsamericanexpressbusiness",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Hilton Honors American Express Surpass® Card",
+      "issuer": "AMERICAN EXPRESS",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/4ff16d1f-44e4-407f-86a9-3dc43ab60247?name=Hilton-Honors-Surpass&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fhotel&impression_pageview_id=efd9db40-eb9b-4502-a37e-3d0eb0e34a8a&impression_position=7&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=8a47d5ae-b513-4456-b883-046a9f5a8ae8&shopping_finish_id=b126b6875ab14cc3941f2f68f7261738",
+      "annual_fee": "$150",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/4ff16d1f-44e4-407f-86a9-3dc43ab60247/6c419cb5a250a78989fa7b331637c8fca06ae1dbc4e7ba133e213abc7e15351e.jpg",
+      "proposed_id": "us-amex-hilton-honors-american-express-surpass",
+      "country": "us",
+      "norm": "americanexpresshiltonhonorsamericanexpresssurpass",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Hilton Honors Aspire",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "annual_fee": 550,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/hilton-honors-aspire.png",
+      "proposed_id": "us-amex-hilton-honors-aspire",
+      "country": "us",
+      "norm": "americanexpresshiltonhonorsaspire",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Hilton Honors Surpass",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.hilton.com/en/hilton-honors/credit-cards/",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/hilton-honors-surpass.jpg",
+      "proposed_id": "us-amex-hilton-honors-surpass",
+      "country": "us",
+      "norm": "americanexpresshiltonhonorssurpass",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Marriott Bonvoy Bevy",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-bevy/",
+      "annual_fee": 250,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/marriott-bonvoy-bevy.png",
+      "proposed_id": "us-amex-marriott-bonvoy-bevy",
+      "country": "us",
+      "norm": "americanexpressmarriottbonvoybevy",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Marriott Bonvoy Brilliant",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/",
+      "annual_fee": 650,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/marriott-bonvoy-brilliant.webp",
+      "proposed_id": "us-amex-marriott-bonvoy-brilliant",
+      "country": "us",
+      "norm": "americanexpressmarriottbonvoybrilliant",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Platinum",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+      "annual_fee": 895,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/platinum.webp",
+      "proposed_id": "us-amex-platinum",
+      "country": "us",
+      "norm": "americanexpressplatinum",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "American Express Platinum Card®",
+      "issuer": "AMERICAN EXPRESS",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/fd24850b-46ce-4ea8-9314-3594fe77944f?name=American-Express-Platinum&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=0&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=889d060e-f588-4256-871a-746b9c0b447c&shopping_finish_id=84fd3c40497e40b98ba200e0c6dca12f",
+      "annual_fee": "$895",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/fd24850b-46ce-4ea8-9314-3594fe77944f/ef4003770aeed9c41fd5e172aaf2224611a39cde217bc4f9d10f8c75e9bb31b6.jpg",
+      "proposed_id": "us-amex-platinum-card",
+      "country": "us",
+      "norm": "americanexpressamericanexpressplatinum",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Platinum (Morgan Stanley)",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://us.etrade.com/l/morgan-stanley-platinum",
+      "annual_fee": 895,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/platinum-morgan-stanley.webp",
+      "proposed_id": "us-amex-platinum-morgan-stanley",
+      "country": "us",
+      "norm": "americanexpressplatinummorganstanley",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Platinum (Schwab)",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.schwab.com/credit-cards/platinum-card",
+      "annual_fee": 895,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/platinum-schwab.webp",
+      "proposed_id": "us-amex-platinum-schwab",
+      "country": "us",
+      "norm": "americanexpressplatinumschwab",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Schwab Investor",
+      "issuer": "AMERICAN_EXPRESS",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.schwab.com/public/schwab/investing/accounts_products/credit_cards",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/amex/schwab-investor.webp",
+      "proposed_id": "us-amex-schwab-investor",
+      "country": "us",
+      "norm": "americanexpressschwabinvestor",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Apple Card",
+      "issuer": "APPLE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/4528cd20-add2-11eb-b8c6-230f8597051d?name=Apple-Card&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcash-back&impression_pageview_id=c4ee89d9-2413-4a2f-9106-a1483814636d&impression_position=4&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=5903c7e4-aab3-47c1-a2d5-2d2ee77456ac&shopping_finish_id=692e01d04c7c492186463e996fcca998",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.67,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/4528cd20-add2-11eb-b8c6-230f8597051d/ff9cbb30ffe2501aa1b667251366a4faf92194234ad19d87f24ccd8c839c5c7b.jpg",
+      "proposed_id": "us-apple-card",
+      "country": "us",
+      "norm": "appleapple",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Air France KLM",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "MASTERCARD",
+      "url": "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire",
+      "annual_fee": 89,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/air-france-klm.webp",
+      "proposed_id": "us-bank-of-america-air-france-klm",
+      "country": "us",
+      "norm": "bankofamericaairfranceklm",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Atmos Rewards Ascent",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "VISA",
+      "url": "https://www.alaskaair.com/atmosrewards/content/credit-cards",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/atmos-rewards-ascent.webp",
+      "proposed_id": "us-bank-of-america-atmos-rewards-ascent",
+      "country": "us",
+      "norm": "bankofamericaatmosrewardsascent",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Atmos Rewards Summit",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "VISA",
+      "url": "https://www.alaskaair.com/atmosrewards/content/credit-cards",
+      "annual_fee": 395,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/atmos-rewards-summit.webp",
+      "proposed_id": "us-bank-of-america-atmos-rewards-summit",
+      "country": "us",
+      "norm": "bankofamericaatmosrewardssummit",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Customized Cash Rewards",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "VISA",
+      "url": "https://www.bankofamerica.com/credit-cards/products/cash-back-credit-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/customized-cash-rewards.jpg",
+      "proposed_id": "us-bank-of-america-customized-cash-rewards",
+      "country": "us",
+      "norm": "bankofamericacustomizedcashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Free Spirit",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "MASTERCARD",
+      "url": "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/",
+      "annual_fee": 79,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/free-spirit.webp",
+      "proposed_id": "us-bank-of-america-free-spirit",
+      "country": "us",
+      "norm": "bankofamericafreespirit",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Premium Rewards",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "VISA",
+      "url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/premium-rewards.png",
+      "proposed_id": "us-bank-of-america-premium-rewards",
+      "country": "us",
+      "norm": "bankofamericapremiumrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Premium Rewards Elite",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "VISA",
+      "url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
+      "annual_fee": 550,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/premium-rewards-elite.png",
+      "proposed_id": "us-bank-of-america-premium-rewards-elite",
+      "country": "us",
+      "norm": "bankofamericapremiumrewardselite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Travel Rewards",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "VISA",
+      "url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/travel-rewards.png",
+      "proposed_id": "us-bank-of-america-travel-rewards",
+      "country": "us",
+      "norm": "bankofamericatravelrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Unlimited Cash Rewards",
+      "issuer": "BANK_OF_AMERICA",
+      "network": "VISA",
+      "url": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/bankofamerica/unlimited-cash-rewards.png",
+      "proposed_id": "us-bank-of-america-unlimited-cash-rewards",
+      "country": "us",
+      "norm": "bankofamericaunlimitedcashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AAdvantage Aviator Red World Elite",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/aadvantage-aviator-red-world-elite-mastercard/",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/aadvantage-aviator-red-world-elite.png",
+      "proposed_id": "us-barclays-aadvantage-aviator-red-world-elite",
+      "country": "us",
+      "norm": "barclaysaadvantageaviatorredworldelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AARP Essential Rewards",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://www.aarp.org/membership/benefits/finance/aarp-essential-rewards-mastercard-from-barclays/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/aarp-essential-rewards.png",
+      "proposed_id": "us-barclays-aarp-essential-rewards",
+      "country": "us",
+      "norm": "barclaysaarpessentialrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AARP Travel Rewards",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://www.aarp.org/membership/benefits/finance/aarp-travel-rewards-mastercard-from-barclays/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/aarp-travel-rewards.png",
+      "proposed_id": "us-barclays-aarp-travel-rewards",
+      "country": "us",
+      "norm": "barclaysaarptravelrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Breeze",
+      "issuer": "BARCLAYS",
+      "network": "VISA",
+      "url": "https://cards.barclaycardus.com/banking/cards/breeze-airways/",
+      "annual_fee": 89,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/breeze.png",
+      "proposed_id": "us-barclays-breeze",
+      "country": "us",
+      "norm": "barclaysbreeze",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Carnival World Mastercard",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/carnival-world-mastercard.png",
+      "proposed_id": "us-barclays-carnival-world-mastercard",
+      "country": "us",
+      "norm": "barclayscarnivalworldmastercard",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Emirates Skywards Premium World Elite",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-premium-world-elite-mastercard/",
+      "annual_fee": 499,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/emirates-skywards-premium-world-elite.png",
+      "proposed_id": "us-barclays-emirates-skywards-premium-world-elite",
+      "country": "us",
+      "norm": "barclaysemiratesskywardspremiumworldelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Emirates Skywards Rewards World Elite",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-rewards-world-elite-mastercard/",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/emirates-skywards-rewards-world-elite.png",
+      "proposed_id": "us-barclays-emirates-skywards-rewards-world-elite",
+      "country": "us",
+      "norm": "barclaysemiratesskywardsrewardsworldelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Frontier Airlines World",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/frontier-airlines-world-mastercard/",
+      "annual_fee": 89,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/frontier-airlines-world.png",
+      "proposed_id": "us-barclays-frontier-airlines-world",
+      "country": "us",
+      "norm": "barclaysfrontierairlinesworld",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Hawaiian Airlines World Elite",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/credit-card/hawaiian-airlines/child/hawaiian-hcl-inflight-landing-page/",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/hawaiian-airlines-world-elite.png",
+      "proposed_id": "us-barclays-hawaiian-airlines-world-elite",
+      "country": "us",
+      "norm": "barclayshawaiianairlinesworldelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "JetBlue",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/jetblue-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/jetblue.png",
+      "proposed_id": "us-barclays-jetblue",
+      "country": "us",
+      "norm": "barclaysjetblue",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "JetBlue Plus",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/jetblue-plus-card/",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/jetblue-plus.png",
+      "proposed_id": "us-barclays-jetblue-plus",
+      "country": "us",
+      "norm": "barclaysjetblueplus",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "JetBlue Premier",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
+      "annual_fee": 499,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/jetblue-premier.png",
+      "proposed_id": "us-barclays-jetblue-premier",
+      "country": "us",
+      "norm": "barclaysjetbluepremier",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Lufthansa Miles & More",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/lufthansa-miles-more-world-elite-mastercard",
+      "annual_fee": 89,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/lufthansa-miles-and-more.png",
+      "proposed_id": "us-barclays-lufthansa-miles-and-more",
+      "country": "us",
+      "norm": "barclayslufthansamilesmore",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Upromise",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/upromise-world-mastercard/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/upromise.png",
+      "proposed_id": "us-barclays-upromise",
+      "country": "us",
+      "norm": "barclaysupromise",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Wyndham Rewards Earner",
+      "issuer": "BARCLAYS",
+      "network": "VISA",
+      "url": "https://www.wyndhamrewardscreditcard.com/#earner",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/wyndham-rewards-earner.svg",
+      "proposed_id": "us-barclays-wyndham-rewards-earner",
+      "country": "us",
+      "norm": "barclayswyndhamrewardsearner",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Wyndham Rewards Earner Plus",
+      "issuer": "BARCLAYS",
+      "network": "VISA",
+      "url": "https://www.wyndhamrewardscreditcard.com/#earnerplus",
+      "annual_fee": 75,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/wyndham-rewards-earner-plus.png",
+      "proposed_id": "us-barclays-wyndham-rewards-earner-plus",
+      "country": "us",
+      "norm": "barclayswyndhamrewardsearnerplus",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Xbox",
+      "issuer": "BARCLAYS",
+      "network": "MASTERCARD",
+      "url": "https://cards.barclaycardus.com/banking/cards/xbox-mastercard/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/barclays/xbox.png",
+      "proposed_id": "us-barclays-xbox",
+      "country": "us",
+      "norm": "barclaysxbox",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Bilt World Elite Mastercard® Credit Card",
+      "issuer": "BILT",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/fccf3660-2b40-11ee-8b6c-d79f38cd9a92?name=Bilt-World-Elite&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=9&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=354e657f-3f18-440f-a171-2dfb630520e6&shopping_finish_id=8fe0072f089245d0a44246821561b508",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/fccf3660-2b40-11ee-8b6c-d79f38cd9a92/352c4e9c593a9721c948df14fec5332c2df50d393e79f6bfdd0ca7f6f1f41dc6.jpg",
+      "proposed_id": "us-bilt-world-elite-mastercard",
+      "country": "us",
+      "norm": "biltbiltworldelitemastercard",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Brex",
+      "issuer": "BREX",
+      "network": "MASTERCARD",
+      "url": "https://www.brex.com/product/credit-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/brex/brex.png",
+      "proposed_id": "us-brex-card",
+      "country": "us",
+      "norm": "brexbrex",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Capital One Platinum Secured Credit Card",
+      "issuer": "CAPITAL ONE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/a59fef9a-5006-449d-9527-3ae0c300e614?name=Capital-One-Secured&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbad-credit&impression_pageview_id=46d91e32-896f-450a-b6da-8c2513f80e6f&impression_position=1&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=90a112b8-2069-445e-a4e3-fcfa4b1bdb38&shopping_finish_id=7ff055481e3c450195bd2b48122fe623",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.61,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/a59fef9a-5006-449d-9527-3ae0c300e614/b8138359dbe5544a867948ec2943da9582b287e2d5032d48b6e1b3d9d5d67536.jpg",
+      "proposed_id": "us-capital-one-platinum-secured",
+      "country": "us",
+      "norm": "capitalonecapitaloneplatinumsecured",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Quicksilver",
+      "issuer": "CAPITAL_ONE",
+      "network": "VISA",
+      "url": "https://www.capitalone.com/credit-cards/quicksilver/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/capitalone/quicksilver.webp",
+      "proposed_id": "us-capital-one-quicksilver",
+      "country": "us",
+      "norm": "capitalonequicksilver",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Capital One Quicksilver Cash Rewards Credit Card",
+      "issuer": "CAPITAL ONE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/eb6605ae-a8c6-480d-9a3b-d79da54b2d7e?name=Capital-One-Cash-Credit-Card&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcash-back&impression_pageview_id=c4ee89d9-2413-4a2f-9106-a1483814636d&impression_position=3&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=ced8cafc-7926-4038-b953-9a2a241440a5&shopping_finish_id=234dc5ffa0094d1cb3f1bde869c391a3",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/eb6605ae-a8c6-480d-9a3b-d79da54b2d7e/73feeefb87bc55943f0c11fcf0ddd60446f0bb4017102561d754f683aaff0d58.jpg",
+      "proposed_id": "us-capital-one-quicksilver-cash-rewards",
+      "country": "us",
+      "norm": "capitalonecapitalonequicksilvercashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Capital One Quicksilver Secured Cash Rewards Credit Card",
+      "issuer": "CAPITAL ONE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/361b31a0-2871-11ec-9598-c7a1c16f0f1a?name=Capital-One-Quicksilver-Secured-Cash-Rewards&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbad-credit&impression_pageview_id=46d91e32-896f-450a-b6da-8c2513f80e6f&impression_position=2&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=1b2f3e9d-9361-4408-b713-8740b7e9a30e&shopping_finish_id=0a0ad9bc623d45fba2f5fdc5186ecb29",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/361b31a0-2871-11ec-9598-c7a1c16f0f1a/e7e7679c5810f92c5dc49abdc1289439eb8d4e0d00282d5ec4428d997004e520.jpg",
+      "proposed_id": "us-capital-one-quicksilver-secured-cash-rewards",
+      "country": "us",
+      "norm": "capitalonecapitalonequicksilversecuredcashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Capital One Quicksilver Student Cash Rewards Credit Card",
+      "issuer": "CAPITAL ONE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/d82c7fbc-f559-11eb-b50e-577c1a5e54c3?name=Capital-One-Quicksilver-Student-Cash-Rewards&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcollege-student&impression_pageview_id=a44d0d23-28d9-4d30-8d00-eee4a15321e5&impression_position=5&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=4f677ff6-7834-4866-ae17-353fa4e5db54&shopping_finish_id=0f6ce768c09041c1b17cec1cbefa7911",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/d82c7fbc-f559-11eb-b50e-577c1a5e54c3/e7e7679c5810f92c5dc49abdc1289439eb8d4e0d00282d5ec4428d997004e520.jpg",
+      "proposed_id": "us-capital-one-quicksilver-student-cash-rewards",
+      "country": "us",
+      "norm": "capitalonecapitalonequicksilverstudentcashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Savor",
+      "issuer": "CAPITAL_ONE",
+      "network": "VISA",
+      "url": "https://www.capitalone.com/credit-cards/savor/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/capitalone/savor.webp",
+      "proposed_id": "us-capital-one-savor",
+      "country": "us",
+      "norm": "capitalonesavor",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Capital One Savor Cash Rewards Credit Card",
+      "issuer": "CAPITAL ONE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/cfeca922-52db-4b18-be5e-8e4fe1448448?name=Capital-One-SavorOne-Cash-Rewards&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgood-credit&impression_pageview_id=4076390a-e142-48c9-96d5-6eaa27bea3e5&impression_position=1&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=50701aae-ba48-483f-a767-4f5ed8ca3cf3&shopping_finish_id=d458323e08a54cf9a6b031ba8a4a5390",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/cfeca922-52db-4b18-be5e-8e4fe1448448/889224ee9be7cb993cf4d219c6577f9ddfe617afde0cd37404e6928f1dcfae3f.jpg",
+      "proposed_id": "us-capital-one-savor-cash-rewards",
+      "country": "us",
+      "norm": "capitalonecapitalonesavorcashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Capital One Savor Student Cash Rewards Credit Card",
+      "issuer": "CAPITAL ONE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/735a53f0-f560-11eb-b723-0354a7fe7505?name=Capital-One-SavorOne-Student-Cash-Rewards&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcollege-student&impression_pageview_id=a44d0d23-28d9-4d30-8d00-eee4a15321e5&impression_position=0&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=9602aa25-eccb-4394-b9fe-aea0ac3720f3&shopping_finish_id=f2810c9c60144db49b8ffcc24fc60256",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/735a53f0-f560-11eb-b723-0354a7fe7505/8fdf3bb34ca47c210708718d29c45beb7227f08e5f85582580b3e1b55fd4ce87.jpg",
+      "proposed_id": "us-capital-one-savor-student-cash-rewards",
+      "country": "us",
+      "norm": "capitalonecapitalonesavorstudentcashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "VentureOne",
+      "issuer": "CAPITAL_ONE",
+      "network": "VISA",
+      "url": "https://www.capitalone.com/credit-cards/ventureone/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/capitalone/venture-one.webp",
+      "proposed_id": "us-capital-one-ventureone",
+      "country": "us",
+      "norm": "capitaloneventureone",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Capital One VentureOne Rewards Credit Card - Miles Boost",
+      "issuer": "CAPITAL ONE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/499acef2-60fc-46e5-a8d5-70c6c98ce963?name=Capital-One-VentureOne-Rewards&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=13&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=87d9e37a-8995-40fb-9dd4-52eefbc6f023&shopping_finish_id=a8f35b47b8714dd89f87e3bd27e8fe91",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/499acef2-60fc-46e5-a8d5-70c6c98ce963/bc38c77b11a2e0e0ab5359b5ea2a9caec0f0b72aafee865250bc27b5422b7697.jpg",
+      "proposed_id": "us-capital-one-ventureone-rewards-credit-card-miles-boost",
+      "country": "us",
+      "norm": "capitalonecapitaloneventureonerewardsmilesboost",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Aer Lingus Signature",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/aer-lingus-signature.png",
+      "proposed_id": "us-chase-aer-lingus-signature",
+      "country": "us",
+      "norm": "chaseaerlingussignature",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Aeroplan",
+      "issuer": "CHASE",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/aeroplan.jpg",
+      "proposed_id": "us-chase-aeroplan",
+      "country": "us",
+      "norm": "chaseaeroplan",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Amazon Prime",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://www.amazon.com/dp/BT00LN946S",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/amazon-prime.png",
+      "proposed_id": "us-chase-amazon-prime",
+      "country": "us",
+      "norm": "chaseamazonprime",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "British Airways Signature",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/british-airways.png",
+      "proposed_id": "us-chase-british-airways-signature",
+      "country": "us",
+      "norm": "chasebritishairwayssignature",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Disney",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/disney.png",
+      "proposed_id": "us-chase-disney",
+      "country": "us",
+      "norm": "chasedisney",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Disney Premier",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/rewards-credit-cards/disney/premier",
+      "annual_fee": 49,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/disney.png",
+      "proposed_id": "us-chase-disney-premier",
+      "country": "us",
+      "norm": "chasedisneypremier",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Freedom Flex",
+      "issuer": "CHASE",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/freedom-flex.png",
+      "proposed_id": "us-chase-freedom-flex",
+      "country": "us",
+      "norm": "chasefreedomflex",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Chase Freedom Flex®",
+      "issuer": "CHASE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/33ee088c-f6bb-11ea-8bc1-3f958c527fba?name=chase-freedom-flex&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcash-back&impression_pageview_id=c4ee89d9-2413-4a2f-9106-a1483814636d&impression_position=10&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=30b824cd-f6f6-4371-b4a5-083d766c8bfc&shopping_finish_id=dc9c801ffe3947008f717d8bf412264a",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.62,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/33ee088c-f6bb-11ea-8bc1-3f958c527fba/9dacf16bb533669a8781f403e54dc3a5a68405fc1bfce38fda34f3bd4d5c67ec.jpg",
+      "proposed_id": "us-chase-freedom-flex",
+      "country": "us",
+      "norm": "chasechasefreedomflex",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Chase Freedom Rise®",
+      "issuer": "CHASE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/39b2e17e-bbb7-11ee-a18a-9f7050a25771?name=Chase-Freedom-Rise&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcollege-student&impression_pageview_id=a44d0d23-28d9-4d30-8d00-eee4a15321e5&impression_position=4&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=4aad69b5-e95d-481a-9a02-0fdb6e560136&shopping_finish_id=95d4f6e1c0e149ae8dbed0ebdb85bc5f",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/39b2e17e-bbb7-11ee-a18a-9f7050a25771/24c6c38cced1de319292d1ab61d016df7d53fa90771bcf9a301db51b155b1fa3.png",
+      "proposed_id": "us-chase-freedom-rise",
+      "country": "us",
+      "norm": "chasechasefreedomrise",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Freedom Unlimited",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/freedom-unlimited.png",
+      "proposed_id": "us-chase-freedom-unlimited",
+      "country": "us",
+      "norm": "chasefreedomunlimited",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Chase Freedom Unlimited®",
+      "issuer": "CHASE",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/84e1494c-bae2-4b0d-ac8d-e8c095ceb2fe?name=chase-freedom-unlimited&clickHeader_category=Credit+Card&alt=dta&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=4&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=a3f6c950-ee45-4aae-96d1-57becb000b57&shopping_finish_id=409de8b2940340ad87fd5bf4f5dc74d6",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.62,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/84e1494c-bae2-4b0d-ac8d-e8c095ceb2fe/3a0cac78e497688cdc58fb030fd6c59eea6a6275256e6a523d7999e1827ffd06.jpg",
+      "proposed_id": "us-chase-freedom-unlimited",
+      "country": "us",
+      "norm": "chasechasefreedomunlimited",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Iberia Signature",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/iberia-signature.png",
+      "proposed_id": "us-chase-iberia-signature",
+      "country": "us",
+      "norm": "chaseiberiasignature",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "IHG One Rewards Premier Credit Card",
+      "issuer": "CHASE",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/4bd21825-b06b-4254-be4c-e1d2df558dda?name=Chase-IHG-Rewards-Club-Premier&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fhotel&impression_pageview_id=efd9db40-eb9b-4502-a37e-3d0eb0e34a8a&impression_position=1&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=30652c6e-f878-4cc9-8e19-e03116b321cb&shopping_finish_id=6671274f22e14503957240d4eab423d8",
+      "annual_fee": "$99",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.62,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/4bd21825-b06b-4254-be4c-e1d2df558dda/e09efdcd95dc7d3cc76a7ffd205ff26d5458a95acb152a26e19b1e5cf00c3155.jpg",
+      "proposed_id": "us-chase-ihg-one-rewards-premier",
+      "country": "us",
+      "norm": "chaseihgonerewardspremier",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "IHG Premier",
+      "issuer": "CHASE",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/ihg-rewards-premier.jpg",
+      "proposed_id": "us-chase-ihg-premier",
+      "country": "us",
+      "norm": "chaseihgpremier",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "IHG Traveler",
+      "issuer": "CHASE",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/traveler",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/ihg-rewards-traveler.jpeg",
+      "proposed_id": "us-chase-ihg-traveler",
+      "country": "us",
+      "norm": "chaseihgtraveler",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Marriott Bonvoy Bold",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/marriott-bonvoy-bold.jpeg",
+      "proposed_id": "us-chase-marriott-bonvoy-bold",
+      "country": "us",
+      "norm": "chasemarriottbonvoybold",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api",
+        "credit-card-db-api"
+      ],
+      "name": "Marriott Bonvoy Boundless",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/marriott-bonvoy-boundless.jpeg",
+      "proposed_id": "us-chase-marriott-bonvoy-boundless",
+      "country": "us",
+      "norm": "chasemarriottbonvoyboundless",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Marriott Bonvoy Bountiful",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
+      "annual_fee": 250,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/marriott-bonvoy-bountiful.png",
+      "proposed_id": "us-chase-marriott-bonvoy-bountiful",
+      "country": "us",
+      "norm": "chasemarriottbonvoybountiful",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "The New United℠ Explorer Card",
+      "issuer": "CHASE",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/ec9ccd68-24a4-4604-8e49-a4175f671b90?name=Chase-United-Airlines-Mileage-Plus&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=10&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=b10593ba-841b-41ca-bdd7-acc8bd863682&shopping_finish_id=aea2372d48b24236b45d364df3d059ec",
+      "annual_fee": "$150",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.62,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/ec9ccd68-24a4-4604-8e49-a4175f671b90/54e5417ae8e0127a5b57ca01859dad288e525ffc524fc8723200871f5c663e19.jpg",
+      "proposed_id": "us-chase-new-united-explorer",
+      "country": "us",
+      "norm": "chasethenewunitedexplorer",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Sapphire Reserve",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+      "annual_fee": 795,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/sapphire-reserve.png",
+      "proposed_id": "us-chase-sapphire-reserve",
+      "country": "us",
+      "norm": "chasesapphirereserve",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Chase Sapphire Reserve®",
+      "issuer": "CHASE",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/d89e10ed-e781-4d28-ae74-205056a10244?name=Chase-Sapphire-Reserve&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=5&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=90b514f5-efad-454e-9547-4dbedd3fc17f&shopping_finish_id=3acc83399d9b4d6a802276194d78bc14",
+      "annual_fee": "$795",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.62,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/d89e10ed-e781-4d28-ae74-205056a10244/5df1be45283a52f362a78554a755a61fd2e3d460293822e19a196af38a256794.jpg",
+      "proposed_id": "us-chase-sapphire-reserve",
+      "country": "us",
+      "norm": "chasechasesapphirereserve",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Southwest Plus",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/southwest-rapid-rewards-plus.png",
+      "proposed_id": "us-chase-southwest-plus",
+      "country": "us",
+      "norm": "chasesouthwestplus",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Southwest Premier",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+      "annual_fee": 149,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/southwest-rapid-rewards-premier.png",
+      "proposed_id": "us-chase-southwest-premier",
+      "country": "us",
+      "norm": "chasesouthwestpremier",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Southwest Priority",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
+      "annual_fee": 229,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/southwest-rapid-rewards-priority.png",
+      "proposed_id": "us-chase-southwest-priority",
+      "country": "us",
+      "norm": "chasesouthwestpriority",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Southwest Rapid Rewards® Priority Credit Card",
+      "issuer": "CHASE",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/0f98762d-d5f3-4376-ab23-22cc950b4a5c?name=Chase-Southwest-Rapid-Rewards-Priority&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbonus-offers&impression_pageview_id=62c3d636-e56b-48f5-9555-a924ebe84c39&impression_position=18&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=421d9e65-c94c-4646-8199-4e1bc164ab2c&shopping_finish_id=b590e09c29fd40c0875a6af51cf5875b",
+      "annual_fee": "$229",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.62,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/0f98762d-d5f3-4376-ab23-22cc950b4a5c/9f6f43266caec467ba079548a9bc795e7437c4f4776e61e2c3bb900d027a43e9.jpg",
+      "proposed_id": "us-chase-southwest-rapid-rewards-priority",
+      "country": "us",
+      "norm": "chasesouthwestrapidrewardspriority",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "United Club",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://www.theexplorercard.com/rewards-cards/club-card",
+      "annual_fee": 695,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/united-club-infinite.png",
+      "proposed_id": "us-chase-united-club",
+      "country": "us",
+      "norm": "chaseunitedclub",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "United Explorer",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://www.theexplorercard.com/rewards-cards/explorer-card",
+      "annual_fee": 150,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/united-explorer.png",
+      "proposed_id": "us-chase-united-explorer",
+      "country": "us",
+      "norm": "chaseunitedexplorer",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "United Gateway",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://www.theexplorercard.com/rewards-cards/gateway-card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/united-gateway.png",
+      "proposed_id": "us-chase-united-gateway",
+      "country": "us",
+      "norm": "chaseunitedgateway",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "United Quest",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://www.theexplorercard.com/rewards-cards/quest-card",
+      "annual_fee": 350,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/united-quest.png",
+      "proposed_id": "us-chase-united-quest",
+      "country": "us",
+      "norm": "chaseunitedquest",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api",
+        "credit-card-db-api"
+      ],
+      "name": "World of Hyatt",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/world-of-hyatt.png",
+      "proposed_id": "us-chase-world-of-hyatt",
+      "country": "us",
+      "norm": "chaseworldofhyatt",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "World of Hyatt Business",
+      "issuer": "CHASE",
+      "network": "VISA",
+      "url": "https://creditcards.chase.com/business-credit-cards/world-of-hyatt/hyatt-business-card",
+      "annual_fee": 199,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/chase/world-of-hyatt.png",
+      "proposed_id": "us-chase-world-of-hyatt-business",
+      "country": "us",
+      "norm": "chaseworldofhyattbusiness",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AAdvantage Executive",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
+      "annual_fee": 595,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/aadvantage-executive.webp",
+      "proposed_id": "us-citi-aadvantage-executive",
+      "country": "us",
+      "norm": "citiaadvantageexecutive",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AAdvantage Globe",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
+      "annual_fee": 350,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/aadvantage-globe.webp",
+      "proposed_id": "us-citi-aadvantage-globe",
+      "country": "us",
+      "norm": "citiaadvantageglobe",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AAdvantage MileUp",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.aa.com/citi-mileup-card-american-airlines-direct/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/aadvantage-mileup.webp",
+      "proposed_id": "us-citi-aadvantage-mileup",
+      "country": "us",
+      "norm": "citiaadvantagemileup",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AAdvantage Platinum Select World Elite",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.aa.com/credit-cards/citi-platinum-card-american-airlines-direct/",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/aadvantage-platinum-select.webp",
+      "proposed_id": "us-citi-aadvantage-platinum-select-world-elite",
+      "country": "us",
+      "norm": "citiaadvantageplatinumselectworldelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Citi® / AAdvantage® Platinum Select® World Elite Mastercard®",
+      "issuer": "CITI",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/62efaeec-23e5-4209-90e8-ced21f218051?name=Citibank-Platinum-Select&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbonus-offers&impression_pageview_id=62c3d636-e56b-48f5-9555-a924ebe84c39&impression_position=19&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=4ccd3fde-0429-4c4e-90b9-60fe8157d38a&shopping_finish_id=dde9d79b484d49d4859bb138014769ff",
+      "annual_fee": "$99",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/62efaeec-23e5-4209-90e8-ced21f218051/a44cc1eeca93afd863dc9cb46e8b8be914192faf8bd7925a5691e09a54e9f328.jpg",
+      "proposed_id": "us-citi-aadvantage-platinum-select-world-elite-mastercard",
+      "country": "us",
+      "norm": "citicitiaadvantageplatinumselectworldelitemastercard",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AT&T Points Plus",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://www.att.com/deals/att-points-plus-citi/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/att-points-plus.jpg",
+      "proposed_id": "us-citi-at-and-t-points-plus",
+      "country": "us",
+      "norm": "citiattpointsplus",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Costco Anywhere Visa® Card by Citi",
+      "issuer": "CITI",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/55e47fc1-e5b0-4006-b969-d6cf8c24c80f?name=CitiBank-Costco-Anywhere&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgas&impression_pageview_id=bd4dd775-4fe6-4bf7-b37f-92caaecadeed&impression_position=6&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=b126a0e9-e952-435e-a827-5796a85a6646&shopping_finish_id=775182acd29e44ea9a0d78b86bc66cd4",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/55e47fc1-e5b0-4006-b969-d6cf8c24c80f/b60634a081f84e0e3629c4404c542557c5ce9531825352d66c3075e2d6f3656e.jpg",
+      "proposed_id": "us-citi-costco-anywhere-visa-card-by-citi",
+      "country": "us",
+      "norm": "citicostcoanywherevisabyciti",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Custom Cash",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/custom-cash.png",
+      "proposed_id": "us-citi-custom-cash",
+      "country": "us",
+      "norm": "citicustomcash",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Citi® Diamond Preferred® Card",
+      "issuer": "CITI",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/cb1d60ff-bf72-4b4e-b702-2aa42ba59d40?name=Citibank-Diamond-Preferred-Mastercard&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbalance-transfer&impression_pageview_id=9237f59b-9188-4279-a8e7-59db5a183c43&impression_position=6&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=c9384375-1f24-4b1f-acd3-004db6737768&shopping_finish_id=4ef5d82f0cd946ffaa7a83bdbc20a9ff",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/cb1d60ff-bf72-4b4e-b702-2aa42ba59d40/733a19f3cd2a42d851b2e863b33b2fd2f0d30dcec8cbe635e5509506632f4e56.jpg",
+      "proposed_id": "us-citi-diamond-preferred",
+      "country": "us",
+      "norm": "citicitidiamondpreferred",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Double Cash",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/double-cash.png",
+      "proposed_id": "us-citi-double-cash",
+      "country": "us",
+      "norm": "citidoublecash",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Citi Double Cash® Card",
+      "issuer": "CITI",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/2a5d5681-8a3b-4e4c-9509-7476a4d3290d?name=Citibank-Double-Cash-Card&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgroceries&impression_pageview_id=e5293f04-857d-4521-b827-cb512af4cd68&impression_position=5&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=557c020b-cfb0-4c03-83a2-c65b98488548&shopping_finish_id=b85e764a7eb747bc837c2c891648c225",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/2a5d5681-8a3b-4e4c-9509-7476a4d3290d/e336c70dca87c32aab9a7bb224023d69a2e3920fa2ed2acce940f2f4f4a6956e.jpg",
+      "proposed_id": "us-citi-double-cash",
+      "country": "us",
+      "norm": "citicitidoublecash",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Citi Simplicity® Card",
+      "issuer": "CITI",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/697cec98-8d25-45e2-b5d4-24f76d6860c2?name=Citibank-Simplicity&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbalance-transfer&impression_pageview_id=9237f59b-9188-4279-a8e7-59db5a183c43&impression_position=0&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=5fd2eba6-f66b-4937-8267-19bfa735cbc8&shopping_finish_id=b193a55a37a44161ac774e19c056a11c",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/697cec98-8d25-45e2-b5d4-24f76d6860c2/9a8fc498f6c06c50e9a8024d58f24ea2f2d931a939311290b69e1ba15ba6e069.jpg",
+      "proposed_id": "us-citi-simplicity",
+      "country": "us",
+      "norm": "citicitisimplicity",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Strata",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/strata.webp",
+      "proposed_id": "us-citi-strata",
+      "country": "us",
+      "norm": "citistrata",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Citi Strata℠ Card",
+      "issuer": "CITI",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/0ad4e008-6360-11f0-95cc-872654f18253?name=citi-strata&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fno-annual-fee&impression_pageview_id=704fabef-6c39-419c-995b-11fd1521741d&impression_position=6&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=f09e6f8d-10c6-4af8-8251-93b5877b20d8&shopping_finish_id=859847b01e174e90bd8f06bc90baed81",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/0ad4e008-6360-11f0-95cc-872654f18253/f5b0a0446f3705d009767229c6dbc9112c660bcaa52ed50a4c7c6757ad782388.jpg",
+      "proposed_id": "us-citi-strata",
+      "country": "us",
+      "norm": "citicitistrata",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Strata Elite",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+      "annual_fee": 595,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/strata-elite.webp",
+      "proposed_id": "us-citi-strata-elite",
+      "country": "us",
+      "norm": "citistrataelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Citi Strata Elite℠ Card",
+      "issuer": "CITI",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/75bb22cc-5e8f-11f0-81f5-67c31cf93c0a?name=citi-strata-elite&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=6&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=b9b5ebae-de6e-4bcd-b42c-def3589909a7&shopping_finish_id=3d089475eeb84146ae802f82f01a4b40",
+      "annual_fee": "$595",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/75bb22cc-5e8f-11f0-81f5-67c31cf93c0a/dc799d37b6af9ca9e9ba86197c6fe76af6ba32fbce09e3f2a6fa026d2cf7907b.jpg",
+      "proposed_id": "us-citi-strata-elite",
+      "country": "us",
+      "norm": "citicitistrataelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Strata Premier",
+      "issuer": "CITI",
+      "network": "MASTERCARD",
+      "url": "https://www.citi.com/credit-cards/citi-strata-premier-credit-card",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/citi/strata-premier.png",
+      "proposed_id": "us-citi-strata-premier",
+      "country": "us",
+      "norm": "citistratapremier",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Citi Strata Premier® Card",
+      "issuer": "CITI",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/50e48ec4-0ee6-11ef-9321-a75ef3cf4886?name=Citibank-Strata-Premier&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgroceries&impression_pageview_id=e5293f04-857d-4521-b827-cb512af4cd68&impression_position=6&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=6ec73daf-3bcc-4838-8185-87a0630a3f92&shopping_finish_id=63699204124246299a5536d9582b9152",
+      "annual_fee": "$95",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/50e48ec4-0ee6-11ef-9321-a75ef3cf4886/8cc9c7e06a4ff5aca65202716191445ecd4bc6cb8852bcdac706f27ae6e52cdd.jpg",
+      "proposed_id": "us-citi-strata-premier",
+      "country": "us",
+      "norm": "citicitistratapremier",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AAA Daily Advantage",
+      "issuer": "COMENITY",
+      "network": "VISA",
+      "url": "https://www.ace.aaa.com/financial/aaa-credit-card.html",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/comenity/aaa-daily-advantage.png",
+      "proposed_id": "us-comenity-aaa-daily-advantage",
+      "country": "us",
+      "norm": "comenityaaadailyadvantage",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "AAA Travel Advantage",
+      "issuer": "COMENITY",
+      "network": "VISA",
+      "url": "https://www.ace.aaa.com/financial/aaa-credit-card.html",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/comenity/aaa-travel-advantage.webp",
+      "proposed_id": "us-comenity-aaa-travel-advantage",
+      "country": "us",
+      "norm": "comenityaaatraveladvantage",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Delta SkyMiles® Platinum American Express Card",
+      "issuer": "DELTA",
+      "network": "American Express",
+      "url": "https://www.nerdwallet.com/redirect/c8cd7d90-ddb1-4268-b2da-b5b019528d4b?name=American-Express-Platinum-Delta-SkyMiles&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbonus-offers&impression_pageview_id=62c3d636-e56b-48f5-9555-a924ebe84c39&impression_position=20&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=ef4d5abf-1456-4240-9df1-a619882e8744&shopping_finish_id=bf6bb51de6f246f295ee9c46d1cbd79f",
+      "annual_fee": "$350",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/c8cd7d90-ddb1-4268-b2da-b5b019528d4b/179c7bccce43d569b155b8d5d35d6cc14c9527ef71a7ebfdb953d0becfb536c0.jpg",
+      "proposed_id": "us-delta-skymiles-platinum-american-express",
+      "country": "us",
+      "norm": "deltadeltaskymilesplatinumamericanexpress",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Discover It",
+      "issuer": "DISCOVER",
+      "network": "DISCOVER",
+      "url": "https://www.discover.com/credit-cards/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/discover/it.webp",
+      "proposed_id": "us-discover-it",
+      "country": "us",
+      "norm": "discoverdiscoverit",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Discover it® Cash Back",
+      "issuer": "DISCOVER",
+      "network": "Discover",
+      "url": "https://www.nerdwallet.com/redirect/a4a36a73-0294-4ca1-b36b-3eef5cee53ca?name=Discover-It&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgood-credit&impression_pageview_id=4076390a-e142-48c9-96d5-6eaa27bea3e5&impression_position=0&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=758ef191-afdf-48c0-9b59-4d071a41074f&shopping_finish_id=7f3dce4ef2104efc9c72489e4e3abc16",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/a4a36a73-0294-4ca1-b36b-3eef5cee53ca/a1de1f5a52d4ab48b729c2ea25588d40b1b0382c84ddac318b584f1d62aa37bd.jpg",
+      "proposed_id": "us-discover-it-cash-back",
+      "country": "us",
+      "norm": "discoverdiscoveritcashback",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Discover it® Cash Back - 18 Month Intro Balance Transfer Offer",
+      "issuer": "DISCOVER",
+      "network": "Discover",
+      "url": "https://www.nerdwallet.com/redirect/a58677ee-0bee-11ef-b410-6756a7bb624c?name=discover-it-cb18&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbalance-transfer&impression_pageview_id=9237f59b-9188-4279-a8e7-59db5a183c43&impression_position=2&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=9ab680fe-ee47-42d2-a85c-07365bdb4d12&shopping_finish_id=6840270a16e74faca3f31fb16d74f318",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/a4a36a73-0294-4ca1-b36b-3eef5cee53ca/a1de1f5a52d4ab48b729c2ea25588d40b1b0382c84ddac318b584f1d62aa37bd.jpg",
+      "proposed_id": "us-discover-it-cash-back-18-month-intro-balance-transfer-offer",
+      "country": "us",
+      "norm": "discoverdiscoveritcashback18monthintrobalancetransferoffer",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Discover it® Chrome",
+      "issuer": "DISCOVER",
+      "network": "Discover",
+      "url": "https://www.nerdwallet.com/redirect/3096cf68-d07e-4018-ae46-cdeb9581610f?name=Discover-it-chrome-14-Month-Balance-Transfer-Purchases&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbalance-transfer&impression_pageview_id=9237f59b-9188-4279-a8e7-59db5a183c43&impression_position=7&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=0cef5b47-6414-4785-9b3c-d2da00a9c411&shopping_finish_id=51e287a60ed0496aaf0b4a08073b4e2f",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/3096cf68-d07e-4018-ae46-cdeb9581610f/559e631bd466a4554f3da78d6951d3f7f0fe06519bdea8afdd5a40ca2fe5a479.jpg",
+      "proposed_id": "us-discover-it-chrome",
+      "country": "us",
+      "norm": "discoverdiscoveritchrome",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Discover it® Secured Credit Card",
+      "issuer": "DISCOVER",
+      "network": "Discover",
+      "url": "https://www.nerdwallet.com/redirect/b8802eff-81be-4894-bb9a-89aacde2f55e?name=discover-it-secured&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcollege-student&impression_pageview_id=a44d0d23-28d9-4d30-8d00-eee4a15321e5&impression_position=6&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=4fe827cf-b3e9-4869-8449-ca4a4c9deade&shopping_finish_id=4c14a37ea2fc4c099a3d02534725ace7",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/b8802eff-81be-4894-bb9a-89aacde2f55e/7d4b38c7b493ffc940c7aa55afe6cb1fc3787bdca6f09c67b346df5a7e7ddb91.jpg",
+      "proposed_id": "us-discover-it-secured",
+      "country": "us",
+      "norm": "discoverdiscoveritsecured",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Discover it® Student Cash Back",
+      "issuer": "DISCOVER",
+      "network": "Discover",
+      "url": "https://www.nerdwallet.com/redirect/44278d8b-631e-49c9-90df-f11b6e101539?name=Discover-It-Student&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcollege-student&impression_pageview_id=a44d0d23-28d9-4d30-8d00-eee4a15321e5&impression_position=2&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=86ed3917-fa76-404a-a6c2-f55cefb0d607&shopping_finish_id=6677a8c1d2574b8a8663362352fa1ba3",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/44278d8b-631e-49c9-90df-f11b6e101539/1e30d48429dfe33c0d61d0c069acfec0e1328a89851742e18d6e6056cb272769.jpg",
+      "proposed_id": "us-discover-it-student-cash-back",
+      "country": "us",
+      "norm": "discoverdiscoveritstudentcashback",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Discover it® Student Chrome",
+      "issuer": "DISCOVER",
+      "network": "Discover",
+      "url": "https://www.nerdwallet.com/redirect/5b443d98-8b71-4dfb-b570-f4f23887ee9f?name=Discover-it-chrome-Students&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fcollege-student&impression_pageview_id=a44d0d23-28d9-4d30-8d00-eee4a15321e5&impression_position=1&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=e19e4ed7-204a-4470-b7d0-0e077f2002a8&shopping_finish_id=451305bccdcd48eeb18d0a8fa0558ebd",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.6,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/5b443d98-8b71-4dfb-b570-f4f23887ee9f/d2a5c33f6720e4a0b5a6ecfb0a6044861999505018d8464c3393b1fa5259805c.jpg",
+      "proposed_id": "us-discover-it-student-chrome",
+      "country": "us",
+      "norm": "discoverdiscoveritstudentchrome",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Avianca LifeMiles",
+      "issuer": "FIRST",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.lifemiles.com/discover/landing-page/avianca-lifemiles-creditcard",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/first/avianca-lifemiles.webp",
+      "proposed_id": "us-first-avianca-lifemiles",
+      "country": "us",
+      "norm": "firstaviancalifemiles",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Avianca LifeMiles Elite",
+      "issuer": "FIRST",
+      "network": "AMERICAN_EXPRESS",
+      "url": "https://www.lifemiles.com/discover/landing-page/avianca-lifemiles-creditcard",
+      "annual_fee": 250,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/first/avianca-lifemiles-elite.webp",
+      "proposed_id": "us-first-avianca-lifemiles-elite",
+      "country": "us",
+      "norm": "firstaviancalifemileselite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Cardless Qatar Infinite",
+      "issuer": "FIRST",
+      "network": "VISA",
+      "url": "https://qatarairways.cardless.com/compare",
+      "annual_fee": 499,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/first/cardless-qatar-infinite.jpg",
+      "proposed_id": "us-first-cardless-qatar-infinite",
+      "country": "us",
+      "norm": "firstcardlessqatarinfinite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Cardless Qatar Signature",
+      "issuer": "FIRST",
+      "network": "VISA",
+      "url": "https://qatarairways.cardless.com/compare",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/first/cardless-qatar-signature.jpg",
+      "proposed_id": "us-first-cardless-qatar-signature",
+      "country": "us",
+      "norm": "firstcardlessqatarsignature",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "LATAM Airlines",
+      "issuer": "FIRST",
+      "network": "MASTERCARD",
+      "url": "https://latampass.latam.com/en_us/earn-miles/latam-airlines-credit-cards",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/first/latam-airlines.svg",
+      "proposed_id": "us-first-latam-airlines",
+      "country": "us",
+      "norm": "firstlatamairlines",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "LATAM Airlines World Elite",
+      "issuer": "FIRST",
+      "network": "MASTERCARD",
+      "url": "https://latampass.latam.com/en_us/earn-miles/latam-airlines-credit-cards",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/first/latam-airlines-world-elite.webp",
+      "proposed_id": "us-first-latam-airlines-world-elite",
+      "country": "us",
+      "norm": "firstlatamairlinesworldelite",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Amtrak Guest Rewards",
+      "issuer": "FNBO",
+      "network": "MASTERCARD",
+      "url": "https://www.amtrak.com/Apply",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/fnbo/amtrak-guest-rewards.png",
+      "proposed_id": "us-fnbo-amtrak-guest-rewards",
+      "country": "us",
+      "norm": "fnboamtrakguestrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Amtrak Guest Rewards Preferred",
+      "issuer": "FNBO",
+      "network": "MASTERCARD",
+      "url": "https://www.amtrak.com/Apply",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/fnbo/amtrak-guest-rewards-preferred.jpg",
+      "proposed_id": "us-fnbo-amtrak-guest-rewards-preferred",
+      "country": "us",
+      "norm": "fnboamtrakguestrewardspreferred",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Best Western Rewards",
+      "issuer": "FNBO",
+      "network": "MASTERCARD",
+      "url": "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/fnbo/best-western-rewards.jpg",
+      "proposed_id": "us-fnbo-best-western-rewards",
+      "country": "us",
+      "norm": "fnbobestwesternrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Best Western Rewards Premium",
+      "issuer": "FNBO",
+      "network": "MASTERCARD",
+      "url": "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
+      "annual_fee": 89,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/fnbo/best-western-rewards-premium.jpg",
+      "proposed_id": "us-fnbo-best-western-rewards-premium",
+      "country": "us",
+      "norm": "fnbobestwesternrewardspremium",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Pathfinder",
+      "issuer": "PENFED",
+      "network": "VISA",
+      "url": "https://www.penfed.org/credit-cards/pathfinder-rewards",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/penfed/pathfinder.webp",
+      "proposed_id": "us-penfed-pathfinder",
+      "country": "us",
+      "norm": "penfedpathfinder",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Platinum Rewards",
+      "issuer": "PENFED",
+      "network": "VISA",
+      "url": "https://www.penfed.org/credit-cards/platinum-rewards-visa",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/penfed/platinum-rewards.webp",
+      "proposed_id": "us-penfed-platinum-rewards",
+      "country": "us",
+      "norm": "penfedplatinumrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Power Cash Rewards",
+      "issuer": "PENFED",
+      "network": "VISA",
+      "url": "https://www.penfed.org/credit-cards/power-cash-rewards-visa",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/penfed/power-cash-rewards.png",
+      "proposed_id": "us-penfed-power-cash-rewards",
+      "country": "us",
+      "norm": "penfedpowercashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Amazon Prime Store Card",
+      "issuer": "SYNCHRONY",
+      "network": "VISA",
+      "url": "https://www.amazon.com/Synchrony-Bank-Amazon-com-Store-Card/dp/B008A0GNA8",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/synchrony/amazon-prime-store-card.png",
+      "proposed_id": "us-synchrony-amazon-prime-store",
+      "country": "us",
+      "norm": "synchronyamazonprimestore",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Cathay Pacific",
+      "issuer": "SYNCHRONY",
+      "network": "VISA",
+      "url": "https://pay.cathaypacific.com/en_US/offers/uscreditcard.html",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/synchrony/cathay-pacific.jpg",
+      "proposed_id": "us-synchrony-cathay-pacific",
+      "country": "us",
+      "norm": "synchronycathaypacific",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Verizon Visa",
+      "issuer": "SYNCHRONY",
+      "network": "VISA",
+      "url": "https://www.verizon.com/financial-services/verizon-visa-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/synchrony/verizon-visa.png",
+      "proposed_id": "us-synchrony-verizon-visa",
+      "country": "us",
+      "norm": "synchronyverizonvisa",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Virgin Red Rewards",
+      "issuer": "SYNCHRONY",
+      "network": "MASTERCARD",
+      "url": "https://www.virgin.com/en-us/virgin-red/rewards-credit-card",
+      "annual_fee": 99,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/synchrony/virgin-red-rewards.webp",
+      "proposed_id": "us-synchrony-virgin-red-rewards",
+      "country": "us",
+      "norm": "synchronyvirginredrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Walmart OnePay CashRewards",
+      "issuer": "SYNCHRONY",
+      "network": "MASTERCARD",
+      "url": "https://www.walmart.com/cp/onepay-cashrewards-mastercard/9569366376",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/synchrony/walmart-onepay-cashrewards.png",
+      "proposed_id": "us-synchrony-walmart-onepay-cashrewards",
+      "country": "us",
+      "norm": "synchronywalmartonepaycashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Tilt Engage",
+      "issuer": "TILT",
+      "network": "Mastercard",
+      "url": "https://www.nerdwallet.com/redirect/fcc583a0-67f1-11f0-8715-2b83b96e93e3?name=&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbad-credit&impression_pageview_id=46d91e32-896f-450a-b6da-8c2513f80e6f&impression_position=9&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=0d525418-7d87-4299-a198-fa4c77d9cf14&shopping_finish_id=b8cec1a504c041d3929e297bb94ca0db",
+      "annual_fee": "$59",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.56,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/fcc583a0-67f1-11f0-8715-2b83b96e93e3/62079973bf2f2db4c2ec4af284403a9a3550cc781ac95f309c2ce296348aff87.jpg",
+      "proposed_id": "us-tilt-engage",
+      "country": "us",
+      "norm": "tilttiltengage",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Altitude Connect",
+      "issuer": "US_BANK",
+      "network": "VISA",
+      "url": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/usbank/altitude-connect.png",
+      "proposed_id": "us-us-bank-altitude-connect",
+      "country": "us",
+      "norm": "usbankaltitudeconnect",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Altitude Go",
+      "issuer": "US_BANK",
+      "network": "VISA",
+      "url": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/usbank/altitude-go.jpg",
+      "proposed_id": "us-us-bank-altitude-go",
+      "country": "us",
+      "norm": "usbankaltitudego",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Cash+",
+      "issuer": "US_BANK",
+      "network": "VISA",
+      "url": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/usbank/cash-plus.jpg",
+      "proposed_id": "us-us-bank-cash",
+      "country": "us",
+      "norm": "usbankcash",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "U.S. Bank Shield™ Visa® Card",
+      "issuer": "U.S. BANK",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/ad44596c-0907-11f0-8f88-7fb9121e6e3f?name=us-bank-shield&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbalance-transfer&impression_pageview_id=9237f59b-9188-4279-a8e7-59db5a183c43&impression_position=5&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=33da23f8-9b18-441b-8a11-4db1fd35e25d&shopping_finish_id=9b2bc0a8439c4dfea33c580c545b6e03",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.59,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/ad44596c-0907-11f0-8f88-7fb9121e6e3f/188c165b6fc4796433a66657d3d62a38895f07576a9c99846fa6c5c4e43818e9.jpg",
+      "proposed_id": "us-us-bank-shield-visa",
+      "country": "us",
+      "norm": "usbankusbankshieldvisa",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Shopper Cash Rewards",
+      "issuer": "US_BANK",
+      "network": "VISA",
+      "url": "https://www.usbank.com/credit-cards/shopper-cash-rewards-visa-signature-credit-card.html",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/usbank/shopper-cash-rewards.webp",
+      "proposed_id": "us-us-bank-shopper-cash-rewards",
+      "country": "us",
+      "norm": "usbankshoppercashrewards",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Skypass",
+      "issuer": "US_BANK",
+      "network": "VISA",
+      "url": "https://www.skypassvisa.com/credit/visaSignatureCard.do",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/usbank/skypass.png",
+      "proposed_id": "us-us-bank-skypass",
+      "country": "us",
+      "norm": "usbankskypass",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Skypass Blue",
+      "issuer": "US_BANK",
+      "network": "VISA",
+      "url": "https://www.skypassvisa.com/credit/visaSkyBlueCard.do",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/usbank/skypass.png",
+      "proposed_id": "us-us-bank-skypass-blue",
+      "country": "us",
+      "norm": "usbankskypassblue",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Skypass Select",
+      "issuer": "US_BANK",
+      "network": "VISA",
+      "url": "https://www.skypassvisa.com/credit/visaSelectCard.do",
+      "annual_fee": 450,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/usbank/skypass-select.png",
+      "proposed_id": "us-us-bank-skypass-select",
+      "country": "us",
+      "norm": "usbankskypassselect",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Gemini",
+      "issuer": "WEB_BANK",
+      "network": "MASTERCARD",
+      "url": "https://www.gemini.com/credit-card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/web-bank/gemini.webp",
+      "proposed_id": "us-web-bank-gemini",
+      "country": "us",
+      "norm": "webbankgemini",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Active Cash",
+      "issuer": "WELLS_FARGO",
+      "network": "VISA",
+      "url": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/active-cash.png",
+      "proposed_id": "us-wells-fargo-active-cash",
+      "country": "us",
+      "norm": "wellsfargoactivecash",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Wells Fargo Active Cash® Card",
+      "issuer": "WELLS FARGO",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/b954a46c-caec-11eb-abf1-efb90fc6e740?name=Wells-Fargo-Active-Cash&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgood-credit&impression_pageview_id=4076390a-e142-48c9-96d5-6eaa27bea3e5&impression_position=6&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=80111072-1e5b-4d25-8716-39c4cc30ca32&shopping_finish_id=6344a3cb4328481fbade80e5a0bbc48c",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/b954a46c-caec-11eb-abf1-efb90fc6e740/403a0deae03eaff0d1ca2c7ab1175fcc45ebc9a9551d0c8104e758b3d82771d1.jpg",
+      "proposed_id": "us-wells-fargo-active-cash",
+      "country": "us",
+      "norm": "wellsfargowellsfargoactivecash",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Attune",
+      "issuer": "WELLS_FARGO",
+      "network": "MASTERCARD",
+      "url": "https://creditcards.wellsfargo.com/attune-world-elite-mastercard-credit-card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/attune.webp",
+      "proposed_id": "us-wells-fargo-attune",
+      "country": "us",
+      "norm": "wellsfargoattune",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Autograph",
+      "issuer": "WELLS_FARGO",
+      "network": "VISA",
+      "url": "https://creditcards.wellsfargo.com/autograph-visa-credit-card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/autograph.png",
+      "proposed_id": "us-wells-fargo-autograph",
+      "country": "us",
+      "norm": "wellsfargoautograph",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Wells Fargo Autograph® Card",
+      "issuer": "WELLS FARGO",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/157b4328-dd47-11ec-9440-d76f3e69ff2f?name=wells-fargo-autograph&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fgood-credit&impression_pageview_id=4076390a-e142-48c9-96d5-6eaa27bea3e5&impression_position=5&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=0ef73378-bf3c-46ba-865f-2c281b769281&shopping_finish_id=75dcb715565e43769ec5b8ce572e985e",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.56,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/157b4328-dd47-11ec-9440-d76f3e69ff2f/a8519165ae6b4483f70248426b216adf2db389e7289cb32c2b02e895dc2e09b2.jpg",
+      "proposed_id": "us-wells-fargo-autograph",
+      "country": "us",
+      "norm": "wellsfargowellsfargoautograph",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Autograph Journey",
+      "issuer": "WELLS_FARGO",
+      "network": "VISA",
+      "url": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/autograph.png",
+      "proposed_id": "us-wells-fargo-autograph-journey",
+      "country": "us",
+      "norm": "wellsfargoautographjourney",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Wells Fargo Autograph Journey℠ Card",
+      "issuer": "WELLS FARGO",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/86e12ccc-e0c3-11ee-8503-335696b6ab66?name=wells-fargo-autograph-journey&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Ftravel&impression_pageview_id=f9b576e3-c0f2-4d8b-a3a8-736a7fd259d0&impression_position=15&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=5f20c33f-8b51-4438-9a66-473d5d288e8c&shopping_finish_id=40f6276e522f410e89b17614cdf7ab26",
+      "annual_fee": "$95",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.55,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/86e12ccc-e0c3-11ee-8503-335696b6ab66/86906b16658243ba3c0eefd1a18bfe98808014451341a6d95f7ba3b55dd754c3.jpg",
+      "proposed_id": "us-wells-fargo-autograph-journey",
+      "country": "us",
+      "norm": "wellsfargowellsfargoautographjourney",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Bilt",
+      "issuer": "WELLS_FARGO",
+      "network": "MASTERCARD",
+      "url": "https://www.biltrewards.com/card",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/bilt.png",
+      "proposed_id": "us-wells-fargo-bilt",
+      "country": "us",
+      "norm": "wellsfargobilt",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Choice Privileges",
+      "issuer": "WELLS_FARGO",
+      "network": "VISA",
+      "url": "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/choice-privileges.png",
+      "proposed_id": "us-wells-fargo-choice-privileges",
+      "country": "us",
+      "norm": "wellsfargochoiceprivileges",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Choice Privileges Select",
+      "issuer": "WELLS_FARGO",
+      "network": "VISA",
+      "url": "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
+      "annual_fee": 95,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/choice-privileges-select.png",
+      "proposed_id": "us-wells-fargo-choice-privileges-select",
+      "country": "us",
+      "norm": "wellsfargochoiceprivilegesselect",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-bonuses-api"
+      ],
+      "name": "Expedia One Key",
+      "issuer": "WELLS_FARGO",
+      "network": "MASTERCARD",
+      "url": "https://www.expedia.com/one-key-cards",
+      "annual_fee": 0,
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://offeroptimist.com/images/wellsfargo/one-key.png",
+      "proposed_id": "us-wells-fargo-expedia-one-key",
+      "country": "us",
+      "norm": "wellsfargoexpediaonekey",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    },
+    {
+      "clue_sources": [
+        "credit-card-db-api"
+      ],
+      "name": "Wells Fargo Reflect® Card",
+      "issuer": "WELLS FARGO",
+      "network": "Visa",
+      "url": "https://www.nerdwallet.com/redirect/855541f2-09c7-11ec-b9f9-9b7d4865316d?name=wells-fargo-reflect&clickHeader_category=Credit+Card&calling_deployable_name=cc-shopping-client&calling_deployable_version=3230abb07e55dd0ec2774ad4b0a113a06171af16&cta_type=APPLY_NOW_BUTTON&finish_type=external_application&impression_page_url=https%3A%2F%2Fwww.nerdwallet.com%2Fcredit-cards%2Fbest%2Fbalance-transfer&impression_pageview_id=9237f59b-9188-4279-a8e7-59db5a183c43&impression_position=1&impression_section=roundup_summary_table&monetizable=yes_assumed&sku_impression_id=fd211a8b-843e-4dff-80c4-322e086ddae9&shopping_finish_id=345fbfa1c1694baa85485ae2ba01f51b",
+      "annual_fee": "$0",
+      "is_business": false,
+      "discontinued": false,
+      "image_url": "https://www.nerdwallet.com/cdn-cgi/image/format=auto,dpr=1.58,width=150,quality=85,sharpen=1/cdn/images/marketplace/credit_cards/855541f2-09c7-11ec-b9f9-9b7d4865316d/d8c6ebbd39dad1e66d6e8a2fac345f051fdd29b593cf707a9a2b7efa6a95cb03.jpg",
+      "proposed_id": "us-wells-fargo-reflect",
+      "country": "us",
+      "norm": "wellsfargowellsfargoreflect",
+      "status_vs_repo": "missing",
+      "matched_id": null,
+      "matched_where": null
+    }
+  ]
+}
