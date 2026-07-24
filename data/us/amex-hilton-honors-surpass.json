@@ -1,9 +1,9 @@
 {
   "id": "us-amex-hilton-honors-surpass",
   "schema_version": "1.0.0",
-  "name": "Hilton Honors Credit Cards",
+  "name": "Hilton Honors American Express Surpass® Card",
   "localized_names": {
-    "en": "Hilton Honors Credit Cards"
+    "en": "Hilton Honors American Express Surpass® Card"
   },
   "country": "us",
   "issuer": "American Express",
@@ -29,11 +29,11 @@
       "max": 28.74,
       "type": "variable"
     },
-    "notes": "Variable APR based on creditworthiness and the Prime Rate. Cash advance APR 28.74%. Penalty APR 29.99%. Accurate as of 07/24/26."
+    "notes": "Variable APR based on creditworthiness and the Prime Rate. Cash advance APR 28.74%. Penalty APR 29.99%. Accurate as of 07/24/26. APR not visible on product page; preserved from prior terms verification."
   },
   "fx_fee": {
     "percent": 0,
-    "notes": "No foreign transaction fees from American Express."
+    "notes": "There are no fees on foreign transactions made with your Hilton Honors American Express Surpass® Card."
   },
   "credit_required": {
     "score_band": "good_to_excellent",
@@ -45,11 +45,11 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 3,
-      "description": "3x on all other eligible purchases"
+      "description": "3X Hilton Honors Bonus Points for each dollar of all other eligible purchases on your Card"
     },
     "categories": [
       {
-        "label": "Hilton hotels and resorts",
+        "label": "Hilton hotels and resorts (eligible purchases made directly with hotels and resorts within the Hilton portfolio)",
         "points_per_dollar": 12,
         "cap": null
       },
@@ -82,8 +82,8 @@
     "spend_required": 3000,
     "spend_currency": "USD",
     "months": 6,
-    "description": "Earn 130,000 Hilton Honors Bonus Points after spending $3,000 in first 6 months.",
-    "as_of": "2026-07-23"
+    "description": "Earn 130,000 Hilton Honors Bonus Points after spending $3,000 in first 6 months. Signup bonus not visible on product page; preserved from prior verification.",
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -91,70 +91,119 @@
       "title": "Hilton Honors Gold Status",
       "category": "other",
       "source": "co-brand",
-      "description": "Complimentary Hilton Honors Gold status. 80% Bonus on Base Points per stay, space-available room upgrades, daily food and beverage credit or complimentary continental breakfast. Spend $40,000 in a calendar year to upgrade to Diamond Status."
+      "description": "Complimentary Hilton Honors Gold status with benefits like an 80% Points earning Bonus on Stays, daily food and beverage credit or complimentary continental breakfast (varies by brand & region), space-available room upgrades at select properties, and more."
+    },
+    {
+      "id": "hilton-diamond-upgrade",
+      "title": "Hilton Honors Upgrade to Diamond Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Spend $40,000 on eligible purchases on your Card in a calendar year and you can earn an upgrade to Hilton Honors Diamond status through the end of the next calendar year. Diamond status includes a 100% Bonus on all Base Points per stay, premium Wi-Fi, space-available room upgrades and executive lounge access at select properties."
     },
     {
       "id": "hilton-credit",
       "title": "$200 Hilton Credit",
       "category": "credit",
       "source": "co-brand",
-      "description": "Up to $50 in statement credits each quarter for purchases directly with Hilton properties, up to $200/year."
+      "description": "Get up to $50 in statement credits each quarter for purchases made directly with a property in the Hilton portfolio on your Card. That's up to $200 in statement credits annually."
     },
     {
       "id": "free-night-reward",
-      "title": "Free Night Reward after $15K Spend",
+      "title": "Free Night Reward",
       "category": "other",
       "source": "co-brand",
-      "description": "Earn one Free Night Reward after spending $15,000 on eligible purchases in a calendar year. Redeemable for one standard accommodation. Expires one year from issuance."
+      "description": "Earn a Free Night Reward from Hilton Honors after you spend $15,000 on eligible purchases on your Card in a calendar year."
     },
     {
       "id": "national-car-rental-status",
       "title": "National Car Rental Emerald Club Executive Status",
       "category": "other",
       "source": "issuer",
-      "description": "Complimentary National Car Rental Emerald Club Executive status with Executive Area Access."
+      "description": "Complimentary National Car Rental Emerald Club Executive status, including perks like Executive Area Access (for full-size reservations and above) in the USA and Canada. Card Members must enroll through their American Express online account."
     },
     {
       "id": "no-fx-fees",
       "title": "No Foreign Transaction Fees",
       "category": "other",
       "source": "issuer",
-      "description": "No foreign transaction fees from American Express."
+      "description": "There are no fees on foreign transactions made with your Hilton Honors American Express Surpass® Card."
     },
     {
       "id": "car-rental-insurance",
       "title": "Car Rental Loss & Damage Insurance",
       "category": "insurance",
       "source": "issuer",
-      "description": "Secondary coverage for damage or theft of rental vehicle. Not available in Australia, Italy, and New Zealand."
+      "description": "Secondary coverage for damage or theft of rental vehicle when reserving and paying with the Card and declining CDW. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand."
     },
     {
       "id": "global-assist",
       "title": "Global Assist Hotline",
       "category": "other",
       "source": "issuer",
-      "description": "24/7 emergency assistance when traveling more than 100 miles from home."
+      "description": "24/7 emergency assistance and coordination services when traveling more than 100 miles from home, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
     },
     {
       "id": "baggage-insurance",
       "title": "Baggage Insurance Plan",
       "category": "insurance",
       "source": "issuer",
-      "description": "Coverage for lost, damaged, or stolen baggage. Up to $1,250 for carry-on and $500 for checked baggage."
+      "description": "Coverage for lost, damaged, or stolen Baggage when purchasing the Entire Fare for a Common Carrier Vehicle ticket on an Eligible Card. Up to $1,250 for carry-on Baggage and up to $500 for checked Baggage. For New York State residents, there is a $10,000 aggregate maximum limit per Covered Trip."
     },
     {
       "id": "purchase-protection",
       "title": "Purchase Protection",
       "category": "insurance",
       "source": "issuer",
-      "description": "Protects covered purchases against accidental damage or theft for up to 90 days. Up to $1,000 per purchase, $50,000 per calendar year."
+      "description": "Protects covered purchases against accidental damage or theft for up to 90 days. Up to $1,000 per Covered Purchase, up to $50,000 per calendar year."
     },
     {
       "id": "extended-warranty",
       "title": "Extended Warranty",
       "category": "insurance",
       "source": "issuer",
-      "description": "Matches Original Manufacturer's Warranty for up to one additional year on covered purchases."
+      "description": "Matches the Original Manufacturer's Warranty for up to one additional year. Applies to warranties of 5 years or less. Coverage limited to the actual amount charged on your Card up to $10,000 per item and $50,000 per calendar year."
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members can access Amex Presale Tickets and Amex Reserved Tickets to select events across sports, music, and more."
+    },
+    {
+      "id": "send-and-split",
+      "title": "Send & Split",
+      "category": "other",
+      "source": "issuer",
+      "description": "Send money and split purchases with other Venmo and PayPal users, all in the American Express App. Enrollment required."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "American Express can work with you and the merchant to help resolve unrecognized or incorrect charges on your statement."
+    },
+    {
+      "id": "year-end-summary",
+      "title": "Year-End Summary",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get access to a Year-End Summary of charges so you can review your annual spending."
+    },
+    {
+      "id": "additional-cards",
+      "title": "Additional Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can add an Additional Card for anyone who makes purchases for you."
+    },
+    {
+      "id": "instant-card-number",
+      "title": "Instant Card Number",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your application is approved and you are eligible, you can begin using your Card number online and through your digital wallet, including Apple Pay, Google Pay, Samsung Pay, PayPal, and Amazon Pay today."
     }
   ],
   "travel_perks": {
@@ -180,10 +229,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-surpass-credit-card/36182-11-0/"
   ],
-  "notes": "Product name Surpass is not a Network Tier; network_tier is none for Amex network packages. $0 intro annual fee first year, then $150. Signup bonus and benefits verified on official Amex product page."
+  "notes": "Product name Surpass is not a Network Tier; network_tier is none for Amex network packages. $0 intro annual fee first year, then $150. APR and signup bonus not visible on product page; preserved from prior terms verification. Benefits, rewards, annual fee, and FX fee verified on official Amex product page on 2026-07-24."
 }
