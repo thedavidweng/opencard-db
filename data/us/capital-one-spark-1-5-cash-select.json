@@ -1,9 +1,9 @@
 {
   "id": "us-capital-one-spark-1-5-cash-select",
   "schema_version": "1.0.0",
-  "name": "Spark 1.5% Cash Select Business Card",
+  "name": "Spark 1.5% Cash Select",
   "localized_names": {
-    "en": "Spark 1.5% Cash Select Business Card"
+    "en": "Spark 1.5% Cash Select"
   },
   "country": "us",
   "issuer": "Capital One",
@@ -20,41 +20,105 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 16.74,
+      "max": 22.74,
       "type": "variable"
     },
-    "notes": "See Capital One for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "16.74% - 22.74% variable APR based on your creditworthiness."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. Pay zero foreign transaction fees on purchases made outside of the United States."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "excellent",
+    "notes": "Credit Level: Excellent. Spark Cash Select credit card holders typically have an excellent personal credit score."
   },
   "rewards": {
-    "currency": "miles",
-    "currency_label": "Capital One miles / cash back (see product)",
+    "currency": "cash_back",
+    "currency_label": "Cash back",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Capital One product page."
+      "points_per_dollar": 1.5,
+      "description": "Earn unlimited 1.5% cash back for your business on every purchase, everywhere, no limits or category restrictions."
     },
-    "categories": [],
-    "redemption_notes": "See official Capital One product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Get cash back rewards for any amount at any time with no expiration date for the life of the account. Redeem through statement credit or check."
   },
   "signup_bonus": {
-    "amount": 150000.0,
-    "unit": "miles",
-    "spend_required": 30000.0,
+    "amount": 750.0,
+    "unit": "USD",
+    "spend_required": 6000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 150,000 miles when you spend $30,000 in the first 3 months",
+    "description": "Earn a one-time $750 cash bonus once you spend $6,000 on purchases within the first 3 months from account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay zero foreign transaction fees on purchases made outside of the United States."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 fraud liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your card is lost or stolen, you can get an emergency replacement and a cash advance."
+    },
+    {
+      "id": "free-employee-cards",
+      "title": "Free employee cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Track employee spending while earning all the rewards from their purchases."
+    },
+    {
+      "id": "virtual-card-numbers",
+      "title": "Virtual card numbers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Make safer payments online without exposing your actual card number with merchants."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get free additional warranty and protection on eligible items that you purchase with your card."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Our business cards offer services to help you during auto-related emergencies, such as jump-starting, tire changing and towing."
+    },
+    {
+      "id": "year-end-summaries",
+      "title": "Year-end summaries",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an itemized report of your spending to simplify budgeting and tax time."
+    },
+    {
+      "id": "capital-one-business-travel",
+      "title": "Capital One Business Travel",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save time and money with complimentary access to an all-in-one business travel management solution."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -75,5 +139,5 @@
     "https://www.capitalone.com/small-business/credit-cards/spark-cash-select",
     "https://www.capitalone.com/small-business/credit-cards/spark-cash-select/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified against official Capital One product page on 2026-07-24. Corrected signup_bonus from 150,000 miles/$30,000 to $750 cash/$6,000 per page. Corrected rewards currency from miles to cash_back. Corrected name from 'Spark 1.5% Cash Select Business Card' to 'Spark 1.5% Cash Select' per page heading."
 }
