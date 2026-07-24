@@ -24,11 +24,11 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See American Express for current APR; terms vary by applicant/offer."
+    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Foreign transaction fee not mentioned on product page."
   },
   "credit_required": {
     "score_band": null,
@@ -36,17 +36,91 @@
   },
   "rewards": {
     "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
-    "structure": "multi",
+    "currency_label": "Membership Rewards points",
+    "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 1,
+      "description": "1X points on purchases thereafter (after $50,000 cap). No category restrictions."
     },
-    "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "categories": [
+      {
+        "label": "Eligible Purchases",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 50000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "Membership Rewards points can be used for eligible travel through Pay with Points, redeemed for a Statement Credit, redeemed for Gift Cards, or transferred to participating airline and hotel loyalty programs. Can also be used with participating partners at Checkout through Pay with Points."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "expanded-buying-power",
+      "title": "Expanded Buying Power",
+      "category": "other",
+      "source": "issuer",
+      "description": "Gives you the freedom to spend above your credit limit and get business done. The amount you can spend above your credit limit is flexible."
+    },
+    {
+      "id": "amex-offers",
+      "title": "Amex Offers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Helps Card Members earn rewards on purchases for things they love. Browse and add Amex Offers to their eligible Card and earn extra rewards on qualifying purchases with select brands."
+    },
+    {
+      "id": "global-assist-hotline",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "Whenever you travel more than 100 miles from home, Global Assist Hotline is available for 24/7 emergency assistance and coordination services, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "There is no annual fee for additional Employee Blue Business Plus Credit Cards. Earn Membership Rewards points on their eligible purchases in addition to the points you earn on your own card."
+    },
+    {
+      "id": "connect-to-quickbooks",
+      "title": "Connect to QuickBooks",
+      "category": "other",
+      "source": "issuer",
+      "description": "Connect to QuickBooks can help you manage your employee Business Card expenses easily. Transactions automatically sent to your Intuit QuickBooks every day. Enrollment required."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "The terms of the Original Manufacturer's Warranty can be extended up to one additional year. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can help protect Covered Purchases for up to 90 days from the Covered Purchase date if it is stolen or accidentally damaged. Up to $1,000 per Covered Purchase, up to $50,000 per Card Member account per calendar year."
+    },
+    {
+      "id": "car-rental-loss-and-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for Damage to or Theft of a Rental Vehicle when you use your Eligible Card to reserve and pay for the Entire Rental and decline the CDW. Not available for vehicles rented in Australia, Italy, and New Zealand. Secondary coverage."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +140,5 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official product page. Rewards currency is Membership Rewards points. APR not shown on page. No foreign transaction fee info on page."
 }
