@@ -177,7 +177,6 @@
   "travel_perks": {
     "lounge_access": {
       "program": "Global Lounge Collection (Centurion, Delta Sky Club, Priority Pass, Plaza Premium, Escape Lounges)",
-      "visits_per_year": null,
       "notes": "Unlimited complimentary access to 1,500+ airport lounges worldwide"
     },
     "tsa_precheck_credit": {
