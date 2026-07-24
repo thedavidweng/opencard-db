@@ -1,0 +1,71 @@
+{
+  "id": "us-amex-amazon-business",
+  "schema_version": "1.0.0",
+  "name": "Business Credit Cards from American Express",
+  "localized_names": {
+    "en": "Business Credit Cards from American Express"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See American Express for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Confirm foreign transaction fee on official terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points / cash back (see product)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+    },
+    "categories": [],
+    "redemption_notes": "See official American Express product page for current earn and redemption."
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-platinum.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/"
+  ],
+  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+}
