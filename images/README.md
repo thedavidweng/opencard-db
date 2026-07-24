@@ -4,7 +4,8 @@
 
 - **Images are optional.** A card may ship with `image: null` or `image.url: null`.
 - **Prefer official issuer product-page image URLs** in each card’s `image.url` field when available. Do not treat this directory as the primary image CDN.
-- Optional **local mirrors** may be stored here only when an official URL is unstable or unavailable for documentation/demo purposes.
+- Optional **local mirrors** may be stored here when an official URL is unstable, unavailable, or lower quality than digital wallet art.
+- **Graduation-level local mirror:** Apple Pay `cardBackgroundCombined@2x.png` converted to **lossless WebP** (see below). Prefer this over screenshots or unknown crops.
 - The API always returns a usable `image.url`. Cards without artwork get the **generic fallback**: `images/default-card.webp`, served at `GET /v1/assets/default-card.webp`.
 
 ## Default / generic card face
@@ -15,41 +16,51 @@
 | `images/default-card.webp` | Optimized asset mirrored into the Worker |
 | `worker/src/default-card-asset.ts` | Embedded bytes for Cloudflare Workers (no KV/R2 required) |
 
-Regenerate after editing the SVG (requires optional `sharp`):
+Regenerate after editing the SVG (requires `sharp`):
 
 ```bash
-npm i -D sharp
+npm ci
 npm run embed:default-card
+```
+
+## Uploading in a Pull Request
+
+### Preferred: Apple Pay extract (“graduation-level”)
+
+1. On a Mac that already has the card in Wallet, copy  
+   `~/Library/Passes/Cards/<id>.pkpass/cardBackgroundCombined@2x.png`
+2. Rename to the Card Id, e.g. `us-chase-sapphire-preferred.png`, and add under `images/`.
+3. CI runs **Optimize Images**: **lossless WebP**, **native dimensions** (no 800px downscale) — fidelity matched to Apple Pay @2x.
+4. Set `image.local_path` to `images/us-chase-sapphire-preferred.webp` after CI (or run `npm run optimize:images` locally first).
+5. Attribution example: `© Chase (Apple Pay digital card art)`.
+
+Background: `docs/research/apple-pay-card-art.md`. Do **not** scrape Apple remotely; only extract cards you already provisioned.
+
+### Also OK
+
+- Official issuer `image.url` when clear and stable.
+- Other PNG/JPG uploads when Apple Pay / official URL is unavailable — same lossless WebP CI; note provenance in the PR.
+
+```bash
+npm run optimize:images
 ```
 
 ## Copyright
 
 All **issuer** card face artwork remains the **copyright of the issuing bank or network**. OpenCard DB does **not** claim ownership of those images and does not relicense them under MIT or CC BY 4.0.
 
-Local issuer mirrors are for **identification only**. They may be optimized (e.g. WebP) but must not be presented as OpenCard-owned assets.
+Local issuer mirrors are for **identification only**. They may be optimized (lossless WebP) but must not be presented as OpenCard-owned assets.
 
 The **generic** `default-card.*` files are original OpenCard placeholders (not bank artwork) and ship with the repository for API fallbacks.
 
-## High-resolution digital art (Apple Pay)
-
-Bank **digital wallet art** (what Apple Wallet shows) is often sharper than marketing-page photos. There is **no public Apple Pay card-art API** to scrape — see `docs/research/apple-pay-card-art.md`.
-
-If you already have the Card in Apple Pay on a Mac, you may extract the face from your local Wallet bundle for an optional mirror:
-
-```bash
-# Own cards only. Typical asset:
-# ~/Library/Passes/Cards/<id>.pkpass/cardBackgroundCombined@2x.png
-# Product label for naming: pass.json → "description"
-```
-
-Prefer an official issuer `image.url` when it is clear and stable. Local mirrors remain bank copyright (below). Do not treat Apple, PayPal, or community card-art repos as Schema **Sources**.
+Do not treat Apple, PayPal, or community card-art repos as Schema **Sources**.
 
 ## Attribution
 
 If you add a local issuer mirror:
 
 1. Name the file after the card id, e.g. `us-chase-sapphire-preferred.webp`.
-2. Note the issuer copyright in the card JSON `image.attribution` field.
+2. Note the issuer copyright in the card JSON `image.attribution` field (mention Apple Pay when that was the extract source).
 3. Reference the source product page in `sources`.
 
 ## Removal

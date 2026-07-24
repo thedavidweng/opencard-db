@@ -86,7 +86,7 @@ Then map the file to an OpenCard **Card Id**, set `image.attribution` to the Iss
 ### A. Document + accept contributor Wallet extracts (recommended)
 
 - Keep **official issuer URL** as first choice when the image is identifiable and stable.
-- When missing/poor: allow a **local mirror** from the contributor’s own Apple Pay extract under existing `images/` policy (bank copyright, removal on request).
+- When missing/poor: allow a **local mirror** from the contributor’s own Apple Pay extract under existing `images/` policy (bank copyright, removal on request). CI stores **lossless WebP** at native @2x dimensions.
 - Attribution example: `© Chase (digital card art via Apple Pay)`.
 - Do **not** cite Apple or Cardentify as a Schema **Source**; Sources remain issuer/network product or terms URLs.
 
@@ -108,8 +108,14 @@ Then map the file to an OpenCard **Card Id**, set `image.attribution` to the Iss
 1. **Do not implement Apple Pay scraping** (remote or credentialed provisioning automation).
 2. **Treat Apple Wallet local extract as a documented contributor workflow** for high-quality optional mirrors.
 3. **Keep** `image.url` preference for official issuer product-page art when adequate.
-4. Optionally later: a small `scripts/` helper that *only* copies from `~/Library/Passes/Cards` on the contributor’s machine and prints suggested `image` JSON — never hits Apple network APIs.
+4. **Image CI norm:** `cardBackgroundCombined@2x.png` → **lossless WebP**, native dimensions (`scripts/optimize-images.ts`). Prefer Apple Pay extracts over unknown-provenance uploads (“graduation-level”).
 5. Community catalogs may help humans find which product name appears in `pass.json`, but must not become Sources or a bulk redistributed art CDN inside this repo.
+
+## Follow-up TODOs
+
+- [ ] Optional local helper: copy from `~/Library/Passes/Cards` on the contributor’s machine and print suggested `image` JSON (no network).
+- [ ] Consider additive schema field `image.provenance` (`issuer_url` | `apple_pay` | `other` | null) so API clients can prefer graduation-level faces.
+- [ ] Backfill seed Cards that still have `image.url: null` when a holder can extract Apple Pay art.
 
 ## Current catalog gap (as of research)
 
