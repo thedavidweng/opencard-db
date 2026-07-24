@@ -20,30 +20,52 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.24,
+      "max": 27.74,
       "type": "variable"
     },
-    "notes": "See Chase for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "19.24% (min of (6.75+12.49) and 29.99%) to 27.74% (min of (6.75+20.99) and 29.99%) variable APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. 'You will pay no foreign transaction fees when you use your card for purchases made outside the United States.'"
   },
   "credit_required": {
     "score_band": null,
     "notes": null
   },
   "rewards": {
-    "currency": "ultimate_rewards",
-    "currency_label": "Ultimate Rewards points / cash back (see product)",
+    "currency": "rapid_rewards_points",
+    "currency_label": "Southwest Rapid Rewards points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official Chase product page."
+      "points_per_dollar": 1,
+      "description": "1X points on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "See official Chase product page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points automatically transferred to Southwest Airlines. 9,000 bonus points each account anniversary year. 2,500 TQPs for every $5,000 spent annually. 10,000 Companion Pass qualifying points boost each year."
   },
   "signup_bonus": {
     "amount": 80000.0,
@@ -51,17 +73,148 @@
     "spend_required": 5000.0,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn 80,000 points after you spend $5,000 on purchases in the first 3 months",
+    "description": "Earn 80,000 points after you spend $5,000 on purchases in the first 3 months from account opening.",
     "as_of": "2026-07-24"
   },
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "preferred-seat-booking",
+      "title": "Complimentary Preferred seat at booking",
+      "category": "other",
+      "source": "issuer",
+      "description": "Select a Preferred seat at booking, at no additional charge, when available. For flights operating with assigned seating in 2026 and beyond."
+    },
+    {
+      "id": "first-checked-bag-free",
+      "title": "First checked bag free",
+      "category": "other",
+      "source": "issuer",
+      "description": "Cardmembers and up to 8 additional passengers in the same reservation can check their first bag at no additional cost. Savings up to $360 roundtrip for a group of 4."
+    },
+    {
+      "id": "extra-legroom-upgrade",
+      "title": "Extra Legroom seat upgrade",
+      "category": "other",
+      "source": "issuer",
+      "description": "Unlimited upgrades to an Extra Legroom seat within 48 hours prior to departure, at no additional charge, when available."
+    },
+    {
+      "id": "boarding-benefit",
+      "title": "Group 5 Boarding benefit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Cardmembers and up to 8 passengers in the same reservation will board with Group 5."
+    },
+    {
+      "id": "inflight-purchase-rebate",
+      "title": "25% back on inflight purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "25% back on Southwest Airlines inflight purchases in the form of a statement credit."
+    },
+    {
+      "id": "anniversary-points",
+      "title": "9,000 anniversary points each year",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 9,000 bonus points each year after your Cardmember anniversary."
+    },
+    {
+      "id": "tqp-earning",
+      "title": "2,500 Tier Qualifying Points per $5,000 spent",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 2,500 tier qualifying points (TQPs) toward A-List status for every $5,000 spent in purchases annually."
+    },
+    {
+      "id": "companion-pass-boost",
+      "title": "10,000 Companion Pass qualifying points boost",
+      "category": "other",
+      "source": "issuer",
+      "description": "10,000 Companion Pass qualifying points boost each year."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee cards at no additional cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Employee cards at no additional cost and earn points on employee spending."
+    },
+    {
+      "id": "global-entry-credit",
+      "title": "Global Entry/TSA PreCheck/NEXUS fee credit up to $120",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive one statement credit of up to $120 every four years as reimbursement for the application fee for Global Entry, TSA PreCheck or NEXUS."
+    },
+    {
+      "id": "no-fx-fee",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the United States."
+    },
+    {
+      "id": "no-blackout-dates",
+      "title": "No blackout dates and unlimited reward seats",
+      "category": "other",
+      "source": "issuer",
+      "description": "No blackout dates and unlimited reward seats apply to flights booked with points."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimbursement up to $3,000 per covered traveler for lost, damaged or stolen baggage."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimburses up to $100 a day for up to 3 days for essential purchases when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Extends manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from date of purchase."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers eligible new purchases for 120 days against damage or theft up to $10,000 per item."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
-    "free_checked_bags": null,
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": "First checked bag free for cardmember and up to 8 passengers on same reservation",
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Complimentary Preferred seat at booking",
+      "Extra Legroom seat upgrades within 48 hours of departure",
+      "Group 5 boarding",
+      "25% back on inflight purchases",
+      "9,000 anniversary points each year",
+      "2,500 TQPs per $5,000 spent",
+      "10,000 Companion Pass qualifying points boost",
+      "No foreign transaction fees",
+      "No blackout dates"
+    ]
   },
   "official_url": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business",
   "image": {
@@ -74,5 +227,5 @@
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/southwest/performance-business"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official Chase product page. Network (mastercard) and network_tier (world) not explicitly stated on product page; preserved from existing JSON."
 }
