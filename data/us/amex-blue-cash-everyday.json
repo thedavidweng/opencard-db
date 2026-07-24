@@ -1,0 +1,137 @@
+{
+  "id": "us-amex-blue-cash-everyday",
+  "schema_version": "1.0.0",
+  "name": "Blue Cash Everyday® Card",
+  "localized_names": { "en": "Blue Cash Everyday® Card" },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": { "min": 19.49, "max": 28.49, "type": "variable" },
+    "cash_advance": { "min": 28.74, "max": 28.74, "type": "variable" },
+    "notes": "Terms list a 0% introductory APR for the first 15 months from account opening on purchases and qualifying balance transfers; standard variable APRs are accurate as of 2026-07-16."
+  },
+  "fx_fee": { "percent": 2.7, "notes": "Foreign transaction fee is 2.7% of each transaction after conversion to US dollars." },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "reward_dollars",
+    "currency_label": "Reward Dollars",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.01,
+      "description": "1% cash back on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 0.03,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "U.S. online retail purchases",
+        "points_per_dollar": 0.03,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "U.S. gas stations",
+        "points_per_dollar": 0.03,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back is received as Reward Dollars redeemable for statement credits or eligible Amazon.com checkout purchases."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "reward_dollars",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Official terms describe a personalized welcome offer as high as $200 cash back; exact eligible amount is shown before accepting the Card if approved.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "disney-streaming-credit",
+      "title": "$84 Disney Streaming Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $7 in monthly statement credits after qualifying purchases at eligible U.S. Disney+, Hulu, or ESPN streaming websites when enrolled."
+    },
+    {
+      "id": "home-chef-credit",
+      "title": "$180 Home Chef Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $15 in monthly statement credits for eligible Home Chef meal kit subscription purchases when enrolled."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for eligible purchases against covered loss events, subject to American Express benefit terms."
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage on eligible rentals when the rental is paid with the card and coverage terms are met."
+    },
+    {
+      "id": "amazon-checkout-redemption",
+      "title": "Cash Back at Amazon.com checkout",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reward Dollars can be linked and used for eligible items at Amazon.com checkout."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Global Assist Hotline coordination and assistance services are available at no additional charge; third-party service costs are the Card Member's responsibility."
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/",
+  "image": {
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000305_480x304_straight_withname.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/blue-cash-everyday-credit-card/91101-10-0"
+  ],
+  "notes": "Product name Blue Cash Everyday is not a Network Tier; network_tier is none for Amex network packages. Welcome offer amount is personalized on the official terms page."
+}
