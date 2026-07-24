@@ -24,29 +24,68 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "See U.S. Bank for current APR; terms vary by applicant/offer."
+    "cash_advance": null,
+    "notes": "0% intro APR on purchases and balance transfers for the first 12 billing cycles. After that, a variable APR applies (specific rate shown as placeholder on page, not a numeric value)."
   },
   "fx_fee": {
     "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "notes": "Not stated on product page. Preserved as null — not re-verified."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "In general, our credit card products are for customers with a credit score in the good to excellent range."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
+    "currency": "cash_back",
+    "currency_label": "Cash back",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 2.0,
+      "description": "Unlimited 2% cash back on every purchase with no caps. These cash back rates can be obtained when rewards are redeemed into an eligible U.S. Bank deposit account."
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      },
+      {
+        "label": "Category",
+        "points_per_dollar": null,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Get cash back directly deposited into U.S. Bank checking or savings account, as a statement credit, a rewards card, merchant gift cards and more. Cash back rates obtained when rewards are redeemed into an eligible U.S. Bank deposit account."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "cashback-deals",
+      "title": "Cash-back deals from brands you love",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get cash back from the brands you love via Cash-back deals, personalized offers based on your previous spending. Access them through the U.S. Bank Mobile App or online banking."
+    },
+    {
+      "id": "flexible-redemption",
+      "title": "Flexible redemption",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get your cash back directly deposited into your U.S. Bank checking or savings account, as a statement credit, a rewards card, merchant gift cards and more."
+    },
+    {
+      "id": "extendpay",
+      "title": "Pay over time with U.S. Bank ExtendPay® Plan",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -66,5 +105,5 @@
   "sources": [
     "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "Verified from official U.S. Bank product page. Visa Signature confirmed from page title. APR specific rate not available (shown as placeholder on page). Credit required 'good to excellent' from FAQ section."
 }
