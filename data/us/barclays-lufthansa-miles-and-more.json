@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 89.0,
@@ -44,22 +45,18 @@
     "currency_label": "Miles & More miles",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 1.0,
+      "points_per_dollar": 1,
       "description": "Earn 1 mile per $1 spent on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Miles & More partner airline tickets",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem for flight tickets from the entire Lufthansa Group and Star Alliance network. Once each calendar year, you can convert 5,000 to 25,000 miles earned on purchases into Points and Qualifying Points. For example, 5,000 miles convert to 20 Points + 20 Qualifying Points."
+    "redemption_notes": "Redeem for flight tickets from the entire Lufthansa Group and Star Alliance network. Once each calendar year, you can convert 5,000 to 25,000 miles earned on purchases into Points and Qualifying Points. For example, 5,000 miles convert to 20 Points + 20 Qualifying Points.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 50000.0,
@@ -75,21 +72,21 @@
       "id": "lounge-access-vouchers",
       "title": "Lounge Access with Two Complimentary Lufthansa Business Lounge Vouchers",
       "category": "lounge",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive lounge access with two complimentary Lufthansa Business Lounge Vouchers annually."
     },
     {
       "id": "annual-companion-ticket",
       "title": "Annual Companion Ticket",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive an Annual Companion Ticket after each account anniversary (taxes and fees apply)."
     },
     {
       "id": "miles-status-conversion",
       "title": "Achieve Miles & More® Status Faster",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Once each calendar year, you can convert 5,000 to 25,000 miles earned on purchases into Points and Qualifying Points. For example, 5,000 miles convert to 20 Points + 20 Qualifying Points."
     },
     {
