@@ -47,7 +47,7 @@
         "label": "5% cash back rotating quarterly categories (activation required)",
         "points_per_dollar": 5,
         "cap": {
-          "amount": null,
+          "amount": 1500,
           "currency": "USD",
           "period": "quarter"
         }
