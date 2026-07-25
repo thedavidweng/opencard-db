@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 499.0,
@@ -44,27 +45,23 @@
     "currency_label": "Skywards Miles",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 1.0,
+      "points_per_dollar": 1,
       "description": "Earn 1 Skywards Mile on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Emirates purchases",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible travel purchases",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Skywards Miles don't expire while your account is open. No limit to the number of Skywards Miles you can earn. NEW: Earn 1 Tier Mile per 4 base Skywards Miles earned. Earn 10,000 anniversary bonus Skywards Miles annually after spending $30,000 on purchases each cardmembership year."
+    "redemption_notes": "Skywards Miles don't expire while your account is open. No limit to the number of Skywards Miles you can earn. NEW: Earn 1 Tier Mile per 4 base Skywards Miles earned. Earn 10,000 anniversary bonus Skywards Miles annually after spending $30,000 on purchases each cardmembership year.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 70000.0,
@@ -172,19 +169,16 @@
     "lounge_access": {
       "notes": "Priority Pass Select — unlimited access to over 1,200 lounges worldwide for primary cardmember and guest(s)"
     },
-    "tsa_precheck_credit": {
-      "amount": 120.0,
-      "currency": "USD",
-      "period": "per_year"
-    },
+    "tsa_precheck_credit": null,
     "global_entry_credit": {
       "amount": 120.0,
       "currency": "USD",
-      "period": "per_year"
+      "period": "every_5_years"
     },
     "free_checked_bags": null,
     "hotel_status": null,
     "other": [
+      "Combined Global Entry or TSA PreCheck application fee statement credit of up to $120 once every 5 years",
       "Emirates Skywards Gold tier membership during first year",
       "Cash + Miles special rate on emirates.com and Emirates App",
       "No foreign transaction fees"
