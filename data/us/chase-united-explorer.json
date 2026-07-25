@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 150.0,
@@ -38,6 +39,7 @@
     "currency": "mileageplus_miles",
     "currency_label": "United MileagePlus miles",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1x mile on all other purchases."
@@ -79,7 +81,7 @@
     {
       "id": "free-checked-bag",
       "title": "Free First Checked Bag",
-      "category": "other",
+      "category": "waiver",
       "source": "co-brand",
       "description": "The primary Cardmember and one companion can each check a first standard bag for free - save up to $200 per roundtrip."
     },
@@ -107,49 +109,49 @@
     {
       "id": "global-entry-credit",
       "title": "Global Entry / TSA PreCheck / NEXUS Credit",
-      "category": "other",
+      "category": "credit",
       "source": "issuer",
       "description": "Up to $120 as a statement credit for Global Entry, TSA Precheck or NEXUS every 4 years as reimbursement for the application fee when charged to your card."
     },
     {
       "id": "united-travel-credit",
       "title": "$100 United Travel Credit",
-      "category": "other",
+      "category": "credit",
       "source": "co-brand",
       "description": "Earn $100 in United TravelBank cash after you spend $10,000 with your United Explorer Card within a calendar year."
     },
     {
       "id": "united-hotels-credit",
       "title": "Up to $100 in United Hotels Credits",
-      "category": "other",
+      "category": "credit",
       "source": "co-brand",
       "description": "Receive $50 back as a statement credit on both your 1st and 2nd prepaid hotel stays purchased directly through United Hotels, up to $100 each anniversary year."
     },
     {
       "id": "rideshare-credit",
       "title": "Up to $60 in Rideshare Credits",
-      "category": "other",
+      "category": "credit",
       "source": "co-brand",
       "description": "Enroll to receive up to $5 back as a statement credit each month on rideshare purchases, up to $60 each calendar year. Yearly opt-in is required."
     },
     {
       "id": "avis-budget-credit",
       "title": "Up to $50 in Avis/Budget Credits",
-      "category": "other",
+      "category": "credit",
       "source": "co-brand",
       "description": "Receive $25 in United TravelBank cash, up to $50 each anniversary year, for 1st and 2nd Avis or Budget car rental booked directly through cars.united.com."
     },
     {
       "id": "instacart-credit",
       "title": "Up to $120 in Instacart Credits",
-      "category": "other",
+      "category": "credit",
       "source": "issuer",
       "description": "Receive a $10 Instacart credit monthly, up to $120 total each calendar year, for purchases made directly through Instacart. Benefits end 12/31/27."
     },
     {
       "id": "jsx-credit",
       "title": "Up to $100 in JSX Credits",
-      "category": "other",
+      "category": "credit",
       "source": "co-brand",
       "description": "Get up to $100 back as a statement credit each anniversary year when you book flights directly with JSX using your Explorer Card."
     },
@@ -249,11 +251,7 @@
     "lounge_access": {
       "notes": "2 United Club one-time passes per year"
     },
-    "tsa_precheck_credit": {
-      "amount": 120.0,
-      "currency": "USD",
-      "period": "every_4_years"
-    },
+    "tsa_precheck_credit": null,
     "global_entry_credit": {
       "amount": 120.0,
       "currency": "USD",
@@ -279,5 +277,5 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
   ],
-  "notes": "United Explorer Card from Chase. Corrected network from mastercard to visa and tier from world to signature based on page evidence (Visa Signature Concierge Service mentioned as benefit). $0 intro annual fee first year, then $150. No foreign transaction fees. Signup bonus updated to 60,000 total (50,000 + 10,000 AU)."
+  "notes": "United Explorer Card from Chase. Corrected network from mastercard to visa and tier from world to signature based on page evidence (Visa Signature Concierge Service mentioned as benefit). $0 intro annual fee first year, then $150. No foreign transaction fees. Signup bonus is 60,000 total (50,000 base + 10,000 authorized-user), as described in signup_bonus.description. Statement-credit benefits recategorized to 'credit' and the free checked bag to 'waiver'. Global Entry/TSA PreCheck/NEXUS is a single combined statement credit (up to $120 every 4 years): recorded once under travel_perks.global_entry_credit; travel_perks.tsa_precheck_credit set to null to avoid double-counting."
 }
