@@ -10,7 +10,9 @@ import {
   DEFAULT_CARD_WEBP_BASE64,
 } from "./default-card-asset";
 import { checkRateLimit } from "./rate-limit";
-import type { Card, Env, Meta } from "./types";
+// Env comes from worker-configuration.d.ts, generated from wrangler.jsonc by
+// `npm run types` (Cloudflare's recommended practice: never hand-write Env).
+import type { Card, Meta } from "./types";
 
 function defaultCardAssetResponse(): Response {
   const bytes = Uint8Array.from(atob(DEFAULT_CARD_WEBP_BASE64), (c) =>

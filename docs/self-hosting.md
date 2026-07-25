@@ -26,12 +26,15 @@ npx wrangler login
 npx wrangler kv namespace create OPENCARD_KV
 ```
 
-Copy the namespace id into `worker/wrangler.toml`:
+Copy the namespace id into the top-level `kv_namespaces` entry of
+[`worker/wrangler.jsonc`](../worker/wrangler.jsonc) (the top level of that file
+is the self-host configuration; the `env.production` section is the official
+instance and is not used by a plain `wrangler deploy`):
 
-```toml
-[[kv_namespaces]]
-binding = "OPENCARD_KV"
-id = "<your-namespace-id>"
+```jsonc
+"kv_namespaces": [
+  { "binding": "OPENCARD_KV", "id": "<your-namespace-id>" }
+]
 ```
 
 ## 2. Build and upload indexes
@@ -59,7 +62,9 @@ npx wrangler kv key put index:network --path dist/indexes/index-network.json --n
 npx wrangler kv key put index:network_tier --path dist/indexes/index-network-tier.json --namespace-id $KV_NAMESPACE_ID --remote
 ```
 
-Or run `node --experimental-strip-types scripts/upload-kv.ts` after setting the env vars.
+Or run `node --experimental-strip-types scripts/upload-kv.ts` after setting the
+env vars (`KV_NAMESPACE_ID` overrides the production id the script would
+otherwise read from `worker/wrangler.jsonc`).
 
 ## 3. Deploy the Worker
 
@@ -86,27 +91,31 @@ npx wrangler deploy
 
 ## 4. Optional: official-style policy on your instance
 
-In `wrangler.toml`:
+In the top-level `vars` of `worker/wrangler.jsonc`:
 
-```toml
-[vars]
-MODE = "official"
-REQUIRE_CLIENT_ID = "true"
-RATE_LIMIT_ENABLED = "true"
-RATE_LIMIT_PER_MINUTE = "30"
-RATE_LIMIT_PER_DAY = "500"
-CACHE_MAX_AGE = "300"
+```jsonc
+"vars": {
+  "MODE": "official",
+  "REQUIRE_CLIENT_ID": "true",
+  "RATE_LIMIT_ENABLED": "true",
+  "RATE_LIMIT_PER_MINUTE": "30",
+  "RATE_LIMIT_PER_DAY": "500",
+  "CACHE_MAX_AGE": "300"
+}
 ```
 
-## GitHub Actions secrets (optional official deploy)
+## GitHub Actions secrets (official deploy)
+
+The account id and production KV namespace id are committed in
+`worker/wrangler.jsonc` (`env.production`); they are identifiers, not
+credentials. The deploy workflow needs one secret:
 
 | Secret | Purpose |
 |--------|---------|
-| `CLOUDFLARE_API_TOKEN` | API token with Workers + KV edit |
-| `CLOUDFLARE_ACCOUNT_ID` | Account id |
-| `KV_NAMESPACE_ID` | Target KV namespace |
+| `CLOUDFLARE_API_TOKEN` | API token with Workers Scripts:Edit and Workers KV Storage:Edit on the account |
+| `WORKER_DEPLOY` | Set to `true` to also redeploy the Worker script (KV data uploads always run) |
 
-If secrets are missing, the deploy workflow validates and builds indexes, then **exits successfully without uploading**.
+If `CLOUDFLARE_API_TOKEN` is missing, the deploy workflow validates and builds indexes, then **exits successfully without uploading**.
 
 ## Caching and the free tier
 

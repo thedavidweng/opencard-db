@@ -56,6 +56,10 @@ info:
     url: https://github.com/thedavidweng/opencard-db
 
 servers:
+  - url: https://opencard-db.davidweng.workers.dev
+    description: >
+      Official best-effort instance (rate limited; requires a meaningful
+      User-Agent or X-Client-Name header). Self-host for production traffic.
   - url: https://opencard.example.com
     description: >
       Placeholder for your self-hosted instance (Cloudflare Worker on your own

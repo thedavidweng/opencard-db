@@ -43,7 +43,7 @@ https://raw.githubusercontent.com/thedavidweng/opencard-db/main/exports/cards-al
 
 ### REST API
 
-A read-only HTTP API with filtering, search, and per-card lookup:
+A read-only HTTP API with filtering, search, and per-card lookup, served from `https://opencard-db.davidweng.workers.dev`:
 
 ```http
 GET /v1/health

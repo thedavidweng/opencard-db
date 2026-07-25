@@ -4,6 +4,8 @@ node_modules/
 # Build / generated indexes
 dist/
 *.tsbuildinfo
+# Generated from wrangler.jsonc by `npm run types --prefix worker`
+worker/worker-configuration.d.ts
 
 # Environment / secrets
 .env
