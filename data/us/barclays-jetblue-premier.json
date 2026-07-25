@@ -1,0 +1,223 @@
+{
+  "id": "us-barclays-jetblue-premier",
+  "schema_version": "1.0.0",
+  "name": "JetBlue Premier Card",
+  "localized_names": {
+    "en": "JetBlue Premier Card"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 499.0,
+    "currency": "USD",
+    "first_year": 499.0,
+    "waiver_conditions": "$150 for each authorized user"
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": null
+    },
+    "notes": "APR for purchases: 19.49% to 29.49% variable based on creditworthiness. 0% introductory APR on balance transfers for first 12 billing cycles within 45 days of account opening, then 19.49% to 29.49%. APR for cash advances: 29.74%. APRs vary with the market based on the Prime Rate. Minimum monthly interest charge $1.00. Balance transfer fee: 5% (min. $5). Cash advance fee: 5% (min. $10)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "Disclosure states 'Foreign transaction fee: 0%.' Page also states 'No foreign transaction fees on international purchases.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "TrueBlue points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "6X points on eligible JetBlue purchases",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "2X points at restaurants and eligible grocery stores",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points never expire. No blackout dates — any seat, any time on JetBlue-operated flights. Points pooling with family and friends. Cash + Points starting from as few as 500 points."
+  },
+  "signup_bonus": {
+    "amount": 100000.0,
+    "unit": "points",
+    "spend_required": 5000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 100,000 bonus points after spending $5,000 on purchases and paying the annual fee in full, both within the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "bluehouse-access",
+      "title": "Access to BlueHouse™",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary access to BlueHouse for cardmembers with eligible fares."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass™ Lounge Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to over 1,800 participating lounges and travel experiences in over 700 airports in 146 countries with Priority Pass."
+    },
+    {
+      "id": "trueblue-travel-credits",
+      "title": "TrueBlue Travel Statement Credits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn up to $300 in statement credits on TrueBlue Travel purchases per calendar year."
+    },
+    {
+      "id": "mosaic-status-faster",
+      "title": "Mosaic Status Faster",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn toward Mosaic with every purchase."
+    },
+    {
+      "id": "anniversary-bonus-points",
+      "title": "5,000 Bonus Points Each Anniversary",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 5,000 bonus points each year after your JetBlue Premier Card account anniversary."
+    },
+    {
+      "id": "fifteen-percent-points-back",
+      "title": "15% of Points Back on Award Flights",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get 15% of your points back after you redeem for and travel on an Award Flight."
+    },
+    {
+      "id": "points-never-expire",
+      "title": "Points Never Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "Your points will be ready whenever you are."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Means you're not responsible for unauthorized charges."
+    },
+    {
+      "id": "global-entry-tsa-precheck",
+      "title": "Global Entry or TSA PreCheck Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $120 application fee statement credit every 4 years for Global Entry or TSA PreCheck."
+    },
+    {
+      "id": "group-3-boarding",
+      "title": "Group 3 Boarding",
+      "category": "other",
+      "source": "issuer",
+      "description": "Group 3 boarding on JetBlue-operated flights for the primary cardmember, authorized users, and up to 4 eligible travel companions."
+    },
+    {
+      "id": "fifty-off-inflight",
+      "title": "50% Savings on Inflight Purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "50% savings on eligible inflight purchases on JetBlue-operated flights."
+    },
+    {
+      "id": "free-first-checked-bag",
+      "title": "Free First Checked Bag",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free first checked bag for the primary cardmember and up to 3 eligible travel companions on the same itinerary when you use your JetBlue Premier Card on JetBlue-operated flights."
+    },
+    {
+      "id": "points-payback",
+      "title": "Points Payback",
+      "category": "other",
+      "source": "issuer",
+      "description": "Points Payback allows you to redeem points for a statement credit."
+    },
+    {
+      "id": "redeem-any-seat",
+      "title": "Redeem for Any Seat, Any Time",
+      "category": "other",
+      "source": "issuer",
+      "description": "Points required for an Award flight will vary based on the published base fare at the time of booking."
+    },
+    {
+      "id": "cash-plus-points",
+      "title": "Cash + Points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay for your flight with almost any combination of dollars and TrueBlue points – starting with as few as 500 points."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "companion-pass-credits",
+      "title": "Companion Pass Statement Credits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn up to $2,000 in companion pass statement credits after eligible purchases in a calendar year. Up to $500 after $15,000 in eligible net purchases, and up to $1,500 after $75,000 in eligible net purchases."
+    },
+    {
+      "id": "twenty-five-tile-bonus",
+      "title": "25-Tile Bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive an annual 25-tile bonus after year-end to fast-track your Mosaic status for the next year."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Priority Pass — over 1,800 participating lounges and travel experiences in over 700 airports in 146 countries"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "True",
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
+  "image": {
+    "url": null,
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/"
+  ],
+  "notes": "Name corrected from 'See if you pre' to 'JetBlue Premier Card' based on page H1 heading. network_tier corrected from 'world' to 'world_elite' based on footnote 5: 'JetBlue Premier World Elite Mastercard'. Annual fee waiver_conditions updated to note $150 per authorized user. All rates/fees/benefits verified from fetched page."
+}
