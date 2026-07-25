@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCard DB · The open database of credit cards</title>
+<meta name="description" content="Community-maintained credit card metadata for the US, Canada, and China. Schema-validated JSON, served from a free CDN. No keys, no quotas, no signup.">
+<meta property="og:title" content="OpenCard DB">
+<meta property="og:description" content="The open database of credit cards. Schema-validated JSON for US, CA, and CN cards, served from a free CDN.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thedavidweng.github.io/opencard-db/">
+<meta name="theme-color" content="#241522">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="nav-wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="29" height="29" rx="7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="6.2" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="3.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      OpenCard&nbsp;DB
+    </a>
+    <div class="nav-links">
+      <a href="#data">Data</a>
+      <a href="#schema">Schema</a>
+      <a href="#api">API</a>
+      <a href="#contribute">Contribute</a>
+    </div>
+    <a class="btn btn-nav" href="https://github.com/thedavidweng/opencard-db">GitHub</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-engraving" aria-hidden="true">
+      <svg id="rosette-large" viewBox="0 0 900 900"></svg>
+      <svg id="rosette-small" viewBox="0 0 500 500"></svg>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>The open database of credit&nbsp;cards.</h1>
+        <p class="hero-sub">
+          Community-maintained metadata for cards issued in the United States,
+          Canada, and China. One schema-validated JSON file per card, reviewed
+          in public, served from a free CDN. No keys, no quotas, no signup.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#data">Get the data</a>
+          <a class="btn btn-ghost" href="https://github.com/thedavidweng/opencard-db">View on GitHub</a>
+        </div>
+      </div>
+
+      <figure class="hero-card" aria-label="Specimen card">
+        <div class="specimen">
+          <svg class="specimen-engraving" id="rosette-card" viewBox="0 0 640 400" aria-hidden="true"></svg>
+          <div class="specimen-top">
+            <span class="specimen-brand">OPENCARD&nbsp;DB</span>
+            <span class="specimen-tag">SPECIMEN</span>
+          </div>
+          <div class="chip" aria-hidden="true"></div>
+          <div class="specimen-number">•••• &nbsp;•••• &nbsp;•••• &nbsp;<span id="stat-cards-card">0189</span></div>
+          <div class="specimen-bottom">
+            <div>
+              <span class="specimen-label">Cardholder</span>
+              <span class="specimen-value">OPEN SOURCE COMMUNITY</span>
+            </div>
+            <div>
+              <span class="specimen-label">Valid thru</span>
+              <span class="specimen-value">FOREVER</span>
+            </div>
+          </div>
+        </div>
+        <figcaption class="hero-json" aria-hidden="true">
+<pre><code><span class="j-p">"id"</span>: <span class="j-s">"us-chase-sapphire-preferred"</span>,
+<span class="j-p">"network_tier"</span>: <span class="j-s">"signature"</span>,
+<span class="j-p">"annual_fee"</span>: { <span class="j-p">"amount"</span>: <span class="j-n">95</span> }</code></pre>
+        </figcaption>
+      </figure>
+    </div>
+
+    <dl class="hero-stats">
+      <div><dt>Cards</dt><dd id="stat-cards">189</dd></div>
+      <div><dt>Countries</dt><dd>US &nbsp;CA &nbsp;CN</dd></div>
+      <div><dt>Formats</dt><dd>JSON · CSV · YAML</dd></div>
+      <div><dt>Licenses</dt><dd>MIT + CC BY 4.0</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ GET THE DATA ============ -->
+  <section class="band" id="data">
+    <div class="band-inner">
+      <h2>Get the data</h2>
+      <p class="band-lede">
+        The catalog is committed to the repository and mirrored on jsDelivr.
+        Pinned release URLs are immutable and globally cached, so production
+        use costs nothing and needs no account.
+      </p>
+
+      <div class="ledger">
+        <article class="ledger-row reveal">
+          <div class="ledger-head">
+            <h3>CDN, pinned</h3>
+            <p>Recommended for production. Tag URLs never change and have no rate limits.</p>
+          </div>
+          <div class="code" data-copy>
+            <button class="copy-btn" type="button" aria-label="Copy URL">Copy</button>
+<pre><code>https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/cards-all.json</code></pre>
+          </div>
+        </article>
+
+        <article class="ledger-row reveal">
+          <div class="ledger-head">
+            <h3>CDN, latest</h3>
+            <p>Tracks the newest merged data. Cached for about 12 hours, good for prototyping.</p>
+          </div>
+          <div class="code" data-copy>
+            <button class="copy-btn" type="button" aria-label="Copy URL">Copy</button>
+<pre><code>https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/exports/cards-all.json</code></pre>
+          </div>
+        </article>
+
+        <article class="ledger-row reveal">
+          <div class="ledger-head">
+            <h3>Releases</h3>
+            <p>Every tagged release ships the same exports as downloadable assets.</p>
+          </div>
+          <div class="code" data-copy>
+            <button class="copy-btn" type="button" aria-label="Copy command">Copy</button>
+<pre><code>curl -LO https://github.com/thedavidweng/opencard-db/releases/latest/download/cards.csv</code></pre>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHEMA ============ -->
+  <section class="band band-dark" id="schema">
+    <div class="band-inner band-split">
+      <div class="band-text">
+        <h2>One file per card, one contract for all of them</h2>
+        <p>
+          Every card lives in <code class="inline">data/&#123;us,ca,cn&#125;/</code> as a single
+          JSON document validated against <a href="https://github.com/thedavidweng/opencard-db/blob/main/schema.json">schema.json</a>
+          in CI. Records cover the numbers people actually compare.
+        </p>
+        <dl class="field-list">
+          <div><dt>Fees</dt><dd>Annual fee, first-year terms, FX fee percentage</dd></div>
+          <div><dt>APR</dt><dd>Purchase ranges with variable or fixed type</dd></div>
+          <div><dt>Rewards</dt><dd>Earning currency, base rate, category multipliers and caps</dd></div>
+          <div><dt>Provenance</dt><dd>Cited sources per card, archived against link rot</dd></div>
+          <div><dt>Card art</dt><dd>Graded faces with SHA lineage, from issuer art to lossless Apple Pay exports</dd></div>
+        </dl>
+      </div>
+      <div class="code code-tall">
+<pre><code>{
+  <span class="j-p">"id"</span>: <span class="j-s">"us-chase-sapphire-preferred"</span>,
+  <span class="j-p">"name"</span>: <span class="j-s">"Chase Sapphire Preferred® Card"</span>,
+  <span class="j-p">"issuer"</span>: <span class="j-s">"Chase"</span>,
+  <span class="j-p">"network"</span>: <span class="j-s">"visa"</span>,
+  <span class="j-p">"annual_fee"</span>: { <span class="j-p">"amount"</span>: <span class="j-n">95</span>, <span class="j-p">"currency"</span>: <span class="j-s">"USD"</span> },
+  <span class="j-p">"fx_fee"</span>: { <span class="j-p">"percent"</span>: <span class="j-n">0</span> },
+  <span class="j-p">"rewards"</span>: {
+    <span class="j-p">"currency_label"</span>: <span class="j-s">"Ultimate Rewards points"</span>,
+    <span class="j-p">"base_rate"</span>: { <span class="j-p">"points_per_dollar"</span>: <span class="j-n">1</span> },
+    <span class="j-p">"categories"</span>: [
+      { <span class="j-p">"label"</span>: <span class="j-s">"Travel via Chase Travel"</span>,
+        <span class="j-p">"points_per_dollar"</span>: <span class="j-n">5</span> }
+    ]
+  }
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ API ============ -->
+  <section class="band" id="api">
+    <div class="band-inner band-split band-split-rev">
+      <div class="band-text">
+        <h2>A REST API you can own</h2>
+        <p>
+          A read-only <code class="inline">/v1</code> Worker with filtering, search, and per-card
+          lookup. Deploy your own instance on the Cloudflare free plan in minutes,
+          or prototype against the official best-effort endpoint.
+        </p>
+        <p class="band-note">
+          The official instance asks for a real <code class="inline">User-Agent</code> and is rate
+          limited. Production traffic should <a href="https://github.com/thedavidweng/opencard-db/blob/main/docs/self-hosting.md">self-host</a>.
+        </p>
+      </div>
+      <div class="code">
+<pre><code><span class="j-c">GET</span> /v1/health
+<span class="j-c">GET</span> /v1/meta
+<span class="j-c">GET</span> /v1/cards?country=us
+<span class="j-c">GET</span> /v1/cards/us-chase-sapphire-preferred
+<span class="j-c">GET</span> /v1/search?q=sapphire</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTRIBUTE ============ -->
+  <section class="band band-dark" id="contribute">
+    <div class="band-inner">
+      <h2>Built by people who read the fine print</h2>
+      <p class="band-lede">
+        Adding a card is a pull request. CI validates the schema, checks your
+        sources, and labels the PR for review.
+      </p>
+
+      <ol class="steps">
+        <li class="reveal"><h3>Copy the template</h3><p><code class="inline">templates/card.template.json</code> into <code class="inline">data/&#123;country&#125;/</code></p></li>
+        <li class="reveal"><h3>Fill in the fields</h3><p>Cite the issuer page for every number you enter</p></li>
+        <li class="reveal"><h3>Validate locally</h3><p><code class="inline">npm run validate</code> runs the same checks as CI</p></li>
+        <li class="reveal"><h3>Open a PR</h3><p>A reviewer checks your sources and merges</p></li>
+      </ol>
+
+      <div class="export-callout reveal">
+        <div>
+          <h3>Card art from your own wallet</h3>
+          <p>
+            On a Mac with your cards in Apple Pay, the export CLI scans your Wallet,
+            diffs it against the live database, and helps you open an art PR.
+            Everything runs locally. Nothing is uploaded.
+          </p>
+        </div>
+        <div class="code" data-copy>
+          <button class="copy-btn" type="button" aria-label="Copy command">Copy</button>
+<pre><code>npx opencard-export</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="29" height="29" rx="7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="6.2" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="3.4" fill="none" stroke="currentColor" stroke-width="1"/>
+      </svg>
+      <span>OpenCard DB</span>
+    </div>
+    <nav class="footer-cols" aria-label="Footer">
+      <div>
+        <h4>Data</h4>
+        <a href="https://github.com/thedavidweng/opencard-db/tree/main/exports">Exports</a>
+        <a href="https://github.com/thedavidweng/opencard-db/releases">Releases</a>
+        <a href="https://github.com/thedavidweng/opencard-db/blob/main/schema.json">Schema</a>
+      </div>
+      <div>
+        <h4>Docs</h4>
+        <a href="https://github.com/thedavidweng/opencard-db/blob/main/docs/api.md">API reference</a>
+        <a href="https://github.com/thedavidweng/opencard-db/blob/main/docs/self-hosting.md">Self-hosting</a>
+        <a href="https://github.com/thedavidweng/opencard-db/blob/main/docs/contributing.md">Contributing</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/thedavidweng/opencard-db">GitHub</a>
+        <a href="https://github.com/thedavidweng/opencard-db/issues">Issues</a>
+        <a href="https://github.com/thedavidweng/opencard-db/blob/main/LICENSE">MIT (code)</a>
+        <a href="https://github.com/thedavidweng/opencard-db/blob/main/LICENSE-DATA">CC BY 4.0 (data)</a>
+      </div>
+    </nav>
+  </div>
+  <p class="footer-fine">
+    Community-maintained data can contain errors or lag behind issuer changes.
+    Verify terms with the issuer before making financial decisions.
+    Issuer card artwork remains the copyright of the respective banks.
+  </p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
