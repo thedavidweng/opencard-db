@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -43,24 +44,25 @@
     "currency": "thankyou_points",
     "currency_label": "ThankYou® Points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1 ThankYou® Point for every $1 spent on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas and EV charging stations",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "AT&T products and services",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores (including grocery delivery services)",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -143,7 +145,7 @@
       "id": "mastercard-id-theft-protection",
       "title": "Mastercard® ID Theft Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "ID Theft Protection program offered by Mastercard® helps eliminate the worry of identity theft by monitoring information you choose to protect and alerting you if suspicious activity is found."
     },
     {
@@ -169,7 +171,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.att.com/deals/att-points-plus-citi/",
     "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card"
