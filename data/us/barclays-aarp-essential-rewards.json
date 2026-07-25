@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -44,27 +45,23 @@
     "currency_label": "Cash back (USD)",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 0.01,
-      "description": "1% cash back on all other purchases (1 cent per dollar)."
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations and drug stores (excludes Target and Walmart)",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible medical expenses",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Rewards can be redeemed for cash back, statement credits, AARP memberships, gift cards, and merchandise. AARP memberships can be redeemed for yourself or as a gift, starting at $16 in rewards. Unlimited rewards that never expire as long as account is open and in good standing."
+    "redemption_notes": "Rewards can be redeemed for cash back, statement credits, AARP memberships, gift cards, and merchandise. AARP memberships can be redeemed for yourself or as a gift, starting at $16 in rewards. Unlimited rewards that never expire as long as account is open and in good standing.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 100.0,
@@ -127,7 +124,7 @@
     "hotel_status": null,
     "other": []
   },
-  "official_url": "https://www.aarp.org/membership/benefits/finance/aarp-essential-rewards-mastercard-from-barclays/",
+  "official_url": "https://cards.barclaycardus.com/banking/credit-card/aarp/mastercard-world/co-brand-partner-site/f4556161-509f-4c39-9c6c-757c24490e9d/?referrerid=PTRBAMBMODAL100ARE",
   "image": {
     "url": "https://aarp.widen.net/content/jlppfon0mk/jpeg/1140x641-barclays-essential-card-on-laptop-feb-2022.jpeg",
     "attribution": "© Barclays",
