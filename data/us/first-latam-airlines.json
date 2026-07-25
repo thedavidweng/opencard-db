@@ -6,11 +6,12 @@
     "en": "LATAM Airlines Credit Card"
   },
   "country": "us",
-  "issuer": "First Bankcard",
-  "issuer_id": "first-bankcard",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 99.0,
@@ -44,22 +45,23 @@
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "LATAM Airlines purchases",
+        "points_per_dollar": 4,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Restaurants",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Rideshare, taxis, and public transit",
+        "points_per_dollar": 3,
         "cap": null
       }
     ],
-    "redemption_notes": "Earn LATAM Pass Miles to redeem for new adventures and dreams with LATAM Airlines. Welcome Bonus miles do not count toward LATAM Pass Elite status."
+    "redemption_notes": "Earn LATAM Pass Miles to redeem for new adventures and dreams with LATAM Airlines. Welcome Bonus miles do not count toward LATAM Pass Elite status.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 40000.0,
@@ -82,21 +84,21 @@
       "id": "latam-vip-lounges",
       "title": "LATAM Airlines-operated VIP Lounges",
       "category": "lounge",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Enjoy the comfort of the LATAM VIP lounges, located in 5 of the most important airports in our destination network. 2 lounge visits. Exclusively for LATAM Airlines World Elite Mastercard cardholders."
     },
     {
       "id": "cabin-upgrade",
       "title": "Cabin Upgrade via Courtesy Segments",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn Courtesy Segments and live the experience in Premium Economy or Premium Business cabins on LATAM Airlines flights. Up to 2 Courtesy Segments. Exclusively for LATAM Airlines World Elite Mastercard cardholders."
     },
     {
       "id": "qualifying-points",
       "title": "Qualifying Points for LATAM Pass Elite Status",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn Qualifying Points towards LATAM Pass Elite status and Elite status benefits. 30% qualifying points."
     }
   ],
@@ -115,12 +117,12 @@
   },
   "official_url": "https://latampass.latam.com/en_us/earn-miles/latam-airlines-credit-cards",
   "image": {
-    "url": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22436%22%20height%3D%22228%22%20viewBox%3D%220%200%20200%2065%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20%3E%3Crect%20width%3D%22436%22%20height%3D%22228%22%2F%3E%3Cpath%20d%3D%22M57.171%2031.894h13.95c9.06%200%2010.412%204.429%2010.412%207.069%200%205.462-4.935%208.47-13.897%208.47-3.491%200-7.363-.752-10.465-2.024V31.894zm30.164%206.913c0-7.61-6.053-12.338-15.799-12.338H51.317v37.857h5.854V51.083c2.826%201.106%206.743%201.774%2010.569%201.774%2012.27%200%2019.595-5.253%2019.595-14.051zm25.971%2010.182H96.425l8.418-16.391%208.463%2016.392zm-8.102-22.52h-3.275L82.2%2064.325h6.365l5.096-9.911h22.463l5.097%209.911h6.369l-18.792-35.784c-.759-1.453-1.833-2.073-3.594-2.073zm43.046%2016.2l-3.119-.519c-7.323-1.227-8.824-3.033-8.824-5.367%200-3.297%204.373-5.512%2010.88-5.512%206.093%200%2010.121%201.296%2011.979%202.069l.745.31%201.937-5.369-.719-.261c-2.237-.812-6.963-2.174-13.473-2.174-10.289%200-17.203%204.479-17.203%2011.144%200%207.411%207.698%209.549%2013.488%2010.512l3.121.519c7.169%201.2%2010.228%202.945%2010.228%205.833%200%203.635-4.042%205.72-11.084%205.72-7.609-.053-13.134-2.17-14.487-3.128l-.831-.589-1.898%205.387.534.322C131.631%2062.843%20137.407%2065%20145.68%2065c10.935%200%2017.463-4.263%2017.463-11.404%200-7.478-7.958-9.768-14.893-10.927zm36.859%200l-3.119-.519c-7.325-1.227-8.825-3.033-8.825-5.367%200-3.297%204.373-5.512%2010.881-5.512%206.09%200%2010.119%201.296%2011.978%202.069l.746.31%201.936-5.369-.72-.261c-2.236-.812-6.96-2.174-13.473-2.174-10.289%200-17.202%204.479-17.202%2011.144%200%207.411%207.698%209.549%2013.489%2010.512l3.119.519c7.169%201.2%2010.228%202.945%2010.228%205.833%200%203.635-4.042%205.72-11.084%205.72-7.607-.053-13.133-2.17-14.485-3.128l-.833-.589-1.898%205.387.534.322C168.49%2062.843%20174.265%2065%20182.538%2065%20193.473%2065%20200%2060.737%20200%2053.596c0-7.478-7.958-9.768-14.891-10.927zM80.772%2014.139h4.288L78.382",
+    "url": null,
     "attribution": "© First Bankcard",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://latampass.latam.com/en_us/earn-miles/latam-airlines-credit-cards"
   ],
