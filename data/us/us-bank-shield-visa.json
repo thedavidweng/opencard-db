@@ -1,0 +1,106 @@
+{
+  "id": "us-us-bank-shield-visa",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Shield® Visa® Card",
+  "localized_names": {
+    "en": "U.S. Bank Shield® Visa® Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "0% introductory APR on purchases and balance transfers for the first 21 billing cycles. After that, the APR is variable (current rate shown as placeholder [$] on page, not readable). Balance transfer fee: 5% of each transfer amount, $5 minimum. Intro rate does not apply to cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not mentioned on the product page."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Page states: 'In general, our credit card products are for customers with a credit score in the good to excellent range.'"
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back Rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No base earn rate stated. Only category earn: 4% cash back on prepaid air, hotel and car reservations booked directly in the Travel Center."
+    },
+    "categories": [
+      {
+        "label": "Prepaid air, hotel and car reservations booked directly in the Travel Center",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back redeemed as statement credit, deposit to U.S. Bank checking or savings account, or as a U.S. Bank Rewards Card. Cash Rewards expire if no reward, purchase, or balance activity for 12 consecutive statement cycles."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "annual-statement-credit",
+      "title": "$20 Annual Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn a $20 annual statement credit for 11 consecutive months of purchases. Automatic statement credit applied within 2 statement billing cycles following 11 consecutive calendar months of purchases if account is in good standing."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Get up to $600 reimbursed if your cell phone is stolen or damaged when you pay your monthly cellular bill with your card."
+    },
+    {
+      "id": "extendpay-plan",
+      "title": "$0 Fee U.S. Bank ExtendPay Plan Annually",
+      "category": "other",
+      "source": "issuer",
+      "description": "Option to set up a 3-month $0 ExtendPay Plan offer each calendar year after the new account 0% introductory purchase APR offer has expired."
+    },
+    {
+      "id": "free-credit-score",
+      "title": "Free Credit Score Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Stay aware of your credit score. Enroll in the mobile app and online banking to view your score at any time."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.usbank.com/credit-cards/shield-visa-credit-card.html",
+  "image": {
+    "url": null,
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.usbank.com/credit-cards/shield-visa-credit-card.html"
+  ],
+  "notes": "Visa card (confirmed by name). Network_tier (signature) preserved from existing JSON but not re-verified on page. 0% intro APR for 21 billing cycles on purchases and BTs, then variable (rate not shown). $0 annual fee confirmed. 4% cash back on Travel Center prepaid bookings. $20 annual statement credit. Cell phone protection up to $600. FX fee not mentioned on page."
+}
