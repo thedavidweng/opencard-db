@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -43,14 +44,9 @@
       "points_per_dollar": 1.25,
       "description": "Earn 1.25% cash back rewards on purchases if Upromise Program account is not linked to a College Savings Plan. Earn 1.529% cash back rewards when linked to an eligible College Savings Plan."
     },
-    "categories": [
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      }
-    ],
-    "redemption_notes": "Upromise Round Up lets you round up purchases to the nearest dollar; total Round Up Amount is considered a purchase and converted to cash back rewards."
+    "categories": [],
+    "redemption_notes": "Upromise Round Up lets you round up purchases to the nearest dollar; total Round Up Amount is considered a purchase and converted to cash back rewards.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 100.0,
