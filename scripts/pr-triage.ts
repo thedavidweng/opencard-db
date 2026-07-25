@@ -535,10 +535,12 @@ export function triagePullRequest(input: TriageInput): TriageResult {
             message: `**Last verified** in the form is \`${verified}\`, but the card on the base branch already has \`${base.last_verified}\`. Use a date **on or after** \`${base.last_verified}\` (usually today’s date when you re-checked the bank site).`,
           });
         } else if (cmp === 0) {
+          // Same-day re-verification is legitimate (multiple corrections can
+          // land on one day); only an OLDER date is an error.
           note({
             code: "last-verified-unchanged",
-            severity: "error",
-            message: `**Last verified** is still \`${verified}\` — the same as the base branch. For an update, set it to the day you re-checked the official Sources (must be **newer** than \`${base.last_verified}\`).`,
+            severity: "warn",
+            message: `**Last verified** \`${verified}\` matches the base branch — fine for a same-day correction; bump it if you re-checked the official Sources on a later day.`,
           });
         }
       }
