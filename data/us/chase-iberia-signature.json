@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -39,19 +40,20 @@
     "currency": "avios",
     "currency_label": "Avios",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1 Avios per $1 on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Iberia, British Airways, LEVEL, and Aer Lingus flight purchases",
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Hotel accommodations booked directly with the hotel",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -71,42 +73,42 @@
       "id": "airfare-discount-voucher",
       "title": "$1,000 Airfare Discount Voucher each calendar year",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn a discount voucher of $1,000 to use toward two tickets on the same Iberia flight for each calendar year you make purchases of $30,000 on your card."
     },
     {
       "id": "airfare-discount-10pct",
       "title": "10% discount on Iberia airfare",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Get a 10% discount on airfare when you book your flight on the website provided in your welcome materials using your Iberia Visa Signature Card."
     },
     {
       "id": "baggage-delay-insurance",
       "title": "Baggage Delay Insurance",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Reimburses you up to $100 a day for up to 3 days for essential purchases when baggage is delayed over 6 hours."
     },
     {
       "id": "purchase-protection",
       "title": "Purchase Protection",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Covers eligible new purchases for 120 days from date of purchase against damage or theft up to $500 per item."
     },
     {
       "id": "lost-luggage-reimbursement",
       "title": "Lost Luggage Reimbursement",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Provides reimbursement up to $3,000 per covered traveler for cost to repair or replace checked or carry-on baggage that is lost, damaged or stolen during a covered trip."
     },
     {
       "id": "extended-warranty",
       "title": "Extended Warranty Protection",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Extends the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from date of purchase."
     },
     {
@@ -157,7 +159,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/avios/iberia"
   ],
