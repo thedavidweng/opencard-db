@@ -431,7 +431,7 @@ describe("pr triage", () => {
     assert.match(r.commentMarkdown, /card\(update\):/);
   });
 
-  it("rejects Update when last_verified is not newer than base", () => {
+  it("warns (not fails) on same-day Update; rejects older last_verified", () => {
     const same = triagePullRequest({
       title: "card(update): us-chase-sapphire-preferred",
       body: updateBody.replace("2026-07-28", "2026-07-10"),
@@ -444,7 +444,12 @@ describe("pr triage", () => {
         },
       },
     });
-    assert.ok(same.issues.some((i) => i.code === "last-verified-unchanged"));
+    const sameIssue = same.issues.find(
+      (i) => i.code === "last-verified-unchanged",
+    );
+    assert.ok(sameIssue);
+    assert.equal(sameIssue.severity, "warn");
+    assert.equal(same.missing.length, 0);
 
     const older = triagePullRequest({
       title: "card(update): us-chase-sapphire-preferred",

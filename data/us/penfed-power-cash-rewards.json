@@ -108,12 +108,12 @@
   },
   "official_url": "https://www.penfed.org/credit-cards/power-cash-rewards-visa",
   "image": {
-    "url": null,
-    "attribution": null,
+    "url": "https://www.penfed.org/content/dam/penfed/en/products/credit-cards/cards/power-cash-rewards.webp",
+    "attribution": "© PenFed",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.penfed.org/credit-cards/power-cash-rewards-visa",
     "https://www.penfed.org/content/dam/penfed/general/pdf/creditcardpdfs/Visa/Power_Cash_RWDTC_PWR.pdf"
