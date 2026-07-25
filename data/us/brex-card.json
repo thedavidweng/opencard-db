@@ -10,12 +10,13 @@
   "issuer_id": "brex",
   "network": "mastercard",
   "network_tier": "world_elite",
-  "type": "credit",
+  "type": "charge",
+  "segment": "corporate",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0.0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0.0,
     "waiver_conditions": null
   },
   "apr": {
@@ -37,13 +38,35 @@
   "rewards": {
     "currency": "points",
     "currency_label": "Brex rewards",
-    "structure": "single",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn up to 7x back. Redeem for cash back, credits, or even billboards. Specific multiplier rates not detailed on this product page."
+      "points_per_dollar": 1.0,
+      "description": "Earn 1x points on all other eligible purchases."
     },
-    "categories": [],
-    "redemption_notes": "Redeem for cash back, credits, or billboards."
+    "categories": [
+      {
+        "label": "7x points on rideshare (e.g. Uber, Lyft, taxis)",
+        "points_per_dollar": 7.0,
+        "cap": null
+      },
+      {
+        "label": "4x points on flights and prepaid hotels booked through Brex Travel",
+        "points_per_dollar": 4.0,
+        "cap": null
+      },
+      {
+        "label": "3x points at restaurants",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "2x points on recurring software subscriptions",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem for cash back, statement credits, gift cards, travel, or transfers. Higher category multipliers (the 'Brex Exclusive' tier) apply when the card balance is paid daily; card-limit/eligibility conditions apply.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -112,10 +135,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.brex.com/product/credit-card/",
     "https://www.brex.com/product/credit-card"
   ],
-  "notes": "Verified against official Brex product page on 2026-07-24. Annual fee, APR, and FX fee not stated on page — preserved as null. network_tier confirmed as world_elite from page text 'World Elite Mastercard'. Corrected name from 'The Best Corporate Card for Startups and Growing Businesses' (page title) to 'Brex Corporate Card'."
+  "notes": "Verified against the official Brex product and rewards pages on 2026-07-25. Brex is a pay-in-full corporate charge card (no personal guarantee); type set to 'charge' and segment 'corporate'. No annual fee ($0). Reward multipliers: 7x rideshare, 4x Brex Travel (flights & prepaid hotels), 3x restaurants, 2x recurring software, 1x on everything else — the higher 'Brex Exclusive' tiers apply to the daily-payment card. APR and US FX-fee percent are not published on the product page (left null)."
 }
