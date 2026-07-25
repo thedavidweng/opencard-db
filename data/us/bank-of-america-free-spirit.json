@@ -1,16 +1,17 @@
 {
   "id": "us-bank-of-america-free-spirit",
   "schema_version": "1.0.0",
-  "name": "Credit Cards: Find & Apply for a Credit Card Online at Bank of America",
+  "name": "Free Spirit® Travel Mastercard®",
   "localized_names": {
-    "en": "Credit Cards: Find & Apply for a Credit Card Online at Bank of America"
+    "en": "Free Spirit® Travel Mastercard®"
   },
   "country": "us",
   "issuer": "Bank of America",
   "issuer_id": "bank-of-america",
-  "network": "visa",
-  "network_tier": "signature",
+  "network": "mastercard",
+  "network_tier": "world",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -27,33 +28,82 @@
     "notes": "See Bank of America for current APR; terms vary by applicant/offer."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 0,
+    "notes": "No foreign transaction fees."
   },
   "credit_required": {
-    "score_band": null,
-    "notes": null
+    "score_band": "good_to_excellent",
+    "notes": "World Mastercard cards typically require good to excellent credit."
   },
   "rewards": {
-    "currency": "points",
-    "currency_label": "Rewards currency (see official product page)",
-    "structure": "single",
+    "currency": "free_spirit_points",
+    "currency_label": "Free Spirit Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates left unset pending structured extract from official page."
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "Confirm earn/redeem details on the official issuer page."
+    "categories": [
+      {
+        "label": "Spirit Airlines purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Free Spirit points had no expiration on active accounts and supported points pooling. Following Spirit Airlines' 2025 restructuring, the loyalty program has been wound down; Free Spirit points are no longer redeemable per public reporting (2026)."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "anniversary-bonus",
+      "title": "5,000 Anniversary Bonus Points",
+      "category": "other",
+      "source": "co-brand",
+      "description": "5,000 bonus points each account anniversary after spending $10,000 or more on purchases in the prior anniversary year."
+    },
+    {
+      "id": "inflight-rebate",
+      "title": "25% Inflight Purchase Rebate",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "25% back as points on eligible Spirit Airlines inflight food and beverage purchases made with the card."
+    },
+    {
+      "id": "priority-boarding",
+      "title": "Zone 2 Priority Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Zone 2 priority boarding on Spirit Airlines flights."
+    },
+    {
+      "id": "points-pooling",
+      "title": "Points Pooling",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Ability to pool Free Spirit points with other members."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the U.S."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": []
+    "other": [
+      "Zone 2 priority boarding on Spirit Airlines",
+      "25% back on inflight food and beverage purchases",
+      "5,000 anniversary bonus points after $10,000 annual spend",
+      "Points pooling with other Free Spirit members",
+      "No foreign transaction fees"
+    ]
   },
   "official_url": "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/",
   "image": {
@@ -65,7 +115,8 @@
   "last_verified": "2026-07-24",
   "sources": [
     "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/",
-    "https://www.bankofamerica.com/credit-cards/"
+    "https://frequentmiler.com/spirittravel/",
+    "https://www.bankrate.com/credit-cards/travel/spirit-airlines-free-spirit-guide/"
   ],
-  "notes": "Scaffolded from official product page HTML with conservative nulls for earn categories when not cleanly extractable. Third-party clue DBs were not used as sources. Re-check rewards/benefits on the issuer site before relying on figures."
+  "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference."
 }
