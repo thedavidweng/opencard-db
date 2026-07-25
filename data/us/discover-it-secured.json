@@ -37,15 +37,16 @@
   "rewards": {
     "currency": "cashback",
     "currency_label": "Cash Back (USD)",
-    "structure": "single",
+    "rate_type": "cashback_percent",
+    "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1.0,
       "description": "1% cash back on all other purchases"
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Rotating quarterly bonus categories (activation required, up to quarterly maximum)",
+        "points_per_dollar": 5.0,
         "cap": null
       }
     ],
@@ -127,15 +128,15 @@
   },
   "official_url": "https://www.discover.com/credit-cards/secured/",
   "image": {
-    "url": "https://ecm.capitalone.com/WCM/dfs-card/products/cardart-cashit-with-shadow.png",
+    "url": null,
     "attribution": "© Discover",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.discover.com/credit-cards/secured/",
     "https://www.discover.com/credit-cards/secured-credit-card/?iq_id=dp-dbr-inet-acceptance-pdisplay"
   ],
-  "notes": "Both product_url and terms_url fetched; both returned identical content. Annual fee preserved as $0 from existing JSON — not explicitly stated on page text (page mentions $0 Fraud Liability but not $0 annual fee). APR and FX fee not visible on fetched pages. Rewards structure: 5% rotating quarterly categories (activate required, quarterly cap) + 1% everything else + Cashback Match in first year."
+  "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Image URL cleared: prior asset was a Capital One CDN card-art file for the Discover it Cash Back (unsecured) product, not the Secured card."
 }
