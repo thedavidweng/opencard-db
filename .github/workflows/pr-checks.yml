@@ -95,6 +95,8 @@ jobs:
 
       - name: Auto-fix PR title when we can infer it
         env:
+          PAYLOAD_TITLE: ${{ github.event.pull_request.title }}
+          PAYLOAD_BODY: ${{ github.event.pull_request.body }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
         run: |
@@ -108,9 +110,13 @@ jobs:
             stdio: "inherit",
           });
           NODE
-          # Re-classify after title fix
-          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
-          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          # Re-classify after title fix; fall back to the event payload if
+          # the gh re-read fails (rate limits) so an API hiccup can't produce
+          # a bogus empty title/body.
+          export PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          [ -n "$PR_TITLE" ] || PR_TITLE="$PAYLOAD_TITLE"
+          export PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          [ -n "$PR_BODY" ] || PR_BODY="$PAYLOAD_BODY"
           export PR_FILES="$(cat /tmp/pr-files.txt)"
           export PR_TRIAGE_MODE=labels
           node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
@@ -195,13 +201,19 @@ jobs:
       - name: Check title and form fields
         id: check
         env:
+          PAYLOAD_TITLE: ${{ github.event.pull_request.title }}
+          PAYLOAD_BODY: ${{ github.event.pull_request.body }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
           PR_TRIAGE_MODE: check
         run: |
-          # Re-read title/body after Labels may have auto-fixed the title.
-          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
-          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          # Re-read title/body after Labels may have auto-fixed the title;
+          # fall back to the event payload if the gh re-read fails (rate
+          # limits) so an API hiccup can't fail the form on an empty title.
+          export PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          [ -n "$PR_TITLE" ] || PR_TITLE="$PAYLOAD_TITLE"
+          export PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          [ -n "$PR_BODY" ] || PR_BODY="$PAYLOAD_BODY"
           export PR_FILES="$(cat /tmp/pr-files.txt)"
           export PR_NUMBER="$PR"
           export OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"
