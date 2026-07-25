@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -37,35 +38,31 @@
   "rewards": {
     "currency": "verizon_dollars",
     "currency_label": "Verizon Dollars",
+    "rate_type": "points_multiplier",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1.0,
       "description": "1% on all other purchases where Visa credit cards are accepted."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores and gas/EV charging",
+        "points_per_dollar": 4.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Restaurants, including takeout and delivery",
+        "points_per_dollar": 4.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Verizon purchases (excluding bill payment)",
+        "points_per_dollar": 4.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Verizon wireless or Fios bill payment",
+        "points_per_dollar": 1.0,
         "cap": null
       }
     ],
@@ -85,14 +82,14 @@
       "id": "auto-pay-savings",
       "title": "Auto Pay savings",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "New enrollees to Verizon's Auto Pay can get up to $10/mo off each eligible wireless phone line, up to 12 lines max (depending on plan) and/or $10/mo off each eligible Fios service."
     },
     {
       "id": "device-financing",
       "title": "0% APR device financing",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Verizon Wireless customers get 0% APR financing with 36 equal monthly payments on select device purchases with Verizon Visa Card."
     }
   ],
@@ -111,7 +108,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.verizon.com/financial-services/verizon-visa-card/"
   ],
