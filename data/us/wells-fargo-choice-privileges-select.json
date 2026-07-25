@@ -1,9 +1,9 @@
 {
   "id": "us-wells-fargo-choice-privileges-select",
   "schema_version": "1.0.0",
-  "name": "Choice Hotels Points Earning Mastercards",
+  "name": "Wells Fargo Choice Privileges Select Mastercard",
   "localized_names": {
-    "en": "Choice Hotels Points Earning Mastercards"
+    "en": "Wells Fargo Choice Privileges Select Mastercard"
   },
   "country": "us",
   "issuer": "Wells Fargo",
@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -38,19 +39,20 @@
     "currency": "points",
     "currency_label": "Choice Privileges points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1X points on other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Choice Hotels stays and Choice Privileges point purchases",
+        "points_per_dollar": 10,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations, grocery stores, home improvement stores, and phone plan services",
+        "points_per_dollar": 5,
         "cap": null
       }
     ],
@@ -91,14 +93,14 @@
       "id": "cell-phone-protection",
       "title": "Cellular Telephone Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Get up to $800 of cell phone protection against damage or theft when you pay your monthly cell phone bill with your Choice Privileges Select Mastercard (subject to a $25 deductible)."
     },
     {
       "id": "world-elite-benefits",
       "title": "Mastercard World Elite Benefits",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Get access to additional security benefits, exclusive offers, concierge, travel & lifestyles services, and more."
     },
     {
@@ -133,7 +135,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
     "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards/?sub_channel=WEB&vendor_code=WF"
