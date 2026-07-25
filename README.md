@@ -11,7 +11,7 @@ A community-maintained database of credit card products in the United States, Ca
 Website: [thedavidweng.github.io/opencard-db](https://thedavidweng.github.io/opencard-db/)
 
 - One JSON file per card under [`data/`](data), reviewed through pull requests
-- Exports in JSON, CSV, and YAML, rebuilt automatically on every merge
+- Exports in JSON, CSV, and YAML, rebuilt automatically for every release
 - Live counts in [`exports/meta.json`](exports/meta.json) (189 cards across 3 countries at the time of writing)
 - No signup, no API key, no rate limits on the CDN path
 
@@ -32,14 +32,14 @@ The same files are attached to every [GitHub Release](https://github.com/thedavi
 
 ### Latest data
 
-`@main` always points at the newest merged data. jsDelivr caches branch URLs for about 12 hours, so use this for prototyping rather than production:
+`@main` serves the exports as committed on the default branch. jsDelivr caches branch URLs for about 12 hours, so use this for prototyping rather than production:
 
 ```
 https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/exports/cards-all.json
 https://raw.githubusercontent.com/thedavidweng/opencard-db/main/exports/cards-all.json
 ```
 
-`exports/` is refreshed automatically on every push to `main` that touches the data, schema, or build scripts.
+The committed `exports/` is rebuilt automatically as part of every release, so `@main` can lag the newest merged cards between releases. Pin a release tag when freshness guarantees matter.
 
 ### REST API
 
