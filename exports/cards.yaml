@@ -132,11 +132,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 20.99,
+        "max": 20.99,
         "type": "variable"
       },
-      "notes": "See Scotiabank for current interest rates."
+      "notes": "Purchase interest rate 20.99%; cash advance rate 22.99% per Scotiabank product page."
     },
     "fx_fee": {
       "percent": 0,
@@ -226,17 +226,17 @@
         "No foreign transaction fees"
       ]
     },
-    "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-visa-infinite-card.html",
+    "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-infinite-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.scotiabank.com/content/sc_scotiabank/ca/en/personal/credit-cards/visa/passport-infinite-card/_jcr_content/root/container/main/container_heroBanner/teaser.coreimg.png/1784312576884/passport-visa-infinite--1600x900-en.png",
       "attribution": "© The Bank of Nova Scotia",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
-      "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-visa-infinite-card.html",
-      "https://www.scotiabank.com/ca/en/personal/credit-cards.html"
+      "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-infinite-card.html",
+      "https://www.scotiabank.com/ca/en/personal/rates-prices/credit-card-rates.html"
     ],
     "notes": "Scene+ earn rates and lounge details change; re-verify before production comparisons.",
     "segment": "personal"
@@ -264,11 +264,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 21.99,
+        "max": 21.99,
         "type": "variable"
       },
-      "notes": "See TD Canada Trust for current rates."
+      "notes": "Purchase interest rate 21.99%; cash advance rate 22.99% per TD product page."
     },
     "fx_fee": {
       "percent": 2.5,
@@ -354,12 +354,12 @@
     },
     "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
     "image": {
-      "url": null,
+      "url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card/_jcr_content/root/container/responsivegrid/container_307418962_/container/bannerimage.coreimg.jpeg/1707764569803/aeroplan-infinite-750x510.jpeg",
       "attribution": "© The Toronto-Dominion Bank",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
       "https://www.td.com/ca/en/personal-banking/products/credit-cards"
@@ -999,15 +999,15 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 16.74,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+      "notes": "16.74% to 28.49% variable APR on purchases (after a 0% introductory APR for the first 12 months). Verified from the official American Express Rates & Fees disclosure."
     },
     "fx_fee": {
-      "percent": null,
-      "notes": "Foreign transaction fee not mentioned on product page."
+      "percent": 2.7,
+      "notes": "2.7% of each transaction after conversion to U.S. dollars, per the official Rates & Fees disclosure."
     },
     "credit_required": {
       "score_band": null,
@@ -1035,7 +1035,15 @@
       "redemption_notes": "Membership Rewards points can be used for eligible travel through Pay with Points, redeemed for a Statement Credit, redeemed for Gift Cards, or transferred to participating airline and hotel loyalty programs. Can also be used with participating partners at Checkout through Pay with Points.",
       "rate_type": "points_multiplier"
     },
-    "signup_bonus": null,
+    "signup_bonus": {
+      "amount": 15000,
+      "unit": "points",
+      "spend_required": 3000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "Earn 15,000 Membership Rewards® points after you spend $3,000 in eligible purchases within the first 3 months of Card Membership.",
+      "as_of": "2026-07-25"
+    },
     "benefits": [
       {
         "id": "expanded-buying-power",
@@ -1116,7 +1124,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/"
     ],
@@ -1516,11 +1524,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 17.74,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "APR not displayed on product page; see Rates & Fees link for current rates. Card is a charge card with Pay Over Time option."
+      "notes": "APR on purchases (Pay Over Time feature) is a variable rate, 17.74% to 28.49%, based on creditworthiness, per the official American Express Business Gold Card product page. Card is a charge card with a Pay Over Time option."
     },
     "fx_fee": {
       "percent": 0,
@@ -1697,7 +1705,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/"
     ],
@@ -1828,11 +1836,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 17.74,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "APR not visible on product page; see American Express Rates & Fees for current APR."
+      "notes": "APR on purchases (Pay Over Time feature) is a variable rate, 17.74% to 28.49%, based on creditworthiness, per official American Express business card pages. Card is a charge card with a Pay Over Time option."
     },
     "fx_fee": {
       "percent": 0,
@@ -2189,7 +2197,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/"
     ],
@@ -2299,11 +2307,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 19.49,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "APR not visible on product page and no terms URL provided in batch. See American Express for current APR; terms vary by applicant/offer."
+      "notes": "19.49% to 28.49% variable APR on purchases, per the official American Express product page."
     },
     "fx_fee": {
       "percent": 0,
@@ -2441,7 +2449,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/"
     ],
@@ -2676,12 +2684,12 @@
     },
     "official_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
     "image": {
-      "url": null,
+      "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000385_480x304_straight_withname.png",
       "attribution": "© American Express",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/delta-skymiles-gold-american-express-card/28810-10-0",
@@ -2714,11 +2722,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 17.74,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+      "notes": "APR on purchases is a variable rate, 17.74% to 28.49%, based on creditworthiness, per the official American Express Delta business card pages."
     },
     "fx_fee": {
       "percent": 0,
@@ -2894,9 +2902,10 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
-      "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-gold/"
+      "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-gold/",
+      "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/travel/"
     ],
     "notes": "Verified from official product page. Rewards currency is Delta SkyMiles (not Membership Rewards). APR not shown on page. Annual fee confirmed as $0 intro first year then $150.",
     "segment": "business"
@@ -3223,11 +3232,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 19.49,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+      "notes": "19.49% to 28.49% variable APR on purchases, per the official American Express Rates & Fees disclosure."
     },
     "fx_fee": {
       "percent": 0,
@@ -3264,7 +3273,15 @@
       "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights.",
       "rate_type": "miles_multiplier"
     },
-    "signup_bonus": null,
+    "signup_bonus": {
+      "amount": 70000,
+      "unit": "miles",
+      "spend_required": 6000,
+      "spend_currency": "USD",
+      "months": 6,
+      "description": "Earn 70,000 bonus miles after you make $6,000 or more in eligible purchases within the first 6 months of Card Membership.",
+      "as_of": "2026-07-25"
+    },
     "benefits": [
       {
         "id": "resy-credit",
@@ -3444,7 +3461,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-platinum/"
     ],
@@ -4280,12 +4297,12 @@
     },
     "official_url": "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
     "image": {
-      "url": null,
+      "url": "https://www.aexp-static.com/online/myca/shared/summary/cardasset/images/NUS000000174_480x304_STRAIGHT_96.png",
       "attribution": "© American Express",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
       "https://www.americanexpress.com/us/credit-cards/"
@@ -4870,12 +4887,12 @@
     },
     "official_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
     "image": {
-      "url": null,
+      "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000329_480x304_straight_withname.png",
       "attribution": "© American Express",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-aspire-credit-card/36182-11-0"
@@ -4886,9 +4903,9 @@
   {
     "id": "us-amex-hilton-honors-business",
     "schema_version": "1.0.0",
-    "name": "Hilton Honors Credit Cards",
+    "name": "The Hilton Honors American Express Business Card",
     "localized_names": {
-      "en": "Hilton Honors Credit Cards"
+      "en": "The Hilton Honors American Express Business Card"
     },
     "country": "us",
     "issuer": "American Express",
@@ -5037,15 +5054,16 @@
         "National Car Rental Emerald Club Executive status"
       ]
     },
-    "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/57460-9-0",
+    "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors/",
     "image": {
-      "url": null,
+      "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/hilton-honors.png",
       "attribution": "© American Express",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
+      "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors/",
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/57460-9-0",
       "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q4-pdf-cmas/sbs-small-business/hilton-honors-american-express-business-card-12-31-2025.pdf"
     ],
@@ -5279,12 +5297,12 @@
     },
     "official_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
     "image": {
-      "url": null,
+      "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000328_480x304_straight_withname.png",
       "attribution": "© American Express",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-surpass-credit-card/36182-11-0/"
@@ -6542,15 +6560,15 @@
     },
     "apr": {
       "purchase": {
-        "min": 19.49,
-        "max": 28.49,
+        "min": 19.74,
+        "max": 33.99,
         "type": "variable"
       },
-      "notes": "Ongoing variable purchase APR of 19.49%-28.49% (per NerdWallet, 2026)."
+      "notes": "19.74%–33.99% variable APR for Purchases, based on creditworthiness; will vary with the market based on the Prime Rate (official Rakuten American Express Card disclosure box, as of 2026-07-25)."
     },
     "fx_fee": {
-      "percent": null,
-      "notes": "Confirm foreign transaction fee on official terms."
+      "percent": 0,
+      "notes": "No foreign transaction fees — 'American Express will not charge any foreign transaction fee on the purchases you make outside of the United States with your Card' (official Rakuten American Express Card Rewards Program Terms)."
     },
     "credit_required": {
       "score_band": null,
@@ -6585,12 +6603,12 @@
       "redemption_notes": "Cash Back Rewards are issued and redeemed through the cardholder's linked Rakuten account per Rakuten Terms & Conditions."
     },
     "signup_bonus": {
-      "amount": 25,
+      "amount": 100,
       "unit": "usd",
-      "spend_required": 500,
+      "spend_required": 1000,
       "spend_currency": "USD",
       "months": 3,
-      "description": "$25 Cash Back welcome bonus after spending $500 in the first 90 days (launch offer).",
+      "description": "Get a $100 bonus when you spend $1,000 in the first 90 days on your Rakuten Card. Bonus awarded as Cash Back after the 90-day qualification period.",
       "as_of": "2026-07-25"
     },
     "benefits": [],
@@ -6616,7 +6634,7 @@
       "https://www.prnewswire.com/news-releases/new-rakuten-american-express-card-powered-by-imprint-offers-an-extra-four-percent-cash-back-on-rakuten-purchases-302510202.html",
       "https://www.nerdwallet.com/credit-cards/learn/rakuten-credit-card"
     ],
-    "notes": "Rakuten American Express Card (launched July 2025). Issued by First Electronic Bank pursuant to a license from American Express; powered by Imprint Payments. No annual fee. Cash Back is issued/redeemed via the cardholder's linked Rakuten account (not Membership Rewards). Earn rates and issuer verified against the official Rakuten rewards program terms page and PR Newswire launch release; the 4% Rakuten-purchase cap increased from $7,000 to $10,000 per calendar year effective July 15, 2026. Signup bonus reflects the $25/$500/90-day launch offer; some third parties report a later increased offer."
+    "notes": "Rakuten American Express Card (launched July 2025). Issued by First Electronic Bank pursuant to a license from American Express; powered by Imprint Payments. No annual fee. Cash Back is issued/redeemed via the cardholder's linked Rakuten account (not Membership Rewards). Earn rates and issuer verified against the official Rakuten rewards program terms page and PR Newswire launch release; the 4% Rakuten-purchase cap increased from $7,000 to $10,000 per calendar year effective July 15, 2026. APR, no-foreign-transaction-fee, and the current $100/$1,000/90-day welcome offer re-verified 2026-07-25 against the official Rakuten American Express Card product page (Schumer disclosure box and offer banner) and the official Imprint Rewards Program Terms; these supersede the prior NerdWallet-sourced APR and the $25 launch offer. Card art is served only from Rakuten's Webflow marketing CDN (not an issuer-domain asset), so image.url remains null."
   },
   {
     "id": "us-amex-schwab-investor",
@@ -7285,12 +7303,12 @@
     },
     "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
     "image": {
-      "url": null,
+      "url": "https://business.bankofamerica.com/content/dam/consumer/credit-cards/1bbt_bussigcm_v_atmos_336px.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
     ],
@@ -7605,12 +7623,12 @@
     },
     "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/cash-rewards-business-credit-card",
     "image": {
-      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/Logos/en_US/logos/colored_flagscape-v2.png",
+      "url": "https://business.bankofamerica.com/content/dam/consumer/credit-cards/customized_cash_rewards_336x213.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.bankofamerica.com/smallbusiness/credit-cards/products/cash-rewards-business-credit-card",
       "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards"
@@ -7739,12 +7757,12 @@
     },
     "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/travel-rewards-business-credit-card",
     "image": {
-      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/Logos/en_US/logos/colored_flagscape-v2.png",
+      "url": "https://business.bankofamerica.com/content/dam/consumer/credit-cards/travel_rewards__336x213.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.bankofamerica.com/smallbusiness/credit-cards/products/travel-rewards-business-credit-card",
       "https://business.bankofamerica.com/en/credit-cards/business-advantage-travel-rewards"
@@ -7859,12 +7877,12 @@
     },
     "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/unlimited-cash-rewards-business-credit-card",
     "image": {
-      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/Logos/en_US/logos/colored_flagscape-v2.png",
+      "url": "https://business.bankofamerica.com/content/dam/consumer/credit-cards/unlimited_cash_rewards_336x213.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.bankofamerica.com/smallbusiness/credit-cards/products/unlimited-cash-rewards-business-credit-card",
       "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards"
@@ -8234,7 +8252,7 @@
     },
     "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/platinum-plus-business-credit-card",
     "image": {
-      "url": null,
+      "url": "https://business.bankofamerica.com/content/dam/consumer/credit-cards/platinum_plus_mastercard_large1.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
@@ -9386,7 +9404,7 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/breeze-airways/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/credit-card/breeze/card/BRZ_card_wMoneyBadge_CardDetails_359x226.png",
       "attribution": "© Barclays",
       "local_path": null
     },
@@ -9502,12 +9520,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/SMC_NewMC_card_angled_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/"
     ],
@@ -9701,12 +9719,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-premium-world-elite-mastercard/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/EKE_card_rRGB_Premium_Angle_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/emirates-skywards-premium-world-elite-mastercard/"
     ],
@@ -9857,12 +9875,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-rewards-world-elite-mastercard/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/EKS_card_rRGB_Rewards_Angle_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/emirates-skywards-rewards-world-elite-mastercard/"
     ],
@@ -10030,12 +10048,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/frontier-airlines-world-mastercard/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/adobe-dam/frontier/FTF_card_rRGB_Fee_MC_NoBleed_padding.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/frontier-airlines-world-mastercard/"
     ],
@@ -10163,7 +10181,7 @@
     },
     "official_url": "https://www.boh.com/personal/credit-card",
     "image": {
-      "url": null,
+      "url": "https://www.boh.com/siteassets/blocks/text--image-side-by-side/credit-card/credit-card-hal-consumer-2025-ta-864x864.png",
       "attribution": "© Barclays",
       "local_path": null
     },
@@ -10469,12 +10487,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/jetblue-card/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/JBM_card_NoFee_WM_Angle_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/jetblue-card/"
     ],
@@ -10664,12 +10682,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/BJT_card_BC_WE_Angle_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/jetblue-business-card/"
     ],
@@ -10859,12 +10877,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/jetblue-plus-card/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/JBE_card_Plus_WE_Angle_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/jetblue-plus-card/"
     ],
@@ -11084,12 +11102,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/JBP_CD_card_Premier_WE_Angle_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/"
     ],
@@ -11225,12 +11243,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/lufthansa-miles-more-world-elite-mastercard",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/LFT_card_Lufthansa_WE_Angle_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/lufthansa-miles-more-world-elite-mastercard",
       "https://cards.barclaycardus.com/banking/cards/lufthansa-miles-more-world-elite-mastercard/"
@@ -11336,12 +11354,12 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/upromise-world-mastercard/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/UPR_card_rRGB_Upromise_WM_angled_359x246_L.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://cards.barclaycardus.com/banking/cards/upromise-world-mastercard/"
     ],
@@ -11482,7 +11500,7 @@
     },
     "official_url": "https://www.wyndhamrewardscreditcard.com/#earner",
     "image": {
-      "url": null,
+      "url": "https://www.wyndhamrewardscreditcard.com/wp-content/themes/wrci/images/businesscard/wyn-earner-card.png",
       "attribution": "© Barclays",
       "local_path": null
     },
@@ -11652,12 +11670,12 @@
     },
     "official_url": "https://www.wyndhamrewardscreditcard.com/#earnerbusiness",
     "image": {
-      "url": null,
+      "url": "https://www.wyndhamrewardscreditcard.com/wp-content/themes/wrci/images/businesscard/WYN_earnerBusiness.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.wyndhamrewardscreditcard.com/#earnerbusiness",
       "https://www.wyndhamrewardscreditcard.com/earner-business?referrerid=NoRef"
@@ -11816,12 +11834,12 @@
     },
     "official_url": "https://www.wyndhamrewardscreditcard.com/#earnerplus",
     "image": {
-      "url": null,
+      "url": "https://www.wyndhamrewardscreditcard.com/wp-content/themes/wrci/images/businesscard/wyn-earner-plus-card.png",
       "attribution": "© Barclays",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.wyndhamrewardscreditcard.com/#earnerplus"
     ],
@@ -11963,7 +11981,7 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/cards/xbox-mastercard/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/XBO_card_Xbox_MC_Angle_359x246.png",
       "attribution": "© Barclays",
       "local_path": null
     },
@@ -13119,11 +13137,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 19.49,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "Variable APR; see Capital One for current range."
+      "notes": "19.49% - 28.49% variable APR on purchases, per the product page."
     },
     "fx_fee": {
       "percent": 0,
@@ -13157,8 +13175,8 @@
       "spend_required": 4000,
       "spend_currency": "USD",
       "months": 3,
-      "description": "Welcome bonus miles after meeting minimum spend; offer varies.",
-      "as_of": "2026-07-23"
+      "description": "Earn 75,000 bonus miles once you spend $4,000 on purchases within the first 3 months from account opening.",
+      "as_of": "2026-07-25"
     },
     "benefits": [
       {
@@ -13203,12 +13221,12 @@
     },
     "official_url": "https://www.capitalone.com/credit-cards/venture/",
     "image": {
-      "url": null,
+      "url": "https://ecm.capitalone.com/WCM/card/products/venture_cardart_prim_323x203-1/mobile.png",
       "attribution": "© Capital One",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.capitalone.com/credit-cards/venture/",
       "https://www.capitalone.com/credit-cards/"
@@ -14178,7 +14196,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/aer_lingus_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -14363,7 +14381,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/aeroplan_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -14671,7 +14689,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/british-airways.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -14826,12 +14844,12 @@
     },
     "official_url": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/disney_vintage_mickey_Jan_2026.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
       "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63171.html"
@@ -14968,7 +14986,7 @@
     },
     "official_url": "https://creditcards.chase.com/rewards-credit-cards/disney/premier",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/disney_sleeping_beauty_premier_vs_Jan_2026.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -15263,7 +15281,7 @@
     },
     "official_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_rise_alt_card2.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -15616,7 +15634,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/avios/iberia",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/iberia_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -16040,7 +16058,7 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/IHG/business-premier",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/IHG_One_Premier_Biz_card_alt.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -16231,7 +16249,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/traveler",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ihg-traveler-card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -16273,8 +16291,8 @@
       "notes": "0% intro APR for 12 months from account opening on purchases. After that, 16.74% Min. of (6.75+9.99) and 29.99% to 24.74% Min. of (6.75+17.99) and 29.99% variable APR."
     },
     "fx_fee": {
-      "percent": null,
-      "notes": "Not stated on product page. Preserved as null — not re-verified."
+      "percent": 0,
+      "notes": "No foreign transaction fee (per product page benefits)."
     },
     "credit_required": {
       "score_band": null,
@@ -16360,7 +16378,7 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/ink/cash",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_cash_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -16549,12 +16567,12 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_preferred_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/business-credit-cards/ink/business-preferred"
     ],
@@ -16685,12 +16703,12 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/ink/premier",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_business_premier_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/business-credit-cards/ink/premier",
       "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63834.html"
@@ -16832,12 +16850,12 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/ink/unlimited",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_unlimited_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/business-credit-cards/ink/unlimited"
     ],
@@ -16999,12 +17017,12 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/marriott_bonvoy_bold_card_NAF.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold"
     ],
@@ -17371,7 +17389,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/marriott_bonvoy_bountiful_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -17932,7 +17950,7 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/sapphire_reserve_biz_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -18170,7 +18188,7 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/southwest/performance-business",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_performance_biz_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -18564,7 +18582,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_premier_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -18749,12 +18767,12 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_premier_biz_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
       "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC61808.html"
@@ -18949,12 +18967,12 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_priority_card-2.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
       "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64006.html"
@@ -19164,7 +19182,7 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/united_biz_card_tilted.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -19355,7 +19373,7 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/united/club-infinite",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/united_club_infinite_card_tilted.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -19553,7 +19571,7 @@
     },
     "official_url": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/united_club_biz_card_tilted.png",
       "attribution": "© Chase",
       "local_path": null
     },
@@ -19834,12 +19852,12 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/united/united-explorer",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/united_explorer_card_tilted.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/travel-credit-cards/united/united-explorer"
     ],
@@ -19973,12 +19991,12 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/united_gateway_tilt_ribbon_card.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/travel-credit-cards/united/united-gateway"
     ],
@@ -20245,12 +20263,12 @@
     },
     "official_url": "https://creditcards.chase.com/travel-credit-cards/united/united-quest",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/united_quest_card_tilted.png",
       "attribution": "© Chase",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.chase.com/travel-credit-cards/united/united-quest"
     ],
@@ -21463,7 +21481,7 @@
     },
     "official_url": "https://www.att.com/deals/att-points-plus-citi/",
     "image": {
-      "url": null,
+      "url": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-att-pointsplus-credit-card/citi-att-pointsplus-credit-card_306x192.webp",
       "attribution": "© Citi",
       "local_path": null
     },
@@ -21728,7 +21746,7 @@
     "travel_perks": null,
     "official_url": "https://www.citi.com/credit-cards/citi-custom-cash-credit-card",
     "image": {
-      "url": null,
+      "url": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-custom-cash-credit-card/citi-custom-cash-credit-card_306x192.webp",
       "attribution": "© Citibank",
       "local_path": null
     },
@@ -21944,7 +21962,7 @@
     "travel_perks": null,
     "official_url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
     "image": {
-      "url": null,
+      "url": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-double-cash-credit-card/citi-double-cash-credit-card_306x192.webp",
       "attribution": "© Citibank",
       "local_path": null
     },
@@ -22308,11 +22326,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 20.24,
+        "max": 28.24,
         "type": "variable"
       },
-      "notes": "See Citi Important Terms for current APR."
+      "notes": "Variable APR for purchases and balance transfers is 20.24% - 28.24% based on creditworthiness, per Citi pricing details on the product page (2026-07-25)."
     },
     "fx_fee": {
       "percent": 0,
@@ -22398,12 +22416,12 @@
     },
     "official_url": "https://www.citi.com/credit-cards/citi-premier-credit-card",
     "image": {
-      "url": null,
-      "attribution": "© Citibank",
+      "url": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-strata-premier-credit-card/citi-strata-premier-credit-card_306x192.webp",
+      "attribution": "© Citi",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.citi.com/credit-cards/citi-premier-credit-card"
     ],
@@ -22624,7 +22642,15 @@
       "redemption_notes": "Cash back can be redeemed as statement credits, direct deposit, rewards and qualifying purchases at participating AAA locations. Maximum of $350 cash back per calendar year on the 5% gas/EV category (1% thereafter). Rewards program provided by Comenity Capital Bank.",
       "rate_type": "cashback_percent"
     },
-    "signup_bonus": null,
+    "signup_bonus": {
+      "amount": 100,
+      "unit": "usd",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "Earn a $100 statement credit when you spend $1,000 within the first 90 days of account opening. Valid one time only; credit received within 1-2 billing cycles after qualifying spend.",
+      "as_of": "2026-07-25"
+    },
     "benefits": [
       {
         "id": "no-foreign-transaction-fee",
@@ -22679,11 +22705,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 17.49,
+        "max": 26.49,
         "type": "variable"
       },
-      "notes": "Intro APR may apply for a promotional period; see Discover rates & fees disclosures on the product page."
+      "notes": "0% intro APR for 15 months on purchases and balance transfers; 17.49% to 26.49% variable APR thereafter, per Discover product page (2026-07-25)."
     },
     "fx_fee": {
       "percent": 0,
@@ -22748,7 +22774,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.discover.com/credit-cards/cash-back/it-card.html"
     ],
@@ -22813,7 +22839,15 @@
       ],
       "redemption_notes": "Cash back won't expire for the life of the account. Cashback Match: unlimited dollar-for-dollar match of all cash back earned at end of first year, automatically. No limit to how much Discover will match."
     },
-    "signup_bonus": null,
+    "signup_bonus": {
+      "amount": null,
+      "unit": "other",
+      "spend_required": null,
+      "spend_currency": "USD",
+      "months": 12,
+      "description": "Unlimited Cashback Match: Discover automatically matches all the cash back earned from account approval through the first 365 days (effectively 2x first-year cash back); no limit to the match and no purchase minimums.",
+      "as_of": "2026-07-25"
+    },
     "benefits": [
       {
         "id": "cashback-match",
@@ -23087,7 +23121,15 @@
       "redemption_notes": "Cashback Match: unlimited dollar-for-dollar match of all cash back earned at end of first year, automatically. No limit to how much Discover will match.",
       "rate_type": "cashback_percent"
     },
-    "signup_bonus": null,
+    "signup_bonus": {
+      "amount": null,
+      "unit": "other",
+      "spend_required": null,
+      "spend_currency": "USD",
+      "months": 12,
+      "description": "Unlimited Cashback Match: Discover automatically matches all the cash back earned from account approval through the first 365 days (effectively 2x first-year cash back); no limit to the match and no purchase minimums.",
+      "as_of": "2026-07-25"
+    },
     "benefits": [
       {
         "id": "cashback-match",
@@ -23126,7 +23168,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.discover.com/credit-cards/student-credit-card/it-card/"
     ],
@@ -23202,7 +23244,15 @@
       ],
       "redemption_notes": "Redeem cash back for any amount. Cashback Match: unlimited dollar-for-dollar match of all cash back earned at the end of first year."
     },
-    "signup_bonus": null,
+    "signup_bonus": {
+      "amount": null,
+      "unit": "other",
+      "spend_required": null,
+      "spend_currency": "USD",
+      "months": 12,
+      "description": "Unlimited Cashback Match: Discover automatically matches all the cash back earned from account approval through the first 365 days (effectively 2x first-year cash back); no limit to the match and no purchase minimums.",
+      "as_of": "2026-07-25"
+    },
     "benefits": [
       {
         "id": "cashback-match",
@@ -23241,7 +23291,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.discover.com/credit-cards/student-credit-card/chrome-card/"
     ],
@@ -23950,8 +24000,8 @@
     },
     "official_url": "https://latampass.latam.com/en_us/earn-miles/latam-airlines-credit-cards",
     "image": {
-      "url": null,
-      "attribution": "© First Bankcard",
+      "url": "https://d3rwujusajfqlr.cloudfront.net/uploads/cb_7ebe1c2d71fec91f1055675feadf4b95/latam-airlines-credit-cards%202/image/latam_world_elite.png",
+      "attribution": "© First Electronic Bank",
       "local_path": null
     },
     "bin_hints": [],
@@ -24834,12 +24884,12 @@
     },
     "official_url": "https://www.penfed.org/credit-cards/power-cash-rewards-visa",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://www.penfed.org/content/dam/penfed/en/products/credit-cards/cards/power-cash-rewards.webp",
+      "attribution": "© PenFed",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.penfed.org/credit-cards/power-cash-rewards-visa",
       "https://www.penfed.org/content/dam/penfed/general/pdf/creditcardpdfs/Visa/Power_Cash_RWDTC_PWR.pdf"
@@ -25000,7 +25050,7 @@
     },
     "official_url": "https://www.pnc.com/en/small-business/borrowing/business-credit-cards/pnc-cash-rewards-visa-signature-business-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.pnc.com/en/small-business/borrowing/business-credit-cards/pnc-cash-rewards-visa-signature-business-credit-card/_jcr_content/main/pageBody/containergrid_575589/embeddedGrid/image_copy.coreimg.png/1775755848590/creditcard-business-cash-rewards.png",
       "attribution": "© PNC",
       "local_path": null
     },
@@ -25009,7 +25059,7 @@
     "sources": [
       "https://www.pnc.com/en/small-business/borrowing/business-credit-cards/pnc-cash-rewards-visa-signature-business-credit-card.html"
     ],
-    "notes": "Verified from official product page 2026-07-25. No annual fee. Rewards: unlimited 1.5% cash back on all net purchases. All listed protections/concierge are Visa network benefits ('Visa Signature Benefits' per page). Foreign transaction fee not stated on the product page. Image URL cleared: prior asset was a generic PNC site icon, not card art."
+    "notes": "Verified from official product page 2026-07-25. No annual fee. Rewards: unlimited 1.5% cash back on all net purchases. All listed protections/concierge are Visa network benefits ('Visa Signature Benefits' per page). Foreign transaction fee not stated on the product page. Image URL set to the official PNC card-art asset from the product page."
   },
   {
     "id": "us-synchrony-amazon-prime-store",
@@ -25211,7 +25261,7 @@
     },
     "official_url": "https://pay.cathaypacific.com/en_US/offers/uscreditcard.html",
     "image": {
-      "url": null,
+      "url": "https://www.cathaypacific.com/content/dam/focal-point/digital-library/US/sync-update-2026-apr/1600x1600-card-blackshadow.renditionimage.1600.1600.jpg",
       "attribution": "© Synchrony",
       "local_path": null
     },
@@ -25827,7 +25877,7 @@
     },
     "official_url": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/photo-altitude-connect-angle-left.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -25936,12 +25986,12 @@
     },
     "official_url": "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/photo-altitude-go-angle-left.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.usbank.com/credit-cards/altitude-go-visa-signature-credit-card.html",
       "https://www.usbank.com/credit-cards.html"
@@ -26126,7 +26176,7 @@
     },
     "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/business-altitude-connect.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -26248,7 +26298,7 @@
     },
     "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/business-altitude-power.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -26368,7 +26418,7 @@
     },
     "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-leverage-rewards-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/business-leverage.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -26498,12 +26548,12 @@
     },
     "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/illustrations-business-triple-cash-back.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html"
     ],
@@ -26605,12 +26655,12 @@
     },
     "official_url": "https://www.usbank.com/credit-cards/shield-visa-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/photo-shield-visa-angle-left.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.usbank.com/credit-cards/shield-visa-credit-card.html"
     ],
@@ -26730,7 +26780,7 @@
     },
     "official_url": "https://www.skypassvisa.com/credit/visaSignatureCard.do",
     "image": {
-      "url": null,
+      "url": "https://www.skypassvisa.com/credit/skypass/images/signature-spv-card.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -26957,7 +27007,7 @@
     },
     "official_url": "https://www.skypassvisa.com/credit/visaBusinessCard.do",
     "image": {
-      "url": null,
+      "url": "https://www.skypassvisa.com/credit/skypass/images/biz-spv-card.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -27134,7 +27184,7 @@
     },
     "official_url": "https://www.skypassvisa.com/credit/visaSelectCard.do",
     "image": {
-      "url": null,
+      "url": "https://www.skypassvisa.com/credit/skypass/images/select-spv-card.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -27229,12 +27279,12 @@
     },
     "official_url": "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html",
     "image": {
-      "url": null,
+      "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/photo-smartly-visa-angle-left.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html"
     ],
@@ -27673,11 +27723,11 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 18.49,
+        "max": 28.49,
         "type": "variable"
       },
-      "notes": "0% intro APR often available; see current Important Credit Terms."
+      "notes": "0% intro APR for 12 months from account opening on purchases. 18.49%, 24.49% or 28.49% variable APR thereafter, per Wells Fargo Autograph product page."
     },
     "fx_fee": {
       "percent": 0,
@@ -27752,7 +27802,7 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.wellsfargo.com/autograph-visa-credit-card/"
     ],
@@ -28758,12 +28808,12 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card",
     "image": {
-      "url": null,
+      "url": "https://creditcards.wellsfargo.com/rv/bcs/production/signify.DTS20282_2mwSIw.webp",
       "attribution": "© Wells Fargo",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-07-25",
     "sources": [
       "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card",
       "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card?sub_channel=WEB&vendor_code=WF"
