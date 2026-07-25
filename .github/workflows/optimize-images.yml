@@ -63,6 +63,11 @@ jobs:
           ref: ${{ github.head_ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          # fetch-depth: 0 lets the verification chain `git show <base.sha>:<path>`
+          # the pre-PR WebP + card JSON (archive-on-replace, old-art provenance).
+          # Same-repo PRs share history so base.sha resolves; fork checkouts lack
+          # the upstream base commit and degrade gracefully (no archive step).
+          fetch-depth: 0
 
       - uses: actions/setup-node@v7
         with:
@@ -72,10 +77,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Optimize images → lossless WebP
+      - name: Verify + optimize images → lossless WebP
         id: opt
+        env:
+          # Base commit anchors archive-on-replace and old-art provenance reads.
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          # JSON result goes to a file so the script's ::error::/::warning::
+          # workflow commands own stdout (and surface as PR diff annotations).
+          OPTIMIZE_JSON_OUT: /tmp/opt.json
         run: |
-          node --experimental-strip-types scripts/optimize-images.ts | tee /tmp/opt.json
+          # Card-art SHA verification chain:
+          #  1. verify each raster against image.provenance.source_sha256 /
+          #     alternate_sha256 — a mismatch exits non-zero and FAILS this job
+          #     (fork PRs included; nothing is committed),
+          #  2. convert to lossless WebP at native dimensions,
+          #  3. archive any replaced base-branch WebP under images/archive/ and
+          #     append the old art's provenance to image.history[],
+          #  4. fill image.provenance.converted_sha256 + image.local_path.
+          node --experimental-strip-types scripts/optimize-images.ts
           written=$(node -e "const j=require('/tmp/opt.json'); console.log((j.written||[]).length)")
           echo "written=$written" >> "$GITHUB_OUTPUT"
 
@@ -88,15 +107,17 @@ jobs:
             echo "dirty=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit optimized WebP (same-repo PRs only)
+      - name: Commit optimized WebP + provenance (same-repo PRs only)
         if: >-
           steps.changes.outputs.dirty == 'true' &&
           github.event.pull_request.head.repo.full_name == github.repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images/
-          git commit -m "ci: optimize card images to lossless WebP"
+          # images/ = new WebP + archived old art; data/ = converted_sha256,
+          # local_path and image.history[] edits the chain wrote to card JSON.
+          git add images/ data/
+          git commit -m "ci: verify + optimize card art to lossless WebP"
           git push
 
       - name: Comment when fork PR needs a local optimize pass
@@ -111,19 +132,24 @@ jobs:
           <!-- opencard-image-opt -->
           ### Image optimization needed
 
-          This PR adds raster images under `images/`. Because the branch lives on a **fork**, CI cannot push WebP files back automatically.
-
-          On your machine (or in a Codespace):
+          This PR adds raster images under `images/`. Because the branch lives on a **fork**, CI cannot push the results back automatically. Run the same chain locally, then commit both `images/` and `data/`:
 
           ```bash
           npm ci
           npm run optimize:images
-          git add images/
-          git commit -m "ci: optimize card images to lossless WebP"
+          git add images/ data/
+          git commit -m "ci: verify + optimize card art to lossless WebP"
           git push
           ```
 
-          Spec: **lossless WebP**, native dimensions (Apple Pay `cardBackgroundCombined@2x.png` quality bar — no 800px downscale). See `images/README.md`.
+          `npm run optimize:images` runs the full card-art chain that CI would:
+
+          - **Verifies** each raster against the card's `image.provenance.source_sha256` (or `alternate_sha256`). A mismatch is a hard error — it means the committed file is not the one the provenance block describes. (A card with no `image.provenance` block is only a warning; add one with `npx opencard-export --repo .`.)
+          - **Converts** to **lossless WebP**, native dimensions (Apple Pay `cardBackgroundCombined@2x.png` quality bar — no 800px downscale).
+          - **Archives on replace:** if the card already had art, the old WebP moves to `images/archive/<card-id>.<YYYYMMDD>.webp` (never overwritten) and an `image.history[]` entry is appended.
+          - **Fills** `image.provenance.converted_sha256` (hash of the new WebP) and `image.local_path`.
+
+          A maintainer can also run these steps and push to your branch. See `images/README.md`.
           EOF
           # upsert — the comment is purely informational, so a fork-PR 403
           # (read-only GITHUB_TOKEN) must not mask this job's real result: the
