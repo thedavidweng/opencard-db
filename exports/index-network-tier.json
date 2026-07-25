@@ -4,6 +4,8 @@
     "cn-icbc-amex-platinum",
     "us-amex-blue-business-cash",
     "us-amex-blue-business-plus",
+    "us-amex-blue-cash-everyday",
+    "us-amex-blue-cash-preferred",
     "us-amex-business-gold",
     "us-amex-business-platinum",
     "us-amex-cash-magnet",
@@ -45,6 +47,10 @@
   ],
   "world": [
     "us-bank-of-america-business-advantage-travel-rewards",
+    "us-barclays-frontier-airlines-world",
+    "us-barclays-jetblue",
+    "us-barclays-jetblue-business",
+    "us-barclays-jetblue-plus",
     "us-citi-diamond-preferred",
     "us-citi-simplicity",
     "us-synchrony-walmart-onepay-cashrewards"
@@ -53,6 +59,7 @@
     "us-bank-of-america-customized-cash-rewards",
     "us-bank-of-america-premium-rewards",
     "us-bank-of-america-travel-rewards",
+    "us-bank-of-america-unlimited-cash-rewards",
     "us-capital-one-quicksilver-secured-cash-rewards",
     "us-capital-one-quicksilver-student-cash-rewards",
     "us-capital-one-venture",
@@ -70,6 +77,8 @@
   ],
   "world_elite": [
     "us-barclays-aadvantage-aviator-red-world-elite",
+    "us-barclays-hawaiian-airlines-world-elite-business",
+    "us-barclays-jetblue-premier",
     "us-chase-freedom-flex",
     "us-chase-ihg-premier",
     "us-synchrony-virgin-red-rewards",

@@ -3,6 +3,8 @@
     "ca-amex-cobalt",
     "us-amex-blue-business-cash",
     "us-amex-blue-business-plus",
+    "us-amex-blue-cash-everyday",
+    "us-amex-blue-cash-preferred",
     "us-amex-business-gold",
     "us-amex-business-platinum",
     "us-amex-cash-magnet",
@@ -44,10 +46,17 @@
     "us-bank-of-america-business-advantage-unlimited-cash",
     "us-bank-of-america-customized-cash-rewards",
     "us-bank-of-america-premium-rewards",
-    "us-bank-of-america-travel-rewards"
+    "us-bank-of-america-travel-rewards",
+    "us-bank-of-america-unlimited-cash-rewards"
   ],
   "barclays": [
-    "us-barclays-aadvantage-aviator-red-world-elite"
+    "us-barclays-aadvantage-aviator-red-world-elite",
+    "us-barclays-frontier-airlines-world",
+    "us-barclays-hawaiian-airlines-world-elite-business",
+    "us-barclays-jetblue",
+    "us-barclays-jetblue-business",
+    "us-barclays-jetblue-plus",
+    "us-barclays-jetblue-premier"
   ],
   "capital-one": [
     "us-capital-one-quicksilver-secured-cash-rewards",
