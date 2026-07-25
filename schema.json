@@ -252,8 +252,39 @@
       "properties": {
         "url": { "type": ["string", "null"], "format": "uri" },
         "attribution": { "type": ["string", "null"] },
-        "local_path": { "type": ["string", "null"] }
+        "local_path": { "type": ["string", "null"] },
+        "provenance": { "$ref": "#/$defs/artProvenance" },
+        "history": {
+          "type": "array",
+          "description": "Superseded art versions, append-only. CI moves replaced files to images/archive/ and records them here so grandfathered designs stay addressable.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["local_path", "source", "superseded_at"],
+            "properties": {
+              "local_path": { "type": "string", "minLength": 1 },
+              "source": {
+                "type": "string",
+                "enum": ["apple-pay", "issuer-site", "other"]
+              },
+              "source_sha256": {
+                "type": ["string", "null"],
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "superseded_at": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        }
       }
+    },
+    "secondary_sources": {
+      "type": "array",
+      "description": "Lower-confidence corroboration (any domain), permitted ONLY on discontinued cards whose official pages are gone. Active cards must cite official (or archived-official) sources in `sources`.",
+      "items": { "type": "string", "format": "uri" }
     },
     "bin_hints": {
       "type": "array",
@@ -271,6 +302,34 @@
     "notes": { "type": "string" }
   },
   "$defs": {
+    "artProvenance": {
+      "type": ["object", "null"],
+      "description": "Hash lineage of the committed card art. source_sha256 anchors the ORIGINAL file (pre-WebP-conversion); 'graduated' art = local_path set with source 'apple-pay'.",
+      "additionalProperties": false,
+      "required": ["source", "source_sha256"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": ["apple-pay", "issuer-site", "other"]
+        },
+        "source_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "converted_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "alternate_sha256": {
+          "type": "array",
+          "description": "Other known exports of the SAME design (e.g. @3x from another device).",
+          "items": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        },
+        "width": { "type": ["integer", "null"], "minimum": 1 },
+        "height": { "type": ["integer", "null"], "minimum": 1 },
+        "exported_at": {
+          "type": ["string", "null"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        }
+      }
+    },
     "aprRange": {
       "type": ["object", "null"],
       "additionalProperties": false,

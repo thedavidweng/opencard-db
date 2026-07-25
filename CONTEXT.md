@@ -19,7 +19,7 @@ The consumer market where the Card is offered (`us`, `ca`, `cn`, …). Same bran
 _Avoid_: currency country alone, residency rule as the only definition, region
 
 **Card Status**:
-Lifecycle of the product offering: `active` (open for application), `invite_only`, `discontinued` (no longer offered; record kept so Card Ids stay valid), or `unknown`.
+Lifecycle of the product offering: `active` (open for application), `invite_only`, `discontinued` (no longer offered; record kept so Card Ids stay valid. Discontinued products are first-class records, not leftovers: grandfathered cardholders still hold them, so completeness includes yesterday's cards), or `unknown`.
 _Avoid_: deleted, archived as the only model, is_active boolean alone
 
 ### Parties

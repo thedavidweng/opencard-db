@@ -100,6 +100,73 @@ describe("semantic lints", () => {
     assert.deepEqual(lintCard(explicit, ctx), []);
   });
 
+
+  it("accepts wayback-wrapped official sources; rejects wrapped foreign domains", async () => {
+    const ctx = await loadLintContext();
+    const archivedOfficial = baseCard({
+      sources: [
+        "https://web.archive.org/web/20260101000000/https://creditcards.chase.com/x",
+      ],
+    });
+    assert.deepEqual(lintCard(archivedOfficial, ctx), []);
+
+    const archivedForeign = baseCard({
+      sources: [
+        "https://web.archive.org/web/20260101000000/https://evil.example.com/x",
+      ],
+    });
+    assert.match(lintCard(archivedForeign, ctx)[0], /not in the domain allowlist/);
+
+    const malformed = baseCard({
+      sources: ["https://web.archive.org/web/oops"],
+    });
+    assert.match(lintCard(malformed, ctx)[0], /malformed web\.archive\.org/);
+  });
+
+  it("secondary_sources only on discontinued cards", async () => {
+    const ctx = await loadLintContext();
+    const active = baseCard({ secondary_sources: ["https://blog.example.com/x"] });
+    assert.match(
+      lintCard(active, ctx).join(" "),
+      /secondary_sources are only permitted on discontinued/,
+    );
+    const gone = baseCard({
+      status: "discontinued",
+      discontinued_date: "2026-01-01",
+      secondary_sources: ["https://blog.example.com/x"],
+    });
+    assert.equal(
+      lintCard(gone, ctx).some((p) => p.includes("secondary_sources")),
+      false,
+    );
+  });
+
+  it("provenance requires committed art; history must live in images/archive/", async () => {
+    const ctx = await loadLintContext();
+    const orphan = baseCard({
+      image: {
+        url: null,
+        attribution: null,
+        local_path: null,
+        provenance: { source: "apple-pay", source_sha256: "a".repeat(64) },
+      },
+    });
+    assert.match(lintCard(orphan, ctx).join(" "), /provenance is set but image\.local_path is null/);
+
+    const badHistory = baseCard({
+      image: {
+        url: null,
+        attribution: null,
+        local_path: "images/us-demo-card.webp",
+        provenance: { source: "apple-pay", source_sha256: "a".repeat(64) },
+        history: [
+          { local_path: "images/us-demo-card.old.webp", source: "issuer-site", superseded_at: "2026-07-25" },
+        ],
+      },
+    });
+    assert.match(lintCard(badHistory, ctx).join(" "), /must live under images\/archive\//);
+  });
+
   it("flags future dates", async () => {
     const ctx = await loadLintContext();
     assert.match(
