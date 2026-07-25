@@ -166,14 +166,31 @@ export const STATUS = {
 };
 
 /**
+ * Presentation for the four art graduation tiers: the `mark` shown after the
+ * `Art` label on line 2, its color, and the footer/summary `word`. See
+ * lib/art.mjs and docs/schema-notes.md "Card art lineage & graduation".
+ */
+export const ART_STATUS = {
+  graduated: { mark: 'graduated', color: ANSI.green, word: 'graduated' },
+  'new-design': { mark: 'new-design?', color: ANSI.cyan, word: 'new-design?' },
+  upgradeable: { mark: 'upgradeable', color: ANSI.yellow, word: 'upgradeable' },
+  missing: { mark: '✗', color: ANSI.dim, word: 'missing art' },
+};
+
+/**
  * Render one payment card as two dot-list lines.
  *   line 1: <dot> <bold name> <dim (issuer)>            <status word>  (right-aligned)
  *   line 2: dimmed, indented → matched id · per-field ✓/✗  (or "not in OpenCard DB yet")
  * Returns the two lines joined by "\n". Apply no external color — coloring is
  * driven by `opts.color`.
  *
+ * When `entry.artStatus` is one of the ART_STATUS tier codes, the `Art` field's
+ * mark becomes the colored tier label (`graduated` / `new-design?` /
+ * `upgradeable` / `✗`); otherwise it falls back to the binary `✓/✗`.
+ *
  * @param {{name:string, issuer?:string, stateCode:'has-art'|'needs-art'|'not-in-db',
- *          matchedId?:string|null, fields?:Array<{label:string,ok:boolean}>}} entry
+ *          matchedId?:string|null, fields?:Array<{key?:string,label:string,ok:boolean}>,
+ *          artStatus?:'graduated'|'new-design'|'upgradeable'|'missing'|null}} entry
  * @param {{color?:boolean, width?:number}} [opts]
  * @returns {string}
  */
@@ -197,10 +214,17 @@ export function renderCardEntry(entry, opts = {}) {
 
   let line2;
   if (entry.matchedId) {
-    const marks = (entry.fields || [])
-      .map((f) => `${f.label} ${f.ok ? '✓' : '✗'}`)
-      .join(' ');
-    line2 = c(ANSI.dim, `  → ${entry.matchedId} · ${marks}`);
+    const art = entry.artStatus ? ART_STATUS[entry.artStatus] : null;
+    // Line 2 is dimmed overall; only the art tier mark carries a tier color, so
+    // stripAnsi() still yields the plain "  → id · Fee ✓ … Art <mark>" layout.
+    const marks = (entry.fields || []).map((f, i) => {
+      const sep = i === 0 ? '' : c(ANSI.dim, ' ');
+      if (art && f.key === 'image') {
+        return sep + c(ANSI.dim, `${f.label} `) + c(art.color, art.mark);
+      }
+      return sep + c(ANSI.dim, `${f.label} ${f.ok ? '✓' : '✗'}`);
+    });
+    line2 = c(ANSI.dim, `  → ${entry.matchedId} · `) + marks.join('');
   } else {
     line2 = c(ANSI.dim, '  → not in OpenCard DB yet');
   }

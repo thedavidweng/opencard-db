@@ -18,6 +18,14 @@ import {
   ANSI,
 } from '../lib/render.mjs';
 import { attributionLine, attributionNotice } from '../lib/attribution.mjs';
+import {
+  sha256,
+  parsePngDimensions,
+  artStatus,
+  buildProvenanceBlock,
+  provenanceSnippet,
+  today,
+} from '../lib/art.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -287,6 +295,50 @@ function plural(n, singular, pluralForm) {
   return n === 1 ? singular : pluralForm;
 }
 
+/**
+ * Resolve a card's on-disk data path within a checkout: data/{country}/{slug}.json
+ * where id === `{country}-{slug}`.
+ */
+function dataCardPath(repoRoot, card) {
+  const country = card.country || String(card.id).slice(0, 2);
+  const slug = String(card.id).startsWith(country + '-')
+    ? String(card.id).slice(country.length + 1)
+    : String(card.id);
+  return path.join(repoRoot, 'data', country, `${slug}.json`);
+}
+
+/**
+ * Write a provenance block into a checkout's card JSON. Reads + JSON.parses the
+ * existing file (refusing if it does not exist), sets image.provenance (and
+ * image.local_path when absent, so the card stays validation-coherent), and
+ * re-serializes with 2-space indent + a trailing newline. Never touches any
+ * other field.
+ * @returns {Promise<{written:true, path:string}>}
+ */
+async function writeProvenanceToRepo(repoRoot, card, provenance) {
+  const file = dataCardPath(repoRoot, card);
+  let raw;
+  try {
+    raw = await fs.readFile(file, 'utf-8');
+  } catch (e) {
+    if (e && e.code === 'ENOENT') {
+      throw new Error(
+        `card JSON not found at ${path.relative(repoRoot, file)} (refusing to create it)`,
+      );
+    }
+    throw e;
+  }
+  const parsed = JSON.parse(raw);
+  const image = parsed.image && typeof parsed.image === 'object' ? parsed.image : {};
+  image.provenance = provenance;
+  if (image.local_path == null) {
+    image.local_path = `images/${card.id}.png`;
+  }
+  parsed.image = image;
+  await fs.writeFile(file, JSON.stringify(parsed, null, 2) + '\n', 'utf-8');
+  return { written: true, path: file };
+}
+
 // ── main ────────────────────────────────────────────────────────────────
 async function main() {
   let args;
@@ -399,13 +451,27 @@ async function main() {
     remoteNote = 'skipped';
   }
 
-  // Match payment cards to DB.
+  // Match payment cards to DB. For every card with an extractable art asset we
+  // also hash the local Apple Pay PNG (and read its dimensions) so we can place
+  // matched cards on the graduation ladder and, on --export, emit provenance.
   const rows = [];
   for (const p of payment) {
+    let localSha = null;
+    let pngDims = null;
+    if (p.exportable && p.artAsset) {
+      try {
+        const buf = await fs.readFile(path.join(p.bundleDir, p.artAsset));
+        localSha = sha256(buf);
+        pngDims = parsePngDimensions(buf);
+      } catch {
+        // unreadable art asset — leave localSha/pngDims null
+      }
+    }
     const match = db ? matchCard({ name: p.name, issuer: p.issuer }, db.cards) : null;
     const stateCode = imageStateCode(match);
     const meter = match ? completenessMeter(match.card) : null;
-    rows.push({ rec: p, match, stateCode, meter });
+    const art = match ? artStatus(match.card, localSha) : null;
+    rows.push({ rec: p, match, stateCode, meter, localSha, pngDims, art });
   }
 
   // ── export ────────────────────────────────────────────────────────────
@@ -413,15 +479,15 @@ async function main() {
   if (args.export) {
     // Resolve target dir; prefer an opencard-db checkout's images/ when found.
     let targetDir = args.exportDir;
-    let intoImages = false;
+    let repoRoot = null;
     if (args.repo && (await isOpencardRepo(args.repo))) {
+      repoRoot = args.repo;
       targetDir = path.join(args.repo, 'images');
-      intoImages = true;
     } else if (!targetDir) {
       const cwd = process.cwd();
       if (await isOpencardRepo(cwd)) {
+        repoRoot = cwd;
         targetDir = path.join(cwd, 'images');
-        intoImages = true;
       } else {
         targetDir = '.';
       }
@@ -444,13 +510,42 @@ async function main() {
       const src = path.join(rec.bundleDir, rec.artAsset);
       try {
         await fs.copyFile(src, dest);
-        exportResults.push({
+        // Provenance block (only meaningful for a matched card: it anchors the
+        // sha into the DB card's art lineage).
+        let provenance = null;
+        if (match && row.localSha) {
+          provenance = buildProvenanceBlock({
+            sha256: row.localSha,
+            width: row.pngDims ? row.pngDims.width : null,
+            height: row.pngDims ? row.pngDims.height : null,
+            exportedAt: today(),
+          });
+        }
+        const result = {
           name: rec.name,
           issuer: rec.issuer,
           dest,
           exported: true,
           matchedId: match ? match.card.id : null,
-        });
+          localSha: row.localSha,
+          provenance,
+        };
+        // --repo mode: write the provenance block straight into the matched
+        // card's JSON (surgical: only image.provenance, plus image.local_path
+        // when absent so the card stays validation-coherent — provenance
+        // describes a committed art file). Refuse if the card JSON is missing.
+        if (repoRoot && match && provenance) {
+          try {
+            result.repoWrite = await writeProvenanceToRepo(
+              repoRoot,
+              match.card,
+              provenance,
+            );
+          } catch (e) {
+            result.repoWrite = { written: false, reason: e.message };
+          }
+        }
+        exportResults.push(result);
       } catch (e) {
         exportResults.push({
           name: rec.name,
@@ -472,6 +567,8 @@ async function main() {
         matchedId: r.match ? r.match.card.id : null,
         matchScore: r.match ? Number(r.match.score.toFixed(3)) : null,
         imageState: r.stateCode,
+        art_status: r.art,
+        local_sha256: r.localSha,
         completeness: r.meter
           ? {
               filled: r.meter.filled,
@@ -489,6 +586,9 @@ async function main() {
         complete: rows.filter((r) => r.stateCode === 'has-art').length,
         missingArt: rows.filter((r) => r.stateCode === 'needs-art').length,
         notInDb: rows.filter((r) => r.stateCode === 'not-in-db').length,
+        graduated: rows.filter((r) => r.art === 'graduated').length,
+        newDesign: rows.filter((r) => r.art === 'new-design').length,
+        upgradeable: rows.filter((r) => r.art === 'upgradeable').length,
         exportable: payment.filter((p) => p.exportable).length,
       },
       remote: { note: remoteNote, source: db ? db.source : null },
@@ -535,6 +635,7 @@ async function main() {
           stateCode: r.stateCode,
           matchedId: r.match ? r.match.card.id : null,
           fields: r.meter ? r.meter.fields : null,
+          artStatus: r.art,
         },
         { color, width },
       ) + '\n',
@@ -542,13 +643,18 @@ async function main() {
   }
 
   // ── summary (footer-style, colored segments) ───────────────────────────────
-  const nComplete = rows.filter((r) => r.stateCode === 'has-art').length;
+  // The old binary "complete" splits into the three graduation tiers.
+  const nGraduated = rows.filter((r) => r.art === 'graduated').length;
+  const nNewDesign = rows.filter((r) => r.art === 'new-design').length;
+  const nUpgradeable = rows.filter((r) => r.art === 'upgradeable').length;
   const nMissing = rows.filter((r) => r.stateCode === 'needs-art').length;
   const nNotInDb = rows.filter((r) => r.stateCode === 'not-in-db').length;
   const sep = c(ANSI.dim, ' · ');
   const summary = [
     c(ANSI.bold, `${payment.length} payment ${plural(payment.length, 'card', 'cards')}`),
-    c(ANSI.green, `${nComplete} complete`),
+    c(ANSI.green, `${nGraduated} graduated`),
+    c(ANSI.cyan, `${nNewDesign} new-design?`),
+    c(ANSI.yellow, `${nUpgradeable} upgradeable`),
     c(ANSI.yellow, `${nMissing} missing art`),
     c(ANSI.red, `${nNotInDb} not in DB`),
   ].join(sep);
@@ -558,6 +664,8 @@ async function main() {
   // ── next steps ──────────────────────────────────────────────────────────
   const hasNeedsArt = nMissing > 0;
   const hasNotInDb = nNotInDb > 0;
+  const hasNewDesign = nNewDesign > 0;
+  const hasUpgradeable = nUpgradeable > 0;
   process.stdout.write('\n' + c(ANSI.bold, 'Next steps:') + '\n');
 
   if (remoteNote === 'offline') {
@@ -570,6 +678,28 @@ async function main() {
     );
   }
 
+  if (hasUpgradeable) {
+    process.stdout.write(
+      c(ANSI.yellow, '  • Upgradeable') +
+        ' — your Apple Pay export beats the current issuer-site art.\n' +
+        c(ANSI.dim, '    Run ') +
+        c(ANSI.bold, 'npx opencard-export --export') +
+        c(ANSI.dim, ' and open a PR.') +
+        '\n',
+    );
+  }
+  if (hasNewDesign) {
+    process.stdout.write(
+      c(ANSI.cyan, '  • New design?') +
+        " — your export differs from the DB's Apple Pay art; banks refresh designs.\n" +
+        c(
+          ANSI.dim,
+          "    Submit if your card looks newer (or if it's an @3x variant, maintainers\n" +
+            '    can add it to alternate_sha256).',
+        ) +
+        '\n',
+    );
+  }
   if (hasNeedsArt) {
     process.stdout.write(
       c(ANSI.yellow, '  • Missing art') +
@@ -591,9 +721,9 @@ async function main() {
         '\n',
     );
   }
-  if (remoteNote == null && !hasNeedsArt && !hasNotInDb) {
+  if (remoteNote == null && !hasNeedsArt && !hasNotInDb && !hasNewDesign && !hasUpgradeable) {
     process.stdout.write(
-      c(ANSI.green, '  • All matched cards are complete — nothing to contribute right now. Thanks for checking!') +
+      c(ANSI.green, '  • All matched cards are graduated — nothing to contribute right now. Thanks for checking!') +
         '\n',
     );
   }
@@ -611,6 +741,35 @@ async function main() {
             c(ANSI.dim, `  ${attributionLine(r.issuer)}`) +
             '\n',
         );
+        if (r.localSha) {
+          process.stdout.write(c(ANSI.dim, `  sha256: ${r.localSha}`) + '\n');
+        }
+        // Paste-ready provenance block for a matched card.
+        if (r.provenance) {
+          const snippet = provenanceSnippet(r.provenance)
+            .split('\n')
+            .map((l) => '    ' + l)
+            .join('\n');
+          process.stdout.write(
+            c(ANSI.dim, '  Paste into the card\'s "image" object:') +
+              '\n' +
+              c(ANSI.cyan, snippet) +
+              '\n',
+          );
+        }
+        // --repo write outcome.
+        if (r.repoWrite) {
+          if (r.repoWrite.written) {
+            process.stdout.write(
+              c(ANSI.green, `  ✓ wrote image.provenance into ${path.basename(r.repoWrite.path)}`) +
+                '\n',
+            );
+          } else {
+            process.stdout.write(
+              c(ANSI.yellow, `  ⚠ provenance not written: ${r.repoWrite.reason}`) + '\n',
+            );
+          }
+        }
       } else {
         process.stdout.write(c(ANSI.dim, `Skipped: ${r.name} — ${r.reason}`) + '\n');
       }
@@ -618,15 +777,16 @@ async function main() {
     const intoImages = exportResults.some(
       (r) => r.exported && path.basename(path.dirname(r.dest)) === 'images',
     );
+    const wroteProvenance = exportResults.some((r) => r.repoWrite && r.repoWrite.written);
     if (intoImages) {
+      const next = wroteProvenance
+        ? 'Next: review the image.provenance blocks written above, then open a PR (CI verifies the sha chain and converts to lossless WebP).'
+        : "Next: set each card's image.local_path (CI converts to lossless WebP) and open a PR.";
       process.stdout.write(
         '\n' +
           c(ANSI.dim, 'Detected an OpenCard DB checkout — wrote into images/.') +
           '\n' +
-          c(
-            ANSI.dim,
-            "Next: set each card's image.local_path (CI converts to lossless WebP) and open a PR.",
-          ) +
+          c(ANSI.dim, next) +
           '\n',
       );
     }
