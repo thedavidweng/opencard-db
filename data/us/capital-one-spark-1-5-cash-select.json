@@ -8,9 +8,10 @@
   "country": "us",
   "issuer": "Capital One",
   "issuer_id": "capital-one",
-  "network": "visa",
-  "network_tier": "signature",
+  "network": "mastercard",
+  "network_tier": "world",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -38,19 +39,20 @@
   "rewards": {
     "currency": "cash_back",
     "currency_label": "Cash back",
-    "structure": "single",
+    "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.5,
       "description": "Earn unlimited 1.5% cash back for your business on every purchase, everywhere, no limits or category restrictions."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "5% cash back on hotels and rental cars booked through Capital One Business Travel",
+        "points_per_dollar": 5.0,
         "cap": null
       }
     ],
-    "redemption_notes": "Get cash back rewards for any amount at any time with no expiration date for the life of the account. Redeem through statement credit or check."
+    "redemption_notes": "Get cash back rewards for any amount at any time with no expiration date for the life of the account. Redeem through statement credit or check.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 750.0,
@@ -134,10 +136,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.capitalone.com/small-business/credit-cards/spark-cash-select",
     "https://www.capitalone.com/small-business/credit-cards/spark-cash-select/"
   ],
-  "notes": "Verified against official Capital One product page on 2026-07-24. Corrected signup_bonus from 150,000 miles/$30,000 to $750 cash/$6,000 per page. Corrected rewards currency from miles to cash_back. Corrected name from 'Spark 1.5% Cash Select Business Card' to 'Spark 1.5% Cash Select' per page heading."
+  "notes": "Verified against the official Capital One product page on 2026-07-25. Network is Mastercard (listed on Mastercard's Capital One issuer page and in Capital One's own 'World Mastercard' marketing), tier 'world' — corrected from the unverified visa/signature. Earns unlimited 1.5% cash back on all purchases plus 5% cash back on hotels and rental cars booked through Capital One Business Travel. Business (small-business) card; segment set to 'business'."
 }
