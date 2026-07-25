@@ -19,6 +19,7 @@ import {
 export type LintContext = {
   issuerIds: Set<string>;
   issuerAliases: Map<string, string>; // alias -> canonical id
+  issuerDomains: Map<string, string[]>; // issuer id -> provenance allowlist (empty/absent = not enforced)
   tiers: Set<string>;
   today: string; // YYYY-MM-DD
 };
@@ -46,22 +47,40 @@ export async function loadLintContext(): Promise<LintContext> {
   const root = repoRoot();
   const issuersRaw = JSON.parse(
     await readFile(path.join(root, "data/issuers.json"), "utf8"),
-  ) as { issuers: { id: string; aliases?: string[] }[] };
+  ) as { issuers: { id: string; aliases?: string[]; domains?: string[] }[] };
   const tiersRaw = JSON.parse(
     await readFile(path.join(root, "data/network-tiers.json"), "utf8"),
   ) as { tiers: string[] };
 
   const issuerIds = new Set(issuersRaw.issuers.map((i) => i.id));
   const issuerAliases = new Map<string, string>();
+  const issuerDomains = new Map<string, string[]>();
   for (const i of issuersRaw.issuers) {
     for (const a of i.aliases ?? []) issuerAliases.set(a, i.id);
+    if (Array.isArray(i.domains) && i.domains.length > 0) {
+      issuerDomains.set(
+        i.id,
+        i.domains.map((d) => d.toLowerCase()),
+      );
+    }
   }
   return {
     issuerIds,
     issuerAliases,
+    issuerDomains,
     tiers: new Set(tiersRaw.tiers),
     today: new Date().toISOString().slice(0, 10),
   };
+}
+
+/**
+ * A hostname matches an allowlist entry when it equals the registrable domain
+ * or is a subdomain of it (parent-domain suffix match) — e.g. both
+ * "www.chase.com" and "creditcards.chase.com" match "chase.com".
+ */
+export function hostnameAllowed(hostname: string, domains: string[]): boolean {
+  const h = hostname.toLowerCase();
+  return domains.some((d) => h === d || h.endsWith(`.${d}`));
 }
 
 function tierProblem(tier: string, ctx: LintContext): string | null {
@@ -93,6 +112,41 @@ export function lintCard(card: Card, ctx: LintContext): string[] {
         ? `issuer_id "${card.issuer_id}" is a known alias — use canonical "${canonical}"`
         : `issuer_id "${card.issuer_id}" is not in data/issuers.json — add the issuer there in this PR (id, name, aliases)`,
     );
+  }
+
+  // Source-domain provenance allowlist (anti-fabrication). sources[] and
+  // official_url are the repo's provenance backbone, so an off-allowlist host
+  // is an ERROR: either the issuer registry is missing a legitimate new domain
+  // (add it to data/issuers.json in this PR) or the source is fabricated /
+  // points at the wrong issuer.
+  const allowed = ctx.issuerDomains.get(card.issuer_id);
+  if (allowed && allowed.length > 0) {
+    const provenance: { field: string; url: string }[] = [];
+    if (typeof card.official_url === "string") {
+      provenance.push({ field: "official_url", url: card.official_url });
+    }
+    const sources = card.sources as unknown;
+    if (Array.isArray(sources)) {
+      sources.forEach((s, i) => {
+        if (typeof s === "string") {
+          provenance.push({ field: `sources[${i}]`, url: s });
+        }
+      });
+    }
+    for (const { field, url } of provenance) {
+      let hostname: string;
+      try {
+        hostname = new URL(url).hostname;
+      } catch {
+        // Malformed URL — the ajv "format": "uri" check already reports it.
+        continue;
+      }
+      if (!hostnameAllowed(hostname, allowed)) {
+        problems.push(
+          `${field} host "${hostname.toLowerCase()}" is not in the domain allowlist for issuer "${card.issuer_id}" (data/issuers.json → domains). If this is a legitimate issuer/co-brand source, add the domain to that issuer's "domains" in this same PR; otherwise the source may be fabricated or point at the wrong issuer.`,
+        );
+      }
+    }
   }
 
   // Tier allowlist (primary + additional networks)

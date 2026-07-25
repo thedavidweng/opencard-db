@@ -98,6 +98,11 @@ prints the attribution to record — then add it under `images/` and run
 If **Form check** is red, edit **this** PR (title/body or a new commit) — don't open a
 duplicate.
 
+> **Reviewers:** green CI means a PR is *well-formed*, not *verified*. See
+> [REVIEWING.md](docs/REVIEWING.md) for the trust model — what the machine checks
+> (schema, lints, issuer-domain allowlist, update diff flags) versus what a human
+> must confirm against the cited official page before merging.
+
 ## Licenses
 
 - Code: [MIT](LICENSE)

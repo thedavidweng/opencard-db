@@ -133,6 +133,60 @@ describe("semantic lints", () => {
     );
   });
 
+  it("passes sources/official_url on an issuer's allow-listed domain", async () => {
+    const ctx = await loadLintContext();
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://creditcards.chase.com/rewards/sapphire",
+      sources: [
+        "https://www.chase.com/personal/credit-cards/sapphire",
+        "https://creditcards.chase.com/rewards/sapphire",
+      ],
+    });
+    assert.deepEqual(lintCard(card, ctx), []);
+  });
+
+  it("errors on a source domain not in the issuer's allowlist", async () => {
+    const ctx = await loadLintContext();
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://creditcards.chase.com/ok",
+      sources: [
+        "https://creditcards.chase.com/ok",
+        "https://totally-fabricated.example/cards/x",
+      ],
+    });
+    const problems = lintCard(card, ctx);
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /sources\[1\]/);
+    assert.match(problems[0], /totally-fabricated\.example/);
+    assert.match(problems[0], /domain allowlist for issuer "chase"/);
+    assert.match(problems[0], /same PR/);
+  });
+
+  it("accepts allow-listed co-brand + subdomain hosts (parent-domain match)", async () => {
+    const ctx = await loadLintContext();
+    // chase allows amazon.com (co-brand); www. is a subdomain of chase.com.
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://www.amazon.com/dp/prime-card",
+      sources: ["https://creditcards.chase.com/amazon"],
+    });
+    assert.deepEqual(lintCard(card, ctx), []);
+  });
+
+  it("skips the domain lint for issuers with no domains allowlist", async () => {
+    const ctx = await loadLintContext();
+    // Simulate an issuer registered without a domains[] allowlist.
+    ctx.issuerDomains.delete("chase");
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://anything.example/x",
+      sources: ["https://anything.example/x"],
+    });
+    assert.deepEqual(lintCard(card, ctx), []);
+  });
+
   it("flags discontinued_date on an active card and duplicate benefit ids", async () => {
     const ctx = await loadLintContext();
     assert.match(
