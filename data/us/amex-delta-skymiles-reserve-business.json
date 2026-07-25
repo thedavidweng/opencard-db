@@ -1,0 +1,262 @@
+{
+  "id": "us-amex-delta-skymiles-reserve-business",
+  "schema_version": "1.0.0",
+  "name": "Delta SkyMiles Reserve Business American Express Card",
+  "localized_names": {
+    "en": "Delta SkyMiles Reserve Business American Express Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 650.0,
+    "currency": "USD",
+    "first_year": 650.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product page; rates are behind a dynamically-loaded 'Rates & Fees' disclosure. See American Express for current APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "delta_skymiles",
+    "currency_label": "Delta SkyMiles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X mile on other purchases made using the Delta SkyMiles Reserve Business Card"
+    },
+    "categories": [
+      {
+        "label": "Delta purchases (directly with Delta)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Eligible transit, U.S. shipping & U.S. office supply store purchases",
+        "points_per_dollar": 1.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles are Delta SkyMiles, redeemable for Award Travel on Delta flights. Take 15% off when booking Award Travel with miles on Delta flights via delta.com or Fly Delta app. Pay with Miles: up to $50 off the cost of your flight for every 5,000 miles redeemed when booking on delta.com."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "delta-sky-club-access",
+      "title": "Delta Sky Club Access",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "15 Visits each Medallion Year to the Delta Sky Club when flying Delta, plus unlock Unlimited Delta Sky Club Access after spending $75,000 in purchases on your Card during a calendar year. Also receive four One-Time Guest Passes each Medallion Year."
+    },
+    {
+      "id": "centurion-lounge-access",
+      "title": "Complimentary Access to The Centurion Lounge and Escape Lounge",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Complimentary access to The Centurion Lounge (including Sidecar) and Escape Lounges when flying on a Delta flight booked with the Delta SkyMiles Reserve Business Card. Must arrive within 90 minutes of departing flight for Sidecar, within 3 hours for Centurion Lounge."
+    },
+    {
+      "id": "mqd-headstart",
+      "title": "MQD Headstart",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Receive $2,500 Medallion Qualification Dollars each Medallion Qualification Year. Silver Medallion Status can be reached by earning $5,000 MQDs."
+    },
+    {
+      "id": "mqd-boost",
+      "title": "MQD Boost",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn $1 Medallion Qualification Dollar for each $10 of purchases made on your Card in a calendar year, boosting toward elevated Medallion Status."
+    },
+    {
+      "id": "annual-companion-certificate",
+      "title": "Annual Companion Certificate",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Companion Certificate each year after renewal of your Card for a Delta First, Delta Comfort, or Delta Main domestic, Caribbean, or Central American round-trip flight. Requires payment of government-imposed taxes and fees of between $22 and $250."
+    },
+    {
+      "id": "free-checked-bags",
+      "title": "Check Two Bags Free",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "First checked bag flies free on international and domestic Delta flights. Second bag flies free on domestic Delta flights."
+    },
+    {
+      "id": "take-15-off-award-travel",
+      "title": "Take 15% Off Award Travel",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 15% anytime you book Award Travel with miles on Delta flights when using delta.com and the Fly Delta app. Discount not applicable to partner-operated flights or to taxes and fees."
+    },
+    {
+      "id": "upgrade-priority",
+      "title": "Upgrade Priority",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive upgrade priority over others with your Medallion tier, product and fare experience purchased, and Million Miler milestone when you fly with Delta."
+    },
+    {
+      "id": "resy-credit",
+      "title": "$240 Resy Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn up to $240 back in statement credits annually (up to $20 each month) at over 10,000 qualifying U.S. Resy restaurants after making eligible purchases on your enrolled Card."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "$120 Rideshare Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn up to $10 back in statement credits each month on U.S. rideshare purchases with select providers after you pay with your Card. Up to $120 back annually. Enrollment required."
+    },
+    {
+      "id": "delta-stays-credit",
+      "title": "Up to $250 Delta Stays Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Annual statement credit of up to $250 after using your Card to book prepaid hotels or vacation rentals through Delta Stays on delta.com."
+    },
+    {
+      "id": "hertz-presidents-circle",
+      "title": "Hertz President's Circle Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Hertz President's Circle Status. Enrollment in Hertz Gold Plus Rewards required; add account number to SkyMiles account and enroll in promotion at delta.com/hertz."
+    },
+    {
+      "id": "global-entry-tsa-precheck-credit",
+      "title": "Fee Credit for Global Entry or TSA PreCheck",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit for a five-year membership every 4 years after applying for Global Entry ($120) or TSA PreCheck (up to $85) and paying the application fee with your Card."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy international travel without additional fees on purchases made abroad."
+    },
+    {
+      "id": "pay-with-miles",
+      "title": "Pay with Miles",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Take up to $50 off the cost of your flight for every 5,000 miles you redeem with Pay with Miles when you book on delta.com."
+    },
+    {
+      "id": "earn-boost-after-150k",
+      "title": "1.5X Miles After $150,000 Spend",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "After you spend $150,000 in purchases on your Card in a year, earn 1.5 miles on all eligible purchases for the rest of the year. If a purchase qualifies for a higher mileage accelerator, only the higher accelerator will apply."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Terms of the Original Manufacturer's Warranty can be extended up to one additional year. Applies to warranties of 5 years or less on Covered Purchases in the United States."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against theft, accidental damage, or loss for up to 90 days from purchase date. Up to $10,000 per Covered Purchase, up to $50,000 per calendar year."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursed for repair or replacement of damaged or stolen cell phone up to $800 per claim, limit of 2 approved claims per 12-month period. $50 deductible per approved claim. Coverage provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round-trip is paid for entirely with your Eligible Card and a covered reason delays your trip more than 6 hours, reimburses certain additional expenses up to $500 per trip, maximum 2 claims per 12-month period. Coverage provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "trip-cancellation-interruption-insurance",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round-trip is paid for entirely with your Eligible Card and a covered reason cancels or interrupts your trip, reimburses non-refundable travel expenses up to $10,000 per trip and up to $20,000 per Eligible Card per 12-month period. Coverage provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for lost, damaged, or stolen Baggage when purchasing Common Carrier Vehicle tickets on an Eligible Card. Up to $1,250 for carry-on Baggage and up to $500 for checked Baggage."
+    },
+    {
+      "id": "car-rental-loss-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for Damage to or Theft of a Rental Vehicle when using Eligible Card to reserve and pay for the Entire Rental and declining CDW. Secondary coverage; does not include liability coverage."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Delta Sky Club (15 visits/year, unlimited after $75K spend) + Centurion Lounge + Escape Lounges when flying Delta"
+    },
+    "tsa_precheck_credit": {
+      "amount": 85.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": "First bag free on domestic and international Delta flights; second bag free on domestic Delta flights",
+    "hotel_status": null,
+    "other": [
+      "Annual Companion Certificate after card renewal",
+      "15% off Award Travel on Delta flights",
+      "Hertz President's Circle status",
+      "$240 Resy Credit annually",
+      "$120 Rideshare Credit annually",
+      "Up to $250 Delta Stays Credit annually",
+      "MQD Headstart ($2,500) and MQD Boost",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-reserve/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/delta-reserve-business.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-reserve/"
+  ],
+  "notes": "Delta SkyMiles Reserve Business Card. $650 annual fee. 3X miles at Delta, 1.5X on transit/shipping/office supply, 1X on other. After $150K spend, 1.5X on all eligible purchases for rest of year. No foreign transaction fees. APR and welcome offer not visible on fetched page (dynamically loaded). 23 benefits extracted from page text."
+}
