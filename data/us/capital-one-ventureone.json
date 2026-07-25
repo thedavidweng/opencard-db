@@ -9,8 +9,9 @@
   "issuer": "Capital One",
   "issuer_id": "capital-one",
   "network": "visa",
-  "network_tier": "none",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0,
@@ -38,6 +39,7 @@
     "currency": "miles",
     "currency_label": "Capital One miles",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1.25,
       "description": "1.25X Miles on All Purchases"
@@ -50,7 +52,7 @@
       },
       {
         "label": "Hotels and rental cars booked through Capital One Travel",
-        "points_per_dollar": null,
+        "points_per_dollar": 5,
         "cap": null
       }
     ],
@@ -118,5 +120,5 @@
     "https://www.capitalone.com/credit-cards/ventureone/",
     "https://www.capitalone.com/assets/shell/page_models/card/resourceapi/credit-cards/ventureone.json"
   ],
-  "notes": "The product page and JSON resource confirm $0 annual fee, Excellent credit level, 1.25X miles on all purchases, no foreign transaction fees, and transfer to 15+ travel loyalty programs. The signup bonus (20,000 miles / $500 spend) and 5X on Capital One Entertainment were present in prior data; the JSON resource uses template variables for these values so they could not be re-verified from fetched text. APR numeric values were not exposed in fetched content."
+  "notes": "The product page and JSON resource confirm $0 annual fee, Excellent credit level, 1.25X miles on all purchases, no foreign transaction fees, and transfer to 15+ travel loyalty programs. The signup bonus (20,000 miles / $500 spend) and 5X on Capital One Entertainment were present in prior data; the JSON resource uses template variables for these values so they could not be re-verified from fetched text. APR numeric values were not exposed in fetched content, so apr.purchase min/max remain null. network_tier set to 'signature' (VentureOne is issued as a Visa Signature, consistent with the sibling Venture card). Capital One Travel hotels and rental cars earn 5X miles."
 }
