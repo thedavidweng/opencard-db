@@ -186,5 +186,6 @@
     "https://www.americanexpress.com/us/credit-cards/card/blue-cash-preferred/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/blue-cash-preferred-credit-card/36195-11-0/"
   ],
-  "notes": "Product page lists 'All Benefits (13)'. APR values (purchase 19.49-28.49, cash advance 28.74) and signup bonus ($150 after $3,000 in 6 months) preserved from previous data; the terms URL returned HTTP 404 and could not be re-verified. network_tier is 'none' for Amex network packages as Blue Cash Preferred is not a Network Tier."
+  "notes": "Product page lists 'All Benefits (13)'. APR values (purchase 19.49-28.49, cash advance 28.74) and signup bonus ($150 after $3,000 in 6 months) preserved from previous data; the terms URL returned HTTP 404 and could not be re-verified. network_tier is 'none' for Amex network packages as Blue Cash Preferred is not a Network Tier.",
+  "segment": "personal"
 }

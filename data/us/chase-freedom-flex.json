@@ -78,7 +78,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Cash Back rewards do not expire as long as your account is open. There is no minimum to redeem for cash back. $1 in Cash Back rewards equals 100 points."
+    "redemption_notes": "Cash Back rewards do not expire as long as your account is open. There is no minimum to redeem for cash back. $1 in Cash Back rewards equals 100 points.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 20000,
@@ -181,5 +182,6 @@
     "https://creditcards.chase.com/cash-back-credit-cards/freedom/flex",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC60938.html"
   ],
-  "notes": "network_tier world_elite is referenced via the Mastercard trademark notice on the product page ('World Elite Mastercard are registered trademarks') but the page does not explicitly state the card's tier. No credit score band is published."
+  "notes": "network_tier world_elite is referenced via the Mastercard trademark notice on the product page ('World Elite Mastercard are registered trademarks') but the page does not explicitly state the card's tier. No credit score band is published.",
+  "segment": "personal"
 }

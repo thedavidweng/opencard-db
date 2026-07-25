@@ -69,7 +69,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points earned during a billing cycle are automatically transferred to IHG One Rewards after the end of each billing cycle."
+    "redemption_notes": "Points earned during a billing cycle are automatically transferred to IHG One Rewards after the end of each billing cycle.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 140000,
@@ -232,5 +233,6 @@
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC60778.html",
     "https://creditcards.chase.com/mastercard-credit-cards"
   ],
-  "notes": "Offer details, APRs and benefits can change; verify on Chase before publishing comparisons."
+  "notes": "Offer details, APRs and benefits can change; verify on Chase before publishing comparisons.",
+  "segment": "personal"
 }

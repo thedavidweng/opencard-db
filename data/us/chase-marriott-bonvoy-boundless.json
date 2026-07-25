@@ -63,7 +63,8 @@
         }
       }
     ],
-    "redemption_notes": "Points transfer to Marriott Bonvoy after each billing cycle; points do not expire as long as you make purchases on your credit card every 24 months."
+    "redemption_notes": "Points transfer to Marriott Bonvoy after each billing cycle; points do not expire as long as you make purchases on your credit card every 24 months.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 125000,
@@ -187,5 +188,6 @@
     "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/boundless",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64508.html"
   ],
-  "notes": "Offers, APRs, and benefit terms can change; verified against Chase pages on last_verified date. New cardmember Free Night Award is valid up to 50,000 points; anniversary Free Night Award is valid up to 35,000 points."
+  "notes": "Offers, APRs, and benefit terms can change; verified against Chase pages on last_verified date. New cardmember Free Night Award is valid up to 50,000 points; anniversary Free Night Award is valid up to 35,000 points.",
+  "segment": "personal"
 }

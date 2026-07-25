@@ -1,0 +1,54 @@
+name: Refresh exports
+
+# Regenerates the committed exports/ directory so the jsDelivr-servable @main
+# files stay reasonably fresh. Tag-pinned production URLs are built by the
+# release workflow at tag time, so per-push freshness is not required here.
+#
+# Why a PR instead of a direct push: main's branch protection requires status
+# checks, which rejects direct pushes from github-actions[bot] (GH006). And a
+# PR opened with the default GITHUB_TOKEN does not trigger CI (GitHub's
+# anti-recursion rule), so it cannot auto-merge either — a maintainer merges
+# the refresh PR after its checks pass (re-open/close it once to trigger CI,
+# or merge with admin rights).
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: exports-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate cards
+        run: npm run validate
+      - name: Build exports
+        run: npm run build:exports
+      - name: Open refresh PR if exports changed
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: exports/
+          branch: bot/refresh-exports
+          commit-message: "chore(exports): refresh generated exports"
+          title: "chore(exports): refresh generated exports"
+          body: |
+            ## What kind of change is this?
+
+            - [x] **Not a card** (docs / CI / code / bulk data maintenance)
+
+            Manual regeneration of the committed `exports/` directory (jsDelivr `@main` preview path).
+          labels: enhancement
+          delete-branch: true

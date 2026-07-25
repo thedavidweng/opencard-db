@@ -54,7 +54,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Miles are Delta SkyMiles, redeemable for Award Travel on Delta flights. Take 15% off when booking Award Travel with miles on Delta flights via delta.com or Fly Delta app. Pay with Miles: up to $50 off the cost of your flight for every 5,000 miles redeemed when booking on delta.com."
+    "redemption_notes": "Miles are Delta SkyMiles, redeemable for Award Travel on Delta flights. Take 15% off when booking Award Travel with miles on Delta flights via delta.com or Fly Delta app. Pay with Miles: up to $50 off the cost of your flight for every 5,000 miles redeemed when booking on delta.com.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -258,5 +259,6 @@
   "sources": [
     "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-reserve/"
   ],
-  "notes": "Delta SkyMiles Reserve Business Card. $650 annual fee. 3X miles at Delta, 1.5X on transit/shipping/office supply, 1X on other. After $150K spend, 1.5X on all eligible purchases for rest of year. No foreign transaction fees. APR and welcome offer not visible on fetched page (dynamically loaded). 23 benefits extracted from page text."
+  "notes": "Delta SkyMiles Reserve Business Card. $650 annual fee. 3X miles at Delta, 1.5X on transit/shipping/office supply, 1X on other. After $150K spend, 1.5X on all eligible purchases for rest of year. No foreign transaction fees. APR and welcome offer not visible on fetched page (dynamically loaded). 23 benefits extracted from page text.",
+  "segment": "business"
 }

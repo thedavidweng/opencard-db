@@ -175,5 +175,6 @@
     "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/blue-cash-everyday-credit-card/91101-10-0"
   ],
-  "notes": "Product page lists 'All Benefits (11)'. The 'Home Chef Credit' benefit from the previous version was NOT found on the current product page and has been removed. APR values (purchase 19.49-28.49, cash advance 28.74) and signup bonus spend/timing preserved from previous data; the terms URL returned HTTP 403 and could not be re-verified. network_tier is 'none' for Amex network packages as Blue Cash Everyday is not a Network Tier."
+  "notes": "Product page lists 'All Benefits (11)'. The 'Home Chef Credit' benefit from the previous version was NOT found on the current product page and has been removed. APR values (purchase 19.49-28.49, cash advance 28.74) and signup bonus spend/timing preserved from previous data; the terms URL returned HTTP 403 and could not be re-verified. network_tier is 'none' for Amex network packages as Blue Cash Everyday is not a Network Tier.",
+  "segment": "personal"
 }

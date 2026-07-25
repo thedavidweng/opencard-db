@@ -1,9 +1,9 @@
 {
   "id": "us-amex-hilton-honors-business",
   "schema_version": "1.0.0",
-  "name": "Hilton Honors Credit Cards",
+  "name": "The Hilton Honors American Express Business Card",
   "localized_names": {
-    "en": "Hilton Honors Credit Cards"
+    "en": "The Hilton Honors American Express Business Card"
   },
   "country": "us",
   "issuer": "American Express",
@@ -63,7 +63,8 @@
         }
       }
     ],
-    "redemption_notes": "Points are Hilton Honors Bonus Points, redeemable through the Hilton Honors program for hotel stays, experiences, and more. Bonus Points do not count toward elite tier qualification."
+    "redemption_notes": "Points are Hilton Honors Bonus Points, redeemable through the Hilton Honors program for hotel stays, experiences, and more. Bonus Points do not count toward elite tier qualification.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 130000,
@@ -151,17 +152,19 @@
       "National Car Rental Emerald Club Executive status"
     ]
   },
-  "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/57460-9-0",
+  "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors/",
   "image": {
-    "url": null,
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/hilton-honors.png",
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/hilton-honors/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/57460-9-0",
     "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q4-pdf-cmas/sbs-small-business/hilton-honors-american-express-business-card-12-31-2025.pdf"
   ],
-  "notes": "Hilton Honors American Express Business Card. $0 intro annual fee first year, then $195. 130K bonus after $8K spend in 6 months. 12X Hilton, 5X other (first $100K/year), 3X after. network_tier is none for Amex. Cash Advance APR 28.74% confirmed from terms page."
+  "notes": "Hilton Honors American Express Business Card. $0 intro annual fee first year, then $195. 130K bonus after $8K spend in 6 months. 12X Hilton, 5X other (first $100K/year), 3X after. network_tier is none for Amex. Cash Advance APR 28.74% confirmed from terms page.",
+  "segment": "business"
 }

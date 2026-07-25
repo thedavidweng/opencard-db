@@ -1,0 +1,122 @@
+{
+  "id": "us-us-bank-business-altitude-power",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Business Altitude®™ Power Visa Signature® Card",
+  "localized_names": {
+    "en": "U.S. Bank Business Altitude®™ Power Visa Signature® Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not displayed on product page; terms link (applications.usbank.com/pdap/terms) failed to fetch. See U.S. Bank for current APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees when making purchases outside the United States."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Altitude Points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2X points on all purchases. No caps or limits on total rewards earned."
+    },
+    "categories": [
+      {
+        "label": "Prepaid hotel and car rentals booked directly in the Travel Center",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Mobile wallet and virtual card purchases (up to $5,000 combined each quarter)",
+        "points_per_dollar": 2.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Maximum Point value applies to Points redeemed for a deposit into an eligible U.S. Bank Account. Redemption value may differ for travel, merchandise, gift cards, and/or statement credit. Points will expire if there is no reward, purchase, or balance activity on your account for 12 consecutive statement cycles. Cardmembers may transfer points between Business Altitude Connect, Business Altitude Power, Altitude Go, and Altitude Connect cards."
+  },
+  "signup_bonus": {
+    "amount": 75000,
+    "unit": "points",
+    "spend_required": 10000,
+    "spend_currency": "USD",
+    "months": 4,
+    "description": "Earn 75,000 bonus points (up to a $750 value) after spending $10,000 on the Account Owner's card in the first 120 days of opening your account.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "priority-pass-digital",
+      "title": "Priority Pass™ Digital Annual Membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Priority Pass™ Digital annual membership gives you access to over 1,700 VIP airport lounges and experiences worldwide."
+    },
+    {
+      "id": "spend-management",
+      "title": "U.S. Bank Spend Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Take control of your card spend with U.S. Bank Spend Management - a game-changing platform for monitoring and managing business expenses."
+    },
+    {
+      "id": "extendpay-offer",
+      "title": "ExtendPay® Plan $0 Fee Offer",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening. Not all accounts are eligible for ExtendPay Plans."
+    },
+    {
+      "id": "transfer-points",
+      "title": "Transfer Points Between Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem points sooner when you transfer points between your business and personal Altitude credit cards. Points do not expire as long as the account remains active."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Priority Pass™ Digital annual membership — access to over 1,700 VIP airport lounges and experiences worldwide"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-credit-card.html",
+  "image": {
+    "url": null,
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-credit-card.html"
+  ],
+  "notes": "Product page fetched and verified. No annual fee ($0). APR not displayed on page; terms link (applications.usbank.com/pdap/terms) failed to fetch. Page confirms 'Visa Signature®' tier and the creditor/issuer is U.S. Bank National Association pursuant to a license from Visa. An alternate stale URL slug referenced 'world-elite-mastercard' but the product is a Visa Signature card; official_url reconciled to the credit-card.html page."
+}
