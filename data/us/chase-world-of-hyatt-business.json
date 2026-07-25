@@ -1,0 +1,177 @@
+{
+  "id": "us-chase-world-of-hyatt-business",
+  "schema_version": "1.0.0",
+  "name": "World of Hyatt Business Credit Card",
+  "localized_names": {
+    "en": "World of Hyatt Business Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "segment": "business",
+  "annual_fee": {
+    "amount": 199,
+    "currency": "USD",
+    "first_year": 199,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "notes": "APR terms are published in the Chase pricing and terms disclosure but were not captured during verification."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees when the card is used for purchases made outside the United States."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Accounts subject to credit approval."
+  },
+  "rewards": {
+    "currency": "world_of_hyatt_points",
+    "currency_label": "World of Hyatt Bonus Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Bonus Point per $1 spent on all other card purchases."
+    },
+    "categories": [
+      {
+        "label": "Qualifying purchases at Hyatt hotels, including participating restaurants and spas (plus up to 5 Base Points from Hyatt per eligible $1 as a World of Hyatt member, for up to 9x total on Hyatt stays)",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Adaptive accelerator: top three spend categories each quarter (dining; airline tickets purchased directly with the airline; car rental agencies; local transit and commuting; gas stations; internet, cable and phone services; social media and search engine advertising; shipping)",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Fitness club and gym memberships, and Peloton membership and equipment purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Spend $50,000 or more in a calendar year and receive 10% of redeemed points back as Bonus Points for the rest of the year, on up to 200,000 points redeemed.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "hyatt-statement-credits",
+      "title": "Up to $100 in Hyatt Statement Credits per Year",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Spend $50 or more at any Hyatt property and earn $50 in statement credits up to two times each anniversary year."
+    },
+    {
+      "id": "discoverist-status",
+      "title": "World of Hyatt Discoverist Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy immediate World of Hyatt Discoverist status for as long as you are a cardmember, plus the ability to give Discoverist status to up to five employees."
+    },
+    {
+      "id": "tier-qualifying-night-credits",
+      "title": "World of Hyatt Tier-Qualifying Night Credits",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 5 Tier-Qualifying Night credits for every $10,000 spent on the card in a calendar year."
+    },
+    {
+      "id": "redemption-bonus",
+      "title": "10% Redemption Bonus",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Spend $50,000 in a calendar year and get 10% of your redeemed points back for the rest of the year, on up to 200,000 points redeemed."
+    },
+    {
+      "id": "hyatt-leverage",
+      "title": "Hyatt Leverage Membership",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Through discounts in the Hyatt Leverage program, companies can receive up to 15% off standard room rates at participating Hyatt hotels."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Add employee cards at no additional cost and earn points on every purchase made by you or your employees."
+    },
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage is primary when renting for business purposes and provides reimbursement up to $60,000 for theft and collision damage for most rental vehicles with an MSRP of $125,000 or less."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $10,000 per item."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you have a roadside emergency, call the service provider to dispatch the help you need. Roadside service fees will be billed to your card at time of dispatch."
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel and Emergency Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services. You are responsible for the cost of any goods or services obtained."
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Be reimbursed up to $1,500 per covered traveler and $6,000 per trip for your pre-paid, non-refundable passenger fares if your trip is canceled or cut short by sickness, severe weather or other covered situations."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "World of Hyatt Discoverist status",
+    "other": [
+      "No foreign transaction fees",
+      "Up to $100 in Hyatt statement credits per anniversary year",
+      "5 tier-qualifying night credits for every $10,000 spent in a calendar year",
+      "Discoverist status gifting for up to 5 employees",
+      "Hyatt Leverage business travel program access"
+    ]
+  },
+  "official_url": "https://www.chase.com/personal/credit-cards/hyatt/world-hyatt-business",
+  "image": {
+    "url": "https://www.chase.com/content/dam/chase-ux/tile/secondary/personal/credit-cards/woh-biz-card-479x300.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.chase.com/personal/credit-cards/hyatt/world-hyatt-business/earn-points",
+    "https://www.chase.com/personal/credit-cards/hyatt/world-hyatt-business/exclusive-benefits",
+    "https://www.chase.com/personal/credit-cards/hyatt/world-hyatt-business/travel-benefits",
+    "https://media.chase.com/news/chase-and-hyatt-launch-first-world-of-hyatt-business-credit-card"
+  ],
+  "notes": "Visa Signature Business tier and $199 annual fee confirmed by the official Chase press release. The adaptive accelerator earns 2x on top spend categories each quarter (top three per the current Chase earn-points page). Current signup bonus not verified on live official pages at time of check, so left null."
+}
