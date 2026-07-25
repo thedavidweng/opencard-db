@@ -84,6 +84,79 @@ describe("API contract /v1", () => {
     assert.equal(missing.status, 404);
   });
 
+  it("falls back to default card image when image.url is null", async () => {
+    const res = await handleTestRequest(
+      new Request("https://example.test/v1/cards/us-amex-gold", {
+        headers: { "X-Client-Name": "tests" },
+      }),
+      { kv },
+    );
+    assert.equal(res.status, 200);
+    const card = await res.json();
+    assert.equal(
+      card.image.url,
+      "https://example.test/v1/assets/default-card.webp",
+    );
+    assert.equal(card.image.local_path, "images/default-card.webp");
+  });
+
+  it("keeps real issuer image URLs", async () => {
+    const res = await handleTestRequest(
+      new Request(
+        "https://example.test/v1/cards/us-chase-sapphire-preferred",
+        { headers: { "X-Client-Name": "tests" } },
+      ),
+      { kv },
+    );
+    assert.equal(res.status, 200);
+    const card = await res.json();
+    assert.match(card.image.url, /^https:\/\/creditcards\.chase\.com\//);
+  });
+
+  it("serves default card asset without client id", async () => {
+    const res = await handleTestRequest(
+      new Request("https://example.test/v1/assets/default-card.webp"),
+      { kv, MODE: "official", REQUIRE_CLIENT_ID: "true" },
+    );
+    assert.equal(res.status, 200);
+    assert.equal(res.headers.get("Content-Type"), "image/webp");
+    const buf = new Uint8Array(await res.arrayBuffer());
+    assert.ok(buf.byteLength > 100);
+    // RIFF....WEBP
+    assert.equal(String.fromCharCode(...buf.slice(0, 4)), "RIFF");
+  });
+
+  it("lists cards with default image fallback applied", async () => {
+    const res = await handleTestRequest(
+      new Request("https://example.test/v1/cards?country=cn&limit=10", {
+        headers: { "User-Agent": "OpenCardTest/1.0" },
+      }),
+      { kv },
+    );
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    assert.ok(body.data.length >= 1);
+    for (const card of body.data) {
+      assert.ok(typeof card.image?.url === "string" && card.image.url.length > 0);
+    }
+  });
+
+  it("meta includes default_card_image URL", async () => {
+    const res = await handleTestRequest(
+      new Request("https://example.test/v1/meta", {
+        headers: { "User-Agent": "OpenCardTest/1.0" },
+      }),
+      { kv },
+    );
+    assert.equal(res.status, 200);
+    const meta = await res.json();
+    assert.equal(
+      meta.default_card_image,
+      "https://example.test/v1/assets/default-card.webp",
+    );
+  });
+
+
   it("search by q", async () => {
     const res = await handleTestRequest(
       new Request("https://example.test/v1/search?q=cobalt", {

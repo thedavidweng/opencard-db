@@ -26,4 +26,6 @@ export type Meta = {
   card_count: number;
   countries: string[];
   generated_at: string;
+  /** Absolute URL to the generic card-face fallback (set at request time). */
+  default_card_image?: string;
 };
