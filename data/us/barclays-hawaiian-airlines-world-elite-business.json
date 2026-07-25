@@ -50,12 +50,12 @@
     "categories": [
       {
         "label": "3x Points on eligible Hawaiian Airlines and Alaska Airlines purchases",
-        "points_per_dollar": null,
+        "points_per_dollar": 3,
         "cap": null
       },
       {
         "label": "2x Points on gas, dining, and office supply store purchases",
-        "points_per_dollar": null,
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
