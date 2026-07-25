@@ -1,0 +1,167 @@
+{
+  "id": "us-barclays-aadvantage-aviator-red-world-elite",
+  "schema_version": "1.0.0",
+  "name": "AAdvantage Aviator Red World Elite",
+  "localized_names": {
+    "en": "AAdvantage Aviator Red World Elite"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 99,
+    "currency": "USD",
+    "first_year": 99,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.24,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Variable APR 21.24% to 29.99% for purchases and balance transfers. 0% introductory APR for 15 months on balance transfers made within 45 days of account opening. APRs vary with Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Good to excellent credit recommended. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026."
+  },
+  "rewards": {
+    "currency": "aadvantage_miles",
+    "currency_label": "AAdvantage Miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X AAdvantage mile for every $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "American Airlines purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "No limit to the number of AAdvantage miles you can earn. Miles earn 1 Loyalty Point per $1 spent toward AAdvantage status. American Airlines miles expire 24 months after last account activity."
+  },
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "aadvantage_miles",
+    "spend_required": 0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "60,000 AAdvantage bonus miles after making your first purchase and paying the annual fee in full, both within the first 90 days. No minimum spend required beyond first purchase.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "first-checked-bag-free",
+      "title": "First Checked Bag Free",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "First checked bag free on domestic American Airlines itineraries for the primary cardmember and up to 4 companions on the same reservation."
+    },
+    {
+      "id": "inflight-wifi-credit",
+      "title": "Inflight Wi-Fi Statement Credits",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Up to $25 back as statement credits on inflight Wi-Fi purchases every anniversary year on American Airlines operated flights."
+    },
+    {
+      "id": "inflight-savings",
+      "title": "25% Inflight Savings",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "25% inflight savings as statement credits on food and beverages when you use your card on American Airlines operated flights."
+    },
+    {
+      "id": "anniversary-companion-certificate",
+      "title": "Anniversary Companion Certificate",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earned each anniversary year with qualifying purchases of $20,000+ and account remains open 45 days after anniversary. Companion certificate allows 1 guest at $99 plus taxes and fees."
+    },
+    {
+      "id": "preferred-boarding",
+      "title": "Preferred Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Preferred boarding (Group 5) for primary cardmember and up to 4 companions on the same reservation on American Airlines flights."
+    },
+    {
+      "id": "loyalty-points",
+      "title": "Earn AAdvantage Loyalty Points",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 1 Loyalty Point for every $1 spent on the card toward AAdvantage status."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Travel Accident Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Travel Accident Insurance coverage when you purchase travel tickets with your card."
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation and Interruption Coverage",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Trip Cancellation and Interruption coverage when you purchase travel with your card."
+    },
+    {
+      "id": "baggage-delay",
+      "title": "Baggage Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Baggage Delay Insurance coverage."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "network",
+      "description": "Auto Rental Collision Damage Waiver coverage when you rent a vehicle with your card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "First checked bag free on domestic American Airlines itineraries for primary cardmember and up to 4 companions on same reservation",
+    "hotel_status": null,
+    "other": [
+      "Up to $25 back annually as statement credits on inflight Wi-Fi purchases",
+      "25% statement credit on inflight food and beverages on AA flights",
+      "Anniversary companion certificate at $99+taxes/fees with $20K annual spend",
+      "Preferred boarding (Group 5) on AA flights for cardmember + 4 companions",
+      "Earn 1 AAdvantage Loyalty Point per $1 spent"
+    ]
+  },
+  "official_url": "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
+  "image": {
+    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
+    "https://cards.barclaycardus.com/credit-card/744a9f7a-4f12-4480-8481-e72155061cd8"
+  ],
+  "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026."
+}
