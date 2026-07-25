@@ -20,7 +20,11 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": "variable" },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
     "notes": "See TD Canada Trust for current rates."
   },
   "fx_fee": {
@@ -51,7 +55,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem via Aeroplan for flights, hotels, and partners."
+    "redemption_notes": "Redeem via Aeroplan for flights, hotels, and partners.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": null,
@@ -116,5 +121,6 @@
     "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
     "https://www.td.com/ca/en/personal-banking/products/credit-cards"
   ],
-  "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada."
+  "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada.",
+  "segment": "personal"
 }
