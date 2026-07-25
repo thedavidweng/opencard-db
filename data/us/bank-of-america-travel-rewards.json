@@ -50,7 +50,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points can be redeemed for statement credits toward travel and dining purchases; points do not expire as long as the account remains open."
+    "redemption_notes": "Points can be redeemed for statement credits toward travel and dining purchases; points do not expire as long as the account remains open.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 25000,
@@ -107,5 +108,6 @@
     "https://www.bankofamerica.com/credit-cards/travel-credit-cards/",
     "https://www.bankofamerica.com/content/documents/creditcard/bank_of_america_travel_rewards_english.pdf"
   ],
-  "notes": "Credit score requirements and non-listed travel perks were not stated in the official Bank of America sources."
+  "notes": "Credit score requirements and non-listed travel perks were not stated in the official Bank of America sources.",
+  "segment": "personal"
 }

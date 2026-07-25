@@ -43,7 +43,8 @@
       "description": "1.5% cash back on all purchases. No annual cap and rewards don't expire as long as your account remains open."
     },
     "categories": [],
-    "redemption_notes": "Redeem cash rewards as a deposit into eligible Bank of America checking or savings account, as a card statement credit, or as a check mailed to you. Preferred Rewards for Business members earn up to 75% more rewards (25% Gold, 50% Platinum, 75% Platinum Honors)."
+    "redemption_notes": "Redeem cash rewards as a deposit into eligible Bank of America checking or savings account, as a card statement credit, or as a check mailed to you. Preferred Rewards for Business members earn up to 75% more rewards (25% Gold, 50% Platinum, 75% Platinum Honors).",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 500.0,
@@ -114,5 +115,6 @@
     "https://www.bankofamerica.com/smallbusiness/credit-cards/products/unlimited-cash-rewards-business-credit-card",
     "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards"
   ],
-  "notes": "Business Advantage Unlimited Cash Rewards Mastercard. $0 annual fee. 1.5% cash back on all purchases. $500 cash rewards bonus after $5,000 in 90 days. network_tier corrected from 'world' to 'none' — page only says 'Mastercard®' without 'World' prefix. APR not extractable (dynamic placeholders). FX fee not stated on page."
+  "notes": "Business Advantage Unlimited Cash Rewards Mastercard. $0 annual fee. 1.5% cash back on all purchases. $500 cash rewards bonus after $5,000 in 90 days. network_tier corrected from 'world' to 'none' — page only says 'Mastercard®' without 'World' prefix. APR not extractable (dynamic placeholders). FX fee not stated on page.",
+  "segment": "business"
 }

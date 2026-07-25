@@ -44,7 +44,8 @@
       "description": "No rewards mentioned on the product page. This is a credit-building secured card."
     },
     "categories": [],
-    "redemption_notes": "No rewards program. Card is designed for building/rebuilding credit."
+    "redemption_notes": "No rewards program. Card is designed for building/rebuilding credit.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [],

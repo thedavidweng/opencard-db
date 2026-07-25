@@ -63,7 +63,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights."
+    "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -203,5 +204,6 @@
   "sources": [
     "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-gold/"
   ],
-  "notes": "Verified from official product page. Rewards currency is Delta SkyMiles (not Membership Rewards). APR not shown on page. Annual fee confirmed as $0 intro first year then $150."
+  "notes": "Verified from official product page. Rewards currency is Delta SkyMiles (not Membership Rewards). APR not shown on page. Annual fee confirmed as $0 intro first year then $150.",
+  "segment": "business"
 }

@@ -74,7 +74,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors."
+    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 130000,
@@ -234,5 +235,6 @@
     "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-surpass/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-surpass-credit-card/36182-11-0/"
   ],
-  "notes": "Product name Surpass is not a Network Tier; network_tier is none for Amex network packages. $0 intro annual fee first year, then $150. APR and signup bonus not visible on product page; preserved from prior terms verification. Benefits, rewards, annual fee, and FX fee verified on official Amex product page on 2026-07-24."
+  "notes": "Product name Surpass is not a Network Tier; network_tier is none for Amex network packages. $0 intro annual fee first year, then $150. APR and signup bonus not visible on product page; preserved from prior terms verification. Benefits, rewards, annual fee, and FX fee verified on official Amex product page on 2026-07-24.",
+  "segment": "personal"
 }

@@ -63,7 +63,8 @@
         }
       }
     ],
-    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment."
+    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -123,5 +124,6 @@
     "https://www.biltrewards.com/card",
     "https://www.bilt.com/card"
   ],
-  "notes": "Verified against official Bilt Rewards page 2026-07-24. Page now describes Bilt Card 2.0 with three tiers (Blue/Obsidian/Palladium); this record maps to the no-annual-fee Bilt Blue Card. APR and FX fee not stated on fetched pages. No signup bonus advertised."
+  "notes": "Verified against official Bilt Rewards page 2026-07-24. Page now describes Bilt Card 2.0 with three tiers (Blue/Obsidian/Palladium); this record maps to the no-annual-fee Bilt Blue Card. APR and FX fee not stated on fetched pages. No signup bonus advertised.",
+  "segment": "personal"
 }

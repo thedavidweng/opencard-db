@@ -69,7 +69,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "ThankYou Points; successor branding to Citi Premier. Prior Premier bonus may affect eligibility (48-month lookback mentioned on page)."
+    "redemption_notes": "ThankYou Points; successor branding to Citi Premier. Prior Premier bonus may affect eligibility (48-month lookback mentioned on page).",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": null,
@@ -118,5 +119,6 @@
   "sources": [
     "https://www.citi.com/credit-cards/citi-premier-credit-card"
   ],
-  "notes": "Product renamed from Citi Premier to Citi Strata Premier on Citi.com; keep stable Card Id us-citi-strata-premier. Mastercard confirmed on product FAQ; World Elite tier should be confirmed against card art."
+  "notes": "Product renamed from Citi Premier to Citi Strata Premier on Citi.com; keep stable Card Id us-citi-strata-premier. Mastercard confirmed on product FAQ; World Elite tier should be confirmed against card art.",
+  "segment": "personal"
 }

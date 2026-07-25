@@ -64,7 +64,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "SkyMiles program rules apply. Card Members can use Pay with Miles: take up to $50 off the cost of your ticket for every 5,000 miles you redeem when you book on delta.com."
+    "redemption_notes": "SkyMiles program rules apply. Card Members can use Pay with Miles: take up to $50 off the cost of your ticket for every 5,000 miles you redeem when you book on delta.com.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 80000,
@@ -238,5 +239,6 @@
     "https://www.delta.com/us/en/skymiles/airline-credit-cards/american-express-personal-cards",
     "https://www.delta.com/us/en/baggage/checked-baggage/first-checked-bag-free"
   ],
-  "notes": "Product name Gold is not a Network Tier; network_tier is none for Amex network packages. APR and signup bonus not visible on product page; preserved from prior terms verification. Benefits, rewards, annual fee, and FX fee verified on official Amex product page on 2026-07-24."
+  "notes": "Product name Gold is not a Network Tier; network_tier is none for Amex network packages. APR and signup bonus not visible on product page; preserved from prior terms verification. Benefits, rewards, annual fee, and FX fee verified on official Amex product page on 2026-07-24.",
+  "segment": "personal"
 }

@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points never expire. No blackout dates — any seat, any time on JetBlue-operated flights. Points pooling with family and friends. Cash + Points starting from as few as 500 points."
+    "redemption_notes": "Points never expire. No blackout dates — any seat, any time on JetBlue-operated flights. Points pooling with family and friends. Cash + Points starting from as few as 500 points.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000.0,
@@ -189,5 +190,6 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/jetblue-plus-card/"
   ],
-  "notes": "Name corrected from 'See if you pre' to 'JetBlue Plus Card' based on page H1 heading. network_tier 'world' preserved but NOT re-verified — page does not explicitly state 'World' tier. All rates/fees/benefits verified from fetched page."
+  "notes": "Name corrected from 'See if you pre' to 'JetBlue Plus Card' based on page H1 heading. network_tier 'world' preserved but NOT re-verified — page does not explicitly state 'World' tier. All rates/fees/benefits verified from fetched page.",
+  "segment": "personal"
 }

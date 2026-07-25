@@ -53,7 +53,8 @@
         }
       }
     ],
-    "redemption_notes": "Membership Rewards points can be used for eligible travel through Pay with Points, redeemed for a Statement Credit, redeemed for Gift Cards, or transferred to participating airline and hotel loyalty programs. Can also be used with participating partners at Checkout through Pay with Points."
+    "redemption_notes": "Membership Rewards points can be used for eligible travel through Pay with Points, redeemed for a Statement Credit, redeemed for Gift Cards, or transferred to participating airline and hotel loyalty programs. Can also be used with participating partners at Checkout through Pay with Points.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -140,5 +141,6 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/"
   ],
-  "notes": "Verified from official product page. Rewards currency is Membership Rewards points. APR not shown on page. No foreign transaction fee info on page."
+  "notes": "Verified from official product page. Rewards currency is Membership Rewards points. APR not shown on page. No foreign transaction fee info on page.",
+  "segment": "business"
 }

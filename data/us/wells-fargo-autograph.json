@@ -69,7 +69,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "20,000 points marketed as $200 cash redemption value on the product page (1 cpp cash)."
+    "redemption_notes": "20,000 points marketed as $200 cash redemption value on the product page (1 cpp cash).",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 20000,
@@ -102,5 +103,6 @@
   "sources": [
     "https://creditcards.wellsfargo.com/autograph-visa-credit-card/"
   ],
-  "notes": "No-annual-fee Visa Signature rewards card; confirm whether Autograph Journey or other Autograph variants are separate products before merging records."
+  "notes": "No-annual-fee Visa Signature rewards card; confirm whether Autograph Journey or other Autograph variants are separate products before merging records.",
+  "segment": "personal"
 }
