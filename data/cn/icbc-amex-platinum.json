@@ -26,7 +26,11 @@
     "waiver_conditions": "达标减免规则以工行当期产品说明为准。"
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": null },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
     "notes": "利率与分期以工商银行公告为准。"
   },
   "fx_fee": {
@@ -46,7 +50,8 @@
       "description": "按工行积分规则累计。"
     },
     "categories": [],
-    "redemption_notes": "积分兑换以工行积分体系为准。"
+    "redemption_notes": "积分兑换以工行积分体系为准。",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -111,5 +116,6 @@
     "https://www.icbc.com.cn/icbc/%E4%BF%A1%E7%94%A8%E5%8D%A1/",
     "https://www.icbc.com.cn/"
   ],
-  "notes": "Issuer=工行, Network=amex（发卡组织独立）。双标时银联侧在 additional_networks。具体产品线名称以工行最新卡种为准。"
+  "notes": "Issuer=工行, Network=amex（发卡组织独立）。双标时银联侧在 additional_networks。具体产品线名称以工行最新卡种为准。",
+  "segment": "personal"
 }
