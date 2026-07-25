@@ -84,3 +84,11 @@ Examples: `card(add): us-chase-sapphire-preferred`, `feat(pr-checks): detect dup
 - Code: MIT  
 - Data you contribute: CC BY 4.0  
 - Card artwork: remains bank copyright  
+
+## Coverage vs public card lists
+
+`npm run coverage:check` fetches two public card lists at runtime and reports which of
+their active cards this DB does not cover yet. Those lists are **discovery references
+only** — never `sources`, never copied into the repo (fields, URLs, images, or values).
+Every record here is verified against official issuer/network pages instead
+(tracking: issue #26).
