@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 99.0,
@@ -42,23 +43,13 @@
   "rewards": {
     "currency": "miles",
     "currency_label": "Asia Miles",
-    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "structure": "single",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "Earn 1 per USD1 from spend on everything else, where Mastercard is accepted worldwide."
     },
-    "categories": [
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      }
-    ],
+    "categories": [],
     "redemption_notes": "Redeem Asia Miles for flights with Cathay Pacific, oneworld and partner airlines; hotels; car rentals; lifestyle awards. 10% redemption discount on hotel and experiences awards with Asia Miles."
   },
   "signup_bonus": {
@@ -75,42 +66,42 @@
       "id": "business-class-lounge-redemption",
       "title": "Business Class lounge redemption",
       "category": "lounge",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Primary cardholders may use their Asia Miles to redeem access to Cathay Pacific Business Class lounges."
     },
     {
       "id": "redemption-discount",
       "title": "10% redemption discount on hotel and experiences awards",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "10% redemption discount on hotel and experiences awards with Asia Miles."
     },
     {
       "id": "priority-check-in",
       "title": "Priority check-in",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Primary cardholders may check in at Premium Economy class airport check-in counters. Travel companion(s) can also enjoy this benefit when travelling with the Primary cardholder."
     },
     {
       "id": "priority-boarding",
       "title": "Priority boarding",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Primary cardholders can enjoy the same boarding line as Premium Economy class passengers on flights operated by Cathay Pacific."
     },
     {
       "id": "flight-discount",
       "title": "Save up to 15% on eligible flights",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "From now until Dec 31, 2026, enter promotion code and pay with your Cathay World Elite Mastercard to enjoy up to 15% savings on eligible flights when making your flight booking on select fare classes."
     },
     {
       "id": "status-points",
       "title": "Earn 10 Status Points per USD5,000 spent",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn 10 Status Points for every USD5,000 in eligible purchases made each month, up to a maximum of 100 Status Points per calendar year."
     }
   ],
@@ -134,14 +125,14 @@
   },
   "official_url": "https://pay.cathaypacific.com/en_US/offers/uscreditcard.html",
   "image": {
-    "url": "https://www.cathaypacific.com/content/dam/cx/designs/responsive/images/Social-Sharing/share-facebook-ENG.originalimage.jpg",
+    "url": null,
     "attribution": "© Synchrony",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://pay.cathaypacific.com/en_US/offers/uscreditcard.html"
   ],
-  "notes": "Verified from official product page. Card name on page is 'The Cathay World Elite Mastercard®'. Issued by Synchrony Bank. Rewards currency is Asia Miles."
+  "notes": "Verified from official product page 2026-07-25. Card name on page is 'The Cathay World Elite Mastercard®'. Issued by Synchrony Bank. Rewards currency is Asia Miles. All member privileges (lounge redemption, priority check-in/boarding, flight discount, status points, award redemption discount) are Cathay Pacific/Asia Miles co-brand benefits. Image URL cleared: prior asset was a Cathay Pacific Facebook social-share image, not card art. Bonus category earn rates are not published on the marketing product page; base earn is 1 Asia Mile per USD1. Bonus category rates pending re-verification against the official page."
 }
