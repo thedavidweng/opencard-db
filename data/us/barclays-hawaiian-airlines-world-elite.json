@@ -11,21 +11,26 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
-    "amount": 1.0,
+    "amount": 99.0,
     "currency": "USD",
     "first_year": 1.0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 29.49,
       "type": "variable"
     },
-    "cash_advance": null,
-    "notes": "Page is a template with blank APR values. Disclosure text: 'the variable APR is % to %' and 'The variable APR for cash advances is %.' Values not populated on fetched page."
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR 19.49%–29.49% for purchases (based on creditworthiness); cash advance APR 29.74%. 0% intro APR for 15 months on balance transfers made within 45 days of account opening."
   },
   "fx_fee": {
     "percent": 0.0,
@@ -46,16 +51,17 @@
     "categories": [
       {
         "label": "3x Points on eligible Hawaiian Airlines and Alaska Airlines purchases",
-        "points_per_dollar": null,
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
         "label": "2x Points on gas, dining, and eligible grocery store purchases",
-        "points_per_dollar": null,
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
-    "redemption_notes": "Atmos Rewards points never expire. Award flights starting at 17,500 Points from West Coast, 25,000 Points from East Coast for Hawaii destinations."
+    "redemption_notes": "Atmos Rewards points never expire. Award flights starting at 17,500 Points from West Coast, 25,000 Points from East Coast for Hawaii destinations.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 80000.0,
@@ -71,21 +77,21 @@
       "id": "two-free-checked-bags",
       "title": "Two Free Checked Bags",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Two free checked bags on eligible flights for the primary cardmember when you use your card to purchase eligible tickets directly from Hawaiian Airlines and Alaska Airlines."
     },
     {
       "id": "fifty-off-companion-discount",
       "title": "50%-Off Companion Discount",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive a one-time 50%-off companion discount for roundtrip coach travel between Hawaii and North America destinations on Hawaiian Airlines operated flights or roundtrip North America coach travel on Alaska Airlines operated flights."
     },
     {
       "id": "hundred-companion-discount",
       "title": "$100 Companion Discount",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive an annual $100 companion discount for roundtrip coach travel between Hawaii and North America destinations on Hawaiian Airlines operated flights or roundtrip North America coach travel on Alaska Airlines operated flights."
     },
     {
@@ -99,7 +105,7 @@
       "id": "points-never-expire",
       "title": "Points Never Expire",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Atmos Rewards points never expire, so you can redeem them anytime."
     }
   ],
@@ -111,16 +117,17 @@
     "hotel_status": null,
     "other": []
   },
-  "official_url": "https://cards.barclaycardus.com/banking/credit-card/hawaiian-airlines/child/hawaiian-hcl-inflight-landing-page/",
+  "official_url": "https://www.boh.com/personal/credit-card",
   "image": {
     "url": null,
     "attribution": "© Barclays",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
-    "https://cards.barclaycardus.com/banking/credit-card/hawaiian-airlines/child/hawaiian-hcl-inflight-landing-page/"
+    "https://www.boh.com/personal/credit-card",
+    "https://cards.barclaycardus.com/?p=hawaiian"
   ],
-  "notes": "Annual fee amount of $1.00 preserved from existing JSON but NOT re-verified — the fetched page is a template with blank fee/APR values. APR values remain null (template blanks). FX fee, rewards, signup bonus, and benefits verified from page text."
+  "notes": "Standard ongoing annual fee is $99 (first_year $1 reflects a limited-time promo). Variable purchase APR 19.49%–29.49%, cash advance 29.74%, verified from the official Bank of Hawaii/Barclays product page. No foreign transaction fee. Earns 3x on Hawaiian/Alaska Airlines, 2x on gas/dining/grocery, 1x elsewhere. Direct applications on the Barclays site were curtailed around Oct 2025, but the card remains available to new applicants via the Bank of Hawaii/Barclays product page (which carries a current 2026 promotion); status kept 'active'."
 }
