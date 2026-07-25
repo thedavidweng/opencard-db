@@ -1,0 +1,138 @@
+{
+  "id": "us-chase-ink-business-premier",
+  "schema_version": "1.0.0",
+  "name": "Ink Business Premier Credit Card",
+  "localized_names": {
+    "en": "Ink Business Premier Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 195,
+    "currency": "USD",
+    "first_year": 195,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.74,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Flex for Business variable APR: 17.74% to 28.49%. This is a Pay in Full card with Flex for Business option. No separate cash advance APR listed in terms."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign Transactions: None (per terms page)."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ultimate_rewards",
+    "currency_label": "Chase Ultimate Rewards (cash back)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back on all other business purchases. Cash Back rewards are tracked as points and each $1 in Cash Back rewards earned is equal to 100 points."
+    },
+    "categories": [
+      {
+        "label": "Large purchases of $5,000 or more",
+        "points_per_dollar": 2.5,
+        "cap": null
+      },
+      {
+        "label": "Travel purchased through Chase Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Lyft rides",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem your rewards for cash back, gift cards, travel and more through Chase Ultimate Rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 1000,
+    "unit": "USD",
+    "spend_required": 10000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn $1,000 bonus cash back after you spend $10,000 on purchases in your first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage is primary when renting for business purposes and provides reimbursement up to $60,000 for theft and collision damage for most rental vehicles with an MSRP of $125,000 or less."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you have a roadside emergency, call the service provider to dispatch the help you need. Roadside service fees will be billed to your card at time of dispatch."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $10,000 per item."
+    },
+    {
+      "id": "extended-warranty-protection",
+      "title": "Extended Warranty Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Get up to $1,000 per claim in cell phone protection against covered theft or damage for cell phones listed on your monthly cell phone bill when you pay it with your eligible credit card. Maximum of 3 claims in a 12-month period with a $100 deductible per claim."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "5% cash back on travel purchased through Chase Travel",
+      "5% cash back on Lyft rides through September 30, 2027"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/business-credit-cards/ink/premier",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/business-credit-cards/ink/premier",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63834.html"
+  ],
+  "notes": "Network corrected from mastercard to visa based on terms page stating 'Visa Business Card cardmember'. Network tier set to null (not stated; previous 'world' was a Mastercard tier). Name simplified from 'Ink Business Premier(R) Credit Card: Cash Back' to 'Ink Business Premier Credit Card' per product page header. APR is Flex for Business variable APR (charge card with flexible payment option). Cash advance APR not separately listed in terms.",
+  "segment": "business"
+}
