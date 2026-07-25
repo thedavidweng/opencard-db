@@ -24,6 +24,8 @@
 ═══════════════════════════════════════════════════════════
 -->
 
+> New here? See [CONTRIBUTING.md](CONTRIBUTING.md) for the three ways to add a card (no-tools issue form, browser-only, or local clone).
+
 ## What kind of change is this?
 
 - [ ] **New card** (add a file under `data/us/`, `data/ca/`, or `data/cn/`)
@@ -53,6 +55,8 @@
 
 ### 3. Card image (pick the best you can)
 
+<details><summary>Advanced: Apple Pay card art</summary>
+
 Graduation bar for local mirrors: **Apple Pay** digital wallet art (`cardBackgroundCombined@2x.png` → CI **lossless WebP** at native size). Prefer this over random screenshots or unknown crops. See `docs/research/apple-pay-card-art.md`.
 
 - [ ] **A. Official issuer image URL** (stable product-page art)
@@ -72,7 +76,9 @@ Graduation bar for local mirrors: **Apple Pay** digital wallet art (`cardBackgro
 
 - [ ] **TODO (optional follow-up):** If this PR ships without an Apple Pay face, open a follow-up when someone who holds the card can extract it
 
-<!-- Optional: paste / drop a preview image here (GitHub upload). Preview only — use A–C for the database. -->
+</details>
+
+#### 卡面预览 / Card preview (optional) — drag an image here, it renders inline
 
 
 ### 4. Quick facts (helps reviewers)
