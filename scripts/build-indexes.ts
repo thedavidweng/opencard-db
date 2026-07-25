@@ -3,11 +3,54 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { loadAllCards, repoRoot, type Card } from "./lib.ts";
 
+/**
+ * Card-art grade, derived from `image` at build time (never written into
+ * data/ source files). See docs/schema-notes.md "Card art lineage & graduation".
+ *   - "apple-pay": a committed local face (`image.local_path`) whose provenance
+ *     source is "apple-pay" — the lossless, SHA-anchored graduated art.
+ *   - "issuer":    any other art (a local face or an issuer `image.url`) without
+ *     apple-pay provenance — official site artwork.
+ *   - "none":      no card face at all.
+ */
+export type ArtGrade = "apple-pay" | "issuer" | "none";
+
+export const ART_GRADES: readonly ArtGrade[] = [
+  "apple-pay",
+  "issuer",
+  "none",
+] as const;
+
+/** Derive the art grade for a single card from its `image` field. */
+export function deriveArtGrade(card: Card): ArtGrade {
+  const image = card.image;
+  if (!image || typeof image !== "object") return "none";
+  const img = image as Record<string, unknown>;
+
+  const localPath = img.local_path;
+  const hasLocal = typeof localPath === "string" && localPath.length > 0;
+
+  const url = img.url;
+  const hasUrl = typeof url === "string" && url.length > 0;
+
+  const provenance = img.provenance;
+  const provSource =
+    provenance && typeof provenance === "object"
+      ? (provenance as Record<string, unknown>).source
+      : undefined;
+
+  if (hasLocal && provSource === "apple-pay") return "apple-pay";
+  if (hasLocal || hasUrl) return "issuer";
+  return "none";
+}
+
+export type ArtGradeCounts = Record<ArtGrade, number>;
+
 export type IndexArtifacts = {
   meta: {
     schema_version: string;
     card_count: number;
     countries: string[];
+    art_grades: ArtGradeCounts;
     generated_at: string;
   };
   "cards:all": Card[];
@@ -37,8 +80,14 @@ export async function buildIndexArtifacts(): Promise<IndexArtifacts> {
   const byNetwork: Record<string, string[]> = {};
   const byTier: Record<string, string[]> = {};
   const countries = new Set<string>();
+  const artGrades: ArtGradeCounts = { "apple-pay": 0, issuer: 0, none: 0 };
 
   for (const card of cards) {
+    // Derived at build time — never persisted to data/ source files.
+    const grade = deriveArtGrade(card);
+    card.art_grade = grade;
+    artGrades[grade] += 1;
+
     byId[card.id] = card;
     countries.add(card.country);
     pushIndex(byCountry, card.country, card.id);
@@ -58,6 +107,7 @@ export async function buildIndexArtifacts(): Promise<IndexArtifacts> {
       schema_version: "1.0.0",
       card_count: cards.length,
       countries: [...countries].sort(),
+      art_grades: artGrades,
       generated_at: new Date().toISOString(),
     },
     "cards:all": cards,
