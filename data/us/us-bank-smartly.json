@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -39,27 +40,12 @@
     "currency": "cash_back",
     "currency_label": "Cash back",
     "structure": "single",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 2.0,
       "description": "Unlimited 2% cash back on every purchase with no caps. These cash back rates can be obtained when rewards are redeemed into an eligible U.S. Bank deposit account."
     },
-    "categories": [
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      }
-    ],
+    "categories": [],
     "redemption_notes": "Get cash back directly deposited into U.S. Bank checking or savings account, as a statement credit, a rewards card, merchant gift cards and more. Cash back rates obtained when rewards are redeemed into an eligible U.S. Bank deposit account."
   },
   "signup_bonus": null,
