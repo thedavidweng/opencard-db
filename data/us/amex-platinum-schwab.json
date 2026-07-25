@@ -1,0 +1,218 @@
+{
+  "id": "us-amex-platinum-schwab",
+  "schema_version": "1.0.0",
+  "name": "The Platinum Card® from American Express Exclusively for Charles Schwab",
+  "localized_names": {
+    "en": "The Platinum Card® from American Express Exclusively for Charles Schwab"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 895,
+    "currency": "USD",
+    "first_year": 895,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "APR for Pay Over Time: 19.49% to 28.49% variable. Cash Advance APR: 28.74%. Penalty APR: 29.99%. Variable APRs will not exceed 29.99%. Accurate as of 07/23/26."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Good to excellent credit recommended. Must maintain an eligible Schwab brokerage account (Schwab One, Schwab General Brokerage, or Schwab Traditional/Roth/Rollover IRA)."
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x point per dollar on all other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Flights booked directly with airlines or through Amex Travel (up to $500K/year)",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 500000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Prepaid hotels booked through Amex Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards points transfer to airline/hotel partners OR redeem via Invest with Rewards: deposit into eligible Schwab brokerage account at 1.1 cents per point (10,000 points = $110). Schwab Appreciation Bonus: $100 statement credit with $250K-$1M qualifying Schwab holdings, $200 with $1M-$10M."
+  },
+  "signup_bonus": {
+    "amount": 80000,
+    "unit": "membership_rewards_points",
+    "spend_required": 12000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 80,000 Membership Rewards points after spending $12,000 in eligible purchases within the first 6 months of Card Membership.",
+    "as_of": "2026-07-25"
+  },
+  "benefits": [
+    {
+      "id": "global-lounge-collection",
+      "title": "Global Lounge Collection",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Unlimited complimentary access to 1,500+ airport lounges worldwide including Centurion Lounges, Delta Sky Clubs (when flying Delta), Priority Pass, Plaza Premium, and Escape Lounges."
+    },
+    {
+      "id": "uber-one-credit",
+      "title": "$120 Uber One Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $120 in statement credits per calendar year on Uber One membership fees. Enrollment required."
+    },
+    {
+      "id": "airline-fee-credit",
+      "title": "$200 Airline Fee Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $200 in statement credits per calendar year for incidental airline fees from one selected qualifying airline. Enrollment required."
+    },
+    {
+      "id": "uber-cash",
+      "title": "$200 Uber Cash",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$15 Uber Cash each month plus $20 in December ($200/year). Must add eligible Card as payment method in Uber account."
+    },
+    {
+      "id": "clear-plus-credit",
+      "title": "$219 CLEAR+ Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $219 in statement credits per calendar year for CLEAR+ Membership. Enrollment required."
+    },
+    {
+      "id": "digital-entertainment-credit",
+      "title": "$300 Digital Entertainment Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $25/month ($300/year) on Disney+, ESPN, Hulu, NYT, Paramount+, Peacock, WSJ, YouTube. Enrollment required."
+    },
+    {
+      "id": "equinox-credit",
+      "title": "$300 Equinox Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $300/year on U.S. eligible Equinox memberships or Equinox+ subscription. Enrollment required."
+    },
+    {
+      "id": "lululemon-credit",
+      "title": "$300 lululemon Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $300/year on eligible lululemon purchases. Enrollment required."
+    },
+    {
+      "id": "resy-credit",
+      "title": "$400 Resy Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $100/quarter ($400/year) on eligible dining purchases through Resy. Enrollment required."
+    },
+    {
+      "id": "hotel-credit",
+      "title": "$600 Hotel Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $200 on Fine Hotels + Resorts bookings and up to $400 on The Hotel Collection bookings (2+ night stays) through Amex Travel."
+    },
+    {
+      "id": "invest-with-rewards",
+      "title": "Invest with Rewards",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Redeem Membership Rewards points for deposits into eligible Schwab brokerage account at 1.1 cents per point."
+    },
+    {
+      "id": "schwab-appreciation-bonus",
+      "title": "Schwab Appreciation Bonus",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "$100 statement credit if Qualifying Schwab Holdings are $250K-$1M, or $200 if $1M-$10M, measured on approval and each anniversary."
+    },
+    {
+      "id": "fine-hotels-resorts",
+      "title": "Fine Hotels + Resorts Program",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary benefits at 1,000+ luxury hotels when booking through Amex FHR, including room upgrades, late checkout, daily breakfast, and property credits."
+    },
+    {
+      "id": "tsa-precheck-credit",
+      "title": "TSA PreCheck/Global Entry Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit every 4 years for either up to $85 TSA PreCheck or $120 Global Entry application fee."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Global Lounge Collection (Centurion, Delta Sky Club, Priority Pass, Plaza Premium, Escape Lounges)",
+      "notes": "Unlimited complimentary access to 1,500+ airport lounges worldwide"
+    },
+    "tsa_precheck_credit": {
+      "amount": 85,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "global_entry_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": "Marriott Bonvoy Gold Elite status and Hilton Honors Gold status",
+    "other": [
+      "$200 airline fee credit (select one qualifying airline)",
+      "$600 hotel credit on FHR/THC bookings",
+      "$219 CLEAR+ credit",
+      "5X on flights and prepaid hotels",
+      "Invest with Rewards at 1.1 cents/point to Schwab brokerage",
+      "Schwab Appreciation Bonus ($100-$200 based on holdings)"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-platinum-card/ep-IDAE?print=false",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-platinum-card/ep-IDAE?print=false",
+    "https://clientcontent.schwabcdn.com/credit-cards/faq"
+  ],
+  "notes": "The Platinum Card from American Express Exclusively for Charles Schwab. Annual fee $895. Name and welcome offer re-verified 2026-07-25 against the Amex application offer terms: current standard offer is 80,000 Membership Rewards points after $12,000 spend in 6 months (the previously listed elevated 150,000-point offer expired 7/8/2026). No standalone /card/ product page exists for this partner card; the Amex terms/disclosures application page is the official source. network_tier is none for Amex."
+}
