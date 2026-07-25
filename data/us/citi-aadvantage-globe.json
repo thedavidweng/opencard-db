@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 350.0,
@@ -49,27 +50,28 @@
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible AAdvantage Hotels bookings",
+        "points_per_dollar": 6,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible American Airlines purchases",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Restaurants (including takeout and delivery)",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Rides and Rails (taxis, rideshares, public transit)",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster."
+    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -85,49 +87,49 @@
       "id": "admirals-club-lounge-access",
       "title": "American Airlines Admirals Club® Lounge Access",
       "category": "lounge",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Every calendar year, receive four Admirals Club® Globe™ Passes and enjoy access to nearly 50 Admirals Club® lounges (over $300 in value)."
     },
     {
       "id": "annual-splurge-credit",
       "title": "Up to $100 Annual Splurge Credit℠",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Every calendar year, earn up to $100 in statement credits on your choice of up to two of the following brands: 1stDibs, eligible AAdvantage Hotels™ bookings, Future Personal Training and Live Nation® (exclusions apply)."
     },
     {
       "id": "turo-credits",
       "title": "Up to $240 back on Turo",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn up to $30 in statement credits for each eligible Turo trip completed, for a total of up to $240 in statement credits annually. To qualify, you must link your card to your Turo account on Turo.com/Globe and pay for the trip with your card."
     },
     {
       "id": "inflight-credits",
       "title": "Up to $100 back on inflight purchases",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Every calendar year, earn up to $100 in statement credits on inflight purchases when you use your card on American Airlines flights."
     },
     {
       "id": "companion-certificate",
       "title": "American Airlines Companion Certificate",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn an American Airlines Companion Certificate starting in your second cardmembership year as long as your cardmembership is renewed. Companion certificate is good for a qualifying single round-trip main cabin domestic flight. Redeeming the certificate costs $99 for the ticketing fee, plus taxes and fees based on the itinerary."
     },
     {
       "id": "first-checked-bag-free",
       "title": "First checked bag free",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Your first checked bag is free on domestic American Airlines itineraries for you and up to eight companions traveling with you on the same reservation, a savings of up to $900 per round trip."
     },
     {
       "id": "preferred-boarding",
       "title": "Preferred boarding",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Enjoy preferred boarding on American Airlines flights for you and up to eight companions traveling with you on the same reservation."
     },
     {
@@ -141,14 +143,14 @@
       "id": "travel-protection-benefits",
       "title": "Travel protection benefits",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Help protect your next trip with Enhanced Trip Cancellation and Trip Interruption, Lost or Damaged Luggage, MasterRental® Coverage (Car Rental), Trip Delay, Extended Warranty and Purchase Assurance Plus."
     },
     {
       "id": "flight-streak-bonus",
       "title": "Flight Streak™ bonus",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn a 5,000 Loyalty Point bonus after every four qualifying American Airlines flights (up to 15,000 additional Loyalty Points each status qualification year)."
     },
     {
@@ -200,7 +202,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/"
   ],
