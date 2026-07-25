@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -38,19 +39,20 @@
     "currency": "points",
     "currency_label": "U.S. Bank Business Leverage Points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1X point per dollar spent on all other eligible purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Top two categories where you spend the most each month (automatic; excludes gas, EV charging, and grocery at wholesale clubs/supercenters)",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Prepaid hotels and car rentals booked directly in the Travel Center",
+        "points_per_dollar": 5,
         "cap": null
       }
     ],
@@ -110,7 +112,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.usbank.com/business-banking/business-credit-cards/business-leverage-rewards-credit-card.html"
   ],
