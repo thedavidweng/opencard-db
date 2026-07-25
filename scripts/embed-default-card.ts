@@ -12,9 +12,9 @@ const webpPath = join(root, "images/default-card.webp");
 const outTs = join(root, "worker/src/default-card-asset.ts");
 
 async function main() {
-  let sharp: typeof import("sharp");
+  let sharp: (typeof import("sharp"))["default"];
   try {
-    sharp = (await import("sharp")).default as unknown as typeof import("sharp");
+    sharp = (await import("sharp")).default;
   } catch {
     console.error(
       "sharp is required to regenerate the default card. Run: npm i -D sharp",

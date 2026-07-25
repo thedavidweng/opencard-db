@@ -99,6 +99,11 @@ Official free instance (when deployed): requires a meaningful `User-Agent` or `X
 - **Data** (`data/**`): [CC BY 4.0](LICENSE-DATA)
 - **Images:** optional; issuer art stays bank copyright. Missing faces use a generic OpenCard placeholder via the API — see [`images/README.md`](images/README.md)
 
+**Contribute card art in one command:** on a Mac with the card in Apple Pay, run
+[`npx opencard-export`](packages/opencard-export) — it scans your Wallet, compares
+against the live DB, and helps you open a PR. Everything runs locally; nothing is
+uploaded.
+
 ## Status
 
 Implementation map: [Map: OpenCard DB v1 production system](https://github.com/thedavidweng/opencard-db/issues/1)
