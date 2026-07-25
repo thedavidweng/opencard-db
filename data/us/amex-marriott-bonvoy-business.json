@@ -11,11 +11,12 @@
   "network": "amex",
   "network_tier": "none",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 125,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 125,
     "waiver_conditions": null
   },
   "apr": {
@@ -37,6 +38,7 @@
   "rewards": {
     "currency": "marriott_bonvoy_points",
     "currency_label": "Marriott Bonvoy points",
+    "rate_type": "points_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 2,
@@ -56,7 +58,15 @@
     ],
     "redemption_notes": "Marriott Bonvoy points can be redeemed for free nights at participating hotels, and through Air+Car for flights and car rentals."
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 5,
+    "unit": "free_night_awards",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 3 Free Night Awards (each redeemable for a stay up to 50,000 Marriott Bonvoy points) after spending $6,000 on eligible purchases in the first 6 months, plus 2 additional Free Night Awards after spending an additional $3,000 within the first 6 months. Certain hotels have resort fees.",
+    "as_of": "2026-07-24"
+  },
   "benefits": [
     {
       "id": "marriott-room-rate-discount",
@@ -128,9 +138,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/"
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/",
+    "https://www.marriott.com/credit-cards/marriott-bonvoy-business-american-express-card.mi"
   ],
-  "notes": "Verified from official product page. Rewards currency is Marriott Bonvoy points (not Membership Rewards). Annual fee not displayed on page (set to null since previous $0 placeholder could not be confirmed). APR not shown on page. Terms URL returned 404."
+  "notes": "Business co-brand hotel card. $125 annual fee (confirmed via Marriott's official card page). Rewards currency is Marriott Bonvoy points (not Membership Rewards): 6X at participating Marriott Bonvoy hotels, 4X at restaurants/U.S. gas/wireless/U.S. shipping, 2X on all other purchases. Welcome offer of 5 Free Night Awards (3 after $6,000 spend, plus 2 after an additional $3,000, within 6 months) as of July 2026; offers rotate. No foreign transaction fees. APR is not shown on the Amex product page."
 }
