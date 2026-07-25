@@ -6,11 +6,12 @@
     "en": "Qatar Airways Privilege Club Credit Card (Infinite)"
   },
   "country": "us",
-  "issuer": "First Bankcard",
-  "issuer_id": "first-bankcard",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
   "network": "visa",
   "network_tier": "infinite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 499.0,
@@ -42,23 +43,13 @@
       "points_per_dollar": null,
       "description": "Avios when you use your Privilege Club Card everywhere else."
     },
-    "categories": [
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      }
-    ],
-    "redemption_notes": "You'll get 2 Qpoints for every 1,500 Avios you earn using your card. Miles do not expire for as long as you use your card."
+    "categories": [],
+    "redemption_notes": "You'll get 2 Qpoints for every 1,500 Avios you earn using your card. Miles do not expire for as long as you use your card.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 50000,
-    "unit": "Avios",
+    "unit": "avios",
     "spend_required": 5000,
     "spend_currency": "USD",
     "months": 3,
@@ -70,7 +61,7 @@
       "id": "miles-no-expiry",
       "title": "Miles do not expire",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Miles do not expire for as long as you use your card."
     },
     {
@@ -84,98 +75,98 @@
       "id": "visa-zero-liability",
       "title": "Visa Zero Liability",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Visa Zero Liability protection."
     },
     {
       "id": "travel-emergency-assistance",
       "title": "Travel Emergency Assistance",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Travel Emergency Assistance."
     },
     {
       "id": "roadside-dispatch",
       "title": "Roadside Dispatch®",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Roadside Dispatch® service."
     },
     {
       "id": "extended-warranty-protection",
       "title": "Extended Warranty Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Extended Warranty Protection."
     },
     {
       "id": "purchase-security",
       "title": "Purchase Security",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Purchase Security."
     },
     {
       "id": "return-protection",
       "title": "Return Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Return Protection."
     },
     {
       "id": "visa-infinite-concierge",
       "title": "Visa Infinite Concierge",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Visa Infinite Concierge service."
     },
     {
       "id": "visa-infinite-luxury-hotel-collection",
       "title": "Visa Infinite Luxury Hotel Collection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Visa Infinite Luxury Hotel Collection."
     },
     {
       "id": "auto-rental-cdw",
       "title": "Auto rental collision damage waiver",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Auto rental collision damage waiver."
     },
     {
       "id": "car-rental-discounts",
       "title": "Car rental discounts",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Car rental discounts."
     },
     {
       "id": "trip-cancellation-interruption",
       "title": "Trip Cancellation or Interruption",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Trip Cancellation or Interruption coverage."
     },
     {
       "id": "lost-luggage-reimbursement",
       "title": "Lost Luggage Reimbursement",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Lost Luggage Reimbursement."
     },
     {
       "id": "travel-accident-insurance",
       "title": "Travel Accident Insurance",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Travel Accident Insurance."
     },
     {
       "id": "privilege-club-gold-first-year",
       "title": "First year Privilege Club Gold status (oneworld Sapphire)",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "In your first year, experience Privilege Club Gold with access to benefits: 75% tier bonus on eligible flights, Priority stand-by, Priority check-in & boarding, Preferred seats, 20kg extra baggage allowance, Lounge access, 40 Qcredits to redeem for upgrades/excess baggage and more, Al Maha 'meet and assist' service, Discount on online redemptions. oneworld tier: Sapphire."
     }
   ],
@@ -207,10 +198,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://qatarairways.cardless.com/compare",
     "https://legal.cardless.com/schumer/premium-499-qatar/rates_and_fees.pdf"
   ],
-  "notes": "Verified from official compare page on 2026-07-24. The page lists two cards (Signature at $99 and Infinite at $499); this entry is for the Infinite card. APR details not on the compare page — the Rates & Fees PDF (legal.cardless.com/schumer/premium-499-qatar/rates_and_fees.pdf) was fetched but returned binary PDF content not text-extractable. 'Cardless makes the Qatar Airways Privilege Club Credit Cards' — Cardless is the platform, backed by Visa. Name updated to specify '(Infinite)' variant."
+  "notes": "Verified from official compare page on 2026-07-24. The page lists two cards (Signature at $99 and Infinite at $499); this entry is for the Infinite card. APR details not on the compare page — the Rates & Fees PDF (legal.cardless.com/schumer/premium-499-qatar/rates_and_fees.pdf) was fetched but returned binary PDF content not text-extractable. 'Cardless makes the Qatar Airways Privilege Club Credit Cards' — Cardless is the platform, backed by Visa. Name updated to specify '(Infinite)' variant. Per-category Avios earn multipliers (Qatar Airways purchases, dining, everywhere else) are not exposed as machine-readable numbers on the official compare page (JS-rendered, headline states \"up to 5x Avios\"); placeholder categories removed. Bonus category rates pending re-verification against the official page."
 }
