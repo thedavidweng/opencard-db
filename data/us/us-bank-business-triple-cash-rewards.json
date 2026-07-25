@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -38,34 +39,30 @@
     "currency": "cash_back",
     "currency_label": "Cash Back",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1,
       "description": "1% cash back on all other eligible purchases. There is no limit on the total rewards you can earn."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations and EV charging stations (on transactions of $200 or less)",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Office supply stores",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Cell phone service providers",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Restaurants",
+        "points_per_dollar": 3,
         "cap": null
       }
     ],
