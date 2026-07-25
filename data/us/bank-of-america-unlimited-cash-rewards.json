@@ -44,17 +44,18 @@
     "currency_label": "Cash back",
     "structure": "single",
     "base_rate": {
-      "points_per_dollar": 0.015,
+      "points_per_dollar": 1.5,
       "description": "Unlimited 1.5% cash back on all purchases after the first year"
     },
     "categories": [
       {
         "label": "All purchases during the first year from account opening",
-        "points_per_dollar": 0.02,
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
-    "redemption_notes": "Cash rewards can be redeemed for statement credits, deposits to eligible Bank of America checking or savings accounts, Amazon.com purchases, or PayPal checkout."
+    "redemption_notes": "Cash rewards can be redeemed for statement credits, deposits to eligible Bank of America checking or savings accounts, Amazon.com purchases, or PayPal checkout.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 200,
