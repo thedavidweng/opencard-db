@@ -1,9 +1,9 @@
 {
   "id": "us-chase-aer-lingus-signature",
   "schema_version": "1.0.0",
-  "name": "Aer Lingus Credit Card",
+  "name": "Aer Lingus Visa Signature Card",
   "localized_names": {
-    "en": "Aer Lingus Credit Card"
+    "en": "Aer Lingus Visa Signature Card"
   },
   "country": "us",
   "issuer": "Chase",
@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -43,19 +44,20 @@
     "currency": "avios",
     "currency_label": "Avios",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "Earn 1 Avios for every $1 spent on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Flight purchases made directly with Aer Lingus, British Airways, Iberia and LEVEL",
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Hotel accommodations booked directly with the hotel",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -147,9 +149,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/avios/aer-lingus"
   ],
-  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa (page states Visa Signature). Rewards currency corrected from ultimate_rewards to avios. Signup bonus unit corrected from points to avios."
+  "notes": "Verified from official Chase product page on 2026-07-25. Product name set to 'Aer Lingus Visa Signature Card' per the page header. Filled the 3X (flights with Aer Lingus, British Airways, Iberia and LEVEL) and 2X (hotel accommodations booked directly with the hotel) bonus tiers, which were empty placeholders; base earn is 1X Avios. Network corrected from mastercard to visa (page states Visa Signature). Rewards currency corrected from ultimate_rewards to avios."
 }
