@@ -9,8 +9,9 @@
   "issuer": "Chase",
   "issuer_id": "chase",
   "network": "visa",
-  "network_tier": "signature_or_platinum",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 99,
@@ -43,6 +44,7 @@
     "currency": "rapid_rewards",
     "currency_label": "Rapid Rewards points",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1x on all other purchases"
@@ -61,6 +63,11 @@
           "currency": "USD",
           "period": "account_anniversary_year"
         }
+      },
+      {
+        "label": "Qualifying Lyft purchases through 12/31/2027",
+        "points_per_dollar": 2,
+        "cap": null
       }
     ],
     "redemption_notes": "Rapid Rewards points are transferred to Southwest Airlines after each billing cycle."
@@ -130,6 +137,34 @@
       "category": "waiver",
       "source": "issuer",
       "description": "No foreign transaction fees when you use your card for purchases made outside the United States."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "Complimentary DashPass",
+      "category": "other",
+      "source": "co-brand",
+      "description": "12 months of complimentary DashPass for DoorDash and Caviar when first activated with the card between 02/01/2025 and 12/31/2027; auto-renews at the then-current monthly rate after the complimentary period."
+    },
+    {
+      "id": "doordash-quarterly-discount",
+      "title": "DoorDash non-restaurant order discount",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "After activating DashPass, receive a $10 discount each calendar quarter on one qualifying non-restaurant DoorDash order while enrolled in DashPass."
+    },
+    {
+      "id": "instacart-membership",
+      "title": "Complimentary Instacart+ membership",
+      "category": "other",
+      "source": "co-brand",
+      "description": "3 months of complimentary Instacart+ membership when activated with the card for the first time between 5/1/2025 and 12/31/2027; auto-renews at the then-current annual rate after the complimentary period."
+    },
+    {
+      "id": "instacart-monthly-credit",
+      "title": "Monthly Instacart credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "One $10 Instacart credit each month you have an active Instacart+ membership, after activating the complimentary membership, from 5/1/2025 through 12/31/2027."
     }
   ],
   "travel_perks": {
@@ -160,5 +195,5 @@
     "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63968.html"
   ],
-  "notes": "Chase pricing terms state applicants may receive a Signature or Platinum card with different costs and/or benefits; offer details and APRs can change. The product page does not list Lyft 2X as a separate category; the existing Lyft category was removed as it was not confirmed on the fetched page. DoorDash DashPass and Instacart benefits were not described on the Southwest Plus product page and have been removed."
+  "notes": "network_tier normalized to canonical 'signature'; Chase pricing terms state applicants may receive a Visa Signature OR Platinum card with different costs and/or benefits. Lyft 2X (through 12/31/2027), complimentary DashPass, DoorDash quarterly credit, Instacart+ membership, and monthly Instacart credit re-verified against the official offer details and added."
 }
