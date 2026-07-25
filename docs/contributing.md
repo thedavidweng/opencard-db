@@ -42,6 +42,23 @@ If **Form check** is red, expand the sticky comment and follow the numbered fixe
 5. `last_verified` set to the date you checked official pages
 6. Images are optional. Prefer official issuer URLs when stable; for local mirrors, Apple Pay @2x → lossless WebP is the graduation-level bar (`images/README.md`). CI: `npm run optimize:images`
 
+## Dead links & archiving
+
+Merged `sources` are **auto-archived** to the Internet Archive (the `Archive sources`
+workflow snapshots every new/updated card's evidence at merge time, and rotates
+through the whole corpus weekly). You don't have to do anything for that.
+
+If you hit a **dead official link** while verifying a card, look it up on the
+Wayback Machine:
+
+```text
+https://web.archive.org/web/*/<the-dead-url>
+```
+
+Pick a snapshot from around the card's `last_verified` date and swap the source to
+that snapshot URL (`https://web.archive.org/web/<timestamp>/<original>`). The
+validator unwraps archived official pages, so a snapshot counts as a valid Source.
+
 ## Domain rules (see CONTEXT.md)
 
 - **Issuer** ≠ **Network** (e.g. Scotiabank + Amex)
@@ -84,3 +101,11 @@ Examples: `card(add): us-chase-sapphire-preferred`, `feat(pr-checks): detect dup
 - Code: MIT  
 - Data you contribute: CC BY 4.0  
 - Card artwork: remains bank copyright  
+
+## Coverage vs public card lists
+
+`npm run coverage:check` fetches two public card lists at runtime and reports which of
+their active cards this DB does not cover yet. Those lists are **discovery references
+only** — never `sources`, never copied into the repo (fields, URLs, images, or values).
+Every record here is verified against official issuer/network pages instead
+(tracking: issue #26).

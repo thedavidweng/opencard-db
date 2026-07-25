@@ -10,11 +10,33 @@ export type OpenPrHint = {
   author?: string;
 };
 
+/**
+ * Key card fields tracked across a card(update) diff. Kept flat and JSON-safe
+ * so build-base-cards.ts can snapshot base + head blobs and hand them to the
+ * (pure) triage diff logic. `null` means "absent / not a number/string".
+ */
+export type CardKeyFields = {
+  name: string | null;
+  issuer_id: string | null;
+  network: string | null;
+  network_tier: string | null;
+  annual_fee_amount: number | null;
+  fx_fee_percent: number | null;
+  base_rate_points_per_dollar: number | null;
+  official_url: string | null;
+  status: string | null;
+  segment: string | null;
+};
+
 export type BaseCardSnapshot = {
   /** Path under repo, e.g. data/us/foo.json */
   path: string;
   exists: boolean;
   last_verified: string | null;
+  /** Key fields from the base-branch version (null when the file is new). */
+  base?: CardKeyFields | null;
+  /** Key fields from the PR-head version (null when unavailable/deleted). */
+  head?: CardKeyFields | null;
 };
 
 export type FormIssue = {
@@ -34,6 +56,8 @@ export type TriageInput = {
   openCardPrs?: OpenPrHint[];
   /** Base-branch snapshots keyed by repo-relative path. */
   baseCards?: Record<string, BaseCardSnapshot>;
+  /** PR author login. Defaults to env PR_AUTHOR. Drives needs-verification. */
+  prAuthor?: string;
 };
 
 export type TriageResult = {
@@ -74,7 +98,22 @@ export const COMPLETENESS_LABELS = [
   "missing-sources",
   "title-needs-fix",
   "duplicate",
+  "high-impact-change",
+  "needs-verification",
 ] as const;
+
+/**
+ * Repo maintainers whose data PRs are trusted enough to skip the
+ * new-card / update identity-verification nudge. Compared against env
+ * PR_AUTHOR (see run-pr-triage.ts / the workflow). Keep lowercase.
+ */
+export const MAINTAINERS = ["thedavidweng"] as const;
+
+export function isMaintainer(author: string | null | undefined): boolean {
+  if (!author) return false;
+  const a = author.replace(/^@/, "").trim().toLowerCase();
+  return (MAINTAINERS as readonly string[]).includes(a);
+}
 
 /** Preferred: Conventional Commits with type `card` + scope add|update. */
 const CARD_TITLE =
@@ -291,6 +330,141 @@ export function compareIsoDates(a: string, b: string): number {
   return a < b ? -1 : 1;
 }
 
+/** Hostname of a URL, lowercased; null when absent/unparseable. */
+export function urlHostname(url: string | null | undefined): string | null {
+  if (!url) return null;
+  try {
+    return new URL(url).hostname.toLowerCase();
+  } catch {
+    return null;
+  }
+}
+
+/** Field-level diff of the key card fields watched across a card(update). */
+export type DiffRow = { field: string; old: string; new: string };
+
+const DIFF_FIELDS: {
+  field: string;
+  get: (f: CardKeyFields) => unknown;
+}[] = [
+  { field: "name", get: (f) => f.name },
+  { field: "issuer_id", get: (f) => f.issuer_id },
+  { field: "network", get: (f) => f.network },
+  { field: "network_tier", get: (f) => f.network_tier },
+  { field: "annual_fee.amount", get: (f) => f.annual_fee_amount },
+  { field: "fx_fee.percent", get: (f) => f.fx_fee_percent },
+  {
+    field: "rewards.base_rate.points_per_dollar",
+    get: (f) => f.base_rate_points_per_dollar,
+  },
+  { field: "official_url (host)", get: (f) => urlHostname(f.official_url) },
+  { field: "status", get: (f) => f.status },
+  { field: "segment", get: (f) => f.segment },
+];
+
+function displayValue(v: unknown): string {
+  if (v === null || v === undefined) return "∅ (null)";
+  return `\`${String(v)}\``;
+}
+
+/** Rows for the key fields that actually changed between base and head. */
+export function diffCardFields(
+  base: CardKeyFields,
+  head: CardKeyFields,
+): DiffRow[] {
+  const rows: DiffRow[] = [];
+  for (const { field, get } of DIFF_FIELDS) {
+    const oldV = get(base);
+    const newV = get(head);
+    if (oldV !== newV) {
+      rows.push({ field, old: displayValue(oldV), new: displayValue(newV) });
+    }
+  }
+  return rows;
+}
+
+/** Render changed key fields as a markdown table (null when nothing changed). */
+export function renderDiffTable(rows: DiffRow[]): string | null {
+  if (rows.length === 0) return null;
+  const lines = [
+    "| Field | Old → | New |",
+    "| --- | --- | --- |",
+  ];
+  for (const r of rows) lines.push(`| \`${r.field}\` | ${r.old} | ${r.new} |`);
+  return lines.join("\n");
+}
+
+/**
+ * High-impact change detection for a card(update). Pure: base + head key
+ * fields in, warn/error issues out. issuer_id changes are ERROR (identity must
+ * never silently change); everything else is WARN — a reviewer signal, not a
+ * gate, because banks block bots and false positives must not brick real PRs.
+ */
+export function highImpactChanges(
+  cardId: string,
+  base: CardKeyFields,
+  head: CardKeyFields,
+): FormIssue[] {
+  const out: FormIssue[] = [];
+
+  if (base.issuer_id !== head.issuer_id) {
+    out.push({
+      code: "high-impact-issuer-id",
+      severity: "error",
+      message: `**issuer_id** for \`${cardId}\` changed \`${base.issuer_id}\` → \`${head.issuer_id}\`. Issuer identity must never silently change on an update — a different issuer is a different card. If this is a genuine re-issuance, open it as a new card and mark the old one \`discontinued\` with \`replaced_by\`.`,
+    });
+  }
+
+  const bf = base.annual_fee_amount;
+  const hf = head.annual_fee_amount;
+  const feeNullFlip = (bf === null) !== (hf === null);
+  const feeBigJump =
+    bf !== null && hf !== null && Math.abs(hf - bf) > 100;
+  if (feeNullFlip || feeBigJump) {
+    out.push({
+      code: "high-impact-annual-fee",
+      severity: "warn",
+      message: `**annual_fee.amount** for \`${cardId}\` changed ${displayValue(bf)} → ${displayValue(hf)} (${feeNullFlip ? "to/from null" : "by more than $100"}). Verify against the official pricing page before merging.`,
+    });
+  }
+
+  if (base.network !== head.network) {
+    out.push({
+      code: "high-impact-network",
+      severity: "warn",
+      message: `**network** for \`${cardId}\` changed ${displayValue(base.network)} → ${displayValue(head.network)}. A network flip is rare on an existing product — verify against the official source.`,
+    });
+  }
+
+  if (base.network_tier !== head.network_tier) {
+    out.push({
+      code: "high-impact-network-tier",
+      severity: "warn",
+      message: `**network_tier** for \`${cardId}\` changed ${displayValue(base.network_tier)} → ${displayValue(head.network_tier)}. Verify the tier against the official source / Guide to Benefits.`,
+    });
+  }
+
+  const oldHost = urlHostname(base.official_url);
+  const newHost = urlHostname(head.official_url);
+  if (oldHost !== newHost) {
+    out.push({
+      code: "high-impact-official-url",
+      severity: "warn",
+      message: `**official_url** host for \`${cardId}\` changed ${displayValue(oldHost)} → ${displayValue(newHost)}. Confirm the new host is the issuer's own domain (it must also be in the issuer's \`domains\` allowlist in data/issuers.json).`,
+    });
+  }
+
+  if (head.status === "discontinued" && base.status !== "discontinued") {
+    out.push({
+      code: "high-impact-status-discontinued",
+      severity: "warn",
+      message: `**status** for \`${cardId}\` changed ${displayValue(base.status)} → \`discontinued\`. Confirm the product was actually withdrawn (set \`discontinued_date\`, and \`replaced_by\` if a successor exists).`,
+    });
+  }
+
+  return out;
+}
+
 function pushIssue(issues: FormIssue[], issue: FormIssue): void {
   issues.push(issue);
 }
@@ -322,6 +496,7 @@ export function triagePullRequest(input: TriageInput): TriageResult {
     openCardPrs = [],
     baseCards = {},
   } = input;
+  const prAuthor = input.prAuthor ?? process.env.PR_AUTHOR ?? "";
   const titleInfo = parseTitle(title);
   const suggestedTitle = suggestTitle(changedFiles, body);
   const regions = detectRegions(changedFiles);
@@ -351,6 +526,9 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   const cardIds = collectCardIds(titleInfo, body, paths);
   const issues: FormIssue[] = [];
   const missing: string[] = [];
+  /** Rendered diff tables for changed card(update) files (for the comment). */
+  const diffSections: string[] = [];
+  let hasHighImpactChange = false;
 
   const note = (issue: FormIssue) => {
     pushIssue(issues, issue);
@@ -535,13 +713,55 @@ export function triagePullRequest(input: TriageInput): TriageResult {
             message: `**Last verified** in the form is \`${verified}\`, but the card on the base branch already has \`${base.last_verified}\`. Use a date **on or after** \`${base.last_verified}\` (usually today’s date when you re-checked the bank site).`,
           });
         } else if (cmp === 0) {
+          // Same-day re-verification is legitimate (multiple corrections can
+          // land on one day); only an OLDER date is an error.
           note({
             code: "last-verified-unchanged",
-            severity: "error",
-            message: `**Last verified** is still \`${verified}\` — the same as the base branch. For an update, set it to the day you re-checked the official Sources (must be **newer** than \`${base.last_verified}\`).`,
+            severity: "warn",
+            message: `**Last verified** \`${verified}\` matches the base branch — fine for a same-day correction; bump it if you re-checked the official Sources on a later day.`,
           });
         }
       }
+    }
+
+    // Field-level diff + high-impact flags for card(update)s (anti-vandalism).
+    // Needs both a base and head snapshot of key fields (built by
+    // build-base-cards.ts). Pure: no data is read here, only compared.
+    for (const p of paths) {
+      const snap = baseCards[p];
+      if (!snap || !snap.exists || !snap.base || !snap.head) continue;
+      const pathId = cardIdFromDataPath(p) ?? p;
+      const rows = diffCardFields(snap.base, snap.head);
+      const table = renderDiffTable(rows);
+      const highImpact = highImpactChanges(pathId, snap.base, snap.head);
+      for (const hi of highImpact) {
+        note(hi);
+        hasHighImpactChange = true;
+      }
+      if (table) {
+        const parts = [`**Key field changes — \`${pathId}\`**`, "", table];
+        if (highImpact.length > 0) {
+          parts.push("");
+          parts.push(
+            "> [!WARNING]",
+            "> High-impact fields changed. A reviewer must confirm each new value against the cited **official** page before merging (see [REVIEWING.md](docs/REVIEWING.md)).",
+          );
+        }
+        diffSections.push(parts.join("\n"));
+      }
+    }
+
+    // New-card / update provenance: external contributors' identity claims are
+    // not machine-verifiable, so flag them for a human to check against the
+    // cited official page. Maintainer-authored batches skip the nudge.
+    if (!isMaintainer(prAuthor)) {
+      note({
+        code: "needs-verification",
+        severity: "warn",
+        message: isNewCard
+          ? "New card from an external contributor: a reviewer must verify the identity fields (**name**, **issuer/issuer_id**, **network**, **annual_fee**) against the cited official page before merging — green CI means well-formed, not verified."
+          : "Card update from an external contributor: a reviewer must confirm the changed values against the cited official page before merging — green CI means well-formed, not verified.",
+      });
     }
 
     // Also compare form last_verified when path known via card id mapping
@@ -635,6 +855,15 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   if (duplicatePrs.length > 0) completenessLabelsAdd.push("duplicate");
   else completenessLabelsRemove.push("duplicate");
 
+  if (hasHighImpactChange) completenessLabelsAdd.push("high-impact-change");
+  else completenessLabelsRemove.push("high-impact-change");
+
+  if (issues.some((i) => i.code === "needs-verification")) {
+    completenessLabelsAdd.push("needs-verification");
+  } else {
+    completenessLabelsRemove.push("needs-verification");
+  }
+
   const labelsAdd = [
     ...new Set([...classificationLabelsAdd, ...completenessLabelsAdd]),
   ];
@@ -686,6 +915,19 @@ export function triagePullRequest(input: TriageInput): TriageResult {
       "After you fix things, this comment updates automatically. The **Labels** check only classifies the PR (`new-card` / `US` / …) and stays green even when the form needs work.",
     );
   }
+  if (diffSections.length > 0) {
+    lines.push("");
+    lines.push("### Card update — key field changes");
+    lines.push("");
+    lines.push(
+      "Machine-gathered diff of watched fields (old → new). CI checks the **form**, not the **truth** — a reviewer must confirm each value against the cited official page before merging.",
+    );
+    for (const section of diffSections) {
+      lines.push("");
+      lines.push(section);
+    }
+  }
+
   lines.push("");
   lines.push("<details><summary>Beginner cheat-sheet</summary>");
   lines.push("");
@@ -705,6 +947,9 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   );
   lines.push(
     "- Images: official URL, Apple Pay `@2x` extract → lossless WebP, or “No image yet”",
+  );
+  lines.push(
+    "- **Reviewers:** green CI = well-formed, **not** verified — see [REVIEWING.md](docs/REVIEWING.md) for what the machine checks vs what a human must confirm",
   );
   if (suggestedTitle) {
     lines.push(`- Suggested title: \`${suggestedTitle}\``);

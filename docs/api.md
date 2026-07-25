@@ -86,6 +86,11 @@ Liveness. No client-id requirement.
 
 Catalog metadata (`schema_version`, `card_count`, `countries`, `generated_at`).
 
+Also includes `art_grades`: card-art grade counts, e.g.
+`{ "apple-pay": 0, "issuer": 162, "none": 27 }` — mirroring the `art_grade`
+field on each card (see below). The same object appears in
+[`exports/meta.json`](../exports/meta.json).
+
 Also includes `default_card_image`: absolute URL of the generic card-face placeholder used when a card has no image.
 
 ### `GET /v1/assets/default-card.webp`
@@ -109,6 +114,20 @@ API list/get/search responses always enrich missing `image.url` to the absolute 
 ```
 
 If the card already has a non-empty `image.url` (official issuer URL), it is left unchanged.
+
+### Card art grade
+
+Every card object — in the static `exports/` (`cards-all.json`, `cards-by-id.json`,
+and the `art_grade` column of `cards.csv`) and in API card responses — carries a
+derived `art_grade` string, computed at build time and never stored in `data/`:
+
+- `"apple-pay"` — graduated art: a committed local face with `apple-pay`
+  provenance and SHA lineage.
+- `"issuer"` — official issuer-site artwork (local face or `image.url`) without
+  Apple Pay provenance.
+- `"none"` — no card face.
+
+Catalog-wide counts are in `meta.art_grades`.
 
 ### `GET /v1/cards`
 

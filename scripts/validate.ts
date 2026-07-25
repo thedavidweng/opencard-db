@@ -19,6 +19,7 @@ import {
 export type LintContext = {
   issuerIds: Set<string>;
   issuerAliases: Map<string, string>; // alias -> canonical id
+  issuerDomains: Map<string, string[]>; // issuer id -> provenance allowlist (empty/absent = not enforced)
   tiers: Set<string>;
   today: string; // YYYY-MM-DD
 };
@@ -46,22 +47,68 @@ export async function loadLintContext(): Promise<LintContext> {
   const root = repoRoot();
   const issuersRaw = JSON.parse(
     await readFile(path.join(root, "data/issuers.json"), "utf8"),
-  ) as { issuers: { id: string; aliases?: string[] }[] };
+  ) as { issuers: { id: string; aliases?: string[]; domains?: string[] }[] };
   const tiersRaw = JSON.parse(
     await readFile(path.join(root, "data/network-tiers.json"), "utf8"),
   ) as { tiers: string[] };
 
   const issuerIds = new Set(issuersRaw.issuers.map((i) => i.id));
   const issuerAliases = new Map<string, string>();
+  const issuerDomains = new Map<string, string[]>();
   for (const i of issuersRaw.issuers) {
     for (const a of i.aliases ?? []) issuerAliases.set(a, i.id);
+    if (Array.isArray(i.domains) && i.domains.length > 0) {
+      issuerDomains.set(
+        i.id,
+        i.domains.map((d) => d.toLowerCase()),
+      );
+    }
   }
   return {
     issuerIds,
     issuerAliases,
+    issuerDomains,
     tiers: new Set(tiersRaw.tiers),
     today: new Date().toISOString().slice(0, 10),
   };
+}
+
+/**
+ * A hostname matches an allowlist entry when it equals the registrable domain
+ * or is a subdomain of it (parent-domain suffix match) — e.g. both
+ * "www.chase.com" and "creditcards.chase.com" match "chase.com".
+ */
+export function hostnameAllowed(hostname: string, domains: string[]): boolean {
+  const h = hostname.toLowerCase();
+  return domains.some((d) => h === d || h.endsWith(`.${d}`));
+}
+
+/**
+ * Unwrap a Wayback Machine URL to the archived original.
+ * "https://web.archive.org/web/20260725000000/https://www.chase.com/x"
+ * → "https://www.chase.com/x". An archived official page keeps its
+ * provenance: the allowlist is checked against the INNER url. Returns the
+ * input unchanged for non-archive URLs; null for a malformed wayback path.
+ */
+export function unwrapArchiveUrl(url: string): string | null {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return url;
+  }
+  if (parsed.hostname.toLowerCase() !== "web.archive.org") return url;
+  const m = parsed.pathname.match(/^\/web\/[0-9a-z_*]+\/(.+)$/i);
+  if (!m) return null;
+  let inner = m[1];
+  // Wayback drops one slash in "https:/example.com" sometimes; tolerate it.
+  inner = inner.replace(/^(https?):\/+/i, "$1://");
+  try {
+    new URL(inner);
+    return inner;
+  } catch {
+    return null;
+  }
 }
 
 function tierProblem(tier: string, ctx: LintContext): string | null {
@@ -93,6 +140,49 @@ export function lintCard(card: Card, ctx: LintContext): string[] {
         ? `issuer_id "${card.issuer_id}" is a known alias — use canonical "${canonical}"`
         : `issuer_id "${card.issuer_id}" is not in data/issuers.json — add the issuer there in this PR (id, name, aliases)`,
     );
+  }
+
+  // Source-domain provenance allowlist (anti-fabrication). sources[] and
+  // official_url are the repo's provenance backbone, so an off-allowlist host
+  // is an ERROR: either the issuer registry is missing a legitimate new domain
+  // (add it to data/issuers.json in this PR) or the source is fabricated /
+  // points at the wrong issuer.
+  const allowed = ctx.issuerDomains.get(card.issuer_id);
+  if (allowed && allowed.length > 0) {
+    const provenance: { field: string; url: string }[] = [];
+    if (typeof card.official_url === "string") {
+      provenance.push({ field: "official_url", url: card.official_url });
+    }
+    const sources = card.sources as unknown;
+    if (Array.isArray(sources)) {
+      sources.forEach((s, i) => {
+        if (typeof s === "string") {
+          provenance.push({ field: `sources[${i}]`, url: s });
+        }
+      });
+    }
+    for (const { field, url } of provenance) {
+      // Archived official pages count as official: validate the inner URL.
+      const effective = unwrapArchiveUrl(url);
+      if (effective === null) {
+        problems.push(
+          `${field} is a malformed web.archive.org URL — use the full "https://web.archive.org/web/<timestamp>/<original-url>" form`,
+        );
+        continue;
+      }
+      let hostname: string;
+      try {
+        hostname = new URL(effective).hostname;
+      } catch {
+        // Malformed URL — the ajv "format": "uri" check already reports it.
+        continue;
+      }
+      if (!hostnameAllowed(hostname, allowed)) {
+        problems.push(
+          `${field} host "${hostname.toLowerCase()}" is not in the domain allowlist for issuer "${card.issuer_id}" (data/issuers.json → domains). If this is a legitimate issuer/co-brand source, add the domain to that issuer's "domains" in this same PR; otherwise the source may be fabricated or point at the wrong issuer.`,
+        );
+      }
+    }
   }
 
   // Tier allowlist (primary + additional networks)
@@ -177,6 +267,40 @@ export function lintCard(card: Card, ctx: LintContext): string[] {
     problems.push(
       `discontinued_date set but status is "${card.status}" (expected "discontinued")`,
     );
+  }
+
+  // secondary_sources are a lower-confidence tier for cards whose official
+  // pages are gone — active cards must stick to official (or archived) pages.
+  const secondary = card.secondary_sources as unknown;
+  if (Array.isArray(secondary) && secondary.length > 0 && card.status !== "discontinued") {
+    problems.push(
+      `secondary_sources are only permitted on discontinued cards — active cards must cite official pages in sources (use a web.archive.org snapshot of the official page if the live page moved)`,
+    );
+  }
+
+  // Art provenance coherence: provenance describes COMMITTED art.
+  const image = card.image as
+    | {
+        local_path?: string | null;
+        provenance?: { source?: string } | null;
+        history?: unknown[];
+      }
+    | null
+    | undefined;
+  if (image?.provenance && !image.local_path) {
+    problems.push(
+      `image.provenance is set but image.local_path is null — provenance describes the committed art file; add the file (or drop the provenance block)`,
+    );
+  }
+  if (Array.isArray(image?.history)) {
+    for (const [i, h] of image.history.entries()) {
+      const lp = (h as { local_path?: string }).local_path ?? "";
+      if (!lp.startsWith("images/archive/")) {
+        problems.push(
+          `image.history[${i}].local_path "${lp}" must live under images/archive/ (superseded art is moved there, never overwritten)`,
+        );
+      }
+    }
   }
 
   // benefit.id uniqueness within the card

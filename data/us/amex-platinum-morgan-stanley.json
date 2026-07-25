@@ -1,0 +1,142 @@
+{
+  "id": "us-amex-platinum-morgan-stanley",
+  "schema_version": "1.0.0",
+  "name": "The Platinum Card® from American Express Exclusively for Morgan Stanley",
+  "localized_names": {
+    "en": "The Platinum Card® from American Express Exclusively for Morgan Stanley"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 895,
+    "currency": "USD",
+    "first_year": 895,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": null,
+    "cash_advance": null,
+    "notes": "APR terms not published on the official pages reviewed; see the Card application terms and disclosures for current Pay Over Time and Cash Advance APRs."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee (standard on The Platinum Card)."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Available only to clients who maintain an eligible Morgan Stanley Smith Barney LLC brokerage account. American Express may cancel the Card Account if an eligible Morgan Stanley brokerage account is not maintained."
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x point per dollar on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Flights booked directly with airlines or through Amex Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Prepaid hotels booked through Amex Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards points can be transferred to airline/hotel partners or redeemed through Membership Rewards. Morgan Stanley-specific redemption/earn details beyond the standard Platinum structure were not published on the official pages reviewed."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "annual-engagement-bonus",
+      "title": "$895 Annual Engagement Bonus",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Basic Card Members with a Morgan Stanley Platinum CashPlus Brokerage Account receive an $895 Annual Engagement Bonus, deposited into the Platinum CashPlus account after Card Account opening and each year at Card renewal (or by meeting the Debit Card Use Threshold). Eligibility and CashPlus account required."
+    },
+    {
+      "id": "global-lounge-collection",
+      "title": "Global Lounge Collection",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Complimentary access to the Global Lounge Collection, including Centurion Lounges, Priority Pass Select, Delta Sky Club (when flying Delta), Plaza Premium, and Escape Lounges. Enrollment may be required."
+    },
+    {
+      "id": "hotel-credit",
+      "title": "$600 Hotel Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $300 back semi-annually ($600/year) on select prepaid hotel bookings through Amex Travel. Enrollment required."
+    },
+    {
+      "id": "airline-fee-credit",
+      "title": "$200 Airline Fee Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Select one qualifying airline and receive up to $200 in statement credits per calendar year for incidental fees such as checked bags and in-flight refreshments. Enrollment required."
+    },
+    {
+      "id": "uber-cash",
+      "title": "$200 Uber Cash",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $200 in Uber Cash per year for U.S. rides and Uber Eats orders. Must add the eligible Card to the Uber account."
+    },
+    {
+      "id": "digital-entertainment-credit",
+      "title": "$300 Digital Entertainment Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $25 in statement credits each month (up to $300/year) on eligible purchases at Disney+, ESPN streaming, Hulu, and other participating services. Enrollment required."
+    },
+    {
+      "id": "clear-plus-credit",
+      "title": "$219 CLEAR+ Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $219 in statement credits per calendar year for a CLEAR+ Membership paid with the Card. Enrollment required."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Global Lounge Collection (Centurion, Priority Pass Select, Delta Sky Club, Plaza Premium, Escape Lounges)",
+      "visits_per_year": null,
+      "notes": "Complimentary access via the Global Lounge Collection."
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "$895 Annual Engagement Bonus for Platinum CashPlus clients",
+      "$600 hotel credit on prepaid Amex Travel bookings",
+      "$200 airline fee credit (select one qualifying airline)",
+      "$200 Uber Cash",
+      "$300 digital entertainment credit",
+      "$219 CLEAR+ credit"
+    ]
+  },
+  "official_url": "https://global.americanexpress.com/card-benefits/view-all/morgan-stanley-platinum-card",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://global.americanexpress.com/card-benefits/view-all/morgan-stanley-platinum-card",
+    "https://www.morganstanley.com/what-we-do/wealth-management/cashplus"
+  ],
+  "notes": "The Platinum Card from American Express Exclusively for Morgan Stanley, issued by American Express National Bank; available only to eligible Morgan Stanley Smith Barney brokerage clients. Annual fee $895, verified 2026-07-25 against the Amex application listing and Morgan Stanley CashPlus disclosures. The card's headline Morgan Stanley perk is a recurring $895 Annual Engagement Bonus for Platinum CashPlus clients (current disclosure footnote; an older $695 figure appears only in legacy marketing video content). No standalone Membership Rewards welcome offer was published on the official pages reviewed (signup_bonus null). APR not published on the reviewed pages; standard Platinum earn structure (5x flights/prepaid hotels, 1x base) reflected. network_tier is none for Amex."
+}

@@ -82,7 +82,15 @@
     "redemption_notes": "Cash back can be redeemed as statement credits, direct deposit, rewards and qualifying purchases at participating AAA locations. Maximum of $350 cash back per calendar year on the 5% gas/EV category (1% thereafter). Rewards program provided by Comenity Capital Bank.",
     "rate_type": "cashback_percent"
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "usd",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn a $100 statement credit when you spend $1,000 within the first 90 days of account opening. Valid one time only; credit received within 1-2 billing cycles after qualifying spend.",
+    "as_of": "2026-07-25"
+  },
   "benefits": [
     {
       "id": "no-foreign-transaction-fee",

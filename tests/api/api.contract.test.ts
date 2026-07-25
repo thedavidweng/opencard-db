@@ -114,11 +114,18 @@ describe("API contract /v1", () => {
   });
 
   it("falls back to default card image when image.url is null", async () => {
+    // Synthetic card on a local kv copy: no dependency on any real card
+    // lacking art (cards gain images over time).
+    const kv2: MemoryKv = new Map(kv);
+    const byId = JSON.parse(kv2.get("cards:by-id")!);
+    const donor = byId[Object.keys(byId)[0]];
+    byId["zz-test-no-image"] = { ...donor, id: "zz-test-no-image", image: null };
+    kv2.set("cards:by-id", JSON.stringify(byId));
     const res = await handleTestRequest(
-      new Request("https://example.test/v1/cards/us-amex-gold", {
+      new Request("https://example.test/v1/cards/zz-test-no-image", {
         headers: { "X-Client-Name": "tests" },
       }),
-      { kv },
+      { kv: kv2 },
     );
     assert.equal(res.status, 200);
     const card = await res.json();

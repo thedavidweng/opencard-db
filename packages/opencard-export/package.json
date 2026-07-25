@@ -1,0 +1,43 @@
+{
+  "name": "opencard-export",
+  "version": "0.3.0",
+  "description": "macOS CLI to scan Apple Pay card art and data and contribute it to OpenCard DB. Runs locally; nothing is uploaded.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "opencard-export": "bin/opencard-export.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "opencard",
+    "apple-pay",
+    "apple-wallet",
+    "credit-card",
+    "card-art",
+    "pkpass",
+    "macos",
+    "cli"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thedavidweng/opencard-db.git",
+    "directory": "packages/opencard-export"
+  },
+  "homepage": "https://github.com/thedavidweng/opencard-db/tree/main/packages/opencard-export#readme",
+  "bugs": {
+    "url": "https://github.com/thedavidweng/opencard-db/issues"
+  }
+}
