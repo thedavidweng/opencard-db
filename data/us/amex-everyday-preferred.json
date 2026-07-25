@@ -11,6 +11,7 @@
   "network": "amex",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -39,12 +40,28 @@
     "currency": "membership_rewards",
     "currency_label": "Membership Rewards points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
-      "description": "Earn 1 Membership Rewards point per $1 on eligible purchases. 50% extra points when you make 30 or more purchases in a billing period."
+      "description": "Earn 1 Membership Rewards point per $1 on all other eligible purchases. 50% extra points when you make 30 or more purchases in a billing period."
     },
-    "categories": [],
-    "redemption_notes": "50% extra Membership Rewards points on purchases when 30 or more separate purchases are made in a billing period. Specific earn categories not verified from fetched pages."
+    "categories": [
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 3.0,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "U.S. gas stations",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "50% extra Membership Rewards points on purchases when 30 or more separate purchases are made in a billing period."
   },
   "signup_bonus": {
     "amount": 15000.0,
@@ -74,16 +91,16 @@
   },
   "official_url": "https://www.americanexpress.com/us/credit-cards/card/amex-everyday-preferred/",
   "image": {
-    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png",
+    "url": null,
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/amex-everyday-preferred/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/amex-everyday-preferred-credit-card/90001-11-0",
     "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q4-pdf-cmas/cps-lending/amex-everyday-preferred-12-31-2025.pdf"
   ],
-  "notes": "Product page returned empty content. Terms page returned 'offer may no longer be available.' Key facts (annual fee, APR formula, FX fee, signup bonus, 50% extra points) verified from official Amex cardmember agreement and terms page via web search snippets. Rewards categories (e.g., supermarket bonus) not verified from fetched pages — left empty. Image URL preserved from existing JSON, not re-verified."
+  "notes": "Key facts (annual fee, APR formula, FX fee, signup bonus, 50% extra points) verified from official Amex cardmember agreement and terms page. Earn categories (3X U.S. supermarkets up to $6,000/year then 1X, 2X U.S. gas stations, 1X all other) confirmed from the official product page metadata. Previous image URL pointed to the wrong card art (platinum-card.png) and has been set to null."
 }
