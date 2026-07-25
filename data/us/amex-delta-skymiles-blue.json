@@ -1,0 +1,169 @@
+{
+  "id": "us-amex-delta-skymiles-blue",
+  "schema_version": "1.0.0",
+  "name": "Delta SkyMiles® Blue American Express Card",
+  "localized_names": {
+    "en": "Delta SkyMiles® Blue American Express Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product page and no terms URL provided in batch. See American Express for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "American Express will not charge you foreign transaction fees when you use your Delta SkyMiles® Blue Card."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "skymiles",
+    "currency_label": "Delta SkyMiles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X miles on all other eligible purchases. There's no limit to how much you can earn."
+    },
+    "categories": [
+      {
+        "label": "Restaurants, including takeout and delivery in the U.S.",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Delta purchases made directly with Delta",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "SkyMiles program rules apply. Card Members can use Pay with Miles: take up to $50 off the cost of your flight for every 5,000 miles you redeem when you book on delta.com."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "pay-with-miles",
+      "title": "Pay with Miles",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Take up to $50 off the cost of your flight for every 5,000 miles you redeem with Pay with Miles when you book on delta.com."
+    },
+    {
+      "id": "inflight-purchase-credit",
+      "title": "20% Back on In-Flight Purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Receive a 20% savings in the form of a statement credit after you use your Card on eligible Delta in-flight purchases of food and beverages."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "American Express will not charge you foreign transaction fees when you use your Delta SkyMiles® Blue Card."
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members can access Amex Presale Tickets and Amex Reserved Tickets to select events across sports, music, and more."
+    },
+    {
+      "id": "send-and-split",
+      "title": "Send & Split",
+      "category": "other",
+      "source": "issuer",
+      "description": "With Send & Split, you can send money and split purchases with any other Venmo or PayPal user, directly from the Amex App. Enrollment required."
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary coverage for damage or theft of rental vehicle when reserving and paying with the Card and declining CDW. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand."
+    },
+    {
+      "id": "global-assist",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 emergency assistance and coordination services when traveling more than 100 miles from home, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against accidental damage or theft for up to 90 days from the Covered Purchase date."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Matches the Original Manufacturer's Warranty for up to one additional year. Applies to warranties of 5 years or less. Coverage limited to the actual amount charged on your Card up to $10,000 per item and $50,000 per calendar year."
+    },
+    {
+      "id": "venue-collection",
+      "title": "American Express Venue Collection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy an enhanced experience at select stadiums and arenas with on-site benefits including dedicated entrances or fast lanes. Enroll your Card and get 10% back on qualifying concessions purchases up to $250 per calendar year."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue."
+    },
+    {
+      "id": "year-end-summary",
+      "title": "Year-End Summary",
+      "category": "other",
+      "source": "issuer",
+      "description": "The Online Year-End Summary, typically available in January, reflects charges posted to your account from January 1st through December 31st of the prior year."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Pay with Miles on eligible Delta flights",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/",
+  "image": {
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000386_480x304_straight_withname.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/"
+  ],
+  "notes": "Product name Blue is not a Network Tier; network_tier is none for Amex network packages. No annual fee. Rewards currency corrected from membership_rewards to skymiles based on product page. APR not visible on product page and no terms URL provided; signup_bonus not visible on product page. Benefits, rewards, FX fee, and annual fee verified on official Amex product page on 2026-07-24."
+}
