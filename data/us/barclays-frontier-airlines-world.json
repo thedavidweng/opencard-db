@@ -49,17 +49,18 @@
     },
     "categories": [
       {
-        "label": "Earn up to 15x miles on eligible purchases at flyfrontier.com (10 miles for being a Frontier Miles member and 5 miles for using the card).",
-        "points_per_dollar": null,
+        "label": "flyfrontier.com purchases (5x card earn; up to 15x total incl. 10x Frontier Miles member bonus)",
+        "points_per_dollar": 5,
         "cap": null
       },
       {
-        "label": "Earn 3x miles on eligible restaurant purchases.",
-        "points_per_dollar": null,
+        "label": "Eligible restaurant purchases",
+        "points_per_dollar": 3,
         "cap": null
       }
     ],
-    "redemption_notes": "Miles never expire as long as card account is open and in good standing. No blackout dates on award travel. Award travel can be booked for one-way tickets once a minimum of 5,000 Travel Miles have been earned and round trip tickets once 10,000 Travel Miles earned."
+    "redemption_notes": "Miles never expire as long as card account is open and in good standing. No blackout dates on award travel. Award travel can be booked for one-way tickets once a minimum of 5,000 Travel Miles have been earned and round trip tickets once 10,000 Travel Miles earned.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 60000.0,
