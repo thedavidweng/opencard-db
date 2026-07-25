@@ -116,24 +116,24 @@ test('table: header, one aligned row per card, summary, and ignored-count line',
 
     // No banner: output starts with the table header.
     assert.ok(!/opencard-export v\d/.test(stdout), 'no version banner');
-    assert.match(stdout.trimStart(), /^NAME\s+ISSUER\s+MATCH\s+DATA\s+ART\n/);
+    assert.match(stdout.trimStart(), /^NAME\s+ISSUER\s+MATCH\s+DATA\s+STATUS\n/);
 
-    // Aurora has DB art but no apple-pay provenance → upgradeable, all 6 fields.
+    // Aurora has DB art but this export is not in its lineage → art wanted.
     assert.match(
       stdout,
-      /Aurora Signature\s+Northwind Bank\s+nw-aurora-signature\s+6\/6\s+upgradeable/,
+      /Aurora Signature\s+Northwind Bank\s+nw-aurora-signature\s+6\/6\s+art wanted/,
     );
-    // Cobalt is in the DB but has no art → ART "none", 2 of 6 fields.
+    // Cobalt is in the DB but has no art at all → also art wanted.
     assert.match(
       stdout,
-      /Cobalt Everyday\s+Northwind Bank\s+nw-cobalt-everyday\s+2\/6\s+none/,
+      /Cobalt Everyday\s+Northwind Bank\s+nw-cobalt-everyday\s+2\/6\s+art wanted/,
     );
-    // Nimbus is not in the DB → dash cells.
-    assert.match(stdout, /Nimbus Rewards\s+Riverside CU\s+-\s+-\s+-/);
+    // Nimbus is not in the DB → dash DB cells, explicit status.
+    assert.match(stdout, /Nimbus Rewards\s+Riverside CU\s+-\s+-\s+not in database/);
 
     // One summary line, non-zero segments only.
     assert.ok(
-      stdout.includes('3 payment cards: 1 upgradeable, 1 missing art, 1 not in database'),
+      stdout.includes('3 payment cards: 2 art wanted, 1 not in database'),
       stdout,
     );
 
@@ -215,8 +215,8 @@ test('--json omits non-payment passes and reports ignored count + per-state summ
     assert.equal(out.walletCards.length, 3);
     assert.equal(out.ignoredNonPayment, 2);
     assert.equal(out.summary.paymentCards, 3);
-    assert.equal(out.summary.complete, 1);
-    assert.equal(out.summary.missingArt, 1);
+    assert.equal(out.summary.upToDate, 0);
+    assert.equal(out.summary.artWanted, 2);
     assert.equal(out.summary.notInDb, 1);
     // The old --all-only key must be gone.
     assert.ok(!('nonPaymentPasses' in out), 'nonPaymentPasses key removed');
@@ -248,7 +248,7 @@ const TIER_DB = [
     country: 'nw',
     annual_fee: { amount: 95, currency: 'USD' },
     rewards: { base_rate: { points_per_dollar: 1 } },
-    // graduated: the DB's apple-pay source_sha256 IS this wallet card's export.
+    // same art: the DB's apple-pay source_sha256 IS this wallet card's export.
     image: { local_path: 'images/nw-aurora-signature.webp', provenance: { source: 'apple-pay', source_sha256: GRAD_SHA } },
   },
   {
@@ -258,7 +258,7 @@ const TIER_DB = [
     country: 'nw',
     annual_fee: { amount: 0, currency: 'USD' },
     rewards: { base_rate: { points_per_dollar: 2 } },
-    // new-design: DB art is apple-pay but a different sha.
+    // different art: DB art is apple-pay but a different sha.
     image: { local_path: 'images/nw-cobalt-everyday.webp', provenance: { source: 'apple-pay', source_sha256: OTHER_SHA } },
   },
   {
@@ -268,7 +268,7 @@ const TIER_DB = [
     country: 'nw',
     annual_fee: { amount: 0, currency: 'USD' },
     rewards: { base_rate: { points_per_dollar: 1 } },
-    // upgradeable: DB art came from the issuer site.
+    // issuer art: DB art came from the issuer site.
     image: { url: 'https://issuer.example/borealis.png', provenance: { source: 'issuer-site', source_sha256: OTHER_SHA } },
   },
   {
@@ -278,7 +278,7 @@ const TIER_DB = [
     country: 'nw',
     annual_fee: { amount: 0, currency: 'USD' },
     rewards: { base_rate: { points_per_dollar: 1 } },
-    // missing: no image at all.
+    // no art: no image at all.
   },
 ];
 
@@ -301,28 +301,32 @@ async function fourTierFixture() {
   return { root, dbFile };
 }
 
-test('table: renders all four art tiers and the tier summary', async () => {
+test('table: the three statuses cover all art situations', async () => {
   const { root, dbFile } = await fourTierFixture();
   try {
     const { code, stdout } = runCli(['--passes-dir', root], { OPENCARD_DB_FILE: dbFile });
     assert.equal(code, 0, stdout);
 
-    assert.match(stdout, /nw-aurora-signature\s+3\/6\s+graduated/);
-    assert.match(stdout, /nw-cobalt-everyday\s+3\/6\s+new design/);
-    assert.match(stdout, /nw-borealis-platinum\s+3\/6\s+upgradeable/);
-    assert.match(stdout, /nw-nimbus-rewards\s+2\/6\s+none/);
+    // Same art already in the DB → up to date; every other matched case
+    // (different apple-pay art, issuer art, no art) → art wanted.
+    assert.match(stdout, /nw-aurora-signature\s+3\/6\s+up to date/);
+    assert.match(stdout, /nw-cobalt-everyday\s+3\/6\s+art wanted/);
+    assert.match(stdout, /nw-borealis-platinum\s+3\/6\s+art wanted/);
+    assert.match(stdout, /nw-nimbus-rewards\s+2\/6\s+art wanted/);
+    assert.match(stdout, /Mystery Card\s+Unknown CU\s+-\s+-\s+not in database/);
 
-    // Tier summary, non-zero segments only.
+    // Summary, non-zero segments only.
     assert.ok(
       stdout.includes(
-        '5 payment cards: 1 graduated, 1 new design, 1 upgradeable, 1 missing art, 1 not in database',
+        '5 payment cards: 3 art wanted, 1 not in database, 1 up to date',
       ),
       stdout,
     );
 
-    // No prose advice; the single hint line covers contribution.
-    assert.ok(!/beats the current issuer-site art/.test(stdout), stdout);
-    assert.ok(!/banks refresh designs/.test(stdout), stdout);
+    // No tier jargon anywhere in the report.
+    assert.ok(!/graduated/.test(stdout), stdout);
+    assert.ok(!/upgradeable/.test(stdout), stdout);
+    assert.ok(!/new design/.test(stdout), stdout);
     assert.ok(
       stdout.includes('To contribute card art (3 cards), run: npx opencard-export --export'),
       stdout,
@@ -332,27 +336,39 @@ test('table: renders all four art tiers and the tier summary', async () => {
   }
 });
 
-test('--json exposes art_status + local_sha256 and tier counts', async () => {
+test('--json exposes status, db_art, same_art, local_sha256 and state counts', async () => {
   const { root, dbFile } = await fourTierFixture();
   try {
     const { code, stdout } = runCli(['--passes-dir', root, '--json'], { OPENCARD_DB_FILE: dbFile });
     assert.equal(code, 0, stdout);
     const out = JSON.parse(stdout);
 
-    const grad = out.walletCards.find((w) => w.matchedId === 'nw-aurora-signature');
-    assert.equal(grad.art_status, 'graduated');
-    assert.equal(grad.local_sha256, GRAD_SHA);
-    assert.match(grad.local_sha256, /^[a-f0-9]{64}$/);
+    const same = out.walletCards.find((w) => w.matchedId === 'nw-aurora-signature');
+    assert.equal(same.status, 'up-to-date');
+    assert.equal(same.db_art, 'apple-pay');
+    assert.equal(same.same_art, true);
+    assert.equal(same.local_sha256, GRAD_SHA);
+    assert.match(same.local_sha256, /^[a-f0-9]{64}$/);
 
-    assert.equal(out.walletCards.find((w) => w.matchedId === 'nw-cobalt-everyday').art_status, 'new-design');
-    assert.equal(out.walletCards.find((w) => w.matchedId === 'nw-borealis-platinum').art_status, 'upgradeable');
-    assert.equal(out.walletCards.find((w) => w.matchedId === 'nw-nimbus-rewards').art_status, 'missing');
+    const cobalt = out.walletCards.find((w) => w.matchedId === 'nw-cobalt-everyday');
+    assert.equal(cobalt.status, 'art-wanted');
+    assert.equal(cobalt.db_art, 'apple-pay');
+    assert.equal(cobalt.same_art, false);
+    const borealis = out.walletCards.find((w) => w.matchedId === 'nw-borealis-platinum');
+    assert.equal(borealis.status, 'art-wanted');
+    assert.equal(borealis.db_art, 'issuer');
+    const nimbus = out.walletCards.find((w) => w.matchedId === 'nw-nimbus-rewards');
+    assert.equal(nimbus.status, 'art-wanted');
+    assert.equal(nimbus.db_art, 'none');
+    const mystery = out.walletCards.find((w) => w.matchedId === null);
+    assert.equal(mystery.status, 'not-in-database');
+    assert.equal(mystery.db_art, null);
 
-    assert.equal(out.summary.graduated, 1);
-    assert.equal(out.summary.newDesign, 1);
-    assert.equal(out.summary.upgradeable, 1);
-    assert.equal(out.summary.missingArt, 1);
+    assert.equal(out.summary.upToDate, 1);
+    assert.equal(out.summary.artWanted, 3);
     assert.equal(out.summary.notInDb, 1);
+    // No tier jargon in the machine output either.
+    assert.ok(!stdout.includes('graduated'), stdout);
   } finally {
     await fs.rm(root, { recursive: true, force: true });
   }
@@ -365,7 +381,7 @@ test('--export prints sha256 + a paste-ready provenance block for a matched card
   try {
     const { code, stdout } = runCli(['--passes-dir', root, '--export', dest], { OPENCARD_DB_FILE: dbFile });
     assert.equal(code, 0, stdout);
-    // The upgradeable card carries the contribution package.
+    // The issuer-art card carries the contribution package.
     assert.ok(stdout.includes(`sha256: ${UPGR_SHA}`), stdout);
     assert.match(stdout, /"provenance": \{/);
     assert.match(stdout, /"source": "apple-pay"/);
@@ -373,11 +389,11 @@ test('--export prints sha256 + a paste-ready provenance block for a matched card
     assert.match(stdout, /"width": 30/);
     assert.match(stdout, /"height": 18/);
     assert.match(stdout, /"exported_at": "\d{4}-\d{2}-\d{2}"/);
-    // The graduated card is exported but flagged as already contributed:
-    // no provenance snippet, a "no PR needed" note instead.
+    // The already-contributed card is exported but flagged as a duplicate:
+    // no provenance snippet, a plain note instead.
     assert.match(stdout, /nw-aurora-signature\.png/);
     assert.ok(
-      stdout.includes('already in the database with this exact art; no PR needed'),
+      stdout.includes('the database already has this exact art; nothing new to contribute'),
       stdout,
     );
     assert.ok(!stdout.includes(`"source_sha256": "${GRAD_SHA}"`), stdout);
@@ -404,7 +420,7 @@ test('--repo writes image.provenance into the card JSON (and refuses when it is 
     await fs.writeFile(path.join(repo, 'schema.json'), '{}');
     await fs.mkdir(path.join(repo, 'images'), { recursive: true });
     await fs.mkdir(path.join(repo, 'data', 'nw'), { recursive: true });
-    // The upgradeable card's data file exists (write path); the graduated
+    // The issuer-art card's data file exists (write path); the same-art
     // card's file exists too (must be left untouched); cobalt has NO file
     // (refusal path).
     const upgrPath = path.join(repo, 'data', 'nw', 'borealis-platinum.json');
@@ -452,11 +468,11 @@ test('--repo writes image.provenance into the card JSON (and refuses when it is 
     assert.ok(rawWritten.endsWith('}\n'), 'trailing newline');
     assert.ok(rawWritten.includes('\n  "id"'), '2-space indent');
 
-    // The graduated card's JSON is not rewritten: the DB already carries this
+    // The same-art card's JSON is not rewritten: the DB already carries this
     // exact provenance (and rewriting could clobber an alternate-sha anchor).
     assert.equal(await fs.readFile(gradPath, 'utf-8'), gradOriginal);
     assert.ok(
-      stdout.includes('already in the database with this exact art; no PR needed'),
+      stdout.includes('the database already has this exact art; nothing new to contribute'),
       stdout,
     );
 

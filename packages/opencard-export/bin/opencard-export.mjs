@@ -21,7 +21,7 @@ import { attributionLine, attributionNotice } from '../lib/attribution.mjs';
 import {
   sha256,
   parsePngDimensions,
-  artStatus,
+  artFacts,
   buildProvenanceBlock,
   provenanceSnippet,
   today,
@@ -271,14 +271,6 @@ async function isOpencardRepo(dir) {
   }
 }
 
-/** One of 'has-art' | 'needs-art' | 'not-in-db'. */
-function imageStateCode(match) {
-  if (!match) return 'not-in-db';
-  const img = match.card.image;
-  if (img && (img.url || img.local_path)) return 'has-art';
-  return 'needs-art';
-}
-
 function plural(n, singular, pluralForm) {
   return n === 1 ? singular : pluralForm;
 }
@@ -431,7 +423,8 @@ async function main() {
 
   // Match payment cards to DB. For every card with an extractable art asset we
   // also hash the local Apple Pay PNG (and read its dimensions) so we can place
-  // matched cards on the graduation ladder and, on --export, emit provenance.
+  // tell whether the database already has each matched card's art and, on
+  // --export, emit provenance.
   const rows = [];
   for (const p of payment) {
     let localSha = null;
@@ -446,10 +439,20 @@ async function main() {
       }
     }
     const match = db ? matchCard({ name: p.name, issuer: p.issuer }, db.cards) : null;
-    const stateCode = imageStateCode(match);
     const meter = match ? completenessMeter(match.card) : null;
-    const art = match ? artStatus(match.card, localSha) : null;
-    rows.push({ rec: p, match, stateCode, meter, localSha, pngDims, art });
+    const art = match ? artFacts(match.card, localSha) : null;
+    // The three states an outsider needs: the database has no entry for this
+    // card, it has the entry but not this card face, or it has both. Null when
+    // the database was not consulted (offline / --no-remote): unknown, not
+    // "not in database".
+    const status = !db
+      ? null
+      : !match
+        ? 'not-in-database'
+        : art && art.sameArt
+          ? 'up-to-date'
+          : 'art-wanted';
+    rows.push({ rec: p, match, status, meter, localSha, pngDims, art });
   }
 
   // ── export ────────────────────────────────────────────────────────────
@@ -505,7 +508,7 @@ async function main() {
           dest,
           exported: true,
           matchedId: match ? match.card.id : null,
-          art: row.art,
+          sameArt: !!(row.art && row.art.sameArt),
           localSha: row.localSha,
           provenance,
         };
@@ -513,9 +516,10 @@ async function main() {
         // card's JSON (surgical: only image.provenance, plus image.local_path
         // when absent so the card stays validation-coherent — provenance
         // describes a committed art file). Refuse if the card JSON is missing.
-        // Graduated cards are skipped: the DB already carries this exact
-        // provenance, so there is nothing to contribute.
-        if (repoRoot && match && provenance && row.art !== 'graduated') {
+        // Skipped when the database already carries this exact art: rewriting
+        // identical provenance contributes nothing and could clobber an
+        // alternate-sha anchor.
+        if (repoRoot && match && provenance && !(row.art && row.art.sameArt)) {
           try {
             result.repoWrite = await writeProvenanceToRepo(
               repoRoot,
@@ -547,8 +551,9 @@ async function main() {
         exportable: r.rec.exportable,
         matchedId: r.match ? r.match.card.id : null,
         matchScore: r.match ? Number(r.match.score.toFixed(3)) : null,
-        imageState: r.stateCode,
-        art_status: r.art,
+        status: r.status,
+        db_art: r.art ? r.art.dbArt : null,
+        same_art: r.art ? r.art.sameArt : null,
         local_sha256: r.localSha,
         completeness: r.meter
           ? {
@@ -564,12 +569,9 @@ async function main() {
         totalPasses: records.length,
         paymentCards: payment.length,
         matched: rows.filter((r) => r.match).length,
-        complete: rows.filter((r) => r.stateCode === 'has-art').length,
-        missingArt: rows.filter((r) => r.stateCode === 'needs-art').length,
-        notInDb: rows.filter((r) => r.stateCode === 'not-in-db').length,
-        graduated: rows.filter((r) => r.art === 'graduated').length,
-        newDesign: rows.filter((r) => r.art === 'new-design').length,
-        upgradeable: rows.filter((r) => r.art === 'upgradeable').length,
+        upToDate: rows.filter((r) => r.status === 'up-to-date').length,
+        artWanted: rows.filter((r) => r.status === 'art-wanted').length,
+        notInDb: rows.filter((r) => r.status === 'not-in-database').length,
         exportable: payment.filter((p) => p.exportable).length,
       },
       remote: { note: remoteNote, source: db ? db.source : null },
@@ -611,24 +613,20 @@ async function main() {
         matchedId: r.match ? r.match.card.id : null,
         filled: r.meter ? r.meter.filled : null,
         total: r.meter ? r.meter.total : null,
-        artStatus: r.art,
+        status: r.status,
       })),
       { color },
     ) + '\n',
   );
 
   // ── summary ───────────────────────────────────────────────────────────────
-  const nGraduated = rows.filter((r) => r.art === 'graduated').length;
-  const nNewDesign = rows.filter((r) => r.art === 'new-design').length;
-  const nUpgradeable = rows.filter((r) => r.art === 'upgradeable').length;
-  const nMissing = rows.filter((r) => r.stateCode === 'needs-art').length;
-  const nNotInDb = rows.filter((r) => r.stateCode === 'not-in-db').length;
+  const nUpToDate = rows.filter((r) => r.status === 'up-to-date').length;
+  const nArtWanted = rows.filter((r) => r.status === 'art-wanted').length;
+  const nNotInDb = rows.filter((r) => r.status === 'not-in-database').length;
   const counts = [];
-  if (nGraduated) counts.push(`${nGraduated} graduated`);
-  if (nNewDesign) counts.push(`${nNewDesign} new design`);
-  if (nUpgradeable) counts.push(`${nUpgradeable} upgradeable`);
-  if (nMissing) counts.push(`${nMissing} missing art`);
+  if (nArtWanted) counts.push(`${nArtWanted} art wanted`);
   if (nNotInDb) counts.push(`${nNotInDb} not in database`);
+  if (nUpToDate) counts.push(`${nUpToDate} up to date`);
   const head = `${payment.length} payment ${plural(payment.length, 'card', 'cards')}`;
   process.stdout.write(
     '\n' + head + (counts.length && db ? `: ${counts.join(', ')}` : '') + '\n',
@@ -647,10 +645,7 @@ async function main() {
   //    is unknown, and not while already exporting) ──────────────────────────
   if (!args.export && db) {
     const nExportable = rows.filter(
-      (r) =>
-        r.rec.exportable &&
-        r.match &&
-        (r.art === 'upgradeable' || r.art === 'missing' || r.art === 'new-design'),
+      (r) => r.rec.exportable && r.status === 'art-wanted',
     ).length;
     const hints = [];
     if (nExportable > 0) {
@@ -677,9 +672,9 @@ async function main() {
         continue;
       }
       process.stdout.write(c(ANSI.green, '✓') + ` ${path.basename(r.dest)}` + '\n');
-      if (r.art === 'graduated') {
+      if (r.sameArt) {
         process.stdout.write(
-          c(ANSI.dim, '  already in the database with this exact art; no PR needed') + '\n',
+          c(ANSI.dim, '  the database already has this exact art; nothing new to contribute') + '\n',
         );
         continue;
       }

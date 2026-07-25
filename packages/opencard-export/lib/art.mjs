@@ -1,16 +1,17 @@
-// art.mjs — card-art graduation logic: hash a local Apple Pay export, parse its
-// PNG dimensions, and classify it against a DB card's known SHA lineage into one
-// of four art tiers. Pure, Node-built-ins only (node:crypto), so it is trivially
-// testable and never touches the network.
+// art.mjs — card-art comparison logic: hash a local Apple Pay export, parse its
+// PNG dimensions, and compare it against a DB card's known SHA lineage. Pure,
+// Node-built-ins only (node:crypto), so it is trivially testable and never
+// touches the network.
 //
-// The three-tier graduation model (see docs/schema-notes.md "Card art lineage &
-// graduation"):
-//   graduated    — the DB already has THIS exact Apple Pay art (sha in lineage).
-//   new-design   — the DB's art is Apple Pay but a different sha (bank refreshed
-//                  the design, or this is an @3x variant).
-//   upgradeable  — the DB's art is issuer-site (or has no provenance) — a lossless
-//                  Apple Pay export beats it.
-//   missing      — the DB card has no art at all.
+// Two plain facts describe a matched card's art (see docs/schema-notes.md
+// "Card art lineage & graduation" for the lineage model):
+//   dbArt    — what the database currently holds: 'apple-pay' (art with Apple
+//              Pay provenance), 'issuer' (issuer-site art or art without
+//              provenance), or 'none'. Same vocabulary as the exports'
+//              art_grade field.
+//   sameArt  — whether the local export's sha256 is already in the card's
+//              known lineage (source_sha256, alternate_sha256[], history[]),
+//              i.e. contributing it again would be a duplicate.
 
 import { createHash } from 'node:crypto';
 
@@ -70,21 +71,20 @@ export function knownShaSet(card) {
 }
 
 /**
- * Classify a matched DB card's art against the local Apple Pay export's sha.
+ * Compare a matched DB card's art against the local Apple Pay export's sha.
  * @param {object|null} card       the matched DB card
  * @param {string|null} localSha   sha256 of the local Apple Pay PNG (or null)
- * @returns {'graduated'|'new-design'|'upgradeable'|'missing'}
+ * @returns {{dbArt:'apple-pay'|'issuer'|'none', sameArt:boolean}}
  */
-export function artStatus(card, localSha) {
+export function artFacts(card, localSha) {
   const img = card && card.image;
   const hasArt = !!(img && (img.url || img.local_path));
-  if (!hasArt) return 'missing';
-  if (localSha && knownShaSet(card).has(String(localSha).toLowerCase())) {
-    return 'graduated';
-  }
   const source = img && img.provenance && img.provenance.source;
-  if (source === 'apple-pay') return 'new-design';
-  return 'upgradeable';
+  const dbArt = !hasArt ? 'none' : source === 'apple-pay' ? 'apple-pay' : 'issuer';
+  const sameArt = !!(
+    localSha && knownShaSet(card).has(String(localSha).toLowerCase())
+  );
+  return { dbArt, sameArt };
 }
 
 /**

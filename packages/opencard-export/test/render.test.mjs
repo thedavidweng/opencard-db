@@ -93,7 +93,7 @@ const ROWS = [
     matchedId: 'us-sample-preferred',
     filled: 5,
     total: 6,
-    artStatus: 'graduated',
+    status: 'up-to-date',
   },
   {
     name: 'Cobalt Everyday',
@@ -101,9 +101,14 @@ const ROWS = [
     matchedId: 'ca-sample-cobalt',
     filled: 1,
     total: 6,
-    artStatus: 'missing',
+    status: 'art-wanted',
   },
-  { name: 'My Local Credit Union', issuer: 'Some CU', matchedId: null },
+  {
+    name: 'My Local Credit Union',
+    issuer: 'Some CU',
+    matchedId: null,
+    status: 'not-in-database',
+  },
 ];
 
 test('renderCardTable: header + aligned columns, no ANSI when color:false', () => {
@@ -111,9 +116,9 @@ test('renderCardTable: header + aligned columns, no ANSI when color:false', () =
   assert.equal(stripAnsi(out), out, 'no ANSI when color:false');
   const lines = out.split('\n');
   assert.equal(lines.length, 4, 'header + one line per card');
-  assert.match(lines[0], /^NAME\s+ISSUER\s+MATCH\s+DATA\s+ART$/);
-  assert.match(lines[1], /^Sample Preferred\s+Sample Bank\s+us-sample-preferred\s+5\/6\s+graduated$/);
-  assert.match(lines[2], /^Cobalt Everyday\s+Sample Bank\s+ca-sample-cobalt\s+1\/6\s+none$/);
+  assert.match(lines[0], /^NAME\s+ISSUER\s+MATCH\s+DATA\s+STATUS$/);
+  assert.match(lines[1], /^Sample Preferred\s+Sample Bank\s+us-sample-preferred\s+5\/6\s+up to date$/);
+  assert.match(lines[2], /^Cobalt Everyday\s+Sample Bank\s+ca-sample-cobalt\s+1\/6\s+art wanted$/);
   // Columns align: every MATCH cell starts at the same display offset.
   const offset = (line, text) => displayWidth(line.slice(0, line.indexOf(text)));
   assert.equal(
@@ -123,28 +128,34 @@ test('renderCardTable: header + aligned columns, no ANSI when color:false', () =
   );
 });
 
-test('renderCardTable: unmatched card renders dash cells', () => {
+test('renderCardTable: unmatched card renders dash DB cells and its status', () => {
   const out = renderCardTable(ROWS, { color: false });
   const line = out.split('\n')[3];
-  assert.match(line, /^My Local Credit Union\s+Some CU\s+-\s+-\s+-$/);
+  assert.match(line, /^My Local Credit Union\s+Some CU\s+-\s+-\s+not in database$/);
 });
 
-test('renderCardTable: art tier words', () => {
-  const rows = ['graduated', 'new-design', 'upgradeable', 'missing'].map(
-    (artStatus, i) => ({
-      name: `Card ${i}`,
-      issuer: 'Bank',
-      matchedId: `xx-card-${i}`,
-      filled: 3,
-      total: 6,
-      artStatus,
-    }),
+test('renderCardTable: null status (offline) renders a dash', () => {
+  const out = renderCardTable(
+    [{ name: 'Sample', issuer: 'Bank', matchedId: null, status: null }],
+    { color: false },
   );
+  assert.match(out.split('\n')[1], /^Sample\s+Bank\s+-\s+-\s+-$/);
+});
+
+test('renderCardTable: the three status words', () => {
+  const rows = ['up-to-date', 'art-wanted'].map((status, i) => ({
+    name: `Card ${i}`,
+    issuer: 'Bank',
+    matchedId: `xx-card-${i}`,
+    filled: 3,
+    total: 6,
+    status,
+  }));
+  rows.push({ name: 'Card 2', issuer: 'Bank', matchedId: null, status: 'not-in-database' });
   const out = renderCardTable(rows, { color: false });
-  assert.match(out, /xx-card-0\s+3\/6\s+graduated/);
-  assert.match(out, /xx-card-1\s+3\/6\s+new design/);
-  assert.match(out, /xx-card-2\s+3\/6\s+upgradeable/);
-  assert.match(out, /xx-card-3\s+3\/6\s+none/);
+  assert.match(out, /xx-card-0\s+3\/6\s+up to date/);
+  assert.match(out, /xx-card-1\s+3\/6\s+art wanted/);
+  assert.match(out, /Card 2\s+Bank\s+-\s+-\s+not in database/);
 });
 
 test('renderCardTable: CJK names keep the columns width-aligned', () => {
@@ -155,7 +166,7 @@ test('renderCardTable: CJK names keep the columns width-aligned', () => {
       matchedId: 'cn-cmb-classic-platinum',
       filled: 4,
       total: 6,
-      artStatus: 'missing',
+      status: 'art-wanted',
     },
     {
       name: 'Short',
@@ -163,7 +174,7 @@ test('renderCardTable: CJK names keep the columns width-aligned', () => {
       matchedId: 'us-short',
       filled: 6,
       total: 6,
-      artStatus: 'graduated',
+      status: 'up-to-date',
     },
   ];
   const out = renderCardTable(rows, { color: false });

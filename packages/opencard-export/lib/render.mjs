@@ -156,27 +156,33 @@ export function completenessMeter(card) {
 }
 
 /**
- * Presentation for the ART column, keyed by lib/art.mjs tier codes. The word is
- * what a maintainer would say out loud; only this column carries color.
+ * Presentation for the STATUS column: the three states a wallet card can be
+ * in relative to the database, in words an outsider understands. Only this
+ * column carries color.
+ *   not-in-database  the database has no entry for this card; a new card
+ *                    entry can be contributed
+ *   art-wanted       the card is in the database, but this Apple Pay export
+ *                    is not: a new or better card face can be contributed
+ *   up-to-date       the database already has this card and this exact art;
+ *                    contributing again would be a duplicate
  */
-export const ART_LABELS = {
-  graduated: { word: 'graduated', color: ANSI.green },
-  'new-design': { word: 'new design', color: ANSI.cyan },
-  upgradeable: { word: 'upgradeable', color: ANSI.yellow },
-  missing: { word: 'none', color: ANSI.yellow },
+export const STATUS_LABELS = {
+  'not-in-database': { word: 'not in database', color: ANSI.red },
+  'art-wanted': { word: 'art wanted', color: ANSI.yellow },
+  'up-to-date': { word: 'up to date', color: ANSI.green },
 };
 
-const HEADERS = ['NAME', 'ISSUER', 'MATCH', 'DATA', 'ART'];
-const CAPS = [32, 22, 40, 4, 11];
+const HEADERS = ['NAME', 'ISSUER', 'MATCH', 'DATA', 'STATUS'];
+const CAPS = [32, 22, 40, 4, 15];
 const GUTTER = '  ';
 
 /**
  * Render wallet cards as one aligned table (gh-style: dim uppercase header,
- * two-space gutters, colored ART column, unmatched rows dimmed).
+ * two-space gutters, colored STATUS column, unmatched rows dimmed).
  *
  * @param {Array<{name:string, issuer?:string, matchedId?:string|null,
  *          filled?:number|null, total?:number|null,
- *          artStatus?:'graduated'|'new-design'|'upgradeable'|'missing'|null}>} entries
+ *          status?:'not-in-database'|'art-wanted'|'up-to-date'|null}>} entries
  * @param {{color?:boolean}} [opts]
  * @returns {string} newline-joined table
  */
@@ -186,16 +192,16 @@ export function renderCardTable(entries, opts = {}) {
 
   const cells = entries.map((e) => {
     const matched = !!e.matchedId;
-    const art = e.artStatus ? ART_LABELS[e.artStatus] : null;
+    const status = e.status ? STATUS_LABELS[e.status] : null;
     return {
       matched,
-      art,
+      status,
       cols: [
         truncate(e.name, CAPS[0]),
         truncate(e.issuer || '', CAPS[1]),
         matched ? truncate(e.matchedId, CAPS[2]) : '-',
         matched && e.filled != null ? `${e.filled}/${e.total}` : '-',
-        matched && art ? art.word : '-',
+        status ? status.word : '-',
       ],
     };
   });
@@ -208,13 +214,16 @@ export function renderCardTable(entries, opts = {}) {
 
   const lines = [c(ANSI.dim, HEADERS.map(pad).join(GUTTER))];
   for (const row of cells) {
+    const statusCell = row.status ? c(row.status.color, row.cols[4]) : row.cols[4];
     if (!row.matched) {
-      lines.push(c(ANSI.dim, row.cols.map(pad).join(GUTTER)));
+      // Dash DB columns, dimmed; the status word keeps its color so the
+      // "you could add this card" state stays visible.
+      const plain = c(ANSI.dim, row.cols.slice(0, 4).map(pad).join(GUTTER));
+      lines.push(plain + GUTTER + statusCell);
       continue;
     }
     const plain = row.cols.slice(0, 4).map(pad).join(GUTTER);
-    const artCell = row.art ? c(row.art.color, row.cols[4]) : row.cols[4];
-    lines.push(plain + GUTTER + artCell);
+    lines.push(plain + GUTTER + statusCell);
   }
   return lines.join('\n');
 }
