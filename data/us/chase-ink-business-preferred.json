@@ -176,12 +176,12 @@
   },
   "official_url": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred",
   "image": {
-    "url": null,
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_preferred_card.png",
     "attribution": "© Chase",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/ink/business-preferred"
   ],
