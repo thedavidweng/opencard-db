@@ -1,0 +1,106 @@
+# Proactive Internet Archive preservation of card evidence.
+# archive-sources.ts asks the Wayback Machine's "Save Page Now" to snapshot the
+# official pages a card cites (`official_url` + `sources[]`), so that when a
+# bank later takes a page down we can swap the source to an existing
+# web.archive.org snapshot (the validator unwraps and accepts those).
+#
+# Two triggers:
+#   - push to main touching data/** — archives just the new/updated cards'
+#     evidence at merge time (diff github.event.before..after).
+#   - weekly schedule + manual dispatch — rotates a --batch slice of the whole
+#     corpus so every URL is refreshed over the weeks.
+#
+# Archiving is strictly best-effort: anonymous SPN, no secrets, and the job is
+# continue-on-error so it can never gate a merge or any other workflow.
+
+name: Archive sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+  schedule:
+    - cron: "19 5 * * 2" # Tuesdays 05:19 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: archive-sources
+  cancel-in-progress: false
+
+jobs:
+  # Merge-time: archive only the card files changed in the pushed commits.
+  changed:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # need github.event.before for the diff
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Archive changed card sources
+        run: |
+          BEFORE='${{ github.event.before }}'
+          AFTER='${{ github.event.after }}'
+
+          # Determine the changed set. Fall back to the tip commit's own diff
+          # when there is no usable base (new branch, or a rewritten history
+          # where `before` is unreachable).
+          if [ -z "$BEFORE" ] \
+             || [ "$BEFORE" = "0000000000000000000000000000000000000000" ] \
+             || ! git cat-file -e "${BEFORE}^{commit}" 2>/dev/null; then
+            echo "No usable base commit; diffing $AFTER against its parent."
+            CHANGED=$(git diff --name-only "${AFTER}^" "$AFTER" 2>/dev/null \
+              || git show --name-only --pretty=format: "$AFTER")
+          else
+            CHANGED=$(git diff --name-only "$BEFORE" "$AFTER")
+          fi
+
+          # Keep only card files: data/<country>/<slug>.json.
+          # This drops the registries (data/issuers.json, data/network-tiers.json).
+          CARD_FILES=$(printf '%s\n' "$CHANGED" \
+            | grep -E '^data/[^/]+/[^/]+\.json$' || true)
+
+          if [ -z "$CARD_FILES" ]; then
+            echo "No changed card files to archive."
+            exit 0
+          fi
+
+          echo "Changed card files:"
+          printf '%s\n' "$CARD_FILES"
+
+          CHANGED_FILES="$CARD_FILES" \
+            node --experimental-strip-types scripts/archive-sources.ts --changed
+
+  # Weekly rotation: refresh a deterministic slice of the whole corpus.
+  rotate:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Archive a weekly batch of sources
+        run: |
+          node --experimental-strip-types scripts/archive-sources.ts \
+            --batch 40 --offset-key "$(date -u +%Y-%m-%d)"
