@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 99.0,
@@ -37,6 +38,7 @@
   "rewards": {
     "currency": "miles",
     "currency_label": "SKYPASS miles",
+    "rate_type": "miles_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.0,
@@ -44,18 +46,18 @@
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Korean Air ticket purchases",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Hotels",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Dining, including takeout and restaurant delivery",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -75,21 +77,21 @@
       "id": "korean-air-discount",
       "title": "5% off Korean Air tickets",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Save 5% on Korean Air tickets each year. Available for you and a companion. For example, spend $5,000 and save $250."
     },
     {
       "id": "korean-air-lounge-vouchers",
       "title": "2 Korean Air Lounge vouchers each year",
       "category": "lounge",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Enjoy 2 Korean Air Lounge vouchers each year."
     },
     {
       "id": "auto-rental-cdw",
       "title": "Auto Rental Collision Damage Waiver",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Get insurance coverage for car rentals made with your Visa card."
     }
   ],
@@ -114,7 +116,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.skypassvisa.com/credit/visaSignatureCard.do"
   ],
