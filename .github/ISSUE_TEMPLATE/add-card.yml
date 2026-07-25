@@ -1,0 +1,69 @@
+name: "Request a card / 求收录卡片"
+description: "No tools needed. Fill this form and a bot drafts the PR for you. / 无需工具，填表后机器人自动生成 PR。"
+title: "card request: <issuer> <card name>"
+labels: [card-request, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping grow OpenCard DB! Fill in what you can — a maintainer bot
+        will open a **draft PR** with a scaffold that still needs the real data filled
+        in before review. Only official issuer/network pages count as sources.
+        感谢贡献！尽量填写；机器人会据此生成**草稿 PR**。上线前仍需补全真实数据，来源须为官方页面。
+  - type: dropdown
+    id: country
+    attributes:
+      label: Country
+      description: "Consumer market where the card is offered. / 该卡发行的消费市场。"
+      options:
+        - us
+        - ca
+        - cn
+    validations:
+      required: true
+  - type: input
+    id: card_name
+    attributes:
+      label: Card name
+      description: "Marketing/product name as shown by the issuer. / 发卡行标注的产品名称。"
+      placeholder: "Chase Sapphire Preferred"
+    validations:
+      required: true
+  - type: input
+    id: issuer
+    attributes:
+      label: Issuer
+      description: "The bank/lender that markets the card (NOT the network). / 发卡行（不是卡组织）。"
+      placeholder: "Chase"
+    validations:
+      required: true
+  - type: input
+    id: product_url
+    attributes:
+      label: Official product page URL
+      description: "The issuer's own product page. / 发卡行官方产品页。"
+      placeholder: "https://www.chase.com/personal/credit-cards/sapphire/preferred"
+    validations:
+      required: true
+  - type: input
+    id: terms_url
+    attributes:
+      label: Terms / benefits URL
+      description: "Optional. Official terms, pricing, or benefits page. / 可选。官方条款/权益页。"
+      placeholder: "https://www.chase.com/.../terms"
+    validations:
+      required: false
+  - type: input
+    id: image_url
+    attributes:
+      label: Card image URL
+      description: "Optional. Official card-art URL only; art stays bank copyright. / 可选。仅官方卡面链接；版权归发卡行。"
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: "Optional. Annual fee, network, signup bonus, dual-network 双标 details, anything useful."
+    validations:
+      required: false
