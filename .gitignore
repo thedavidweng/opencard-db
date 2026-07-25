@@ -16,7 +16,8 @@ dist/
 .DS_Store
 Thumbs.db
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
 *.swp
 *.swo
 
