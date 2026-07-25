@@ -1,0 +1,133 @@
+# Weekly re-verification sweep.
+# find-stale-cards.ts lists cards whose `last_verified` is older than
+# STALE_DAYS. For each stale card we open (or skip, if one is already open) a
+# `Re-verify: <card-id>` issue labelled `needs-verification`, capped at 15 per
+# run so a big backlog trickles out instead of flooding the tracker in one go.
+#
+# This runs on the base repo with GITHUB_TOKEN — no PR / fork code involved.
+# Every `gh` call is guarded so a single API hiccup never aborts the loop.
+
+name: Stale cards
+
+on:
+  schedule:
+    - cron: "23 3 * * 1" # Mondays 03:23 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+concurrency:
+  group: stale-cards
+  cancel-in-progress: false
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Find stale cards
+        env:
+          STALE_DAYS: "180"
+        run: |
+          node --experimental-strip-types scripts/find-stale-cards.ts > /tmp/stale.json
+          echo "----- stale cards -----"
+          cat /tmp/stale.json
+          echo "-----------------------"
+
+      - name: Open re-verify issues (cap 15 per run)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Best-effort: ensure the tracking label exists before we try to use it.
+          gh label create needs-verification \
+            --color E99695 \
+            --description "Card data past its re-verification window" 2>/dev/null \
+            || gh label edit needs-verification \
+                 --color E99695 \
+                 --description "Card data past its re-verification window" 2>/dev/null \
+            || true
+
+          # Emit up to 15 stale cards as tab-separated: id \t file \t days \t last_verified
+          node -e '
+            const fs = require("fs");
+            const stale = JSON.parse(fs.readFileSync("/tmp/stale.json", "utf8"));
+            for (const s of stale.slice(0, 15)) {
+              process.stdout.write([s.id, s.file, s.days, s.last_verified].join("\t") + "\n");
+            }
+          ' > /tmp/stale.tsv || : > /tmp/stale.tsv
+
+          if [ ! -s /tmp/stale.tsv ]; then
+            echo "No stale cards — nothing to do."
+            exit 0
+          fi
+
+          created=0
+          while IFS=$'\t' read -r id file days last_verified; do
+            [ -z "$id" ] && continue
+            title="Re-verify: $id"
+
+            # Is there already an OPEN issue with this exact title?
+            # Narrow via search, then confirm with an exact-title match in jq so
+            # tokenized search hits (e.g. a different card id) never false-skip.
+            count=$(gh issue list --state open --search "in:title $id" \
+              --json title \
+              --jq "[.[] | select(.title == \"$title\")] | length" 2>/dev/null || echo "ERR")
+            if [ "$count" = "ERR" ]; then
+              echo "::warning::search failed for $id; skipping to avoid duplicate issues"
+              continue
+            fi
+            if [ "$count" != "0" ]; then
+              echo "Open re-verify issue already exists for $id — skipping."
+              continue
+            fi
+
+            # Build the issue body from the checked-out card file
+            # (official_url + sources), guarded so a bad read skips one card.
+            if ! node -e '
+              const fs = require("fs");
+              const [file, days, lastVerified] = process.argv.slice(1);
+              let cardData = {};
+              try { cardData = JSON.parse(fs.readFileSync(file, "utf8")); } catch (e) {}
+              const sources = Array.isArray(cardData.sources) ? cardData.sources : [];
+              const lines = [];
+              lines.push("<!-- opencard-stale-card -->");
+              lines.push("");
+              lines.push("`" + (cardData.id || "") + "` has not been re-verified in **" + days + " days** (last verified `" + lastVerified + "`).");
+              lines.push("");
+              lines.push("- **Card file:** `" + file + "`");
+              if (cardData.official_url) lines.push("- **Official page:** " + cardData.official_url);
+              if (sources.length) {
+                lines.push("- **Sources:**");
+                for (const s of sources) lines.push("  - " + s);
+              }
+              lines.push("");
+              lines.push("A contributor should re-check the official pages above, update any fields that changed, and bump `last_verified` to the date they checked. Then open a `card(update): " + (cardData.id || "") + "` PR (one card per PR).");
+              fs.writeFileSync("/tmp/issue-body.md", lines.join("\n") + "\n");
+            ' "$file" "$days" "$last_verified"; then
+              echo "::warning::could not build issue body for $id; skipping"
+              continue
+            fi
+
+            if gh issue create \
+              --title "$title" \
+              --label needs-verification \
+              --body-file /tmp/issue-body.md 2>/dev/null; then
+              echo "Opened re-verify issue for $id."
+              created=$((created + 1))
+            else
+              echo "::warning::failed to create issue for $id"
+            fi
+          done < /tmp/stale.tsv
+
+          echo "Opened $created re-verify issue(s) this run."

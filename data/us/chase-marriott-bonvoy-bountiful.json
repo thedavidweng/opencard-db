@@ -1,0 +1,179 @@
+{
+  "id": "us-chase-marriott-bonvoy-bountiful",
+  "schema_version": "1.0.0",
+  "name": "Marriott Bonvoy Bountiful Travel Credit Card",
+  "localized_names": {
+    "en": "Marriott Bonvoy Bountiful Travel Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 250.0,
+    "currency": "USD",
+    "first_year": 250.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "19.24% (min of (6.75+12.49) and 29.99%) to 27.74% (min of (6.75+20.99) and 29.99%) variable APR."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. 'You will pay no foreign transaction fees when you use your card for purchases made outside the United States.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "marriott_bonvoy_points",
+    "currency_label": "Marriott Bonvoy points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2X points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Hotels participating in Marriott Bonvoy",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores and dining at restaurants including takeout and eligible delivery (first $15,000 combined annually, then 2x)",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 15000.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Points automatically transferred to Marriott Bonvoy account. Free Night Award (up to 50,000 points) after $15,000 in spend each calendar year. 1,000 bonus points per eligible stay at participating Marriott Bonvoy properties."
+  },
+  "signup_bonus": {
+    "amount": 85000.0,
+    "unit": "points",
+    "spend_required": 4000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 85,000 Bonus Points after you spend $4,000 in purchases in your first 3 months from your account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "gold-elite-status",
+      "title": "Automatic Gold Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatically receive Gold Elite Status each calendar year as a cardmember."
+    },
+    {
+      "id": "elite-night-credits",
+      "title": "15 Elite Night Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 15 Elite Night Credits each calendar year."
+    },
+    {
+      "id": "free-night-award",
+      "title": "Free Night Award every year",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Free Night Award every calendar year after $15,000 in spend, valid for a one night hotel stay at a property with a redemption level of up to 50,000 points."
+    },
+    {
+      "id": "stay-bonus-points",
+      "title": "1,000 Bonus Points per eligible stay",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn 1,000 bonus points per eligible stay at participating Marriott Bonvoy properties."
+    },
+    {
+      "id": "no-fx-fee",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the United States."
+    },
+    {
+      "id": "dashpass",
+      "title": "Complimentary DashPass",
+      "category": "other",
+      "source": "co-brand",
+      "description": "12 months of complimentary DashPass for DoorDash and Caviar when activated between 02/01/2025 and 12/31/2027."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "other",
+      "source": "network",
+      "description": "Reimburses up to $100 a day for up to 5 days for essential purchases when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "network",
+      "description": "Reimbursement up to $3,000 per covered traveler for lost, damaged or stolen checked or carry-on baggage."
+    },
+    {
+      "id": "trip-delay-reimbursement",
+      "title": "Trip Delay Reimbursement",
+      "category": "other",
+      "source": "network",
+      "description": "Coverage for unreimbursed expenses up to $500 per covered traveler if travel is delayed more than 12 hours or requires an overnight stay."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Covers eligible new purchases for 120 days against damage or theft up to $500 per item."
+    },
+    {
+      "id": "visa-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "Complimentary Visa Signature Concierge Service 24 hours a day."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Gold Elite Status with Marriott Bonvoy",
+    "other": [
+      "15 Elite Night Credits each calendar year",
+      "Free Night Award (up to 50,000 points) after $15,000 spend annually",
+      "1,000 bonus points per eligible stay",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bountiful"
+  ],
+  "notes": "Verified from official Chase product page. Network is Visa Signature (page references Visa Signature Concierge); network_tier normalized to bare 'signature'. Earn verified: 6x at Marriott Bonvoy hotels, 4x on first $15,000 combined annually at grocery stores and dining, 2x all other. Marriott loyalty perks labeled co-brand; Visa protections and concierge labeled network."
+}
