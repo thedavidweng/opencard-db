@@ -1,0 +1,163 @@
+{
+  "id": "us-wells-fargo-attune",
+  "schema_version": "1.0.0",
+  "name": "Wells Fargo Attune® Card",
+  "localized_names": {
+    "en": "Wells Fargo Attune® Card"
+  },
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 12 months on purchases and qualifying balance transfers. Then 18.49%, 24.49%, or 28.49% variable based on creditworthiness. No late payment fee. APR preserved from prior verification (2026-07-23) — product URL redirected to general credit cards page without Attune-specific content."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of each transaction converted to U.S. dollars. Preserved from prior verification (2026-07-23) — not re-verified on 2026-07-24."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "APR tiers based on creditworthiness; typically requires good to excellent credit. Preserved from prior verification."
+  },
+  "rewards": {
+    "currency": "cash_rewards",
+    "currency_label": "cash rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash rewards on other net purchases."
+    },
+    "categories": [
+      {
+        "label": "Select Sports, Recreation, and Entertainment (gardening and floral stores, campgrounds, sports supplies, movie theaters, live shows and sporting events, amusement parks, tourist attractions, pet supplies/boarding/grooming)",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Self-Care (gym memberships, massages, hair and nail salons)",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Planet-Friendly Purchases (public transportation, electric vehicle charging stations, select secondhand stores)",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem through Wells Fargo Rewards for cash back, travel, gift cards, and more. 4% cash rewards = 1% base plus 3% bonus. Cash equivalents do not earn cash rewards.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "USD cash rewards",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$100 cash rewards bonus after spending $500 in qualifying purchases in the first 3 months. Preserved from prior verification (2026-07-23) — not re-verified on 2026-07-24.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Get up to $600 of cell phone protection per claim against damage, theft, and unintended separation when you pay your monthly phone bill with an eligible card. Subject to a $25 deductible. Allowable maximum of two paid claims per 12-month period. Does not cover cell phones that are lost (mysteriously disappear)."
+    },
+    {
+      "id": "mastercard-id-theft-protection",
+      "title": "Mastercard ID Theft Protection™",
+      "category": "insurance",
+      "source": "network",
+      "description": "Identity theft protection from Mastercard at no extra cost. From scouring the internet to see if your personal info is being sold to helping you clear your name with credit rating agencies, available 24/7."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "network",
+      "description": "Pay for rental cars with an eligible card and get reimbursed for covered damage or theft. Coverage is secondary. Must pay for all of the cost to rent the car with eligible card and decline coverage from rental company."
+    },
+    {
+      "id": "mastercard-travel-lifestyle",
+      "title": "Mastercard Travel and Lifestyle Services",
+      "category": "other",
+      "source": "network",
+      "description": "Enjoy added peace of mind and a worry-free stay. If you experience problems with your 3-star or higher-rated hotel, contact a lifestyle concierge, 24/7, who will work directly with your hotel to help resolve the issue."
+    },
+    {
+      "id": "concierge-service",
+      "title": "Concierge Service",
+      "category": "other",
+      "source": "network",
+      "description": "A personal assistant ready to help 24/7, worldwide."
+    },
+    {
+      "id": "credit-close-up",
+      "title": "Credit Close-Up®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Gives you free and easy access to check and track your FICO Score and it won't impact your credit score."
+    },
+    {
+      "id": "zero-liability",
+      "title": "Zero Liability Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Built-in protection features ensure that you won't be held responsible for unauthorized transactions, as long as they are reported promptly."
+    },
+    {
+      "id": "my-wells-fargo-deals",
+      "title": "My Wells Fargo Deals",
+      "category": "other",
+      "source": "issuer",
+      "description": "Activate personalized deals, and then shop, dine, or enjoy an experience using an eligible Wells Fargo card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Mastercard Travel and Lifestyle Services",
+      "Concierge Service",
+      "Auto Rental Collision Damage Waiver"
+    ]
+  },
+  "official_url": "https://creditcards.wellsfargo.com/attune-credit-card/",
+  "image": {
+    "url": null,
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.wellsfargo.com/attune-credit-card/",
+    "https://cardbenefits.wf.com/product/mastercard_attune/"
+  ],
+  "notes": "Wells Fargo Attune® Card. World Elite Mastercard (confirmed from benefits page). Product URL redirected to general credit cards listing page without Attune-specific content. Benefits page (cardbenefits.wf.com) successfully fetched and verified rewards structure and benefits. Annual fee, APR, FX fee, and signup bonus preserved from prior verification (2026-07-23) as they were not visible on fetched pages. Corrected name from generic page title to 'Wells Fargo Attune® Card' based on benefits page.",
+  "segment": "personal"
+}
