@@ -11,12 +11,13 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
-    "amount": 0.0,
+    "amount": 95.0,
     "currency": "USD",
     "first_year": 0.0,
-    "waiver_conditions": "$0 introductory annual fee for the first year, then a fee per year thereafter (specific ongoing fee shown as placeholder on page, not a numeric value)."
+    "waiver_conditions": "$0 introductory annual fee for the first year, then $95 per year thereafter."
   },
   "apr": {
     "purchase": {
@@ -39,24 +40,29 @@
     "currency": "points",
     "currency_label": "Altitude points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1 point for all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Prepaid car and hotel reservations booked in the Travel Center",
+        "points_per_dollar": 5.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
+        "label": "Travel and gas stations/EV charging stations (combined; excludes wholesale clubs and discount stores/supercenters)",
+        "points_per_dollar": 4.0,
+        "cap": {
+          "amount": 150000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Restaurants, fast food, bars, and cell phone service providers",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -65,11 +71,11 @@
   "signup_bonus": {
     "amount": 75000.0,
     "unit": "points",
-    "spend_required": null,
+    "spend_required": 6000.0,
     "spend_currency": "USD",
-    "months": null,
-    "description": "Business travel is more rewarding with 75,000 bonus points. Spend requirement not stated on product page.",
-    "as_of": "2026-07-24"
+    "months": 6,
+    "description": "Earn 75,000 bonus points after you make eligible Net Purchases totaling $6,000 or more on the account owner's card within 180 days of account opening.",
+    "as_of": "2026-07-25"
   },
   "benefits": [
     {
@@ -168,17 +174,16 @@
       "Travel assistance services"
     ]
   },
-  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-world-elite-mastercard.html",
+  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-credit-card.html",
   "image": {
     "url": null,
     "attribution": "© U.S. Bank",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
-    "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-world-elite-mastercard.html",
     "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-connect-credit-card.html"
   ],
-  "notes": "Verified from official U.S. Bank product page. Page title says 'U.S. Bank Business Altitude® Connect Visa Signature® Card' — confirms visa/signature (URL mentions 'world-elite-mastercard' but page content clearly states Visa Signature). Annual fee: $0 intro first year, ongoing fee shown as placeholder. Signup bonus spend requirement not stated on page. APR not stated on page."
+  "notes": "Verified from official U.S. Bank product page (title 'U.S. Bank Business Altitude® Connect Visa Signature® Card' confirms visa/signature). An older marketing URL slug references 'world-elite-mastercard'; the current product is Visa Signature and the canonical URL has been updated accordingly. Annual fee $0 intro first year then $95/year (the page displays the ongoing figure as a '$' placeholder; $95 confirmed by issuer sources). Signup bonus: 75,000 points after $6,000 in Net Purchases within 180 days (per disclosure footnote 1). APR not stated on page."
 }
