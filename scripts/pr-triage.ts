@@ -326,12 +326,22 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   const suggestedTitle = suggestTitle(changedFiles, body);
   const regions = detectRegions(changedFiles);
   const paths = dataCardPaths(changedFiles);
+  // Maintenance escape: a bulk data change (backfills, registry migrations)
+  // legitimately touches many card files but is not a card contribution —
+  // "Not a card" checked + a non-card Conventional Commits title skips the
+  // card form and the one-card-per-PR rule (validate still gates the data).
+  const isMaintenance =
+    checkboxChecked(body, "Not a card") &&
+    titleInfo.kind === "meta" &&
+    !checkboxChecked(body, "New card") &&
+    !checkboxChecked(body, "Update existing card");
   const isCardPr =
-    paths.length > 0 ||
-    checkboxChecked(body, "New card") ||
-    checkboxChecked(body, "Update existing card") ||
-    titleInfo.kind === "add-card" ||
-    titleInfo.kind === "update-card";
+    !isMaintenance &&
+    (paths.length > 0 ||
+      checkboxChecked(body, "New card") ||
+      checkboxChecked(body, "Update existing card") ||
+      titleInfo.kind === "add-card" ||
+      titleInfo.kind === "update-card");
   const isNewCard =
     titleInfo.kind === "add-card" || checkboxChecked(body, "New card");
   const isUpdateCard =
@@ -354,6 +364,14 @@ export function triagePullRequest(input: TriageInput): TriageResult {
       message: suggestedTitle
         ? `PR title format looks wrong. Try renaming the title to \`${suggestedTitle}\` (copy-paste is fine).`
         : `PR title format looks wrong. ${TITLE_HELP}`,
+    });
+  }
+
+  if (isMaintenance && paths.length > 0) {
+    note({
+      code: "maintenance-bulk-data",
+      severity: "warn",
+      message: `Maintenance PR touching **${paths.length}** card JSON file(s) — card form checks skipped ("Not a card" + non-card title). \`validate\` still gates the data.`,
     });
   }
 

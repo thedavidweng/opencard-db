@@ -1,0 +1,110 @@
+{
+  "id": "us-barclays-upromise",
+  "schema_version": "1.0.0",
+  "name": "Upromise® World Mastercard®",
+  "localized_names": {
+    "en": "Upromise® World Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Purchases – 18.49% to 29.49%, based on your creditworthiness and other factors. This APR will vary with the market based on the Prime Rate. Balance transfers – 0% introductory APR for the first fifteen billing cycles following each balance transfer that posts to your account within 45 days of account opening. After that, 18.49% to 29.49%."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on international purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back Rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.25,
+      "description": "Earn 1.25% cash back rewards on purchases if Upromise Program account is not linked to a College Savings Plan. Earn 1.529% cash back rewards when linked to an eligible College Savings Plan."
+    },
+    "categories": [],
+    "redemption_notes": "Upromise Round Up lets you round up purchases to the nearest dollar; total Round Up Amount is considered a purchase and converted to cash back rewards.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 100.0,
+    "unit": "USD",
+    "spend_required": 500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn $100 Bonus Cash Back Rewards after spending $500 on purchases in the first 90 days",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for charges you did not authorize."
+    },
+    {
+      "id": "fico-score",
+      "title": "Free online access to your FICO Credit Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free online access to your FICO Credit Score lets you keep an eye on your credit score and get email alerts when we learn that your score has changed."
+    },
+    {
+      "id": "intro-balance-transfer",
+      "title": "Low Intro Balance Transfer Offer",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% introductory APR for 15 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 18.49% to 29.49%. There is a fee for balance transfers."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://cards.barclaycardus.com/banking/cards/upromise-world-mastercard/",
+  "image": {
+    "url": null,
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://cards.barclaycardus.com/banking/cards/upromise-world-mastercard/"
+  ],
+  "notes": "Verified against official Barclays product page on 2026-07-24."
+}

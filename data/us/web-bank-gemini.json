@@ -1,0 +1,137 @@
+{
+  "id": "us-web-bank-gemini",
+  "schema_version": "1.0.0",
+  "name": "Gemini Credit Card",
+  "localized_names": {
+    "en": "Gemini Credit Card"
+  },
+  "country": "us",
+  "issuer": "WebBank",
+  "issuer_id": "webbank",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.49,
+      "max": 34.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "notes": "16.49% to 34.49% variable APR based on creditworthiness. Penalty APR up to 33.49%. Maximum APR 35.99%. Per Cardholder Agreement dated 2026-04-01. APR not re-verified from page on 2026-07-24 (support page returned 403). Preserved from prior verification."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees. Stated on product page: 'No foreign transaction fees'."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Typically good to excellent credit. Wide APR range (16.49-34.49%) suggests acceptance across a broad credit spectrum. Score band not explicitly stated on product page; preserved from prior verification."
+  },
+  "rewards": {
+    "currency": "crypto",
+    "currency_label": "crypto back",
+    "rate_type": "cashback_percent",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in crypto on all other qualifying purchases (Everything else 1% crypto back)."
+    },
+    "categories": [
+      {
+        "label": "Gas, EV & Transit",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 300,
+          "currency": "USD",
+          "period": "monthly"
+        }
+      },
+      {
+        "label": "Dining",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Groceries",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards earned in cryptocurrency (bitcoin or 50+ cryptos on Gemini) and instantly deposited into Gemini account. Change crypto reward selection at any time. 4% gas/transit category limited to $300/month, then 1% thereafter. 10% back available at select merchants through Gemini Merchant Reward Program."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "instant-crypto-rewards",
+      "title": "Instant Crypto Rewards Deposit",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Rewards are instantly deposited into Gemini account. Some exclusions apply to instant rewards in which rewards are deposited when the transaction posts."
+    },
+    {
+      "id": "flexible-crypto-selection",
+      "title": "Flexible Crypto Reward Selection",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn bitcoin or 50+ cryptos available on Gemini. Easily change the crypto you want to earn, as often as you want."
+    },
+    {
+      "id": "merchant-rewards",
+      "title": "10% Back at Select Merchants",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 10% Back on the Internet's Favorite Brands. 10% Vault Rewards are available on up to a limited value in spend per month and varies depending on the merchant offer."
+    },
+    {
+      "id": "referral-program",
+      "title": "Credit Card Referral Program",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Get $50 in crypto for each referral and an extra $250 bonus each time you make 5 referrals. Up to 50 referrals per year (up to $5,000 in crypto)."
+    },
+    {
+      "id": "mastercard-world-elite",
+      "title": "Mastercard World Elite",
+      "category": "other",
+      "source": "network",
+      "description": "Mastercard World Elite benefits. Stated on product page: 'Mastercard® World Elite'."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Mastercard World Elite benefits"
+    ]
+  },
+  "official_url": "https://www.gemini.com/credit-card",
+  "image": {
+    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+    "attribution": "© WebBank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.gemini.com/credit-card",
+    "https://support.gemini.com/hc/en-us/articles/4405135674779-What-rewards-tiers-are-available-on-the-Gemini-Credit-Card"
+  ],
+  "notes": "Gemini Credit Card issued by WebBank. Mastercard World Elite. No annual fee, no foreign transaction fees. 4% crypto back on Gas/EV/Transit (up to $300/month), 3% Dining, 2% Groceries, 1% everything else. Rewards in bitcoin or 50+ cryptos, instantly deposited. APR values preserved from prior verification (support page returned 403 on 2026-07-24)."
+}

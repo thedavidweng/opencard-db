@@ -1,0 +1,157 @@
+{
+  "id": "us-citi-aadvantage-platinum-select-world-elite",
+  "schema_version": "1.0.0",
+  "name": "Citi® / AAdvantage® Platinum Select® World Elite Mastercard®",
+  "localized_names": {
+    "en": "Citi® / AAdvantage® Platinum Select® World Elite Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 99.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": "$0 intro annual fee for the first 12 months of account opening, then $99"
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "The variable APR for purchases and balance transfers is 19.49% – 29.49%, based on your creditworthiness. The variable APR for cash advances is 29.74%. The variable Penalty APR is up to 29.99%. Minimum interest charge is $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee – either $5 or 5% of the amount of each transfer, whichever is greater."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "Fee for foreign transactions – None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "AAdvantage® miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1 AAdvantage® mile for every $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas stations",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Eligible American Airlines purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 80000,
+    "unit": "AAdvantage® bonus miles",
+    "spend_required": 3500,
+    "spend_currency": "USD",
+    "months": 4,
+    "description": "LIMITED-TIME OFFER: Earn 80,000 American Airlines AAdvantage® bonus miles plus travel benefits. Bonus miles earned after $3,500 in purchases within the first 4 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "first-checked-bag-free",
+      "title": "First checked bag free",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Your first checked bag is free on domestic American Airlines itineraries for you and up to four companions traveling with you on the same reservation, a savings of up to $500 per round trip."
+    },
+    {
+      "id": "preferred-boarding",
+      "title": "Preferred boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy preferred boarding on American Airlines flights."
+    },
+    {
+      "id": "save-25-inflight",
+      "title": "Save 25% on inflight food and beverage purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "25% savings on inflight food and beverage purchases on American Airlines flights when you use your credit card."
+    },
+    {
+      "id": "aa-flight-discount",
+      "title": "$125 American Airlines Flight Discount",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn a $125 American Airlines Flight Discount after you spend $20,000 or more in purchases during your cardmembership year and renew your credit card."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Shop like a local wherever you go with your Citi® / AAdvantage® Platinum Select® credit card."
+    },
+    {
+      "id": "add-authorized-users",
+      "title": "Add authorized users",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn more AAdvantage® miles with purchases made by authorized user cards added to your account at no additional charge."
+    },
+    {
+      "id": "turo-credits",
+      "title": "Special Offer: Up to $180 back on Turo",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn up to $30 in statement credits for each eligible Turo trip completed from October 19, 2025 to October 18, 2026, up to $180 statement credits in total. To qualify, you must link your card to your Turo account on Turo.com/AAdvantagePlatinum and pay for the trip with your card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "First checked bag free on domestic American Airlines itineraries for you and up to 4 companions (savings up to $500 per round trip)",
+    "hotel_status": null,
+    "other": [
+      "Preferred boarding on American Airlines flights",
+      "Save 25% on inflight food and beverage purchases on AA flights",
+      "$125 AA Flight Discount after $20,000 spend/year and card renewal",
+      "No foreign transaction fees",
+      "Up to $180 back on Turo (Oct 19 2025 – Oct 18 2026)"
+    ]
+  },
+  "official_url": "https://creditcards.aa.com/credit-cards/citi-platinum-card-american-airlines-direct/",
+  "image": {
+    "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2024/05/CardArt-6.png",
+    "attribution": "© Citi",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.aa.com/credit-cards/citi-platinum-card-american-airlines-direct/"
+  ],
+  "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text. Signup bonus is a limited-time offer (80,000 miles vs standard 50,000)."
+}
