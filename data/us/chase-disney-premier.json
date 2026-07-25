@@ -1,9 +1,9 @@
 {
   "id": "us-chase-disney-premier",
   "schema_version": "1.0.0",
-  "name": "Disney Premier Card from Chase: Rewards",
+  "name": "Disney Premier Visa Card",
   "localized_names": {
-    "en": "Disney Premier Card from Chase: Rewards"
+    "en": "Disney Premier Visa Card"
   },
   "country": "us",
   "issuer": "Chase",
@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 49.0,
@@ -39,34 +40,25 @@
     "currency": "disney_rewards_dollars",
     "currency_label": "Disney Rewards Dollars",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1% in Disney Rewards Dollars on all other card purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Purchases made directly at DisneyPlus.com, Hulu.com or Stream.ESPN.com",
+        "points_per_dollar": 5.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations and most Disney U.S. locations",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores and restaurants",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -93,28 +85,28 @@
       "id": "disney-store-savings",
       "title": "10% savings at DisneyStore.com",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Save 10% on select purchases at DisneyStore.com when you use your Disney Premier Visa Card."
     },
     {
       "id": "disney-parks-merchandise-savings",
       "title": "10% off select merchandise at Disney Parks",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive 10% off select merchandise purchases at select locations at the Disneyland Resort and Walt Disney World Resort when you use your Disney Premier Visa Card."
     },
     {
       "id": "disney-parks-dining-savings",
       "title": "10% off select dining at Disney Parks",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive 10% off select dining locations most days at the Disneyland Resort and Walt Disney World Resort when you use your Disney Premier Visa Card."
     },
     {
       "id": "disney-card-designs",
       "title": "Disney Card Designs",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Choose from more than a dozen designs celebrating Disney storytelling. Once you have the card, you can change your design at any time."
     },
     {
@@ -140,7 +132,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/rewards-credit-cards/disney/premier"
   ],
