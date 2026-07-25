@@ -1,0 +1,140 @@
+{
+  "id": "us-chase-united-gateway",
+  "schema_version": "1.0.0",
+  "name": "United Gateway Card",
+  "localized_names": {
+    "en": "United Gateway Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.74,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 12 months from account opening on purchases. After the intro period, a variable APR of 19.74% (Min. of (6.75+12.99) and 29.99%) to 28.24% (Min. of (6.75+21.49) and 29.99%)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on purchases made with your Gateway Card outside the U.S."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "mileageplus_miles",
+    "currency_label": "United MileagePlus miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x mile on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Eligible United flights",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "All other eligible United purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas stations",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Local transit and commuting (ride share, taxicabs, train tickets, tolls, mass transit)",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles earned automatically transferred to United MileagePlus after end of each billing cycle. Miles can be used for flights on United and other airline partners. No blackout dates on United-operated flights.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 40000.0,
+    "unit": "miles",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 30,000 bonus miles after you spend $1,000 on purchases in the first 3 months your account is open. Plus, earn 10,000 bonus miles after you add an authorized user in the first 3 months. Total up to 40,000 bonus miles.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "checked-bag-certificates",
+      "title": "2 Checked Bag Certificates After $10K Spend",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn two standard checked bag certificates after spending $10,000 on purchases with your United Gateway Card within a calendar year. Each unused certificate expires 12 months after date of issue."
+    },
+    {
+      "id": "inflight-25-back",
+      "title": "25% Back on United Inflight Purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "25% back as a statement credit on purchases of food, beverages and Wi-Fi on board United and United Express-operated flights, and on premium drink purchases at United Clubs."
+    },
+    {
+      "id": "award-pricing",
+      "title": "Save 10%+ on Flights Booked with Miles After $10K Spend",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 10% or more on flights booked with miles after spending $10,000 in a calendar year. Premier members save even more."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made with your Gateway Card outside the U.S."
+    },
+    {
+      "id": "intro-apr",
+      "title": "0% Intro APR for 12 Months",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% intro APR for the first 12 months from account opening on purchases."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "2 checked bag certificates after $10,000 spend per calendar year",
+    "hotel_status": null,
+    "other": [
+      "25% back on United inflight food/beverage/Wi-Fi and Club premium drinks",
+      "Save 10%+ on award flights after $10,000 spend per calendar year"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/united/united-gateway"
+  ],
+  "notes": "United Gateway Card from Chase. Corrected network from mastercard to visa and tier from world to signature based on page evidence ('Visa Signature card' explicitly stated in offer details). $0 annual fee. 0% intro APR for 12 months. No foreign transaction fees. Signup bonus updated to 40,000 total (30,000 + 10,000 AU).",
+  "segment": "personal"
+}
