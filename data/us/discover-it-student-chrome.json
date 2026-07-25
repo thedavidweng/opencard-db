@@ -11,6 +11,7 @@
   "network": "discover",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -39,20 +40,29 @@
     "currency": "cash_back",
     "currency_label": "Cash Back",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1.0,
       "description": "Unlimited 1% cash back on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
+        "label": "Gas stations",
+        "points_per_dollar": 2.0,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "quarter"
+        }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
+        "label": "Restaurants",
+        "points_per_dollar": 2.0,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "quarter"
+        }
       }
     ],
     "redemption_notes": "Redeem cash back for any amount. Cashback Match: unlimited dollar-for-dollar match of all cash back earned at the end of first year."
@@ -91,7 +101,7 @@
   },
   "official_url": "https://www.discover.com/credit-cards/student-credit-card/chrome-card/",
   "image": {
-    "url": "https://ecm.capitalone.com/WCM/dfs-card/products/cardart-0introapr-cashit.png",
+    "url": null,
     "attribution": "© Discover",
     "local_path": null
   },
@@ -100,5 +110,5 @@
   "sources": [
     "https://www.discover.com/credit-cards/student-credit-card/chrome-card/"
   ],
-  "notes": "Verified against official Discover product page 2026-07-24. APR (16.49%-25.49% variable, 0% intro 6 months) and no-annual-fee confirmed. FX fee not stated on page (terms_url empty). No signup bonus; Cashback Match is first-year promo."
+  "notes": "Verified against official Discover product page 2026-07-24. APR (16.49%-25.49% variable, 0% intro 6 months) and no-annual-fee confirmed. FX fee not stated on page (terms_url empty). No signup bonus; Cashback Match is first-year promo. 2% cash back at gas stations and restaurants applies to up to $1,000 in combined purchases each quarter (the $1,000 cap is shared across both categories, not per-category), then 1%. Image URL cleared: prior asset was wrong-product card art on a Capital One CDN."
 }
