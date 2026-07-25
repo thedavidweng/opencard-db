@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -38,29 +39,30 @@
     "currency": "points",
     "currency_label": "U.S. Bank Altitude Go Points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1X point on all other eligible purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Dining, takeout, and restaurant delivery (first $2,000 each quarter, then 1X)",
+        "points_per_dollar": 4,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores and grocery delivery",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations and EV charging stations",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Select streaming services",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
