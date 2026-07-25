@@ -32,7 +32,8 @@ export function withDefaultCardImage<T extends CardWithImage>(
     return card;
   }
 
-  const existing = card.image && typeof card.image === "object" ? card.image : {};
+  const existing: Partial<CardImage> =
+    card.image && typeof card.image === "object" ? card.image : {};
   const attribution =
     typeof existing.attribution === "string" && existing.attribution.trim()
       ? existing.attribution
