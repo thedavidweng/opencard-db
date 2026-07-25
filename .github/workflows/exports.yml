@@ -12,8 +12,6 @@ name: Refresh exports
 # or merge with admin rights).
 
 on:
-  schedule:
-    - cron: "41 4 * * 1" # weekly, Monday
   workflow_dispatch:
 
 concurrency:
@@ -51,6 +49,6 @@ jobs:
 
             - [x] **Not a card** (docs / CI / code / bulk data maintenance)
 
-            Weekly regeneration of the committed `exports/` directory (jsDelivr `@main` preview path).
+            Manual regeneration of the committed `exports/` directory (jsDelivr `@main` preview path).
           labels: enhancement
           delete-branch: true
