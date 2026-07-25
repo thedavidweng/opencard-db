@@ -10,33 +10,35 @@
   "issuer_id": "amex",
   "network": "amex",
   "network_tier": "none",
-  "type": "credit",
+  "type": "charge",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
-    "amount": 0.0,
+    "amount": 95,
     "currency": "USD",
-    "first_year": 0.0,
+    "first_year": 95,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.74,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+    "notes": "17.74%–28.49% variable APR applies to balances placed on Pay Over Time (as of 2026)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Foreign transaction fee not mentioned on product page."
+    "percent": 2.7,
+    "notes": "2.7% foreign transaction fee (standard American Express rate)."
   },
   "credit_required": {
-    "score_band": null,
+    "score_band": "good_to_excellent",
     "notes": null
   },
   "rewards": {
     "currency": "membership_rewards",
     "currency_label": "Membership Rewards points",
+    "rate_type": "points_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
@@ -51,7 +53,15 @@
     ],
     "redemption_notes": "Membership Rewards points can be used for travel, gift cards, statement credits, and more."
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 15000,
+    "unit": "points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 15,000 Membership Rewards points after spending $3,000 on eligible purchases within the first 3 months of Card Membership.",
+    "as_of": "2026-07-24"
+  },
   "benefits": [
     {
       "id": "pay-over-time",
@@ -85,7 +95,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/"
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-green-card-amex/",
+    "https://frequentmiler.com/american-express-business-green-card-review/"
   ],
-  "notes": "Verified from official product page. Page does not display annual fee, APR, or welcome offer in static HTML. Only earn rates and basic benefits (Pay Over Time, No Preset Spending Limit) are visible."
+  "notes": "Business charge card (No Preset Spending Limit with Pay Over Time) — corrected type from credit to charge. $95 annual fee (an earlier note confusing it with the $150 personal Amex Green Card was wrong). Earns 2X Membership Rewards points on flights and prepaid hotels at AmexTravel.com and 1X on all other eligible purchases. Welcome offer of 15,000 points after $3,000 spend in the first 3 months. 2.7% foreign transaction fee. Fee, APR, and welcome offer confirmed via the official product page and Frequent Miler (values not exposed in the page's static HTML)."
 }
