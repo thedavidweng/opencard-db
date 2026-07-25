@@ -1,23 +1,207 @@
 #!/usr/bin/env node
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import Ajv2020 from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import {
   expectedIdFromPath,
   loadAllCards,
   loadSchema,
+  repoRoot,
   type Card,
 } from "./lib.ts";
 
-function fail(messages: string[]): never {
-  for (const m of messages) console.error(`error: ${m}`);
-  process.exit(1);
+export type LintContext = {
+  issuerIds: Set<string>;
+  issuerAliases: Map<string, string>; // alias -> canonical id
+  tiers: Set<string>;
+  today: string; // YYYY-MM-DD
+};
+
+const COUNTRY_CURRENCY: Record<string, string> = {
+  us: "USD",
+  ca: "CAD",
+  cn: "CNY",
+};
+
+const NETWORK_NAMES = [
+  "visa",
+  "mastercard",
+  "amex",
+  "discover",
+  "unionpay",
+  "jcb",
+];
+
+const PLACEHOLDER_LABEL_RE = /^categor(y|ies)?\s*\d*$/i;
+const SCRAPED_NAME_RE =
+  /^(credit cards?|travel rewards credit cards|coming soon)$|find & apply/i;
+
+export async function loadLintContext(): Promise<LintContext> {
+  const root = repoRoot();
+  const issuersRaw = JSON.parse(
+    await readFile(path.join(root, "data/issuers.json"), "utf8"),
+  ) as { issuers: { id: string; aliases?: string[] }[] };
+  const tiersRaw = JSON.parse(
+    await readFile(path.join(root, "data/network-tiers.json"), "utf8"),
+  ) as { tiers: string[] };
+
+  const issuerIds = new Set(issuersRaw.issuers.map((i) => i.id));
+  const issuerAliases = new Map<string, string>();
+  for (const i of issuersRaw.issuers) {
+    for (const a of i.aliases ?? []) issuerAliases.set(a, i.id);
+  }
+  return {
+    issuerIds,
+    issuerAliases,
+    tiers: new Set(tiersRaw.tiers),
+    today: new Date().toISOString().slice(0, 10),
+  };
+}
+
+function tierProblem(tier: string, ctx: LintContext): string | null {
+  if (ctx.tiers.has(tier)) return null;
+  if (tier.includes(":")) {
+    return `network_tier "${tier}" must not embed the network (use the bare package slug)`;
+  }
+  const prefixed = NETWORK_NAMES.find((n) => tier.startsWith(`${n}_`));
+  if (prefixed) {
+    return `network_tier "${tier}" is network-prefixed — the network lives in its own field; use "${tier.slice(prefixed.length + 1)}"`;
+  }
+  if (tier.includes("_or_")) {
+    return `network_tier "${tier}" is not atomic — record the tier actually issued (or use additional_networks)`;
+  }
+  return `network_tier "${tier}" is not in data/network-tiers.json — fix the tier, or extend the allowlist in the same PR if it is a real network package`;
+}
+
+/**
+ * Semantic lints beyond ajv. Returns human-readable problems for one card.
+ */
+export function lintCard(card: Card, ctx: LintContext): string[] {
+  const problems: string[] = [];
+
+  // Issuer registry
+  if (!ctx.issuerIds.has(card.issuer_id)) {
+    const canonical = ctx.issuerAliases.get(card.issuer_id);
+    problems.push(
+      canonical
+        ? `issuer_id "${card.issuer_id}" is a known alias — use canonical "${canonical}"`
+        : `issuer_id "${card.issuer_id}" is not in data/issuers.json — add the issuer there in this PR (id, name, aliases)`,
+    );
+  }
+
+  // Tier allowlist (primary + additional networks)
+  const tiers: string[] = [card.network_tier];
+  const extra = card.additional_networks as
+    | { network_tier: string }[]
+    | undefined;
+  for (const an of extra ?? []) tiers.push(an.network_tier);
+  for (const t of tiers) {
+    const p = tierProblem(t, ctx);
+    if (p) problems.push(p);
+  }
+
+  // Scraped page-title instead of a product name
+  if (SCRAPED_NAME_RE.test(card.name.trim())) {
+    problems.push(
+      `name "${card.name}" looks like a scraped page title, not a product name`,
+    );
+  }
+
+  // Rewards: placeholder categories, missing category rates, fraction encoding
+  const rewards = card.rewards as
+    | {
+        rate_type?: string;
+        structure?: string;
+        base_rate?: { points_per_dollar?: number | null };
+        categories?: {
+          label?: string;
+          points_per_dollar?: number | null;
+        }[];
+      }
+    | undefined;
+  for (const [i, cat] of (rewards?.categories ?? []).entries()) {
+    const label = (cat.label ?? "").trim();
+    if (PLACEHOLDER_LABEL_RE.test(label) || label.length === 0) {
+      problems.push(
+        `rewards.categories[${i}] is an unfilled placeholder (label "${cat.label}") — fill the real bonus category or remove the entry`,
+      );
+    } else if (cat.points_per_dollar == null) {
+      problems.push(
+        `rewards.categories[${i}] ("${label}") has no points_per_dollar — a listed bonus category must carry its rate`,
+      );
+    }
+  }
+  if (rewards && rewards.rate_type == null) {
+    const rates = [
+      rewards.base_rate?.points_per_dollar,
+      ...(rewards.categories ?? []).map((c) => c.points_per_dollar),
+    ];
+    for (const r of rates) {
+      if (typeof r === "number" && r > 0 && r < 0.5) {
+        problems.push(
+          `rewards rate ${r} looks like a fraction-encoded percentage — use the whole-number convention (1.5 means 1.5% / 1.5x), or set rewards.rate_type explicitly if a sub-0.5 multiplier is real`,
+        );
+        break;
+      }
+    }
+  }
+
+  // Dates must not be in the future
+  const lastVerified = card.last_verified as string | undefined;
+  if (lastVerified && lastVerified > ctx.today) {
+    problems.push(`last_verified "${lastVerified}" is in the future`);
+  }
+  const asOf = (card.signup_bonus as { as_of?: string | null } | null)?.as_of;
+  if (asOf && asOf > ctx.today) {
+    problems.push(`signup_bonus.as_of "${asOf}" is in the future`);
+  }
+
+  // Fee currency must match the card's market
+  const expectedCurrency = COUNTRY_CURRENCY[card.country];
+  const feeCurrency = (card.annual_fee as { currency?: string } | undefined)
+    ?.currency;
+  if (expectedCurrency && feeCurrency && feeCurrency !== expectedCurrency) {
+    problems.push(
+      `annual_fee.currency "${feeCurrency}" does not match country "${card.country}" (expected ${expectedCurrency})`,
+    );
+  }
+
+  // Lifecycle coherence
+  if (card.discontinued_date && card.status !== "discontinued") {
+    problems.push(
+      `discontinued_date set but status is "${card.status}" (expected "discontinued")`,
+    );
+  }
+
+  // benefit.id uniqueness within the card
+  const benefitIds = new Set<string>();
+  for (const b of (card.benefits as { id?: string }[] | undefined) ?? []) {
+    if (!b.id) continue;
+    if (benefitIds.has(b.id)) {
+      problems.push(`duplicate benefit id "${b.id}" within the card`);
+    }
+    benefitIds.add(b.id);
+  }
+
+  return problems;
+}
+
+function emit(file: string, message: string, errors: string[]): void {
+  errors.push(`${file}: ${message}`);
+  if (process.env.GITHUB_ACTIONS) {
+    // Inline annotation on the PR diff.
+    console.log(`::error file=${file}::${message.replace(/\n/g, " ")}`);
+  }
 }
 
 async function main(): Promise<void> {
+  const root = repoRoot();
   const schema = await loadSchema();
   const ajv = new Ajv2020({ allErrors: true, strict: false });
   addFormats(ajv);
   const validate = ajv.compile(schema);
+  const ctx = await loadLintContext();
 
   const loaded = await loadAllCards();
   if (loaded.length === 0) {
@@ -26,43 +210,74 @@ async function main(): Promise<void> {
 
   const errors: string[] = [];
   const seen = new Map<string, string>();
+  const allIds = new Set(loaded.map(({ card }) => card.id));
 
   for (const { file, card } of loaded) {
+    const rel = path.relative(root, file);
+
     const ok = validate(card);
     if (!ok) {
-      const details = (validate.errors ?? [])
-        .map((e) => `${e.instancePath || "/"} ${e.message}`)
-        .join("; ");
-      errors.push(`${file}: schema invalid — ${details}`);
+      for (const e of validate.errors ?? []) {
+        emit(
+          rel,
+          `schema invalid — ${e.instancePath || "/"} ${e.message}`,
+          errors,
+        );
+      }
     }
 
     const expected = expectedIdFromPath(file);
     if (card.id !== expected.id) {
-      errors.push(
-        `${file}: id "${card.id}" does not match path-derived id "${expected.id}"`,
+      emit(
+        rel,
+        `id "${card.id}" does not match path-derived id "${expected.id}"`,
+        errors,
       );
     }
     if (card.country !== expected.country) {
-      errors.push(
-        `${file}: country "${card.country}" does not match directory "${expected.country}"`,
+      emit(
+        rel,
+        `country "${card.country}" does not match directory "${expected.country}"`,
+        errors,
       );
     }
 
     const prev = seen.get(card.id);
     if (prev) {
-      errors.push(`${file}: duplicate id "${card.id}" (also in ${prev})`);
+      emit(rel, `duplicate id "${card.id}" (also in ${prev})`, errors);
     } else {
-      seen.set(card.id, file);
+      seen.set(card.id, rel);
+    }
+
+    const replacedBy = card.replaced_by as string | undefined;
+    if (replacedBy && !allIds.has(replacedBy)) {
+      emit(
+        rel,
+        `replaced_by "${replacedBy}" does not reference an existing card id`,
+        errors,
+      );
+    }
+
+    for (const p of lintCard(card, ctx)) {
+      emit(rel, p, errors);
     }
   }
 
-  if (errors.length) fail(errors);
+  if (errors.length) {
+    for (const m of errors) console.error(`error: ${m}`);
+    process.exit(1);
+  }
   console.log(`ok: ${loaded.length} card(s) validated`);
 }
 
-main().catch((err: unknown) => {
-  console.error(err);
-  process.exit(1);
-});
+const isDirectRun =
+  process.argv[1] != null &&
+  import.meta.url.endsWith(path.basename(process.argv[1]));
+if (isDirectRun) {
+  main().catch((err: unknown) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
 
 export type { Card };
