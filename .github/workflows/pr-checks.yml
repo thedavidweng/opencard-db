@@ -147,10 +147,12 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: |
           # Other open PRs — used to detect duplicate card(add|update) work.
+          # Best-effort: fall back to [] on transient gh/API failures (rate limits)
+          # so the whole Form check never goes red on infrastructure errors.
           gh pr list --state open --limit 200 \
             --json number,title,url,author \
             --jq '[.[] | {number, title, url, author: .author.login}]' \
-            > /tmp/open-prs.json
+            > /tmp/open-prs.json || echo '[]' > /tmp/open-prs.json
           export PR_FILES="$(cat /tmp/pr-files.txt)"
           export BASE_SHA
           node --experimental-strip-types scripts/build-base-cards.ts > /tmp/base-cards.json

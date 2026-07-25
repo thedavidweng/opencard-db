@@ -274,9 +274,9 @@ export function findDuplicatePrs(
     if (seen.has(pr.number)) continue;
     const parsed = parseCardTitle(pr.title);
     const titleId = parsed?.cardId;
-    const hit =
-      (titleId && ids.has(titleId)) ||
-      [...ids].some((id) => pr.title.toLowerCase().includes(id));
+    // Exact card-id match only: substring matching false-positives on
+    // prefix-collision slugs (us-amex-gold vs us-amex-gold-star).
+    const hit = titleId != null && ids.has(titleId);
     if (hit) {
       seen.add(pr.number);
       out.push(pr);
@@ -556,9 +556,12 @@ export function triagePullRequest(input: TriageInput): TriageResult {
   if (duplicatePrs.length > 0 && (isNewCard || isCardPr)) {
     for (const dup of duplicatePrs) {
       const who = dup.author ? ` (@${dup.author})` : "";
+      // warn, not error: the open-PR list is best-effort (may be stale or
+      // empty on API failure), so a possible duplicate should not hard-fail
+      // a legitimate PR — it labels and comments instead.
       note({
         code: "duplicate-pr",
-        severity: "error",
+        severity: "warn",
         message: `Possible **duplicate**: open PR [#${dup.number}](${dup.url}) — “${dup.title.replace(/"/g, "'")}”${who}. Please coordinate there or close this PR instead of adding the same card twice.`,
       });
     }

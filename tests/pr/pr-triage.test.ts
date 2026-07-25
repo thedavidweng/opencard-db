@@ -294,6 +294,53 @@ describe("pr triage", () => {
     assert.match(r.commentMarkdown, /pull\/42/);
   });
 
+  it("does not flag prefix-collision slugs as duplicates", () => {
+    const dups = findDuplicatePrs(
+      ["us-amex-gold"],
+      [
+        {
+          number: 43,
+          title: "card(add): us-amex-gold-star",
+          url: "https://github.com/thedavidweng/opencard-db/pull/43",
+          author: "other-dev",
+        },
+      ],
+      99,
+    );
+    assert.equal(dups.length, 0);
+  });
+
+  it("duplicate-pr is a warning, not a hard failure", () => {
+    const r = triagePullRequest({
+      title: "card(add): us-demo-card",
+      body: goodBody.replace(/us-chase-sapphire-preferred/g, "us-demo-card"),
+      changedFiles: ["data/us/demo-card.json"],
+      currentPrNumber: 99,
+      openCardPrs: [
+        {
+          number: 42,
+          title: "card(add): us-demo-card",
+          url: "https://github.com/thedavidweng/opencard-db/pull/42",
+          author: "other-dev",
+        },
+      ],
+      baseCards: {
+        "data/us/demo-card.json": {
+          path: "data/us/demo-card.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
+    });
+    const dup = r.issues.find((i) => i.code === "duplicate-pr");
+    assert.ok(dup);
+    assert.equal(dup.severity, "warn");
+    // Same pass/fail rule as run-pr-triage.ts: a duplicate alone must not fail.
+    assert.equal(r.titleOk, true);
+    assert.equal(r.issues.some((i) => i.severity === "error"), false);
+    assert.equal(r.missing.length, 0);
+  });
+
   it("findDuplicatePrs ignores the current PR number", () => {
     const dups = findDuplicatePrs(
       ["us-demo-card"],
