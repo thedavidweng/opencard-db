@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "pull-request-header": "Automated release PR. Approving and merging it cuts the release: tag, GitHub Release, changelog, refreshed exports, and the jsDelivr pin all follow without further action.",
+  "pull-request-footer": "- [x] **Not a card** (docs / CI / code / bulk data maintenance)\n\nMaintained by the release-please workflow. It tracks every merge to main; merge it whenever the accumulated changes are worth a release.",
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "include-component-in-tag": false,
+      "exclude-paths": ["packages/opencard-export"],
+      "changelog-sections": [
+        { "type": "card", "section": "Cards" },
+        { "type": "feat", "section": "Features" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "perf", "section": "Performance" },
+        { "type": "revert", "section": "Reverts" },
+        { "type": "docs", "section": "Documentation" },
+        { "type": "build", "section": "Dependencies", "hidden": true },
+        { "type": "chore", "section": "Maintenance", "hidden": true },
+        { "type": "ci", "section": "CI", "hidden": true },
+        { "type": "refactor", "section": "Refactoring", "hidden": true },
+        { "type": "test", "section": "Tests", "hidden": true },
+        { "type": "style", "section": "Style", "hidden": true }
+      ]
+    },
+    "packages/opencard-export": {
+      "release-type": "node",
+      "component": "opencard-export",
+      "changelog-sections": [
+        { "type": "feat", "section": "Features" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "perf", "section": "Performance" },
+        { "type": "revert", "section": "Reverts" },
+        { "type": "docs", "section": "Documentation" },
+        { "type": "build", "section": "Dependencies", "hidden": true },
+        { "type": "chore", "section": "Maintenance", "hidden": true },
+        { "type": "ci", "section": "CI", "hidden": true },
+        { "type": "refactor", "section": "Refactoring", "hidden": true },
+        { "type": "test", "section": "Tests", "hidden": true },
+        { "type": "style", "section": "Style", "hidden": true }
+      ]
+    }
+  }
+}

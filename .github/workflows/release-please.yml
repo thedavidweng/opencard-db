@@ -1,0 +1,156 @@
+name: Release Please
+
+# Fully automated releases. release-please watches Conventional Commits on main
+# and maintains a rolling release PR (changelog + version bumps, config in
+# release-please-config.json). A maintainer approving and merging that PR is
+# the only human step: the same workflow then creates the tag and the GitHub
+# Release, attaches the export assets, and (when enabled) publishes the CLI to
+# npm.
+#
+# jsDelivr freshness: tag-pinned production URLs
+# (cdn.jsdelivr.net/gh/<owner>/opencard-db@<tag>/exports/*) serve the exports
+# COMMITTED at the tag. The refresh-exports job below rebuilds exports/ and
+# commits the result onto the release PR branch after every update, so the
+# merge commit that gets tagged always carries current exports. No pre-tag
+# manual refresh is needed anymore.
+#
+# TOKEN: set the RELEASE_PLEASE_TOKEN secret to a fine-grained PAT (this repo;
+# contents: read/write, pull requests: read/write). PRs and tags created with
+# the default GITHUB_TOKEN do not trigger other workflows (GitHub's
+# anti-recursion rule), which would leave the release PR's required checks
+# (validate / Labels / Form check) stuck in "expected" and the PR unmergeable
+# without admin rights. The fallback to github.token below keeps the workflow
+# functional (degraded) if the secret is missing. See docs/RELEASING.md.
+#
+# RECURSION SAFETY: this workflow triggers on pushes to main only. The
+# refresh-exports job pushes to the release PR branch (release-please--*),
+# which triggers pull_request CI on that PR but never re-triggers this
+# workflow. The concurrency group serializes whole runs, so release-please's
+# branch update and the exports commit that follows it can never interleave
+# across runs.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: release-please
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      prs_created: ${{ steps.rp.outputs.prs_created }}
+      pr: ${{ steps.rp.outputs.pr }}
+      release_created: ${{ steps.rp.outputs.release_created }}
+      tag_name: ${{ steps.rp.outputs.tag_name }}
+      cli_release_created: ${{ steps.rp.outputs['packages/opencard-export--release_created'] }}
+      cli_tag_name: ${{ steps.rp.outputs['packages/opencard-export--tag_name'] }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: rp
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  # Rebuild exports/ on the release PR branch so the tagged commit serves
+  # current data on jsDelivr. release-please force-recreates its branch from
+  # main on every update, discarding the previous refresh commit; this job
+  # re-adds it right after, so the branch always converges to
+  # "release edits + fresh exports".
+  refresh-exports:
+    needs: release-please
+    if: needs.release-please.outputs.prs_created == 'true' && needs.release-please.outputs.pr != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ fromJSON(needs.release-please.outputs.pr).headBranchName }}
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate cards
+        run: npm run validate
+      - name: Build exports
+        run: npm run build:exports
+      - name: Commit refreshed exports to the release PR
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
+          PR: ${{ fromJSON(needs.release-please.outputs.pr).number }}
+          BRANCH: ${{ fromJSON(needs.release-please.outputs.pr).headBranchName }}
+        run: |
+          git add exports/
+          if git diff --cached --quiet; then
+            echo "Exports unchanged; nothing to commit."
+            exit 0
+          fi
+          # Skip quietly if a maintainer merged the release PR while this job
+          # was still running; the next release cycle picks the refresh up.
+          state=$(gh pr view "$PR" --json state -q .state || echo UNKNOWN)
+          if [ "$state" != "OPEN" ]; then
+            echo "Release PR #$PR is $state; skipping exports push."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(exports): refresh generated exports for release"
+          git push origin "HEAD:$BRANCH"
+
+  # Attach the exports committed at the tag to the GitHub Release as a
+  # direct-download mirror of the jsDelivr tag-pinned files. No rebuild here:
+  # uploading the committed bytes keeps Release assets and
+  # cdn.jsdelivr.net/gh/...@<tag>/exports/* identical.
+  upload-assets:
+    needs: release-please
+    if: needs.release-please.outputs.release_created == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.release-please.outputs.tag_name }}
+      - name: Upload export assets to the release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ needs.release-please.outputs.tag_name }}
+        run: |
+          gh release upload "$TAG" \
+            exports/*.json exports/cards.csv exports/cards.yaml \
+            --clobber
+
+  # Publish the CLI to npm via OIDC trusted publishing (no token; requires the
+  # trusted publisher to be configured for opencard-export on npmjs.com and
+  # npm >= 11.5.1). Gated on the NPM_PUBLISH repository variable so release
+  # runs stay green until the one-time npm setup in docs/RELEASING.md is done.
+  publish-cli:
+    needs: release-please
+    if: needs.release-please.outputs.cli_release_created == 'true' && vars.NPM_PUBLISH == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.release-please.outputs.cli_tag_name }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+      - name: Update npm (trusted publishing needs >= 11.5.1)
+        run: npm install -g npm@latest
+      - name: Publish opencard-export
+        working-directory: packages/opencard-export
+        run: npm publish --provenance --access public

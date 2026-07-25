@@ -28,7 +28,7 @@ https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/meta.json
 https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/index-country.json
 ```
 
-The same files are attached to every [GitHub Release](https://github.com/thedavidweng/opencard-db/releases) as downloadable assets. The full list of exports (7 index JSONs plus `cards.csv` and `cards.yaml`) lives in the committed [`exports/`](exports/) directory.
+The same files are attached to every [GitHub Release](https://github.com/thedavidweng/opencard-db/releases) as downloadable assets. The full list of exports (7 index JSONs plus `cards.csv` and `cards.yaml`) lives in the committed [`exports/`](exports/) directory. Releases, changelogs, and version bumps are automated; see [`docs/RELEASING.md`](docs/RELEASING.md).
 
 ### Latest data
 
