@@ -1,0 +1,173 @@
+{
+  "id": "us-citi-costco-anywhere-visa-card-by-citi",
+  "schema_version": "1.0.0",
+  "name": "Costco Anywhere Visa® Card by Citi",
+  "localized_names": {
+    "en": "Costco Anywhere Visa® Card by Citi"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": "Active/paid Costco membership required (Costco membership fee separate)."
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Page shows 'Variable APR % - % for purchases and balance transfers based on your creditworthiness' — numeric values not rendered on page. terms_url empty in batch."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Costco Cash Back Rewards",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas at Costco (worldwide)",
+        "points_per_dollar": 5.0,
+        "cap": {
+          "amount": 7000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Other eligible gas and EV charging",
+        "points_per_dollar": 4.0,
+        "cap": {
+          "amount": 7000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Restaurants and eligible travel (incl. Costco Travel)",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "All other Costco and Costco.com purchases",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back provided as an annual credit card reward certificate once February billing statement closes; redeemable for cash or merchandise at U.S. Costco Warehouses (including Puerto Rico) through December 31 of each year. No limit on cash back rewards."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases — shop like a local wherever your travel takes you."
+    },
+    {
+      "id": "no-annual-fee-with-costco",
+      "title": "No annual fee with active Costco membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "No annual fee with your active/paid Costco membership. No Authorized User fee."
+    },
+    {
+      "id": "damage-theft-purchase-protection",
+      "title": "Damage & Theft Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "May cover you for repairs or reimbursement if purchases made with your Citi card are damaged or stolen within 120 days (90 days for New York residents) of purchase or delivery."
+    },
+    {
+      "id": "worldwide-car-rental-insurance",
+      "title": "Worldwide Car Rental Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "You may be covered against theft or damage to a rental car when you pay for your rental with your Citi card and decline the rental company's collision loss/damage insurance."
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel & emergency assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Services available 24/7 for emergency travel arrangements, travel issues and more. Referrals or assistance is at no cost, but you pay for services used."
+    },
+    {
+      "id": "roadside-assistance-dispatch",
+      "title": "Roadside assistance dispatch service",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you have car trouble in the U.S., Puerto Rico and U.S. Virgin Islands, help sent directly to your location. You are responsible for costs of services provided."
+    },
+    {
+      "id": "citi-entertainment",
+      "title": "Citi Entertainment®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Entertainment access program with special access to purchase tickets to thousands of events, including presale tickets and exclusive experiences."
+    },
+    {
+      "id": "citi-flex-pay",
+      "title": "Citi® Flex Pay with Costco",
+      "category": "other",
+      "source": "issuer",
+      "description": "Buy Now. Pay Later. A flexible way to split eligible purchases into fixed monthly payments and pay over time using your eligible Citi credit card."
+    },
+    {
+      "id": "free-fico-score",
+      "title": "Free access to your FICO® Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free access to your FICO® score online to review your credit history."
+    },
+    {
+      "id": "citi-quick-lock",
+      "title": "Citi® Quick Lock",
+      "category": "other",
+      "source": "issuer",
+      "description": "Use Citi Quick Lock in the Citi Mobile App or at citi.com to instantly block new charges while allowing recurring transactions to continue."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.citi.com/credit-cards/costco-anywhere-visa-card",
+  "image": {
+    "url": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-costco-anywhere-visa-credit-card/citi-costco-anywhere-visa-credit-card_306x192.webp",
+    "attribution": "© Citi",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.citi.com/credit-cards/costco-anywhere-visa-card"
+  ],
+  "notes": "Verified against official Citi product page 2026-07-24. Annual fee $0 with active Costco membership confirmed. FX fee 0% (no foreign transaction fees) confirmed. Cash back categories (5%/4%/3%/2%/1%) confirmed with $7,000 combined yearly cap on gas/EV. APR numeric values not rendered on page (shown as '% - %'); preserved as null."
+}

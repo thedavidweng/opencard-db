@@ -1,0 +1,99 @@
+{
+  "id": "us-amex-rakuten",
+  "schema_version": "1.0.0",
+  "name": "Rakuten American Express Card",
+  "localized_names": {
+    "en": "Rakuten American Express Card"
+  },
+  "country": "us",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Ongoing variable purchase APR of 19.49%-28.49% (per NerdWallet, 2026)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Confirm foreign transaction fee on official terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% Cash Back on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Rakuten Dining Program purchases",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Eligible Rakuten purchases (online and in-store), extra Cash Back up to $10,000 per calendar year (cap was $7,000 before July 15, 2026)",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Groceries and other restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash Back Rewards are issued and redeemed through the cardholder's linked Rakuten account per Rakuten Terms & Conditions."
+  },
+  "signup_bonus": {
+    "amount": 25,
+    "unit": "usd",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$25 Cash Back welcome bonus after spending $500 in the first 90 days (launch offer).",
+    "as_of": "2026-07-25"
+  },
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.rakuten.com/american-express-card/",
+  "image": {
+    "url": null,
+    "attribution": "© Rakuten / American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.rakuten.com/american-express-card/",
+    "https://www.rakuten.com/help/article/rakuten-american-express-card-rewards-program-terms-41545446323987",
+    "https://www.prnewswire.com/news-releases/new-rakuten-american-express-card-powered-by-imprint-offers-an-extra-four-percent-cash-back-on-rakuten-purchases-302510202.html",
+    "https://www.nerdwallet.com/credit-cards/learn/rakuten-credit-card"
+  ],
+  "notes": "Rakuten American Express Card (launched July 2025). Issued by First Electronic Bank pursuant to a license from American Express; powered by Imprint Payments. No annual fee. Cash Back is issued/redeemed via the cardholder's linked Rakuten account (not Membership Rewards). Earn rates and issuer verified against the official Rakuten rewards program terms page and PR Newswire launch release; the 4% Rakuten-purchase cap increased from $7,000 to $10,000 per calendar year effective July 15, 2026. Signup bonus reflects the $25/$500/90-day launch offer; some third parties report a later increased offer."
+}

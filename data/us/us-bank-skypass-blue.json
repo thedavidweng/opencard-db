@@ -1,0 +1,91 @@
+{
+  "id": "us-us-bank-skypass-blue",
+  "schema_version": "1.0.0",
+  "name": "SkyBlue SKYPASS Visa Credit Card",
+  "localized_names": {
+    "en": "SkyBlue SKYPASS Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not stated on product page; see Cardmember Agreement for current rates."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not stated on product page."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "SKYPASS miles",
+    "rate_type": "miles_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X mile on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Rideshare services (e.g. Uber, Lyft)",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Streaming services (e.g. Netflix, Spotify)",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles awarded to primary cardmember SKYPASS account."
+  },
+  "signup_bonus": {
+    "amount": 10000.0,
+    "unit": "miles",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 10,000 Bonus Miles when you spend $1,000 in eligible purchases within the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.skypassvisa.com/credit/visaSkyBlueCard.do",
+  "image": {
+    "url": null,
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.skypassvisa.com/credit/visaSkyBlueCard.do"
+  ],
+  "notes": "Verified from official product page. APR and foreign transaction fee not stated on page. network_tier corrected from 'signature' to null — page refers to 'Visa Guide to Benefits' (not 'Visa Signature Guide to Benefits') and card name is 'SKYPASS SkyBlue Visa® Card' without Signature designation."
+}

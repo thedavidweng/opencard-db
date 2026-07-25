@@ -1,0 +1,207 @@
+{
+  "id": "us-amex-delta-skymiles-gold-business",
+  "schema_version": "1.0.0",
+  "name": "Delta SkyMiles Gold Business American Express Card",
+  "localized_names": {
+    "en": "Delta SkyMiles Gold Business American Express Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 150.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": "$0 intro annual fee for the first year, then $150"
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No Foreign Transaction Fees — 'Use your Delta SkyMiles® Gold Business American Express Card globally without incurring foreign transaction fees.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "delta_skymiles",
+    "currency_label": "Delta SkyMiles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X miles on other purchases made using the Delta SkyMiles® Gold Business Card."
+    },
+    "categories": [
+      {
+        "label": "Delta",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "U.S. Shipping & U.S. Advertising in Select Media",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 50000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "take-15-off-award-travel",
+      "title": "Take 15% Off Award Travel",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 15% anytime you book Award Travel with miles on Delta flights when using delta.com and the Fly Delta app. Discount not applicable to partner-operated flights or to taxes and fees."
+    },
+    {
+      "id": "check-two-bags-free",
+      "title": "Check Two Bags Free",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "First checked bag flies free on international and domestic Delta flights. Second bag flies free on domestic Delta flights too."
+    },
+    {
+      "id": "zone-5-priority-boarding",
+      "title": "Zone 5 Priority Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Board early, secure a spot for your carry-on, and enjoy plenty of time to settle in before takeoff on your next Delta flight with Zone 5 Priority Boarding."
+    },
+    {
+      "id": "delta-flight-credit",
+      "title": "$200 Delta Flight Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "After you spend $10,000 in purchases on your Card in a calendar year, you can receive a $200 Delta Flight Credit to use toward future travel. Issued as a Delta eCredit within 6-8 weeks."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "$120 Rideshare Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "After your first Card renewal, enroll and earn up to $10 in statement credits each month when using your Card on U.S. rideshare purchases with select providers."
+    },
+    {
+      "id": "delta-stays-credit",
+      "title": "$150 Delta Stays Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Get up to $150 back per year as a statement credit after using your Card to book prepaid hotels or vacation rentals through Delta Stays on delta.com."
+    },
+    {
+      "id": "in-flight-purchase-savings",
+      "title": "20% Back On In-Flight Purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Receive a 20% savings in the form of a statement credit on eligible Delta in-flight purchases after using your Card."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Use your Delta SkyMiles® Gold Business American Express Card globally without incurring foreign transaction fees."
+    },
+    {
+      "id": "pay-with-miles",
+      "title": "Pay with Miles",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Take up to $50 off the cost of your flight for every 5,000 miles you redeem with Pay with Miles when you book on delta.com."
+    },
+    {
+      "id": "global-assist-hotline",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "Whenever you travel more than 100 miles from home, Global Assist Hotline is available for 24/7 emergency assistance and coordination services, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Let employees buy what they need within limits you set. You'll earn miles on their purchases, and receive real-time alerts."
+    },
+    {
+      "id": "connect-to-quickbooks",
+      "title": "Connect to QuickBooks",
+      "category": "other",
+      "source": "issuer",
+      "description": "Connect to QuickBooks can help you manage your employee Business Card expenses easily. Transactions automatically sent to your Intuit QuickBooks."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to one extra year added to the Original Manufacturer's Warranty. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can help protect Covered Purchases for up to 90 days from the Covered Purchase date if it is stolen or accidentally damaged. Up to $1,000 per Covered Purchase, up to $50,000 per Card Member account per calendar year."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for up to $1,250 for carry-on Baggage and up to $500 for checked Baggage, in excess of coverage provided by the Common Carrier. For New York State residents, $10,000 aggregate maximum limit for all Covered Persons per Covered Trip."
+    },
+    {
+      "id": "car-rental-loss-and-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for Damage to or Theft of a Rental Vehicle when you use your Eligible Card to reserve and pay for the Entire Rental and decline the CDW. Not available for vehicles rented in Australia, Italy, and New Zealand. Secondary coverage."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "True",
+    "hotel_status": null,
+    "other": [
+      "Zone 5 Priority Boarding",
+      "Take 15% Off Award Travel",
+      "20% Back On In-Flight Purchases"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-gold/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/gold-delta-skymiles-business.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-gold/"
+  ],
+  "notes": "Verified from official product page. Rewards currency is Delta SkyMiles (not Membership Rewards). APR not shown on page. Annual fee confirmed as $0 intro first year then $150."
+}

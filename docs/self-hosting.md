@@ -2,6 +2,15 @@
 
 You get an unlimited (within **your** Free plan quotas) private API. No paid Cloudflare products required.
 
+> **Don't need an API?** If you only need to read the catalog, skip the Worker
+> entirely. The committed [`exports/`](../exports/) directory holds the full
+> generated catalog (7 index JSONs plus `cards.csv` and `cards.yaml`). Vendor it
+> into your app, or serve it straight from a global CDN with zero quota via a
+> tag-pinned jsDelivr URL:
+> `https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/cards-all.json`.
+> See the [README "Get the data"](../README.md#get-the-data) section. Run the
+> Worker only when you need server-side filtering, search, or per-card lookup.
+
 ## Prerequisites
 
 - Cloudflare account (Free)

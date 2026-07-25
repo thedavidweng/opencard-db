@@ -1,0 +1,146 @@
+{
+  "id": "us-bank-of-america-atmos-rewards-ascent",
+  "schema_version": "1.0.0",
+  "name": "Atmos™ Rewards Ascent Visa Signature® Credit Card",
+  "localized_names": {
+    "en": "Atmos™ Rewards Ascent Visa Signature® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 27.49,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "notes": "Prime + 12.74% to Prime + 20.74% (APR 19.49% to 27.49% as of 03/31/2026). Penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Visa Signature cards typically require good to excellent credit."
+  },
+  "rewards": {
+    "currency": "alaska_mileage_plan",
+    "currency_label": "Atmos Rewards Points (Alaska Mileage Plan miles)",
+    "rate_type": "miles_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Alaska Airlines and Hawaiian Airlines purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas, EV charging, cable, streaming, local transit/rideshare",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "10% rewards bonus on all points if you have an eligible Bank of America account. No blackout dates on Alaska Airlines and Hawaiian Airlines flights. Points don't expire on active accounts."
+  },
+  "signup_bonus": {
+    "amount": 70000,
+    "unit": "miles",
+    "spend_required": 2500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "70,000 bonus points and a $99 Companion Fare (plus taxes and fees from $23) after spending $2,500 in purchases within first 90 days. Limited-time online offer.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "companion-fare",
+      "title": "Annual $99 Companion Fare",
+      "category": "other",
+      "source": "co-brand",
+      "description": "$99 Companion Fare (plus taxes and fees from $23) each account anniversary after spending $6,000 or more on purchases within the prior anniversary year."
+    },
+    {
+      "id": "free-checked-bag",
+      "title": "Free Checked Bag + Preferred Boarding",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Free checked bag and preferred boarding for you and up to 6 guests on same reservation when paying for Alaska/Hawaiian Airlines flight with card."
+    },
+    {
+      "id": "inflight-discount",
+      "title": "20% Back on Inflight Purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "20% back on Alaska Airlines and Hawaiian Airlines inflight purchases when paying with card."
+    },
+    {
+      "id": "lounge-discount",
+      "title": "$100 Off Alaska Lounge+ Membership",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "$100 off annual Alaska Lounge+ Membership purchased with card."
+    },
+    {
+      "id": "rewards-bonus",
+      "title": "10% Rewards Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "10% rewards bonus on all points earned if you have an eligible Bank of America account."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the U.S."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "Free checked bag for cardholder and up to 6 guests on same reservation on Alaska/Hawaiian Airlines flights",
+    "hotel_status": null,
+    "other": [
+      "Annual $99 Companion Fare after $6,000 spend per anniversary year",
+      "20% back on inflight purchases",
+      "$100 off Alaska Lounge+ Membership",
+      "10% rewards bonus with eligible BofA account",
+      "Preferred boarding on Alaska/Hawaiian Airlines"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-credit-card/",
+  "image": {
+    "url": null,
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-credit-card/",
+    "https://www.bankofamerica.com/content/documents/creditcard/atmos_rewards_ascent_visa_signature_english.pdf"
+  ],
+  "notes": "Atmos Rewards is the August 2025 rebrand of Alaska Airlines credit cards. Visa Signature. $95 annual fee. 70K bonus + $99 Companion Fare after $2,500 in 90 days."
+}

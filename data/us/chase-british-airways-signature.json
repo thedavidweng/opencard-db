@@ -1,0 +1,139 @@
+{
+  "id": "us-chase-british-airways-signature",
+  "schema_version": "1.0.0",
+  "name": "British Airways Credit Card",
+  "localized_names": {
+    "en": "British Airways Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95.0,
+    "currency": "USD",
+    "first_year": 95.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "19.24% Min. of (6.75+12.49) and 29.99% to 27.74% Min. of (6.75+20.99) and 29.99% variable APR."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "avios",
+    "currency_label": "Avios",
+    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1 Avios per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "British Airways, Aer Lingus, Iberia, and LEVEL flight purchases",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "Hotel accommodations booked directly with the hotel",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Avios points earned during a billing cycle will be automatically transferred to your British Airways Club account after the end of each billing cycle. Avios points expire according to British Airways Club program terms (36 consecutive months of inactivity)."
+  },
+  "signup_bonus": {
+    "amount": 75000.0,
+    "unit": "Avios",
+    "spend_required": 5000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 75,000 Avios after you spend $5,000 on purchases within the first 3 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "ba-10pct-discount",
+      "title": "10% Off On British Airways Flights",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Take 10% off British Airways flights starting in the US when you book through the website provided in your welcome materials."
+    },
+    {
+      "id": "reward-flight-statement-credits",
+      "title": "Up to $600 Reward Flight Statement Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive statement credits of $100 for Economy and Premium Economy or $200 for Business and First Class seats, three times per year, up to $600, when you book a Reward Flight travelling on British Airways and pay taxes, fees and carrier charges with the card."
+    },
+    {
+      "id": "travel-together-ticket",
+      "title": "Travel Together Ticket",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn a Travel Together Ticket every calendar year you make $30,000 in purchases on your British Airways credit card. Valid for two years when you redeem Avios for a flight on British Airways for a companion traveling on the same flight, or use it for a 50% discount on the Avios price when booking a solo reward flight."
+    },
+    {
+      "id": "paying-with-avios",
+      "title": "Paying with Avios",
+      "category": "other",
+      "source": "co-brand",
+      "description": "British Airways Visa Signature cardmembers can pay for the taxes, fees and carrier charges for flights using Avios. Must make reward booking via British Airways Club Contact Centre."
+    },
+    {
+      "id": "dashpass",
+      "title": "Complimentary DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get one-year complimentary DashPass membership for both DoorDash and Caviar. Activate by Dec 31, 2027."
+    },
+    {
+      "id": "chase-pay-over-time",
+      "title": "Chase Pay Over Time",
+      "category": "other",
+      "source": "issuer",
+      "description": "Break up credit card purchases into budget friendly payments. After purchase: pay off eligible purchases of $100 or more in smaller equal monthly payments. No interest, just a fixed monthly fee."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "10% off British Airways flights from US",
+      "Up to $600 Reward Flight Statement Credits per year",
+      "Travel Together Ticket after $30,000 annual spend"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/avios/british-airways",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/avios/british-airways"
+  ],
+  "notes": "Verified from official Chase product page. Network corrected from mastercard/world to visa/signature based on page title 'British Airways Visa Signature® Credit Card'. FX fee not explicitly stated on this page (unlike Iberia page)."
+}
