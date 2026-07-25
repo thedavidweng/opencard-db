@@ -1,0 +1,139 @@
+{
+  "id": "us-fnbo-best-western-rewards-premium",
+  "schema_version": "1.0.0",
+  "name": "Best Western Rewards Premium",
+  "localized_names": {
+    "en": "Best Western Rewards Premium"
+  },
+  "country": "us",
+  "issuer": "First Bank & Trust",
+  "issuer_id": "first-bank-trust",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "USD",
+    "first_year": 89,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 25.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "25.99% to 29.99% variable APR based on Prime Rate. Minimum interest charge $1.50. Balance transfer fee 4% or $5 min. Cash advance fee 5% or $10 min. Accurate as of 12/31/2025."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Not explicitly stated on the official page. Mercury Financial focuses on credit-building/broader accessibility. Prequalification available without hard pull. Bonus offer varies by prequalification."
+  },
+  "rewards": {
+    "currency": "bwr_points",
+    "currency_label": "Best Western Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 BWR Points per $1 on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Best Western stays and purchases",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Gas station and grocery store purchases",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "BWR Points redeemable only through Best Western Rewards program. Redemptions start at 5,000 points and vary by location and date of stay. Points posted to linked BWR Account monthly (allow 30 days after billing cycle)."
+  },
+  "signup_bonus": {
+    "amount": 80000,
+    "unit": "bwr_points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Up to 80,000 BWR Points after spending $3,000 in first 90 days. Actual bonus and spend requirement shown before applying via prequalification tool. Pay with Points value = $400.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "platinum-elite-status",
+      "title": "Automatic Platinum Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic Platinum Elite status in BWR Program as long as Card Account remains open and in Good Standing. Allow 30 days after account opening."
+    },
+    {
+      "id": "anniversary-free-night",
+      "title": "Anniversary Free Night Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "One Free Night Award each 12-month period after becoming a cardmember and after payment of annual fee. Redeemable at any Best Western branded hotel in US, Canada, or Caribbean. Valid 1 year after issue."
+    },
+    {
+      "id": "spend-free-night",
+      "title": "Free Night Award with Qualifying Spend",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Additional Free Night Award each 12-month period after $10,000 in Net Purchases. Up to two Free Night Awards total per year."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the US."
+    },
+    {
+      "id": "cellphone-protection",
+      "title": "Cellphone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Cellphone protection included."
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation and Interruption Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Trip cancellation and interruption reimbursement included."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Automatic Platinum Elite status in Best Western Rewards program",
+    "other": [
+      "Up to two Free Night Awards each anniversary (one after annual fee, one after $10,000 spend)",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
+    "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html"
+  ],
+  "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (managed by Mercury Financial) in Aug 2024. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page (no standalone First Bank & Trust public page). Visa Signature."
+}
