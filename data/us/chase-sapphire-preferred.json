@@ -20,16 +20,17 @@
   },
   "apr": {
     "purchase": {
-      "min": 19.99,
-      "max": 28.49,
+      "min": 19.24,
+      "max": 27.49,
       "type": "variable"
     },
-    "notes": "Variable APR; see current Chase offer for exact range."
+    "notes": "Variable APR from Chase product page Pricing & Terms strip; confirm current range."
   },
   "fx_fee": {
     "percent": 0,
     "notes": "No foreign transaction fees."
   },
+
   "credit_required": {
     "score_band": "good_to_excellent",
     "notes": "Chase generally targets good-to-excellent credit."
@@ -73,13 +74,13 @@
     "rate_type": "points_multiplier"
   },
   "signup_bonus": {
-    "amount": 60000,
+    "amount": 75000,
     "unit": "points",
-    "spend_required": 4000,
+    "spend_required": 5000,
     "spend_currency": "USD",
     "months": 3,
-    "description": "Earn bonus Ultimate Rewards points after meeting minimum spend; offer varies.",
-    "as_of": "2026-07-23"
+    "description": "Earn 75,000 Ultimate Rewards points after spending $5,000 in the first 3 months (marketing also shows a struck-through higher amount); offer ends soon / varies — verify on Chase.",
+    "as_of": "2026-07-24"
   },
   "benefits": [
     {
@@ -131,11 +132,11 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-24",
   "sources": [
     "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
     "https://www.chase.com/personal/credit-cards/sapphire/preferred"
   ],
-  "notes": "Signup bonus and APR ranges change frequently; verify on official page before publishing comparisons.",
+  "notes": "Signup bonus refreshed 2026-07-24 from Chase official product page (75k after $5k/3mo). Cross-checked against credit-card-bonuses-api as a discovery clue only; official Chase page remains Source.",
   "segment": "personal"
 }
