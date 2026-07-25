@@ -134,12 +134,12 @@
   },
   "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
   "image": {
-    "url": null,
+    "url": "https://business.bankofamerica.com/content/dam/consumer/credit-cards/1bbt_bussigcm_v_atmos_336px.png",
     "attribution": "© Bank of America",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
   ],

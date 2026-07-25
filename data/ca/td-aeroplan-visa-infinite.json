@@ -21,11 +21,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 21.99,
+      "max": 21.99,
       "type": "variable"
     },
-    "notes": "See TD Canada Trust for current rates."
+    "notes": "Purchase interest rate 21.99%; cash advance rate 22.99% per TD product page."
   },
   "fx_fee": {
     "percent": 2.5,
@@ -111,12 +111,12 @@
   },
   "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
   "image": {
-    "url": null,
+    "url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card/_jcr_content/root/container/responsivegrid/container_307418962_/container/bannerimage.coreimg.jpeg/1707764569803/aeroplan-infinite-750x510.jpeg",
     "attribution": "© The Toronto-Dominion Bank",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
     "https://www.td.com/ca/en/personal-banking/products/credit-cards"
