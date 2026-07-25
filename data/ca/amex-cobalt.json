@@ -20,10 +20,17 @@
     "waiver_conditions": "Monthly fee model; first months often promotional — confirm on Amex Canada."
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": "variable" },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
     "notes": "See Amex Canada product page for current rates."
   },
-  "fx_fee": { "percent": 2.5, "notes": "Foreign conversion fee typically applies; confirm current percentage." },
+  "fx_fee": {
+    "percent": 2.5,
+    "notes": "Foreign conversion fee typically applies; confirm current percentage."
+  },
   "credit_required": {
     "score_band": "good",
     "notes": "Canadian credit approval criteria apply."
@@ -43,7 +50,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Membership Rewards Canada transfer and travel redemption options."
+    "redemption_notes": "Membership Rewards Canada transfer and travel redemption options.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": null,
@@ -93,5 +101,6 @@
     "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
     "https://www.americanexpress.com/ca/en/credit-cards/"
   ],
-  "notes": "Cobalt is the product name, not a Network Tier."
+  "notes": "Cobalt is the product name, not a Network Tier.",
+  "segment": "personal"
 }
