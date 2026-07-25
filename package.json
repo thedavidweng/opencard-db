@@ -13,8 +13,9 @@
     "optimize:images": "node --experimental-strip-types scripts/optimize-images.ts",
     "triage:pr": "node --experimental-strip-types scripts/run-pr-triage.ts",
     "triage:base-cards": "node --experimental-strip-types scripts/build-base-cards.ts",
+    "find:stale-cards": "node --experimental-strip-types scripts/find-stale-cards.ts",
     "embed:default-card": "node --experimental-strip-types scripts/embed-default-card.ts",
-    "test": "node --experimental-strip-types --test tests/schema/schema.test.ts tests/schema/lint.test.ts tests/indexes/indexes.test.ts tests/exports/exports.test.ts tests/api/api.contract.test.ts tests/api/card-image.test.ts tests/pr/pr-triage.test.ts tests/pr/optimize-images.test.ts tests/pr/new-card.test.ts",
+    "test": "node --experimental-strip-types --test tests/schema/schema.test.ts tests/schema/lint.test.ts tests/indexes/indexes.test.ts tests/exports/exports.test.ts tests/api/api.contract.test.ts tests/api/card-image.test.ts tests/pr/pr-triage.test.ts tests/pr/optimize-images.test.ts tests/pr/new-card.test.ts tests/pr/find-stale-cards.test.ts",
     "worker:dev": "npm run dev --prefix worker",
     "worker:deploy": "npm run deploy --prefix worker"
   },
