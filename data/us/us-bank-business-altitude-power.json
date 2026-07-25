@@ -11,9 +11,10 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0,
     "currency": "USD",
     "first_year": null,
     "waiver_conditions": null
@@ -38,19 +39,20 @@
     "currency": "points",
     "currency_label": "Altitude Points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 2,
       "description": "2X points on all purchases. No caps or limits on total rewards earned."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Prepaid hotel and car rentals booked directly in the Travel Center",
+        "points_per_dollar": 6,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Mobile wallet and virtual card purchases (up to $5,000 combined each quarter)",
+        "points_per_dollar": 2.5,
         "cap": null
       }
     ],
@@ -105,17 +107,16 @@
     "hotel_status": null,
     "other": []
   },
-  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-world-elite-mastercard.html",
+  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-credit-card.html",
   "image": {
     "url": null,
     "attribution": "© U.S. Bank",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
-    "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-world-elite-mastercard.html",
     "https://www.usbank.com/business-banking/business-credit-cards/business-altitude-power-credit-card.html"
   ],
-  "notes": "Product page fetched successfully. Annual fee and APR not displayed on page; terms link (applications.usbank.com/pdap/terms) failed to fetch. Page title confirms 'Visa Signature®' tier. The product URL mentions 'world-elite-mastercard' but the actual page content says 'Visa Signature® Card'."
+  "notes": "Product page fetched and verified. No annual fee ($0). APR not displayed on page; terms link (applications.usbank.com/pdap/terms) failed to fetch. Page confirms 'Visa Signature®' tier and the creditor/issuer is U.S. Bank National Association pursuant to a license from Visa. An alternate stale URL slug referenced 'world-elite-mastercard' but the product is a Visa Signature card; official_url reconciled to the credit-card.html page."
 }
