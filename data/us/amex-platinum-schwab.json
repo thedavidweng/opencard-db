@@ -1,9 +1,9 @@
 {
   "id": "us-amex-platinum-schwab",
   "schema_version": "1.0.0",
-  "name": "Charles Schwab",
+  "name": "The Platinum Card® from American Express Exclusively for Charles Schwab",
   "localized_names": {
-    "en": "Charles Schwab"
+    "en": "The Platinum Card® from American Express Exclusively for Charles Schwab"
   },
   "country": "us",
   "issuer": "American Express",
@@ -11,6 +11,7 @@
   "network": "amex",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 895,
@@ -43,6 +44,7 @@
     "currency": "membership_rewards",
     "currency_label": "Membership Rewards points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1x point per dollar on all other eligible purchases"
@@ -66,13 +68,13 @@
     "redemption_notes": "Membership Rewards points transfer to airline/hotel partners OR redeem via Invest with Rewards: deposit into eligible Schwab brokerage account at 1.1 cents per point (10,000 points = $110). Schwab Appreciation Bonus: $100 statement credit with $250K-$1M qualifying Schwab holdings, $200 with $1M-$10M."
   },
   "signup_bonus": {
-    "amount": 150000,
+    "amount": 80000,
     "unit": "membership_rewards_points",
     "spend_required": 12000,
     "spend_currency": "USD",
     "months": 6,
-    "description": "Earn 150,000 Membership Rewards points after spending $12,000 in first 6 months. Elevated offer expires 7/8/2026. Standard offer is 80,000 points.",
-    "as_of": "2026-07-23"
+    "description": "Earn 80,000 Membership Rewards points after spending $12,000 in eligible purchases within the first 6 months of Card Membership.",
+    "as_of": "2026-07-25"
   },
   "benefits": [
     {
@@ -207,10 +209,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-platinum-card/ep-IDAE?print=false",
     "https://clientcontent.schwabcdn.com/credit-cards/faq"
   ],
-  "notes": "Amex Platinum Card for Schwab. Annual fee $895. No standalone /card/ product page exists for this partner card; the Amex terms/disclosures page is the official product page. network_tier is none for Amex."
+  "notes": "The Platinum Card from American Express Exclusively for Charles Schwab. Annual fee $895. Name and welcome offer re-verified 2026-07-25 against the Amex application offer terms: current standard offer is 80,000 Membership Rewards points after $12,000 spend in 6 months (the previously listed elevated 150,000-point offer expired 7/8/2026). No standalone /card/ product page exists for this partner card; the Amex terms/disclosures application page is the official source. network_tier is none for Amex."
 }
