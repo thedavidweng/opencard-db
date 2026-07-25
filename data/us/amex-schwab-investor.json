@@ -1,0 +1,107 @@
+{
+  "id": "us-amex-schwab-investor",
+  "schema_version": "1.0.0",
+  "name": "Charles Schwab Investor Credit Card™ from American Express",
+  "localized_names": {
+    "en": "Charles Schwab Investor Credit Card™ from American Express"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for first 6 months from account opening. Then 19.49% to 28.49% variable based on creditworthiness. Cash Advance APR 28.74%. Penalty APR 29.99%. Variable APRs will not exceed 29.99%. 0% introductory plan fee for first 6 months, then up to 1.33%. Accurate as of 07/24/26."
+  },
+  "fx_fee": {
+    "percent": 2.7,
+    "notes": "2.7% of each transaction after conversion to US dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "APR based on creditworthiness and other factors. Must maintain an eligible Schwab account (Schwab One, Schwab General Brokerage Account, or Schwab Traditional/Roth/Rollover IRA not managed by an independent advisor)."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back (deposited to Schwab account)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% cash back on all eligible purchases, auto-deposited to linked Schwab brokerage account"
+    },
+    "categories": [],
+    "redemption_notes": "Cash back is 1.5% of dollar amount of eligible purchases. Deposited directly into linked eligible Schwab brokerage account approximately 8-12 weeks after end of billing period. No cash back earned if Minimum Payment Due is not paid by Payment Due Date. Eligible account means (1) a Schwab One or Schwab General Brokerage Account or (2) a Schwab Traditional, Roth or Rollover IRA not managed by an independent investment advisor."
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "USD statement credit",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 Statement Credit after making eligible purchases totaling $1,000 or more within first 3 months of Card Membership. Statement credit applied 8-12 weeks after Threshold Amount is met.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "$0 Annual Fee",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No annual fee for the Charles Schwab Investor Credit Card from American Express."
+    },
+    {
+      "id": "intro-apr",
+      "title": "0% Introductory APR for 6 Months",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% introductory APR on purchases for first 6 months from account opening, plus 0% introductory plan fee for first 6 months. After that, APR 19.49% to 28.49% variable and plan fee up to 1.33%."
+    },
+    {
+      "id": "venue-collection-concessions-credit",
+      "title": "American Express Venue Collection Concessions Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn 10% back (up to $250) in statement credits per calendar year after using enrolled Card for qualifying food and beverage concessions purchases at stadiums and arenas in the American Express Venue Collection. Offer ends 12/31/2026."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "2.7% foreign transaction fee"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false"
+  ],
+  "notes": "Charles Schwab Investor Credit Card from American Express. $0 annual fee. 1.5% flat cash back auto-deposited to Schwab brokerage. 2.7% foreign transaction fee. 0% intro APR for 6 months. $200 statement credit after $1,000 in first 3 months (corrected from prior $300 — page shows $200). Issued by American Express National Bank."
+}
