@@ -50,12 +50,12 @@
     "categories": [
       {
         "label": "6X points on eligible JetBlue purchases",
-        "points_per_dollar": null,
+        "points_per_dollar": 6,
         "cap": null
       },
       {
         "label": "2X points at restaurants and eligible grocery stores",
-        "points_per_dollar": null,
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
