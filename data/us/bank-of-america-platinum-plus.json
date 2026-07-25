@@ -9,8 +9,9 @@
   "issuer": "Bank of America",
   "issuer_id": "bank-of-america",
   "network": "mastercard",
-  "network_tier": "world",
+  "network_tier": "none",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -64,7 +65,7 @@
       "id": "mastercard-easy-saving",
       "title": "Mastercard Easy Saving® Program",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "No coupons. No codes. Just automatic rebates when you pay with your card."
     },
     {
@@ -99,15 +100,15 @@
   },
   "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/platinum-plus-business-credit-card",
   "image": {
-    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/Logos/en_US/logos/colored_flagscape-v2.png",
+    "url": null,
     "attribution": "© Bank of America",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.bankofamerica.com/smallbusiness/credit-cards/products/platinum-plus-business-credit-card",
     "https://business.bankofamerica.com/en/credit-cards/platinum-plus"
   ],
-  "notes": "Verified from official BofA product page and business portal. Annual fee $0 confirmed ('Enjoy no annual fee'). APR values shown as server-side placeholders (ProdStanMinRate% etc.) — actual numeric rates not available in fetched text. $300 statement credit bonus after $3,000 spend in 90 days. No rewards program (low-interest card)."
+  "notes": "Verified from official BofA product page and business portal. Annual fee $0 confirmed ('Enjoy no annual fee'). APR values shown as server-side placeholders (ProdStanMinRate% etc.) — actual numeric rates not available in fetched text. $300 statement credit bonus after $3,000 spend in 90 days. No rewards program (low-interest card). Card is marketed as 'Platinum Plus Mastercard Business' with no World designation, so network_tier set to 'none'. APR and foreign transaction fee pending re-verification against the official page (rates render as server-side placeholders)."
 }
