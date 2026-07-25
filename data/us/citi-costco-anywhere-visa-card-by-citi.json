@@ -9,8 +9,9 @@
   "issuer": "Citi",
   "issuer_id": "citi",
   "network": "visa",
-  "network_tier": "none",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -39,29 +40,38 @@
     "currency": "cash_back",
     "currency_label": "Costco Cash Back Rewards",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1.0,
       "description": "1% cash back on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas at Costco (worldwide)",
+        "points_per_dollar": 5.0,
+        "cap": {
+          "amount": 7000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Other eligible gas and EV charging",
+        "points_per_dollar": 4.0,
+        "cap": {
+          "amount": 7000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Restaurants and eligible travel (incl. Costco Travel)",
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "All other Costco and Costco.com purchases",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -155,7 +165,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.citi.com/credit-cards/costco-anywhere-visa-card"
   ],
