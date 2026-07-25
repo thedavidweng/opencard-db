@@ -1,0 +1,111 @@
+{
+  "id": "us-first-ana-card-usa-plus",
+  "schema_version": "1.0.0",
+  "name": "ANA CARD U.S.A. Plus",
+  "localized_names": {
+    "en": "ANA CARD U.S.A. Plus"
+  },
+  "country": "us",
+  "issuer": "First National Bank of Omaha",
+  "issuer_id": "fnbo",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 85.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": "$0 Intro Annual Fee for the 1st year (After that, $85 annually) — per campaign offer. Application Period: April 1, 2026 - July 31, 2026."
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See Summary of Credit Terms for APR details. Not visible on product page."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No Foreign Transaction Fee on purchases in currencies other than USD."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Designed for ANA Mileage Club members with a U.S. address, even without a U.S. credit history."
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "ANA Mileage Club Miles",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "Earn 1X Mile per $1 spent on all other purchases"
+    },
+    "categories": [],
+    "redemption_notes": "See the Credit Card Rewards Terms and Conditions for details. See the AMC Program Terms and Conditions at ana.co.jp/en/us/amc/ for information regarding expiration, redemption, forfeiture, and other limitations.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 10000.0,
+    "unit": "miles",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Earn up to 10,000 Bonus Miles with the ANA CARD U.S.A. Plus. Receive 5,000 bonus miles after your first purchase. Campaign application period: April 1, 2026 - July 31, 2026.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fee",
+      "title": "No Foreign Transaction Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No Foreign Transaction Fee on purchases in currencies other than USD."
+    },
+    {
+      "id": "extra-flight-bonus-miles",
+      "title": "Extra Flight Bonus Miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "Extra Flight Bonus Miles on eligible ANA flights."
+    },
+    {
+      "id": "first-purchase-bonus",
+      "title": "5,000 Bonus Miles After First Purchase",
+      "category": "other",
+      "source": "issuer",
+      "description": "You will receive 5,000 bonus miles for your first purchase using your card."
+    },
+    {
+      "id": "ana-partner-discounts",
+      "title": "Discount Benefits at ANA Partner Hotels and Group Retail Stores",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive discounts on ANA in-flight purchases, ANA Group duty-free stores, ANA Hotels, and ANA-IHG co-branded hotels."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Discounts on ANA in-flight purchases, ANA Group duty-free stores, ANA Hotels, and ANA-IHG co-branded hotels"
+    ]
+  },
+  "official_url": "https://www.anacardusa.com/en/",
+  "image": {
+    "url": "https://www.anacardusa.com/wp-content/uploads/2025/02/card-new.png",
+    "attribution": "© First National Bank of Omaha",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.anacardusa.com/en/"
+  ],
+  "notes": "Verified from official ANA CARD U.S.A. product page. Corrections: name updated from 'Home' to 'ANA CARD U.S.A. Plus'; first_year updated from $85 to $0 (campaign: $0 Intro Annual Fee for the 1st year); issuer updated from 'First Bankcard' to 'First National Bank of Omaha' (page states 'Cards are issued by First National Bank of Omaha (FNBO®)'). Signup bonus of 10,000 miles includes 5,000 after first purchase; remaining 5,000 likely from campaign spend (page says 'Earn up to 10,000 Bonus Miles'). Campaign also mentions '$100 e-gift card for flying ANA/ANA Group North America routes'.",
+  "segment": "personal"
+}
