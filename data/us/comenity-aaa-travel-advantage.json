@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -44,22 +45,42 @@
     "currency_label": "Cash Back (USD)",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1,
       "description": "1% cash back on all other purchases"
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas and electric vehicle charging stations",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 350.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Travel",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Restaurants",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery store",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "AAA purchases",
+        "points_per_dollar": 3,
         "cap": null
       }
     ],
-    "redemption_notes": "Cash back can be redeemed as statement credits, direct deposit, rewards and qualifying purchases at participating AAA locations. This rewards program is provided by Comenity Capital Bank."
+    "redemption_notes": "Cash back can be redeemed as statement credits, direct deposit, rewards and qualifying purchases at participating AAA locations. Maximum of $350 cash back per calendar year on the 5% gas/EV category (1% thereafter). Rewards program provided by Comenity Capital Bank.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": null,
   "benefits": [
@@ -69,13 +90,6 @@
       "category": "other",
       "source": "issuer",
       "description": "0% fees Foreign transaction fees — you won't be charged a foreign transaction fee when you travel abroad."
-    },
-    {
-      "id": "double-cash-back-member-first",
-      "title": "Double Cash Back on Member First Purchases",
-      "category": "other",
-      "source": "issuer",
-      "description": "Earn double cash back on all Member First purchases when you use your AAA Visa Signature credit card. AAA Travel Advantage cardholders earn 6% (normally 3%). Valid for AAA members on purchases made at AAA or directly with Member First. Offer valid 6/1/26 - 6/30/26."
     }
   ],
   "travel_perks": {
@@ -93,7 +107,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.ace.aaa.com/financial/aaa-credit-card.html",
     "https://finance.aaa.com/credit-card/travel"
