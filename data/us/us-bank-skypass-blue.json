@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -37,6 +38,7 @@
   "rewards": {
     "currency": "miles",
     "currency_label": "SKYPASS miles",
+    "rate_type": "miles_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.0,
@@ -44,13 +46,13 @@
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Rideshare services (e.g. Uber, Lyft)",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Streaming services (e.g. Netflix, Spotify)",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -81,7 +83,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.skypassvisa.com/credit/visaSkyBlueCard.do"
   ],
