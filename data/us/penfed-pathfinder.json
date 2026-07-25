@@ -1,0 +1,170 @@
+{
+  "id": "us-penfed-pathfinder",
+  "schema_version": "1.0.0",
+  "name": "Pathfinder",
+  "localized_names": {
+    "en": "Pathfinder"
+  },
+  "country": "us",
+  "issuer": "PenFed",
+  "issuer_id": "penfed",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": "Waived for PenFed Honors Advantage Members (active military, Reserves, National Guard, honorably discharged veterans, retired military, OR primary owner on both credit card and a PenFed checking account - Access America Checking or Free Checking with $500 min balance or $500+ monthly direct deposits)."
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.99,
+      "max": 17.99,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "17.99% variable APR based on creditworthiness; varies with Prime Rate. 0% introductory APR for 12 months on balance transfers made in first 60 days. Penalty APR applies if minimum payment not received within 60 days."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Credit score of 700+ generally recommended; PenFed membership required."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "PenFed Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5X points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Travel",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Dining",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points valued at minimum $0.0085 each, up to $0.01. Redeem for travel, merchandise, and gift cards. Points expire 5 years from end of month earned. No limit on points earned. 4X travel / 3X dining for PenFed Honors Advantage Members."
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "50,000 bonus points after spending $3,000 in purchase transactions within the first 90 days of account opening (up to $500 in value).",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass Lounge Membership",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Access over 1,200 VIP lounges worldwide with a complimentary annual Priority Pass Select membership, with an accompanying guest. Lounge visit fees apply."
+    },
+    {
+      "id": "global-entry-credit",
+      "title": "Global Entry Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$120 statement credit towards Global Entry every 4 years when you charge the program fee to your card."
+    },
+    {
+      "id": "tsa-precheck-credit",
+      "title": "TSA PreCheck Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$85 statement credit towards TSA PreCheck every 4 years when you charge the program fee to your card."
+    },
+    {
+      "id": "airline-ancillary-credit",
+      "title": "Airline Ancillary Travel Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credits up to $100 per calendar year toward incidental air travel fees such as baggage fees, flight-change fees, in-flight food and beverage, airport lounge day-passes."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "network",
+      "description": "Automatic protection for physical damage, theft, reasonable and customary towing, and loss-of-use charges when renting with the card."
+    },
+    {
+      "id": "trip-delay",
+      "title": "Trip Delay Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers up to $300 per purchased ticket for reasonable expenses incurred when delayed for more than 12 hours."
+    },
+    {
+      "id": "concierge",
+      "title": "Complimentary Concierge Service",
+      "category": "other",
+      "source": "network",
+      "description": "Visa concierge service available 24/7, 365 days a year for travel, dining, and entertainment needs."
+    },
+    {
+      "id": "luxury-hotel-collection",
+      "title": "Access to Luxury Hotel Collection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to luxury hotels around the world with premium offers and discounts."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protect your cell phone against theft and damage by paying your monthly wireless bill with your PenFed credit card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Priority Pass Select",
+      "notes": "Complimentary annual membership; access to 1,200+ VIP lounges worldwide; accompanying guest included; lounge visit fees apply"
+    },
+    "tsa_precheck_credit": {
+      "amount": 85,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "global_entry_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "$100 annual airline ancillary travel statement credit",
+      "Access to Luxury Hotel Collection",
+      "Trip Delay Reimbursement up to $300 per ticket"
+    ]
+  },
+  "official_url": "https://www.penfed.org/credit-cards/pathfinder-rewards",
+  "image": {
+    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+    "attribution": "© PenFed",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.penfed.org/credit-cards/pathfinder-rewards",
+    "https://www.penfed.org/content/dam/penfed/en/general/pdf/credit-cards/Pathfinder_RWDTC.pdf"
+  ],
+  "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included."
+}
