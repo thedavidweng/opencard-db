@@ -83,6 +83,34 @@ export function hostnameAllowed(hostname: string, domains: string[]): boolean {
   return domains.some((d) => h === d || h.endsWith(`.${d}`));
 }
 
+/**
+ * Unwrap a Wayback Machine URL to the archived original.
+ * "https://web.archive.org/web/20260725000000/https://www.chase.com/x"
+ * → "https://www.chase.com/x". An archived official page keeps its
+ * provenance: the allowlist is checked against the INNER url. Returns the
+ * input unchanged for non-archive URLs; null for a malformed wayback path.
+ */
+export function unwrapArchiveUrl(url: string): string | null {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return url;
+  }
+  if (parsed.hostname.toLowerCase() !== "web.archive.org") return url;
+  const m = parsed.pathname.match(/^\/web\/[0-9a-z_*]+\/(.+)$/i);
+  if (!m) return null;
+  let inner = m[1];
+  // Wayback drops one slash in "https:/example.com" sometimes; tolerate it.
+  inner = inner.replace(/^(https?):\/+/i, "$1://");
+  try {
+    new URL(inner);
+    return inner;
+  } catch {
+    return null;
+  }
+}
+
 function tierProblem(tier: string, ctx: LintContext): string | null {
   if (ctx.tiers.has(tier)) return null;
   if (tier.includes(":")) {
@@ -134,9 +162,17 @@ export function lintCard(card: Card, ctx: LintContext): string[] {
       });
     }
     for (const { field, url } of provenance) {
+      // Archived official pages count as official: validate the inner URL.
+      const effective = unwrapArchiveUrl(url);
+      if (effective === null) {
+        problems.push(
+          `${field} is a malformed web.archive.org URL — use the full "https://web.archive.org/web/<timestamp>/<original-url>" form`,
+        );
+        continue;
+      }
       let hostname: string;
       try {
-        hostname = new URL(url).hostname;
+        hostname = new URL(effective).hostname;
       } catch {
         // Malformed URL — the ajv "format": "uri" check already reports it.
         continue;
@@ -231,6 +267,40 @@ export function lintCard(card: Card, ctx: LintContext): string[] {
     problems.push(
       `discontinued_date set but status is "${card.status}" (expected "discontinued")`,
     );
+  }
+
+  // secondary_sources are a lower-confidence tier for cards whose official
+  // pages are gone — active cards must stick to official (or archived) pages.
+  const secondary = card.secondary_sources as unknown;
+  if (Array.isArray(secondary) && secondary.length > 0 && card.status !== "discontinued") {
+    problems.push(
+      `secondary_sources are only permitted on discontinued cards — active cards must cite official pages in sources (use a web.archive.org snapshot of the official page if the live page moved)`,
+    );
+  }
+
+  // Art provenance coherence: provenance describes COMMITTED art.
+  const image = card.image as
+    | {
+        local_path?: string | null;
+        provenance?: { source?: string } | null;
+        history?: unknown[];
+      }
+    | null
+    | undefined;
+  if (image?.provenance && !image.local_path) {
+    problems.push(
+      `image.provenance is set but image.local_path is null — provenance describes the committed art file; add the file (or drop the provenance block)`,
+    );
+  }
+  if (Array.isArray(image?.history)) {
+    for (const [i, h] of image.history.entries()) {
+      const lp = (h as { local_path?: string }).local_path ?? "";
+      if (!lp.startsWith("images/archive/")) {
+        problems.push(
+          `image.history[${i}].local_path "${lp}" must live under images/archive/ (superseded art is moved there, never overwritten)`,
+        );
+      }
+    }
   }
 
   // benefit.id uniqueness within the card

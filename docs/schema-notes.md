@@ -39,3 +39,17 @@ Insurance entries should prefer structured `details` (coverage, duration, deduct
 
 - `segment`: `personal` | `business` | `corporate`. Optional for now (absent = personal); set it explicitly on new cards, always on business cards.
 - `discontinued_date` + `replaced_by`: machine-readable lifecycle. `replaced_by` must reference an existing Card Id; only set `discontinued_date` when `status` is `discontinued`.
+
+## Card art lineage & graduation (2026-07)
+
+- **Graduated art** = `image.local_path` set with `image.provenance.source: "apple-pay"` — the lossless Apple Pay export is the highest-grade card face.
+- `provenance.source_sha256` hashes the ORIGINAL export (pre-WebP conversion) so tools can tell "the DB already has exactly this art" without re-uploading; `alternate_sha256[]` lists other exports of the same design (@3x etc.); `converted_sha256` hashes the committed WebP (CI fills it).
+- `image.history[]` is append-only: replaced art moves to `images/archive/<id>.<date>.webp` — banks refresh designs and grandfathered cardholders keep theirs, so superseded versions stay addressable.
+
+## Discontinued cards & source tiers (2026-07)
+
+Discontinued cards are **in scope** (grandfathered cardholders exist). Their lifecycle: `status: discontinued` + `discontinued_date` (+ `replaced_by`); the weekly staleness sweep skips them.
+
+Source tiers, enforced by lint:
+1. `sources` — official pages only. A **`web.archive.org` snapshot of an official page counts as official** (the allowlist validates the archived inner URL).
+2. `secondary_sources` — any domain, permitted **only** on discontinued cards whose official pages are gone; explicitly lower confidence.
