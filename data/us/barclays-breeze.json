@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 89.0,
@@ -44,37 +45,33 @@
     "currency_label": "BreezePoints",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 1.0,
+      "points_per_dollar": 1,
       "description": "Earn 1 BreezePoint for every $1 spent on all other Net Purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Nicer & Nicest Bundles (5X when you buy + 5X when you fly)",
+        "points_per_dollar": 10,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Nice Bundles (2X when you buy + 2X when you fly)",
+        "points_per_dollar": 4,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "No Flex Flares (1X when you buy + 1X when you fly)",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores and restaurants",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Use BreezePoints how you want, whenever you want. BreezePoints never expire. No limit to total BreezePoints you can earn."
+    "redemption_notes": "Use BreezePoints how you want, whenever you want. BreezePoints never expire. No limit to total BreezePoints you can earn.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 30000.0,
@@ -162,7 +159,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/breeze-airways/"
   ],
