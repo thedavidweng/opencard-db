@@ -569,3 +569,27 @@ describe("runArtChain (end-to-end with injected git seam)", () => {
     await rm(repo, { recursive: true, force: true });
   });
 });
+it("planArtEdits repoints local_path from the removed source raster to the webp", () => {
+  const base = {
+    cardId: "us-demo",
+    convertedSha256: "c".repeat(64),
+    webpPath: "images/us-demo.webp",
+    headProvenance: { source: "apple-pay", source_sha256: "a".repeat(64) },
+    baseProvenance: null,
+    baseWebpExists: false,
+    today: "2026-07-25",
+  };
+  // CLI dropped the png and set local_path to it — must repoint to the webp.
+  const fromPng = planArtEdits({ ...base, existingLocalPath: "images/us-demo.png" } as never);
+  assert.equal(fromPng.jsonEdits.localPath, "images/us-demo.webp");
+  // Already correct — no edit.
+  const already = planArtEdits({ ...base, existingLocalPath: "images/us-demo.webp" } as never);
+  assert.equal(already.jsonEdits.localPath, null);
+  // Custom different-stem path — left alone.
+  const custom = planArtEdits({ ...base, existingLocalPath: "images/custom-name.webp" } as never);
+  assert.equal(custom.jsonEdits.localPath, null);
+  // Absent — filled.
+  const absent = planArtEdits({ ...base, existingLocalPath: null } as never);
+  assert.equal(absent.jsonEdits.localPath, "images/us-demo.webp");
+});
+
