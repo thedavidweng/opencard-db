@@ -58,6 +58,30 @@ Liveness. No client-id requirement.
 
 Catalog metadata (`schema_version`, `card_count`, `countries`, `generated_at`).
 
+Also includes `default_card_image`: absolute URL of the generic card-face placeholder used when a card has no image.
+
+### `GET /v1/assets/default-card.webp`
+
+Generic OpenCard placeholder card face (WebP). **No client-id or rate-limit required** so it can be used directly in `<img src>`.
+
+### Card images
+
+`image` is optional in source JSON (`null`, or `{ "url": null, ... }`).
+
+API list/get/search responses always enrich missing `image.url` to the absolute default asset:
+
+```json
+{
+  "image": {
+    "url": "https://<host>/v1/assets/default-card.webp",
+    "attribution": "OpenCard DB generic placeholder (not bank artwork)",
+    "local_path": "images/default-card.webp"
+  }
+}
+```
+
+If the card already has a non-empty `image.url` (official issuer URL), it is left unchanged.
+
 ### `GET /v1/cards`
 
 List Cards. Query params (AND):

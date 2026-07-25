@@ -2,7 +2,17 @@
  * Re-export pure request handling for Node contract tests without wrangler.
  * Mirrors worker routing logic against an in-memory KV map.
  */
+import {
+  DEFAULT_CARD_IMAGE_PATH,
+  defaultCardImageUrl,
+  withDefaultCardImage,
+  withDefaultCardImages,
+} from "../worker/src/card-image.ts";
 import { hasClientIdentification } from "../worker/src/client-id.ts";
+import {
+  DEFAULT_CARD_CONTENT_TYPE,
+  DEFAULT_CARD_WEBP_BASE64,
+} from "../worker/src/default-card-asset.ts";
 
 export type MemoryKv = Map<string, string>;
 
@@ -26,12 +36,30 @@ type Card = {
   network_tier: string;
   status: string;
   localized_names?: Record<string, string>;
+  image?: {
+    url: string | null;
+    attribution?: string | null;
+    local_path?: string | null;
+  } | null;
 };
 
 function json(body: unknown, status = 200, headers: Record<string, string> = {}) {
   return new Response(JSON.stringify(body), {
     status,
     headers: { "Content-Type": "application/json; charset=utf-8", ...headers },
+  });
+}
+
+function defaultCardAssetResponse(): Response {
+  const bytes = Uint8Array.from(atob(DEFAULT_CARD_WEBP_BASE64), (c) =>
+    c.charCodeAt(0),
+  );
+  return new Response(bytes, {
+    status: 200,
+    headers: {
+      "Content-Type": DEFAULT_CARD_CONTENT_TYPE,
+      "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
+    },
   });
 }
 
@@ -122,6 +150,10 @@ export async function handleTestRequest(
     return json({ ok: true, mode, service: "opencard-db" });
   }
 
+  if (path === DEFAULT_CARD_IMAGE_PATH) {
+    return defaultCardAssetResponse();
+  }
+
   if (requireClientId && !hasClientIdentification(request)) {
     return json(
       {
@@ -165,10 +197,16 @@ export async function handleTestRequest(
     return raw ? (JSON.parse(raw) as T) : null;
   };
 
+  const origin = url.origin;
+
   if (path === "/v1/meta") {
-    const meta = get("meta");
+    const meta = get<Record<string, unknown>>("meta");
     if (!meta) return json({ error: "not_found" }, 404);
-    return json(meta, 200, cacheHeaders);
+    return json(
+      { ...meta, default_card_image: defaultCardImageUrl(origin) },
+      200,
+      cacheHeaders,
+    );
   }
 
   if (path === "/v1/cards") {
@@ -180,7 +218,10 @@ export async function handleTestRequest(
         total: filtered.length,
         limit,
         offset,
-        data: filtered.slice(offset, offset + limit),
+        data: withDefaultCardImages(
+          filtered.slice(offset, offset + limit),
+          origin,
+        ),
       },
       200,
       cacheHeaders,
@@ -192,7 +233,7 @@ export async function handleTestRequest(
     const byId = get<Record<string, Card>>("cards:by-id") ?? {};
     const card = byId[decodeURIComponent(cardMatch[1])];
     if (!card) return json({ error: "not_found" }, 404);
-    return json(card, 200, cacheHeaders);
+    return json(withDefaultCardImage(card, origin), 200, cacheHeaders);
   }
 
   if (path === "/v1/search") {
@@ -206,7 +247,10 @@ export async function handleTestRequest(
         total: filtered.length,
         limit,
         offset,
-        data: filtered.slice(offset, offset + limit),
+        data: withDefaultCardImages(
+          filtered.slice(offset, offset + limit),
+          origin,
+        ),
         q: q || null,
       },
       200,
