@@ -103,12 +103,12 @@
   },
   "official_url": "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/",
   "image": {
-    "url": null,
+    "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/SMC_NewMC_card_angled_359x246_L.png",
     "attribution": "© Barclays",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/"
   ],
