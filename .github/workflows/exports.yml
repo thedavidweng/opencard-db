@@ -1,15 +1,16 @@
 name: Refresh exports
 
 # Regenerates the committed exports/ directory so the jsDelivr-servable @main
-# files stay reasonably fresh. Tag-pinned production URLs are built by the
-# release workflow at tag time, so per-push freshness is not required here.
+# files stay reasonably fresh. Tag-pinned production URLs get fresh exports
+# from the release-please workflow (committed onto the release PR), so
+# per-push freshness is not required here.
 #
 # Why a PR instead of a direct push: main's branch protection requires status
-# checks, which rejects direct pushes from github-actions[bot] (GH006). And a
-# PR opened with the default GITHUB_TOKEN does not trigger CI (GitHub's
-# anti-recursion rule), so it cannot auto-merge either — a maintainer merges
-# the refresh PR after its checks pass (re-open/close it once to trigger CI,
-# or merge with admin rights).
+# checks, which rejects direct pushes from github-actions[bot] (GH006). The
+# PR is opened with RELEASE_PLEASE_TOKEN (a PAT) when configured so CI runs
+# on it and a maintainer can merge normally. With the default GITHUB_TOKEN
+# fallback the PR does not trigger CI (GitHub's anti-recursion rule) and
+# needs a close/re-open or an admin merge.
 
 on:
   workflow_dispatch:
@@ -40,6 +41,7 @@ jobs:
       - name: Open refresh PR if exports changed
         uses: peter-evans/create-pull-request@v8
         with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
           add-paths: exports/
           branch: bot/refresh-exports
           commit-message: "chore(exports): refresh generated exports"

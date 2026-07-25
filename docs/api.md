@@ -9,7 +9,7 @@ Machine-readable spec: [`openapi.yaml`](./openapi.yaml) (OpenAPI 3.0).
 The `/v1` API is one of three ways to consume the catalog:
 
 - **(a) Production (recommended):** jsDelivr tag-pinned, immutable, zero-quota
-  static files — `https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/cards-all.json`.
+  static files — `https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/cards-all.json`.
 - **(b) Preview / dev:** `@main` jsDelivr or `raw.githubusercontent.com` (mutable, ~12h stale on jsDelivr).
 - **(c) This `/v1` API:** filtering, search, and per-card lookup. **Self-host for
   production**; the official instance is **best-effort** and rate-limited.
