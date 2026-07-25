@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -43,14 +44,15 @@
     "currency": "miles",
     "currency_label": "Capital One miles",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 2.0,
       "description": "Unlimited 2X miles on every purchase."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Hotels, vacation rentals and rental cars booked through Capital One Business Travel",
+        "points_per_dollar": 5.0,
         "cap": null
       }
     ],
@@ -178,9 +180,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.capitalone.com/small-business/credit-cards/venture-business/"
   ],
-  "notes": "Verified from official Capital One product page. APR confirmed at 24.49% variable. Credit required: Excellent. Network not explicitly stated on page but Visa referenced in benefits section; network_tier preserved as signature (not re-verified from page)."
+  "notes": "Verified from official Capital One product page on 2026-07-25. Business card. Filled the 5X miles category on hotels, vacation rentals and rental cars booked through Capital One Business Travel (was an empty placeholder); base earn is 2X. APR confirmed at 24.49% variable. Network could not be confirmed: the product page only carries a generic 'Visa or Mastercard' benefits-guide footnote and does not state the card's network; network/tier left as visa/signature pending confirmation."
 }
