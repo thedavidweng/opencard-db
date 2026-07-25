@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # No ref / no fork repository → base repo default branch (trusted code).
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v4
         with:
@@ -139,7 +139,7 @@ jobs:
       # No ref / no fork repository → base repo default branch (trusted code).
       # fetch-depth: 0 gives build-base-cards.ts full history so it can
       # `git show <base.sha>:<path>` the pre-PR version of each card file.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
