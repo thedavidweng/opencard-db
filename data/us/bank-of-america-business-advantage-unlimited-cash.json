@@ -1,0 +1,118 @@
+{
+  "id": "us-bank-of-america-business-advantage-unlimited-cash",
+  "schema_version": "1.0.0",
+  "name": "Business Advantage Unlimited Cash Rewards Mastercard® Credit Card",
+  "localized_names": {
+    "en": "Business Advantage Unlimited Cash Rewards Mastercard® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not available from page text; page uses dynamic placeholders (ProdStanMinRate% to ProdStanMaxRate% Variable APR). See Bank of America for current APR."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "International transaction fee not stated on the product page."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% cash back on all purchases. No annual cap and rewards don't expire as long as your account remains open."
+    },
+    "categories": [],
+    "redemption_notes": "Redeem cash rewards as a deposit into eligible Bank of America checking or savings account, as a card statement credit, or as a check mailed to you. Preferred Rewards for Business members earn up to 75% more rewards (25% Gold, 50% Platinum, 75% Platinum Honors)."
+  },
+  "signup_bonus": {
+    "amount": 500.0,
+    "unit": "USD",
+    "spend_required": 5000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Get a $500 cash rewards bonus after you make at least $5,000 in purchases within 90 days of your account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Enjoy no annual fee while earning cash back."
+    },
+    {
+      "id": "preferred-rewards-for-business",
+      "title": "Preferred Rewards for Business Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Earn up to 75% more cash back with Preferred Rewards for Business. Platinum Honors members earn unlimited 2.62% cash back on all purchases with qualifying BofA business checking account."
+    },
+    {
+      "id": "travel-and-emergency-services",
+      "title": "Travel and Emergency Services",
+      "category": "insurance",
+      "source": "network",
+      "description": "Travel services include auto rental coverage and $100,000 in travel accident insurance, auto rental insurance, emergency ticket replacement, lost luggage assistance and legal and medical referrals when away from home."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Additional Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Maintain a fleet of cards for your employees at no additional cost with ability to monitor all transactions."
+    },
+    {
+      "id": "free-business-credit-scores",
+      "title": "Free Access to Business Credit Scores",
+      "category": "other",
+      "source": "issuer",
+      "description": "View your Dun & Bradstreet business credit scores for free within Business Advantage 360."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Employee cards at no additional cost",
+      "Preferred Rewards for Business bonus up to 75%"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/unlimited-cash-rewards-business-credit-card",
+  "image": {
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/Logos/en_US/logos/colored_flagscape-v2.png",
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bankofamerica.com/smallbusiness/credit-cards/products/unlimited-cash-rewards-business-credit-card",
+    "https://business.bankofamerica.com/en/credit-cards/business-advantage-unlimited-cash-rewards"
+  ],
+  "notes": "Business Advantage Unlimited Cash Rewards Mastercard. $0 annual fee. 1.5% cash back on all purchases. $500 cash rewards bonus after $5,000 in 90 days. network_tier corrected from 'world' to 'none' — page only says 'Mastercard®' without 'World' prefix. APR not extractable (dynamic placeholders). FX fee not stated on page."
+}
