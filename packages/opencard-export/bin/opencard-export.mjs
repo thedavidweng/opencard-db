@@ -355,7 +355,7 @@ async function main() {
   // macOS-only guard (skipped when a passes dir is supplied for testing).
   if (process.platform !== 'darwin' && !args.passesDir) {
     process.stderr.write(
-      'opencard-export is macOS-only — Apple Wallet stores cards locally on a Mac.\n' +
+      'opencard-export is macOS-only: Apple Wallet stores cards locally on a Mac.\n' +
         `(detected platform: ${process.platform})\n`,
     );
     return 1;
@@ -505,6 +505,7 @@ async function main() {
           dest,
           exported: true,
           matchedId: match ? match.card.id : null,
+          art: row.art,
           localSha: row.localSha,
           provenance,
         };
@@ -512,7 +513,9 @@ async function main() {
         // card's JSON (surgical: only image.provenance, plus image.local_path
         // when absent so the card stays validation-coherent — provenance
         // describes a committed art file). Refuse if the card JSON is missing.
-        if (repoRoot && match && provenance) {
+        // Graduated cards are skipped: the DB already carries this exact
+        // provenance, so there is nothing to contribute.
+        if (repoRoot && match && provenance && row.art !== 'graduated') {
           try {
             result.repoWrite = await writeProvenanceToRepo(
               repoRoot,
@@ -640,8 +643,9 @@ async function main() {
     process.stderr.write('note: database comparison skipped (--no-remote)\n');
   }
 
-  // ── hints (only when actionable, and not while already exporting) ─────────
-  if (!args.export) {
+  // ── hints (only when actionable, never on offline runs where match state
+  //    is unknown, and not while already exporting) ──────────────────────────
+  if (!args.export && db) {
     const nExportable = rows.filter(
       (r) =>
         r.rec.exportable &&
@@ -673,6 +677,18 @@ async function main() {
         continue;
       }
       process.stdout.write(c(ANSI.green, '✓') + ` ${path.basename(r.dest)}` + '\n');
+      if (r.art === 'graduated') {
+        process.stdout.write(
+          c(ANSI.dim, '  already in the database with this exact art; no PR needed') + '\n',
+        );
+        continue;
+      }
+      if (db && !r.matchedId) {
+        process.stdout.write(
+          c(ANSI.dim, `  not in the database; request the card first: ${ISSUE_FORM_URL}`) +
+            '\n',
+        );
+      }
       if (r.repoWrite) {
         if (r.repoWrite.written) {
           process.stdout.write(

@@ -361,18 +361,34 @@ test('--json exposes art_status + local_sha256 and tier counts', async () => {
 test('--export prints sha256 + a paste-ready provenance block for a matched card', async () => {
   const { root, dbFile } = await fourTierFixture();
   const dest = await fs.mkdtemp(path.join(os.tmpdir(), 'oce-exp-'));
+  const UPGR_SHA = sha256(UPGR_PNG);
   try {
     const { code, stdout } = runCli(['--passes-dir', root, '--export', dest], { OPENCARD_DB_FILE: dbFile });
     assert.equal(code, 0, stdout);
-    assert.ok(stdout.includes(`sha256: ${GRAD_SHA}`), stdout);
+    // The upgradeable card carries the contribution package.
+    assert.ok(stdout.includes(`sha256: ${UPGR_SHA}`), stdout);
     assert.match(stdout, /"provenance": \{/);
     assert.match(stdout, /"source": "apple-pay"/);
-    assert.ok(stdout.includes(`"source_sha256": "${GRAD_SHA}"`), stdout);
-    assert.match(stdout, /"width": 10/);
-    assert.match(stdout, /"height": 6/);
+    assert.ok(stdout.includes(`"source_sha256": "${UPGR_SHA}"`), stdout);
+    assert.match(stdout, /"width": 30/);
+    assert.match(stdout, /"height": 18/);
     assert.match(stdout, /"exported_at": "\d{4}-\d{2}-\d{2}"/);
-    // The PNG landed on disk.
+    // The graduated card is exported but flagged as already contributed:
+    // no provenance snippet, a "no PR needed" note instead.
+    assert.match(stdout, /nw-aurora-signature\.png/);
+    assert.ok(
+      stdout.includes('already in the database with this exact art; no PR needed'),
+      stdout,
+    );
+    assert.ok(!stdout.includes(`"source_sha256": "${GRAD_SHA}"`), stdout);
+    // The unmatched card points at the request-a-card form.
+    assert.ok(
+      stdout.includes('not in the database; request the card first:'),
+      stdout,
+    );
+    // The PNGs landed on disk.
     await fs.access(path.join(dest, 'nw-aurora-signature.png'));
+    await fs.access(path.join(dest, 'nw-borealis-platinum.png'));
   } finally {
     await fs.rm(root, { recursive: true, force: true });
     await fs.rm(dest, { recursive: true, force: true });
@@ -382,43 +398,67 @@ test('--export prints sha256 + a paste-ready provenance block for a matched card
 test('--repo writes image.provenance into the card JSON (and refuses when it is missing)', async () => {
   const { root, dbFile } = await fourTierFixture();
   const repo = await fs.mkdtemp(path.join(os.tmpdir(), 'oce-repo-'));
+  const UPGR_SHA = sha256(UPGR_PNG);
   try {
     // Minimal opencard-db checkout shape.
     await fs.writeFile(path.join(repo, 'schema.json'), '{}');
     await fs.mkdir(path.join(repo, 'images'), { recursive: true });
     await fs.mkdir(path.join(repo, 'data', 'nw'), { recursive: true });
-    // The graduated card's data file exists; the others do NOT (refusal path).
-    const cardPath = path.join(repo, 'data', 'nw', 'aurora-signature.json');
-    const original = {
-      id: 'nw-aurora-signature',
-      name: 'Aurora Signature Card',
-      annual_fee: { amount: 95, currency: 'USD' },
-      image: { attribution: '© Northwind Bank (Apple Pay digital card art)' },
-    };
-    await fs.writeFile(cardPath, JSON.stringify(original, null, 2) + '\n');
+    // The upgradeable card's data file exists (write path); the graduated
+    // card's file exists too (must be left untouched); cobalt has NO file
+    // (refusal path).
+    const upgrPath = path.join(repo, 'data', 'nw', 'borealis-platinum.json');
+    await fs.writeFile(
+      upgrPath,
+      JSON.stringify(
+        {
+          id: 'nw-borealis-platinum',
+          name: 'Borealis Platinum Card',
+          annual_fee: { amount: 0, currency: 'USD' },
+          image: { attribution: '© Northwind Bank (Apple Pay digital card art)' },
+        },
+        null,
+        2,
+      ) + '\n',
+    );
+    const gradPath = path.join(repo, 'data', 'nw', 'aurora-signature.json');
+    const gradOriginal =
+      JSON.stringify({ id: 'nw-aurora-signature', name: 'Aurora Signature Card' }, null, 2) +
+      '\n';
+    await fs.writeFile(gradPath, gradOriginal);
 
     const { code, stdout } = runCli(['--passes-dir', root, '--export', '--repo', repo], {
       OPENCARD_DB_FILE: dbFile,
     });
     assert.equal(code, 0, stdout);
 
-    // PNG dropped into images/<id>.png.
+    // PNGs dropped into images/<id>.png.
+    await fs.access(path.join(repo, 'images', 'nw-borealis-platinum.png'));
     await fs.access(path.join(repo, 'images', 'nw-aurora-signature.png'));
 
     // Provenance written; other fields preserved; local_path added for coherence.
-    const written = JSON.parse(await fs.readFile(cardPath, 'utf-8'));
-    assert.equal(written.name, 'Aurora Signature Card');
-    assert.deepEqual(written.annual_fee, { amount: 95, currency: 'USD' });
+    const written = JSON.parse(await fs.readFile(upgrPath, 'utf-8'));
+    assert.equal(written.name, 'Borealis Platinum Card');
+    assert.deepEqual(written.annual_fee, { amount: 0, currency: 'USD' });
     assert.equal(written.image.attribution, '© Northwind Bank (Apple Pay digital card art)');
     assert.equal(written.image.provenance.source, 'apple-pay');
-    assert.equal(written.image.provenance.source_sha256, GRAD_SHA);
-    assert.equal(written.image.provenance.width, 10);
-    assert.equal(written.image.provenance.height, 6);
-    assert.equal(written.image.local_path, 'images/nw-aurora-signature.png');
+    assert.equal(written.image.provenance.source_sha256, UPGR_SHA);
+    assert.equal(written.image.provenance.width, 30);
+    assert.equal(written.image.provenance.height, 18);
+    assert.equal(written.image.local_path, 'images/nw-borealis-platinum.png');
+    assert.match(stdout, /provenance written to .*borealis-platinum\.json/);
     // Trailing newline preserved, 2-space indent.
-    const rawWritten = await fs.readFile(cardPath, 'utf-8');
+    const rawWritten = await fs.readFile(upgrPath, 'utf-8');
     assert.ok(rawWritten.endsWith('}\n'), 'trailing newline');
     assert.ok(rawWritten.includes('\n  "id"'), '2-space indent');
+
+    // The graduated card's JSON is not rewritten: the DB already carries this
+    // exact provenance (and rewriting could clobber an alternate-sha anchor).
+    assert.equal(await fs.readFile(gradPath, 'utf-8'), gradOriginal);
+    assert.ok(
+      stdout.includes('already in the database with this exact art; no PR needed'),
+      stdout,
+    );
 
     // A matched card whose data JSON is absent is refused, not created.
     assert.match(stdout, /provenance not written: card JSON not found/);
@@ -426,5 +466,26 @@ test('--repo writes image.provenance into the card JSON (and refuses when it is 
   } finally {
     await fs.rm(root, { recursive: true, force: true });
     await fs.rm(repo, { recursive: true, force: true });
+  }
+});
+
+test('--no-remote with payment cards: dash columns, plain count, no hints', async () => {
+  const { root } = await threeCardFixture();
+  try {
+    const { code, stdout, stderr } = runCli(['--passes-dir', root, '--no-remote']);
+    assert.equal(code, 0, stdout);
+    // Every card renders with dash DB columns.
+    assert.match(stdout, /Aurora Signature\s+Northwind Bank\s+-\s+-\s+-/);
+    // Summary is the plain count, with no state segments.
+    assert.ok(stdout.includes('3 payment cards\n'), stdout);
+    assert.ok(!stdout.includes('not in database'), stdout);
+    // No hints: match state is unknown, so neither the export command nor the
+    // request-a-card form may be suggested.
+    assert.ok(!stdout.includes('To contribute card art'), stdout);
+    assert.ok(!stdout.includes('To request a missing card'), stdout);
+    // The note lands on stderr, keeping stdout clean.
+    assert.match(stderr, /database comparison skipped/);
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
   }
 });

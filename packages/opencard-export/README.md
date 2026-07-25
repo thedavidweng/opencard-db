@@ -64,20 +64,20 @@ To request a missing card: https://github.com/thedavidweng/opencard-db/issues/ne
 
 Columns:
 
-- **MATCH** — the OpenCard DB card id, or `-` when the card is not in the
+- **MATCH**: the OpenCard DB card id, or `-` when the card is not in the
   database yet.
-- **DATA** — how many of the six core fields (fee, APR, FX, rewards, bonus,
+- **DATA**: how many of the six core fields (fee, APR, FX, rewards, bonus,
   art) the DB card has filled in.
-- **ART** — the tool's verdict on your local Apple Pay face versus the DB's,
+- **ART**: the tool's verdict on your local Apple Pay face versus the DB's,
   decided by comparing sha256 hashes:
-  - **`graduated`** (green) — the DB already has this exact Apple Pay art.
+  - **`graduated`** (green): the DB already has this exact Apple Pay art.
     Nothing to do.
-  - **`new design`** (cyan) — the DB's art is Apple Pay but a different hash.
+  - **`new design`** (cyan): the DB's art is Apple Pay but a different hash.
     Banks refresh designs; submit if yours looks newer, or it may be an `@3x`
     variant (maintainers can add it to `alternate_sha256`).
-  - **`upgradeable`** (yellow) — the DB's art came from the issuer site (or has
+  - **`upgradeable`** (yellow): the DB's art came from the issuer site (or has
     no provenance). A lossless Apple Pay export beats it.
-  - **`none`** (yellow) — the DB card has no art at all → `--export`, add
+  - **`none`** (yellow): the DB card has no art at all → `--export`, add
     `images/<card-id>.png` via PR (CI converts it to lossless WebP).
 
   Unmatched cards show `-` in every DB column. Open the
@@ -149,8 +149,8 @@ Non-payment passes (loyalty cards, boarding passes, event tickets, store cards) 
 - Runs entirely on your machine. There is no network call except an optional,
   read-only fetch of the public OpenCard DB export for comparison.
 - Never reads, stores, logs, or transmits PANs, tokens, or personal values. A card's
-  last-4 suffix (if Wallet exposes one) is used **on screen only** and is never
-  written to any file or the `--json` output.
+  last-4 suffix (if Wallet exposes one) stays local and is never written to any
+  file or the `--json` output.
 
 ## License
 
