@@ -20,11 +20,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 19.49,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+    "notes": "19.49% to 28.49% variable APR on purchases, per the official American Express Rates & Fees disclosure."
   },
   "fx_fee": {
     "percent": 0.0,
@@ -61,7 +61,15 @@
     "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights.",
     "rate_type": "miles_multiplier"
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 70000,
+    "unit": "miles",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 70,000 bonus miles after you make $6,000 or more in eligible purchases within the first 6 months of Card Membership.",
+    "as_of": "2026-07-25"
+  },
   "benefits": [
     {
       "id": "resy-credit",
@@ -241,7 +249,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-platinum/"
   ],

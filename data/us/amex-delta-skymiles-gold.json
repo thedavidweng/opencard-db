@@ -226,12 +226,12 @@
   },
   "official_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
   "image": {
-    "url": null,
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000385_480x304_straight_withname.png",
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-gold-american-express-card/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/delta-skymiles-gold-american-express-card/28810-10-0",
