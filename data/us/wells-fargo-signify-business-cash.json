@@ -123,12 +123,12 @@
   },
   "official_url": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card",
   "image": {
-    "url": null,
+    "url": "https://creditcards.wellsfargo.com/rv/bcs/production/signify.DTS20282_2mwSIw.webp",
     "attribution": "© Wells Fargo",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card",
     "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card?sub_channel=WEB&vendor_code=WF"
