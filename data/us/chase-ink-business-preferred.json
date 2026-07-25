@@ -9,8 +9,9 @@
   "issuer": "Chase",
   "issuer_id": "chase",
   "network": "mastercard",
-  "network_tier": "world",
+  "network_tier": "world_elite",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -39,14 +40,15 @@
     "currency": "ultimate_rewards",
     "currency_label": "Chase Ultimate Rewards points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "Earn 1 point per $1 on all other purchases - with no limit to the amount you can earn."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Travel",
+        "points_per_dollar": 3,
         "cap": {
           "amount": 150000.0,
           "currency": "USD",
@@ -54,8 +56,8 @@
         }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Shipping purchases",
+        "points_per_dollar": 3,
         "cap": {
           "amount": 150000.0,
           "currency": "USD",
@@ -63,8 +65,8 @@
         }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Internet, cable, and phone services",
+        "points_per_dollar": 3,
         "cap": {
           "amount": 150000.0,
           "currency": "USD",
@@ -72,18 +74,13 @@
         }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Advertising purchases made with social media sites and search engines",
+        "points_per_dollar": 3,
         "cap": {
           "amount": 150000.0,
           "currency": "USD",
           "period": "year"
         }
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
       }
     ],
     "redemption_notes": "You can use your points to redeem for any available reward options, including cash, gift cards, travel, and pay with points. Redemption values for reward options vary. Points don't expire as long as your account remains open. Transfer Chase Ultimate Rewards points to participating frequent travel programs. Starting October 1, 2026, Ultimate Rewards points will transfer to World of Hyatt at a rate of 4:3."
