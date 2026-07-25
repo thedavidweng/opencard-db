@@ -1,0 +1,190 @@
+{
+  "id": "us-chase-sapphire-reserve",
+  "schema_version": "1.0.0",
+  "name": "Chase Sapphire Reserve® Credit Card",
+  "localized_names": {
+    "en": "Chase Sapphire Reserve® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 795,
+    "currency": "USD",
+    "first_year": 795,
+    "waiver_conditions": "$195 annual fee for each authorized user."
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "notes": "Variable APR shown on Chase product page; confirm current Pricing & Terms."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "Chase generally targets excellent credit for Sapphire Reserve."
+  },
+  "rewards": {
+    "currency": "ultimate_rewards",
+    "currency_label": "Ultimate Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Purchases through Chase Travel, including The Edit",
+        "points_per_dollar": 8,
+        "cap": null
+      },
+      {
+        "label": "Flights booked direct",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Hotels booked direct",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Dining worldwide",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary. Purchases that qualify for certain statement credits may not earn points."
+  },
+  "signup_bonus": {
+    "amount": 100000,
+    "unit": "points",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 100,000 Ultimate Rewards points after spending $6,000 in the first 3 months; offer varies and may be unavailable to prior holders.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "annual-travel-credit",
+      "title": "$300 Annual Travel Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $300 in statement credits for travel purchases each account anniversary year. Qualifying purchases that receive the credit do not earn points."
+    },
+    {
+      "id": "edit-hotel-credit",
+      "title": "The Edit hotel statement credits",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $250 statement credit per prepaid The Edit booking (two-night minimum), up to $500 annually. Qualifying purchases do not earn points."
+    },
+    {
+      "id": "lounge-network",
+      "title": "Chase Sapphire Lounge / Priority Pass access",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Complimentary access to Chase Sapphire Lounges by The Club and 1,300+ Priority Pass lounges with up to two guests; enrollment and space availability rules apply. Select Air Canada Maple Leaf Lounges/Cafés access with eligible boarding pass."
+    },
+    {
+      "id": "global-entry-tsa",
+      "title": "Global Entry, TSA PreCheck, or NEXUS fee credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "One statement credit of up to $120 every four years for Global Entry, TSA PreCheck, or NEXUS application fee charged to the card."
+    },
+    {
+      "id": "dining-credit",
+      "title": "$300 Sapphire Exclusive Tables dining credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $150 statement credits Jan–Jun and again Jul–Dec (max $300/year) when dining at restaurants in the Sapphire Exclusive Tables program on OpenTable."
+    },
+    {
+      "id": "primary-rental-cdw",
+      "title": "Primary Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Primary CDW reimbursement up to $75,000 for theft/collision on most eligible rentals when you decline the rental company's collision coverage and pay with the card. Restrictions apply; NY residents may have secondary coverage inside the U.S.",
+      "details": {
+        "coverage_amount": 75000,
+        "coverage_currency": "USD",
+        "conditions": "See Chase Guide to Benefits."
+      }
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement up to $10,000 per covered traveler / $20,000 per trip for prepaid non-refundable travel expenses for covered reasons.",
+      "details": {
+        "coverage_amount": 10000,
+        "coverage_currency": "USD",
+        "conditions": "See Guide to Benefits."
+      }
+    },
+    {
+      "id": "baggage-delay",
+      "title": "Baggage Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses up to $100/day for up to 5 days for essentials when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage",
+      "title": "Lost Luggage Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement up to $3,000 per covered traveler for lost, damaged, or stolen checked/carry-on baggage on a covered trip."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Chase Sapphire Lounge by The Club + Priority Pass Select",
+      "visits_per_year": null,
+      "notes": "Primary cardholder plus up to two guests; Priority Pass enrollment required for that network."
+    },
+    "tsa_precheck_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": "IHG One Rewards Platinum Elite through 2027-12-31 (confirm current Chase terms)",
+    "other": [
+      "$300 annual travel credit",
+      "No foreign transaction fees",
+      "NEXUS fee credit alternative"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+  "image": {
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/sapphire_reserve_card_Halo.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
+    "https://www.chase.com/personal/credit-cards/sapphire/reserve"
+  ],
+  "notes": "Premium Sapphire product; annual fee, credits, and lounge policies change — verify Pricing & Terms and Guide to Benefits before publishing comparisons."
+}

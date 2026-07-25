@@ -1,0 +1,175 @@
+{
+  "id": "us-us-bank-altitude-connect",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Altitude Connect Visa Signature Card",
+  "localized_names": {
+    "en": "U.S. Bank Altitude Connect Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "0% intro APR on purchases and balance transfers for the first 15 billing cycles. After that, a variable APR applies (specific rate shown as placeholder on page, not a numeric value)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees when making purchases outside the United States."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "In general, our credit card products are for customers with a credit score in the good to excellent range."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Altitude points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X point on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Prepaid hotels and car rentals booked directly in the Travel Center",
+        "points_per_dollar": 5.0,
+        "cap": null
+      },
+      {
+        "label": "Travel (airlines, hotels, car rentals, taxis, limousines, trains, cruise lines)",
+        "points_per_dollar": 4.0,
+        "cap": null
+      },
+      {
+        "label": "Gas stations and EV charging stations",
+        "points_per_dollar": 4.0,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      },
+      {
+        "label": "Dining (restaurants, fast food, bars)",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Streaming services",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores and supermarkets (excludes wholesale clubs and discount stores/supercenters)",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Choose from several rewards options: deposit to eligible U.S. Bank account, travel, merchandise, charitable donations, gift cards. Points do not expire as long as account is active. Real-Time Rewards available for instant redemption."
+  },
+  "signup_bonus": {
+    "amount": 20000.0,
+    "unit": "points",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 20,000 bonus points. Just spend $1,000 in Net Purchases in the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "airport-lounge-access",
+      "title": "Airport lounge access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy airport lounge access and TSA PreCheck® plus, have peace of mind with travel protections."
+    },
+    {
+      "id": "tsa-precheck",
+      "title": "TSA PreCheck®",
+      "category": "other",
+      "source": "issuer",
+      "description": "TSA PreCheck® benefit included."
+    },
+    {
+      "id": "global-connectivity",
+      "title": "Global Connectivity",
+      "category": "other",
+      "source": "issuer",
+      "description": "Stay connected in over 175 countries with complimentary GigSky global mobile data plans."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy no foreign transaction fees when making purchases outside the United States."
+    },
+    {
+      "id": "extendpay",
+      "title": "Pay over time with U.S. Bank ExtendPay® Plan",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening."
+    },
+    {
+      "id": "real-time-rewards",
+      "title": "Real-Time Rewards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Shop nearly anywhere and redeem points instantly for your purchases from your mobile device. Must register card and have enough points to cover entire purchase."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Airport lounge access"
+    },
+    "tsa_precheck_credit": {
+      "amount": 85,
+      "currency": "USD",
+      "period": null
+    },
+    "global_entry_credit": {
+      "amount": 100,
+      "currency": "USD",
+      "period": null
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Global Connectivity — complimentary GigSky global mobile data in 175+ countries",
+      "Travel protections"
+    ]
+  },
+  "official_url": "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html",
+  "image": {
+    "url": null,
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.usbank.com/credit-cards/altitude-connect-visa-signature-credit-card.html"
+  ],
+  "notes": "Verified from official U.S. Bank product page. Visa Signature confirmed from page title. Earn categories confirmed from the page's Rewards disclosure. APR specific rate not available (shown as placeholder on page). Credit required 'good to excellent' from FAQ section. The card reimburses the Global Entry or TSA PreCheck application fee as a statement credit; amounts reflect the standard published application fees (Global Entry $100, TSA PreCheck $85)."
+}

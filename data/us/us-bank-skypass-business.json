@@ -1,0 +1,136 @@
+{
+  "id": "us-us-bank-skypass-business",
+  "schema_version": "1.0.0",
+  "name": "SKYPASS Visa Signature Business Credit Card",
+  "localized_names": {
+    "en": "SKYPASS Visa Signature Business Credit Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 99.0,
+    "currency": "USD",
+    "first_year": 99.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not stated on product page; see Cardmember Agreement for current rates."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on international purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "SKYPASS miles",
+    "rate_type": "miles_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X mile on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Korean Air ticket purchases",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Gas and EV charging stations",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Cell phone and office supplies",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Dining, including takeout and restaurant delivery",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles awarded to each employee's individual SKYPASS account for employee cards."
+  },
+  "signup_bonus": {
+    "amount": 50000.0,
+    "unit": "miles",
+    "spend_required": 5000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 50,000 Bonus Miles when you spend $5,000 in eligible purchases within the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "korean-air-discount",
+      "title": "5% off Korean Air tickets",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 5% on Korean Air tickets each year. Available for you and a companion."
+    },
+    {
+      "id": "korean-air-lounge-vouchers",
+      "title": "2 Korean Air Lounge vouchers each year",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "Two Korean Air Lounge vouchers each year."
+    },
+    {
+      "id": "spend-management",
+      "title": "U.S. Bank Spend Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Experience U.S. Bank Spend Management, a platform integrated with the card."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "other",
+      "source": "network",
+      "description": "Get insurance coverage for car rentals made with your Visa card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "2 Korean Air Lounge vouchers each year"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "5% off Korean Air tickets each year for cardmember and companion"
+    ]
+  },
+  "official_url": "https://www.skypassvisa.com/credit/visaBusinessCard.do",
+  "image": {
+    "url": null,
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.skypassvisa.com/credit/visaBusinessCard.do"
+  ],
+  "notes": "Verified from official product page. APR not stated on page; see Cardmember Agreement. Rewards currency is SKYPASS miles (Korean Air loyalty)."
+}
