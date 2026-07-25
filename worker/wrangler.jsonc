@@ -1,0 +1,63 @@
+// Single source of truth for the OpenCard DB API Worker (docs/api.md,
+// docs/self-hosting.md). Comments are fine here: wrangler parses JSONC.
+//
+// Layout:
+//   top level      self-host baseline. Create your own namespace with
+//                  `npx wrangler kv namespace create OPENCARD_KV`, put its id
+//                  below, then `npx wrangler deploy`. Client identification
+//                  and rate limiting stay off; local `wrangler dev` simulates
+//                  KV and needs no real namespace.
+//   env.production the official instance (opencard-db.*.workers.dev), deployed
+//                  by .github/workflows/deploy.yml with `--env production`.
+//                  Its ids are not secrets; API access still requires an
+//                  account token.
+//
+// After changing bindings or vars, run `npm run types` so the generated Env
+// (worker-configuration.d.ts) stays in sync with this file.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "opencard-db",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-24",
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "kv_namespaces": [
+    {
+      "binding": "OPENCARD_KV",
+      // Self-host: replace with the id printed by
+      //   npx wrangler kv namespace create OPENCARD_KV
+      "id": "00000000000000000000000000000000"
+    }
+  ],
+  "vars": {
+    "MODE": "selfhost",
+    "REQUIRE_CLIENT_ID": "false",
+    "RATE_LIMIT_ENABLED": "false",
+    "RATE_LIMIT_PER_MINUTE": "30",
+    "RATE_LIMIT_PER_DAY": "500",
+    "CACHE_MAX_AGE": "300"
+  },
+  "env": {
+    "production": {
+      "name": "opencard-db",
+      "account_id": "99e63a7c867f83d0d7806e0e6cd09933",
+      "workers_dev": true,
+      "kv_namespaces": [
+        {
+          "binding": "OPENCARD_KV",
+          "id": "6d0b887ca4e84d91bda6d4b0cd516b5e"
+        }
+      ],
+      "vars": {
+        "MODE": "official",
+        "REQUIRE_CLIENT_ID": "true",
+        "RATE_LIMIT_ENABLED": "true",
+        "RATE_LIMIT_PER_MINUTE": "30",
+        "RATE_LIMIT_PER_DAY": "500",
+        "CACHE_MAX_AGE": "300"
+      }
+    }
+  }
+}

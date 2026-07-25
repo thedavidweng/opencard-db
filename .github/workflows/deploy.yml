@@ -25,22 +25,25 @@ jobs:
         run: npm run validate
       - name: Build indexes
         run: npm run build:indexes
+      # Account id and the production KV namespace id live in
+      # worker/wrangler.jsonc (they are identifiers, not secrets), so the only
+      # secret CI needs is CLOUDFLARE_API_TOKEN (Workers Scripts:Edit +
+      # Workers KV Storage:Edit on this account). The worker's pinned wrangler
+      # is used instead of an unpinned global install.
       - name: Upload to Cloudflare KV and optional Worker deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
           WORKER_DEPLOY: ${{ secrets.WORKER_DEPLOY }}
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ] || [ -z "$KV_NAMESPACE_ID" ]; then
-            echo "Secrets not fully configured; skipping KV upload and Worker deploy (exit 0)."
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "CLOUDFLARE_API_TOKEN not configured; skipping KV upload and Worker deploy (exit 0)."
             exit 0
           fi
-          npm install -g wrangler
+          npm ci --prefix worker
           node --experimental-strip-types scripts/upload-kv.ts
           if [ "$WORKER_DEPLOY" = "true" ]; then
-            echo "WORKER_DEPLOY=true; deploying Worker..."
-            (cd worker && npm ci && npx wrangler deploy)
+            echo "WORKER_DEPLOY=true; deploying Worker (env: production)..."
+            npm run deploy:production --prefix worker
           else
             echo "WORKER_DEPLOY not true; KV uploaded only."
           fi

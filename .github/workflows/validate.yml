@@ -20,7 +20,7 @@ jobs:
         run: npm run validate
       - name: Typecheck (root scripts + worker)
         run: |
-          npm install --legacy-peer-deps --prefix worker
+          npm ci --prefix worker
           npm run typecheck
       - name: Build indexes
         run: npm run build:indexes

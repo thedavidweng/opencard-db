@@ -1,6 +1,12 @@
 # OpenCard DB API
 
+Official instance: `https://opencard-db.davidweng.workers.dev`
+
 Base path: `/v1`. All responses are JSON (`Content-Type: application/json; charset=utf-8`).
+
+```bash
+curl -H 'X-Client-Name: my-app' https://opencard-db.davidweng.workers.dev/v1/meta
+```
 
 Machine-readable spec: [`openapi.yaml`](./openapi.yaml) (OpenAPI 3.0).
 
