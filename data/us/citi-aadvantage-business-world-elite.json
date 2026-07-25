@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 99.0,
@@ -49,22 +50,23 @@
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible American Airlines purchases",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations and car rental merchants",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Telecommunications merchants, cable and satellite providers",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "AAdvantage® miles can be redeemed for future business travel, upgrades and more. Each cardmember earns one Loyalty Point for every $1 spent on business card purchases."
+    "redemption_notes": "AAdvantage® miles can be redeemed for future business travel, upgrades and more. Each cardmember earns one Loyalty Point for every $1 spent on business card purchases.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 65000,
@@ -80,14 +82,14 @@
       "id": "first-checked-bag-free",
       "title": "First checked bag free",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "First checked bag is free on domestic American Airlines itineraries for you and up to 4 travel companions on the same reservation."
     },
     {
       "id": "preferred-boarding",
       "title": "Preferred boarding",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Enjoy preferred boarding on American Airlines flights so you can save time and be more productive."
     },
     {
@@ -101,28 +103,28 @@
       "id": "mastercard-special-offers",
       "title": "Mastercard special offers",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Save money and increase everyday efficiency with special offers on business solutions available with your Mastercard."
     },
     {
       "id": "save-25-inflight",
       "title": "Save 25% on select inflight purchases",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Enjoy 25% savings on inflight Wi-Fi, food and beverage purchases on American Airlines flights when you use your credit card."
     },
     {
       "id": "companion-certificate",
       "title": "Earn an American Airlines Companion Certificate",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn an American Airlines Companion Certificate for domestic travel after you spend $30,000 or more in purchases each cardmembership year and cardmembership is renewed. Redeeming the certificate costs $99 for the ticketing fee plus taxes and fees."
     },
     {
       "id": "aadvantage-business-membership",
       "title": "AAdvantage Business™ membership benefits",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Book and manage business travel easily on aa.com. Your membership also includes travel management tools with essential reporting capabilities, duty of care, traveler activity, expense management and more."
     },
     {
@@ -160,7 +162,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.aa.com/credit-cards/citi-business-card-american-airlines-direct/"
   ],
