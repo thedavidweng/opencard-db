@@ -1,9 +1,9 @@
 {
   "id": "us-wells-fargo-signify-business-cash",
   "schema_version": "1.0.0",
-  "name": "Our Best Cash Rewards Business Credit Card",
+  "name": "Signify Business Cash Card",
   "localized_names": {
-    "en": "Our Best Cash Rewards Business Credit Card"
+    "en": "Signify Business Cash Card"
   },
   "country": "us",
   "issuer": "Wells Fargo",
@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -39,8 +40,9 @@
     "currency": "cash_back",
     "currency_label": "Cash rewards (USD)",
     "structure": "single",
+    "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": null,
+      "points_per_dollar": 2,
       "description": "Earn unlimited 2% cash rewards on purchases for your business – without caps or spending categories."
     },
     "categories": [],
@@ -67,42 +69,42 @@
       "id": "priority-pass",
       "title": "Priority Pass",
       "category": "lounge",
-      "source": "issuer",
+      "source": "network",
       "description": "Complimentary membership access to more than 1,300 participating airport lounges worldwide with 'pay as you go' lounge visit fees."
     },
     {
       "id": "travel-accident-insurance",
       "title": "Worldwide Automatic Common Carrier Travel Accident Insurance",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Get Travel Accident Insurance protection of up to $250,000 when you purchase your airline or other common carrier ticket with your eligible credit card."
     },
     {
       "id": "masterrental-insurance",
       "title": "MasterRental Insurance Coverage",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Drive with extra confidence when traveling for business, here or abroad, knowing you're protected against damage to, or theft of, a vehicle rented using your Signify Business Cash Card."
     },
     {
       "id": "zero-liability",
       "title": "Zero Liability Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Built-in protection features ensure that you won't be held responsible for unauthorized transactions, as long as they're reported promptly."
     },
     {
       "id": "id-theft-protection",
       "title": "Mastercard ID Theft Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Detection and protection against identity theft, including monitoring, alerts, and expert resolution 24/7/365. Enrollment is required."
     },
     {
       "id": "business-assistant",
       "title": "Mastercard Business Assistant",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Efficient & expert assistance, 24/7 — from arranging business travel or meetings, to recommending restaurants or office equipment upgrades."
     }
   ],
