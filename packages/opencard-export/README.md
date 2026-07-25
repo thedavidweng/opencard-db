@@ -20,7 +20,7 @@ No install needed:
 ```bash
 npx opencard-export          # scan + report (writes no files)
 # or
-bunx opencard-export
+bunx opencard-export@latest
 ```
 
 Common flags:
@@ -28,40 +28,53 @@ Common flags:
 ```bash
 npx opencard-export --export            # copy card art into ./ (or images/ in a repo checkout)
 npx opencard-export --export ~/Desktop  # copy card art into a chosen folder
-npx opencard-export --all               # also list non-payment passes (never exported)
 npx opencard-export --json              # machine-readable report (no colors)
 npx opencard-export --no-remote         # skip the live DB comparison (offline)
-npx opencard-export --help              # bilingual help
+npx opencard-export --help              # show help
 ```
 
 - `--repo <path>` — an OpenCard DB checkout; exports go straight into its `images/`.
 - `--passes-dir <path>` — override the Wallet directory (advanced / testing).
 - `--no-color` — disable ANSI color (also honors `NO_COLOR`).
 
+Non-payment passes (loyalty cards, tickets, boarding passes, store cards) are
+never shown and never exported — they're just counted in a one-line summary.
+
 ## What the report looks like
 
 ```text
-OpenCard DB · Apple Pay 卡面贡献助手 / card-art contribution helper
-Scanned 12 passes; 3 payment card(s).
+opencard-export v0.2.0
+OpenCard DB · github.com/thedavidweng/opencard-db
 
-┌─────────────────────┬─────────────┬────────────────────────────┬────────────┬─────────────────┬──────────────────────────┐
-│ 钱包卡片            │ 发卡行      │ 匹配的 DB 卡片             │ 数据完整度 │ 卡面            │ 建议动作                 │
-├─────────────────────┼─────────────┼────────────────────────────┼────────────┼─────────────────┼──────────────────────────┤
-│ Sapphire Preferred  │ Chase       │ us-chase-sapphire-preferred │ ▮▮▮▮▮▮ 6/6 │ ✅ 已收录，已有卡面 │ 数据已完善，可核对       │
-│ Gold Card           │ Amex        │ us-amex-gold                │ ▮▮▮▮▯▯ 4/6 │ 🟡 已收录，缺卡面  │ --export 后提交卡面 PR   │
-│ My Local Credit U…  │ Some CU     │ —                          │ —          │ 🔴 数据库未收录  │ 开 Request-a-card / PR    │
-└─────────────────────┴─────────────┴────────────────────────────┴────────────┴─────────────────┴──────────────────────────┘
+● Sapphire Preferred (Chase)                                    complete
+  → us-chase-sapphire-preferred · Fee ✓ APR ✓ FX ✓ Rewards ✓ Bonus ✓ Art ✓
+● Gold Card (American Express)                                  missing art
+  → us-amex-gold · Fee ✓ APR ✗ FX ✓ Rewards ✓ Bonus ✓ Art ✗
+● My Local Credit Union (Some CU)                               not in DB
+  → not in OpenCard DB yet
+
+3 payment cards · 1 complete · 1 missing art · 1 not in DB
+Ignored 32 non-payment passes (loyalty cards, tickets, boarding passes).
+
+Next steps:
+  • Missing art — run npx opencard-export --export, then add images/<card-id>.png in a PR
+    (CI converts it to lossless WebP).
+  • Not in OpenCard DB — open the Request-a-card form:
+    https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml
 ```
 
-- **数据完整度 / completeness** — how many of six core fields the matched DB card
-  has populated: `annual_fee`, `apr`, `fx_fee`, `rewards`, `signup_bonus`, `image`.
-- **卡面 / art state**
-  - ✅ **已收录，已有卡面** — in the DB and already has a card face.
-  - 🟡 **已收录，缺卡面** — in the DB but missing art → run `--export`, add
+Each payment card is two lines:
+
+- **Line 1** — a colored status dot, the card name, its issuer, and a status word:
+  - 🟢 **complete** — in the DB and already has a card face.
+  - 🟡 **missing art** — in the DB but no card face yet → run `--export`, add
     `images/<card-id>.png` via PR (CI converts it to lossless WebP).
-  - 🔴 **数据库未收录** — not in the DB yet → open the
+  - 🔴 **not in DB** — not in OpenCard DB yet → open the
     [Request-a-card form](https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml)
     or contribute a full card PR.
+- **Line 2** — the matched Card Id and per-field completeness (`Fee`, `APR`, `FX`,
+  `Rewards`, `Bonus`, `Art`), each marked `✓` (populated) or `✗` (missing).
+  Unmatched cards show `→ not in OpenCard DB yet`.
 
 ## Full Disk Access (required)
 
@@ -73,8 +86,8 @@ app needs **Full Disk Access**:
 3. **Fully quit** the terminal (Cmd+Q — not just the window) and reopen it.
 4. Re-run `npx opencard-export`.
 
-The tool prints this exact guide (bilingual, naming your terminal app) if it can't
-read your Wallet, and exits with code `2`.
+The tool prints this exact guide (naming your terminal app) if it can't read your
+Wallet, and exits with code `2`.
 
 ## How a card is exported
 
@@ -95,7 +108,7 @@ Non-payment passes (loyalty cards, boarding passes, event tickets, store cards) 
 - Runs entirely on your machine. There is no network call except an optional,
   read-only fetch of the public OpenCard DB export for comparison.
 - Never reads, stores, logs, or transmits PANs, tokens, or personal values. A card's
-  last-4 suffix (if Wallet exposes one) is shown **on screen only** and is never
+  last-4 suffix (if Wallet exposes one) is used **on screen only** and is never
   written to any file or the `--json` output.
 
 ## License
