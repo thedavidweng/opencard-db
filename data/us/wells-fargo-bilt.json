@@ -8,8 +8,8 @@
   "country": "us",
   "issuer": "Wells Fargo",
   "issuer_id": "wells-fargo",
-  "network": "visa",
-  "network_tier": "signature",
+  "network": "mastercard",
+  "network_tier": "world_elite",
   "type": "credit",
   "status": "active",
   "annual_fee": {
@@ -40,36 +40,30 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.0,
-      "description": "1X on everything else (Bilt Blue Card)."
+      "description": "1X on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Dining",
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Travel",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
+        "label": "Rent",
+        "points_per_dollar": 1.0,
+        "cap": {
+          "amount": 100000,
+          "currency": "bilt_points",
+          "period": "calendar_year"
+        }
       }
     ],
-    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. The Point Guy values Bilt Points at 2.2 cents each."
+    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment."
   },
   "signup_bonus": null,
   "benefits": [
