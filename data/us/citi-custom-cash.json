@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0,
@@ -27,8 +28,8 @@
     "notes": "See Citi Important Terms for current APR; intro APR may apply."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign purchase fee on current Citi pricing disclosures."
+    "percent": 3,
+    "notes": "Citi Custom Cash charges a 3% foreign purchase transaction fee (disclosed, not personalized)."
   },
   "credit_required": {
     "score_band": "good_to_excellent",
@@ -38,6 +39,7 @@
     "currency": "thankyou_points",
     "currency_label": "ThankYou Points / cash back",
     "structure": "choice",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1% cash back on other purchases"
@@ -61,8 +63,8 @@
     "spend_required": null,
     "spend_currency": "USD",
     "months": null,
-    "description": "Cash back welcome bonus after qualifying purchases; amount and spend threshold are personalized on Citi.com and vary by channel.",
-    "as_of": "2026-07-23"
+    "description": "Citi stopped accepting new Citi Custom Cash applications as of 2026-05-28; no welcome bonus is currently offered to new applicants.",
+    "as_of": "2026-07-25"
   },
   "benefits": [
     {
@@ -81,9 +83,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.citi.com/credit-cards/citi-custom-cash-credit-card"
   ],
-  "notes": "Citi personalizes APR/bonus on-page; network tier assumed Mastercard World — confirm on card art/Guide to Benefits. Prefer official image URL when available."
+  "notes": "Citi is no longer accepting new Citi Custom Cash applications as of 2026-05-28; existing cardmembers retain the card. APR range not shown on the official page (application closed); left null pending re-verification against disclosures. 5% top-category (up to $500/billing cycle) + 1% base earn structure confirmed."
 }
