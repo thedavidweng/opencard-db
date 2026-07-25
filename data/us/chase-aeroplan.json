@@ -9,8 +9,9 @@
   "issuer": "Chase",
   "issuer_id": "chase",
   "network": "mastercard",
-  "network_tier": "world",
+  "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -43,24 +44,25 @@
     "currency": "aeroplan_points",
     "currency_label": "Aeroplan points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1X points for each dollar spent on all other purchases. Points do not expire as long as your Aeroplan Credit Card account is open."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores",
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Dining at restaurants, including takeout and eligible delivery services",
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Purchases made directly with Air Canada",
+        "points_per_dollar": 3.0,
         "cap": null
       }
     ],
@@ -175,9 +177,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/aircanada/aeroplan"
   ],
-  "notes": "Verified from official Chase product page. Network confirmed as Mastercard (page references World Mastercard Concierge and Mastercard trademarks). Rewards currency corrected from ultimate_rewards to aeroplan_points."
+  "notes": "Verified from official Chase product page on 2026-07-25. Filled the three 3X bonus tiers (grocery stores; dining at restaurants including takeout and eligible delivery; and purchases made directly with Air Canada), which were empty placeholders; base earn is 1X. Network_tier upgraded from world to world_elite: the Chase Aeroplan card is a World Elite Mastercard (Mastercard 24/7 Concierge benefit). Rewards currency corrected from ultimate_rewards to aeroplan_points. A separate 500-points-per-$2,000-monthly-spend bonus (up to 1,500/month) is described in redemption_notes."
 }
