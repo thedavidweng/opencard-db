@@ -1,0 +1,155 @@
+{
+  "id": "us-chase-disney",
+  "schema_version": "1.0.0",
+  "name": "Disney Visa Card",
+  "localized_names": {
+    "en": "Disney Visa Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Variable APRs; purchase APR 18.24% to 27.74%. 0% promotional APR for 6 months on select Disney vacation packages. Cash advance APR 28.49%. Penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee: 3% of the amount of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "disney_rewards_dollars",
+    "currency_label": "Disney Rewards Dollars",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1% in Disney Rewards Dollars on all card purchases with no limits to the amount you can earn."
+    },
+    "categories": [],
+    "redemption_notes": "Redeem toward most anything Disney at most Disney U.S. locations. Use toward Disney Theme Park Tickets, Resort stays, shopping, dining, Disney Cruise Line sailings and more in the U.S. There are no block-out dates when redeeming Rewards Dollars."
+  },
+  "signup_bonus": {
+    "amount": 150,
+    "unit": "USD",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Get a $100 Disney Gift Card eGift to use today upon approval + earn a $50 statement credit after you spend $500 on purchases in the first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "disney-vacation-financing",
+      "title": "Special Disney Vacation Financing",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy 0% promotional APR for 6 months on select Disney vacation packages from the date of purchase, after that a variable APR of 18.24% to 27.74%."
+    },
+    {
+      "id": "disney-shopping-savings",
+      "title": "10% Savings at DisneyStore.com",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 10% on select purchases at DisneyStore.com when you use your Disney Visa Card."
+    },
+    {
+      "id": "disney-parks-merchandise-savings",
+      "title": "10% Off Select Merchandise at Disney Parks",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 10% off select merchandise purchases at select locations at the Disneyland Resort and Walt Disney World Resort when you use your Disney Visa Card."
+    },
+    {
+      "id": "disney-parks-dining-savings",
+      "title": "10% Off Select Dining at Disney Parks",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 10% off select dining locations most days at the Disneyland Resort and Walt Disney World Resort when you use your Disney Visa Card."
+    },
+    {
+      "id": "disney-tours-savings",
+      "title": "15% Off Select Guided Tours at Disney Parks",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 15% off the non-discounted price of select guided tours at the Disneyland Resort and Walt Disney World Resort when you use your Disney Visa Card."
+    },
+    {
+      "id": "disney-photo-opportunities",
+      "title": "Disney Parks Photo Opportunities",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Pose for special photos at private Cardmember locations at the Disneyland Resort and Walt Disney World Resort. Receive complimentary downloads of your photos."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses you up to $100 a day for up to 3 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item."
+    },
+    {
+      "id": "extended-warranty-protection",
+      "title": "Extended Warranty Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "0% promotional APR for 6 months on select Disney vacation packages",
+      "10% off select purchases at DisneyStore.com",
+      "10% off select merchandise at Disneyland and Walt Disney World Resorts",
+      "10% off select dining at Disneyland and Walt Disney World Resorts",
+      "15% off select guided tours at Disneyland and Walt Disney World Resorts",
+      "Disney Parks photo opportunities with complimentary downloads"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63171.html"
+  ],
+  "notes": "Network corrected from mastercard to visa based on product page stating 'Disney Visa Card'. Network tier set to null (not stated on page; previous 'world' was a Mastercard tier). Name corrected from 'Disney Card from Chase: No Annual Fee' to 'Disney Visa Card' per product page."
+}
