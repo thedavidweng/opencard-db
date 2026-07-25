@@ -1,0 +1,87 @@
+{
+  "id": "us-citi-double-cash",
+  "schema_version": "1.0.0",
+  "name": "Citi Double Cash® Card",
+  "localized_names": {
+    "en": "Citi Double Cash® Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See Citi Important Terms; rates personalized."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Citi Double Cash charges a 3% fee for foreign purchases (disclosed, not personalized)."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back: 1% when you buy plus an additional 1% as you pay"
+    },
+    "categories": [
+      {
+        "label": "Hotels, car rentals, and attractions booked through Citi Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "No category enrollment; no stated earn caps. Citi Travel bookings earn 5% total (2% base plus an additional 3%). Cash back is earned as ThankYou Points."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Cash back welcome bonus after a qualifying spend within the first months; amount, spend, and window are rendered as template variables on the official page and not disclosed there.",
+    "as_of": "2026-07-25"
+  },
+  "benefits": [
+    {
+      "id": "mastercard-id-theft",
+      "title": "Mastercard ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "ID theft protection program offered by Mastercard; terms apply."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-double-cash-credit-card",
+  "image": {
+    "url": null,
+    "attribution": "© Citibank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-double-cash-credit-card"
+  ],
+  "notes": "Classic 1%+1% (2% total) cash-back structure, plus 5% total on Citi Travel bookings. APR range and welcome-bonus amount/spend/months are rendered as template variables on the official page and are not disclosed there; left null pending re-verification against Citi Pricing Details."
+}

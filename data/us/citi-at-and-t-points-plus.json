@@ -1,0 +1,180 @@
+{
+  "id": "us-citi-at-and-t-points-plus",
+  "schema_version": "1.0.0",
+  "name": "AT&T Points Plus® Card from Citi",
+  "localized_names": {
+    "en": "AT&T Points Plus® Card from Citi"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR for purchases and balance transfers 19.49%–27.49% based on creditworthiness. Cash advance APR 29.74% variable. Penalty APR up to 29.99%. Minimum interest charge $0.50. Citi Flex Pay Plan Fee up to 1.72% monthly. Rates as of 04/20/2026. APR numbers from web search snippet of about.att.com official page; Citi.com page showed blank percentages (dynamically loaded)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. Fee for foreign transactions – None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "thankyou_points",
+    "currency_label": "ThankYou® Points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1 ThankYou® Point for every $1 spent on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas and EV charging stations",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "AT&T products and services",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores (including grocery delivery services)",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem ThankYou® Points at thankyou.com for gift cards, travel rewards, online shopping at participating merchants, cash rewards, charity, and more. No limit to the amount of points you can earn and points will not expire."
+  },
+  "signup_bonus": {
+    "amount": 200.0,
+    "unit": "USD",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 statement credit after spending $1,000 on purchases in your first three months.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "att-bill-discount-wireless",
+      "title": "$10 Per Line Monthly Discount on AT&T Wireless",
+      "category": "other",
+      "source": "issuer",
+      "description": "$10 per line monthly discount on your AT&T Wireless bill when enrolled in AutoPay and paperless billing at AT&T."
+    },
+    {
+      "id": "att-bill-discount-internet",
+      "title": "$10 Monthly Discount on AT&T Internet",
+      "category": "other",
+      "source": "issuer",
+      "description": "$10 monthly discount on your eligible AT&T internet bill when enrolled in AutoPay and paperless billing at AT&T."
+    },
+    {
+      "id": "monthly-statement-credit",
+      "title": "$20 Statement Credit Per Billing Cycle",
+      "category": "other",
+      "source": "issuer",
+      "description": "$20 statement credit on your AT&T Points Plus Card from Citi each billing cycle after you spend $1,000 or more on purchases. Up to $240 a year."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases when you shop abroad or on an international retailer's website."
+    },
+    {
+      "id": "citi-entertainment",
+      "title": "Citi Entertainment®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Entertainment access program with special access to purchase tickets to thousands of events, including presale tickets and exclusive experiences to concerts, sporting events, arts and culture experiences."
+    },
+    {
+      "id": "citi-travel",
+      "title": "Citi Travel®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Book flights, hotels, car rentals and attractions using your eligible Citi card, points or a combination of both. Access to over 1.4 million hotels and resorts worldwide."
+    },
+    {
+      "id": "citi-flex-pay",
+      "title": "Citi® Flex Pay",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay over time with a fixed monthly payment. Available on eligible purchases of $75 or more when using an eligible Citi® credit card."
+    },
+    {
+      "id": "fico-score-access",
+      "title": "Access FICO® Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free access to your FICO® score online to review your credit history."
+    },
+    {
+      "id": "citi-quick-lock",
+      "title": "Citi® Quick Lock",
+      "category": "other",
+      "source": "issuer",
+      "description": "Use Citi Quick Lock in the Citi Mobile® App or at citi.com to instantly block new charges while allowing recurring transactions to continue without disruption."
+    },
+    {
+      "id": "mastercard-id-theft-protection",
+      "title": "Mastercard® ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "ID Theft Protection program offered by Mastercard® helps eliminate the worry of identity theft by monitoring information you choose to protect and alerting you if suspicious activity is found."
+    },
+    {
+      "id": "authorized-users",
+      "title": "Add Authorized Users at No Additional Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Add an Authorized User to your account at no additional cost and earn points faster."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.att.com/deals/att-points-plus-citi/",
+  "image": {
+    "url": null,
+    "attribution": "© Citi",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.att.com/deals/att-points-plus-citi/",
+    "https://www.citi.com/credit-cards/citi-att-pointsplus-credit-card"
+  ],
+  "notes": "Verified from official AT&T product page and Citi product page. Annual fee $0, no foreign transaction fees (both pages confirm). $200 statement credit after $1,000 spend in 3 months. $10/line monthly wireless discount + $10 monthly internet discount with AutoPay/paperless billing. $20 statement credit per billing cycle after $1,000+ spend (up to $240/year). 3x at gas/EV charging, 2x at AT&T, 2x at grocery, 1x on all other. APR 19.49%-27.49% variable from web search snippet of about.att.com (Citi page had blank percentages due to dynamic loading). network_tier changed from world to null (not stated on page)."
+}

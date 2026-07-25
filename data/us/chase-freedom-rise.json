@@ -1,0 +1,109 @@
+{
+  "id": "us-chase-freedom-rise",
+  "schema_version": "1.0.0",
+  "name": "Chase Freedom Rise Credit Card",
+  "localized_names": {
+    "en": "Chase Freedom Rise Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 18.24% to 27.74% variable based on creditworthiness. Cash Advance APR 28.49% variable. Penalty APR up to 29.99%. Variable APRs based on 6.75% Prime Rate as of 3/24/2026. Maximum APR 29.99%."
+  },
+  "fx_fee": {
+    "percent": 3.0,
+    "notes": "3% of the amount of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Best for: New to Credit and Students. Having at least $250 in Chase checking or savings accounts increases chances of approval."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back rewards (tracked as points; each $1 in Cash Back = 100 points)",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% Cash Back on all purchases."
+    },
+    "categories": [
+      {
+        "label": "Dining at restaurants incl. takeout & eligible delivery (new cardmembers, first 6 months)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "first_6_months"
+        }
+      },
+      {
+        "label": "Lyft rideshare, bike/scooter, and membership purchased in the Lyft app (through 09/30/2027)",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash Back rewards tracked as points; each $1 in Cash Back = 100 points."
+  },
+  "signup_bonus": {
+    "amount": 25.0,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$25 statement credit after setting up automatic payments during the first 3 months from account opening and remaining enrolled for at least 90 consecutive days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "auto-payment-credit",
+      "title": "$25 Statement Credit for Automatic Payments",
+      "category": "other",
+      "source": "issuer",
+      "description": "$25 statement credit after you set up automatic payments during the first 3 months from account opening and remain enrolled for at least 90 consecutive days."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64795.html"
+  ],
+  "notes": "Verified from official Chase product page and pricing & terms page. Chase Freedom Rise is a Visa card (T&C: applicants receive a Visa Signature or Platinum card); network corrected from mastercard/world. Annual fee $0, purchase APR 18.24%-27.74% variable, cash advance APR 28.49%, penalty APR up to 29.99%, foreign transaction fee confirmed 3% (the earlier 'no FX fee' reading was a mis-scrape). Rewards: 3% dining accelerator (new cardmembers, first 6 months, up to $6,000) and 2% Lyft (through 09/30/2027) modeled as rewards categories; 1.5% base on all purchases. $25 statement credit for auto-payment enrollment."
+}
