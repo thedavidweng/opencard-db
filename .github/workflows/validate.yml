@@ -18,6 +18,10 @@ jobs:
         run: npm ci
       - name: Validate cards
         run: npm run validate
+      - name: Typecheck (root scripts + worker)
+        run: |
+          npm install --legacy-peer-deps --prefix worker
+          npm run typecheck
       - name: Build indexes
         run: npm run build:indexes
       - name: Test
