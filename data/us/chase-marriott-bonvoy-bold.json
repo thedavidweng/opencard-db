@@ -1,16 +1,17 @@
 {
   "id": "us-chase-marriott-bonvoy-bold",
   "schema_version": "1.0.0",
-  "name": "Marriott Bonvoy Bold: Hotel and Travel Credit Card",
+  "name": "Marriott Bonvoy Bold Credit Card",
   "localized_names": {
-    "en": "Marriott Bonvoy Bold: Hotel and Travel Credit Card"
+    "en": "Marriott Bonvoy Bold Credit Card"
   },
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
   "network": "visa",
-  "network_tier": "visa_signature",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -39,29 +40,20 @@
     "currency": "marriott_bonvoy_points",
     "currency_label": "Marriott Bonvoy points",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1X points on all other purchases"
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Marriott Bonvoy hotels",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Other travel purchases",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -81,14 +73,14 @@
       "id": "silver-elite-status",
       "title": "Automatic Silver Elite Status",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Automatically receive Silver Elite Status each calendar year as a cardmember."
     },
     {
       "id": "elite-night-credits",
       "title": "5 Elite Night Credits",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive 5 Elite Night Credits every calendar year."
     },
     {
@@ -144,7 +136,7 @@
       "id": "visa-concierge",
       "title": "Visa Signature Concierge",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Complimentary Visa Signature Concierge Service 24 hours a day."
     }
   ],
@@ -171,5 +163,5 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold"
   ],
-  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa (page references 'Visa Signature card' in offer details). Network tier corrected from world to visa_signature."
+  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa (page references 'Visa Signature card' in offer details). Network tier corrected to bare slug 'signature'. Earn structure (3X Marriott Bonvoy hotels, 2X other travel, 1X everything else) is well-established public knowledge."
 }
