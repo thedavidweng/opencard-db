@@ -11,6 +11,7 @@
   "network": "amex",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 99,
@@ -38,6 +39,7 @@
   "rewards": {
     "currency": "lifemiles",
     "currency_label": "LifeMiles (Avianca frequent flyer miles)",
+    "rate_type": "miles_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
@@ -110,8 +112,8 @@
   },
   "official_url": "https://www.cardless.com/cards/avianca/lifemiles",
   "image": {
-    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
-    "attribution": "© First Bankcard",
+    "url": null,
+    "attribution": null,
     "local_path": null
   },
   "bin_hints": [],
