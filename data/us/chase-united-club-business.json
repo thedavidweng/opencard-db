@@ -1,0 +1,198 @@
+{
+  "id": "us-chase-united-club-business",
+  "schema_version": "1.0.0",
+  "name": "United Club Business Card",
+  "localized_names": {
+    "en": "United Club Business Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 695.0,
+    "currency": "USD",
+    "first_year": 695.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.74,
+      "max": 28.24,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "19.74% to 28.24% variable APR (Min. of (6.75+12.99) and 29.99% to Min. of (6.75+21.49) and 29.99%)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees (confirmed on Chase product page)."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "mileageplus_miles",
+    "currency_label": "MileagePlus miles",
+    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5x miles on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "United flights (total, incl. 6x MileagePlus + 2x card)",
+        "points_per_dollar": 8.0,
+        "cap": null
+      },
+      {
+        "label": "Other United purchases",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Hotel stays prepaid through Renowned Hotels and Resorts",
+        "points_per_dollar": 5.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles redeemable via MileagePlus program for United flights and partner awards."
+  },
+  "signup_bonus": {
+    "amount": 100000.0,
+    "unit": "miles",
+    "spend_required": 5000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 100,000 bonus miles + 2,000 PQP after you spend $5,000 on purchases in the first 3 months your account is open. Plus, earn 10,000 bonus miles after you add an employee card in the first 3 months.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "unlimited-united-club-access",
+      "title": "Unlimited United Club access for you and a guest",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Your card includes United Club card membership — a $750+ value. Plus, unlock All Access membership when you reach Premier Gold status or spend $50,000 annually. Starting with your first anniversary, earn 4 United Club one-time passes when you have United Club All Access Membership and an employee card."
+    },
+    {
+      "id": "free-first-second-checked-bags",
+      "title": "Free first and second checked bags",
+      "category": "other",
+      "source": "issuer",
+      "description": "The primary Cardmember and one companion can each check a first and second standard bags for free – save up to $440 per roundtrip."
+    },
+    {
+      "id": "renowned-hotels-credit",
+      "title": "Up to $200 in credits annually (Renowned Hotels and Resorts)",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to $200 back in statement credits each anniversary year on hotel accommodations when you prepay directly through Renowned Hotels and Resorts."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "Up to $150 in credits on rideshare purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enroll to receive up to $150 back as statement credits each calendar year on rideshare purchases: up to $12 back each month Jan-Nov and up to $18 back for December. Yearly opt-in required."
+    },
+    {
+      "id": "avis-budget-credit",
+      "title": "Up to $100 in United travel credits (Avis/Budget)",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive $50 in United TravelBank cash, up to $100 each anniversary year, for your 1st and 2nd Avis or Budget car rentals booked directly through cars.united.com."
+    },
+    {
+      "id": "instacart-credit",
+      "title": "Up to $240 in Instacart credits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive two $10 Instacart credits monthly, up to $240 total each calendar year, for purchases made directly through Instacart. Benefits end 12/31/27."
+    },
+    {
+      "id": "jsx-credit",
+      "title": "Up to $200 in credits on JSX purchases annually",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get up to $200 back as a statement credit each anniversary year when you book flights directly with JSX."
+    },
+    {
+      "id": "farelock-credit",
+      "title": "Up to $50 in credits on United FareLock purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn up to $50 back as a statement credit each anniversary year after you buy FareLock on a United- or United Express-operated flight."
+    },
+    {
+      "id": "premier-access",
+      "title": "Premier Access travel services",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive preferential treatment to ease your way through the airport with priority check-in, security screening, boarding, and baggage handling privileges (where available)."
+    },
+    {
+      "id": "economy-plus-upgrades",
+      "title": "2 global Economy Plus seat upgrades",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 2 global Economy Plus seat upgrades after spending $40,000 each calendar year."
+    },
+    {
+      "id": "save-10-percent-mileage-flights",
+      "title": "Save 10% or more when booking flights with miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save 10% or more when booking flights with miles. Premier members save even more."
+    },
+    {
+      "id": "pqp-earning",
+      "title": "Earn up to 28,000 PQP",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 1 Premier Qualifying Point (PQP) for every $15 spent on purchases, up to 28,000 PQP per year."
+    },
+    {
+      "id": "employee-cards-no-cost",
+      "title": "Employee cards at no additional cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Miles earned from employee purchases accrue in your account. Set up individual spending limits for each card."
+    },
+    {
+      "id": "anniversary-better-together-bonus",
+      "title": "5,000-mile better-together bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a 5,000-mile better-together bonus each year when you have the United Club Business card and a personal United credit card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Unlimited United Club access for cardmember and guest ($750+ value)"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "Free first and second checked bags for primary cardmember and one companion (save up to $440 per roundtrip)",
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://creditcards.chase.com/business-credit-cards/united/united-club-business",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/business-credit-cards/united/united-club-business"
+  ],
+  "notes": "Verified against official Chase product page 2026-07-24. Name updated to 'United Club Business Card'. APR 19.74%-28.24% variable confirmed. Annual fee $695 confirmed. Signup bonus confirmed (100,000 miles + 2,000 PQP after $5,000 in 3 months). FX fee not explicitly stated on page."
+}

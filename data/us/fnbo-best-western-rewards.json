@@ -1,0 +1,136 @@
+{
+  "id": "us-fnbo-best-western-rewards",
+  "schema_version": "1.0.0",
+  "name": "Best Western Rewards",
+  "localized_names": {
+    "en": "Best Western Rewards"
+  },
+  "country": "us",
+  "issuer": "First Bank & Trust",
+  "issuer_id": "first-bank-trust",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 25.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "25.99% to 29.99% variable APR based on Prime Rate. Minimum interest charge $1.50. Balance Transfer Fee: 4% or $5 min. Cash Advance Fee: 5% or $10 min. Accurate as of 12/31/2025."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Not specified by the issuer. Mercury Financial focuses on broader accessibility. Prequalification available without hard pull. Bonus offer varies by prequalification."
+  },
+  "rewards": {
+    "currency": "bwr_points",
+    "currency_label": "Best Western Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 points per $1 on all other (non-Best Western) purchases"
+    },
+    "categories": [
+      {
+        "label": "Best Western stays and purchases",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "BWR points never expire. Redeem for free and discounted stays at 4,300+ BWH Hotels properties across 18 brands in 100+ countries, gift cards, and charitable donations. Redemptions start at 5,000 points. Combined with BWR membership (10 points/$1 on stays), cardholders earn 14 points/$1 on Best Western stays."
+  },
+  "signup_bonus": {
+    "amount": 40000,
+    "unit": "bwr_points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Bonus points offer of 10,000 to 40,000 points with qualifying spend. Exact bonus and minimum spend vary based on prequalification. Pay with Points value up to $200.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "anniversary-bonus",
+      "title": "10,000 Anniversary Bonus Points",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 10,000 bonus points by spending $5,000 during each cardmember year."
+    },
+    {
+      "id": "gold-elite-status",
+      "title": "Automatic Gold Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic Best Western Rewards Gold Elite status: 10% bonus points per stay, no blackout dates, 500 bonus points at check-in. Normally requires 5 nights per year."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "When you pay your monthly wireless bill with your card, your cell phone is protected for the next calendar month."
+    },
+    {
+      "id": "trip-delay",
+      "title": "Trip Delay Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to $300 when stuck for more than 12 hours when booking travel with card."
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation/Interruption Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for non-refundable fare up to $2,000 if trip is interrupted or cancelled."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the United States."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Automatic Best Western Rewards Gold Elite status (10% bonus points per stay, no blackout dates, 500 bonus points at check-in)",
+    "other": [
+      "10,000 anniversary bonus points after $5,000/year spend",
+      "Trip delay reimbursement up to $300 (12+ hour delay)",
+      "Trip cancellation/interruption reimbursement up to $2,000",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
+    "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html"
+  ],
+  "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (managed by Mercury Financial) in Aug 2024. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page. Visa Signature. $0 annual fee."
+}

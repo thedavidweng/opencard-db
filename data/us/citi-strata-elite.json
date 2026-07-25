@@ -1,0 +1,181 @@
+{
+  "id": "us-citi-strata-elite",
+  "schema_version": "1.0.0",
+  "name": "Citi Strata Elite℠",
+  "localized_names": {
+    "en": "Citi Strata Elite℠"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 595,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Page shows 'Variable APR' and 'variable APR for cash advances is %' but numeric values are loaded dynamically and not present in fetched text. APR is variable based on creditworthiness."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees: 'Fee for foreign purchases - None.' and 'There are no foreign transaction fees with the Citi Strata Elite Card.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Citi ThankYou Points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 points per dollar spent on All Other Purchases."
+    },
+    "categories": [
+      {
+        "label": "Hotels, Car Rentals & Attractions booked on cititravel.com",
+        "points_per_dollar": 12,
+        "cap": null
+      },
+      {
+        "label": "Air Travel booked on cititravel.com",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Restaurants on Citi Nights (Friday & Saturday 6 PM - 6 AM ET)",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Restaurants (any other time)",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem ThankYou Points via Citi Travel (flights, hotels, car rentals, attractions), points transfer to American Airlines, JetBlue, Virgin Atlantic, Cathay, Eva Air, Choice Hotels, The Leading Hotels of the World and others (min 1,000 points), gift cards/cash back at thankyou.com, shop with points at Amazon, PayPal, CVS and others."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Page shows 'Earn bonus points after spending $ in the first months' but numeric values are loaded dynamically and not present in fetched text.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "annual-hotel-benefit",
+      "title": "Up to $300 Annual Hotel Benefit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Each calendar year, enjoy up to $300 off a hotel stay of 2 nights or more when booked through cititravel.com. The benefit is applied instantly at the time of booking."
+    },
+    {
+      "id": "splurge-credit",
+      "title": "Up to $200 Annual Splurge Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every calendar year, earn up to $200 in statement credits on your choice of up to 2 of the following brands: 1stDibs, American Airlines (exclusions apply), Best Buy, Future Personal Training, and Live Nation (exclusions apply)."
+    },
+    {
+      "id": "blacklane-credit",
+      "title": "Up to $200 Annual Blacklane Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every calendar year, earn up to $200 in statement credits when you book with Blacklane, a premium global chauffeur service. Earn up to $100 on Blacklane purchases January through June and up to $100 July through December."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass Select membership",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Enjoy complimentary access to 1,500+ airport lounges worldwide. Annual membership fee valued at $469."
+    },
+    {
+      "id": "admirals-club-passes",
+      "title": "American Airlines Admirals Club Lounge Access Passes",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Every calendar year, receive 4 Admirals Club Citi Strata Elite Passes for access to nearly 50 Admirals Club lounges (over $300 in value)."
+    },
+    {
+      "id": "global-entry-tsa-credit",
+      "title": "Up to $120 Global Entry or TSA PreCheck Application Fee Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a statement credit, up to $120 every four years, as reimbursement for your application fee for Global Entry or TSA PreCheck."
+    },
+    {
+      "id": "travel-protection",
+      "title": "Travel and Shopping Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Trip Delay Protection, Enhanced Trip Cancellation and Trip Interruption Protection, Lost or Damaged Luggage, MasterRental Coverage (car rental insurance), and Extended Warranty and Purchase Assurance Plus."
+    },
+    {
+      "id": "id-theft-protection",
+      "title": "Mastercard ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "The ID Theft Protection program offered by Mastercard helps eliminate the worry of identity theft by monitoring the information you choose to protect and alerting you if suspicious activity is found."
+    },
+    {
+      "id": "citi-flex-pay",
+      "title": "Citi Flex Pay",
+      "category": "other",
+      "source": "issuer",
+      "description": "Buy now, pay later with Citi Flex Pay. Pay over time in fixed monthly payments and continue to earn points on purchases. Available on eligible purchases of $75 or more."
+    },
+    {
+      "id": "citigold-credit",
+      "title": "Citigold Relationship Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Qualifying Citigold clients receive a $145 Banking Relationship Annual Credit. Citigold Private Clients receive a $595 first year banking relationship credit and a $145 credit each year thereafter."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Priority Pass Select membership (1,500+ lounges) + 4 Admirals Club passes/year"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Up to $300 Annual Hotel Benefit via cititravel.com",
+      "Up to $200 Annual Blacklane Credit",
+      "Trip Delay/Cancellation/Interruption Protection",
+      "Lost or Damaged Luggage coverage",
+      "MasterRental Coverage"
+    ]
+  },
+  "official_url": "https://www.citi.com/credit-cards/citi-strata-elite-credit-card",
+  "image": {
+    "url": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-strata-elite-credit-card/citi-strata-elite-credit-card_306x192.webp",
+    "attribution": "© Citi",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-strata-elite-credit-card"
+  ],
+  "notes": "Rewards rates (12x Citi Travel hotels/cars/attractions, 6x Citi Travel air travel, 6x Citi Nights dining, 3x other dining, 1.5x base), benefits, $595 annual fee, World Elite Mastercard tier, and no foreign transaction fee were verified from the official Citi page and public disclosures. APR and signup-bonus amount/spend are dynamically loaded on the page and not present in fetched text; signup-bonus amount pending re-verification against the official page."
+}

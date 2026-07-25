@@ -1,0 +1,228 @@
+{
+  "id": "us-chase-sapphire-reserve-business",
+  "schema_version": "1.0.0",
+  "name": "Sapphire Reserve for Business Credit Card",
+  "localized_names": {
+    "en": "Sapphire Reserve for Business Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 795.0,
+    "currency": "USD",
+    "first_year": 795.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "APR not explicitly stated on product page. Page describes card as 'A Pay in Full credit card' with Flex for Business option. See Pricing & Terms for current APR."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ultimate_rewards",
+    "currency_label": "Ultimate Rewards points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Chase Travel purchases",
+        "points_per_dollar": 8,
+        "cap": null
+      },
+      {
+        "label": "Flights and hotels booked direct",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Social media and search engine advertising",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points worth $0.01 each when redeemed through Chase Travel. Points Boost promotions may enhance value up to 2x. 200,000 points = $4,000 value for select flights and hotels through Chase Travel."
+  },
+  "signup_bonus": {
+    "amount": 200000.0,
+    "unit": "points",
+    "spend_required": 30000.0,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 200,000 points after you spend $30,000 on purchases in your first 6 months from account opening. (Main page shows 150,000 with 200,000 struck through; offer details confirm 200,000.)",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "annual-travel-credit",
+      "title": "$300 Annual Travel Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive up to $300 in statement credits each anniversary year for travel category purchases."
+    },
+    {
+      "id": "chase-travel-hotel-credit",
+      "title": "$250 Credit for select Chase Travel Hotels",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $250 in statement credits through 12/31/26 on prepaid Chase Travel hotel bookings for stays with IHG, Montage, Pendry, Omni, Virgin, Minor, and Pan Pacific Hotels."
+    },
+    {
+      "id": "lounge-network",
+      "title": "Chase Sapphire Reserve Lounge Network",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Complimentary access to Chase Sapphire Lounge by The Club and 1,300+ Priority Pass airport lounges worldwide with up to two guests. Valued at over $850."
+    },
+    {
+      "id": "edit-credit",
+      "title": "$500 Credit for stays with The Edit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $500 in automatic statement credits annually for bookings made with The Edit, with a maximum of $250 per transaction."
+    },
+    {
+      "id": "edit-program-benefits",
+      "title": "The Edit Program Benefits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary benefits when booking through The Edit by Chase Travel: property credit, daily breakfast for two, room upgrade (if available) and more. Average total value over $550 per stay."
+    },
+    {
+      "id": "global-entry-credit",
+      "title": "$120 Global Entry/TSA PreCheck/NEXUS fee credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive one statement credit of up to $120 every four years as reimbursement for the application fee."
+    },
+    {
+      "id": "ihg-platinum-elite",
+      "title": "IHG One Rewards Platinum Elite status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary IHG One Rewards Platinum Elite status through 12/31/27."
+    },
+    {
+      "id": "google-workspace-credit",
+      "title": "$200 Google Workspace credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $200 in annual statement credits on purchases made directly with Google Workspace."
+    },
+    {
+      "id": "ziprecruiter-credit",
+      "title": "$400 ZipRecruiter credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $400 in annual statement credits on purchases made directly with ZipRecruiter. Up to $200 Jan-Jun and up to $200 Jul-Dec."
+    },
+    {
+      "id": "lyft-credit",
+      "title": "$120 Lyft credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $10 in monthly in-app credits, up to $120 annually, to use on Lyft rides through 9/30/27."
+    },
+    {
+      "id": "doordash-value",
+      "title": "$420 DoorDash value",
+      "category": "other",
+      "source": "issuer",
+      "description": "$120 DashPass membership (12 months complimentary) plus $300 DoorDash promos ($5 monthly restaurant promo + two $10 monthly promos for groceries/retail)."
+    },
+    {
+      "id": "gift-card-credit",
+      "title": "$100 Curated Gift Card credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $100 per year in statement credits when purchasing gift cards from a curated collection on giftcards.com/reservebusiness."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at no additional cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Employee cards at no additional cost."
+    },
+    {
+      "id": "air-canada-lounge",
+      "title": "Air Canada Lounge Access",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Complimentary access for cardmember and 1 guest to Air Canada's Maple Leaf Lounges and Air Canada Cafes when departing on a Star Alliance flight."
+    },
+    {
+      "id": "visa-infinite-concierge",
+      "title": "Visa Infinite Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "Complimentary Visa Infinite Concierge Service."
+    },
+    {
+      "id": "spend-120k-benefits",
+      "title": "$120,000 Spend Benefits",
+      "category": "other",
+      "source": "issuer",
+      "description": "After spending $120,000 in purchases each calendar year: World of Hyatt Explorist status, $500 credit at The Shops at Chase, IHG One Rewards Diamond Elite status, $500 Southwest Airlines Chase Travel Credit, Southwest Rapid Rewards A-List status."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Chase Sapphire Lounge by The Club + 1,300+ Priority Pass lounges (up to 2 guests) + Air Canada Maple Leaf Lounges"
+    },
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": "IHG One Rewards Platinum Elite (through 12/31/27); World of Hyatt Explorist after $120K spend; IHG Diamond Elite after $120K spend",
+    "other": [
+      "$300 annual travel credit",
+      "$250 credit for select Chase Travel Hotels (through 12/31/26)",
+      "$500 credit for stays with The Edit (annually)",
+      "The Edit program benefits (property credit, daily breakfast, room upgrade)",
+      "Avis/National/Hertz rental car discounts"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/business-credit-cards/sapphire/reserve",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/business-credit-cards/sapphire/reserve"
+  ],
+  "notes": "Verified from official Chase product page. Network corrected to visa; tier normalized to bare slug 'infinite'. Earn structure verified from official page: 8X Chase Travel, 4X flights/hotels booked direct, 3X social media and search engine advertising, 1X all else. FX fee confirmed 0% (no foreign transaction fees). APR not stated on product page (card described as 'Pay in Full' with Flex for Business); preserved as null. Signup bonus: main page shows 150,000 with 200,000 struck through; offer details confirm 200,000 points."
+}
