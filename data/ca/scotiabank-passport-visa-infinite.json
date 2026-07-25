@@ -21,11 +21,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 20.99,
+      "max": 20.99,
       "type": "variable"
     },
-    "notes": "See Scotiabank for current interest rates."
+    "notes": "Purchase interest rate 20.99%; cash advance rate 22.99% per Scotiabank product page."
   },
   "fx_fee": {
     "percent": 0,
@@ -115,17 +115,17 @@
       "No foreign transaction fees"
     ]
   },
-  "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-visa-infinite-card.html",
+  "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-infinite-card.html",
   "image": {
-    "url": null,
+    "url": "https://www.scotiabank.com/content/sc_scotiabank/ca/en/personal/credit-cards/visa/passport-infinite-card/_jcr_content/root/container/main/container_heroBanner/teaser.coreimg.png/1784312576884/passport-visa-infinite--1600x900-en.png",
     "attribution": "© The Bank of Nova Scotia",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
-    "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-visa-infinite-card.html",
-    "https://www.scotiabank.com/ca/en/personal/credit-cards.html"
+    "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-infinite-card.html",
+    "https://www.scotiabank.com/ca/en/personal/rates-prices/credit-card-rates.html"
   ],
   "notes": "Scene+ earn rates and lounge details change; re-verify before production comparisons.",
   "segment": "personal"

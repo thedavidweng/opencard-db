@@ -1,0 +1,167 @@
+{
+  "id": "us-barclays-breeze",
+  "schema_version": "1.0.0",
+  "name": "Breeze Easy® Visa® Credit Card",
+  "localized_names": {
+    "en": "Breeze Easy® Visa® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89.0,
+    "currency": "USD",
+    "first_year": 89.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for 12 billing cycles on balance transfers within 45 days of account opening, then 19.49% to 29.49%. Cash advance APR 29.74% variable. Minimum monthly interest charge $1.00. Balance transfer fee 5% (min $5). Cash advance fee 5% (min $10)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "breezepoints",
+    "currency_label": "BreezePoints",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1 BreezePoint for every $1 spent on all other Net Purchases."
+    },
+    "categories": [
+      {
+        "label": "Nicer & Nicest Bundles (5X when you buy + 5X when you fly)",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Nice Bundles (2X when you buy + 2X when you fly)",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "No Flex Flares (1X when you buy + 1X when you fly)",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores and restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Use BreezePoints how you want, whenever you want. BreezePoints never expire. No limit to total BreezePoints you can earn.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 30000.0,
+    "unit": "points",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 30,000 bonus BreezePoints - that's a $300 value, plus Breezy 1 benefits, after spending $1,000 on purchases within the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "priority-boarding",
+      "title": "Priority Boarding",
+      "category": "other",
+      "source": "issuer",
+      "description": "Primary cardmembers and their companions receive Zone 1 priority boarding when traveling on flights operated by Breeze Airways."
+    },
+    {
+      "id": "complimentary-wifi",
+      "title": "Complimentary Inflight WiFi",
+      "category": "other",
+      "source": "issuer",
+      "description": "With Complimentary Inflight WiFi, you can surf, stream and stay connected while you enjoy your flight on Breeze Airways."
+    },
+    {
+      "id": "unlimited-points-earning",
+      "title": "Unlimited Points Earning",
+      "category": "other",
+      "source": "issuer",
+      "description": "There's no limit to the total BreezePoints you can earn using your Breeze Easy Visa."
+    },
+    {
+      "id": "breezepoints-never-expire",
+      "title": "BreezePoints Never Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "As a cardmember, your BreezePoints never expire. They're yours to earn and yours to burn for as long as you want."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees."
+    },
+    {
+      "id": "anniversary-bonus",
+      "title": "Anniversary Bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 7,500 Anniversary Bonus BreezePoints after every account anniversary with eligible purchases."
+    },
+    {
+      "id": "breezy-1-benefits",
+      "title": "Breezy 1 Benefits",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn Breezy 1 benefits including a Bundle Upgrade after spending $1,000 on purchases within the first 90 days."
+    },
+    {
+      "id": "intro-bt-apr",
+      "title": "Introductory APR on Balance Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% introductory APR for 12 billing cycles on balance transfers made within 45 days of account opening. After that, variable APR 19.49% to 29.49%."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Priority boarding (Zone 1) on Breeze Airways flights",
+      "Complimentary inflight WiFi on Breeze Airways",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://cards.barclaycardus.com/banking/cards/breeze-airways/",
+  "image": {
+    "url": null,
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://cards.barclaycardus.com/banking/cards/breeze-airways/"
+  ],
+  "notes": "Verified from official Barclays product page. Annual fee $89, purchase APR 19.49%-29.49% variable, cash advance 29.74% variable, FX fee 0%. Rewards: up to 10X BreezePoints on Nicer/Nicest Bundles, up to 4X on Nice Bundles, 2X on grocery/restaurant, 1X on all other. 30,000 bonus BreezePoints ($300 value) + Breezy 1 benefits after $1,000 spend in 90 days. 7,500 anniversary bonus BreezePoints annually."
+}

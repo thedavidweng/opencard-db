@@ -58,7 +58,8 @@
         }
       }
     ],
-    "redemption_notes": "Redeem Marriott Bonvoy points for free nights at over 10,000 hotels participating in Marriott Bonvoy. Plus, redeem points for flights or car rentals with Air+Car, or transfer points for travel program rewards with over 38 airline partners. Earn up to 18.5X Marriott Bonvoy points at Marriott properties (6X from card + up to 10X from Marriott Bonvoy membership + up to 2.5X from Gold Elite 25% Bonus Points on Stays)."
+    "redemption_notes": "Redeem Marriott Bonvoy points for free nights at over 10,000 hotels participating in Marriott Bonvoy. Plus, redeem points for flights or car rentals with Air+Car, or transfer points for travel program rewards with over 38 airline partners. Earn up to 18.5X Marriott Bonvoy points at Marriott properties (6X from card + up to 10X from Marriott Bonvoy membership + up to 2.5X from Gold Elite 25% Bonus Points on Stays).",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -226,5 +227,6 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-bevy/"
   ],
-  "notes": "Marriott Bonvoy Bevy Amex Card. $250 annual fee. No foreign transaction fees. 6X at Marriott hotels, 4X at restaurants/U.S. supermarkets (up to $15K combined/calendar year then 2X), 2X on all other purchases. Complimentary Marriott Bonvoy Gold Elite status, 15 Elite Night Credits, 1K bonus points per stay, Free Night Award after $15K spend. No lounge access. APR not visible on product page."
+  "notes": "Marriott Bonvoy Bevy Amex Card. $250 annual fee. No foreign transaction fees. 6X at Marriott hotels, 4X at restaurants/U.S. supermarkets (up to $15K combined/calendar year then 2X), 2X on all other purchases. Complimentary Marriott Bonvoy Gold Elite status, 15 Elite Night Credits, 1K bonus points per stay, Free Night Award after $15K spend. No lounge access. APR not visible on product page.",
+  "segment": "personal"
 }

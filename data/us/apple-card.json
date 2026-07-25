@@ -1,0 +1,158 @@
+{
+  "id": "us-apple-card",
+  "schema_version": "1.0.0",
+  "name": "Apple Card",
+  "localized_names": {
+    "en": "Apple Card"
+  },
+  "country": "us",
+  "issuer": "Goldman Sachs",
+  "issuer_id": "goldman-sachs",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.49,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Variable APRs for Apple Card range from 17.49% to 27.74% based on creditworthiness. Rates as of January 1, 2026. No fees: no annual, over-the-limit, foreign-transaction, or late fees."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees: 'No annual, over-the-limit, foreign-transaction, or late fees.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Daily Cash (USD)",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% Daily Cash back on every purchase when using the physical titanium card."
+    },
+    "categories": [
+      {
+        "label": "Apple and select merchants (Ace Hardware, Booking.com, ChargePoint, Duane Reade, Exxon Mobil, Hertz, Nike, Uber, Uber Eats, Walgreens) via Apple Pay",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Any purchase using Apple Card with Apple Pay",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Daily Cash is real cash that never expires. Automatically deposited onto Apple Cash card or routed to Savings account through Apple Card where it can earn interest. No limit to how much Daily Cash you can get."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "no-fees",
+      "title": "No Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Apple Card doesn't have any fees. No annual, over-the-limit, foreign-transaction, or late fees."
+    },
+    {
+      "id": "daily-cash",
+      "title": "Unlimited Daily Cash Back",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get a percentage of purchases back in Daily Cash every day. No limit to how much Daily Cash you can get. Never expires or loses value."
+    },
+    {
+      "id": "savings-account",
+      "title": "High-Yield Savings Account",
+      "category": "other",
+      "source": "issuer",
+      "description": "Open a Savings account through Apple Card and route Daily Cash directly into the account where it can earn interest. Add funds from Apple Cash and other bank accounts."
+    },
+    {
+      "id": "apple-card-monthly-installments",
+      "title": "Apple Card Monthly Installments",
+      "category": "other",
+      "source": "issuer",
+      "description": "Buy new Mac, iPhone, iPad, Apple Watch and more with interest-free monthly payments (0% APR) on purchases at Apple. Get 3% Daily Cash back on the purchase price up front."
+    },
+    {
+      "id": "apple-card-family",
+      "title": "Apple Card Family",
+      "category": "other",
+      "source": "issuer",
+      "description": "Two partners can merge credit lines to form a single co-owned account, manage together, and build credit as equals. Participants 18+ can build their own credit history. Family members receive Daily Cash back on their own purchases."
+    },
+    {
+      "id": "pay-less-interest",
+      "title": "Pay Less Interest",
+      "category": "other",
+      "source": "issuer",
+      "description": "Apple Card estimates the interest you'll wind up paying based on any payment amount you choose, in real time, to help you make informed decisions."
+    },
+    {
+      "id": "privacy-security",
+      "title": "Privacy and Security",
+      "category": "other",
+      "source": "issuer",
+      "description": "Face ID, Touch ID, and unique transaction codes. Titanium card has no visible numbers. Data isn't sold to third parties for marketing or advertising."
+    },
+    {
+      "id": "booking-partner",
+      "title": "Booking.com Travel Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Get 2% in Booking.com Travel Credits on eligible stays and car rentals booked with Apple Card, in addition to 3% Daily Cash back using Apple Card with Apple Pay."
+    },
+    {
+      "id": "uber-partner",
+      "title": "Uber One Free Trial",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Redeem a six-month free trial of Uber One when you sign up with Apple Card using Apple Pay. Continue to get 3% Daily Cash back at Uber."
+    },
+    {
+      "id": "hertz-partner",
+      "title": "Hertz Rental Car Savings",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Hertz rental car savings and benefits including at least 5% off Pay Later base rates, free emergency roadside service, discounted loss damage waiver vehicle protection, and a free additional driver at pickup."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Hertz rental car savings (5% off base rates, free roadside service, discounted LDW, free additional driver)"
+    ]
+  },
+  "official_url": "https://www.apple.com/apple-card/",
+  "image": {
+    "url": "https://www.apple.com/v/apple-card/n/images/meta/og__dtukeczp0ygm_overview.png?202605221100",
+    "attribution": "© Goldman Sachs",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.apple.com/apple-card/"
+  ],
+  "notes": "Annual fee confirmed as $0 ('No annual...fees'). APR 17.49%-27.74% variable as of January 1, 2026. No foreign transaction fees. No signup bonus found on page. network_tier set to null (was 'world' but not stated on page). Mastercard confirmed as global payment network."
+}

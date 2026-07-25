@@ -43,7 +43,8 @@
       "description": "Unlimited 1.5% cash back on purchases"
     },
     "categories": [],
-    "redemption_notes": null
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": null,
   "benefits": [
@@ -75,5 +76,6 @@
     "https://www.americanexpress.com/us/credit-cards/card/cash-magnet/",
     "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q1-pdf-cmas/cps-lending/amex-cash-magnet-04-17-2025.pdf"
   ],
-  "notes": "Welcome/signup bonus is null because the official product page did not publish a stable cash signup bonus; the page only showed a Buy Now, Pay Later intro Plan It fee offer."
+  "notes": "Welcome/signup bonus is null because the official product page did not publish a stable cash signup bonus; the page only showed a Buy Now, Pay Later intro Plan It fee offer.",
+  "segment": "personal"
 }

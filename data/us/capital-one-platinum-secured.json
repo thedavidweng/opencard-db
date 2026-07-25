@@ -1,0 +1,72 @@
+{
+  "id": "us-capital-one-platinum-secured",
+  "schema_version": "1.0.0",
+  "name": "Platinum Secured Credit Card from Capital One",
+  "localized_names": {
+    "en": "Platinum Secured Credit Card from Capital One"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "platinum",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on the product page; disclosures link is javascript-rendered. Terms URL not provided in batch."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not visible on the product page."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Page states 'Credit Level: REBUILDING'. Secured card requiring refundable security deposit."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No rewards mentioned on the product page. This is a credit-building secured card."
+    },
+    "categories": [],
+    "redemption_notes": "No rewards program. Card is designed for building/rebuilding credit.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.capitalone.com/credit-cards/platinum-secured/",
+  "image": {
+    "url": "https://ecm.capitalone.com/WCM/card/products/plat_cardart_prim_323x203/mobile.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/platinum-secured/"
+  ],
+  "notes": "Secured credit card for building/rebuilding credit. Credit Level: REBUILDING per page. Security deposit: $49, $99, or $200 minimum opens account with initial credit line of at least $200; max deposit $1,000. Annual fee is $0 (well-known for this product). This is a Visa Platinum tier card, not Signature (corrected from prior scaffolding — a rebuilding secured card with a ~$200 starting line is not a Signature product). APR and FX fee not visible on the product page (disclosures behind javascript link); purchase APR left unverified pending re-verification against the official rates & disclosures. No rewards program mentioned on page."
+}

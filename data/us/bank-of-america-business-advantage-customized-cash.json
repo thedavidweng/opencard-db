@@ -62,7 +62,8 @@
         }
       }
     ],
-    "redemption_notes": "3% and 2% cash back on the first $50,000 in combined choice category/dining purchases each calendar year, 1% thereafter. Redeem cash rewards as a deposit into eligible Bank of America checking or savings account, as a card statement credit, or as a check. Preferred Rewards for Business members earn up to 75% more rewards."
+    "redemption_notes": "3% and 2% cash back on the first $50,000 in combined choice category/dining purchases each calendar year, 1% thereafter. Redeem cash rewards as a deposit into eligible Bank of America checking or savings account, as a card statement credit, or as a check. Preferred Rewards for Business members earn up to 75% more rewards.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 500.0,
@@ -123,15 +124,16 @@
   },
   "official_url": "https://www.bankofamerica.com/smallbusiness/credit-cards/products/cash-rewards-business-credit-card",
   "image": {
-    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/Logos/en_US/logos/colored_flagscape-v2.png",
+    "url": "https://business.bankofamerica.com/content/dam/consumer/credit-cards/customized_cash_rewards_336x213.png",
     "attribution": "© Bank of America",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.bankofamerica.com/smallbusiness/credit-cards/products/cash-rewards-business-credit-card",
     "https://business.bankofamerica.com/en/credit-cards/business-advantage-customized-cash-rewards"
   ],
-  "notes": "Business Advantage Customized Cash Rewards Mastercard. $0 annual fee. 3% cash back in choice category, 2% on dining, 1% on all other (first $50K combined per calendar year, 1% thereafter). $500 cash rewards bonus after $5,000 in 90 days. network corrected from 'visa' to 'mastercard' and network_tier from 'signature' to 'none' — page clearly says 'Mastercard®' without 'World' or 'Visa Signature'. APR not extractable (dynamic placeholders). FX fee not stated on page."
+  "notes": "Business Advantage Customized Cash Rewards Mastercard. $0 annual fee. 3% cash back in choice category, 2% on dining, 1% on all other (first $50K combined per calendar year, 1% thereafter). $500 cash rewards bonus after $5,000 in 90 days. network corrected from 'visa' to 'mastercard' and network_tier from 'signature' to 'none' — page clearly says 'Mastercard®' without 'World' or 'Visa Signature'. APR not extractable (dynamic placeholders). FX fee not stated on page.",
+  "segment": "business"
 }

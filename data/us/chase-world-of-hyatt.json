@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "World of Hyatt Bonus Points transfer automatically to the primary cardmember's World of Hyatt account; points don't expire as long as your World of Hyatt Credit Card account is open."
+    "redemption_notes": "World of Hyatt Bonus Points transfer automatically to the primary cardmember's World of Hyatt account; points don't expire as long as your World of Hyatt Credit Card account is open.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 75000,
@@ -176,5 +177,6 @@
     "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC65092.html"
   ],
-  "notes": "Signup bonus is a tiered limited-time offer; see description for the official Chase spend requirements. Visa Signature tier confirmed by product page mentioning 'Visa Signature Concierge'."
+  "notes": "Signup bonus is a tiered limited-time offer; see description for the official Chase spend requirements. Visa Signature tier confirmed by product page mentioning 'Visa Signature Concierge'.",
+  "segment": "personal"
 }
