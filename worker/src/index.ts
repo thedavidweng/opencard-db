@@ -1,6 +1,29 @@
+import {
+  DEFAULT_CARD_IMAGE_PATH,
+  defaultCardImageUrl,
+  withDefaultCardImage,
+  withDefaultCardImages,
+} from "./card-image";
 import { hasClientIdentification } from "./client-id";
+import {
+  DEFAULT_CARD_CONTENT_TYPE,
+  DEFAULT_CARD_WEBP_BASE64,
+} from "./default-card-asset";
 import { checkRateLimit } from "./rate-limit";
 import type { Card, Env, Meta } from "./types";
+
+function defaultCardAssetResponse(): Response {
+  const bytes = Uint8Array.from(atob(DEFAULT_CARD_WEBP_BASE64), (c) =>
+    c.charCodeAt(0),
+  );
+  return new Response(bytes, {
+    status: 200,
+    headers: {
+      "Content-Type": DEFAULT_CARD_CONTENT_TYPE,
+      "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
+    },
+  });
+}
 
 function json(
   body: unknown,
@@ -107,6 +130,11 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
     });
   }
 
+  // Public asset: usable in <img src> without client-id / rate-limit headers.
+  if (path === DEFAULT_CARD_IMAGE_PATH) {
+    return defaultCardAssetResponse();
+  }
+
   if (!path.startsWith("/v1")) {
     return json(
       errorBody("not_found", "Not found. API is under /v1/."),
@@ -160,6 +188,8 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
     "Cache-Control": `public, max-age=${cacheMaxAge}, stale-while-revalidate=3600`,
   };
 
+  const origin = url.origin;
+
   if (path === "/v1/meta") {
     const meta = await getJson<Meta>(env.OPENCARD_KV, "meta");
     if (!meta) {
@@ -169,7 +199,11 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
         { "Cache-Control": "no-store", ...rateHeaders },
       );
     }
-    return json(meta, 200, cacheHeaders);
+    return json(
+      { ...meta, default_card_image: defaultCardImageUrl(origin) },
+      200,
+      cacheHeaders,
+    );
   }
 
   if (path === "/v1/cards") {
@@ -183,7 +217,10 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
     }
     const filtered = all.filter((c) => matchesFilters(c, url));
     const { limit, offset } = parsePagination(url);
-    const data = filtered.slice(offset, offset + limit);
+    const data = withDefaultCardImages(
+      filtered.slice(offset, offset + limit),
+      origin,
+    );
     return json(
       { total: filtered.length, limit, offset, data },
       200,
@@ -205,7 +242,7 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
         ...rateHeaders,
       });
     }
-    return json(card, 200, cacheHeaders);
+    return json(withDefaultCardImage(card, origin), 200, cacheHeaders);
   }
 
   if (path === "/v1/search") {
@@ -221,7 +258,10 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
     let filtered = all.filter((c) => matchesFilters(c, url));
     if (q) filtered = filtered.filter((c) => searchMatch(c, q));
     const { limit, offset } = parsePagination(url);
-    const data = filtered.slice(offset, offset + limit);
+    const data = withDefaultCardImages(
+      filtered.slice(offset, offset + limit),
+      origin,
+    );
     return json(
       { total: filtered.length, limit, offset, data, q: q || null },
       200,
