@@ -15,6 +15,49 @@ npm run build:indexes   # writes dist/indexes/
 
 Browse Cards offline under `data/{us,ca,cn}/`.
 
+## Get the data
+
+Three consumption tiers, from most to least production-ready. The generated
+catalog lives in the committed [`exports/`](exports/) directory (7 index JSONs
+plus `cards.csv` and `cards.yaml`), which is what the static CDN paths serve.
+
+### (a) Production (recommended): jsDelivr, tag-pinned & immutable
+
+Pin a release tag. These URLs are **immutable** and served from a global CDN
+with **no rate limits and no quota** — the recommended path for production:
+
+```
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/cards-all.json
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/cards.csv
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/meta.json
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/index-country.json
+```
+
+Each `v*` tag also ships a **GitHub Release** with the same files attached as
+downloadable assets.
+
+### (b) Preview / dev: `@main` (mutable, ~12h stale)
+
+Track the latest merged data. Convenient for prototyping, **not** for
+production — jsDelivr caches branch URLs for ~12h and `raw` is uncached but
+best-effort:
+
+```
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/exports/cards-all.json
+https://raw.githubusercontent.com/thedavidweng/opencard-db/main/exports/cards-all.json
+```
+
+`exports/` is auto-refreshed on every push to `main` that touches the data,
+schema, or build scripts.
+
+### (c) The `/v1` Worker API
+
+A read-only HTTP API with filtering, search, and per-card lookup. **Self-host
+for production** (Cloudflare Free, your own quotas). The official instance is
+**best-effort only**: it requires client identification and is rate-limited
+(30/min, 500/day per IP). See [`docs/api.md`](docs/api.md) and
+[`docs/openapi.yaml`](docs/openapi.yaml).
+
 ## Design docs
 
 | Artifact | Role |

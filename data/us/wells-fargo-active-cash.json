@@ -1,0 +1,109 @@
+{
+  "id": "us-wells-fargo-active-cash",
+  "schema_version": "1.0.0",
+  "name": "Wells Fargo Active Cash® Credit Card",
+  "localized_names": {
+    "en": "Wells Fargo Active Cash® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 12 months from account opening on purchases and qualifying balance transfers on the marketed offer; then 18.49%, 24.49% or 28.49% variable APR."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% fee for each foreign transaction converted to USD per Wells Fargo FAQ/Important Credit Terms."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash rewards on purchases"
+    },
+    "categories": [],
+    "redemption_notes": "Redeem via Wells Fargo Rewards (statement credit, Pay with Rewards, gift cards, etc.)."
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "USD",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 cash rewards bonus after spending $500 in the first 3 months; offers may differ by channel.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "cell-phone-protection",
+      "title": "Cellular Telephone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to $600 cell phone protection against damage or theft subject to a $25 deductible when the monthly wireless bill is paid with the eligible card.",
+      "details": {
+        "coverage_amount": 600,
+        "coverage_currency": "USD",
+        "deductible": 25,
+        "conditions": "See Wells Fargo benefit terms."
+      }
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement for covered damage or theft on eligible rentals paid with the card."
+    },
+    {
+      "id": "visa-signature-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "24/7 Visa Signature Concierge for travel, dining, and event assistance."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Visa Signature Luxury Hotel Collection"
+    ]
+  },
+  "official_url": "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+  "image": {
+    "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-7-26_v2/images/Products/ActiveCash/WF_ActiveCash_VS_Collateral_Front_RGB.png",
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://creditcards.wellsfargo.com/active-cash-credit-card/",
+    "https://www.wellsfargo.com/credit-cards/active-cash/terms/"
+  ],
+  "notes": "Flat-rate cash-back Visa Signature card; intro APR and bonus offers are channel-dependent."
+}

@@ -1,0 +1,193 @@
+{
+  "id": "us-citi-aadvantage-executive",
+  "schema_version": "1.0.0",
+  "name": "Citi® / AAdvantage® Executive World Elite Mastercard®",
+  "localized_names": {
+    "en": "Citi® / AAdvantage® Executive World Elite Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 595.0,
+    "currency": "USD",
+    "first_year": 595.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "The variable APR for purchases and balance transfers is 19.49% – 29.49%, based on your creditworthiness. The variable APR for cash advances is 29.74%. The variable Penalty APR is up to 29.99%. Minimum interest charge – $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee – either $5 or 5% of the amount of each transfer, whichever is greater. The annual fee for Authorized Users is $175 for up to 3 Authorized Users and $175 for each Authorized User thereafter."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "Fee for foreign transactions – None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "AAdvantage® miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1 AAdvantage® mile for every $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Eligible hotels (aadvantagehotels.com) and car rentals (aadvantagecars.com)",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Eligible American Airlines purchases",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 70000,
+    "unit": "AAdvantage® bonus miles",
+    "spend_required": 7000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 70,000 American Airlines AAdvantage® bonus miles and enjoy the only credit card with Admirals Club® membership. Bonus miles earned after $7,000 in purchases within the first 3 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "admirals-club-membership",
+      "title": "Complimentary Admirals Club® membership",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "Primary cardmembers can enjoy access to Admirals Club® lounges worldwide – a value of up to $850. Enjoy complimentary drinks and snacks, stay connected with free Wi-Fi, get access to conference rooms and much more."
+    },
+    {
+      "id": "additional-loyalty-points",
+      "title": "Up to 20,000 additional Loyalty Points",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn a 10,000 Loyalty Point bonus after reaching 50,000 Loyalty Points in a status qualification year. Earn another 10,000 Loyalty Point bonus after reaching 90,000 Loyalty Points in the same status qualification year."
+    },
+    {
+      "id": "global-entry-tsa-precheck-credit",
+      "title": "Global Entry® or TSA PreCheck® application fee credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're eligible to receive a statement credit (up to $120 every 4 years) as reimbursement for your Global Entry® or TSA PreCheck® application fee."
+    },
+    {
+      "id": "enhanced-airport-experience",
+      "title": "Enhanced airport experience",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy an enhanced airport experience including priority check-in, screening, and boarding when flying with American Airlines."
+    },
+    {
+      "id": "first-checked-bag-free",
+      "title": "First checked bag free",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Your first checked bag is free on domestic American Airlines itineraries for you and up to eight companions traveling with you on the same reservation, a savings of up to $900 per round trip."
+    },
+    {
+      "id": "save-25-inflight",
+      "title": "Save 25% on inflight food and beverage purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "25% savings on inflight food and beverage purchases on American Airlines flights when you use your credit card."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Shop like a local wherever you go with your Citi® / AAdvantage® Executive® credit card."
+    },
+    {
+      "id": "travel-protection-benefits",
+      "title": "Travel protection benefits",
+      "category": "insurance",
+      "source": "network",
+      "description": "Help protect your next trip with Trip Cancellation & Interruption Protection, Trip Delay Protection, Lost Baggage Protection and Worldwide Car Rental Insurance Coverage."
+    },
+    {
+      "id": "avis-budget-credits",
+      "title": "Up to $120 back on Eligible Prepaid Avis® and Budget Car Rentals",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn up to $120 in statement credits every calendar year when eligible prepaid car rentals are booked directly on avis.com or budget.com."
+    },
+    {
+      "id": "lyft-credit",
+      "title": "Up to $120 Lyft credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "After taking 3 eligible rides in a calendar month, you will earn a $10 Lyft credit, for a total of up to $120 back in Lyft credits annually."
+    },
+    {
+      "id": "grubhub-credits",
+      "title": "Up to $120 back on eligible Grubhub purchases",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn a statement credit of up to $10 per monthly billing statement on eligible Grubhub purchases, for a total of up to $120 every 12 billing statements."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Complimentary Admirals Club® membership – access to Admirals Club® lounges worldwide (value up to $850)"
+    },
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": "First checked bag free on domestic American Airlines itineraries for you and up to 8 companions (savings up to $900 per round trip)",
+    "hotel_status": null,
+    "other": [
+      "Enhanced airport experience: priority check-in, screening, and boarding on AA flights",
+      "Save 25% on inflight food and beverage purchases on AA flights",
+      "No foreign transaction fees",
+      "Travel protection: Trip Cancellation & Interruption, Trip Delay, Lost Baggage, Worldwide Car Rental Insurance",
+      "Up to $120 back on Avis and Budget car rentals per calendar year",
+      "Up to $120 Lyft credit annually",
+      "Up to $120 back on Grubhub purchases per 12 billing statements"
+    ]
+  },
+  "official_url": "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
+  "image": {
+    "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2024/05/CardArt-8.png",
+    "attribution": "© Citi",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
+    "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/"
+  ],
+  "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text."
+}
