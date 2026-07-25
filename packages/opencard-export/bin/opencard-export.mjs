@@ -23,8 +23,11 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const REPO_SLUG = 'github.com/thedavidweng/opencard-db';
 const DB_URLS = [
-  'https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/exports/cards-all.json',
+  // raw.githubusercontent first: ~5-minute cache, so freshly-merged data
+  // (renames, new art) is visible quickly; jsDelivr (~12h edge cache) is the
+  // resilient fallback when raw is rate-limited or blocked.
   'https://raw.githubusercontent.com/thedavidweng/opencard-db/main/exports/cards-all.json',
+  'https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/exports/cards-all.json',
 ];
 const ISSUE_FORM_URL =
   'https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml';
