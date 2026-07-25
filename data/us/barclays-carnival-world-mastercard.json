@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -44,22 +45,18 @@
     "currency_label": "Fun Points®",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 1.0,
+      "points_per_dollar": 1,
       "description": "Earn 1X Fun Points for every dollar spent on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Carnival Cruise Line purchases",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem Fun Points toward Carnival purchases, onboard credit, experiences, and more. 20,000 Fun Points can redeem for $200 onboard credit."
+    "redemption_notes": "Redeem Fun Points toward Carnival purchases, onboard credit, experiences, and more. 20,000 Fun Points can redeem for $200 onboard credit.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 20000.0,
@@ -91,27 +88,6 @@
       "category": "other",
       "source": "issuer",
       "description": "No foreign transaction fees on international purchases."
-    },
-    {
-      "id": "carnival-rewards-status",
-      "title": "Earn Carnival Rewards Status Faster",
-      "category": "other",
-      "source": "issuer",
-      "description": "Your card will earn you 1 Status Qualifying Star for every dollar spent. (Enhanced benefits coming September 2026)"
-    },
-    {
-      "id": "restaurants-grocery-2x",
-      "title": "Earn 2X on Restaurants and Grocery",
-      "category": "other",
-      "source": "issuer",
-      "description": "Earn 2X Carnival Rewards Points for every dollar spent at eligible restaurants and grocery stores (excluding Target and Walmart). (Enhanced benefits coming September 2026)"
-    },
-    {
-      "id": "up-to-6x-carnival-purchases",
-      "title": "Earn up to 6X Carnival Rewards Points on Carnival Purchases",
-      "category": "other",
-      "source": "issuer",
-      "description": "3X points for every dollar spent using your card, plus the 3X points you earn through Carnival Rewards. (Enhanced benefits coming September 2026)"
     }
   ],
   "travel_perks": {
@@ -136,5 +112,5 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/carnival-world-mastercard/"
   ],
-  "notes": "Verified from official Barclays product page. Annual fee $0, purchase APR 18.49%-29.49% variable, cash advance 29.74% variable, FX fee 0%. Rewards: 2X Fun Points on Carnival Cruise Line, 1X on all other purchases. 20,000 Fun Points bonus after $1,000 spend in 90 days ($200 onboard credit). Enhanced benefits coming September 2026."
+  "notes": "Verified from official Barclays product page. Annual fee $0, purchase APR 18.49%-29.49% variable, cash advance 29.74% variable, FX fee 0%. Rewards: 2X Fun Points on Carnival Cruise Line, 1X on all other purchases. 20,000 Fun Points bonus after $1,000 spend in 90 days ($200 onboard credit). Enhanced benefits coming September 2026. Enhanced benefits (up to 6X Carnival Rewards Points, 2X restaurants/grocery, Status Qualifying Stars) are announced for September 2026 and omitted here until they go live."
 }
