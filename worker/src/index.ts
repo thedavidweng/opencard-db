@@ -47,6 +47,39 @@ function errorBody(
   return { error, message, ...extra };
 }
 
+/**
+ * Add CORS headers to any response so browser apps can call this public,
+ * read-only API from any origin. Applied to every response on the way out
+ * (including errors and the image asset). Clones headers so responses coming
+ * back from the Cache API (immutable) can still be decorated.
+ */
+function withCors(response: Response): Response {
+  const headers = new Headers(response.headers);
+  headers.set("Access-Control-Allow-Origin", "*");
+  // Only advertise ETag as readable when the response actually carries one.
+  if (headers.has("ETag")) {
+    headers.set("Access-Control-Expose-Headers", "ETag");
+  }
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
+/** CORS preflight: read-only API, so only GET/HEAD/OPTIONS are allowed. */
+function preflightResponse(): Response {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Client-Name",
+      "Access-Control-Max-Age": "86400",
+    },
+  });
+}
+
 function boolEnv(value: string | undefined, fallback: boolean): boolean {
   if (value === undefined || value === "") return fallback;
   return value === "true" || value === "1";
@@ -101,25 +134,24 @@ function parsePagination(url: URL): { limit: number; offset: number } {
   return { limit, offset };
 }
 
-async function handleRequest(request: Request, env: Env): Promise<Response> {
+async function handleRequest(
+  request: Request,
+  env: Env,
+  ctx: ExecutionContext,
+): Promise<Response> {
   const url = new URL(request.url);
+
+  // CORS preflight is handled before method rejection and any client-id /
+  // rate-limit checks so browsers can preflight the public read-only API.
+  if (request.method === "OPTIONS") {
+    return preflightResponse();
+  }
+
   if (request.method !== "GET") {
     return json(errorBody("bad_request", "Only GET is supported"), 405);
   }
 
   const mode = env.MODE ?? "selfhost";
-  const requireClientId = boolEnv(
-    env.REQUIRE_CLIENT_ID,
-    mode === "official",
-  );
-  const rateLimitEnabled = boolEnv(
-    env.RATE_LIMIT_ENABLED,
-    mode === "official",
-  );
-  const perMinute = intEnv(env.RATE_LIMIT_PER_MINUTE, 30);
-  const perDay = intEnv(env.RATE_LIMIT_PER_DAY, 500);
-  const cacheMaxAge = intEnv(env.CACHE_MAX_AGE, 300);
-
   const path = url.pathname.replace(/\/+$/, "") || "/";
 
   if (path === "/v1/health" || path === "/health") {
@@ -142,6 +174,42 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
       { "Cache-Control": "no-store" },
     );
   }
+
+  // Per-colo response cache. caches.default is scoped to each Cloudflare data
+  // center (colo), so a hit saves a KV read + JSON.parse of the whole blob for
+  // repeat requests served by the same colo. We check it BEFORE the client-id
+  // gate and rate limiter on purpose: a cached hit is cheap to serve and must
+  // not consume the visitor's rate-limit budget.
+  const cache = caches.default;
+  const cached = await cache.match(request.url);
+  if (cached) return cached;
+
+  const response = await buildCatalogResponse(request, env, url, path);
+  // Cache only successful catalog responses. Errors, 404s, client-id and
+  // rate-limit rejections carry Cache-Control: no-store and are never cached.
+  // The Cache API honors the response's own Cache-Control max-age for expiry.
+  if (response.status === 200) {
+    ctx.waitUntil(cache.put(request.url, response.clone()));
+  }
+  return response;
+}
+
+/**
+ * Builds a catalog response on a cache miss: client-id gate, rate limit and the
+ * KV-backed routing for /v1/meta, /v1/cards, /v1/search and /v1/indexes.
+ */
+async function buildCatalogResponse(
+  request: Request,
+  env: Env,
+  url: URL,
+  path: string,
+): Promise<Response> {
+  const mode = env.MODE ?? "selfhost";
+  const requireClientId = boolEnv(env.REQUIRE_CLIENT_ID, mode === "official");
+  const rateLimitEnabled = boolEnv(env.RATE_LIMIT_ENABLED, mode === "official");
+  const perMinute = intEnv(env.RATE_LIMIT_PER_MINUTE, 30);
+  const perDay = intEnv(env.RATE_LIMIT_PER_DAY, 500);
+  const cacheMaxAge = intEnv(env.CACHE_MAX_AGE, 300);
 
   if (requireClientId && !hasClientIdentification(request)) {
     return json(
@@ -306,15 +374,20 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
 }
 
 export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
+  async fetch(
+    request: Request,
+    env: Env,
+    ctx: ExecutionContext,
+  ): Promise<Response> {
     try {
-      return await handleRequest(request, env);
+      // CORS is applied to every egress response (success, error and asset).
+      return withCors(await handleRequest(request, env, ctx));
     } catch (err) {
       console.error(err);
-      return json(
-        errorBody("internal_error", "Internal server error"),
-        500,
-        { "Cache-Control": "no-store" },
+      return withCors(
+        json(errorBody("internal_error", "Internal server error"), 500, {
+          "Cache-Control": "no-store",
+        }),
       );
     }
   },

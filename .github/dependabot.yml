@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # Keep GitHub Actions pinned in .github/workflows up to date.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+
+  # Root npm project (schema, scripts, tests).
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+
+  # Cloudflare Worker package.
+  - package-ecosystem: npm
+    directory: "/worker"
+    schedule:
+      interval: weekly
