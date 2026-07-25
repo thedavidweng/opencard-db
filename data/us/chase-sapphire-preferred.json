@@ -2,7 +2,9 @@
   "id": "us-chase-sapphire-preferred",
   "schema_version": "1.0.0",
   "name": "Chase Sapphire Preferred® Card",
-  "localized_names": { "en": "Chase Sapphire Preferred® Card" },
+  "localized_names": {
+    "en": "Chase Sapphire Preferred® Card"
+  },
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
@@ -17,10 +19,17 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": 19.99, "max": 28.49, "type": "variable" },
+    "purchase": {
+      "min": 19.99,
+      "max": 28.49,
+      "type": "variable"
+    },
     "notes": "Variable APR; see current Chase offer for exact range."
   },
-  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
   "credit_required": {
     "score_band": "good_to_excellent",
     "notes": "Chase generally targets good-to-excellent credit."
@@ -60,7 +69,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary."
+    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -110,7 +120,9 @@
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": ["No foreign transaction fees"]
+    "other": [
+      "No foreign transaction fees"
+    ]
   },
   "official_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
   "image": {
@@ -124,5 +136,6 @@
     "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
     "https://www.chase.com/personal/credit-cards/sapphire/preferred"
   ],
-  "notes": "Signup bonus and APR ranges change frequently; verify on official page before publishing comparisons."
+  "notes": "Signup bonus and APR ranges change frequently; verify on official page before publishing comparisons.",
+  "segment": "personal"
 }

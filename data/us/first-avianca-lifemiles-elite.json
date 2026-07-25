@@ -55,7 +55,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Miles do not expire for as long as you use your card. Complimentary LifeMiles+ Lite membership doubles miles up to 1,000 miles/month. 10% miles back on Star Alliance redemptions, up to 25% discount on Avianca flights, up to 40% more miles on LifeMiles hotels/cars, up to 10% discount on LifeMiles cars."
+    "redemption_notes": "Miles do not expire for as long as you use your card. Complimentary LifeMiles+ Lite membership doubles miles up to 1,000 miles/month. 10% miles back on Star Alliance redemptions, up to 25% discount on Avianca flights, up to 40% more miles on LifeMiles hotels/cars, up to 10% discount on LifeMiles cars.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 100000,
@@ -134,5 +135,6 @@
     "https://www.cardless.com/cards/avianca/lifemiles-elite",
     "https://www.cardless.com/rates-and-fees-249-avianca"
   ],
-  "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. Annual fee $249. No cash advance/ATM access feature. Signup bonus up to 100,000 miles (tiered breakdown preserved from prior verification — not fully visible in fetched product page text)."
+  "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. Annual fee $249. No cash advance/ATM access feature. Signup bonus up to 100,000 miles (tiered breakdown preserved from prior verification — not fully visible in fetched product page text).",
+  "segment": "personal"
 }

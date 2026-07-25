@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "OneKeyCash is not redeemable for cash and can only be used on Expedia, Hotels.com, and Vrbo. The 3% rate on Expedia/Hotels.com/Vrbo is 1.5% base plus 1.5% bonus. Must be logged into the primary cardholder's One Key member account. 3% on gas/grocery/dining is also 1.5% base plus 1.5% bonus."
+    "redemption_notes": "OneKeyCash is not redeemable for cash and can only be used on Expedia, Hotels.com, and Vrbo. The 3% rate on Expedia/Hotels.com/Vrbo is 1.5% base plus 1.5% bonus. Must be logged into the primary cardholder's One Key member account. 3% on gas/grocery/dining is also 1.5% base plus 1.5% bonus.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 250,
@@ -147,5 +148,6 @@
     "https://creditcards.wellsfargo.com/one-key-credit-card/",
     "https://www.wellsfargo.com/credit-cards/terms/onekey/?FPID=21231JIXE50000&product_code=CC&subproduct_code=OW&cx_nm=CXNAME_CSMPD&sub_channel=WEB&vendor_code=WF"
   ],
-  "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages."
+  "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages.",
+  "segment": "personal"
 }

@@ -55,7 +55,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points redeemable for Amtrak travel. 5% points rebate when redeeming points for Amtrak travel. Points do not expire as long as account remains open."
+    "redemption_notes": "Points redeemable for Amtrak travel. 5% points rebate when redeeming points for Amtrak travel. Points do not expire as long as account remains open.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 20000,
@@ -151,5 +152,6 @@
     "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "https://www.card.fnbo.com/amtrakguestrewards"
   ],
-  "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted."
+  "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted.",
+  "segment": "personal"
 }

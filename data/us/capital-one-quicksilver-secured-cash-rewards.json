@@ -43,7 +43,8 @@
       "description": "1.5% cash back on every purchase."
     },
     "categories": [],
-    "redemption_notes": "1.5% cash back on every purchase, every day."
+    "redemption_notes": "1.5% cash back on every purchase, every day.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": null,
   "benefits": [
@@ -89,5 +90,6 @@
     "https://www.capitalone.com/credit-cards/quicksilver-secured/",
     "https://www.capitalone.com/credit-cards/fair-and-building/"
   ],
-  "notes": "Verified from official Capital One product page and fair-and-building listing page. Annual fee $0 (confirmed from fair-and-building page listing). 1.5% cash back on every purchase. $200 minimum refundable deposit. Credit level: FAIR. APR and foreign transaction fee not visible on fetched pages (disclosures behind javascript overlay). Name updated from 'Build Credit with a Secured Credit Card' to 'Quicksilver Secured Rewards' per official listing page."
+  "notes": "Verified from official Capital One product page and fair-and-building listing page. Annual fee $0 (confirmed from fair-and-building page listing). 1.5% cash back on every purchase. $200 minimum refundable deposit. Credit level: FAIR. APR and foreign transaction fee not visible on fetched pages (disclosures behind javascript overlay). Name updated from 'Build Credit with a Secured Credit Card' to 'Quicksilver Secured Rewards' per official listing page.",
+  "segment": "personal"
 }

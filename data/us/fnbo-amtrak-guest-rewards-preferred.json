@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points redeemable for Amtrak travel, upgrades, dining, gift cards via Amtrak Guest Rewards program. 5% points rebate when redeeming points for Amtrak travel. Points do not expire as long as account remains open and in good standing."
+    "redemption_notes": "Points redeemable for Amtrak travel, upgrades, dining, gift cards via Amtrak Guest Rewards program. 5% points rebate when redeeming points for Amtrak travel. Points do not expire as long as account remains open and in good standing.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 30000,
@@ -153,5 +154,6 @@
     "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "https://media.amtrak.com/2022/10/amtrak-and-first-national-bank-of-omaha-launch-two-new-amtrak-guest-rewards-mastercards/"
   ],
-  "notes": "Issued by FNBO. $99 annual fee. Preferred tier with companion coupon, one-class upgrade, station lounge pass, and 20% onboard rebate. No foreign transaction fees. APR not re-verified on 2026-07-24 (Summary of Credit Terms is JS-rendered)."
+  "notes": "Issued by FNBO. $99 annual fee. Preferred tier with companion coupon, one-class upgrade, station lounge pass, and 20% onboard rebate. No foreign transaction fees. APR not re-verified on 2026-07-24 (Summary of Credit Terms is JS-rendered).",
+  "segment": "personal"
 }

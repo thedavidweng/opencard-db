@@ -74,7 +74,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Miles earned automatically transferred to United MileagePlus after end of each billing cycle. Miles can be used for flights on United and other airline partners, hotel stays, car rentals, merchandise, eGift cards and more. No blackout dates on United-operated flights. MileagePlus miles never expire."
+    "redemption_notes": "Miles earned automatically transferred to United MileagePlus after end of each billing cycle. Miles can be used for flights on United and other airline partners, hotel stays, car rentals, merchandise, eGift cards and more. No blackout dates on United-operated flights. MileagePlus miles never expire.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 70000.0,
@@ -266,5 +267,6 @@
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/united/united-quest"
   ],
-  "notes": "United Quest Card from Chase. Corrected network from mastercard to visa and tier from world to signature based on page evidence (Visa Signature Concierge Service). $350 annual fee. No foreign transaction fees. Signup bonus updated to 70,000 total miles + 500 PQP (60,000 + 10,000 AU)."
+  "notes": "United Quest Card from Chase. Corrected network from mastercard to visa and tier from world to signature based on page evidence (Visa Signature Concierge Service). $350 annual fee. No foreign transaction fees. Signup bonus updated to 70,000 total miles + 500 PQP (60,000 + 10,000 AU).",
+  "segment": "personal"
 }

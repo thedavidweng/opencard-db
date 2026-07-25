@@ -60,7 +60,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem your rewards for cash back, gift cards, travel and more through Chase Ultimate Rewards."
+    "redemption_notes": "Redeem your rewards for cash back, gift cards, travel and more through Chase Ultimate Rewards.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 1000,
@@ -132,5 +133,6 @@
     "https://creditcards.chase.com/business-credit-cards/ink/premier",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63834.html"
   ],
-  "notes": "Network corrected from mastercard to visa based on terms page stating 'Visa Business Card cardmember'. Network tier set to null (not stated; previous 'world' was a Mastercard tier). Name simplified from 'Ink Business Premier(R) Credit Card: Cash Back' to 'Ink Business Premier Credit Card' per product page header. APR is Flex for Business variable APR (charge card with flexible payment option). Cash advance APR not separately listed in terms."
+  "notes": "Network corrected from mastercard to visa based on terms page stating 'Visa Business Card cardmember'. Network tier set to null (not stated; previous 'world' was a Mastercard tier). Name simplified from 'Ink Business Premier(R) Credit Card: Cash Back' to 'Ink Business Premier Credit Card' per product page header. APR is Flex for Business variable APR (charge card with flexible payment option). Cash advance APR not separately listed in terms.",
+  "segment": "business"
 }

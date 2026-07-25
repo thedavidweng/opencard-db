@@ -64,7 +64,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem through Wells Fargo Rewards for cash back, travel, gift cards, and more. 4% cash rewards = 1% base plus 3% bonus. Cash equivalents do not earn cash rewards."
+    "redemption_notes": "Redeem through Wells Fargo Rewards for cash back, travel, gift cards, and more. 4% cash rewards = 1% base plus 3% bonus. Cash equivalents do not earn cash rewards.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 100,
@@ -157,5 +158,6 @@
     "https://creditcards.wellsfargo.com/attune-credit-card/",
     "https://cardbenefits.wf.com/product/mastercard_attune/"
   ],
-  "notes": "Wells Fargo Attune® Card. World Elite Mastercard (confirmed from benefits page). Product URL redirected to general credit cards listing page without Attune-specific content. Benefits page (cardbenefits.wf.com) successfully fetched and verified rewards structure and benefits. Annual fee, APR, FX fee, and signup bonus preserved from prior verification (2026-07-23) as they were not visible on fetched pages. Corrected name from generic page title to 'Wells Fargo Attune® Card' based on benefits page."
+  "notes": "Wells Fargo Attune® Card. World Elite Mastercard (confirmed from benefits page). Product URL redirected to general credit cards listing page without Attune-specific content. Benefits page (cardbenefits.wf.com) successfully fetched and verified rewards structure and benefits. Annual fee, APR, FX fee, and signup bonus preserved from prior verification (2026-07-23) as they were not visible on fetched pages. Corrected name from generic page title to 'Wells Fargo Attune® Card' based on benefits page.",
+  "segment": "personal"
 }

@@ -44,7 +44,8 @@
       "description": "No rewards earn rate advertised; card is focused on low intro APR / balance transfer."
     },
     "categories": [],
-    "redemption_notes": "No rewards program advertised on product page."
+    "redemption_notes": "No rewards program advertised on product page.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -104,5 +105,6 @@
     "https://creditcards.wellsfargo.com/reflect-visa-credit-card/",
     "https://creditcards.wellsfargo.com/reflect-visa-credit-card/?sub_channel=WEB&vendor_code=WF"
   ],
-  "notes": "Verified against official Wells Fargo product page 2026-07-24. Name updated to 'Wells Fargo Reflect® Card'. APR (17.49%-28.24% variable, 0% intro 21 months) and 3% FX fee confirmed from page."
+  "notes": "Verified against official Wells Fargo product page 2026-07-24. Name updated to 'Wells Fargo Reflect® Card'. APR (17.49%-28.24% variable, 0% intro 21 months) and 3% FX fee confirmed from page.",
+  "segment": "personal"
 }

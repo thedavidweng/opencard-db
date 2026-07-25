@@ -2,7 +2,9 @@
   "id": "us-amex-gold",
   "schema_version": "1.0.0",
   "name": "American Express® Gold Card",
-  "localized_names": { "en": "American Express® Gold Card" },
+  "localized_names": {
+    "en": "American Express® Gold Card"
+  },
   "country": "us",
   "issuer": "American Express",
   "issuer_id": "amex",
@@ -17,10 +19,17 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": "variable" },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
     "notes": "See American Express for current APR; product terms vary by offer."
   },
-  "fx_fee": { "percent": 2.7, "notes": "Foreign transaction fee may apply; confirm current terms." },
+  "fx_fee": {
+    "percent": 2.7,
+    "notes": "Foreign transaction fee may apply; confirm current terms."
+  },
   "credit_required": {
     "score_band": "good_to_excellent",
     "notes": null
@@ -54,7 +63,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Transfer partners and statement credits via Amex Travel; rates vary."
+    "redemption_notes": "Transfer partners and statement credits via Amex Travel; rates vary.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -118,5 +128,6 @@
     "https://www.americanexpress.com/us/credit-cards/card/gold-card/",
     "https://www.americanexpress.com/us/credit-cards/"
   ],
-  "notes": "Product name Gold is not a Network Tier; network_tier is none for Amex network packages."
+  "notes": "Product name Gold is not a Network Tier; network_tier is none for Amex network packages.",
+  "segment": "personal"
 }

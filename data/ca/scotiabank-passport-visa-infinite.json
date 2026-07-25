@@ -20,10 +20,17 @@
     "waiver_conditions": null
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": "variable" },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
     "notes": "See Scotiabank for current interest rates."
   },
-  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees on this product." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on this product."
+  },
   "credit_required": {
     "score_band": "good_to_excellent",
     "notes": null
@@ -48,7 +55,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Scene+ redemptions include travel, entertainment, and partners."
+    "redemption_notes": "Scene+ redemptions include travel, entertainment, and partners.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": null,
@@ -103,7 +111,9 @@
     "global_entry_credit": null,
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": ["No foreign transaction fees"]
+    "other": [
+      "No foreign transaction fees"
+    ]
   },
   "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-visa-infinite-card.html",
   "image": {
@@ -117,5 +127,6 @@
     "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/passport-visa-infinite-card.html",
     "https://www.scotiabank.com/ca/en/personal/credit-cards.html"
   ],
-  "notes": "Scene+ earn rates and lounge details change; re-verify before production comparisons."
+  "notes": "Scene+ earn rates and lounge details change; re-verify before production comparisons.",
+  "segment": "personal"
 }

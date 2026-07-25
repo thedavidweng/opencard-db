@@ -55,7 +55,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points valued at minimum $0.0085 each, up to $0.01. Redeem for travel, merchandise, and gift cards. Points expire 5 years from end of month earned. No limit on points earned. 4X travel / 3X dining for PenFed Honors Advantage Members."
+    "redemption_notes": "Points valued at minimum $0.0085 each, up to $0.01. Redeem for travel, merchandise, and gift cards. Points expire 5 years from end of month earned. No limit on points earned. 4X travel / 3X dining for PenFed Honors Advantage Members.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 50000,
@@ -166,5 +167,6 @@
     "https://www.penfed.org/credit-cards/pathfinder-rewards",
     "https://www.penfed.org/content/dam/penfed/en/general/pdf/credit-cards/Pathfinder_RWDTC.pdf"
   ],
-  "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included."
+  "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included.",
+  "segment": "personal"
 }
