@@ -8,9 +8,10 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -43,14 +44,20 @@
     "currency": "cash_back",
     "currency_label": "Cash Back rewards (tracked as points; each $1 in Cash Back = 100 points)",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 1.5,
       "description": "1.5% Cash Back on all purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Dining at restaurants incl. takeout & eligible delivery (new cardmembers, first 6 months, up to $6,000 spent)",
+        "points_per_dollar": 3,
+        "cap": 6000
+      },
+      {
+        "label": "Lyft rideshare, bike/scooter, and membership purchased in the Lyft app (through 09/30/2027)",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -72,13 +79,6 @@
       "category": "other",
       "source": "issuer",
       "description": "$25 statement credit after you set up automatic payments during the first 3 months from account opening and remain enrolled for at least 90 consecutive days."
-    },
-    {
-      "id": "dining-bonus",
-      "title": "3% Cash Back on Dining (Limited Time)",
-      "category": "other",
-      "source": "issuer",
-      "description": "Earn 3% cash back total on dining purchases (restaurants including takeout and eligible delivery) for new cardmembers within first 6 months, or until $6,000 in dining purchases, whichever occurs first. 1.5% additional on top of base 1.5%."
     }
   ],
   "travel_perks": {
@@ -96,10 +96,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/cash-back-credit-cards/freedom/rise",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64795.html"
   ],
-  "notes": "Verified from official Chase product page and pricing & terms page. Annual fee $0, purchase APR 18.24%-27.74% variable, cash advance APR 28.49%, penalty APR up to 29.99%, foreign transaction fee 3%. 3% dining bonus (capped at $6,000 in first 6 months), 1.5% base on all other purchases. $25 statement credit for auto payments enrollment."
+  "notes": "Verified from official Chase product page and pricing & terms page. Chase Freedom Rise is a Visa card (T&C: applicants receive a Visa Signature or Platinum card); network corrected from mastercard/world. Annual fee $0, purchase APR 18.24%-27.74% variable, cash advance APR 28.49%, penalty APR up to 29.99%, foreign transaction fee confirmed 3% (the earlier 'no FX fee' reading was a mis-scrape). Rewards: 3% dining accelerator (new cardmembers, first 6 months, up to $6,000) and 2% Lyft (through 09/30/2027) modeled as rewards categories; 1.5% base on all purchases. $25 statement credit for auto-payment enrollment."
 }
