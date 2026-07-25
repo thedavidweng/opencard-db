@@ -1,0 +1,185 @@
+{
+  "id": "us-chase-freedom-unlimited",
+  "schema_version": "1.0.0",
+  "name": "Chase Freedom Unlimited® Credit Card",
+  "localized_names": {
+    "en": "Chase Freedom Unlimited® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months from account opening on purchases and balance transfers; after that, a variable APR of 18.24% to 27.74% based on creditworthiness. APRs vary with the market based on the Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee is 3% of the amount of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "No credit score band published on the official product page or pricing and terms."
+  },
+  "rewards": {
+    "currency": "ultimate_rewards",
+    "currency_label": "Cash Back rewards tracked as Ultimate Rewards points",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Travel purchased through Chase Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Dining at restaurants, including takeout and eligible delivery services",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Drugstore purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Qualifying Lyft purchases through 09/30/2027",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash Back rewards do not expire as long as your account is open. There is no minimum to redeem for cash back."
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "points",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn a $200 bonus (20,000 bonus points, redeemable for $200 cash back) after you spend $500 on purchases in the first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "zero-liability",
+      "title": "Zero Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You won't be held responsible for unauthorized charges made with your card or account information."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item. Specific limitations apply to New York residents (coverage period is 90 days).",
+      "details": {
+        "coverage_limit": "$500 per item",
+        "duration": "120 days (90 days for New York residents)"
+      }
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "You can be reimbursed up to $1,500 per covered traveler and $6,000 per trip for your pre-paid, non-refundable passenger fares, if your trip is canceled or cut short by sickness, severe weather or other covered situations."
+    },
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage provides reimbursement for theft and collision damage for most rental vehicles. In the U.S., coverage is secondary to your personal insurance."
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel and Emergency Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you run into a problem while traveling away from home, this benefit provides legal and medical referrals and access to other travel and emergency assistance services. You will be responsible for the cost of any goods or services obtained."
+    },
+    {
+      "id": "fraud-monitoring",
+      "title": "24/7 Fraud Monitoring",
+      "category": "other",
+      "source": "issuer",
+      "description": "Chase helps safeguard your credit card purchases using sophisticated fraud monitoring. They monitor for fraud 24/7 and can text, email or call you if there are unusual purchases on your credit card."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get 6 months of complimentary access to DashPass, a membership for both DoorDash and Caviar, which unlocks $0 delivery fees and lower service fees on eligible orders. After that, you are automatically enrolled in DashPass at the current monthly rate. Activate by December 31, 2027."
+    },
+    {
+      "id": "doordash-quarterly-discount",
+      "title": "DoorDash Non-Restaurant Order Discount",
+      "category": "credit",
+      "source": "issuer",
+      "description": "DashPass members get up to $10 off one qualifying non-restaurant DoorDash order each calendar quarter through December 31, 2027."
+    },
+    {
+      "id": "spend-instantly",
+      "title": "Spend Instantly",
+      "category": "other",
+      "source": "issuer",
+      "description": "After approval, receive instant access to your card by adding it to a digital wallet, like Apple Pay®, Google Pay™ or Samsung Pay."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Trip Cancellation and Interruption Insurance",
+      "Travel and Emergency Assistance"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
+  "image": {
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/freedom_unlimited_card_alt.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC61498.html"
+  ],
+  "notes": "network_tier normalized to canonical 'signature'; Chase pricing terms state applicants may receive a Visa Signature OR Platinum card with different costs and/or benefits. No public credit score band was verified. Reward rates use the whole-number convention (1.5 = 1.5%)."
+}

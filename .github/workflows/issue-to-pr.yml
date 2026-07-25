@@ -1,0 +1,200 @@
+name: Issue to draft PR
+
+# When a "Request a card" issue is filed (label `card-request`), parse the issue
+# form and open a DRAFT PR containing a scaffolded card JSON. The scaffold is a
+# starting point only — a human must fill in real data from official sources
+# before review. Every parsed value is treated as untrusted text: it is never
+# interpolated into a shell, and the JSON is assembled with JSON.stringify.
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  scaffold:
+    name: Scaffold card from request
+    if: contains(github.event.issue.labels.*.name, 'card-request')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Parse issue form and scaffold card JSON
+        id: scaffold
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require("fs");
+
+            const issue = context.payload.issue;
+            const issueNumber = issue.number;
+            const body = issue.body || "";
+
+            // --- Parse an issue-form body into { heading: value } ---
+            // GitHub renders each form field as "### <label>\n\n<value>".
+            // Untrusted input: we only read strings, never exec anything.
+            function parseSections(src) {
+              const out = {};
+              const parts = src.split(/^###\s+/m);
+              for (let i = 1; i < parts.length; i++) {
+                const chunk = parts[i];
+                const nl = chunk.indexOf("\n");
+                const heading = (nl === -1 ? chunk : chunk.slice(0, nl)).trim();
+                const value = (nl === -1 ? "" : chunk.slice(nl + 1)).trim();
+                out[heading] = value;
+              }
+              return out;
+            }
+            const sections = parseSections(body);
+            const get = (h) => {
+              const v = sections[h];
+              if (v == null) return "";
+              if (v === "_No response_") return "";
+              return v.trim();
+            };
+
+            const country = get("Country").toLowerCase();
+            const cardName = get("Card name");
+            const issuer = get("Issuer");
+            const productUrl = get("Official product page URL");
+            const termsUrl = get("Terms / benefits URL");
+            const imageUrl = get("Card image URL");
+            const notes = get("Notes");
+
+            // Derive slugs: lowercase, keep only [a-z0-9-], collapse separators.
+            const slugify = (s) =>
+              s
+                .toLowerCase()
+                .normalize("NFKD")
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/^-+|-+$/g, "");
+            const slug = slugify(cardName);
+            const issuerId = slugify(issuer);
+
+            // --- Validate before touching the filesystem ---
+            const ALLOWED = ["us", "ca", "cn"];
+            const problems = [];
+            if (!ALLOWED.includes(country)) {
+              problems.push(`Country \`${country || "(empty)"}\` is not one of us / ca / cn.`);
+            }
+            if (!slug) problems.push("Could not derive a slug from the card name.");
+            if (!issuerId) problems.push("Could not derive an issuer id from the issuer.");
+
+            const targetPath = `data/${country}/${slug}.json`;
+            const PATH_RE = /^data\/(us|ca|cn)\/[a-z0-9]+(?:-[a-z0-9]+)*\.json$/;
+            if (problems.length === 0 && !PATH_RE.test(targetPath)) {
+              problems.push(`Computed path \`${targetPath}\` is not a valid \`data/<country>/<slug>.json\`.`);
+            }
+            if (problems.length === 0 && fs.existsSync(targetPath)) {
+              problems.push(`\`${targetPath}\` already exists — this looks like an update to an existing card, not a new one. A maintainer can help.`);
+            }
+
+            if (problems.length > 0) {
+              const msg = [
+                "I couldn't auto-scaffold a draft PR from this request:",
+                "",
+                ...problems.map((p) => `- ${p}`),
+                "",
+                "A maintainer can still handle it by hand — thanks for the report!",
+              ].join("\n");
+              try {
+                await github.rest.issues.createComment({
+                  ...context.repo,
+                  issue_number: issueNumber,
+                  body: msg,
+                });
+              } catch (e) {
+                core.warning(`Could not comment: ${e}`);
+              }
+              core.setOutput("proceed", "false");
+              return;
+            }
+
+            // --- Build the card from the template (JSON.stringify = safe) ---
+            const card = JSON.parse(fs.readFileSync("templates/card.template.json", "utf8"));
+            const today = new Date().toISOString().slice(0, 10);
+            const cardId = `${country}-${slug}`;
+
+            card.id = cardId;
+            card.country = country;
+            card.name = cardName;
+            if (card.localized_names && typeof card.localized_names === "object") {
+              card.localized_names.en = cardName;
+            }
+            card.issuer = issuer;
+            card.issuer_id = issuerId;
+            card.official_url = productUrl;
+            const sources = [productUrl, termsUrl].filter((u) => u && u.length > 0);
+            if (sources.length > 0) card.sources = sources;
+            card.last_verified = today;
+            // Everything else stays template/null — a human fills it in.
+
+            fs.writeFileSync(targetPath, JSON.stringify(card, null, 2) + "\n");
+
+            // Compose the PR body here so untrusted values live in exactly one
+            // controlled place (never a shell, never re-evaluated as YAML).
+            const captured = [
+              cardName ? `- Card name: ${cardName}` : null,
+              issuer ? `- Issuer: ${issuer}` : null,
+              imageUrl ? `- Image URL: ${imageUrl}` : null,
+              notes ? `- Notes: ${notes.replace(/\r?\n/g, " ")}` : null,
+            ].filter(Boolean);
+
+            const prBody = [
+              `Scaffolds \`${targetPath}\` from #${issueNumber}.`,
+              "",
+              `Closes #${issueNumber}`,
+              "",
+              "> [!IMPORTANT]",
+              "> This is an **auto-generated scaffold**. Most fields are still template",
+              "> placeholder values. A human who can verify the card against the issuer's",
+              "> official pages must fill in the real data (fees, rewards, network, image,",
+              "> sources) **before review**. Expect the Validate check to stay red until the",
+              "> placeholders are replaced with real, sourced values.",
+              "",
+              "Captured from the request:",
+              ...(captured.length > 0 ? captured : ["- (nothing extra)"]),
+            ].join("\n");
+
+            core.setOutput("proceed", "true");
+            core.setOutput("card_id", cardId);
+            core.setOutput("target_path", targetPath);
+            core.setOutput("pr_body", prBody);
+
+      - name: Create draft PR
+        if: steps.scaffold.outputs.proceed == 'true'
+        id: cpr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          base: main
+          branch: card-request/issue-${{ github.event.issue.number }}
+          commit-message: "card(add): ${{ steps.scaffold.outputs.card_id }} (scaffold from #${{ github.event.issue.number }})"
+          title: "Add card: ${{ steps.scaffold.outputs.card_id }}"
+          body: ${{ steps.scaffold.outputs.pr_body }}
+          labels: new-card
+          draft: true
+
+      - name: Comment the PR link on the issue
+        if: steps.scaffold.outputs.proceed == 'true' && steps.cpr.outputs.pull-request-number
+        uses: actions/github-script@v9
+        continue-on-error: true
+        env:
+          PR_URL: ${{ steps.cpr.outputs.pull-request-url }}
+          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
+        with:
+          script: |
+            try {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: context.payload.issue.number,
+                body: `Thanks! I opened a draft PR for this card: ${process.env.PR_URL} (#${process.env.PR_NUMBER}).\n\nIt is a **scaffold** — the real card data still has to be filled in from official sources before it can be reviewed. You can edit the file directly on that PR.`,
+              });
+            } catch (e) {
+              core.warning(`Could not comment PR link: ${e}`);
+            }

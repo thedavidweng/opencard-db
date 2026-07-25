@@ -1,0 +1,199 @@
+{
+  "id": "us-chase-southwest-plus",
+  "schema_version": "1.0.0",
+  "name": "Southwest Rapid Rewards® Plus Credit Card",
+  "localized_names": {
+    "en": "Southwest Rapid Rewards® Plus Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 99,
+    "currency": "USD",
+    "first_year": 99,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Variable APRs; see current Chase pricing and terms for exact rates."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "rapid_rewards",
+    "currency_label": "Rapid Rewards points",
+    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Southwest Airlines purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas stations and grocery stores",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 5000,
+          "currency": "USD",
+          "period": "account_anniversary_year"
+        }
+      },
+      {
+        "label": "Qualifying Lyft purchases through 12/31/2027",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rapid Rewards points are transferred to Southwest Airlines after each billing cycle."
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 50,000 bonus points after spending $1,000 on purchases in the first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "first-checked-bag-free",
+      "title": "First checked bag free",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Primary Cardmember and up to eight passengers traveling on the same reservation can each receive their first standard checked bag free on eligible Southwest-operated flights. Save up to $90 round trip ($45 per bag per trip)."
+    },
+    {
+      "id": "standard-seat-selection",
+      "title": "Standard seat selection within 48 hours",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Primary Cardmembers may select a Standard seat within 48 hours prior to departure, when available, for themselves and up to eight additional passengers on the same reservation."
+    },
+    {
+      "id": "anniversary-points",
+      "title": "3,000 anniversary points",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Receive 3,000 bonus points each account anniversary year."
+    },
+    {
+      "id": "flight-discount",
+      "title": "10% annual flight discount",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Receive a 10% promo code each year on your Cardmember anniversary (Excludes Basic fare)."
+    },
+    {
+      "id": "companion-pass-boost",
+      "title": "10,000 Companion Pass qualifying points boost",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn one 10,000 Companion Pass qualifying points boost each year."
+    },
+    {
+      "id": "group-5-boarding",
+      "title": "Group 5 boarding benefit",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Cardmembers and up to 8 additional passengers in the same reservation will board with Group 5 giving them earlier access to overhead bins."
+    },
+    {
+      "id": "inflight-purchase-credit",
+      "title": "25% back on inflight purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Receive 25% back as a statement credit on eligible Southwest Airlines inflight purchases."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No foreign transaction fees when you use your card for purchases made outside the United States."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "Complimentary DashPass",
+      "category": "other",
+      "source": "co-brand",
+      "description": "12 months of complimentary DashPass for DoorDash and Caviar when first activated with the card between 02/01/2025 and 12/31/2027; auto-renews at the then-current monthly rate after the complimentary period."
+    },
+    {
+      "id": "doordash-quarterly-discount",
+      "title": "DoorDash non-restaurant order discount",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "After activating DashPass, receive a $10 discount each calendar quarter on one qualifying non-restaurant DoorDash order while enrolled in DashPass."
+    },
+    {
+      "id": "instacart-membership",
+      "title": "Complimentary Instacart+ membership",
+      "category": "other",
+      "source": "co-brand",
+      "description": "3 months of complimentary Instacart+ membership when activated with the card for the first time between 5/1/2025 and 12/31/2027; auto-renews at the then-current annual rate after the complimentary period."
+    },
+    {
+      "id": "instacart-monthly-credit",
+      "title": "Monthly Instacart credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "One $10 Instacart credit each month you have an active Instacart+ membership, after activating the complimentary membership, from 5/1/2025 through 12/31/2027."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "First standard checked bag free for the primary Cardmember and up to eight passengers on the same reservation on eligible Southwest-operated flights. Save up to $90 round trip ($45 per bag per trip).",
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Standard seat selection within 48 hours when available",
+      "Group 5 boarding benefit",
+      "10% annual Southwest flight discount promotion code (excludes Basic fare)",
+      "3,000 anniversary points each year",
+      "10,000 Companion Pass qualifying points boost each year",
+      "25% back on inflight purchases"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+  "image": {
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/swa_plus_card_New.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/southwest/plus",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63968.html"
+  ],
+  "notes": "network_tier normalized to canonical 'signature'; Chase pricing terms state applicants may receive a Visa Signature OR Platinum card with different costs and/or benefits. Lyft 2X (through 12/31/2027), complimentary DashPass, DoorDash quarterly credit, Instacart+ membership, and monthly Instacart credit re-verified against the official offer details and added."
+}
