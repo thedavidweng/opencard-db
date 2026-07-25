@@ -20,7 +20,11 @@
     "waiver_conditions": "年费与减免以建行钻石卡产品页为准。"
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": null },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
     "notes": "以建设银行信用卡业务规定为准。"
   },
   "fx_fee": {
@@ -40,7 +44,8 @@
       "description": "按建行积分规则累计。"
     },
     "categories": [],
-    "redemption_notes": "以建行积分兑换规则为准。"
+    "redemption_notes": "以建行积分兑换规则为准。",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -105,5 +110,6 @@
     "https://www.ccb.com/",
     "https://en.ccb.com/"
   ],
-  "notes": "用于验证 network_tier=diamond 与银联高阶权益建模；具体卡种名称与年费请对照建行官方产品列表更新。"
+  "notes": "用于验证 network_tier=diamond 与银联高阶权益建模；具体卡种名称与年费请对照建行官方产品列表更新。",
+  "segment": "personal"
 }

@@ -1,0 +1,139 @@
+# Convert uploaded card faces to lossless WebP (Apple Pay @2x fidelity).
+# Only runs when the PR actually adds/changes raster files under images/
+# (not README, .webp, or unrelated paths).
+
+name: Optimize Images
+
+on:
+  pull_request:
+    # Workflow is skipped entirely unless a raster under images/ changed.
+    # README / .webp / script-only edits do not trigger this workflow.
+    paths:
+      - "images/**.png"
+      - "images/**.PNG"
+      - "images/**.jpg"
+      - "images/**.JPG"
+      - "images/**.jpeg"
+      - "images/**.JPEG"
+      - "images/**.gif"
+      - "images/**.GIF"
+      - "images/**.tif"
+      - "images/**.TIF"
+      - "images/**.tiff"
+      - "images/**.TIFF"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: optimize-images-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  # Cheap gate: skip the sharp/npm job if the path filter matched a rename
+  # edge case or non-raster somehow. Avoids wasting minutes on npm ci.
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      needs_optimize: ${{ steps.check.outputs.needs_optimize }}
+    steps:
+      - name: Check PR for raster uploads under images/
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          files=$(gh pr diff "${{ github.event.pull_request.number }}" --name-only --repo "${{ github.repository }}" || true)
+          if printf '%s\n' "$files" | grep -qiE '^images/.+\.(png|jpe?g|gif|tiff?)$'; then
+            echo "Raster image(s) in PR — will optimize."
+            echo "needs_optimize=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No raster uploads under images/ — skipping optimize job."
+            echo "needs_optimize=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  optimize:
+    needs: gate
+    if: needs.gate.outputs.needs_optimize == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Optimize images → lossless WebP
+        id: opt
+        run: |
+          node --experimental-strip-types scripts/optimize-images.ts | tee /tmp/opt.json
+          written=$(node -e "const j=require('/tmp/opt.json'); console.log((j.written||[]).length)")
+          echo "written=$written" >> "$GITHUB_OUTPUT"
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if git status --porcelain | grep -q .; then
+            echo "dirty=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "dirty=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit optimized WebP (same-repo PRs only)
+        if: >-
+          steps.changes.outputs.dirty == 'true' &&
+          github.event.pull_request.head.repo.full_name == github.repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/
+          git commit -m "ci: optimize card images to lossless WebP"
+          git push
+
+      - name: Comment when fork PR needs a local optimize pass
+        if: >-
+          steps.changes.outputs.dirty == 'true' &&
+          github.event.pull_request.head.repo.full_name != github.repository
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          cat > /tmp/img-comment.md <<'EOF'
+          <!-- opencard-image-opt -->
+          ### Image optimization needed
+
+          This PR adds raster images under `images/`. Because the branch lives on a **fork**, CI cannot push WebP files back automatically.
+
+          On your machine (or in a Codespace):
+
+          ```bash
+          npm ci
+          npm run optimize:images
+          git add images/
+          git commit -m "ci: optimize card images to lossless WebP"
+          git push
+          ```
+
+          Spec: **lossless WebP**, native dimensions (Apple Pay `cardBackgroundCombined@2x.png` quality bar — no 800px downscale). See `images/README.md`.
+          EOF
+          # upsert — the comment is purely informational, so a fork-PR 403
+          # (read-only GITHUB_TOKEN) must not mask this job's real result: the
+          # `exit 1` below that flags "images still need a local optimize pass".
+          # Guard every gh call with `|| true` so we always reach that exit.
+          list=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate || true)
+          id=$(echo "$list" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const j=JSON.parse(d);const x=j.find(c=>String(c.body).includes('opencard-image-opt')); console.log(x?x.id:'')}catch{console.log('')}})")
+          if [ -n "$id" ]; then
+            gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -F body=@/tmp/img-comment.md || true
+          else
+            gh pr comment "$PR" --body-file /tmp/img-comment.md || true
+          fi
+          exit 1
