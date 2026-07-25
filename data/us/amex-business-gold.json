@@ -20,11 +20,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.74,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "APR not displayed on product page; see Rates & Fees link for current rates. Card is a charge card with Pay Over Time option."
+    "notes": "APR on purchases (Pay Over Time feature) is a variable rate, 17.74% to 28.49%, based on creditworthiness, per the official American Express Business Gold Card product page. Card is a charge card with a Pay Over Time option."
   },
   "fx_fee": {
     "percent": 0.0,
@@ -201,7 +201,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/"
   ],
