@@ -1,0 +1,177 @@
+{
+  "id": "us-us-bank-skypass-select",
+  "schema_version": "1.0.0",
+  "name": "SKYPASS Select Visa Signature® Credit Card",
+  "localized_names": {
+    "en": "SKYPASS Select Visa Signature® Credit Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 450.0,
+    "currency": "USD",
+    "first_year": 450.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not stated on product page; see Cardmember Agreement for current rates."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on international purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "SKYPASS miles",
+    "rate_type": "miles_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X mile on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Korean Air ticket purchases",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "Other airlines",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Hotels and car rentals",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Dining, including takeout and restaurant delivery",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Miles awarded to primary cardmember SKYPASS account. 10,000 Bonus Miles at renewal after $35,000 in spend annually; 5,000 Bonus Miles after spending $15,000 annually."
+  },
+  "signup_bonus": {
+    "amount": 60000.0,
+    "unit": "miles",
+    "spend_required": 5000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 60,000 Bonus Miles when you spend $5,000 in eligible purchases within the first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "korean-air-discount",
+      "title": "5% off Korean Air tickets",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 5% on Korean Air tickets 2X yearly, available for you and a companion."
+    },
+    {
+      "id": "travel-credit",
+      "title": "$200 annual travel credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get a $200 statement credit on travel purchases annually."
+    },
+    {
+      "id": "tsa-precheck-global-entry",
+      "title": "TSA PreCheck or Global Entry fee credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to $120 TSA PreCheck or Global Entry application fee statement credit."
+    },
+    {
+      "id": "korean-air-lounge-vouchers",
+      "title": "2 Korean Air Lounge vouchers each year",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "Two complimentary Korean Air Lounge vouchers each year."
+    },
+    {
+      "id": "priority-pass-select",
+      "title": "Priority Pass Select membership",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Priority Pass Select with four free lounge visits each year."
+    },
+    {
+      "id": "duty-free-coupons",
+      "title": "2 $25 Duty Free Coupons annually",
+      "category": "other",
+      "source": "issuer",
+      "description": "Two $25 Duty Free Coupons annually."
+    },
+    {
+      "id": "trip-cancellation-interruption",
+      "title": "Trip Cancellation/Trip Interruption Reimbursement",
+      "category": "other",
+      "source": "network",
+      "description": "Reimbursement for the non-refundable cost of your fare when your plans change."
+    },
+    {
+      "id": "trip-delay",
+      "title": "Trip Delay Reimbursement",
+      "category": "other",
+      "source": "network",
+      "description": "Reimbursement for expenses incurred when your trip is delayed 12+ hours due to a covered hazard."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "other",
+      "source": "network",
+      "description": "Get insurance coverage for car rentals made with your Visa card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "2 Korean Air Lounge vouchers each year + Priority Pass Select with 4 free visits per year"
+    },
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "5% off Korean Air tickets 2X yearly for cardmember and companion",
+      "$200 annual travel statement credit",
+      "2 $25 Duty Free Coupons annually"
+    ]
+  },
+  "official_url": "https://www.skypassvisa.com/credit/visaSelectCard.do",
+  "image": {
+    "url": null,
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.skypassvisa.com/credit/visaSelectCard.do"
+  ],
+  "notes": "Verified from official product page. APR not stated on page; see Cardmember Agreement. Rewards currency is SKYPASS miles (Korean Air loyalty)."
+}
