@@ -1,0 +1,167 @@
+{
+  "id": "us-amex-hilton-honors-business",
+  "schema_version": "1.0.0",
+  "name": "Hilton Honors Credit Cards",
+  "localized_names": {
+    "en": "Hilton Honors Credit Cards"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 195,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "$0 introductory annual fee for the first year, then $195. Offer ends 7/29/26."
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Prime Rate + 12.74% to Prime Rate + 21.74%, based on creditworthiness. Variable APRs will not exceed 29.99%. Cash Advance APR: Prime Rate + 21.99% (28.74%). Penalty APR: Prime Rate + 25.99% (29.99%). Variable APRs are accurate as of 07/24/2026."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated; Amex business cards typically require good to excellent credit."
+  },
+  "rewards": {
+    "currency": "hilton_honors_points",
+    "currency_label": "Hilton Honors Bonus Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 3,
+      "description": "3X on non-Hilton purchases after first $100,000 per calendar year"
+    },
+    "categories": [
+      {
+        "label": "Hilton hotels and resorts",
+        "points_per_dollar": 12,
+        "cap": null
+      },
+      {
+        "label": "All other purchases (first $100,000 per calendar year)",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 100000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "Points are Hilton Honors Bonus Points, redeemable through the Hilton Honors program for hotel stays, experiences, and more. Bonus Points do not count toward elite tier qualification."
+  },
+  "signup_bonus": {
+    "amount": 130000,
+    "unit": "hilton_honors_bonus_points",
+    "spend_required": 8000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 130,000 Hilton Honors Bonus Points after spending $8,000 on eligible purchases in first 6 months. Offer ends 7/29/26.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "hilton-credit",
+      "title": "$240 Hilton Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Up to $60 in statement credits each calendar quarter (up to $240/year) for eligible purchases charged directly with a property in the Hilton portfolio. Booking must be made directly through Hilton. Incidental charges must be charged to room and paid with card."
+    },
+    {
+      "id": "hilton-gold-status",
+      "title": "Complimentary Hilton Honors Gold Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Hilton Honors Gold status. Includes fifth night free on reward stays, daily food-and-beverage credit, and space-available room upgrades."
+    },
+    {
+      "id": "hilton-diamond-upgrade",
+      "title": "Hilton Honors Diamond Status Upgrade",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Upgrade to Hilton Honors Diamond status if total eligible purchases reach $40,000 or more in a calendar year."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees from American Express."
+    },
+    {
+      "id": "national-car-rental-emerald-executive",
+      "title": "National Car Rental Emerald Club Executive Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Basic Card Members can enroll in National Car Rental Emerald Club to access Executive status. Enrollment required through American Express online account."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for lost, damaged, or stolen baggage when purchasing Common Carrier Vehicle tickets on an Eligible Card. Underwritten by AMEX Assurance Company."
+    },
+    {
+      "id": "car-rental-loss-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for damage or theft of a rental vehicle when using Eligible Card to reserve and pay for the entire rental and declining CDW. Underwritten by AMEX Assurance Company."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Terms of the Original Manufacturer's Warranty can be extended up to one additional year. Underwritten by AMEX Assurance Company."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against theft, accidental damage, or loss for up to 90 days from purchase date. Underwritten by AMEX Assurance Company."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Hilton Honors Gold (complimentary); Diamond upgrade at $40,000 annual spend",
+    "other": [
+      "Up to $240/year in Hilton statement credits",
+      "No foreign transaction fees",
+      "National Car Rental Emerald Club Executive status"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/57460-9-0",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/hilton-honors-american-express-business-credit-card/57460-9-0",
+    "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q4-pdf-cmas/sbs-small-business/hilton-honors-american-express-business-card-12-31-2025.pdf"
+  ],
+  "notes": "Hilton Honors American Express Business Card. $0 intro annual fee first year, then $195. 130K bonus after $8K spend in 6 months. 12X Hilton, 5X other (first $100K/year), 3X after. network_tier is none for Amex. Cash Advance APR 28.74% confirmed from terms page."
+}

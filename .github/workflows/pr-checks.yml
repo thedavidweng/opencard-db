@@ -1,0 +1,250 @@
+# Two contributor-facing checks (separate jobs so failures are obvious):
+#   Labels     — classifies the PR (new-card / US / enhancement / …). Never fails.
+#   Form check — required title + beginner form fields. Fails when incomplete.
+
+name: PR Checks
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: pr-checks-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  labels:
+    name: Labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure classification labels exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ensure() {
+            local name="$1" color="$2" desc="$3"
+            gh label create "$name" --color "$color" --description "$desc" 2>/dev/null || \
+              gh label edit "$name" --color "$color" --description "$desc" 2>/dev/null || true
+          }
+          ensure "US" "0052CC" "Touches United States card data or images"
+          ensure "CA" "D93F0B" "Touches Canada card data or images"
+          ensure "CN" "FBCA04" "Touches China card data or images"
+          ensure "new-card" "0E8A16" "Adds a new Card JSON file"
+          ensure "enhancement" "a2eeef" "Non-card feature / CI / tooling change"
+          ensure "documentation" "0075ca" "Docs-only change"
+
+      - name: Collect changed files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr diff "${{ github.event.pull_request.number }}" --name-only > /tmp/pr-files.txt || true
+
+      - name: Classify PR
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_TRIAGE_MODE: labels
+        run: |
+          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
+          cat /tmp/triage.json
+
+      - name: Auto-fix PR title when we can infer it
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          node <<'NODE'
+          const { execSync } = require("child_process");
+          const t = require("/tmp/triage.json");
+          if (t.titleOk || !t.suggestedTitle) process.exit(0);
+          const pr = process.env.PR;
+          console.log("Updating title to:", t.suggestedTitle);
+          execSync(`gh pr edit ${pr} --title ${JSON.stringify(t.suggestedTitle)}`, {
+            stdio: "inherit",
+          });
+          NODE
+          # Re-classify after title fix
+          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
+          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_TRIAGE_MODE=labels
+          node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
+
+      - name: Apply classification labels only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          ADD=$(node -e "const t=require('/tmp/triage.json'); console.log((t.classificationLabelsAdd||[]).join('\n'))")
+          REM=$(node -e "const t=require('/tmp/triage.json'); console.log((t.classificationLabelsRemove||[]).join('\n'))")
+          while IFS= read -r l; do
+            [ -z "$l" ] && continue
+            gh pr edit "$PR" --add-label "$l" || true
+          done <<< "$ADD"
+          while IFS= read -r l; do
+            [ -z "$l" ] && continue
+            gh pr edit "$PR" --remove-label "$l" || true
+          done <<< "$REM"
+
+  form-check:
+    name: Form check
+    needs: labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure completeness labels exist
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ensure() {
+            local name="$1" color="$2" desc="$3"
+            gh label create "$name" --color "$color" --description "$desc" 2>/dev/null || \
+              gh label edit "$name" --color "$color" --description "$desc" 2>/dev/null || true
+          }
+          ensure "needs-info" "D4C5F9" "Waiting on author for missing PR form fields"
+          ensure "pr-form-incomplete" "E4E669" "PR body/title missing required beginner-form fields"
+          ensure "missing-sources" "B60205" "Card PR is missing official source URLs"
+          ensure "title-needs-fix" "F9D0C4" "PR title must be Conventional Commits: card(add|update): … or feat:/fix:/docs:/…"
+          ensure "duplicate" "cfd3d7" "Likely duplicates another open card PR"
+
+      - name: Collect changed files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr diff "${{ github.event.pull_request.number }}" --name-only > /tmp/pr-files.txt || true
+
+      - name: Collect open PRs + base card snapshots
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          # Other open PRs — used to detect duplicate card(add|update) work.
+          # Best-effort: fall back to [] on transient gh/API failures (rate limits)
+          # so the whole Form check never goes red on infrastructure errors.
+          gh pr list --state open --limit 200 \
+            --json number,title,url,author \
+            --jq '[.[] | {number, title, url, author: .author.login}]' \
+            > /tmp/open-prs.json || echo '[]' > /tmp/open-prs.json
+          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          export BASE_SHA
+          node --experimental-strip-types scripts/build-base-cards.ts > /tmp/base-cards.json
+          echo "open PRs:" "$(wc -l < /tmp/open-prs.json)"
+          echo "base cards:" "$(cat /tmp/base-cards.json)"
+
+      - name: Check title and form fields
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          PR_TRIAGE_MODE: check
+        run: |
+          # Re-read title/body after Labels may have auto-fixed the title.
+          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
+          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_NUMBER="$PR"
+          export OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"
+          export BASE_CARDS_JSON="$(cat /tmp/base-cards.json)"
+          set +e
+          node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
+          code=$?
+          set -e
+          echo "exit=$code" >> "$GITHUB_OUTPUT"
+          cat /tmp/triage.json
+
+      - name: Apply completeness labels only
+        if: always() && steps.check.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          ADD=$(node -e "const t=require('/tmp/triage.json'); console.log((t.completenessLabelsAdd||[]).join('\n'))")
+          REM=$(node -e "const t=require('/tmp/triage.json'); console.log((t.completenessLabelsRemove||[]).join('\n'))")
+          while IFS= read -r l; do
+            [ -z "$l" ] && continue
+            gh pr edit "$PR" --add-label "$l" || true
+          done <<< "$ADD"
+          while IFS= read -r l; do
+            [ -z "$l" ] && continue
+            gh pr edit "$PR" --remove-label "$l" || true
+          done <<< "$REM"
+
+      # Homebrew-style: always leave (or refresh) a PR comment before failing CI.
+      - name: Comment on PR (Homebrew-style sticky helper)
+        if: always() && steps.check.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
+          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_NUMBER="$PR"
+          export OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"
+          export BASE_CARDS_JSON="$(cat /tmp/base-cards.json)"
+          export PR_TRIAGE_MODE=check
+          export PR_AUTHOR
+          # Mask exit 1 from incomplete forms — we still need the JSON to write the comment.
+          set +e
+          node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage-comment.json
+          set -e
+          node -e "const t=require('/tmp/triage-comment.json'); require('fs').writeFileSync('/tmp/form-comment.md', t.commentMarkdown)"
+          echo "----- comment preview -----"
+          cat /tmp/form-comment.md
+          echo "---------------------------"
+
+          upsert() {
+            local marker="$1"
+            local id
+            id=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate \
+              --jq ".[] | select(.body | contains(\"${marker}\")) | .id" | head -n1)
+            if [ -n "$id" ]; then
+              gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" \
+                -F body=@/tmp/form-comment.md
+              return 0
+            fi
+            return 1
+          }
+
+          if upsert "opencard-form-check"; then
+            echo "Updated sticky form-check comment."
+          elif upsert "opencard-triage"; then
+            echo "Updated legacy triage comment → form-check body."
+          else
+            gh pr comment "$PR" --body-file /tmp/form-comment.md
+            echo "Posted new form-check comment."
+          fi
+
+      - name: Fail when title or required form fields are incomplete
+        if: always() && steps.check.outcome == 'success'
+        run: |
+          node -e "const t=require('/tmp/triage.json'); const errs=(t.issues||[]).filter(i=>i.severity==='error'); process.exit((!t.titleOk || errs.length || (t.missing||[]).length) ? 1 : 0)"
