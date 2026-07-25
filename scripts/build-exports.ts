@@ -14,7 +14,7 @@
  */
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { buildIndexArtifacts } from "./build-indexes.ts";
+import { buildIndexArtifacts, deriveArtGrade } from "./build-indexes.ts";
 import { repoRoot, type Card } from "./lib.ts";
 
 /** Columns emitted by cards.csv, in order. */
@@ -37,6 +37,7 @@ export const CSV_COLUMNS = [
   "signup_bonus_unit",
   "official_url",
   "last_verified",
+  "art_grade",
 ] as const;
 
 function get(obj: unknown, key: string): unknown {
@@ -86,6 +87,9 @@ export function cardToCsvRow(card: Card): string[] {
     signup_bonus_unit: get(signupBonus, "unit"),
     official_url: get(card, "official_url"),
     last_verified: get(card, "last_verified"),
+    // Prefer the grade already derived onto the artifact card; fall back to
+    // deriving it so buildCardsCsv is correct even on raw (un-enriched) cards.
+    art_grade: get(card, "art_grade") ?? deriveArtGrade(card),
   };
 
   return CSV_COLUMNS.map((col) => escapeCsv(cell(values[col])));
