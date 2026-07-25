@@ -21,11 +21,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 17.49,
+      "max": 26.49,
       "type": "variable"
     },
-    "notes": "Intro APR may apply for a promotional period; see Discover rates & fees disclosures on the product page."
+    "notes": "0% intro APR for 15 months on purchases and balance transfers; 17.49% to 26.49% variable APR thereafter, per Discover product page (2026-07-25)."
   },
   "fx_fee": {
     "percent": 0,
@@ -90,7 +90,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.discover.com/credit-cards/cash-back/it-card.html"
   ],
