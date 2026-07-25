@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/thedavidweng/opencard-db/main/schema.json",
   "id": "us-example-card",
   "schema_version": "1.0.0",
   "name": "Example Card Name",
@@ -11,6 +12,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0,
@@ -33,7 +35,8 @@
   "rewards": {
     "currency": "points",
     "currency_label": "Points",
-    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "structure": "single",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1x on other purchases"

@@ -43,7 +43,8 @@
       "description": "While the Citi Simplicity® Credit Card does not earn rewards, it does offer benefits such as no late fees, no penalty rate and no annual fee."
     },
     "categories": [],
-    "redemption_notes": null
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -144,5 +145,6 @@
   "sources": [
     "https://www.citi.com/credit-cards/citi-simplicity-credit-card"
   ],
-  "notes": "Verified from official Citi product page. Annual fee confirmed as $0 from FAQ ('No annual fee — ever'). No late fees and no penalty rate confirmed. Card does not earn rewards (stated in FAQ). APR numbers rendered as dynamic placeholders (%) in fetched text — actual values not visible. Network confirmed as Mastercard from FAQ. Credit score: good to excellent recommended."
+  "notes": "Verified from official Citi product page. Annual fee confirmed as $0 from FAQ ('No annual fee — ever'). No late fees and no penalty rate confirmed. Card does not earn rewards (stated in FAQ). APR numbers rendered as dynamic placeholders (%) in fetched text — actual values not visible. Network confirmed as Mastercard from FAQ. Credit score: good to excellent recommended.",
+  "segment": "personal"
 }

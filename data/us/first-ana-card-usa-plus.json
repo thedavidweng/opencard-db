@@ -7,7 +7,7 @@
   },
   "country": "us",
   "issuer": "First National Bank of Omaha",
-  "issuer_id": "first-bankcard",
+  "issuer_id": "fnbo",
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
@@ -42,14 +42,9 @@
       "points_per_dollar": 1.0,
       "description": "Earn 1X Mile per $1 spent on all other purchases"
     },
-    "categories": [
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      }
-    ],
-    "redemption_notes": "See the Credit Card Rewards Terms and Conditions for details. See the AMC Program Terms and Conditions at ana.co.jp/en/us/amc/ for information regarding expiration, redemption, forfeiture, and other limitations."
+    "categories": [],
+    "redemption_notes": "See the Credit Card Rewards Terms and Conditions for details. See the AMC Program Terms and Conditions at ana.co.jp/en/us/amc/ for information regarding expiration, redemption, forfeiture, and other limitations.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 10000.0,
@@ -111,5 +106,6 @@
   "sources": [
     "https://www.anacardusa.com/en/"
   ],
-  "notes": "Verified from official ANA CARD U.S.A. product page. Corrections: name updated from 'Home' to 'ANA CARD U.S.A. Plus'; first_year updated from $85 to $0 (campaign: $0 Intro Annual Fee for the 1st year); issuer updated from 'First Bankcard' to 'First National Bank of Omaha' (page states 'Cards are issued by First National Bank of Omaha (FNBO®)'). Signup bonus of 10,000 miles includes 5,000 after first purchase; remaining 5,000 likely from campaign spend (page says 'Earn up to 10,000 Bonus Miles'). Campaign also mentions '$100 e-gift card for flying ANA/ANA Group North America routes'."
+  "notes": "Verified from official ANA CARD U.S.A. product page. Corrections: name updated from 'Home' to 'ANA CARD U.S.A. Plus'; first_year updated from $85 to $0 (campaign: $0 Intro Annual Fee for the 1st year); issuer updated from 'First Bankcard' to 'First National Bank of Omaha' (page states 'Cards are issued by First National Bank of Omaha (FNBO®)'). Signup bonus of 10,000 miles includes 5,000 after first purchase; remaining 5,000 likely from campaign spend (page says 'Earn up to 10,000 Bonus Miles'). Campaign also mentions '$100 e-gift card for flying ANA/ANA Group North America routes'.",
+  "segment": "personal"
 }

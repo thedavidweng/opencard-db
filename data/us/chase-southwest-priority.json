@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points redeemed through the Rapid Rewards program for Southwest Airlines flights and other rewards. Your points don't expire, a benefit of the Rapid Rewards program."
+    "redemption_notes": "Points redeemed through the Rapid Rewards program for Southwest Airlines flights and other rewards. Your points don't expire, a benefit of the Rapid Rewards program.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -194,5 +195,6 @@
     "https://creditcards.chase.com/travel-credit-cards/southwest/priority",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64006.html"
   ],
-  "notes": "Network corrected from mastercard to visa. Network tier corrected from world to signature based on terms page stating 'you may receive a Signature or Platinum card'. Rewards currency corrected from ultimate_rewards to rapid_rewards_points."
+  "notes": "Network corrected from mastercard to visa. Network tier corrected from world to signature based on terms page stating 'you may receive a Signature or Platinum card'. Rewards currency corrected from ultimate_rewards to rapid_rewards_points.",
+  "segment": "personal"
 }

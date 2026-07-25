@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Virgin Points redeemable for travel (flights, hotels, cruises), movie tickets, family days out, epic experiences, and charitable causes through Virgin Red. Points do not expire. Select streaming services include: Amazon Music, Apple TV/Music, Audible, DirecTV Stream, Disney+, ESPN+, Fubo TV, HBO Max, Hulu, iHeartRadio, Kindle Unlimited, Luminary, MLB.tv, NBA League Pass, Netflix, NHL.tv, Pandora, Paramount+, Peacock, Prime Video, Showtime, Sling TV, SiriusXM, Spotify, Stitcher, Tidal, YouTube (Music/TV), and YouTube Premium."
+    "redemption_notes": "Virgin Points redeemable for travel (flights, hotels, cruises), movie tickets, family days out, epic experiences, and charitable causes through Virgin Red. Points do not expire. Select streaming services include: Amazon Music, Apple TV/Music, Audible, DirecTV Stream, Disney+, ESPN+, Fubo TV, HBO Max, Hulu, iHeartRadio, Kindle Unlimited, Luminary, MLB.tv, NBA League Pass, Netflix, NHL.tv, Pandora, Paramount+, Peacock, Prime Video, Showtime, Sling TV, SiriusXM, Spotify, Stitcher, Tidal, YouTube (Music/TV), and YouTube Premium.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -175,5 +176,6 @@
     "https://virginredrewardscard.syf.com/benefitsdetails",
     "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e074512.html"
   ],
-  "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page."
+  "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page.",
+  "segment": "personal"
 }

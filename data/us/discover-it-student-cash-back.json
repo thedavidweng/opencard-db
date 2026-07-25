@@ -53,7 +53,8 @@
         }
       }
     ],
-    "redemption_notes": "Cashback Match: unlimited dollar-for-dollar match of all cash back earned at end of first year, automatically. No limit to how much Discover will match."
+    "redemption_notes": "Cashback Match: unlimited dollar-for-dollar match of all cash back earned at end of first year, automatically. No limit to how much Discover will match.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": null,
   "benefits": [
@@ -98,5 +99,6 @@
   "sources": [
     "https://www.discover.com/credit-cards/student-credit-card/it-card/"
   ],
-  "notes": "Discover it Student Cash Back. No annual fee. No credit score required to apply. 5% cash back on rotating quarterly categories (activation required) up to quarterly maximum, 1% on all other purchases. 0% intro APR for 6 months, then 16.49%-25.49% variable. Cashback Match in first year. FX fee not stated on page."
+  "notes": "Discover it Student Cash Back. No annual fee. No credit score required to apply. 5% cash back on rotating quarterly categories (activation required) up to quarterly maximum, 1% on all other purchases. 0% intro APR for 6 months, then 16.49%-25.49% variable. Cashback Match in first year. FX fee not stated on page.",
+  "segment": "personal"
 }
