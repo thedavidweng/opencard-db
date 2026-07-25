@@ -56,7 +56,15 @@
     "redemption_notes": "Cashback Match: unlimited dollar-for-dollar match of all cash back earned at end of first year, automatically. No limit to how much Discover will match.",
     "rate_type": "cashback_percent"
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": null,
+    "unit": "other",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": 12,
+    "description": "Unlimited Cashback Match: Discover automatically matches all the cash back earned from account approval through the first 365 days (effectively 2x first-year cash back); no limit to the match and no purchase minimums.",
+    "as_of": "2026-07-25"
+  },
   "benefits": [
     {
       "id": "cashback-match",
@@ -95,7 +103,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.discover.com/credit-cards/student-credit-card/it-card/"
   ],
