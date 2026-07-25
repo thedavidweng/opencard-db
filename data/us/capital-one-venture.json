@@ -2,7 +2,9 @@
   "id": "us-capital-one-venture",
   "schema_version": "1.0.0",
   "name": "Capital One Venture Rewards Credit Card",
-  "localized_names": { "en": "Capital One Venture Rewards Credit Card" },
+  "localized_names": {
+    "en": "Capital One Venture Rewards Credit Card"
+  },
   "country": "us",
   "issuer": "Capital One",
   "issuer_id": "capital-one",
@@ -17,10 +19,17 @@
     "waiver_conditions": "First-year annual fee $0 on many offers; confirm current terms."
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": "variable" },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
     "notes": "Variable APR; see Capital One for current range."
   },
-  "fx_fee": { "percent": 0, "notes": "No foreign transaction fees." },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
   "credit_required": {
     "score_band": "good_to_excellent",
     "notes": null
@@ -40,7 +49,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Miles redeem for travel statement credits or transfer to partners."
+    "redemption_notes": "Miles redeem for travel statement credits or transfer to partners.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 75000,
@@ -88,7 +98,9 @@
     },
     "free_checked_bags": null,
     "hotel_status": null,
-    "other": ["No foreign transaction fees"]
+    "other": [
+      "No foreign transaction fees"
+    ]
   },
   "official_url": "https://www.capitalone.com/credit-cards/venture/",
   "image": {
@@ -102,5 +114,6 @@
     "https://www.capitalone.com/credit-cards/venture/",
     "https://www.capitalone.com/credit-cards/"
   ],
-  "notes": "Venture X is a separate product; this record is the Venture Rewards card."
+  "notes": "Venture X is a separate product; this record is the Venture Rewards card.",
+  "segment": "personal"
 }
