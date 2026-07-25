@@ -27,6 +27,13 @@ npm run embed:default-card
 
 ### Preferred: Apple Pay extract (“graduation-level”)
 
+**One command (recommended):** on a Mac with the card in Apple Pay, run
+[`npx opencard-export --export`](../packages/opencard-export). It finds your payment
+cards, names each exported face after the matched Card Id, and prints the exact
+attribution to record. Everything runs locally; nothing is uploaded.
+
+Manual fallback:
+
 1. On a Mac that already has the card in Wallet, copy  
    `~/Library/Passes/Cards/<id>.pkpass/cardBackgroundCombined@2x.png`
 2. Rename to the Card Id, e.g. `us-chase-sapphire-preferred.png`, and add under `images/`.
