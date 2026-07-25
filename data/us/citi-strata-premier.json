@@ -20,11 +20,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 20.24,
+      "max": 28.24,
       "type": "variable"
     },
-    "notes": "See Citi Important Terms for current APR."
+    "notes": "Variable APR for purchases and balance transfers is 20.24% - 28.24% based on creditworthiness, per Citi pricing details on the product page (2026-07-25)."
   },
   "fx_fee": {
     "percent": 0,
@@ -69,7 +69,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "ThankYou Points; successor branding to Citi Premier. Prior Premier bonus may affect eligibility (48-month lookback mentioned on page)."
+    "redemption_notes": "ThankYou Points; successor branding to Citi Premier. Prior Premier bonus may affect eligibility (48-month lookback mentioned on page).",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": null,
@@ -109,14 +110,15 @@
   },
   "official_url": "https://www.citi.com/credit-cards/citi-premier-credit-card",
   "image": {
-    "url": null,
-    "attribution": "© Citibank",
+    "url": "https://aemapi.citi.com/content/dam/cfs/uspb/usmkt/cards/en/static/images/citi-strata-premier-credit-card/citi-strata-premier-credit-card_306x192.webp",
+    "attribution": "© Citi",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.citi.com/credit-cards/citi-premier-credit-card"
   ],
-  "notes": "Product renamed from Citi Premier to Citi Strata Premier on Citi.com; keep stable Card Id us-citi-strata-premier. Mastercard confirmed on product FAQ; World Elite tier should be confirmed against card art."
+  "notes": "Product renamed from Citi Premier to Citi Strata Premier on Citi.com; keep stable Card Id us-citi-strata-premier. Mastercard confirmed on product FAQ; World Elite tier should be confirmed against card art.",
+  "segment": "personal"
 }

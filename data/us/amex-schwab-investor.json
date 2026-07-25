@@ -48,7 +48,8 @@
       "description": "1.5% cash back on all eligible purchases, auto-deposited to linked Schwab brokerage account"
     },
     "categories": [],
-    "redemption_notes": "Cash back is 1.5% of dollar amount of eligible purchases. Deposited directly into linked eligible Schwab brokerage account approximately 8-12 weeks after end of billing period. No cash back earned if Minimum Payment Due is not paid by Payment Due Date. Eligible account means (1) a Schwab One or Schwab General Brokerage Account or (2) a Schwab Traditional, Roth or Rollover IRA not managed by an independent investment advisor."
+    "redemption_notes": "Cash back is 1.5% of dollar amount of eligible purchases. Deposited directly into linked eligible Schwab brokerage account approximately 8-12 weeks after end of billing period. No cash back earned if Minimum Payment Due is not paid by Payment Due Date. Eligible account means (1) a Schwab One or Schwab General Brokerage Account or (2) a Schwab Traditional, Roth or Rollover IRA not managed by an independent investment advisor.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 200,
@@ -103,5 +104,6 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false"
   ],
-  "notes": "Charles Schwab Investor Credit Card from American Express. $0 annual fee. 1.5% flat cash back auto-deposited to Schwab brokerage. 2.7% foreign transaction fee. 0% intro APR for 6 months. $200 statement credit after $1,000 in first 3 months (corrected from prior $300 — page shows $200). Issued by American Express National Bank."
+  "notes": "Charles Schwab Investor Credit Card from American Express. $0 annual fee. 1.5% flat cash back auto-deposited to Schwab brokerage. 2.7% foreign transaction fee. 0% intro APR for 6 months. $200 statement credit after $1,000 in first 3 months (corrected from prior $300 — page shows $200). Issued by American Express National Bank.",
+  "segment": "personal"
 }

@@ -43,7 +43,8 @@
       "description": "Unlimited 2% cash rewards on purchases"
     },
     "categories": [],
-    "redemption_notes": "Redeem via Wells Fargo Rewards (statement credit, Pay with Rewards, gift cards, etc.)."
+    "redemption_notes": "Redeem via Wells Fargo Rewards (statement credit, Pay with Rewards, gift cards, etc.).",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 200,
@@ -105,5 +106,6 @@
     "https://creditcards.wellsfargo.com/active-cash-credit-card/",
     "https://www.wellsfargo.com/credit-cards/active-cash/terms/"
   ],
-  "notes": "Flat-rate cash-back Visa Signature card; intro APR and bonus offers are channel-dependent."
+  "notes": "Flat-rate cash-back Visa Signature card; intro APR and bonus offers are channel-dependent.",
+  "segment": "personal"
 }

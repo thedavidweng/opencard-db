@@ -64,7 +64,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary. Purchases that qualify for certain statement credits may not earn points."
+    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary. Purchases that qualify for certain statement credits may not earn points.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 100000,
@@ -186,5 +187,6 @@
     "https://creditcards.chase.com/rewards-credit-cards/sapphire/reserve",
     "https://www.chase.com/personal/credit-cards/sapphire/reserve"
   ],
-  "notes": "Premium Sapphire product; annual fee, credits, and lounge policies change — verify Pricing & Terms and Guide to Benefits before publishing comparisons."
+  "notes": "Premium Sapphire product; annual fee, credits, and lounge policies change — verify Pricing & Terms and Guide to Benefits before publishing comparisons.",
+  "segment": "personal"
 }

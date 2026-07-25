@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
@@ -18,6 +18,10 @@ jobs:
         run: npm ci
       - name: Validate cards
         run: npm run validate
+      - name: Typecheck (root scripts + worker)
+        run: |
+          npm install --legacy-peer-deps --prefix worker
+          npm run typecheck
       - name: Build indexes
         run: npm run build:indexes
       - name: Test

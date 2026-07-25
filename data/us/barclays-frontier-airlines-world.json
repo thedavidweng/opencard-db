@@ -169,5 +169,6 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/frontier-airlines-world-mastercard/"
   ],
-  "notes": "network_tier 'world' confirmed from page: 'Frontier Airlines World Mastercard®'. All rates/fees/benefits verified from fetched page."
+  "notes": "network_tier 'world' confirmed from page: 'Frontier Airlines World Mastercard®'. All rates/fees/benefits verified from fetched page.",
+  "segment": "personal"
 }

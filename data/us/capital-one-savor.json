@@ -54,7 +54,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Cash rewards; confirm redemption options on Capital One."
+    "redemption_notes": "Cash rewards; confirm redemption options on Capital One.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 250,
@@ -87,5 +88,6 @@
   "sources": [
     "https://www.capitalone.com/credit-cards/savor/"
   ],
-  "notes": "Savor is Capital One's dining/entertainment cash-back card; network packaging may be Mastercard World — confirm on card art/terms if dual branding changes."
+  "notes": "Savor is Capital One's dining/entertainment cash-back card; network packaging may be Mastercard World — confirm on card art/terms if dual branding changes.",
+  "segment": "personal"
 }

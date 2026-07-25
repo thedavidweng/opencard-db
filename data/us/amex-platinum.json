@@ -58,7 +58,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Membership Rewards transfer partners and Pay with Points options vary."
+    "redemption_notes": "Membership Rewards transfer partners and Pay with Points options vary.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": null,
@@ -149,5 +150,6 @@
     "https://www.americanexpress.com/us/credit-cards/card/platinum/",
     "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png"
   ],
-  "notes": "Credits and lounge entitlements are offer/enrollment-dependent. Cross-checked fee $895 and 5x flight/hotel earn against Amex official page; welcome bonus left null after third-party cross-check showed conflict with polluted $3,000 spend text in page bundle."
+  "notes": "Credits and lounge entitlements are offer/enrollment-dependent. Cross-checked fee $895 and 5x flight/hotel earn against Amex official page; welcome bonus left null after third-party cross-check showed conflict with polluted $3,000 spend text in page bundle.",
+  "segment": "personal"
 }

@@ -138,5 +138,6 @@
     "https://www.discover.com/credit-cards/secured/",
     "https://www.discover.com/credit-cards/secured-credit-card/?iq_id=dp-dbr-inet-acceptance-pdisplay"
   ],
-  "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Image URL cleared: prior asset was a Capital One CDN card-art file for the Discover it Cash Back (unsecured) product, not the Secured card."
+  "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Image URL cleared: prior asset was a Capital One CDN card-art file for the Discover it Cash Back (unsecured) product, not the Secured card.",
+  "segment": "personal"
 }

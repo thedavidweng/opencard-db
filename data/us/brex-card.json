@@ -1,0 +1,144 @@
+{
+  "id": "us-brex-card",
+  "schema_version": "1.0.0",
+  "name": "Brex Corporate Card",
+  "localized_names": {
+    "en": "Brex Corporate Card"
+  },
+  "country": "us",
+  "issuer": "Brex",
+  "issuer_id": "brex",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "charge",
+  "segment": "corporate",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not stated on product page. Brex corporate card is designed to be paid in full; no personal guarantee required."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Page mentions local currency cards to avoid foreign exchange fees, but no specific FX fee percent stated for US card."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "No personal credit score required. Underwriting based on business financials including revenue, amount raised, or cash balance."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Brex rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "Earn 1x points on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "7x points on rideshare (e.g. Uber, Lyft, taxis)",
+        "points_per_dollar": 7.0,
+        "cap": null
+      },
+      {
+        "label": "4x points on flights and prepaid hotels booked through Brex Travel",
+        "points_per_dollar": 4.0,
+        "cap": null
+      },
+      {
+        "label": "3x points at restaurants",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "2x points on recurring software subscriptions",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem for cash back, statement credits, gift cards, travel, or transfers. Higher category multipliers (the 'Brex Exclusive' tier) apply when the card balance is paid daily; card-limit/eligibility conditions apply.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "no-personal-guarantee",
+      "title": "No personal guarantee",
+      "category": "other",
+      "source": "issuer",
+      "description": "Brex does not require a personal guarantee. Underwriting is based on business financials, so founders' personal credit isn't used or reported."
+    },
+    {
+      "id": "worldwide-acceptance",
+      "title": "Worldwide card acceptance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Physical and virtual cards issued on Mastercard network, with acceptance in 210+ countries and territories."
+    },
+    {
+      "id": "credit-limits-grow",
+      "title": "Credit limits that grow with you",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get a card limit that keeps pace with your business based on financial factors such as revenue or dollars raised. Limits up to 30x higher than traditional business credit cards."
+    },
+    {
+      "id": "virtual-cards",
+      "title": "Unlimited virtual cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Issue unlimited virtual corporate cards instantly with embedded controls that work at the category, merchant, and transaction level."
+    },
+    {
+      "id": "expense-management",
+      "title": "Built-in expense management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Brex cards automatically collect itemized receipts compliant with IRS or local tax laws, generate memos, and categorize to the right GL and/or project."
+    },
+    {
+      "id": "global-card-program",
+      "title": "Local cards in 50+ countries",
+      "category": "other",
+      "source": "issuer",
+      "description": "Brex cards can be issued in more countries and currencies than any other, enabling local operations anywhere. Local currency cards and statements to avoid foreign exchange fees."
+    },
+    {
+      "id": "enterprise-security",
+      "title": "Enterprise-grade security",
+      "category": "other",
+      "source": "issuer",
+      "description": "Chip and PIN, fraud protection, and more on World Elite Mastercard. SOC 1 Type I, SOC 2 Type II, and PCI-DSS compliant."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.brex.com/product/credit-card/",
+  "image": {
+    "url": "https://brand.brex.com/m/70ead059a892c912/webimage-CardsHero-R5.jpg",
+    "attribution": "© Brex",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.brex.com/product/credit-card/",
+    "https://www.brex.com/product/credit-card"
+  ],
+  "notes": "Verified against the official Brex product and rewards pages on 2026-07-25. Brex is a pay-in-full corporate charge card (no personal guarantee); type set to 'charge' and segment 'corporate'. No annual fee ($0). Reward multipliers: 7x rideshare, 4x Brex Travel (flights & prepaid hotels), 3x restaurants, 2x recurring software, 1x on everything else — the higher 'Brex Exclusive' tiers apply to the daily-payment card. APR and US FX-fee percent are not published on the product page (left null)."
+}
