@@ -1,0 +1,20 @@
+{
+  "$comment": "Allowlist for network_tier (scripts/validate.ts). Bare network package slugs only — no network prefix (use 'infinite', never 'visa_infinite'), no product marketing names, one atomic value (no 'signature_or_platinum'). Extend this list in the same PR as the first card that needs a new tier.",
+  "tiers": [
+    "none",
+    "classic",
+    "traditional",
+    "standard",
+    "gold",
+    "platinum",
+    "titanium",
+    "diamond",
+    "signature",
+    "signature_preferred",
+    "infinite",
+    "infinite_privilege",
+    "world",
+    "world_elite",
+    "world_legend"
+  ]
+}
