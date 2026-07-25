@@ -51,9 +51,13 @@
     },
     "categories": [
       {
-        "label": "Dining at restaurants incl. takeout & eligible delivery (new cardmembers, first 6 months, up to $6,000 spent)",
+        "label": "Dining at restaurants incl. takeout & eligible delivery (new cardmembers, first 6 months)",
         "points_per_dollar": 3,
-        "cap": 6000
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "first_6_months"
+        }
       },
       {
         "label": "Lyft rideshare, bike/scooter, and membership purchased in the Lyft app (through 09/30/2027)",
