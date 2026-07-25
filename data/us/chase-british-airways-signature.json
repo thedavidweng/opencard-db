@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -28,8 +29,8 @@
     "notes": "19.24% Min. of (6.75+12.49) and 29.99% to 27.74% Min. of (6.75+20.99) and 29.99% variable APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Not explicitly stated on product page. Preserved as null — not re-verified."
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
   },
   "credit_required": {
     "score_band": null,
@@ -39,19 +40,20 @@
     "currency": "avios",
     "currency_label": "Avios",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1 Avios per $1 on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "British Airways, Aer Lingus, Iberia, and LEVEL flight purchases",
+        "points_per_dollar": 3.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Hotel accommodations booked directly with the hotel",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -71,28 +73,28 @@
       "id": "ba-10pct-discount",
       "title": "10% Off On British Airways Flights",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Take 10% off British Airways flights starting in the US when you book through the website provided in your welcome materials."
     },
     {
       "id": "reward-flight-statement-credits",
       "title": "Up to $600 Reward Flight Statement Credits",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive statement credits of $100 for Economy and Premium Economy or $200 for Business and First Class seats, three times per year, up to $600, when you book a Reward Flight travelling on British Airways and pay taxes, fees and carrier charges with the card."
     },
     {
       "id": "travel-together-ticket",
       "title": "Travel Together Ticket",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn a Travel Together Ticket every calendar year you make $30,000 in purchases on your British Airways credit card. Valid for two years when you redeem Avios for a flight on British Airways for a companion traveling on the same flight, or use it for a 50% discount on the Avios price when booking a solo reward flight."
     },
     {
       "id": "paying-with-avios",
       "title": "Paying with Avios",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "British Airways Visa Signature cardmembers can pay for the taxes, fees and carrier charges for flights using Avios. Must make reward booking via British Airways Club Contact Centre."
     },
     {
@@ -129,7 +131,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/travel-credit-cards/avios/british-airways"
   ],
