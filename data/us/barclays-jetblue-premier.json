@@ -211,12 +211,12 @@
   },
   "official_url": "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/",
   "image": {
-    "url": null,
+    "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/JBP_CD_card_Premier_WE_Angle_359x246_L.png",
     "attribution": "© Barclays",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://cards.barclaycardus.com/banking/cards/jetblue-premier-card/"
   ],
