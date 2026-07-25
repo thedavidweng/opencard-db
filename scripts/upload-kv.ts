@@ -30,33 +30,41 @@ function parseJsonc(text: string): unknown {
   return JSON.parse(noComments);
 }
 
-async function productionNamespaceId(): Promise<string | null> {
+type ProductionConfig = {
+  account_id?: string;
+  kv_namespaces?: Array<{ binding: string; id: string }>;
+};
+
+async function productionConfig(): Promise<ProductionConfig> {
   try {
     const raw = await readFile(
       path.join(repoRoot(), "worker", "wrangler.jsonc"),
       "utf-8",
     );
-    const config = parseJsonc(raw) as {
-      env?: {
-        production?: { kv_namespaces?: Array<{ binding: string; id: string }> };
-      };
-    };
-    const ns = config.env?.production?.kv_namespaces?.find(
-      (n) => n.binding === "OPENCARD_KV",
-    );
-    return ns?.id ?? null;
+    const config = parseJsonc(raw) as { env?: { production?: ProductionConfig } };
+    return config.env?.production ?? {};
   } catch {
-    return null;
+    return {};
   }
 }
 
 async function main(): Promise<void> {
-  const ns = process.env.KV_NAMESPACE_ID || (await productionNamespaceId());
+  const production = await productionConfig();
+  const ns =
+    process.env.KV_NAMESPACE_ID ||
+    production.kv_namespaces?.find((n) => n.binding === "OPENCARD_KV")?.id;
   if (!ns) {
     console.error(
       "No KV namespace id: set KV_NAMESPACE_ID or define env.production in worker/wrangler.jsonc",
     );
     process.exit(1);
+  }
+  // `kv key put` reads no environment section of the config, so pin the
+  // account explicitly: a CI token with access to several accounts otherwise
+  // fails wrangler's non-interactive account selection.
+  const env = { ...process.env };
+  if (!env.CLOUDFLARE_ACCOUNT_ID && production.account_id) {
+    env.CLOUDFLARE_ACCOUNT_ID = production.account_id;
   }
   const indexDir = path.join(repoRoot(), "dist", "indexes");
 
@@ -78,7 +86,7 @@ async function main(): Promise<void> {
         "--remote",
       ],
       // cwd worker/ resolves the pinned wrangler from worker/node_modules.
-      { stdio: "inherit", env: process.env, cwd: path.join(repoRoot(), "worker") },
+      { stdio: "inherit", env, cwd: path.join(repoRoot(), "worker") },
     );
     if (result.status !== 0) {
       process.exit(result.status ?? 1);
