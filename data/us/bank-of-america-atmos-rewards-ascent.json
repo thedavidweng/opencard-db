@@ -1,9 +1,9 @@
 {
   "id": "us-bank-of-america-atmos-rewards-ascent",
   "schema_version": "1.0.0",
-  "name": "Travel rewards credit cards",
+  "name": "Atmos™ Rewards Ascent Visa Signature® Credit Card",
   "localized_names": {
-    "en": "Travel rewards credit cards"
+    "en": "Atmos™ Rewards Ascent Visa Signature® Credit Card"
   },
   "country": "us",
   "issuer": "Bank of America",
@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95,
@@ -42,6 +43,7 @@
   "rewards": {
     "currency": "alaska_mileage_plan",
     "currency_label": "Atmos Rewards Points (Alaska Mileage Plan miles)",
+    "rate_type": "miles_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
