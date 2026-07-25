@@ -1,0 +1,180 @@
+{
+  "id": "us-chase-world-of-hyatt",
+  "schema_version": "1.0.0",
+  "name": "World of Hyatt Credit Card",
+  "localized_names": {
+    "en": "World of Hyatt Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Variable APRs; pricing terms list purchase APR 19.24% to 27.74% and cash advance APR 28.49%. Penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees. Terms page: Foreign - None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Accounts subject to credit approval."
+  },
+  "rewards": {
+    "currency": "world_of_hyatt_points",
+    "currency_label": "World of Hyatt Bonus Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Bonus Point per $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Qualifying purchases at Hyatt hotels and resorts",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Restaurants, airline tickets purchased directly from airlines, local transit and commuting, fitness clubs and gym memberships",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "World of Hyatt Bonus Points transfer automatically to the primary cardmember's World of Hyatt account; points don't expire as long as your World of Hyatt Credit Card account is open."
+  },
+  "signup_bonus": {
+    "amount": 75000,
+    "unit": "points",
+    "spend_required": 5000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn up to 75,000 Bonus Points: 45,000 Bonus Points after you spend $5,000 on purchases in your first 3 months of account opening, plus up to 30,000 more Bonus Points by earning 2 Bonus Points total per $1 spent in the first 6 months from account opening on purchases that normally earn 1 Bonus Point, on up to $15,000 spent.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "annual-free-night",
+      "title": "Annual Category 1-4 Free Night Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive one free night at any Category 1-4 Hyatt hotel or resort every year after your cardmember anniversary."
+    },
+    {
+      "id": "spend-free-night",
+      "title": "Additional Category 1-4 Free Night Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn an extra free night at any Category 1-4 Hyatt hotel or resort if you spend $15,000 in a calendar year."
+    },
+    {
+      "id": "discoverist-status",
+      "title": "World of Hyatt Discoverist Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "The primary cardmember will receive Discoverist status in the World of Hyatt program as long as their World of Hyatt Credit Card is open and not in default."
+    },
+    {
+      "id": "tier-qualifying-night-credits",
+      "title": "World of Hyatt Tier-Qualifying Night Credits",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Receive 5 World of Hyatt Tier-Qualifying Night credits each calendar year, plus earn 2 additional qualifying night credits every time you spend $5,000 on your card."
+    },
+    {
+      "id": "baggage-delay",
+      "title": "Baggage Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses you up to $100 a day for up to 5 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage",
+      "title": "Lost Luggage Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Provides reimbursement up to $3,000 per covered traveler for the cost to repair or replace checked or carry-on baggage that is lost, damaged or stolen during a covered trip."
+    },
+    {
+      "id": "trip-cancellation",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If your trip is canceled or cut short by sickness, severe weather or other covered situations, you can be reimbursed up to $5,000 per covered traveler and $10,000 per trip for your pre-paid, non-refundable travel expenses."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item."
+    },
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage provides reimbursement for theft and collision damage for most rental vehicles. In the U.S., coverage is secondary to your personal insurance."
+    },
+    {
+      "id": "visa-signature-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "Get complimentary Visa Signature Concierge Service 24 hours a day. Find tickets to the top sports and entertainment events, make dinner reservations and even get help sending the perfect gift."
+    },
+    {
+      "id": "dashpass",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 12 months of complimentary DashPass for use on both the DoorDash and Caviar applications when activated between 02/01/2025 and 12/31/2027, plus up to $10 off quarterly on eligible non-restaurant DoorDash orders."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "World of Hyatt Discoverist status",
+    "other": [
+      "No foreign transaction fees",
+      "Annual Category 1-4 Free Night Award after cardmember anniversary",
+      "Extra Category 1-4 Free Night Award after spending $15,000 in a calendar year",
+      "5 World of Hyatt tier-qualifying night credits each calendar year",
+      "2 additional tier-qualifying night credits for every $5,000 in purchases",
+      "Visa Signature Concierge service"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+  "image": {
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/world_of_hyatt_card.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/world-of-hyatt-credit-card",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC65092.html"
+  ],
+  "notes": "Signup bonus is a tiered limited-time offer; see description for the official Chase spend requirements. Visa Signature tier confirmed by product page mentioning 'Visa Signature Concierge'."
+}
