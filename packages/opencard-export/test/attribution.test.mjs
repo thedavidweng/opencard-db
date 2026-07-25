@@ -22,3 +22,8 @@ test('attributionNotice mentions copyright, takedown, and the suggested line', (
   assert.match(notice, /SECURITY\.md/);
   assert.match(notice, /© Sample Bank \(Apple Pay digital card art\)/);
 });
+
+test('attributionNotice is English-only (no CJK)', () => {
+  const notice = attributionNotice('Sample Bank');
+  assert.ok(!/[一-鿿]/.test(notice), 'notice must not contain CJK characters');
+});
