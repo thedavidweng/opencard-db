@@ -44,6 +44,20 @@ Cache-Control: public, max-age=300, stale-while-revalidate=3600
 
 Errors and rate limits use `Cache-Control: no-store`.
 
+Responses are additionally cached per-colo in the Worker (Cloudflare Cache API)
+to cut KV reads on repeat requests. See [self-hosting.md](./self-hosting.md#caching-and-the-free-tier).
+
+## CORS
+
+The API is public and read-only, so **any origin** may call it from the browser:
+
+- Every response includes `Access-Control-Allow-Origin: *`.
+- Only `GET`, `HEAD`, and `OPTIONS` are supported (other methods → **405**).
+- Preflight `OPTIONS` returns **204** with
+  `Access-Control-Allow-Methods: GET, HEAD, OPTIONS`,
+  `Access-Control-Allow-Headers: X-Client-Name`, and `Access-Control-Max-Age: 86400`.
+- `ETag` is advertised via `Access-Control-Expose-Headers` when present.
+
 ## Endpoints
 
 ### `GET /v1/health`
