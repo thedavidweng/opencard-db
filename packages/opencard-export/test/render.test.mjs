@@ -1,4 +1,4 @@
-// Tests for dot-list rendering, CJK width, completeness (meter + per-field), NO_COLOR.
+// Tests for table rendering, CJK width, completeness (meter + per-field), NO_COLOR.
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -8,7 +8,7 @@ import {
   stripAnsi,
   completenessMeter,
   completenessFields,
-  renderCardEntry,
+  renderCardTable,
   colorEnabled,
 } from '../lib/render.mjs';
 
@@ -43,7 +43,7 @@ test('completenessMeter counts populated fields out of 6', () => {
   const mFull = completenessMeter(full);
   assert.equal(mFull.filled, 6);
   assert.equal(mFull.total, 6);
-  assert.equal(mFull.text, '▮▮▮▮▮▮ 6/6');
+  assert.equal(mFull.text, '6/6');
 
   const empty = {
     annual_fee: { amount: null, currency: 'USD' },
@@ -55,7 +55,7 @@ test('completenessMeter counts populated fields out of 6', () => {
   };
   const mEmpty = completenessMeter(empty);
   assert.equal(mEmpty.filled, 0);
-  assert.equal(mEmpty.text, '▯▯▯▯▯▯ 0/6');
+  assert.equal(mEmpty.text, '0/6');
 
   const partial = {
     annual_fee: { amount: 0, currency: 'USD' },
@@ -86,87 +86,107 @@ test('completenessFields returns the six labels in fixed order with correct mark
   );
 });
 
-test('renderCardEntry: matched card renders dot-list with per-field marks (no ANSI when color:false)', () => {
-  const meter = completenessMeter({
-    annual_fee: { amount: 95 },
-    apr: { purchase: { min: 20, max: 28 } },
-    fx_fee: { percent: 0 },
-    rewards: { base_rate: { points_per_dollar: 1 } },
-    // signup_bonus missing
-    image: { url: 'https://example.com/x.png' },
-  });
-  const out = renderCardEntry(
-    {
-      name: 'Sample Preferred',
-      issuer: 'Sample Bank',
-      stateCode: 'has-art',
-      matchedId: 'us-sample-preferred',
-      fields: meter.fields,
-    },
-    { color: false, width: 60 },
-  );
+const ROWS = [
+  {
+    name: 'Sample Preferred',
+    issuer: 'Sample Bank',
+    matchedId: 'us-sample-preferred',
+    filled: 5,
+    total: 6,
+    status: 'up-to-date',
+  },
+  {
+    name: 'Cobalt Everyday',
+    issuer: 'Sample Bank',
+    matchedId: 'ca-sample-cobalt',
+    filled: 1,
+    total: 6,
+    status: 'art-wanted',
+  },
+  {
+    name: 'My Local Credit Union',
+    issuer: 'Some CU',
+    matchedId: null,
+    status: 'not-in-database',
+  },
+];
+
+test('renderCardTable: header + aligned columns, no ANSI when color:false', () => {
+  const out = renderCardTable(ROWS, { color: false });
   assert.equal(stripAnsi(out), out, 'no ANSI when color:false');
-  const [line1, line2] = out.split('\n');
-  // Line 1: dot + bold name + (issuer) + right-aligned status word.
-  assert.ok(line1.startsWith('● Sample Preferred (Sample Bank)'), line1);
-  assert.ok(line1.endsWith('complete'), line1);
-  assert.equal(displayWidth(line1), 60, 'status word is right-aligned to width');
-  // Line 2: matched id + per-field ✓/✗ marks, indented and arrowed.
+  const lines = out.split('\n');
+  assert.equal(lines.length, 4, 'header + one line per card');
+  assert.match(lines[0], /^NAME\s+ISSUER\s+MATCH\s+DATA\s+STATUS$/);
+  assert.match(lines[1], /^Sample Preferred\s+Sample Bank\s+us-sample-preferred\s+5\/6\s+up to date$/);
+  assert.match(lines[2], /^Cobalt Everyday\s+Sample Bank\s+ca-sample-cobalt\s+1\/6\s+art wanted$/);
+  // Columns align: every MATCH cell starts at the same display offset.
+  const offset = (line, text) => displayWidth(line.slice(0, line.indexOf(text)));
   assert.equal(
-    line2,
-    '  → us-sample-preferred · Fee ✓ APR ✓ FX ✓ Rewards ✓ Bonus ✗ Art ✓',
+    offset(lines[1], 'us-sample-preferred'),
+    offset(lines[0], 'MATCH'),
+    'MATCH column aligns with its header',
   );
 });
 
-test('renderCardEntry: missing-art card shows yellow-state word and Art ✗', () => {
-  const meter = completenessMeter({
-    annual_fee: { amount: 0 },
-    image: { url: null, local_path: null },
-  });
-  const out = renderCardEntry(
+test('renderCardTable: unmatched card renders dash DB cells and its status', () => {
+  const out = renderCardTable(ROWS, { color: false });
+  const line = out.split('\n')[3];
+  assert.match(line, /^My Local Credit Union\s+Some CU\s+-\s+-\s+not in database$/);
+});
+
+test('renderCardTable: null status (offline) renders a dash', () => {
+  const out = renderCardTable(
+    [{ name: 'Sample', issuer: 'Bank', matchedId: null, status: null }],
+    { color: false },
+  );
+  assert.match(out.split('\n')[1], /^Sample\s+Bank\s+-\s+-\s+-$/);
+});
+
+test('renderCardTable: the three status words', () => {
+  const rows = ['up-to-date', 'art-wanted'].map((status, i) => ({
+    name: `Card ${i}`,
+    issuer: 'Bank',
+    matchedId: `xx-card-${i}`,
+    filled: 3,
+    total: 6,
+    status,
+  }));
+  rows.push({ name: 'Card 2', issuer: 'Bank', matchedId: null, status: 'not-in-database' });
+  const out = renderCardTable(rows, { color: false });
+  assert.match(out, /xx-card-0\s+3\/6\s+up to date/);
+  assert.match(out, /xx-card-1\s+3\/6\s+art wanted/);
+  assert.match(out, /Card 2\s+Bank\s+-\s+-\s+not in database/);
+});
+
+test('renderCardTable: CJK names keep the columns width-aligned', () => {
+  const rows = [
     {
-      name: 'Cobalt Everyday',
-      issuer: 'Sample Bank',
-      stateCode: 'needs-art',
-      matchedId: 'ca-sample-cobalt',
-      fields: meter.fields,
+      name: '招商银行经典白金卡',
+      issuer: '招商银行',
+      matchedId: 'cn-cmb-classic-platinum',
+      filled: 4,
+      total: 6,
+      status: 'art-wanted',
     },
-    { color: false, width: 60 },
-  );
-  const [line1, line2] = out.split('\n');
-  assert.ok(line1.endsWith('missing art'), line1);
-  assert.ok(line2.endsWith('Art ✗'), line2);
+    {
+      name: 'Short',
+      issuer: 'Bank',
+      matchedId: 'us-short',
+      filled: 6,
+      total: 6,
+      status: 'up-to-date',
+    },
+  ];
+  const out = renderCardTable(rows, { color: false });
+  const [header, l1, l2] = out.split('\n');
+  const offset = (line, text) => displayWidth(line.slice(0, line.indexOf(text)));
+  assert.equal(offset(l1, 'cn-cmb-classic-platinum'), offset(header, 'MATCH'));
+  assert.equal(offset(l2, 'us-short'), offset(header, 'MATCH'));
 });
 
-test('renderCardEntry: unmatched card shows red-state word and the not-in-DB hint', () => {
-  const out = renderCardEntry(
-    { name: 'My Local Credit Union', issuer: 'Some CU', stateCode: 'not-in-db', matchedId: null },
-    { color: false, width: 60 },
-  );
-  const [line1, line2] = out.split('\n');
-  assert.ok(line1.endsWith('not in DB'), line1);
-  assert.equal(line2, '  → not in OpenCard DB yet');
-});
-
-test('renderCardEntry: CJK card names keep width-correct right alignment', () => {
-  const out = renderCardEntry(
-    { name: '招商银行经典白金卡', issuer: '招商银行', stateCode: 'not-in-db', matchedId: null },
-    { color: false, width: 64 },
-  );
-  const line1 = out.split('\n')[0];
-  assert.equal(displayWidth(line1), 64, 'CJK name still aligns the status word');
-  assert.ok(line1.startsWith('● 招商银行经典白金卡 (招商银行)'), line1);
-});
-
-test('renderCardEntry: color:true emits ANSI but strips to the plain layout', () => {
-  const colored = renderCardEntry(
-    { name: 'Sample', issuer: 'Bank', stateCode: 'not-in-db', matchedId: null },
-    { color: true, width: 40 },
-  );
+test('renderCardTable: color:true emits ANSI and strips to the plain layout', () => {
+  const colored = renderCardTable(ROWS, { color: true });
   assert.notEqual(stripAnsi(colored), colored, 'ANSI present when color:true');
-  const plain = renderCardEntry(
-    { name: 'Sample', issuer: 'Bank', stateCode: 'not-in-db', matchedId: null },
-    { color: false, width: 40 },
-  );
+  const plain = renderCardTable(ROWS, { color: false });
   assert.equal(stripAnsi(colored), plain, 'stripped colored output equals plain output');
 });

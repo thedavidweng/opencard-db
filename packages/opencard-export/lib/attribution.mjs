@@ -16,19 +16,10 @@ export function attributionLine(issuer) {
 }
 
 /**
- * Full attribution / copyright notice printed after an export and once as a
- * summary footer. Kept short; English-only.
- * @param {string|null|undefined} [issuer]
+ * Copyright notice printed once after an export (only when files were written).
+ * One line, gh-style restraint; SECURITY.md documents the takedown channel.
  * @returns {string}
  */
-export function attributionNotice(issuer) {
-  const line = attributionLine(issuer);
-  return [
-    'Attribution:',
-    '  • Card art remains the copyright of the issuing bank / network.',
-    '    Export is intended solely for contributing to OpenCard DB.',
-    '  • OpenCard DB operates a takedown channel (see SECURITY.md) for rights holders.',
-    '  • Suggested image.attribution:',
-    `      ${line}`,
-  ].join('\n');
+export function attributionNotice() {
+  return 'Card art remains the copyright of the issuing bank; export is only for contributing to OpenCard DB (takedown: SECURITY.md).';
 }

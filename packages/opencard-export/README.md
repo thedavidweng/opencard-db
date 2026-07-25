@@ -48,64 +48,49 @@ never shown and never exported — they're just counted in a one-line summary.
 ## What the report looks like
 
 ```text
-opencard-export v0.3.0
-OpenCard DB · github.com/thedavidweng/opencard-db
+NAME                 ISSUER            MATCH                        DATA  STATUS
+Sapphire Preferred   Chase             us-chase-sapphire-preferred  6/6   up to date
+Aurora Signature     Northwind         us-northwind-aurora          6/6   art wanted
+Gold Card            American Express  us-amex-gold                 5/6   art wanted
+My Local Card        Some CU           -                            -     not in database
 
-● Sapphire Preferred (Chase)                                    complete
-  → us-chase-sapphire-preferred · Fee ✓ APR ✓ FX ✓ Rewards ✓ Bonus ✓ Art graduated
-● Aurora Signature (Northwind)                                  complete
-  → us-northwind-aurora · Fee ✓ APR ✓ FX ✓ Rewards ✓ Bonus ✓ Art new-design?
-● Borealis Platinum (Northwind)                                 complete
-  → us-northwind-borealis · Fee ✓ APR ✗ FX ✓ Rewards ✓ Bonus ✓ Art upgradeable
-● Gold Card (American Express)                                  missing art
-  → us-amex-gold · Fee ✓ APR ✗ FX ✓ Rewards ✓ Bonus ✓ Art ✗
-● My Local Credit Union (Some CU)                               not in DB
-  → not in OpenCard DB yet
-
-5 payment cards · 1 graduated · 1 new-design? · 1 upgradeable · 1 missing art · 1 not in DB
+4 payment cards: 2 art wanted, 1 not in database, 1 up to date
 Ignored 32 non-payment passes (loyalty cards, tickets, boarding passes).
 
-Next steps:
-  • Upgradeable — your Apple Pay export beats the current issuer-site art.
-    Run npx opencard-export --export and open a PR.
-  • New design? — your export differs from the DB's Apple Pay art; banks refresh designs.
-    Submit if your card looks newer (or if it's an @3x variant, maintainers
-    can add it to alternate_sha256).
-  • Missing art — run npx opencard-export --export, then add images/<card-id>.png in a PR
-    (CI converts it to lossless WebP).
-  • Not in OpenCard DB — open the Request-a-card form:
-    https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml
+To contribute card art (2 cards), run: npx opencard-export --export
+To request a missing card: https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml
 ```
 
-Each payment card is two lines:
+Columns:
 
-- **Line 1** — a colored status dot, the card name, its issuer, and a status word
-  (`complete` when the DB has a card face, `missing art`, or `not in DB`).
-- **Line 2** — the matched Card Id and per-field completeness (`Fee`, `APR`, `FX`,
-  `Rewards`, `Bonus`), each marked `✓` (populated) or `✗` (missing), followed by
-  the **art tier** — the tool's verdict on your local Apple Pay face versus the
-  DB's, decided by comparing sha256 hashes:
-  - **`Art graduated`** (green) — the DB already has this exact Apple Pay art.
-    Nothing to do.
-  - **`Art new-design?`** (cyan) — the DB's art is Apple Pay but a different hash.
-    Banks refresh designs; submit if yours looks newer, or it may just be an
-    `@3x` variant (maintainers can add it to `alternate_sha256`).
-  - **`Art upgradeable`** (yellow) — the DB's art came from the issuer site (or has
-    no provenance). Your lossless Apple Pay export beats it → `--export` and PR.
-  - **`Art ✗`** (dim) — the DB card has no face yet → `--export`, add
-    `images/<card-id>.png` via PR (CI converts it to lossless WebP).
+- **MATCH**: the OpenCard DB card id, or `-` when the card is not in the
+  database yet.
+- **DATA**: how many of the six core fields (fee, APR, FX, rewards, bonus,
+  art) the DB card has filled in.
+- **STATUS**: what your wallet card means for the database. Three states:
+  - **`not in database`** (red): no entry exists for this card. You can
+    contribute a whole new card, or open the
+    [Request-a-card form](https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml).
+  - **`art wanted`** (yellow): the card is in the database, but this Apple Pay
+    card face is not. Maybe the entry has no art, maybe it only has issuer-site
+    art, maybe the design changed; either way `--export` and a PR would add
+    something new.
+  - **`up to date`** (green): the database already has this card and this
+    exact art (matched by sha256 against the card's whole art lineage).
+    Contributing again would be a duplicate.
 
-  Unmatched cards show `→ not in OpenCard DB yet` — open the
-  [Request-a-card form](https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml)
-  or contribute a full card PR.
+  The finer detail behind `art wanted` is in `--json`: `db_art` says what the
+  database currently holds (`apple-pay`, `issuer`, or `none`, the same
+  vocabulary as the exports' `art_grade`) and `same_art` says whether your
+  export is already in the lineage.
 
-## The graduation loop
+## How card art improves
 
-Card art in OpenCard DB "graduates" from lower-grade issuer-site scrapes to the
-lossless Apple Pay face. The loop:
+OpenCard DB prefers the lossless Apple Pay card face over issuer-site scrapes.
+The loop:
 
-1. **Scan** — run `npx opencard-export`; each matched card is hashed and placed on
-   the art ladder (graduated → new-design? → upgradeable → missing).
+1. **Scan** — run `npx opencard-export`; each matched card's face is hashed and
+   compared against the database's art lineage.
 2. **Export + provenance** — run `--export`. Alongside `<card-id>.png` the tool
    prints the sha256 and a paste-ready provenance block:
 
@@ -128,7 +113,7 @@ lossless Apple Pay face. The loop:
    `converted_sha256`), and superseded designs move to `images/archive/…` and are
    appended to `image.history[]` so grandfathered card faces stay addressable.
 
-The next contributor's scan then reports the card as `graduated`, because their
+The next contributor's scan then reports the card as `up to date`, because their
 export's sha256 is now in the DB's known lineage
 (`source_sha256` + `alternate_sha256[]` + every `history[].source_sha256`).
 
@@ -164,8 +149,8 @@ Non-payment passes (loyalty cards, boarding passes, event tickets, store cards) 
 - Runs entirely on your machine. There is no network call except an optional,
   read-only fetch of the public OpenCard DB export for comparison.
 - Never reads, stores, logs, or transmits PANs, tokens, or personal values. A card's
-  last-4 suffix (if Wallet exposes one) is used **on screen only** and is never
-  written to any file or the `--json` output.
+  last-4 suffix (if Wallet exposes one) stays local and is never written to any
+  file or the `--json` output.
 
 ## License
 

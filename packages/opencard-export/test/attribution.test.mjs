@@ -15,15 +15,15 @@ test('attributionLine falls back to "Issuer" when missing', () => {
   assert.equal(attributionLine(undefined), '© Issuer (Apple Pay digital card art)');
 });
 
-test('attributionNotice mentions copyright, takedown, and the suggested line', () => {
-  const notice = attributionNotice('Sample Bank');
+test('attributionNotice is one line mentioning copyright and the takedown channel', () => {
+  const notice = attributionNotice();
   assert.match(notice, /copyright of the issuing bank/i);
   assert.match(notice, /takedown/i);
   assert.match(notice, /SECURITY\.md/);
-  assert.match(notice, /© Sample Bank \(Apple Pay digital card art\)/);
+  assert.ok(!notice.includes('\n'), 'single line');
 });
 
 test('attributionNotice is English-only (no CJK)', () => {
-  const notice = attributionNotice('Sample Bank');
+  const notice = attributionNotice();
   assert.ok(!/[一-鿿]/.test(notice), 'notice must not contain CJK characters');
 });

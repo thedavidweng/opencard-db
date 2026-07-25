@@ -1,6 +1,7 @@
-// render.mjs — dot-list rendering primitives for a dark-terminal, one-shot CLI
-// (tokscale-style). No dependencies. Handles CJK double-width glyphs so card
-// names stay aligned, and honors NO_COLOR / a color=false flag.
+// render.mjs — table rendering for a one-shot CLI, modeled on gh's output
+// discipline: aligned columns, one colored status column, dim metadata, no
+// banners. No dependencies. Handles CJK double-width glyphs so card names stay
+// aligned, and honors NO_COLOR / a color=false flag.
 
 const ANSI = {
   reset: '\x1b[0m',
@@ -88,7 +89,7 @@ export function truncate(s, max) {
 
 /**
  * The six core fields whose presence defines a DB card's completeness, in the
- * fixed display order used by the dot-list. `label` is the short mark label.
+ * fixed display order used by the DATA meter. `label` is the short mark label.
  * @param {object|null} card
  * @returns {Array<{key:string,label:string,ok:boolean}>}
  */
@@ -141,94 +142,90 @@ export function completenessFields(card) {
 }
 
 /**
- * Populated-field completeness meter for a matched DB card. Counts how many of
- * the six core fields carry real data.
+ * Populated-field completeness for a matched DB card. Counts how many of the
+ * six core fields carry real data.
  * @param {object|null} card
- * @returns {{filled:number, total:number, bar:string, text:string,
+ * @returns {{filled:number, total:number, text:string,
  *            fields:Array<{key:string,label:string,ok:boolean}>}}
  */
 export function completenessMeter(card) {
   const fields = completenessFields(card);
   const filled = fields.filter((f) => f.ok).length;
   const total = fields.length;
-  const bar = '▮'.repeat(filled) + '▯'.repeat(total - filled);
-  return { filled, total, bar, text: `${bar} ${filled}/${total}`, fields };
+  return { filled, total, text: `${filled}/${total}`, fields };
 }
 
 /**
- * Status presentation for a card's art/DB state. `code` is one of the three
- * imageState codes; each maps to a colored dot and a footer-style word.
+ * Presentation for the STATUS column: the three states a wallet card can be
+ * in relative to the database, in words an outsider understands. Only this
+ * column carries color.
+ *   not-in-database  the database has no entry for this card; a new card
+ *                    entry can be contributed
+ *   art-wanted       the card is in the database, but this Apple Pay export
+ *                    is not: a new or better card face can be contributed
+ *   up-to-date       the database already has this card and this exact art;
+ *                    contributing again would be a duplicate
  */
-export const STATUS = {
-  'has-art': { color: ANSI.green, word: 'complete' },
-  'needs-art': { color: ANSI.yellow, word: 'missing art' },
-  'not-in-db': { color: ANSI.red, word: 'not in DB' },
+export const STATUS_LABELS = {
+  'not-in-database': { word: 'not in database', color: ANSI.red },
+  'art-wanted': { word: 'art wanted', color: ANSI.yellow },
+  'up-to-date': { word: 'up to date', color: ANSI.green },
 };
 
-/**
- * Presentation for the four art graduation tiers: the `mark` shown after the
- * `Art` label on line 2, its color, and the footer/summary `word`. See
- * lib/art.mjs and docs/schema-notes.md "Card art lineage & graduation".
- */
-export const ART_STATUS = {
-  graduated: { mark: 'graduated', color: ANSI.green, word: 'graduated' },
-  'new-design': { mark: 'new-design?', color: ANSI.cyan, word: 'new-design?' },
-  upgradeable: { mark: 'upgradeable', color: ANSI.yellow, word: 'upgradeable' },
-  missing: { mark: '✗', color: ANSI.dim, word: 'missing art' },
-};
+const HEADERS = ['NAME', 'ISSUER', 'MATCH', 'DATA', 'STATUS'];
+const CAPS = [32, 22, 40, 4, 15];
+const GUTTER = '  ';
 
 /**
- * Render one payment card as two dot-list lines.
- *   line 1: <dot> <bold name> <dim (issuer)>            <status word>  (right-aligned)
- *   line 2: dimmed, indented → matched id · per-field ✓/✗  (or "not in OpenCard DB yet")
- * Returns the two lines joined by "\n". Apply no external color — coloring is
- * driven by `opts.color`.
+ * Render wallet cards as one aligned table (gh-style: dim uppercase header,
+ * two-space gutters, colored STATUS column, unmatched rows dimmed).
  *
- * When `entry.artStatus` is one of the ART_STATUS tier codes, the `Art` field's
- * mark becomes the colored tier label (`graduated` / `new-design?` /
- * `upgradeable` / `✗`); otherwise it falls back to the binary `✓/✗`.
- *
- * @param {{name:string, issuer?:string, stateCode:'has-art'|'needs-art'|'not-in-db',
- *          matchedId?:string|null, fields?:Array<{key?:string,label:string,ok:boolean}>,
- *          artStatus?:'graduated'|'new-design'|'upgradeable'|'missing'|null}} entry
- * @param {{color?:boolean, width?:number}} [opts]
- * @returns {string}
+ * @param {Array<{name:string, issuer?:string, matchedId?:string|null,
+ *          filled?:number|null, total?:number|null,
+ *          status?:'not-in-database'|'art-wanted'|'up-to-date'|null}>} entries
+ * @param {{color?:boolean}} [opts]
+ * @returns {string} newline-joined table
  */
-export function renderCardEntry(entry, opts = {}) {
+export function renderCardTable(entries, opts = {}) {
   const color = opts.color ?? colorEnabled();
-  const width = opts.width || 72;
   const c = (code, s) => (color ? code + s + ANSI.reset : s);
-  const st = STATUS[entry.stateCode] || STATUS['not-in-db'];
 
-  const dot = c(st.color, '●');
-  const name = c(ANSI.bold, truncate(entry.name, 40));
-  const issuer =
-    entry.issuer && String(entry.issuer).trim()
-      ? ' ' + c(ANSI.dim, `(${truncate(entry.issuer, 24)})`)
-      : '';
-  const left = `${dot} ${name}${issuer}`;
-  const word = c(st.color, st.word);
+  const cells = entries.map((e) => {
+    const matched = !!e.matchedId;
+    const status = e.status ? STATUS_LABELS[e.status] : null;
+    return {
+      matched,
+      status,
+      cols: [
+        truncate(e.name, CAPS[0]),
+        truncate(e.issuer || '', CAPS[1]),
+        matched ? truncate(e.matchedId, CAPS[2]) : '-',
+        matched && e.filled != null ? `${e.filled}/${e.total}` : '-',
+        status ? status.word : '-',
+      ],
+    };
+  });
 
-  const gap = Math.max(1, width - displayWidth(left) - displayWidth(st.word));
-  const line1 = left + ' '.repeat(gap) + word;
+  const widths = HEADERS.map((h, i) =>
+    Math.max(displayWidth(h), ...cells.map((r) => displayWidth(r.cols[i]))),
+  );
+  const pad = (s, i) =>
+    i === widths.length - 1 ? s : s + ' '.repeat(widths[i] - displayWidth(s));
 
-  let line2;
-  if (entry.matchedId) {
-    const art = entry.artStatus ? ART_STATUS[entry.artStatus] : null;
-    // Line 2 is dimmed overall; only the art tier mark carries a tier color, so
-    // stripAnsi() still yields the plain "  → id · Fee ✓ … Art <mark>" layout.
-    const marks = (entry.fields || []).map((f, i) => {
-      const sep = i === 0 ? '' : c(ANSI.dim, ' ');
-      if (art && f.key === 'image') {
-        return sep + c(ANSI.dim, `${f.label} `) + c(art.color, art.mark);
-      }
-      return sep + c(ANSI.dim, `${f.label} ${f.ok ? '✓' : '✗'}`);
-    });
-    line2 = c(ANSI.dim, `  → ${entry.matchedId} · `) + marks.join('');
-  } else {
-    line2 = c(ANSI.dim, '  → not in OpenCard DB yet');
+  const lines = [c(ANSI.dim, HEADERS.map(pad).join(GUTTER))];
+  for (const row of cells) {
+    const statusCell = row.status ? c(row.status.color, row.cols[4]) : row.cols[4];
+    if (!row.matched) {
+      // Dash DB columns, dimmed; the status word keeps its color so the
+      // "you could add this card" state stays visible.
+      const plain = c(ANSI.dim, row.cols.slice(0, 4).map(pad).join(GUTTER));
+      lines.push(plain + GUTTER + statusCell);
+      continue;
+    }
+    const plain = row.cols.slice(0, 4).map(pad).join(GUTTER);
+    lines.push(plain + GUTTER + statusCell);
   }
-  return line1 + '\n' + line2;
+  return lines.join('\n');
 }
 
 export { ANSI };

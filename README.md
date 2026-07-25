@@ -92,13 +92,13 @@ Every exported card carries a derived `art_grade` describing the quality of its 
 
 | Grade | Meaning |
 |-------|---------|
-| `apple-pay` | Graduated art: a committed local face with Apple Pay provenance and SHA lineage. The highest grade. |
+| `apple-pay` | A committed local card face with Apple Pay provenance and SHA lineage. The highest grade. |
 | `issuer` | Official issuer-site artwork without Apple Pay provenance. |
 | `none` | No card face. Consumers fall back to the placeholder. |
 
 Catalog-wide counts live in [`exports/meta.json`](exports/meta.json) under `art_grades`. The lineage model is documented in [`docs/schema-notes.md`](docs/schema-notes.md#card-art-lineage--graduation-2026-07).
 
-On a Mac with your cards in Apple Pay, [`npx opencard-export`](packages/opencard-export) scans your Wallet, compares it against the live database, and helps you open a PR with graduated card art. Everything runs locally and nothing is uploaded.
+On a Mac with your cards in Apple Pay, [`npx opencard-export`](packages/opencard-export) scans your Wallet, compares it against the live database, and helps you open a PR with Apple Pay card art. Everything runs locally and nothing is uploaded.
 
 ## Contributing
 

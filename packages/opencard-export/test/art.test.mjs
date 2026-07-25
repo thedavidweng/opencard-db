@@ -10,7 +10,7 @@ import {
   sha256,
   parsePngDimensions,
   knownShaSet,
-  artStatus,
+  artFacts,
   buildProvenanceBlock,
   provenanceSnippet,
   today,
@@ -89,50 +89,56 @@ test('knownShaSet is empty for a card with no art / no provenance', () => {
   assert.equal(knownShaSet({ image: { url: 'https://e/x.png' } }).size, 0);
 });
 
-test('artStatus: graduated when the local sha is anywhere in the lineage', () => {
+test('artFacts: sameArt when the local sha is anywhere in the lineage', () => {
   const local = HEX('local');
   // exact provenance source match
-  assert.equal(
-    artStatus({ image: { local_path: 'x', provenance: { source: 'apple-pay', source_sha256: local } } }, local),
-    'graduated',
+  assert.deepEqual(
+    artFacts({ image: { local_path: 'x', provenance: { source: 'apple-pay', source_sha256: local } } }, local),
+    { dbArt: 'apple-pay', sameArt: true },
   );
   // alternate_sha256 match
   assert.equal(
-    artStatus(
+    artFacts(
       { image: { local_path: 'x', provenance: { source: 'apple-pay', source_sha256: HEX('other'), alternate_sha256: [local] } } },
       local,
-    ),
-    'graduated',
+    ).sameArt,
+    true,
   );
-  // history match
-  assert.equal(
-    artStatus(
+  // history match (current art is issuer-site, the sha lives in history)
+  assert.deepEqual(
+    artFacts(
       { image: { local_path: 'x', provenance: { source: 'issuer-site', source_sha256: HEX('o') }, history: [{ local_path: 'images/archive/x.webp', source: 'apple-pay', source_sha256: local }] } },
       local,
     ),
-    'graduated',
+    { dbArt: 'issuer', sameArt: true },
   );
 });
 
-test('artStatus: new-design when DB art is apple-pay but the sha differs', () => {
+test('artFacts: apple-pay art with a different sha is not sameArt', () => {
   const card = {
     image: { local_path: 'x', provenance: { source: 'apple-pay', source_sha256: HEX('db') } },
   };
-  assert.equal(artStatus(card, HEX('mine')), 'new-design');
+  assert.deepEqual(artFacts(card, HEX('mine')), { dbArt: 'apple-pay', sameArt: false });
 });
 
-test('artStatus: upgradeable when DB art is issuer-site or has no provenance', () => {
-  assert.equal(
-    artStatus({ image: { local_path: 'x', provenance: { source: 'issuer-site', source_sha256: HEX('db') } } }, HEX('mine')),
-    'upgradeable',
+test('artFacts: issuer-site or provenance-less art reports dbArt issuer', () => {
+  assert.deepEqual(
+    artFacts({ image: { local_path: 'x', provenance: { source: 'issuer-site', source_sha256: HEX('db') } } }, HEX('mine')),
+    { dbArt: 'issuer', sameArt: false },
   );
-  assert.equal(artStatus({ image: { url: 'https://e/x.png' } }, HEX('mine')), 'upgradeable');
+  assert.deepEqual(artFacts({ image: { url: 'https://e/x.png' } }, HEX('mine')), {
+    dbArt: 'issuer',
+    sameArt: false,
+  });
 });
 
-test('artStatus: missing when the DB card has no art', () => {
-  assert.equal(artStatus({ image: null }, HEX('mine')), 'missing');
-  assert.equal(artStatus({}, HEX('mine')), 'missing');
-  assert.equal(artStatus({ image: { url: null, local_path: null } }, HEX('mine')), 'missing');
+test('artFacts: no art reports dbArt none', () => {
+  assert.deepEqual(artFacts({ image: null }, HEX('mine')), { dbArt: 'none', sameArt: false });
+  assert.deepEqual(artFacts({}, HEX('mine')), { dbArt: 'none', sameArt: false });
+  assert.deepEqual(artFacts({ image: { url: null, local_path: null } }, HEX('mine')), {
+    dbArt: 'none',
+    sameArt: false,
+  });
 });
 
 test('buildProvenanceBlock has the schema field order and omits null dims', () => {

@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { scanCards, defaultCardsDir } from '../lib/passes.mjs';
 import { matchCard } from '../lib/match.mjs';
 import {
-  renderCardEntry,
+  renderCardTable,
   completenessMeter,
   colorEnabled,
   ANSI,
@@ -21,7 +21,7 @@ import { attributionLine, attributionNotice } from '../lib/attribution.mjs';
 import {
   sha256,
   parsePngDimensions,
-  artStatus,
+  artFacts,
   buildProvenanceBlock,
   provenanceSnippet,
   today,
@@ -29,7 +29,6 @@ import {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const REPO_SLUG = 'github.com/thedavidweng/opencard-db';
 const DB_URLS = [
   // raw.githubusercontent first: ~5-minute cache, so freshly-merged data
   // (renames, new art) is visible quickly; jsDelivr (~12h edge cache) is the
@@ -115,29 +114,27 @@ function parseArgs(argv) {
 
 // ── help / version ────────────────────────────────────────────────────────
 function printHelp() {
-  const v = readVersion();
   process.stdout.write(
-    `opencard-export v${v}
-Contribute Apple Pay card art to OpenCard DB.
+    `Scan Apple Wallet payment cards and contribute card art to OpenCard DB.
 
-Usage:
-  npx opencard-export [options]
-  bunx opencard-export [options]
+USAGE
+  npx opencard-export [flags]
 
-Default: scan Wallet payment cards and compare with the live DB (no files written).
+The default run scans Wallet, compares against the live database, and writes
+nothing.
 
-Options:
-  --export [dir]   export card art to dir (default ./, or images/ in a repo checkout)
-  --json           machine-readable output (no ANSI)
-  --no-remote      skip the live DB comparison (offline)
-  --repo <path>    an OpenCard DB checkout; export writes straight into its images/
-  --passes-dir <p> override the Wallet directory (advanced / testing)
-  --no-color       disable color (also respects NO_COLOR)
-  -h, --help       show this help
-  -v, --version    show version
+FLAGS
+  --export [dir]    write card art PNGs (default: images/ in a checkout, else .)
+  --repo <path>     an OpenCard DB checkout; also writes provenance into card JSON
+  --json            machine-readable output
+  --no-remote       skip the database comparison
+  --passes-dir <p>  override the Wallet passes directory
+  --no-color        disable color (NO_COLOR is also honored)
+  -h, --help        show help
+  -v, --version     show version
 
-Privacy: everything runs locally, nothing is uploaded; no PANs or tokens are read.
-Card art remains the issuing bank's copyright (see SECURITY.md).
+Runs locally and uploads nothing; reads card names and art only, never card
+numbers or tokens.
 `,
   );
 }
@@ -162,34 +159,25 @@ function terminalAppName(env = process.env) {
   }
 }
 
-function printFdaGuide(env = process.env, extraEnoentNote = false) {
+function printFdaGuide(env = process.env) {
   const app = terminalAppName(env);
   const color = colorEnabled(env);
   const b = (s) => (color ? ANSI.bold + s + ANSI.reset : s);
-  const y = (s) => (color ? ANSI.yellow + s + ANSI.reset : s);
   const dim = (s) => (color ? ANSI.dim + s + ANSI.reset : s);
   const lines = [
+    'error: cannot read Apple Wallet passes (~/Library/Passes)',
     '',
-    y('⚠  Cannot read your Apple Wallet cards.'),
+    `${b(app)} needs macOS Full Disk Access to read Wallet data:`,
     '',
-    `   ${b(app)} needs macOS "Full Disk Access" to read ~/Library/Passes/.`,
+    '  1. Open System Settings > Privacy & Security > Full Disk Access',
+    `  2. Add ${b(app)}, or turn its existing toggle on`,
+    `  3. Quit ${b(app)} fully (Cmd+Q) and reopen it`,
+    `  4. Run ${b('npx opencard-export')} again`,
     '',
-    b('   Step by step:'),
-    '   1. Open  System Settings',
-    '        > Privacy & Security',
-    '        > Full Disk Access',
-    `   2. Click "+" and add ${b(app)}`,
-    '        (if it is already listed, turn its toggle ON)',
-    `   3. Fully QUIT and reopen ${b(app)} (Cmd+Q — not just closing the window)`,
-    '   4. Re-run:  ' + b('npx opencard-export'),
+    dim('Everything runs locally; nothing is uploaded.'),
     '',
-    dim('   This tool only reads locally and uploads nothing.'),
   ];
-  if (extraEnoentNote) {
-    lines.push('', y('   Or: no Wallet passes exist yet on this Mac.'));
-  }
-  lines.push('');
-  process.stderr.write(lines.join('\n') + '\n');
+  process.stderr.write(lines.join('\n'));
 }
 
 // ── transient progress ("spinner") ───────────────────────────────────────────
@@ -283,14 +271,6 @@ async function isOpencardRepo(dir) {
   }
 }
 
-/** One of 'has-art' | 'needs-art' | 'not-in-db'. */
-function imageStateCode(match) {
-  if (!match) return 'not-in-db';
-  const img = match.card.image;
-  if (img && (img.url || img.local_path)) return 'has-art';
-  return 'needs-art';
-}
-
 function plural(n, singular, pluralForm) {
   return n === 1 ? singular : pluralForm;
 }
@@ -354,10 +334,6 @@ async function main() {
   if (args.color === false) process.env.NO_COLOR = process.env.NO_COLOR || '1';
   const color = args.color === false ? false : colorEnabled();
   const c = (code, s) => (color ? code + s + ANSI.reset : s);
-  const width =
-    process.stdout.isTTY && process.stdout.columns
-      ? Math.min(process.stdout.columns, 100)
-      : 72;
 
   if (args.help) {
     printHelp();
@@ -371,16 +347,10 @@ async function main() {
   // macOS-only guard (skipped when a passes dir is supplied for testing).
   if (process.platform !== 'darwin' && !args.passesDir) {
     process.stderr.write(
-      'opencard-export is macOS-only — Apple Wallet stores cards locally on a Mac.\n' +
+      'opencard-export is macOS-only: Apple Wallet stores cards locally on a Mac.\n' +
         `(detected platform: ${process.platform})\n`,
     );
     return 1;
-  }
-
-  // Header (single source of truth for the version: package.json).
-  if (!args.json) {
-    process.stdout.write('\n' + c(ANSI.bold, `opencard-export v${readVersion()}`) + '\n');
-    process.stdout.write(c(ANSI.dim, `OpenCard DB · ${REPO_SLUG}`) + '\n\n');
   }
 
   const passesDir = args.passesDir || defaultCardsDir();
@@ -453,7 +423,8 @@ async function main() {
 
   // Match payment cards to DB. For every card with an extractable art asset we
   // also hash the local Apple Pay PNG (and read its dimensions) so we can place
-  // matched cards on the graduation ladder and, on --export, emit provenance.
+  // tell whether the database already has each matched card's art and, on
+  // --export, emit provenance.
   const rows = [];
   for (const p of payment) {
     let localSha = null;
@@ -468,10 +439,20 @@ async function main() {
       }
     }
     const match = db ? matchCard({ name: p.name, issuer: p.issuer }, db.cards) : null;
-    const stateCode = imageStateCode(match);
     const meter = match ? completenessMeter(match.card) : null;
-    const art = match ? artStatus(match.card, localSha) : null;
-    rows.push({ rec: p, match, stateCode, meter, localSha, pngDims, art });
+    const art = match ? artFacts(match.card, localSha) : null;
+    // The three states an outsider needs: the database has no entry for this
+    // card, it has the entry but not this card face, or it has both. Null when
+    // the database was not consulted (offline / --no-remote): unknown, not
+    // "not in database".
+    const status = !db
+      ? null
+      : !match
+        ? 'not-in-database'
+        : art && art.sameArt
+          ? 'up-to-date'
+          : 'art-wanted';
+    rows.push({ rec: p, match, status, meter, localSha, pngDims, art });
   }
 
   // ── export ────────────────────────────────────────────────────────────
@@ -527,6 +508,7 @@ async function main() {
           dest,
           exported: true,
           matchedId: match ? match.card.id : null,
+          sameArt: !!(row.art && row.art.sameArt),
           localSha: row.localSha,
           provenance,
         };
@@ -534,7 +516,10 @@ async function main() {
         // card's JSON (surgical: only image.provenance, plus image.local_path
         // when absent so the card stays validation-coherent — provenance
         // describes a committed art file). Refuse if the card JSON is missing.
-        if (repoRoot && match && provenance) {
+        // Skipped when the database already carries this exact art: rewriting
+        // identical provenance contributes nothing and could clobber an
+        // alternate-sha anchor.
+        if (repoRoot && match && provenance && !(row.art && row.art.sameArt)) {
           try {
             result.repoWrite = await writeProvenanceToRepo(
               repoRoot,
@@ -566,8 +551,9 @@ async function main() {
         exportable: r.rec.exportable,
         matchedId: r.match ? r.match.card.id : null,
         matchScore: r.match ? Number(r.match.score.toFixed(3)) : null,
-        imageState: r.stateCode,
-        art_status: r.art,
+        status: r.status,
+        db_art: r.art ? r.art.dbArt : null,
+        same_art: r.art ? r.art.sameArt : null,
         local_sha256: r.localSha,
         completeness: r.meter
           ? {
@@ -583,12 +569,9 @@ async function main() {
         totalPasses: records.length,
         paymentCards: payment.length,
         matched: rows.filter((r) => r.match).length,
-        complete: rows.filter((r) => r.stateCode === 'has-art').length,
-        missingArt: rows.filter((r) => r.stateCode === 'needs-art').length,
-        notInDb: rows.filter((r) => r.stateCode === 'not-in-db').length,
-        graduated: rows.filter((r) => r.art === 'graduated').length,
-        newDesign: rows.filter((r) => r.art === 'new-design').length,
-        upgradeable: rows.filter((r) => r.art === 'upgradeable').length,
+        upToDate: rows.filter((r) => r.status === 'up-to-date').length,
+        artWanted: rows.filter((r) => r.status === 'art-wanted').length,
+        notInDb: rows.filter((r) => r.status === 'not-in-database').length,
         exportable: payment.filter((p) => p.exportable).length,
       },
       remote: { note: remoteNote, source: db ? db.source : null },
@@ -612,188 +595,144 @@ async function main() {
       : null;
 
   if (payment.length === 0) {
-    process.stdout.write('No Apple Pay payment cards found in Wallet.\n');
+    process.stdout.write('No Apple Pay payment cards in Wallet.\n');
     if (ignoredLine) process.stdout.write(ignoredLine + '\n');
     process.stdout.write(
-      c(
-        ANSI.dim,
-        'opencard-export contributes Apple Pay card art to OpenCard DB — add a card to\n' +
-          'Apple Pay and re-run to help fill in a card face.',
-      ) + '\n',
+      c(ANSI.dim, 'Add a card to Apple Pay and rerun to contribute its art to OpenCard DB.') +
+        '\n',
     );
-    process.stdout.write('\n' + c(ANSI.dim, attributionNotice()) + '\n');
     return 0;
   }
 
-  // ── human output: dot list ────────────────────────────────────────────────
-  for (const r of rows) {
-    process.stdout.write(
-      renderCardEntry(
-        {
-          name: r.rec.name,
-          issuer: r.rec.issuer,
-          stateCode: r.stateCode,
-          matchedId: r.match ? r.match.card.id : null,
-          fields: r.meter ? r.meter.fields : null,
-          artStatus: r.art,
-        },
-        { color, width },
-      ) + '\n',
-    );
-  }
+  // ── human output: table ─────────────────────────────────────────────────
+  process.stdout.write(
+    renderCardTable(
+      rows.map((r) => ({
+        name: r.rec.name,
+        issuer: r.rec.issuer,
+        matchedId: r.match ? r.match.card.id : null,
+        filled: r.meter ? r.meter.filled : null,
+        total: r.meter ? r.meter.total : null,
+        status: r.status,
+      })),
+      { color },
+    ) + '\n',
+  );
 
-  // ── summary (footer-style, colored segments) ───────────────────────────────
-  // The old binary "complete" splits into the three graduation tiers.
-  const nGraduated = rows.filter((r) => r.art === 'graduated').length;
-  const nNewDesign = rows.filter((r) => r.art === 'new-design').length;
-  const nUpgradeable = rows.filter((r) => r.art === 'upgradeable').length;
-  const nMissing = rows.filter((r) => r.stateCode === 'needs-art').length;
-  const nNotInDb = rows.filter((r) => r.stateCode === 'not-in-db').length;
-  const sep = c(ANSI.dim, ' · ');
-  const summary = [
-    c(ANSI.bold, `${payment.length} payment ${plural(payment.length, 'card', 'cards')}`),
-    c(ANSI.green, `${nGraduated} graduated`),
-    c(ANSI.cyan, `${nNewDesign} new-design?`),
-    c(ANSI.yellow, `${nUpgradeable} upgradeable`),
-    c(ANSI.yellow, `${nMissing} missing art`),
-    c(ANSI.red, `${nNotInDb} not in DB`),
-  ].join(sep);
-  process.stdout.write('\n' + summary + '\n');
+  // ── summary ───────────────────────────────────────────────────────────────
+  const nUpToDate = rows.filter((r) => r.status === 'up-to-date').length;
+  const nArtWanted = rows.filter((r) => r.status === 'art-wanted').length;
+  const nNotInDb = rows.filter((r) => r.status === 'not-in-database').length;
+  const counts = [];
+  if (nArtWanted) counts.push(`${nArtWanted} art wanted`);
+  if (nNotInDb) counts.push(`${nNotInDb} not in database`);
+  if (nUpToDate) counts.push(`${nUpToDate} up to date`);
+  const head = `${payment.length} payment ${plural(payment.length, 'card', 'cards')}`;
+  process.stdout.write(
+    '\n' + head + (counts.length && db ? `: ${counts.join(', ')}` : '') + '\n',
+  );
   if (ignoredLine) process.stdout.write(ignoredLine + '\n');
 
-  // ── next steps ──────────────────────────────────────────────────────────
-  const hasNeedsArt = nMissing > 0;
-  const hasNotInDb = nNotInDb > 0;
-  const hasNewDesign = nNewDesign > 0;
-  const hasUpgradeable = nUpgradeable > 0;
-  process.stdout.write('\n' + c(ANSI.bold, 'Next steps:') + '\n');
-
   if (remoteNote === 'offline') {
-    process.stdout.write(
-      c(ANSI.yellow, '  • Offline: DB comparison was skipped. Re-run when connected.') + '\n',
+    process.stderr.write(
+      'note: OpenCard DB unreachable; match columns unavailable\n',
     );
   } else if (remoteNote === 'skipped') {
-    process.stdout.write(
-      c(ANSI.dim, '  • DB comparison skipped via --no-remote.') + '\n',
-    );
+    process.stderr.write('note: database comparison skipped (--no-remote)\n');
   }
 
-  if (hasUpgradeable) {
-    process.stdout.write(
-      c(ANSI.yellow, '  • Upgradeable') +
-        ' — your Apple Pay export beats the current issuer-site art.\n' +
-        c(ANSI.dim, '    Run ') +
-        c(ANSI.bold, 'npx opencard-export --export') +
-        c(ANSI.dim, ' and open a PR.') +
-        '\n',
-    );
-  }
-  if (hasNewDesign) {
-    process.stdout.write(
-      c(ANSI.cyan, '  • New design?') +
-        " — your export differs from the DB's Apple Pay art; banks refresh designs.\n" +
-        c(
-          ANSI.dim,
-          "    Submit if your card looks newer (or if it's an @3x variant, maintainers\n" +
-            '    can add it to alternate_sha256).',
-        ) +
-        '\n',
-    );
-  }
-  if (hasNeedsArt) {
-    process.stdout.write(
-      c(ANSI.yellow, '  • Missing art') +
-        ' — run ' +
-        c(ANSI.bold, 'npx opencard-export --export') +
-        ', then add ' +
-        c(ANSI.cyan, 'images/<card-id>.png') +
-        ' in a PR\n' +
-        c(ANSI.dim, '    (CI converts it to lossless WebP).') +
-        '\n',
-    );
-  }
-  if (hasNotInDb) {
-    process.stdout.write(
-      c(ANSI.red, '  • Not in OpenCard DB') +
-        ' — open the Request-a-card form:\n' +
-        '    ' +
-        c(ANSI.cyan, ISSUE_FORM_URL) +
-        '\n',
-    );
-  }
-  if (remoteNote == null && !hasNeedsArt && !hasNotInDb && !hasNewDesign && !hasUpgradeable) {
-    process.stdout.write(
-      c(ANSI.green, '  • All matched cards are graduated — nothing to contribute right now. Thanks for checking!') +
-        '\n',
-    );
+  // ── hints (only when actionable, never on offline runs where match state
+  //    is unknown, and not while already exporting) ──────────────────────────
+  if (!args.export && db) {
+    const nExportable = rows.filter(
+      (r) => r.rec.exportable && r.status === 'art-wanted',
+    ).length;
+    const hints = [];
+    if (nExportable > 0) {
+      hints.push(
+        `To contribute card art (${nExportable} ${plural(nExportable, 'card', 'cards')}), run: npx opencard-export --export`,
+      );
+    }
+    if (nNotInDb > 0) {
+      hints.push(`To request a missing card: ${ISSUE_FORM_URL}`);
+    }
+    if (hints.length) {
+      process.stdout.write(
+        '\n' + hints.map((h) => c(ANSI.dim, h)).join('\n') + '\n',
+      );
+    }
   }
 
   // ── export results (printed after the report) ─────────────────────────────
   if (args.export) {
     process.stdout.write('\n');
     for (const r of exportResults) {
-      if (r.exported) {
+      if (!r.exported) {
+        process.stdout.write(c(ANSI.dim, `- skipped ${r.name}: ${r.reason}`) + '\n');
+        continue;
+      }
+      process.stdout.write(c(ANSI.green, '✓') + ` ${path.basename(r.dest)}` + '\n');
+      if (r.sameArt) {
         process.stdout.write(
-          c(ANSI.bold, `Exported: ${path.basename(r.dest)}`) +
-            '\n' +
-            c(ANSI.dim, `  → ${r.dest}`) +
-            '\n' +
-            c(ANSI.dim, `  ${attributionLine(r.issuer)}`) +
+          c(ANSI.dim, '  the database already has this exact art; nothing new to contribute') + '\n',
+        );
+        continue;
+      }
+      if (db && !r.matchedId) {
+        process.stdout.write(
+          c(ANSI.dim, `  not in the database; request the card first: ${ISSUE_FORM_URL}`) +
             '\n',
+        );
+      }
+      if (r.repoWrite) {
+        if (r.repoWrite.written) {
+          process.stdout.write(
+            c(ANSI.dim, `  provenance written to ${r.repoWrite.path}`) + '\n',
+          );
+        } else {
+          process.stdout.write(
+            c(ANSI.yellow, `  provenance not written: ${r.repoWrite.reason}`) + '\n',
+          );
+        }
+      } else {
+        // No checkout to write into: print what a PR needs, paste-ready.
+        process.stdout.write(
+          c(ANSI.dim, `  attribution: ${attributionLine(r.issuer)}`) + '\n',
         );
         if (r.localSha) {
           process.stdout.write(c(ANSI.dim, `  sha256: ${r.localSha}`) + '\n');
         }
-        // Paste-ready provenance block for a matched card.
         if (r.provenance) {
           const snippet = provenanceSnippet(r.provenance)
             .split('\n')
             .map((l) => '    ' + l)
             .join('\n');
           process.stdout.write(
-            c(ANSI.dim, '  Paste into the card\'s "image" object:') +
+            c(ANSI.dim, '  paste into the card\'s "image" object:') +
               '\n' +
-              c(ANSI.cyan, snippet) +
+              c(ANSI.dim, snippet) +
               '\n',
           );
         }
-        // --repo write outcome.
-        if (r.repoWrite) {
-          if (r.repoWrite.written) {
-            process.stdout.write(
-              c(ANSI.green, `  ✓ wrote image.provenance into ${path.basename(r.repoWrite.path)}`) +
-                '\n',
-            );
-          } else {
-            process.stdout.write(
-              c(ANSI.yellow, `  ⚠ provenance not written: ${r.repoWrite.reason}`) + '\n',
-            );
-          }
-        }
-      } else {
-        process.stdout.write(c(ANSI.dim, `Skipped: ${r.name} — ${r.reason}`) + '\n');
       }
     }
-    const intoImages = exportResults.some(
-      (r) => r.exported && path.basename(path.dirname(r.dest)) === 'images',
-    );
-    const wroteProvenance = exportResults.some((r) => r.repoWrite && r.repoWrite.written);
-    if (intoImages) {
-      const next = wroteProvenance
-        ? 'Next: review the image.provenance blocks written above, then open a PR (CI verifies the sha chain and converts to lossless WebP).'
-        : "Next: set each card's image.local_path (CI converts to lossless WebP) and open a PR.";
-      process.stdout.write(
-        '\n' +
-          c(ANSI.dim, 'Detected an OpenCard DB checkout — wrote into images/.') +
-          '\n' +
-          c(ANSI.dim, next) +
-          '\n',
-      );
-    }
-  }
 
-  // Attribution footer (always, once; English, dimmed).
-  process.stdout.write('\n' + c(ANSI.dim, attributionNotice()) + '\n');
+    const nExported = exportResults.filter((r) => r.exported).length;
+    const destDir = exportResults.find((r) => r.exported)?.dest;
+    const summaryBits = [
+      `Exported ${nExported} ${plural(nExported, 'file', 'files')}` +
+        (destDir ? ` to ${path.dirname(destDir)}` : ''),
+    ];
+    if (nExported > 0) {
+      summaryBits.push(
+        'Next: open a PR; CI verifies the sha chain and converts the PNG to lossless WebP.',
+      );
+      summaryBits.push(attributionNotice());
+    }
+    process.stdout.write(
+      '\n' + summaryBits.map((l) => c(ANSI.dim, l)).join('\n') + '\n',
+    );
+  }
 
   return 0;
 }
