@@ -1,0 +1,53 @@
+name: Refresh exports
+
+# Regenerates the committed exports/ directory whenever the source data, schema,
+# or build scripts change on main, and commits the result back so the
+# jsDelivr-servable @main files stay in sync. Tag-pinned production URLs are cut
+# by the release workflow; this keeps the preview (@main) path fresh.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "schema.json"
+      - "scripts/**"
+
+# Serialize with itself so back-to-back merges don't race on the push.
+concurrency:
+  group: exports-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # Loop guard: the commit this job pushes only touches exports/, which is in
+    # the paths filter above and would retrigger the workflow. Skip when the
+    # head commit is one of ours. (paths-ignore cannot be combined with paths.)
+    if: ${{ !startsWith(github.event.head_commit.message, 'chore(exports)') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Validate cards
+        run: npm run validate
+      - name: Build exports
+        run: npm run build:exports
+      - name: Commit refreshed exports
+        run: |
+          if [ -z "$(git status --porcelain exports/)" ]; then
+            echo "exports/ unchanged; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add exports/
+          git commit -m "chore(exports): refresh generated exports [skip ci]"
+          git push
