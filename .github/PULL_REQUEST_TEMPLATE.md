@@ -1,15 +1,26 @@
 <!--
 ═══════════════════════════════════════════════════════════
-  PR TITLE (required) — copy one line into the title box above
+  PR TITLE (required) — put ONE line in the title box above
+  One Conventional Commits system for every PR:
 
-  New card:     Add card: us-your-card-slug
-  Update card:  Update card: us-your-card-slug
-  Not a card:   docs: short summary   OR   ci: short summary
+  ── Cards (type `card` + scope) ──
+  New card:     card(add): us-your-card-slug
+  Update card:  card(update): us-your-card-slug
 
-  Rules:
-  • Use lowercase country + slug: us / ca / cn
-  • One card per PR when adding or updating card data
-  • Example: Add card: us-chase-sapphire-preferred
+  ── Everything else ──
+  feat: short summary
+  fix: short summary
+  docs: short summary
+  ci: short summary
+  chore: short summary
+  (also: refactor / test / build / perf / style / revert)
+  Optional scope: feat(pr-checks): …   Breaking: feat!: …
+
+  Rules for cards:
+  • Lowercase country + slug: us / ca / cn
+  • One card per PR
+  • Example: card(add): us-chase-sapphire-preferred
+  • Legacy Add/Update card: … still accepted
 ═══════════════════════════════════════════════════════════
 -->
 
@@ -17,7 +28,7 @@
 
 - [ ] **New card** (add a file under `data/us/`, `data/ca/`, or `data/cn/`)
 - [ ] **Update existing card**
-- [ ] **Not a card** (docs / CI / code) — skip the Card form below
+- [ ] **Not a card** (docs / CI / code) — skip the Card form below; use a Conventional Commits title
 
 ---
 
