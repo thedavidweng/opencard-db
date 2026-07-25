@@ -1,0 +1,144 @@
+{
+  "id": "us-wells-fargo-choice-privileges-select",
+  "schema_version": "1.0.0",
+  "name": "Wells Fargo Choice Privileges Select Mastercard",
+  "localized_names": {
+    "en": "Wells Fargo Choice Privileges Select Mastercard"
+  },
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95.0,
+    "currency": "USD",
+    "first_year": 95.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not displayed on product page; see Important Credit Terms / Account Agreement for current rates."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fee: 'When you use your card for travel, you won't pay a foreign currency conversion fee for purchases converted to U.S. dollars.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Choice Privileges points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X points on other purchases."
+    },
+    "categories": [
+      {
+        "label": "Choice Hotels stays and Choice Privileges point purchases",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Gas stations, grocery stores, home improvement stores, and phone plan services",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeemable for reward nights at select Choice Hotels properties."
+  },
+  "signup_bonus": {
+    "amount": 60000.0,
+    "unit": "points",
+    "spend_required": 3000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "EARN 60,000 BONUS POINTS when you spend $3,000 in purchases in the first 3 months - enough to redeem for up to 7 reward nights at select Choice Hotels properties.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "anniversary-bonus",
+      "title": "Anniversary Bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 30,000 bonus points every account anniversary, enough to redeem up to 3 reward nights at Choice Hotels properties."
+    },
+    {
+      "id": "platinum-elite",
+      "title": "Automatic Platinum Elite Membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 20 Elite Qualifying Nights guaranteeing you Choice Privileges Platinum Elite status and benefits each calendar year."
+    },
+    {
+      "id": "trusted-traveler",
+      "title": "Trusted Traveler Program",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enroll in a Trusted Traveler Program (such as Global Entry or TSA PreCheck) and receive one statement credit up to $120 every four years as reimbursement for the application or renewal fee charged to your Choice Privileges Select Mastercard."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cellular Telephone Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Get up to $800 of cell phone protection against damage or theft when you pay your monthly cell phone bill with your Choice Privileges Select Mastercard (subject to a $25 deductible)."
+    },
+    {
+      "id": "world-elite-benefits",
+      "title": "Mastercard World Elite Benefits",
+      "category": "other",
+      "source": "network",
+      "description": "Get access to additional security benefits, exclusive offers, concierge, travel & lifestyles services, and more."
+    },
+    {
+      "id": "milestone-rewards",
+      "title": "Milestone Rewards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn rewards more frequently throughout the year - such as bonus points or gift cards."
+    },
+    {
+      "id": "fast-track-status",
+      "title": "Fast Track Your Status and Rewards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Upgrade to higher Choice Privileges Elite status and earn rewards faster with points earned using your card on everyday purchases."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Choice Privileges Platinum Elite (20 Elite Qualifying Nights/year)",
+    "other": [
+      "Trusted Traveler Program statement credit up to $120 every four years"
+    ]
+  },
+  "official_url": "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
+  "image": {
+    "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-7-26_v2/images/Products/ChoicePrivileges/choice_privileges_social_banner_1220x627_english.jpg",
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
+    "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards/?sub_channel=WEB&vendor_code=WF"
+  ],
+  "notes": "This entry corresponds to the Choice Privileges Select Mastercard (right column, $95 annual fee). APR not visible on product page. network_tier corrected to world_elite based on 'Choice Privileges Select World Elite Mastercard Credit Card Guide to Benefits' reference and 'MASTERCARD WORLD ELITE BENEFITS' section."
+}
