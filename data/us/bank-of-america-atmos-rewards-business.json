@@ -1,0 +1,147 @@
+{
+  "id": "us-bank-of-america-atmos-rewards-business",
+  "schema_version": "1.0.0",
+  "name": "Atmos™ Rewards Visa Signature® Business Card",
+  "localized_names": {
+    "en": "Atmos™ Rewards Visa Signature® Business Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 70,
+    "currency": "USD",
+    "first_year": 70,
+    "waiver_conditions": "$70 for the company and $25 per additional card."
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not available from page text; page uses dynamic placeholders (ProdStanMinRate% to ProdStanMaxRate% Variable APR). See Bank of America for current APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No international transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Not stated on the official product page."
+  },
+  "rewards": {
+    "currency": "alaska_mileage_plan",
+    "currency_label": "Alaska Mileage Plan miles",
+    "rate_type": "miles_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point for every $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Alaska Airlines and Hawaiian Airlines purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas, EV charging, shipping, local transit (including rideshare)",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points are Alaska Mileage Plan miles. Redeem for flights on Alaska Airlines, Hawaiian Airlines, oneworld Alliance members, and Global Partners to 1,000+ destinations. No blackout dates on Alaska/Hawaiian flights. 10% rewards bonus on all points if company has eligible BofA small business account."
+  },
+  "signup_bonus": {
+    "amount": 70000,
+    "unit": "miles",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Limited-time offer: 70,000 bonus miles and a $99 Companion Fare (plus taxes and fees from $23) after $4,000 in purchases within first 90 days.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "companion-fare",
+      "title": "$99 Companion Fare (Annual)",
+      "category": "other",
+      "source": "co-brand",
+      "description": "$99 Companion Fare (plus taxes and fees from $23) every year that you spend at least $6,000 on purchases with your card."
+    },
+    {
+      "id": "free-checked-bag",
+      "title": "Free Checked Bag",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Free checked bag and preferred boarding benefits for any cardholder when the Atmos Rewards Business Card is used to purchase Alaska Airlines or Hawaiian Airlines tickets."
+    },
+    {
+      "id": "preferred-boarding",
+      "title": "Preferred Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Preferred boarding when paying for Alaska/Hawaiian Airlines flight with card."
+    },
+    {
+      "id": "inflight-discount",
+      "title": "20% Back on Inflight Purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "20% back on Alaska Airlines and Hawaiian Airlines inflight purchases when paying with card."
+    },
+    {
+      "id": "lounge-discount",
+      "title": "$100 off Alaska Lounge+ Membership",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "$100 off annual Alaska Lounge+ Membership purchased with card."
+    },
+    {
+      "id": "boa-bonus",
+      "title": "10% Rewards Bonus with BofA Small Business Account",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "10% rewards bonus on all points earned from card purchases if your company has an eligible Bank of America small business account."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No International Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No international transaction fees on purchases made outside the U.S."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "Free checked bag for cardholder when paying for Alaska/Hawaiian Airlines flight with card",
+    "hotel_status": null,
+    "other": [
+      "Annual $99 Companion Fare (plus taxes/fees from $23) after $6,000 spend per year",
+      "Preferred boarding on Alaska/Hawaiian Airlines",
+      "20% back on inflight purchases",
+      "$100 off Alaska Lounge+ Membership",
+      "10% rewards bonus with eligible BofA small business account"
+    ]
+  },
+  "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
+  "image": {
+    "url": null,
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
+  ],
+  "notes": "Atmos Rewards Visa Signature Business Card (rebrand of Alaska Airlines credit cards). $70 annual fee for company + $25 per card. 3X Alaska/Hawaiian, 2X gas/EV/shipping/transit, 1X other. 70K bonus miles + $99 Companion Fare after $4K in 90 days. No international transaction fees. APR not extractable (dynamic placeholders). credit_required set to null (was 'excellent' from NerdWallet, not from official page)."
+}

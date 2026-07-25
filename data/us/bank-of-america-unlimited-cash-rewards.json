@@ -1,0 +1,120 @@
+{
+  "id": "us-bank-of-america-unlimited-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "Bank of America® Unlimited Cash Rewards Credit Card",
+  "localized_names": {
+    "en": "Bank of America® Unlimited Cash Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for the first 15 billing cycles for purchases and qualifying balance transfers; then a variable APR of 16.49% to 28.49% applies. The sample agreement states APRs are based on the Prime Rate as of 03/31/2026. Actual pricing will vary from one cardholder to another. Intro APR offer preserved from previous data; not re-verified (product page was unavailable)."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee is 3% of each transaction."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on all purchases after the first year"
+    },
+    "categories": [
+      {
+        "label": "All purchases during the first year from account opening",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash rewards can be redeemed for statement credits, deposits to eligible Bank of America checking or savings accounts, Amazon.com purchases, or PayPal checkout.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "cash_rewards",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 online cash rewards bonus after making at least $1,000 in purchases in the first 90 days of account opening. Preserved from previous data; not re-verified (product page was unavailable).",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "bofa-rewards-bonus",
+      "title": "BofA Rewards rewards bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Eligible Bank of America customers enrolled in BofA Rewards can earn bonus rewards on eligible credit card purchases. Preserved from previous data; not re-verified (product page was unavailable)."
+    },
+    {
+      "id": "zero-liability",
+      "title": "$0 Liability Guarantee",
+      "category": "other",
+      "source": "issuer",
+      "description": "Bank of America provides a $0 Liability Guarantee for fraudulent transactions. Preserved from previous data; not re-verified (product page was unavailable)."
+    },
+    {
+      "id": "balance-connect",
+      "title": "Balance Connect for overdraft protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Optional overdraft protection service when the card is linked to an eligible Bank of America checking account; other fees may apply. Preserved from previous data; not re-verified (product page was unavailable)."
+    },
+    {
+      "id": "digital-wallets",
+      "title": "Digital wallet support",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card can be added to Apple Pay, Google Pay, or Samsung Pay for in-store and in-app purchases. Preserved from previous data; not re-verified (product page was unavailable)."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+  "image": {
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cty_cshsigcm_v_250x157.png",
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/unlimited-cash-back-credit-card/",
+    "https://www.bankofamerica.com/content/documents/creditcard/bank_of_america_unlimited_cash_rewards_english.pdf"
+  ],
+  "notes": "The product page was temporarily unavailable during verification. APR and FX fee were verified from the official sample Credit Card Agreement PDF (Prime Rate as of 03/31/2026). The sample agreement states 'Actual pricing will vary from one cardholder to another.' Rewards structure, signup bonus, and benefits preserved from previous data and not re-verified. The previous APR range (17.49-27.49) has been updated to match the sample agreement (16.49-28.49). FX fee was previously null and is now confirmed as 3% from the sample agreement."
+}

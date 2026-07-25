@@ -1,0 +1,118 @@
+{
+  "id": "us-bank-of-america-air-france-klm",
+  "schema_version": "1.0.0",
+  "name": "Air France KLM Visa Signature Credit Card",
+  "localized_names": {
+    "en": "Air France KLM Visa Signature Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "USD",
+    "first_year": 89,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.74,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Variable APR 19.74% to 27.74% based on creditworthiness. Varies with Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on purchases outside the United States."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Visa Signature card typically requires good to excellent credit."
+  },
+  "rewards": {
+    "currency": "flying_blue_miles",
+    "currency_label": "Flying Blue Miles",
+    "rate_type": "miles_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 Miles per $1 on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Air France, KLM & SkyTeam airline purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Dining",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem Miles toward flights with Air France, KLM Royal Dutch Airlines or any SkyTeam member airline to over 1,000 destinations worldwide."
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "flying_blue_miles",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "50,000 Bonus Miles + 100 Experience Points (XP) after spending $2,000 in the first 90 days of account opening.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "anniversary-miles",
+      "title": "Anniversary Miles",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "5,000 Miles every year on account anniversary after spending $50 or more on purchases within the anniversary year."
+    },
+    {
+      "id": "experience-points",
+      "title": "Flying Blue Experience Points (XP)",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "20 XP every year on account anniversary. Earn 80 more XP (100 total) at $15,000+ spend. Earn 60 more XP (160 total) at $25,000+ spend. XP count toward Flying Blue elite status."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees when making purchases outside the United States."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Flying Blue XP earning toward elite status",
+      "Visa Signature benefits including travel concierge and travel accident insurance"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/air-france-credit-card/",
+  "image": {
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8azc_cshcm_v_250x158.png",
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/air-france-credit-card/",
+    "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire"
+  ],
+  "notes": "Issued by Bank of America. Visa Signature. Annual fee $89 (not $0 as previously scaffolded). No foreign transaction fees."
+}

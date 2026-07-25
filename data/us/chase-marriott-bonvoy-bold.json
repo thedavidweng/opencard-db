@@ -1,0 +1,167 @@
+{
+  "id": "us-chase-marriott-bonvoy-bold",
+  "schema_version": "1.0.0",
+  "name": "Marriott Bonvoy Bold Credit Card",
+  "localized_names": {
+    "en": "Marriott Bonvoy Bold Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "19.24% (min of (6.75+12.49) and 29.99%) to 27.74% (min of (6.75+20.99) and 29.99%) variable APR."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees. 'You will pay no foreign transaction fees when you use your card for purchases made outside the United States.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "marriott_bonvoy_points",
+    "currency_label": "Marriott Bonvoy points",
+    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Marriott Bonvoy hotels",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Other travel purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points automatically transferred to Marriott Bonvoy account. Pay Yourself Back: redeem Marriott Bonvoy points for statement credit on airline tickets and Marriott hotel purchases, up to $750 total in redemptions per year ($100 for every 12,500 points)."
+  },
+  "signup_bonus": {
+    "amount": 60000.0,
+    "unit": "points",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 60,000 Bonus Points after spending $1,000 on eligible purchases within 3 months of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "silver-elite-status",
+      "title": "Automatic Silver Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatically receive Silver Elite Status each calendar year as a cardmember."
+    },
+    {
+      "id": "elite-night-credits",
+      "title": "5 Elite Night Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 5 Elite Night Credits every calendar year."
+    },
+    {
+      "id": "no-fx-fee",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the United States."
+    },
+    {
+      "id": "pay-yourself-back",
+      "title": "Pay Yourself Back",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem Marriott Bonvoy points for statement credit on airline tickets and Marriott hotel purchases, up to $750 total in redemptions per year."
+    },
+    {
+      "id": "dashpass",
+      "title": "Complimentary DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "12 months of complimentary DashPass for DoorDash and Caviar when activated between 02/01/2025 and 12/31/2027."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimburses up to $100 a day for up to 5 days for essential purchases when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Reimbursement up to $3,000 per covered traveler for lost, damaged or stolen baggage."
+    },
+    {
+      "id": "trip-delay-reimbursement",
+      "title": "Trip Delay Reimbursement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Coverage for unreimbursed expenses up to $500 per covered traveler if travel is delayed more than 12 hours or requires an overnight stay."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers eligible new purchases for 120 days against damage or theft up to $500 per item."
+    },
+    {
+      "id": "visa-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "Complimentary Visa Signature Concierge Service 24 hours a day."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Silver Elite Status with Marriott Bonvoy",
+    "other": [
+      "5 Elite Night Credits each calendar year",
+      "No foreign transaction fees",
+      "Pay Yourself Back up to $750/year for travel purchases"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/marriott-bonvoy/bold"
+  ],
+  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa (page references 'Visa Signature card' in offer details). Network tier corrected to bare slug 'signature'. Earn structure (3X Marriott Bonvoy hotels, 2X other travel, 1X everything else) is well-established public knowledge."
+}

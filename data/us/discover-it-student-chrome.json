@@ -1,0 +1,114 @@
+{
+  "id": "us-discover-it-student-chrome",
+  "schema_version": "1.0.0",
+  "name": "Discover it Student Chrome Credit Card",
+  "localized_names": {
+    "en": "Discover it Student Chrome Credit Card"
+  },
+  "country": "us",
+  "issuer": "Discover",
+  "issuer_id": "discover",
+  "network": "discover",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.49,
+      "max": 25.49,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "0% intro APR for 6 months on purchases; 16.49% to 25.49% variable APR after that."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not stated on product page (terms_url empty in batch)."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "No credit score required to apply. We may use credit scores if available."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "Unlimited 1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas stations",
+        "points_per_dollar": 2.0,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 2.0,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Redeem cash back for any amount. Cashback Match: unlimited dollar-for-dollar match of all cash back earned at the end of first year."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "cashback-match",
+      "title": "Unlimited Cashback Match",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're never responsible for unauthorized purchases on your Discover Card."
+    },
+    {
+      "id": "credit-building",
+      "title": "Build credit with responsible use",
+      "category": "other",
+      "source": "issuer",
+      "description": "Discover reports your credit history to all three major credit bureaus, so your use of the card will appear on your credit report and contribute to your credit score."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.discover.com/credit-cards/student-credit-card/chrome-card/",
+  "image": {
+    "url": null,
+    "attribution": "© Discover",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.discover.com/credit-cards/student-credit-card/chrome-card/"
+  ],
+  "notes": "Verified against official Discover product page 2026-07-24. APR (16.49%-25.49% variable, 0% intro 6 months) and no-annual-fee confirmed. FX fee not stated on page (terms_url empty). No signup bonus; Cashback Match is first-year promo. 2% cash back at gas stations and restaurants applies to up to $1,000 in combined purchases each quarter (the $1,000 cap is shared across both categories, not per-category), then 1%. Image URL cleared: prior asset was wrong-product card art on a Capital One CDN."
+}
