@@ -9,8 +9,9 @@
   "issuer": "Capital One",
   "issuer_id": "capital-one",
   "network": "visa",
-  "network_tier": "signature",
+  "network_tier": "infinite",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 395.0,
@@ -45,17 +46,18 @@
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "10X miles on hotels and rental cars booked through Capital One Business Travel",
+        "points_per_dollar": 10.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "5X miles on flights and vacation rentals booked through Capital One Business Travel",
+        "points_per_dollar": 5.0,
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem miles through travel site, get reimbursed for travel expenses, or transfer miles to 15+ partners."
+    "redemption_notes": "Redeem miles through travel site, get reimbursed for travel expenses, or transfer miles to 15+ partners.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 150000.0,
@@ -153,9 +155,21 @@
     }
   ],
   "travel_perks": {
-    "lounge_access": null,
-    "tsa_precheck_credit": null,
-    "global_entry_credit": null,
+    "lounge_access": {
+      "program": "Capital One Lounges & Landing + Priority Pass Select",
+      "visits_per_year": null,
+      "notes": "Complimentary access to Capital One Lounges and Landing, plus Priority Pass enrollment (1,300+ lounges worldwide). Priority Pass enrollment required after card activation."
+    },
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
     "free_checked_bags": null,
     "hotel_status": null,
     "other": [
@@ -172,9 +186,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.capitalone.com/small-business/credit-cards/venture-x-business/"
   ],
-  "notes": "Verified against official Capital One product page on 2026-07-24. Purchase APR not stated on page — preserved as null. Corrected name from 'Venture X Business Card' to 'Venture X Business' per page heading."
+  "notes": "Verified against the official Capital One product page on 2026-07-25. Business (small-business) card; segment set to 'business'. Network tier corrected to Visa Infinite (Venture X Business is a Visa Infinite product). Earn rates: 2X on all purchases, 10X on hotels and rental cars booked through Capital One Business Travel, 5X on flights and vacation rentals booked through Capital One Business Travel. travel_perks now reflect the lounge access and the single up-to-$120 Global Entry/TSA PreCheck statement credit (one credit every 4 years, for either program) that the benefits already list. Purchase APR is not published on the product page (card is designed to be paid in full); left null."
 }
