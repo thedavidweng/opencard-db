@@ -53,7 +53,7 @@ jobs:
       cli_release_created: ${{ steps.rp.outputs['packages/opencard-export--release_created'] }}
       cli_tag_name: ${{ steps.rp.outputs['packages/opencard-export--tag_name'] }}
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v5
         id: rp
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
