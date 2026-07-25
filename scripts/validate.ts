@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import Ajv2020 from "ajv/dist/2020.js";
-import addFormats from "ajv-formats";
+import Ajv2020Import from "ajv/dist/2020.js";
+import addFormatsImport from "ajv-formats";
+
+// ajv ships CJS; under NodeNext the default import types as the namespace.
+// Runtime (node --experimental-strip-types) resolves the constructor fine.
+const Ajv2020 = Ajv2020Import as unknown as typeof Ajv2020Import.default;
+const addFormats = addFormatsImport as unknown as typeof addFormatsImport.default;
 import {
   expectedIdFromPath,
   loadAllCards,
