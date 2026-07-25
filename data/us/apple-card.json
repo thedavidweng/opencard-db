@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -39,24 +40,20 @@
     "currency": "cash_back",
     "currency_label": "Daily Cash (USD)",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "1% Daily Cash back on every purchase when using the titanium card."
+      "points_per_dollar": 1,
+      "description": "1% Daily Cash back on every purchase when using the physical titanium card."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Apple and select merchants (Ace Hardware, Booking.com, ChargePoint, Duane Reade, Exxon Mobil, Hertz, Nike, Uber, Uber Eats, Walgreens) via Apple Pay",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Any purchase using Apple Card with Apple Pay",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -117,21 +114,21 @@
       "id": "booking-partner",
       "title": "Booking.com Travel Credits",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Get 2% in Booking.com Travel Credits on eligible stays and car rentals booked with Apple Card, in addition to 3% Daily Cash back using Apple Card with Apple Pay."
     },
     {
       "id": "uber-partner",
       "title": "Uber One Free Trial",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Redeem a six-month free trial of Uber One when you sign up with Apple Card using Apple Pay. Continue to get 3% Daily Cash back at Uber."
     },
     {
       "id": "hertz-partner",
       "title": "Hertz Rental Car Savings",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Hertz rental car savings and benefits including at least 5% off Pay Later base rates, free emergency roadside service, discounted loss damage waiver vehicle protection, and a free additional driver at pickup."
     }
   ],
@@ -153,7 +150,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.apple.com/apple-card/"
   ],
