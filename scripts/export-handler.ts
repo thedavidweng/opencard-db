@@ -63,6 +63,33 @@ function defaultCardAssetResponse(): Response {
   });
 }
 
+/** Mirror of worker withCors: CORS headers on every egress response. */
+function withCors(response: Response): Response {
+  const headers = new Headers(response.headers);
+  headers.set("Access-Control-Allow-Origin", "*");
+  if (headers.has("ETag")) {
+    headers.set("Access-Control-Expose-Headers", "ETag");
+  }
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
+/** Mirror of worker preflightResponse: read-only API preflight. */
+function preflightResponse(): Response {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Client-Name",
+      "Access-Control-Max-Age": "86400",
+    },
+  });
+}
+
 function boolEnv(value: string | undefined, fallback: boolean): boolean {
   if (value === undefined || value === "") return fallback;
   return value === "true" || value === "1";
@@ -134,6 +161,18 @@ export function resetTestRateLimits(): void {
 }
 
 export async function handleTestRequest(
+  request: Request,
+  env: TestEnv,
+): Promise<Response> {
+  // CORS preflight runs before any client-id / rate-limit checks.
+  if (request.method === "OPTIONS") {
+    return preflightResponse();
+  }
+  // CORS is applied to every egress response.
+  return withCors(await routeTestRequest(request, env));
+}
+
+async function routeTestRequest(
   request: Request,
   env: TestEnv,
 ): Promise<Response> {
