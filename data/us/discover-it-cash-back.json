@@ -11,6 +11,7 @@
   "network": "discover",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0,
@@ -27,8 +28,8 @@
     "notes": "Intro APR may apply for a promotional period; see Discover rates & fees disclosures on the product page."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm current foreign transaction fee on Discover rates & fees."
+    "percent": 0,
+    "notes": "Discover it Cash Back has no foreign transaction fee."
   },
   "credit_required": {
     "score_band": "good",
@@ -38,6 +39,7 @@
     "currency": "cash_back",
     "currency_label": "Cash back",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1% cash back on all other purchases"
@@ -47,7 +49,7 @@
         "label": "Rotating quarterly categories (activation required)",
         "points_per_dollar": 5,
         "cap": {
-          "amount": null,
+          "amount": 1500,
           "currency": "USD",
           "period": "quarter"
         }
@@ -83,7 +85,7 @@
   "travel_perks": null,
   "official_url": "https://www.discover.com/credit-cards/cash-back/it-card.html",
   "image": {
-    "url": "https://ecm.capitalone.com/WCM/dfs-card/products/cardart-cash-chrome-shadow.png",
+    "url": null,
     "attribution": "© Discover / Capital One",
     "local_path": null
   },
