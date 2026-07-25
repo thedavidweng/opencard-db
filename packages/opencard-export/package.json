@@ -1,6 +1,6 @@
 {
   "name": "opencard-export",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "macOS CLI to scan Apple Pay card art and data and contribute it to OpenCard DB. Runs locally; nothing is uploaded.",
   "license": "MIT",
   "type": "module",
