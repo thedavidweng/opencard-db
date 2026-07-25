@@ -1,9 +1,9 @@
 {
   "id": "us-barclays-wyndham-rewards-earner-plus",
   "schema_version": "1.0.0",
-  "name": "Wyndham Rewards Earner Card",
+  "name": "Wyndham Rewards Earner Plus Card",
   "localized_names": {
-    "en": "Wyndham Rewards Earner Card"
+    "en": "Wyndham Rewards Earner Plus Card"
   },
   "country": "us",
   "issuer": "Barclays",
@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 95.0,
@@ -43,19 +44,20 @@
     "currency": "points",
     "currency_label": "Wyndham Rewards points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1 point per $1 on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Hotels by Wyndham and eligible gas purchases",
+        "points_per_dollar": 6.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible grocery store, dining and utility purchases",
+        "points_per_dollar": 4.0,
         "cap": null
       }
     ],
@@ -157,5 +159,5 @@
   "sources": [
     "https://www.wyndhamrewardscreditcard.com/#earnerplus"
   ],
-  "notes": "Verified from official issuer page. Network corrected from mastercard to visa (page states Visa Signature). Annual fee corrected from $0 to $95. Signup bonus corrected from 30,000 to 100,000 points."
+  "notes": "Verified from official issuer page (Visa Signature, issued by Barclays Bank Delaware). Renamed to 'Wyndham Rewards Earner Plus Card' to disambiguate from the Business card. Filled the 6X (Hotels by Wyndham and gas) and 4X (grocery, dining and utilities) bonus tiers, which were empty placeholders; base earn is 1X. Network corrected from mastercard to visa. Annual fee corrected from $0 to $95. Signup bonus corrected to 100,000 points."
 }
