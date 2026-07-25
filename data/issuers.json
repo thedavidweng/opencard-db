@@ -9,6 +9,7 @@
     { "id": "ccb", "name": "China Construction Bank 中国建设银行", "aliases": ["china-construction-bank"] },
     { "id": "chase", "name": "Chase", "aliases": ["jpmorgan-chase"] },
     { "id": "citi", "name": "Citi", "aliases": ["citibank"] },
+    { "id": "column", "name": "Column N.A.", "aliases": ["column-na"] },
     { "id": "cmb", "name": "China Merchants Bank 招商银行", "aliases": ["china-merchants-bank"] },
     { "id": "comenity", "name": "Comenity Bank (Bread Financial)", "aliases": ["bread-financial"] },
     { "id": "discover", "name": "Discover", "aliases": [] },
