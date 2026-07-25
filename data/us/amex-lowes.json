@@ -1,9 +1,9 @@
 {
   "id": "us-amex-lowes",
   "schema_version": "1.0.0",
-  "name": "Business Credit Cards from American Express",
+  "name": "Lowe's Business Rewards Card from American Express",
   "localized_names": {
-    "en": "Business Credit Cards from American Express"
+    "en": "Lowe's Business Rewards Card from American Express"
   },
   "country": "us",
   "issuer": "American Express",
@@ -11,42 +11,93 @@
   "network": "amex",
   "network_tier": "none",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
-    "amount": 0.0,
+    "amount": 0,
     "currency": "USD",
-    "first_year": 0.0,
+    "first_year": 0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 20.99,
+      "max": 29.99,
       "type": "variable"
     },
-    "notes": "See American Express for current APR; terms vary by applicant/offer."
+    "notes": "20.99%–29.99% variable APR (as of 2026)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Confirm foreign transaction fee on official terms."
+    "percent": 2.7,
+    "notes": "2.7% foreign transaction fee (standard American Express rate)."
   },
   "credit_required": {
-    "score_band": null,
+    "score_band": "good",
     "notes": null
   },
   "rewards": {
-    "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
+    "currency": "lowes_business_rewards_points",
+    "currency_label": "Lowe's Business Rewards points (worth ~1 cent each; redeemable for statement credits or Lowe's/Amex gift cards)",
+    "rate_type": "cashback_percent",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other eligible purchases"
     },
-    "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "categories": [
+      {
+        "label": "Lowe's, U.S. restaurants, U.S. office supply stores, and wireless telephone services from U.S. service providers",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards are earned as Lowe's Business Rewards points (each worth ~1 cent), redeemable for statement credits or Lowe's/American Express gift cards — not Membership Rewards. Intro offer: 5% cash back on eligible Lowe's purchases for the first six months (2% thereafter). Cardholders also receive an automatic 5% discount on eligible Lowe's purchases at checkout, which is separate from rewards."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "lowes-discount",
+      "title": "5% Off Eligible Lowe's Purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic 5% discount on eligible in-store and online purchases at Lowe's when using the card."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Free Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Issue up to 99 employee cards at no additional cost to track and manage business spending."
+    },
+    {
+      "id": "car-rental-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "network",
+      "description": "Secondary car rental loss and damage coverage of up to $50,000 per rental agreement when you reserve and pay with the card and decline the rental company's collision waiver. Terms and exclusions apply."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Up to one additional year of warranty coverage on eligible purchases with a manufacturer's warranty, up to $10,000 per item and $50,000 per calendar year."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Reimbursement for eligible purchases that are damaged or stolen within 90 days, up to $1,000 per incident and $50,000 per calendar year."
+    },
+    {
+      "id": "global-assist",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "network",
+      "description": "24/7 Global Assist Hotline for medical, legal, financial, and other emergency coordination when traveling more than 100 miles from home."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -57,15 +108,16 @@
   },
   "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/lowes-credit-cards/",
   "image": {
-    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-platinum.png",
+    "url": null,
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/lowes-credit-cards/",
-    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/"
+    "https://www.lowes.com/l/Credit/business-credit-center",
+    "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2024-q2-pdf-cmas/gcs-small-business/lowes-business-rewards-card-07-04-2024.pdf",
+    "https://www.businessinsider.com/personal-finance/credit-cards/lowes-business-credit-card"
   ],
-  "notes": "FETCH_FAILED: The product_url resolves to a general Amex business credit cards listing page with no Lowe's-specific card information. The page lists 11 business cards (Business Platinum, Business Gold, Graphite Business Cash, Blue Business Cash, Blue Business Plus, Delta SkyMiles Reserve/Gold/Platinum Business, Business Green Rewards, Marriott Bonvoy Business, Hilton Honors Business) but no Lowe's card. All card-specific fields remain null pending a valid product page."
+  "notes": "No-annual-fee Lowe's co-brand business card issued by American Express (usable anywhere Amex is accepted). Earns 2% cash back at Lowe's, U.S. restaurants, U.S. office supply stores, and U.S. wireless telephone services, and 1% on all other eligible purchases. Intro offer: 5% back at Lowe's for the first six months. Cardholders also get an automatic 5% discount on eligible Lowe's purchases. Rewards are Lowe's Business Rewards points (~1 cent each), redeemable as statement credits or Lowe's/Amex gift cards — not Membership Rewards (corrected). Amex-branded protections (car rental, extended warranty, purchase protection, Global Assist) and up to 99 free employee cards. The Amex product URL redirects to the general business-cards gallery (card is applied for through Lowe's), so earn rates and benefits were verified via the American Express cardmember agreement and Business Insider. Prior image was wrong-product art (Business Platinum) and was cleared."
 }
