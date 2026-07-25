@@ -8,9 +8,10 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 150.0,
@@ -28,8 +29,8 @@
     "notes": "19.74% to 28.24% variable APR (Min. of (6.75+12.99) and 29.99% to Min. of (6.75+21.49) and 29.99%)."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Foreign transaction fee not explicitly stated on product page; listed under 'No Foreign Transaction Fee' category on Chase site."
+    "percent": 0.0,
+    "notes": "No foreign transaction fee (confirmed on Chase product page)."
   },
   "credit_required": {
     "score_band": null,
@@ -39,39 +40,40 @@
     "currency": "mileageplus_miles",
     "currency_label": "MileagePlus miles",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1x mile on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "United flights (total, incl. 6x MileagePlus + 2x card)",
+        "points_per_dollar": 8.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Other United purchases",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Dining (incl. eligible delivery)",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Office supply stores",
+        "points_per_dollar": 2.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Local transit and commuting (incl. rideshare)",
+        "points_per_dollar": 2.0,
         "cap": null
       }
     ],
@@ -203,7 +205,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/united/united-business-card"
   ],
