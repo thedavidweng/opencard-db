@@ -1,30 +1,271 @@
 {
   "$comment": "Canonical issuer registry. Every card's issuer_id must resolve to an entry here (scripts/validate.ts). Add new issuers in the same PR as their first card. aliases[] lists spellings that must NOT be used as issuer_id — the validator suggests the canonical id when it sees one. domains[] is an OPTIONAL provenance allowlist: every hostname used in a card's official_url / sources[] must suffix-match one of these registrable domains (parent-domain match, so www. and other subdomains are covered). Entries include the issuer's own sites plus the official co-brand-program and card-servicing domains its cards legitimately cite. When you add a card whose sources live on a new legitimate issuer/co-brand domain, add that domain here in the SAME PR (validate.ts errors otherwise). This is an anti-fabrication signal: a fabricated card tends to cite domains the issuer does not own.",
   "issuers": [
-    { "id": "amex", "name": "American Express", "aliases": ["american-express"], "domains": ["americanexpress.com", "aexp-static.com", "schwabcdn.com", "amazon.com", "delta.com", "lowes.com", "marriott.com", "morganstanley.com", "frequentmiler.com", "businessinsider.com", "nav.com"] },
-    { "id": "bank-of-america", "name": "Bank of America", "aliases": ["boa", "bofa"], "domains": ["bankofamerica.com", "airfrance.us", "bankrate.com", "frequentmiler.com"] },
-    { "id": "barclays", "name": "Barclays", "aliases": ["barclaycard"], "domains": ["barclaycardus.com", "barclays.com", "aarp.org", "boh.com", "wyndhamrewardscreditcard.com"] },
-    { "id": "brex", "name": "Brex", "aliases": [], "domains": ["brex.com"] },
-    { "id": "capital-one", "name": "Capital One", "aliases": ["capitalone"], "domains": ["capitalone.com"] },
-    { "id": "ccb", "name": "China Construction Bank 中国建设银行", "aliases": ["china-construction-bank"], "domains": ["ccb.com"] },
-    { "id": "chase", "name": "Chase", "aliases": ["jpmorgan-chase"], "domains": ["chase.com", "amazon.com"] },
-    { "id": "citi", "name": "Citi", "aliases": ["citibank"], "domains": ["citi.com", "citibank.com", "aa.com", "att.com"] },
-    { "id": "column", "name": "Column N.A.", "aliases": ["column-na"], "domains": ["cardless.com", "bilt.com", "biltrewards.com"] },
-    { "id": "cmb", "name": "China Merchants Bank 招商银行", "aliases": ["china-merchants-bank"], "domains": ["cmbchina.com"] },
-    { "id": "comenity", "name": "Comenity Bank (Bread Financial)", "aliases": ["bread-financial"], "domains": ["comenity.net", "aaa.com"] },
-    { "id": "discover", "name": "Discover", "aliases": [], "domains": ["discover.com"] },
-    { "id": "first-bank-trust", "name": "First Bank & Trust", "aliases": [], "domains": ["bestwestern.com"] },
-    { "id": "first-electronic-bank", "name": "First Electronic Bank (Cardless partner bank)", "aliases": ["cardless"], "domains": ["cardless.com", "latam.com", "rakuten.com", "nerdwallet.com", "prnewswire.com"] },
-    { "id": "fnbo", "name": "First National Bank of Omaha", "aliases": ["first-bankcard", "first-national-bank-of-omaha"], "domains": ["fnbo.com", "amtrak.com", "anacardusa.com"] },
-    { "id": "goldman-sachs", "name": "Goldman Sachs", "aliases": [], "domains": ["apple.com"] },
-    { "id": "icbc", "name": "Industrial and Commercial Bank of China 中国工商银行", "aliases": [], "domains": ["icbc.com.cn"] },
-    { "id": "penfed", "name": "PenFed Credit Union", "aliases": [], "domains": ["penfed.org"] },
-    { "id": "pnc", "name": "PNC Bank", "aliases": [], "domains": ["pnc.com"] },
-    { "id": "scotiabank", "name": "Scotiabank", "aliases": [], "domains": ["scotiabank.com"] },
-    { "id": "synchrony", "name": "Synchrony Bank", "aliases": [], "domains": ["synchrony.com", "syf.com", "cathaypacific.com", "onepay.com", "verizon.com", "amazon.com"] },
-    { "id": "td", "name": "TD Canada Trust", "aliases": ["td-bank"], "domains": ["td.com"] },
-    { "id": "us-bank", "name": "U.S. Bank", "aliases": ["usbank"], "domains": ["usbank.com", "skypassvisa.com"] },
-    { "id": "webbank", "name": "WebBank", "aliases": ["web-bank"], "domains": ["gemini.com"] },
-    { "id": "wells-fargo", "name": "Wells Fargo", "aliases": ["wf"], "domains": ["wellsfargo.com", "wf.com", "bilt.com", "biltrewards.com"] }
+    {
+      "id": "amex",
+      "name": "American Express",
+      "aliases": [
+        "american-express"
+      ],
+      "domains": [
+        "americanexpress.com",
+        "aexp-static.com",
+        "schwabcdn.com",
+        "amazon.com",
+        "delta.com",
+        "lowes.com",
+        "marriott.com",
+        "morganstanley.com"
+      ]
+    },
+    {
+      "id": "bank-of-america",
+      "name": "Bank of America",
+      "aliases": [
+        "boa",
+        "bofa"
+      ],
+      "domains": [
+        "bankofamerica.com",
+        "airfrance.us"
+      ]
+    },
+    {
+      "id": "barclays",
+      "name": "Barclays",
+      "aliases": [
+        "barclaycard"
+      ],
+      "domains": [
+        "barclaycardus.com",
+        "barclays.com",
+        "aarp.org",
+        "boh.com",
+        "wyndhamrewardscreditcard.com"
+      ]
+    },
+    {
+      "id": "brex",
+      "name": "Brex",
+      "aliases": [],
+      "domains": [
+        "brex.com"
+      ]
+    },
+    {
+      "id": "capital-one",
+      "name": "Capital One",
+      "aliases": [
+        "capitalone"
+      ],
+      "domains": [
+        "capitalone.com"
+      ]
+    },
+    {
+      "id": "ccb",
+      "name": "China Construction Bank 中国建设银行",
+      "aliases": [
+        "china-construction-bank"
+      ],
+      "domains": [
+        "ccb.com"
+      ]
+    },
+    {
+      "id": "chase",
+      "name": "Chase",
+      "aliases": [
+        "jpmorgan-chase"
+      ],
+      "domains": [
+        "chase.com",
+        "amazon.com"
+      ]
+    },
+    {
+      "id": "citi",
+      "name": "Citi",
+      "aliases": [
+        "citibank"
+      ],
+      "domains": [
+        "citi.com",
+        "citibank.com",
+        "aa.com",
+        "att.com"
+      ]
+    },
+    {
+      "id": "column",
+      "name": "Column N.A.",
+      "aliases": [
+        "column-na"
+      ],
+      "domains": [
+        "cardless.com",
+        "bilt.com",
+        "biltrewards.com"
+      ]
+    },
+    {
+      "id": "cmb",
+      "name": "China Merchants Bank 招商银行",
+      "aliases": [
+        "china-merchants-bank"
+      ],
+      "domains": [
+        "cmbchina.com"
+      ]
+    },
+    {
+      "id": "comenity",
+      "name": "Comenity Bank (Bread Financial)",
+      "aliases": [
+        "bread-financial"
+      ],
+      "domains": [
+        "comenity.net",
+        "aaa.com"
+      ]
+    },
+    {
+      "id": "discover",
+      "name": "Discover",
+      "aliases": [],
+      "domains": [
+        "discover.com"
+      ]
+    },
+    {
+      "id": "first-bank-trust",
+      "name": "First Bank & Trust",
+      "aliases": [],
+      "domains": [
+        "bestwestern.com"
+      ]
+    },
+    {
+      "id": "first-electronic-bank",
+      "name": "First Electronic Bank (Cardless partner bank)",
+      "aliases": [
+        "cardless"
+      ],
+      "domains": [
+        "cardless.com",
+        "latam.com",
+        "rakuten.com"
+      ]
+    },
+    {
+      "id": "fnbo",
+      "name": "First National Bank of Omaha",
+      "aliases": [
+        "first-bankcard",
+        "first-national-bank-of-omaha"
+      ],
+      "domains": [
+        "fnbo.com",
+        "amtrak.com",
+        "anacardusa.com"
+      ]
+    },
+    {
+      "id": "goldman-sachs",
+      "name": "Goldman Sachs",
+      "aliases": [],
+      "domains": [
+        "apple.com"
+      ]
+    },
+    {
+      "id": "icbc",
+      "name": "Industrial and Commercial Bank of China 中国工商银行",
+      "aliases": [],
+      "domains": [
+        "icbc.com.cn"
+      ]
+    },
+    {
+      "id": "penfed",
+      "name": "PenFed Credit Union",
+      "aliases": [],
+      "domains": [
+        "penfed.org"
+      ]
+    },
+    {
+      "id": "pnc",
+      "name": "PNC Bank",
+      "aliases": [],
+      "domains": [
+        "pnc.com"
+      ]
+    },
+    {
+      "id": "scotiabank",
+      "name": "Scotiabank",
+      "aliases": [],
+      "domains": [
+        "scotiabank.com"
+      ]
+    },
+    {
+      "id": "synchrony",
+      "name": "Synchrony Bank",
+      "aliases": [],
+      "domains": [
+        "synchrony.com",
+        "syf.com",
+        "cathaypacific.com",
+        "onepay.com",
+        "verizon.com",
+        "amazon.com"
+      ]
+    },
+    {
+      "id": "td",
+      "name": "TD Canada Trust",
+      "aliases": [
+        "td-bank"
+      ],
+      "domains": [
+        "td.com"
+      ]
+    },
+    {
+      "id": "us-bank",
+      "name": "U.S. Bank",
+      "aliases": [
+        "usbank"
+      ],
+      "domains": [
+        "usbank.com",
+        "skypassvisa.com"
+      ]
+    },
+    {
+      "id": "webbank",
+      "name": "WebBank",
+      "aliases": [
+        "web-bank"
+      ],
+      "domains": [
+        "gemini.com"
+      ]
+    },
+    {
+      "id": "wells-fargo",
+      "name": "Wells Fargo",
+      "aliases": [
+        "wf"
+      ],
+      "domains": [
+        "wellsfargo.com",
+        "wf.com",
+        "bilt.com",
+        "biltrewards.com"
+      ]
+    }
   ]
 }
