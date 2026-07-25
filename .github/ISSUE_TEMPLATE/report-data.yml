@@ -1,0 +1,49 @@
+name: "Report incorrect data"
+description: "Flag a wrong or stale field on an existing card."
+title: "data fix: <card id> <field>"
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a card with wrong or outdated data? Point us at the field and an
+        **official source** that shows the correct value. Maintainers will verify
+        against the issuer's own pages before merging.
+  - type: input
+    id: card_id
+    attributes:
+      label: Card ID
+      description: "The stable id, matching data/{country}/{slug}.json."
+      placeholder: "us-chase-sapphire-preferred"
+    validations:
+      required: true
+  - type: input
+    id: field
+    attributes:
+      label: Field
+      description: "Which field is wrong (e.g. annual_fee.amount, rewards.base_rate.points_per_dollar)."
+      placeholder: "annual_fee.amount"
+    validations:
+      required: true
+  - type: input
+    id: correct_value
+    attributes:
+      label: Correct value
+      description: "Optional. What it should say."
+    validations:
+      required: false
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: "Official issuer/network page proving the correct value."
+      placeholder: "https://www.chase.com/.../pricing"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: "Optional. Anything else reviewers should know."
+    validations:
+      required: false
