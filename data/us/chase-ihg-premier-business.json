@@ -9,8 +9,9 @@
   "issuer": "Chase",
   "issuer_id": "chase",
   "network": "mastercard",
-  "network_tier": "world",
+  "network_tier": "world_elite",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 99.0,
@@ -43,19 +44,20 @@
     "currency": "ihg_points",
     "currency_label": "IHG One Rewards points",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
       "points_per_dollar": 3.0,
       "description": "Earn 3X points per $1 spent on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Purchases at hotels participating in IHG One Rewards",
+        "points_per_dollar": 10.0,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Travel (excluding IHG hotels); dining at restaurants (including takeout and eligible delivery); social media and search engine advertising; office supply stores; and gas stations",
+        "points_per_dollar": 5.0,
         "cap": null
       }
     ],
@@ -176,9 +178,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/IHG/business-premier"
   ],
-  "notes": "Verified from official Chase product page. Rewards currency corrected from ultimate_rewards to ihg_points. Network preserved as mastercard/world (page references Mastercard trademarks)."
+  "notes": "Verified from official Chase product page on 2026-07-25. Business card. Filled the 10X (IHG hotels) and 5X (travel; dining including takeout/delivery; social media and search engine advertising; office supply stores; gas stations) bonus tiers, which were empty placeholders; base earn is 3X. Rewards currency corrected from ultimate_rewards to ihg_points. Network_tier upgraded from world to world_elite: the IHG Premier Business card is a World Elite Mastercard."
 }
