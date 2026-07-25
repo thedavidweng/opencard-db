@@ -1,0 +1,95 @@
+{
+  "id": "us-capital-one-quicksilver-secured-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "Quicksilver Secured Rewards",
+  "localized_names": {
+    "en": "Quicksilver Secured Rewards"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on fetched product page; disclosures behind javascript overlay. See Capital One for current APR."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not visible on fetched product page; disclosures behind javascript overlay."
+  },
+  "credit_required": {
+    "score_band": "fair",
+    "notes": "Credit Level: FAIR. No credit score required to apply (credit scores may be used if available)."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% cash back on every purchase."
+    },
+    "categories": [],
+    "redemption_notes": "1.5% cash back on every purchase, every day.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "secured-deposit",
+      "title": "Refundable Security Deposit",
+      "category": "other",
+      "source": "issuer",
+      "description": "$200 minimum refundable security deposit. Initial credit line of at least $200. Can raise credit line by depositing more (up to a maximum limit) before activating card. Maximum credit limit ranges from $1,000 to $3,000 based on creditworthiness."
+    },
+    {
+      "id": "deposit-upgrade",
+      "title": "Earn Back Deposit / Upgrade to Unsecured",
+      "category": "other",
+      "source": "issuer",
+      "description": "With responsible card use, like making payments on time, you could earn back your deposit and upgrade to an unsecured Quicksilver card. Security deposit returned and account unsecured; all other card terms and features remain the same."
+    },
+    {
+      "id": "credit-bureau-reporting",
+      "title": "Reports to Three Major Credit Bureaus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card status regularly reported to the three major credit bureaus."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.capitalone.com/credit-cards/quicksilver-secured/",
+  "image": {
+    "url": "https://ecm.capitalone.com/WCM/card/products/quicksilver_cardart.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/quicksilver-secured/",
+    "https://www.capitalone.com/credit-cards/fair-and-building/"
+  ],
+  "notes": "Verified from official Capital One product page and fair-and-building listing page. Annual fee $0 (confirmed from fair-and-building page listing). 1.5% cash back on every purchase. $200 minimum refundable deposit. Credit level: FAIR. APR and foreign transaction fee not visible on fetched pages (disclosures behind javascript overlay). Name updated from 'Build Credit with a Secured Credit Card' to 'Quicksilver Secured Rewards' per official listing page.",
+  "segment": "personal"
+}
