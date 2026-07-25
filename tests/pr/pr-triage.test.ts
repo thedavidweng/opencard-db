@@ -341,6 +341,56 @@ describe("pr triage", () => {
     assert.equal(r.missing.length, 0);
   });
 
+
+  it("maintenance escape: Not-a-card + meta title skips card form for bulk data PRs", () => {
+    const body = "- [x] **Not a card** (docs / CI / code / bulk data maintenance)";
+    const files = [
+      "data/us/a.json",
+      "data/us/b.json",
+      "data/ca/c.json",
+      "scripts/validate.ts",
+    ];
+    const r = triagePullRequest({
+      title: "feat(schema): backfill segment across all cards",
+      body,
+      changedFiles: files,
+      currentPrNumber: 99,
+      openCardPrs: [],
+      baseCards: {},
+    });
+    assert.equal(r.titleOk, true);
+    assert.equal(r.issues.some((i) => i.severity === "error"), false);
+    assert.equal(r.missing.length, 0);
+    const note = r.issues.find((i) => i.code === "maintenance-bulk-data");
+    assert.ok(note);
+    assert.equal(note.severity, "warn");
+  });
+
+  it("maintenance escape does NOT apply without the Not-a-card checkbox", () => {
+    const r = triagePullRequest({
+      title: "feat(schema): backfill segment across all cards",
+      body: "",
+      changedFiles: ["data/us/a.json", "data/us/b.json"],
+      currentPrNumber: 99,
+      openCardPrs: [],
+      baseCards: {},
+    });
+    assert.ok(r.issues.some((i) => i.code === "one-card-per-pr"));
+  });
+
+  it("maintenance escape does NOT apply to card(add) titles", () => {
+    const body = "- [x] **Not a card** (docs / CI / code / bulk data maintenance)";
+    const r = triagePullRequest({
+      title: "card(add): us-demo-card",
+      body,
+      changedFiles: ["data/us/demo-card.json", "data/us/other.json"],
+      currentPrNumber: 99,
+      openCardPrs: [],
+      baseCards: {},
+    });
+    assert.ok(r.issues.some((i) => i.code === "one-card-per-pr"));
+  });
+
   it("findDuplicatePrs ignores the current PR number", () => {
     const dups = findDuplicatePrs(
       ["us-demo-card"],

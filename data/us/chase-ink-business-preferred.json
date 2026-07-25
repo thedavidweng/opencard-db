@@ -1,0 +1,189 @@
+{
+  "id": "us-chase-ink-business-preferred",
+  "schema_version": "1.0.0",
+  "name": "Chase Ink Business Preferred Credit Card",
+  "localized_names": {
+    "en": "Chase Ink Business Preferred Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95.0,
+    "currency": "USD",
+    "first_year": 95.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.74,
+      "max": 26.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "17.74% to 26.74% variable APR. Min of (6.75+10.99) and 29.99 = 17.74; Min of (6.75+19.99) and 29.99 = 26.74."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees. You will pay no foreign transaction fees when you use your card for purchases made outside the United States."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ultimate_rewards",
+    "currency_label": "Chase Ultimate Rewards points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1 point per $1 on all other purchases - with no limit to the amount you can earn."
+    },
+    "categories": [
+      {
+        "label": "Travel",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 150000.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Shipping purchases",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 150000.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Internet, cable, and phone services",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 150000.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Advertising purchases made with social media sites and search engines",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 150000.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "You can use your points to redeem for any available reward options, including cash, gift cards, travel, and pay with points. Redemption values for reward options vary. Points don't expire as long as your account remains open. Transfer Chase Ultimate Rewards points to participating frequent travel programs. Starting October 1, 2026, Ultimate Rewards points will transfer to World of Hyatt at a rate of 4:3."
+  },
+  "signup_bonus": {
+    "amount": 100000.0,
+    "unit": "points",
+    "spend_required": 8000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 100,000 bonus points after you spend $8,000 on purchases in the first 3 months after account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "dashpass",
+      "title": "Complimentary DashPass Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get complimentary access to DashPass with your Chase Ink Business Preferred card. Enjoy $0 delivery fees and reduced service fees on eligible orders for a minimum of one year, when you activate by December 31, 2027. Plus, receive up to $10 a month on grocery and retail DoorDash orders."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Additional Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Employee cards let you set individual spending limits and help you earn rewards even faster."
+    },
+    {
+      "id": "trip-cancellation-interruption",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your trip is canceled or cut short by sickness, severe weather or other covered situations, you can be reimbursed up to $5,000 per covered traveler and $10,000 per trip for your pre-paid, non-refundable travel expenses, including passenger fares, tours, and hotels."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you have a roadside emergency, call the service provider to dispatch the help you need. Roadside service fees will be billed to your card at time of dispatch."
+    },
+    {
+      "id": "auto-rental-coverage",
+      "title": "Auto Rental Coverage",
+      "category": "other",
+      "source": "issuer",
+      "description": "Decline the rental company's collision insurance and charge the entire rental cost to your card. Coverage is primary when renting for business purposes and provides reimbursement up to $60,000 for theft and collision damage for most rental vehicles with an MSRP of $125,000 or less."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get up to $1,000 per claim in cell phone protection against covered theft or damage for cell phones listed on your monthly cell phone bill when you pay it with your eligible credit card. Maximum of 3 claims in a 12-month period with a $100 deductible per claim."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $10,000 per item."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "transfer-points",
+      "title": "Transfer Points to Travel Partners",
+      "category": "other",
+      "source": "issuer",
+      "description": "Transfer your Chase Ultimate Rewards points to participating frequent travel programs. Starting October 1, 2026, your Ultimate Rewards points will transfer to World of Hyatt at a rate of 4:3."
+    },
+    {
+      "id": "chase-pay-over-time",
+      "title": "Chase Pay Over Time®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay for credit card purchases over time with Chase Pay Over Time."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://creditcards.chase.com/business-credit-cards/ink/business-preferred",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/business-credit-cards/ink/business-preferred"
+  ],
+  "notes": "Product page fetched successfully. Annual fee $95 confirmed. APR 17.74%-26.74% variable confirmed. No foreign transaction fees confirmed. 100,000 bonus points after $8,000 spend in 3 months confirmed. Network (mastercard/world) not explicitly stated on page — preserved from existing JSON."
+}

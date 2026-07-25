@@ -2,6 +2,20 @@
 
 Base path: `/v1`. All responses are JSON (`Content-Type: application/json; charset=utf-8`).
 
+Machine-readable spec: [`openapi.yaml`](./openapi.yaml) (OpenAPI 3.0).
+
+## Which path should I use?
+
+The `/v1` API is one of three ways to consume the catalog:
+
+- **(a) Production (recommended):** jsDelivr tag-pinned, immutable, zero-quota
+  static files — `https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/cards-all.json`.
+- **(b) Preview / dev:** `@main` jsDelivr or `raw.githubusercontent.com` (mutable, ~12h stale on jsDelivr).
+- **(c) This `/v1` API:** filtering, search, and per-card lookup. **Self-host for
+  production**; the official instance is **best-effort** and rate-limited.
+
+See the repo [README](../README.md#get-the-data) for the full tier breakdown.
+
 ## Official free instance vs self-host
 
 | Mode | Client ID | Rate limits |
@@ -43,6 +57,20 @@ Cache-Control: public, max-age=300, stale-while-revalidate=3600
 ```
 
 Errors and rate limits use `Cache-Control: no-store`.
+
+Responses are additionally cached per-colo in the Worker (Cloudflare Cache API)
+to cut KV reads on repeat requests. See [self-hosting.md](./self-hosting.md#caching-and-the-free-tier).
+
+## CORS
+
+The API is public and read-only, so **any origin** may call it from the browser:
+
+- Every response includes `Access-Control-Allow-Origin: *`.
+- Only `GET`, `HEAD`, and `OPTIONS` are supported (other methods → **405**).
+- Preflight `OPTIONS` returns **204** with
+  `Access-Control-Allow-Methods: GET, HEAD, OPTIONS`,
+  `Access-Control-Allow-Headers: X-Client-Name`, and `Access-Control-Max-Age: 86400`.
+- `ETag` is advertised via `Access-Control-Expose-Headers` when present.
 
 ## Endpoints
 
