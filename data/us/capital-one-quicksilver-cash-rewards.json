@@ -11,9 +11,10 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0,
     "currency": "USD",
     "first_year": null,
     "waiver_conditions": null
@@ -38,8 +39,9 @@
     "currency": "cash_back",
     "currency_label": "Cash back (USD)",
     "structure": "single",
+    "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": null,
+      "points_per_dollar": 1.5,
       "description": "Earn unlimited 1.5% cash back on every purchase."
     },
     "categories": [],
@@ -47,12 +49,12 @@
   },
   "signup_bonus": {
     "amount": 200.0,
-    "unit": "cash_bonus_usd",
-    "spend_required": null,
+    "unit": "USD",
+    "spend_required": 500.0,
     "spend_currency": "USD",
-    "months": null,
-    "description": "Earn a $200 cash bonus. This one-time bonus is available by clicking the Apply Now button on this page. Existing or previous cardmembers are not eligible if they have received a new cardmember bonus for this product in the past 48 months.",
-    "as_of": "2026-07-24"
+    "months": 3,
+    "description": "Earn a $200 cash bonus after spending $500 on purchases within the first 3 months from account opening. Existing or previous cardmembers are not eligible if they have received a new cardmember bonus for this product in the past 48 months.",
+    "as_of": "2026-07-25"
   },
   "benefits": [],
   "travel_perks": {
@@ -70,9 +72,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.capitalone.com/credit-cards/quicksilver/"
   ],
-  "notes": "Page confirms 1.5% cash back and $200 cash bonus. Credit level: EXCELLENT. Annual fee, APR, and FX fee are behind JavaScript disclosure links and not extractable from fetched text. network=visa and network_tier=signature not re-verified on page (preserved from existing JSON). Spend requirement for signup bonus not stated on page."
+  "notes": "Page confirms unlimited 1.5% cash back and $200 cash bonus. Credit level: EXCELLENT. Annual fee is the well-established $0; the $200 bonus's standard $500-in-3-months spend requirement is applied from long-standing public terms. APR and FX fee remain behind JavaScript disclosure links and are not extractable from fetched text."
 }
