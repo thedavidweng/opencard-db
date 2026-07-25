@@ -1,0 +1,561 @@
+openapi: 3.0.3
+info:
+  title: OpenCard DB API
+  version: "1.0.0"
+  description: >
+    Read-only HTTP API over the OpenCard DB credit-card metadata catalog,
+    served by a Cloudflare Worker under the `/v1` base path. All responses are
+    JSON (`application/json; charset=utf-8`) except the card-face image asset.
+
+
+    ## Consumption tiers
+
+    For production, prefer the static, zero-quota files (jsDelivr tag-pinned,
+    immutable): `https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.1.0/exports/cards-all.json`.
+    This API is a convenience layer; the **official instance is best-effort**
+    and rate-limited. Production traffic must self-host or use the static files.
+
+
+    ## CORS
+
+    The API is public and read-only, so **any origin** may call it from a
+    browser. Every response carries `Access-Control-Allow-Origin: *`. Only
+    `GET`, `HEAD`, and `OPTIONS` are supported (other methods return `405`).
+    Preflight `OPTIONS` returns `204` with `Access-Control-Allow-Methods: GET,
+    HEAD, OPTIONS`, `Access-Control-Allow-Headers: X-Client-Name`, and
+    `Access-Control-Max-Age: 86400`. `ETag` is exposed via
+    `Access-Control-Expose-Headers` when present.
+
+
+    ## Client identification (official instance only)
+
+    When the instance runs with `MODE=official` (as the hosted best-effort
+    instance does), every catalog request must identify the calling application
+    with a meaningful `User-Agent` **or** an `X-Client-Name` header. Missing or
+    empty identification returns `400 client_identification_required`.
+    Self-hosted instances default to `MODE=selfhost` and do not require this.
+
+
+    ## Rate limits (official instance only)
+
+    The official instance limits each client IP to **30 requests/minute** and
+    **500 requests/day**. Exceeding either returns `429 rate_limit_exceeded`
+    with a `Retry-After` header (seconds) and `X-RateLimit-*` headers. Limits
+    are off by default when self-hosting.
+
+
+    ## 404 until KV is seeded
+
+    Catalog endpoints (`/v1/meta`, `/v1/cards`, `/v1/cards/{id}`, `/v1/search`,
+    `/v1/indexes/{name}`) return `404 not_found` with a "... not loaded. Deploy
+    indexes to KV." message until the index blobs are uploaded to the Worker's
+    KV namespace. `/v1/health` and `/v1/assets/default-card.webp` work
+    immediately on a fresh deploy.
+  license:
+    name: MIT (code) / CC BY 4.0 (data)
+    url: https://github.com/thedavidweng/opencard-db
+
+servers:
+  - url: https://opencard.example.com
+    description: >
+      Placeholder for your self-hosted instance (Cloudflare Worker on your own
+      domain or *.workers.dev). Replace with your deployment's origin.
+
+tags:
+  - name: system
+    description: Liveness and metadata
+  - name: catalog
+    description: Card listing, lookup, and search
+  - name: indexes
+    description: Raw id lists by facet
+  - name: assets
+    description: Static image assets
+
+paths:
+  /v1/health:
+    get:
+      tags: [system]
+      summary: Liveness probe
+      description: Always available; no client identification or rate limit applied.
+      responses:
+        "200":
+          description: Service is up.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+                  mode:
+                    type: string
+                    enum: [selfhost, official]
+                    example: selfhost
+                  service:
+                    type: string
+                    example: opencard-db
+
+  /v1/meta:
+    get:
+      tags: [system]
+      summary: Catalog metadata
+      parameters:
+        - $ref: "#/components/parameters/ClientName"
+      responses:
+        "200":
+          description: Catalog metadata.
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Meta"
+        "400":
+          $ref: "#/components/responses/ClientIdRequired"
+        "404":
+          $ref: "#/components/responses/NotLoaded"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+
+  /v1/cards:
+    get:
+      tags: [catalog]
+      summary: List cards
+      description: >
+        Returns a paginated list of cards. All filter params are combined with
+        AND. `image.url` is enriched to the absolute default asset URL when a
+        card has no image.
+      parameters:
+        - $ref: "#/components/parameters/Country"
+        - $ref: "#/components/parameters/Issuer"
+        - $ref: "#/components/parameters/IssuerId"
+        - $ref: "#/components/parameters/Network"
+        - $ref: "#/components/parameters/NetworkTier"
+        - $ref: "#/components/parameters/Status"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Offset"
+        - $ref: "#/components/parameters/ClientName"
+      responses:
+        "200":
+          description: A page of cards.
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CardList"
+        "400":
+          $ref: "#/components/responses/ClientIdRequired"
+        "404":
+          $ref: "#/components/responses/NotLoaded"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+
+  /v1/cards/{id}:
+    get:
+      tags: [catalog]
+      summary: Get a single card by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Card id, e.g. `us-chase-sapphire-preferred`.
+          schema:
+            type: string
+          example: us-amex-gold
+        - $ref: "#/components/parameters/ClientName"
+      responses:
+        "200":
+          description: The card.
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Card"
+        "400":
+          $ref: "#/components/responses/ClientIdRequired"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+
+  /v1/search:
+    get:
+      tags: [catalog]
+      summary: Search cards
+      description: >
+        Same filters as `/v1/cards`, plus an optional `q` substring match
+        (case-insensitive) over `name`, `localized_names`, `issuer`, and `id`.
+      parameters:
+        - name: q
+          in: query
+          required: false
+          description: Substring query.
+          schema:
+            type: string
+          example: sapphire
+        - $ref: "#/components/parameters/Country"
+        - $ref: "#/components/parameters/Issuer"
+        - $ref: "#/components/parameters/IssuerId"
+        - $ref: "#/components/parameters/Network"
+        - $ref: "#/components/parameters/NetworkTier"
+        - $ref: "#/components/parameters/Status"
+        - $ref: "#/components/parameters/Limit"
+        - $ref: "#/components/parameters/Offset"
+        - $ref: "#/components/parameters/ClientName"
+      responses:
+        "200":
+          description: A page of matching cards.
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: "#/components/schemas/CardList"
+                  - type: object
+                    properties:
+                      q:
+                        type: string
+                        nullable: true
+                        description: The echoed query, or null when empty.
+        "400":
+          $ref: "#/components/responses/ClientIdRequired"
+        "404":
+          $ref: "#/components/responses/NotLoaded"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+
+  /v1/indexes/{name}:
+    get:
+      tags: [indexes]
+      summary: Raw id list for a facet
+      description: >
+        Returns a map from facet value to an array of card ids.
+      parameters:
+        - name: name
+          in: path
+          required: true
+          description: Facet name.
+          schema:
+            type: string
+            enum: [country, issuer, network, network_tier]
+          example: network
+        - $ref: "#/components/parameters/ClientName"
+      responses:
+        "200":
+          description: Map of facet value to card ids.
+          headers:
+            Cache-Control:
+              $ref: "#/components/headers/CacheControl"
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  visa: ["us-chase-sapphire-preferred", "ca-td-aeroplan-visa-infinite"]
+                  amex: ["us-amex-gold"]
+        "400":
+          description: Unknown index name.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          $ref: "#/components/responses/NotLoaded"
+        "429":
+          $ref: "#/components/responses/RateLimited"
+
+  /v1/assets/default-card.webp:
+    get:
+      tags: [assets]
+      summary: Generic placeholder card face
+      description: >
+        The generic OpenCard placeholder image (WebP), used when a card has no
+        artwork. No client identification or rate limit applies, so it is safe
+        to use directly in an `<img src>`.
+      responses:
+        "200":
+          description: WebP image.
+          headers:
+            Cache-Control:
+              schema:
+                type: string
+                example: public, max-age=86400, stale-while-revalidate=604800
+          content:
+            image/webp:
+              schema:
+                type: string
+                format: binary
+
+components:
+  parameters:
+    ClientName:
+      name: X-Client-Name
+      in: header
+      required: false
+      description: >
+        Identifies the calling application. Required on the official instance
+        unless a meaningful `User-Agent` is sent; optional when self-hosting.
+      schema:
+        type: string
+      example: MyApp/1.0
+    Country:
+      name: country
+      in: query
+      required: false
+      schema:
+        type: string
+        enum: [us, ca, cn]
+      example: us
+    Issuer:
+      name: issuer
+      in: query
+      required: false
+      description: Issuer display name (case-insensitive exact match).
+      schema:
+        type: string
+      example: American Express
+    IssuerId:
+      name: issuer_id
+      in: query
+      required: false
+      description: Stable issuer slug.
+      schema:
+        type: string
+      example: amex
+    Network:
+      name: network
+      in: query
+      required: false
+      schema:
+        type: string
+      example: visa
+    NetworkTier:
+      name: network_tier
+      in: query
+      required: false
+      schema:
+        type: string
+      example: infinite
+    Status:
+      name: status
+      in: query
+      required: false
+      schema:
+        type: string
+        enum: [active, invite_only, discontinued, unknown]
+      example: active
+    Limit:
+      name: limit
+      in: query
+      required: false
+      description: Page size. Default 50, clamped to max 100.
+      schema:
+        type: integer
+        default: 50
+        minimum: 1
+        maximum: 100
+    Offset:
+      name: offset
+      in: query
+      required: false
+      description: Zero-based offset. Default 0.
+      schema:
+        type: integer
+        default: 0
+        minimum: 0
+
+  headers:
+    CacheControl:
+      description: Caching directive for successful catalog responses.
+      schema:
+        type: string
+        example: public, max-age=300, stale-while-revalidate=3600
+
+  responses:
+    ClientIdRequired:
+      description: >
+        Client identification missing (official instance only). Send a
+        meaningful `User-Agent` or `X-Client-Name`.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error: client_identification_required
+            message: Provide a meaningful User-Agent or X-Client-Name identifying your application. Production traffic must self-host.
+            docs: https://github.com/thedavidweng/opencard-db/blob/main/docs/api.md
+    RateLimited:
+      description: Rate limit exceeded (official instance only).
+      headers:
+        Retry-After:
+          description: Seconds to wait before retrying.
+          schema:
+            type: integer
+        X-RateLimit-Limit-Minute:
+          schema:
+            type: integer
+        X-RateLimit-Limit-Day:
+          schema:
+            type: integer
+        X-RateLimit-Remaining-Minute:
+          schema:
+            type: integer
+        X-RateLimit-Remaining-Day:
+          schema:
+            type: integer
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error: rate_limit_exceeded
+            message: Rate limit exceeded on the free public instance. Self-host for production use.
+            retry_after: 60
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error: not_found
+            message: "Card not found: us-nope"
+    NotLoaded:
+      description: >
+        Catalog data not yet uploaded to KV (fresh deploy). Seed the index blobs
+        into the KV namespace; see docs/self-hosting.md.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+          example:
+            error: not_found
+            message: Catalog not loaded. Deploy indexes to KV.
+
+  schemas:
+    Meta:
+      type: object
+      properties:
+        schema_version:
+          type: string
+          example: "1.0.0"
+        card_count:
+          type: integer
+          example: 63
+        countries:
+          type: array
+          items:
+            type: string
+          example: [ca, cn, us]
+        generated_at:
+          type: string
+          format: date-time
+        default_card_image:
+          type: string
+          format: uri
+          description: Absolute URL of the generic placeholder card face.
+    CardList:
+      type: object
+      properties:
+        total:
+          type: integer
+          description: Total matches before pagination.
+        limit:
+          type: integer
+        offset:
+          type: integer
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/Card"
+    CardImage:
+      type: object
+      nullable: true
+      properties:
+        url:
+          type: string
+          nullable: true
+          description: >
+            Official issuer artwork URL, or the absolute default-asset URL when
+            the source card has no image.
+        attribution:
+          type: string
+          nullable: true
+        local_path:
+          type: string
+          nullable: true
+    Card:
+      type: object
+      description: >
+        A credit-card product record. The full field set is defined by
+        schema.json; the properties below are the stable core. Additional
+        fields (annual_fee, apr, rewards, benefits, travel_perks, sources, etc.)
+        are present and passed through unchanged.
+      additionalProperties: true
+      required: [id, name, country, issuer, issuer_id, network, network_tier, status]
+      properties:
+        id:
+          type: string
+          example: us-amex-gold
+        name:
+          type: string
+        localized_names:
+          type: object
+          additionalProperties:
+            type: string
+        country:
+          type: string
+          enum: [us, ca, cn]
+        issuer:
+          type: string
+        issuer_id:
+          type: string
+        network:
+          type: string
+        network_tier:
+          type: string
+        type:
+          type: string
+          enum: [credit, charge, debit, other]
+        segment:
+          type: string
+          enum: [personal, business, corporate]
+        status:
+          type: string
+          enum: [active, invite_only, discontinued, unknown]
+        official_url:
+          type: string
+          format: uri
+        last_verified:
+          type: string
+          format: date
+        image:
+          $ref: "#/components/schemas/CardImage"
+    Error:
+      type: object
+      required: [error, message]
+      properties:
+        error:
+          type: string
+          description: Machine-readable code.
+          enum:
+            - client_identification_required
+            - rate_limit_exceeded
+            - not_found
+            - bad_request
+            - internal_error
+        message:
+          type: string
+          description: Human-readable explanation.
