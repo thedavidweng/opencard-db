@@ -54,7 +54,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "SkyMiles program rules apply. Card Members can use Pay with Miles: take up to $50 off the cost of your flight for every 5,000 miles you redeem when you book on delta.com."
+    "redemption_notes": "SkyMiles program rules apply. Card Members can use Pay with Miles: take up to $50 off the cost of your flight for every 5,000 miles you redeem when you book on delta.com.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -165,5 +166,6 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/"
   ],
-  "notes": "Product name Blue is not a Network Tier; network_tier is none for Amex network packages. No annual fee. Rewards currency corrected from membership_rewards to skymiles based on product page. APR not visible on product page and no terms URL provided; signup_bonus not visible on product page. Benefits, rewards, FX fee, and annual fee verified on official Amex product page on 2026-07-24."
+  "notes": "Product name Blue is not a Network Tier; network_tier is none for Amex network packages. No annual fee. Rewards currency corrected from membership_rewards to skymiles based on product page. APR not visible on product page and no terms URL provided; signup_bonus not visible on product page. Benefits, rewards, FX fee, and annual fee verified on official Amex product page on 2026-07-24.",
+  "segment": "personal"
 }

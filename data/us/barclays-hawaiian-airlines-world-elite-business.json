@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "No limit to the total Atmos Rewards points you can earn as long as the program continues and your account remains open and in good standing. Atmos Rewards points never expire."
+    "redemption_notes": "No limit to the total Atmos Rewards points you can earn as long as the program continues and your account remains open and in good standing. Atmos Rewards points never expire.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 50000.0,
@@ -133,5 +134,6 @@
   "sources": [
     "https://cards.barclaycardus.com/banking/credit-card/hawaiian-airlines/combo-app/hawaiian-bha-boh---combo-app/"
   ],
-  "notes": "All key facts verified from fetched issuer page including annual fee $99, APR 19.49%-29.49% variable, cash advance 29.74%, FX fee 0%, signup bonus 50,000 points after $4,000 spend + annual fee in 90 days."
+  "notes": "All key facts verified from fetched issuer page including annual fee $99, APR 19.49%-29.49% variable, cash advance 29.74%, FX fee 0%, signup bonus 50,000 points after $4,000 spend + annual fee in 90 days.",
+  "segment": "business"
 }

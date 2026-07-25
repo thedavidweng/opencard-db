@@ -58,7 +58,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Membership Rewards points can be used for travel, gift cards, statement credits, and more. Can be transferred to participating airline and hotel loyalty programs."
+    "redemption_notes": "Membership Rewards points can be used for travel, gift cards, statement credits, and more. Can be transferred to participating airline and hotel loyalty programs.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -204,5 +205,6 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/"
   ],
-  "notes": "Verified from official product page. Type corrected to 'charge' per FAQ: 'Yes, the American Express® Business Gold Card is a charge card with No Preset Spending Limit.' Lounge access confirmed as none per FAQ. APR not shown on page."
+  "notes": "Verified from official product page. Type corrected to 'charge' per FAQ: 'Yes, the American Express® Business Gold Card is a charge card with No Preset Spending Limit.' Lounge access confirmed as none per FAQ. APR not shown on page.",
+  "segment": "business"
 }

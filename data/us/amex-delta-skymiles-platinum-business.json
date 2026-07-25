@@ -58,7 +58,8 @@
         }
       }
     ],
-    "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights."
+    "redemption_notes": "Miles can be used with Pay with Miles (up to $50 off per 5,000 miles on delta.com) and Take 15% Off Award Travel on Delta flights.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -244,5 +245,6 @@
   "sources": [
     "https://www.americanexpress.com/en-us/business/credit-cards/delta-skymiles-platinum/"
   ],
-  "notes": "Verified from official product page. APR not shown on page (behind Rates & Fees link). Welcome offer not displayed in page text. Rewards currency is Delta SkyMiles (not Membership Rewards)."
+  "notes": "Verified from official product page. APR not shown on page (behind Rates & Fees link). Welcome offer not displayed in page text. Rewards currency is Delta SkyMiles (not Membership Rewards).",
+  "segment": "business"
 }

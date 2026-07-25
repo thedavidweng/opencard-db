@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Miles redeem via Capital One Travel or transfer partners; 10,000 anniversary bonus miles after each account anniversary."
+    "redemption_notes": "Miles redeem via Capital One Travel or transfer partners; 10,000 anniversary bonus miles after each account anniversary.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 75000,
@@ -142,5 +143,6 @@
   "sources": [
     "https://www.capitalone.com/credit-cards/venture-x/"
   ],
-  "notes": "Distinct from Capital One Venture Rewards. Lounge guest/AU rules changed in 2026. Network Visa Infinite confirmed on Capital One page. Spend threshold filled after third-party corroboration + Capital One offer copy pointing at ESB spend tokens; still verify on live apply flow."
+  "notes": "Distinct from Capital One Venture Rewards. Lounge guest/AU rules changed in 2026. Network Visa Infinite confirmed on Capital One page. Spend threshold filled after third-party corroboration + Capital One offer copy pointing at ESB spend tokens; still verify on live apply flow.",
+  "segment": "personal"
 }

@@ -54,7 +54,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "10% rewards bonus on all points if you have an eligible Bank of America account (3.3 points per dollar on 3X categories). Share points with up to 10 Atmos Rewards members. Transfer points to 5 hotel partner loyalty programs (many at 1:1). No blackout dates on Alaska/Hawaiian/partner flights. Points don't expire on active accounts."
+    "redemption_notes": "10% rewards bonus on all points if you have an eligible Bank of America account (3.3 points per dollar on 3X categories). Share points with up to 10 Atmos Rewards members. Transfer points to 5 hotel partner loyalty programs (many at 1:1). No blackout dates on Alaska/Hawaiian/partner flights. Points don't expire on active accounts.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 100000,
@@ -177,5 +178,6 @@
     "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
     "https://www.bankofamerica.com/content/documents/creditcard/atmos_rewards_summit_visa_infinite_english.pdf"
   ],
-  "notes": "Atmos Rewards Summit Visa Infinite card. $395 annual fee. 100,000 bonus points after $6,000 in first 90 days (corrected from prior 80K/$4K based on press release). 3X on dining, foreign purchases, and Alaska/Hawaiian. 8 Alaska Lounge passes/year. 25K Global Companion Award annually (100K after $60K spend). Product page was temporarily unavailable; verified from BofA newsroom press release dated Aug 20, 2025. APR retained from prior verification."
+  "notes": "Atmos Rewards Summit Visa Infinite card. $395 annual fee. 100,000 bonus points after $6,000 in first 90 days (corrected from prior 80K/$4K based on press release). 3X on dining, foreign purchases, and Alaska/Hawaiian. 8 Alaska Lounge passes/year. 25K Global Companion Award annually (100K after $60K spend). Product page was temporarily unavailable; verified from BofA newsroom press release dated Aug 20, 2025. APR retained from prior verification.",
+  "segment": "personal"
 }

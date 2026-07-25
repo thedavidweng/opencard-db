@@ -64,7 +64,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors."
+    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 175000,
@@ -279,5 +280,6 @@
     "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-aspire-credit-card/36182-11-0"
   ],
-  "notes": "Product name Aspire is not a Network Tier; network_tier is none for Amex network packages. Annual fee $550. CORRECTION: CLEAR+ Credit is $209 (not $219 as previously recorded) — verified from product page on 2026-07-24. Purchase Protection limit corrected to $10,000 per Covered Purchase (Aspire-specific). APR and signup bonus not visible on product page; preserved from prior terms verification."
+  "notes": "Product name Aspire is not a Network Tier; network_tier is none for Amex network packages. Annual fee $550. CORRECTION: CLEAR+ Credit is $209 (not $219 as previously recorded) — verified from product page on 2026-07-24. Purchase Protection limit corrected to $10,000 per Covered Purchase (Aspire-specific). APR and signup bonus not visible on product page; preserved from prior terms verification.",
+  "segment": "personal"
 }

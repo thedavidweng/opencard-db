@@ -49,7 +49,8 @@
       "description": "This is a low-interest card, not a rewards card."
     },
     "categories": [],
-    "redemption_notes": "No rewards program described on page."
+    "redemption_notes": "No rewards program described on page.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 300.0,

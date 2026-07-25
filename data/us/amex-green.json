@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Membership Rewards program terms apply."
+    "redemption_notes": "Membership Rewards program terms apply.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 40000,
@@ -103,5 +104,6 @@
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/american-express-green-card/95590-10-0/?key=tncBody&rwdFlag=rwd",
     "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2026-q1-pdf-cmas/cps-charge/american-express-green-card-03-31-2026.pdf"
   ],
-  "notes": "Product marketing page may personalize; Rates & Fees / Cardmember Agreement used as authority for fee and earn structure."
+  "notes": "Product marketing page may personalize; Rates & Fees / Cardmember Agreement used as authority for fee and earn structure.",
+  "segment": "personal"
 }
