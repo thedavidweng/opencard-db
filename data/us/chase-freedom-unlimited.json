@@ -9,8 +9,9 @@
   "issuer": "Chase",
   "issuer_id": "chase",
   "network": "visa",
-  "network_tier": "signature_or_platinum",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0,
@@ -43,6 +44,7 @@
     "currency": "ultimate_rewards",
     "currency_label": "Cash Back rewards tracked as Ultimate Rewards points",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 1.5,
       "description": "Unlimited 1.5% cash back on all other purchases"
@@ -179,5 +181,5 @@
     "https://creditcards.chase.com/cash-back-credit-cards/freedom/unlimited",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC61498.html"
   ],
-  "notes": "Chase pricing terms state applicants may receive a Signature or Platinum card with different costs and/or benefits; no public credit score band was verified."
+  "notes": "network_tier normalized to canonical 'signature'; Chase pricing terms state applicants may receive a Visa Signature OR Platinum card with different costs and/or benefits. No public credit score band was verified. Reward rates use the whole-number convention (1.5 = 1.5%)."
 }
