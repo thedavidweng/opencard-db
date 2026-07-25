@@ -106,7 +106,10 @@ jobs:
               lines.push("`" + (cardData.id || "") + "` has not been re-verified in **" + days + " days** (last verified `" + lastVerified + "`).");
               lines.push("");
               lines.push("- **Card file:** `" + file + "`");
-              if (cardData.official_url) lines.push("- **Official page:** " + cardData.official_url);
+              if (cardData.official_url) {
+                lines.push("- **Official page:** " + cardData.official_url);
+                lines.push("- **If it's dead, check the archive:** https://web.archive.org/web/*/" + cardData.official_url);
+              }
               if (sources.length) {
                 lines.push("- **Sources:**");
                 for (const s of sources) lines.push("  - " + s);
