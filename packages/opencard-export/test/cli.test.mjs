@@ -108,45 +108,32 @@ async function threeCardFixture() {
   return { root, dbFile };
 }
 
-test('dot-list: renders each state, per-field marks, summary, and ignored-count line', async () => {
+test('table: header, one aligned row per card, summary, and ignored-count line', async () => {
   const { root, dbFile } = await threeCardFixture();
   try {
     const { code, stdout } = runCli(['--passes-dir', root], { OPENCARD_DB_FILE: dbFile });
     assert.equal(code, 0, stdout);
 
-    // Header (version from package.json, single source).
-    assert.match(stdout, /opencard-export v0\.3\.0/);
-    assert.match(stdout, /OpenCard DB · github\.com\/thedavidweng\/opencard-db/);
+    // No banner: output starts with the table header.
+    assert.ok(!/opencard-export v\d/.test(stdout), 'no version banner');
+    assert.match(stdout.trimStart(), /^NAME\s+ISSUER\s+MATCH\s+DATA\s+ART\n/);
 
-    // Green (complete) card + full per-field marks with matched id. Aurora has
-    // DB art but no apple-pay provenance → the Art tier is "upgradeable".
-    assert.ok(stdout.includes('● Aurora Signature (Northwind Bank)'), stdout);
-    assert.ok(
-      stdout.includes('→ nw-aurora-signature · Fee ✓ APR ✓ FX ✓ Rewards ✓ Bonus ✓ Art upgradeable'),
+    // Aurora has DB art but no apple-pay provenance → upgradeable, all 6 fields.
+    assert.match(
       stdout,
+      /Aurora Signature\s+Northwind Bank\s+nw-aurora-signature\s+6\/6\s+upgradeable/,
     );
-
-    // Yellow (missing art) card: Art ✗ and some other ✗ marks.
-    assert.ok(stdout.includes('● Cobalt Everyday (Northwind Bank)'), stdout);
-    assert.ok(
-      stdout.includes('→ nw-cobalt-everyday · Fee ✓ APR ✗ FX ✗ Rewards ✓ Bonus ✗ Art ✗'),
+    // Cobalt is in the DB but has no art → ART "none", 2 of 6 fields.
+    assert.match(
       stdout,
+      /Cobalt Everyday\s+Northwind Bank\s+nw-cobalt-everyday\s+2\/6\s+none/,
     );
+    // Nimbus is not in the DB → dash cells.
+    assert.match(stdout, /Nimbus Rewards\s+Riverside CU\s+-\s+-\s+-/);
 
-    // Red (not in DB) card: the not-in-DB hint line.
-    assert.ok(stdout.includes('● Nimbus Rewards (Riverside CU)'), stdout);
-    assert.ok(stdout.includes('→ not in OpenCard DB yet'), stdout);
-
-    // Status words appear on the card lines.
-    assert.match(stdout, /complete/);
-    assert.match(stdout, /missing art/);
-    assert.match(stdout, /not in DB/);
-
-    // Footer-style summary line: the tiers replace the old binary "complete".
+    // One summary line, non-zero segments only.
     assert.ok(
-      stdout.includes(
-        '3 payment cards · 0 graduated · 0 new-design? · 1 upgradeable · 1 missing art · 1 not in DB',
-      ),
+      stdout.includes('3 payment cards: 1 upgradeable, 1 missing art, 1 not in database'),
       stdout,
     );
 
@@ -161,19 +148,21 @@ test('dot-list: renders each state, per-field marks, summary, and ignored-count 
     assert.ok(!stdout.includes('Coffee'), 'non-payment pass name must not appear');
     assert.ok(!stdout.includes('Flight'), 'non-payment pass name must not appear');
 
-    // Next steps with copy-pasteable command + issue-form URL.
-    assert.match(stdout, /Next steps:/);
-    assert.ok(stdout.includes('npx opencard-export --export'), stdout);
-    assert.ok(stdout.includes('images/<card-id>.png'), stdout);
+    // Hints: one command line, one issue-form line, nothing else.
+    assert.ok(
+      stdout.includes('To contribute card art (2 cards), run: npx opencard-export --export'),
+      stdout,
+    );
     assert.ok(
       stdout.includes(
-        'https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml',
+        'To request a missing card: https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml',
       ),
       stdout,
     );
+    assert.ok(!/Next steps:/.test(stdout), 'no Next steps section');
 
-    // Attribution footer (English).
-    assert.match(stdout, /Card art remains the copyright of the issuing bank/);
+    // No copyright notice on a scan (nothing was copied).
+    assert.ok(!/copyright/i.test(stdout), stdout);
   } finally {
     await fs.rm(root, { recursive: true, force: true });
   }
@@ -192,14 +181,14 @@ test('empty state: no payment cards prints the friendly block, no "all in DB" cl
     });
     const { code, stdout } = runCli(['--passes-dir', root, '--no-remote']);
     assert.equal(code, 0, stdout);
-    assert.ok(stdout.includes('No Apple Pay payment cards found in Wallet.'), stdout);
+    assert.ok(stdout.includes('No Apple Pay payment cards in Wallet.'), stdout);
     assert.ok(
       stdout.includes(
         'Ignored 2 non-payment passes (loyalty cards, tickets, boarding passes).',
       ),
       stdout,
     );
-    assert.match(stdout, /contributes Apple Pay card art to OpenCard DB/);
+    assert.match(stdout, /Add a card to Apple Pay and rerun/);
     // The reviewed bug: never claim the user's cards are all in the DB.
     assert.ok(!/all your cards are in the DB/i.test(stdout), stdout);
     assert.ok(!/All matched cards are complete/i.test(stdout), stdout);
@@ -312,28 +301,32 @@ async function fourTierFixture() {
   return { root, dbFile };
 }
 
-test('dot-list: renders all four art tiers, tier summary, and tier next-steps', async () => {
+test('table: renders all four art tiers and the tier summary', async () => {
   const { root, dbFile } = await fourTierFixture();
   try {
     const { code, stdout } = runCli(['--passes-dir', root], { OPENCARD_DB_FILE: dbFile });
     assert.equal(code, 0, stdout);
 
-    assert.ok(stdout.includes('→ nw-aurora-signature · Fee ✓ APR ✗ FX ✗ Rewards ✓ Bonus ✗ Art graduated'), stdout);
-    assert.ok(stdout.includes('→ nw-cobalt-everyday · Fee ✓ APR ✗ FX ✗ Rewards ✓ Bonus ✗ Art new-design?'), stdout);
-    assert.ok(stdout.includes('→ nw-borealis-platinum · Fee ✓ APR ✗ FX ✗ Rewards ✓ Bonus ✗ Art upgradeable'), stdout);
-    assert.ok(stdout.includes('→ nw-nimbus-rewards · Fee ✓ APR ✗ FX ✗ Rewards ✓ Bonus ✗ Art ✗'), stdout);
+    assert.match(stdout, /nw-aurora-signature\s+3\/6\s+graduated/);
+    assert.match(stdout, /nw-cobalt-everyday\s+3\/6\s+new design/);
+    assert.match(stdout, /nw-borealis-platinum\s+3\/6\s+upgradeable/);
+    assert.match(stdout, /nw-nimbus-rewards\s+2\/6\s+none/);
 
-    // Tier summary.
+    // Tier summary, non-zero segments only.
     assert.ok(
       stdout.includes(
-        '5 payment cards · 1 graduated · 1 new-design? · 1 upgradeable · 1 missing art · 1 not in DB',
+        '5 payment cards: 1 graduated, 1 new design, 1 upgradeable, 1 missing art, 1 not in database',
       ),
       stdout,
     );
 
-    // Tier-specific next steps (upgradeable = strong, new-design = soft).
-    assert.match(stdout, /Upgradeable.*beats the current issuer-site art/s);
-    assert.match(stdout, /New design\?.*banks refresh designs/s);
+    // No prose advice; the single hint line covers contribution.
+    assert.ok(!/beats the current issuer-site art/.test(stdout), stdout);
+    assert.ok(!/banks refresh designs/.test(stdout), stdout);
+    assert.ok(
+      stdout.includes('To contribute card art (3 cards), run: npx opencard-export --export'),
+      stdout,
+    );
   } finally {
     await fs.rm(root, { recursive: true, force: true });
   }

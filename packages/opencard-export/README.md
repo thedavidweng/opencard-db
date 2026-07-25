@@ -48,54 +48,39 @@ never shown and never exported — they're just counted in a one-line summary.
 ## What the report looks like
 
 ```text
-opencard-export v0.3.0
-OpenCard DB · github.com/thedavidweng/opencard-db
+NAME                 ISSUER            MATCH                        DATA  ART
+Sapphire Preferred   Chase             us-chase-sapphire-preferred  6/6   graduated
+Aurora Signature     Northwind         us-northwind-aurora          6/6   new design
+Borealis Platinum    Northwind         us-northwind-borealis        5/6   upgradeable
+Gold Card            American Express  us-amex-gold                 5/6   none
+My Local Card        Some CU           -                            -     -
 
-● Sapphire Preferred (Chase)                                    complete
-  → us-chase-sapphire-preferred · Fee ✓ APR ✓ FX ✓ Rewards ✓ Bonus ✓ Art graduated
-● Aurora Signature (Northwind)                                  complete
-  → us-northwind-aurora · Fee ✓ APR ✓ FX ✓ Rewards ✓ Bonus ✓ Art new-design?
-● Borealis Platinum (Northwind)                                 complete
-  → us-northwind-borealis · Fee ✓ APR ✗ FX ✓ Rewards ✓ Bonus ✓ Art upgradeable
-● Gold Card (American Express)                                  missing art
-  → us-amex-gold · Fee ✓ APR ✗ FX ✓ Rewards ✓ Bonus ✓ Art ✗
-● My Local Credit Union (Some CU)                               not in DB
-  → not in OpenCard DB yet
-
-5 payment cards · 1 graduated · 1 new-design? · 1 upgradeable · 1 missing art · 1 not in DB
+5 payment cards: 1 graduated, 1 new design, 1 upgradeable, 1 missing art, 1 not in database
 Ignored 32 non-payment passes (loyalty cards, tickets, boarding passes).
 
-Next steps:
-  • Upgradeable — your Apple Pay export beats the current issuer-site art.
-    Run npx opencard-export --export and open a PR.
-  • New design? — your export differs from the DB's Apple Pay art; banks refresh designs.
-    Submit if your card looks newer (or if it's an @3x variant, maintainers
-    can add it to alternate_sha256).
-  • Missing art — run npx opencard-export --export, then add images/<card-id>.png in a PR
-    (CI converts it to lossless WebP).
-  • Not in OpenCard DB — open the Request-a-card form:
-    https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml
+To contribute card art (3 cards), run: npx opencard-export --export
+To request a missing card: https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml
 ```
 
-Each payment card is two lines:
+Columns:
 
-- **Line 1** — a colored status dot, the card name, its issuer, and a status word
-  (`complete` when the DB has a card face, `missing art`, or `not in DB`).
-- **Line 2** — the matched Card Id and per-field completeness (`Fee`, `APR`, `FX`,
-  `Rewards`, `Bonus`), each marked `✓` (populated) or `✗` (missing), followed by
-  the **art tier** — the tool's verdict on your local Apple Pay face versus the
-  DB's, decided by comparing sha256 hashes:
-  - **`Art graduated`** (green) — the DB already has this exact Apple Pay art.
+- **MATCH** — the OpenCard DB card id, or `-` when the card is not in the
+  database yet.
+- **DATA** — how many of the six core fields (fee, APR, FX, rewards, bonus,
+  art) the DB card has filled in.
+- **ART** — the tool's verdict on your local Apple Pay face versus the DB's,
+  decided by comparing sha256 hashes:
+  - **`graduated`** (green) — the DB already has this exact Apple Pay art.
     Nothing to do.
-  - **`Art new-design?`** (cyan) — the DB's art is Apple Pay but a different hash.
-    Banks refresh designs; submit if yours looks newer, or it may just be an
-    `@3x` variant (maintainers can add it to `alternate_sha256`).
-  - **`Art upgradeable`** (yellow) — the DB's art came from the issuer site (or has
-    no provenance). Your lossless Apple Pay export beats it → `--export` and PR.
-  - **`Art ✗`** (dim) — the DB card has no face yet → `--export`, add
+  - **`new design`** (cyan) — the DB's art is Apple Pay but a different hash.
+    Banks refresh designs; submit if yours looks newer, or it may be an `@3x`
+    variant (maintainers can add it to `alternate_sha256`).
+  - **`upgradeable`** (yellow) — the DB's art came from the issuer site (or has
+    no provenance). A lossless Apple Pay export beats it.
+  - **`none`** (yellow) — the DB card has no art at all → `--export`, add
     `images/<card-id>.png` via PR (CI converts it to lossless WebP).
 
-  Unmatched cards show `→ not in OpenCard DB yet` — open the
+  Unmatched cards show `-` in every DB column. Open the
   [Request-a-card form](https://github.com/thedavidweng/opencard-db/issues/new?template=add-card.yml)
   or contribute a full card PR.
 
@@ -105,7 +90,7 @@ Card art in OpenCard DB "graduates" from lower-grade issuer-site scrapes to the
 lossless Apple Pay face. The loop:
 
 1. **Scan** — run `npx opencard-export`; each matched card is hashed and placed on
-   the art ladder (graduated → new-design? → upgradeable → missing).
+   the art ladder (graduated, new design, upgradeable, none).
 2. **Export + provenance** — run `--export`. Alongside `<card-id>.png` the tool
    prints the sha256 and a paste-ready provenance block:
 
