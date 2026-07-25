@@ -30,7 +30,7 @@
 
 - [ ] **New card** (add a file under `data/us/`, `data/ca/`, or `data/cn/`)
 - [ ] **Update existing card**
-- [ ] **Not a card** (docs / CI / code) — skip the Card form below; use a Conventional Commits title
+- [ ] **Not a card** (docs / CI / code / bulk data maintenance) — skip the Card form below; use a Conventional Commits title (`feat:` / `fix:` / `chore:` …). Bulk backfills across many card files belong here.
 
 ---
 
