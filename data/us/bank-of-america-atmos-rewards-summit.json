@@ -1,0 +1,183 @@
+{
+  "id": "us-bank-of-america-atmos-rewards-summit",
+  "schema_version": "1.0.0",
+  "name": "Atmos™ Rewards Summit Visa Infinite® Credit Card",
+  "localized_names": {
+    "en": "Atmos™ Rewards Summit Visa Infinite® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 395,
+    "currency": "USD",
+    "first_year": 395,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 27.49,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "notes": "Prime + 12.74% to Prime + 20.74% (APR 19.49% to 27.49% as of 03/31/2026). Penalty APR up to 29.99%. APR not visible on fetched pages; retained from prior verification."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees. 3X points on all qualifying foreign spend."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "Visa Infinite cards typically require excellent credit."
+  },
+  "rewards": {
+    "currency": "atmos_rewards_points",
+    "currency_label": "Atmos Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Dining, foreign transactions, Alaska Airlines and Hawaiian Airlines purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "10% rewards bonus on all points if you have an eligible Bank of America account (3.3 points per dollar on 3X categories). Share points with up to 10 Atmos Rewards members. Transfer points to 5 hotel partner loyalty programs (many at 1:1). No blackout dates on Alaska/Hawaiian/partner flights. Points don't expire on active accounts.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 100000,
+    "unit": "points",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "For a limited time, new Atmos Rewards Summit Visa Infinite cardholders receive 100,000 bonus points after spending $6,000 or more on purchases within the first 90 days of opening their account.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "global-companion-25k",
+      "title": "25,000-Point Global Companion Award (Annual)",
+      "category": "other",
+      "source": "co-brand",
+      "description": "25,000-point Global Companion Award earned after qualifying spend on a new account and annually after each card anniversary. Covers companion's ticket when booking award travel for two on same itinerary, up to 25,000 points. Usable across Alaska, Hawaiian, oneworld and global partners, any class of service."
+    },
+    {
+      "id": "global-companion-100k",
+      "title": "100,000-Point Global Companion Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "100,000-point Global Companion Award earned by spending $60,000 or more on purchases in a card anniversary year. For global redemptions including premium cabins."
+    },
+    {
+      "id": "alaska-lounge-passes",
+      "title": "8 Alaska Lounge Passes Per Year",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "8 Alaska Lounge passes every year (value over $500). Each pass valid for entire travel day, includes up to 2 accompanying children. Through 2026, premium bar experience at Alaska Lounge when showing Summit Card."
+    },
+    {
+      "id": "status-points",
+      "title": "10,000 Status Points Annually",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "10,000 status points annually beginning on first card anniversary. Every $2 spent earns 1 status point. 20,000 = Atmos Silver (oneworld Ruby); 40,000 = Atmos Gold (oneworld Sapphire)."
+    },
+    {
+      "id": "free-checked-bag",
+      "title": "Free Checked Bag + Preferred Boarding",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Free checked bag and preferred boarding for cardholder and up to 6 guests on same reservation on Alaska and Hawaiian-operated flights. Up to $490 in waived baggage fees on a roundtrip itinerary."
+    },
+    {
+      "id": "same-day-change",
+      "title": "Waived Same-Day Confirmed Flight Change Fee",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Waived fees for same-day confirmed Alaska flight changes. Savings up to $50 on each one-way flight."
+    },
+    {
+      "id": "travel-delay-credit",
+      "title": "Instant Travel Delay Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "If Alaska Airlines flight delayed more than 2 hours or cancelled within 24 hours of scheduled departure, receive instant $50 voucher valid for 48 hours, linked to Summit Visa Infinite card. Industry first."
+    },
+    {
+      "id": "partner-award-fee-waiver",
+      "title": "Waived Partner Award Booking Fees",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Save up to $25 per person on every roundtrip flight when using points to book with partners. Partner-imposed surcharges and government taxes and fees apply."
+    },
+    {
+      "id": "points-transfer",
+      "title": "Partner Program Points Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Transfer points to 5 hotel partner loyalty programs, many at 1:1 exchange rate. Covers 25,000+ hotels worldwide."
+    },
+    {
+      "id": "points-sharing",
+      "title": "Free Points Sharing",
+      "category": "other",
+      "source": "issuer",
+      "description": "Share redeemable points with up to 10 other Atmos Rewards members, no transfer fees."
+    },
+    {
+      "id": "rewards-bonus",
+      "title": "10% Rewards Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "10% rewards bonus on all points earned if you have an eligible Bank of America account (3.3 points per dollar on 3X categories)."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Alaska Lounge",
+      "visits_per_year": 8,
+      "notes": "8 Alaska Lounge passes per year (value over $500). Each pass valid for entire travel day, includes up to 2 children. Premium bar through 2026."
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "Free checked bag for cardholder and up to 6 guests on same reservation (up to $490 waived baggage fees on roundtrip)",
+    "hotel_status": "10,000 status points annually + 1 status point per $2 spent. 20,000 = Atmos Silver (oneworld Ruby); 40,000 = Atmos Gold (oneworld Sapphire).",
+    "other": [
+      "25,000-point Global Companion Award annually (100,000-point after $60K spend)",
+      "Waived same-day flight change fees (up to $50 per one-way)",
+      "Instant $50 travel delay credit on 2+ hour delays",
+      "Waived partner award booking fees (up to $25/person roundtrip)",
+      "Points transfers to 5 hotel partners",
+      "Free points sharing with up to 10 members",
+      "No foreign transaction fees with 3X on foreign spend"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+  "image": {
+    "url": null,
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
+    "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
+    "https://www.bankofamerica.com/content/documents/creditcard/atmos_rewards_summit_visa_infinite_english.pdf"
+  ],
+  "notes": "Atmos Rewards Summit Visa Infinite card. $395 annual fee. 100,000 bonus points after $6,000 in first 90 days (corrected from prior 80K/$4K based on press release). 3X on dining, foreign purchases, and Alaska/Hawaiian. 8 Alaska Lounge passes/year. 25K Global Companion Award annually (100K after $60K spend). Product page was temporarily unavailable; verified from BofA newsroom press release dated Aug 20, 2025. APR retained from prior verification.",
+  "segment": "personal"
+}

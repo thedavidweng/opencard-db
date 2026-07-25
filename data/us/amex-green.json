@@ -1,0 +1,109 @@
+{
+  "id": "us-amex-green",
+  "schema_version": "1.0.0",
+  "name": "American Express® Green Card",
+  "localized_names": {
+    "en": "American Express® Green Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 150,
+    "currency": "USD",
+    "first_year": 150,
+    "waiver_conditions": "No annual fee for Additional Cards."
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "APR for Pay Over Time; see official Rates and Fees table."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign Transaction: None per Amex Rates and Fees."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Eligible travel (airfare, hotels, cruises, car rentals, Amex Travel, etc.)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Eligible transit (trains, rideshare, ferries, tolls, parking, buses, subways)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards program terms apply.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 40000,
+    "unit": "points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 40,000 Membership Rewards points after spending $3,000 in the first 6 months; offers vary by advertisement/channel.",
+    "as_of": "2026-07-23"
+  },
+  "benefits": [
+    {
+      "id": "clear-plus-credit",
+      "title": "CLEAR+ credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $209 in statement credits per calendar year toward CLEAR+ membership when charged to the Card; enrollment with CLEAR required."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "CLEAR+ statement credit",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/green/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/green-card.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-23",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/green/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/american-express-green-card/95590-10-0/?key=tncBody&rwdFlag=rwd",
+    "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2026-q1-pdf-cmas/cps-charge/american-express-green-card-03-31-2026.pdf"
+  ],
+  "notes": "Product marketing page may personalize; Rates & Fees / Cardmember Agreement used as authority for fee and earn structure.",
+  "segment": "personal"
+}

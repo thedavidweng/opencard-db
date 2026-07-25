@@ -1,0 +1,160 @@
+{
+  "id": "us-bank-of-america-premium-rewards",
+  "schema_version": "1.0.0",
+  "name": "Bank of America® Premium Rewards® credit card",
+  "localized_names": {
+    "en": "Bank of America® Premium Rewards® credit card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "notes": "Variable APR for purchases and balance transfers; see current Bank of America offer for exact terms."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Bank of America Premium Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 points per $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Travel purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Dining purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem for cash back as a deposit into eligible Bank of America checking or savings accounts, credit to eligible Merrill accounts including 529 accounts, statement credit, gift cards, or purchases at BofA Travel.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "points",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 60,000 online bonus points after making at least $4,000 in purchases in the first 90 days of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "airline-incidental-credit",
+      "title": "Airline Incidental Statement Credits",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $100 annually in statement credits for qualifying airline incidental purchases such as seat upgrades, baggage fees, in-flight services, and airline lounge fees; part of up to $200 in combined Airline Incidental and TSA PreCheck/Global Entry Statement Credits."
+    },
+    {
+      "id": "airport-security-credit",
+      "title": "TSA PreCheck or Global Entry statement credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive up to $100 in statement credits for TSA PreCheck or Global Entry Application fees, every four years; part of up to $200 in combined Airline Incidental and TSA PreCheck/Global Entry Statement Credits."
+    },
+    {
+      "id": "travel-insurance-protections",
+      "title": "Travel protections",
+      "category": "insurance",
+      "source": "network",
+      "description": "Travel Insurance protections to assist with trip delays, cancellations and interruptions, baggage delays, lost luggage and emergency evacuation and transportation.",
+      "network_tier_required": "signature"
+    },
+    {
+      "id": "purchase-protections",
+      "title": "Purchase protections",
+      "category": "insurance",
+      "source": "network",
+      "description": "Shop with confidence, with excellent purchase protections like Warranty Manager Service, Return Protection and Purchase Security. These can help with repair, replacement or reimbursement on purchases, or extend the manufacturers' warranty.",
+      "network_tier_required": "signature"
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "network",
+      "description": "Feel safer on the road with our 24/7 Roadside Dispatch Program, plus added protection with Auto Rental Collision Damage Waiver.",
+      "network_tier_required": "signature"
+    },
+    {
+      "id": "visa-signature-hotel-collection",
+      "title": "Visa Signature Luxury Hotel Collection",
+      "category": "other",
+      "source": "network",
+      "description": "Enjoy a premium set of benefits when you use your Premium Rewards card to book through the Visa Signature Luxury Hotel Collection.",
+      "network_tier_required": "signature"
+    },
+    {
+      "id": "visa-signature-concierge",
+      "title": "Visa Signature concierge service",
+      "category": "other",
+      "source": "network",
+      "description": "The Visa Signature concierge service gives you access to concierges who can help with travel planning, restaurant recommendations and event reservations.",
+      "network_tier_required": "signature"
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": {
+      "amount": 100,
+      "currency": "USD",
+      "period": "every_four_years"
+    },
+    "global_entry_credit": {
+      "amount": 100,
+      "currency": "USD",
+      "period": "every_four_years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Up to $100 annual Airline Incidental Statement Credits (part of $200 combined with TSA/Global Entry)",
+      "Visa Signature Luxury Hotel Collection",
+      "Visa Signature concierge service"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
+  "image": {
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8CAL_prmsigcm_v_250_158.png",
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
+    "https://www.bankofamerica.com/salesservices/productProperties?campaignID=4079485&poCode=UN&locale=en_US&failquiet=true"
+  ],
+  "notes": "Preferred Rewards relationship bonuses can increase earn rates for eligible clients; base earn rates are shown here. Product page was temporarily unavailable at verification time; facts verified from the Bank of America product properties (terms) JSON endpoint.",
+  "segment": "personal"
+}

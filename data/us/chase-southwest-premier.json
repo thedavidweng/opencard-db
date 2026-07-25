@@ -1,0 +1,195 @@
+{
+  "id": "us-chase-southwest-premier",
+  "schema_version": "1.0.0",
+  "name": "Southwest Rapid Rewards Premier Credit Card",
+  "localized_names": {
+    "en": "Southwest Rapid Rewards Premier Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 149.0,
+    "currency": "USD",
+    "first_year": 149.0,
+    "waiver_conditions": "$149 applied to first billing statement."
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "19.24% to 27.74% variable APR. Min of (6.75+12.49) and 29.99 = 19.24; Min of (6.75+20.99) and 29.99 = 27.74."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees. You will pay no foreign transaction fees when you use your card for purchases made outside the U.S."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "rapid_rewards_points",
+    "currency_label": "Southwest Rapid Rewards points",
+    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1 point for each dollar spent on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Southwest Airlines purchases (flights, inflight, Southwest gift cards, and Getaways packages)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores and dining at restaurants (first $8,000 combined each account anniversary year, then 1x)",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 8000.0,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Points can be redeemed for Southwest flights and other rewards through the Rapid Rewards program. Your points don't expire, a benefit of the Rapid Rewards program."
+  },
+  "signup_bonus": {
+    "amount": 55000.0,
+    "unit": "points",
+    "spend_required": 1500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 55,000 bonus points after you spend $1,500 on purchases in the first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "first-checked-bag-free",
+      "title": "First Checked Bag Free",
+      "category": "other",
+      "source": "co-brand",
+      "description": "First checked bag free for Cardmembers and up to 8 additional passengers in the same reservation can check their bag at no additional cost. Save up to $90 round trip ($45 per bag per trip)."
+    },
+    {
+      "id": "preferred-seat",
+      "title": "Complimentary Preferred Seat",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Select a Preferred seat within 48 hours prior to departure, when available."
+    },
+    {
+      "id": "anniversary-points",
+      "title": "6,000 Anniversary Points",
+      "category": "other",
+      "source": "co-brand",
+      "description": "6,000 points every year on your Cardmember anniversary."
+    },
+    {
+      "id": "flight-discount",
+      "title": "15% Flight Discount",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive a 15% promo code each year on your Cardmember anniversary (Excludes Basic fare)."
+    },
+    {
+      "id": "alist-tqp-boost",
+      "title": "Spend Your Way to A-List",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn 1,500 tier qualifying points (TQPs) toward A-List status for every $5,000 spent in purchases annually accelerating your way to A-List status."
+    },
+    {
+      "id": "companion-pass-boost",
+      "title": "10,000 Companion Pass Qualifying Points Boost",
+      "category": "other",
+      "source": "co-brand",
+      "description": "10,000 Companion Pass® qualifying points boost each year."
+    },
+    {
+      "id": "boarding-benefit",
+      "title": "Boarding Benefit",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Cardmembers and up to 8 additional passengers in the same reservation will board with Group 5 giving them earlier access to overhead bins."
+    },
+    {
+      "id": "inflight-purchase-credit",
+      "title": "25% Back on Inflight Purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "25% back on inflight purchases."
+    },
+    {
+      "id": "lost-luggage-reimbursement",
+      "title": "Lost Luggage Reimbursement",
+      "category": "other",
+      "source": "network",
+      "description": "Provides reimbursement up to $3,000 per covered traveler for the cost to repair or replace checked or carry-on baggage that is lost, damaged or stolen during a covered trip."
+    },
+    {
+      "id": "baggage-delay-insurance",
+      "title": "Baggage Delay Insurance",
+      "category": "other",
+      "source": "network",
+      "description": "Reimburses you up to $100 a day for up to 3 days for essential purchases like toiletries and clothing when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Extends the time period of the manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from the date of purchase."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Covers your eligible new purchases for 120 days from the date of purchase against damage or theft up to $500 per item."
+    },
+    {
+      "id": "dashpass",
+      "title": "Complimentary DashPass",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Get one-year complimentary DashPass, membership for both DoorDash and Caviar, that provides unlimited deliveries with $0 delivery fees and lower service fees on eligible orders. Activate by Dec 31, 2027. Plus, DashPass members get up to $10 off quarterly on non-restaurant DoorDash orders through Dec 31, 2027."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "First checked bag free for Cardmembers and up to 8 additional passengers on same reservation. Save up to $90 round trip.",
+    "hotel_status": null,
+    "other": [
+      "Complimentary Preferred seat within 48 hours of departure",
+      "Boarding with Group 5 for cardmember and up to 8 passengers",
+      "25% back on inflight purchases",
+      "1,500 TQPs toward A-List status for every $5,000 spent",
+      "10,000 Companion Pass qualifying points boost each year",
+      "15% Flight Discount promo code each anniversary year"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/southwest/premier",
+  "image": {
+    "url": null,
+    "attribution": "© Chase",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/southwest/premier"
+  ],
+  "notes": "Product page fetched and verified. Annual fee $149. APR 19.24%-27.74% variable. No foreign transaction fees. 55,000 bonus points after $1,500 spend in 3 months. Network corrected to Visa Signature (Chase Southwest cards are Visa). Earn verified: 3x Southwest Airlines purchases, 2x grocery/dining on first $8,000 combined each account anniversary year, 1x other. Currency slug normalized to rapid_rewards_points to match sibling cards."
+}

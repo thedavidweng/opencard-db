@@ -1,0 +1,196 @@
+{
+  "id": "us-amex-hilton-honors",
+  "schema_version": "1.0.0",
+  "name": "Hilton Honors American Express Card",
+  "localized_names": {
+    "en": "Hilton Honors American Express Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR based on creditworthiness and the Prime Rate. Cash advance APR 28.74%. Penalty APR 29.99%. Accurate as of 07/23/26. APR not visible on product page; preserved from prior terms verification."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees from American Express with the Hilton Honors American Express Card."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated; Amex generally requires good to excellent credit."
+  },
+  "rewards": {
+    "currency": "hilton_honors_points",
+    "currency_label": "Hilton Honors Bonus Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 3,
+      "description": "3X Hilton Honors Bonus Points for all other eligible purchases on your Card"
+    },
+    "categories": [
+      {
+        "label": "Hilton hotels and resorts (eligible purchases made directly with hotels and resorts in the Hilton portfolio)",
+        "points_per_dollar": 7,
+        "cap": null
+      },
+      {
+        "label": "U.S. restaurants, including takeout and delivery",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "U.S. gas stations",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 100000,
+    "unit": "hilton_honors_bonus_points",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 100,000 Hilton Honors Bonus Points and a $100 Statement Credit after spending $2,000 in first 6 months. Signup bonus not visible on product page; preserved from prior verification.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "hilton-silver-status",
+      "title": "Hilton Honors Silver Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Hilton Honors Silver status with a 20% Bonus on all Base Points you earn on every stay. Spend $20,000 on eligible purchases on your Card in a calendar year and you can earn an upgrade to Hilton Honors Gold Status through the end of the next calendar year."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees from American Express with the Hilton Honors American Express Card."
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access and more",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members have access to purchase Amex Presale Tickets and Amex Reserved Tickets to select events across sports, music, and more. Plus, Card Members can enjoy additional perks when attending select events."
+    },
+    {
+      "id": "send-and-split",
+      "title": "Send & Split",
+      "category": "other",
+      "source": "issuer",
+      "description": "Send money and split purchases with other Venmo and PayPal users, all in the American Express App. Enrollment required."
+    },
+    {
+      "id": "amex-offers",
+      "title": "Earn More with Amex Offers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members can explore the Amex Offers available to add to their eligible Card and earn extra rewards on qualifying purchases made at select brands."
+    },
+    {
+      "id": "car-rental-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary coverage for damage or theft of rental vehicle when reserving and paying with the Card and declining CDW. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand."
+    },
+    {
+      "id": "global-assist",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 emergency assistance and coordination services when traveling more than 100 miles from home, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against accidental damage or theft for up to 90 days. Up to $1,000 per Covered Purchase, up to $50,000 per calendar year."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "American Express can work with you and the merchant to help resolve unrecognized or incorrect charges on your statement."
+    },
+    {
+      "id": "year-end-summary",
+      "title": "Year-End Summary",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get access to a Year-End Summary of charges so you can review your annual spending."
+    },
+    {
+      "id": "additional-cards",
+      "title": "Additional Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can add an Additional Card for anyone who makes purchases for you, like your child (13+), spouse, or employee."
+    },
+    {
+      "id": "instant-card-number",
+      "title": "Instant Card Number",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your application is approved and you are eligible, you can begin using your Card number online and through your digital wallet, including Apple Pay, Google Pay, Samsung Pay, PayPal, and Amazon Pay today."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Hilton Honors Silver Status (complimentary); upgrade to Gold after $20,000 spend in a calendar year",
+    "other": [
+      "No foreign transaction fees",
+      "Car Rental Loss and Damage Insurance",
+      "Global Assist Hotline"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors/",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/hilton-honors/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-credit-card/36182-11-0/"
+  ],
+  "notes": "Product name is not a Network Tier; network_tier is none for Amex network packages. Annual fee is $0 (no annual fee). APR and signup bonus not visible on product page; preserved from prior terms verification. Benefits, rewards, annual fee, and FX fee verified on official Amex product page on 2026-07-24.",
+  "segment": "personal"
+}

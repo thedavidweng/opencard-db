@@ -1,0 +1,139 @@
+{
+  "id": "us-amex-blue-business-cash",
+  "schema_version": "1.0.0",
+  "name": "Blue Business Cash Card from American Express",
+  "localized_names": {
+    "en": "Blue Business Cash Card from American Express"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not mentioned on product page."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "Cash back (statement credit)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on purchases thereafter (after $50,000 cap). Cash back earned is automatically credited to your statement."
+    },
+    "categories": [
+      {
+        "label": "Eligible Purchases",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 50000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back earned is automatically credited to your statement in the form of a statement credit, which is issued monthly.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "expanded-buying-power",
+      "title": "Expanded Buying Power",
+      "category": "other",
+      "source": "issuer",
+      "description": "Gives you the freedom to spend above your credit limit and get business done. The amount you can spend above your credit limit is flexible."
+    },
+    {
+      "id": "global-assist-hotline",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "Whenever you travel more than 100 miles from home, Global Assist Hotline is available for 24/7 emergency assistance and coordination services, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Add Employee Blue Business Cash Cards and you can earn cash back on employee purchases in the same way you do on your own Card, plus track expenses with alerts and summary reports."
+    },
+    {
+      "id": "connect-to-quickbooks",
+      "title": "Connect to QuickBooks",
+      "category": "other",
+      "source": "issuer",
+      "description": "Connect to QuickBooks can help you manage your employee Business Card expenses easily. Transactions and receipts automatically sent to your Intuit QuickBooks every day. Enrollment required."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "The terms of the Original Manufacturer's Warranty can be extended up to one additional year. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can help protect Covered Purchases for up to 90 days from the Covered Purchase date if it is stolen or accidentally damaged. Up to $1,000 per Covered Purchase, up to $50,000 per calendar year."
+    },
+    {
+      "id": "car-rental-loss-and-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can be covered for Damage to or Theft of a Rental Vehicle when you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver. Not available for vehicles rented in Australia, Italy, and New Zealand. Secondary coverage."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/blue-business-cash.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/"
+  ],
+  "notes": "Verified from official product page. Rewards currency is cash back (statement credit), not Membership Rewards. APR not shown on page.",
+  "segment": "business"
+}

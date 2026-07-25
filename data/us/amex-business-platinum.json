@@ -1,0 +1,390 @@
+{
+  "id": "us-amex-business-platinum",
+  "schema_version": "1.0.0",
+  "name": "Business Platinum Card®",
+  "localized_names": {
+    "en": "Business Platinum Card®"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 895,
+    "currency": "USD",
+    "first_year": 895,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product page; see American Express Rates & Fees for current APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees from American Express on purchases made outside of the United States."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Check if you're approved with no impact to your personal credit score. If you accept the Card, your credit score may be impacted."
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Flights and prepaid hotels booked through American Express Travel (including Fine Hotels + Resorts and The Hotel Collection)",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Key business categories or single purchases of $5K or more",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 2000000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "35% points back after using Pay with Points for flights booked through Amex Travel with selected qualifying airline, up to 1,000,000 points back per calendar year. Transfer points to airline and hotel partners (Marriott Bonvoy, Hilton Honors, British Airways, Delta Air Lines, etc.). Pay with Points at Checkout at Amazon.com, Saks.com, and more. Redeem for statement credits, gift cards, or deposits into Amex Business Checking.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "global-lounge-collection",
+      "title": "Global Lounge Collection",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Access to over 1,550 airport lounges worldwide including The Centurion Lounge, Delta Sky Club (10 visits per year when flying eligible Delta flights, with unlimited access after meeting eligible spend thresholds), Priority Pass Select (enrollment required), and other select partner lounges."
+    },
+    {
+      "id": "hotel-credit",
+      "title": "Up to $600 Hotel Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credits up to $300 semi-annually on prepaid bookings through Amex Travel with Fine Hotels + Resorts or The Hotel Collection. The Hotel Collection requires a minimum two-night stay."
+    },
+    {
+      "id": "fhr-value",
+      "title": "$550 in Value with Fine Hotels + Resorts",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary suite of benefits worth an average total value of $550 per stay when booking Fine Hotels + Resorts through Amex Travel."
+    },
+    {
+      "id": "hilton-credit",
+      "title": "Up to $200 Hilton Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Hilton for Business members can get statement credits of up to $50 quarterly on eligible purchases made directly with Hilton. Enrollment required."
+    },
+    {
+      "id": "airline-fee-credit",
+      "title": "Up to $200 Airline Fee Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credits up to $200 per calendar year for incidental fees charged by your one selected qualifying airline."
+    },
+    {
+      "id": "clear-plus-credit",
+      "title": "Up to $219 CLEAR+ Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credits up to $219 per calendar year for an auto-renewing CLEAR+ Membership, excluding taxes and fees."
+    },
+    {
+      "id": "leaders-club-sterling-status",
+      "title": "Leaders Club Sterling Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary Leaders Club Sterling Status from The Leading Hotels of the World, providing bespoke benefits at over 400 independent luxury hotels. Enrollment required."
+    },
+    {
+      "id": "thc-credit",
+      "title": "The Hotel Collection $100 Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive a $100 credit towards eligible charges when you book two nights or more with The Hotel Collection with AmexTravel.com."
+    },
+    {
+      "id": "tsa-precheck-global-entry-credit",
+      "title": "Fee Credit for Global Entry or TSA PreCheck",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive either a $120 statement credit for a Global Entry application fee or a statement credit up to $85 for a TSA PreCheck application fee every 4 years, when charged to the Business Platinum Card."
+    },
+    {
+      "id": "marriott-gold-elite-status",
+      "title": "Marriott Bonvoy Gold Elite Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive Marriott Bonvoy Gold Elite Status without meeting any stay requirements. Enrollment required."
+    },
+    {
+      "id": "hilton-gold-status",
+      "title": "Hilton Honors Gold Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "With Hilton Honors Gold status, enjoy benefits at hotels and resorts within the Hilton Portfolio and earn reward stays faster. Enrollment required."
+    },
+    {
+      "id": "car-rental-loss-and-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "When you use your Eligible Card to reserve and pay for the Entire Rental and decline the CDW, you can be covered for Damage to or Theft of a Rental Vehicle. Secondary coverage; does not include liability. Not available for vehicles rented in Australia, Italy, and New Zealand.",
+      "details": {
+        "type": "secondary",
+        "exclusions": "['Australia', 'Italy', 'New Zealand']"
+      }
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance – Premium Cards",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round-trip is paid for entirely with your Eligible Card and a covered reason delays your trip more than 6 hours, Trip Delay Insurance can help reimburse certain additional expenses purchased with your same Eligible Card, up to $500 per trip, maximum 2 claims per Eligible Card per 12 consecutive month period. Coverage provided by New Hampshire Insurance Company, an AIG Company.",
+      "details": {
+        "max_per_trip": 500,
+        "currency": "USD",
+        "delay_threshold_hours": 6,
+        "max_claims_per_12_months": 2
+      }
+    },
+    {
+      "id": "trip-cancellation-interruption-insurance",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If you purchase a round trip entirely with your Eligible Card and a covered reason cancels or interrupts your trip, can help reimburse non-refundable expenses purchased with the same Eligible Card, up to $10,000 per trip and up to $20,000 per Eligible Card per 12 consecutive month period. Coverage provided by New Hampshire Insurance Company, an AIG Company.",
+      "details": {
+        "max_per_trip": 10000,
+        "max_per_year": 20000,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for lost, damaged, or stolen Baggage when you purchase the Entire Fare for a Common Carrier Vehicle Ticket on an Eligible Card. Up to $2,000 for checked Baggage and up to a combined maximum of $3,000 for checked and carry-on Baggage. $3,000 aggregate limit per Covered Trip. New York State residents: $2,000 per bag/suitcase limit with $10,000 aggregate maximum per Covered Trip.",
+      "details": {
+        "checked_max": 2000,
+        "combined_max": 3000,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees from American Express when using the Business Platinum Card on purchases made outside of the United States."
+    },
+    {
+      "id": "car-rental-privileges",
+      "title": "Car Rental Privileges - Avis, Hertz, National",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary premium status for select car rental programs. Card Members must enroll through their American Express online account."
+    },
+    {
+      "id": "dell-credit",
+      "title": "Up to $1,150 Dell Technologies Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credits up to $150 on U.S. purchases directly with Dell Technologies, and an additional $1,000 statement credit after spending $5,000 or more on those purchases, per calendar year. Enrollment required."
+    },
+    {
+      "id": "chatgpt-business-credit",
+      "title": "$300 ChatGPT Business Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $300 in statement credits per calendar year on U.S. purchases of ChatGPT Business on the Business Platinum Card. Enrollment required."
+    },
+    {
+      "id": "adobe-credit",
+      "title": "$250 Adobe Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$250 statement credit per calendar year after spending $600 or more on U.S. purchases directly with Adobe in a calendar year. Enrollment required."
+    },
+    {
+      "id": "indeed-credit",
+      "title": "Up to $360 Indeed Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $90 in statement credits quarterly for purchases with Indeed on the Card. Up to $360 back per year. Enrollment required."
+    },
+    {
+      "id": "wireless-credit",
+      "title": "Up to $120 Wireless Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credits up to $10 per month for wireless phone service purchases made directly with a U.S. wireless telephone service provider. Enrollment required."
+    },
+    {
+      "id": "platinum-nights-resy",
+      "title": "Platinum Nights by Resy",
+      "category": "other",
+      "source": "issuer",
+      "description": "Special access to reservations on select nights in select cities at participating in-demand Resy restaurants. Add eligible Card to Resy profile to discover and book Platinum Nights reservations."
+    },
+    {
+      "id": "global-dining-access-resy",
+      "title": "Global Dining Access by Resy",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to exclusive reservations, Priority Notify, and a badge on your Resy profile. Visit resy.com/globaldiningaccess or the Resy app and add your Business Platinum Card to your Resy profile."
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to purchase Amex Presale Tickets and Amex Reserved Tickets to select events across sports, music, and more."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursed for repair or replacement of damaged or stolen cell phone, maximum up to $800 per claim with a limit of 2 approved claims per 12-month period. $50 deductible per approved claim. Cell phone line must be listed on wireless bill and prior month's wireless bill paid by Eligible Card Account. Coverage provided by New Hampshire Insurance Company, an AIG Company.",
+      "details": {
+        "max_per_claim": 800,
+        "deductible": 50,
+        "max_claims_per_12_months": 2,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to one extra year added to the Original Manufacturer's Warranty. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "When you use your Eligible Card for Covered Purchases, your Membership can help protect them for up to 90 days from the Covered Purchase date. Up to $10,000 per Covered Purchase, up to $50,000 per calendar year.",
+      "details": {
+        "max_per_purchase": 10000,
+        "max_per_year": 50000,
+        "currency": "USD",
+        "coverage_days": 90
+      }
+    },
+    {
+      "id": "premium-global-assist-hotline",
+      "title": "Premium Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 medical, legal, financial, and other select emergency coordination and assistance services while traveling more than 100 miles from home. Emergency medical transportation assistance may be provided at no cost only if approved and coordinated by Premium Global Assist Hotline."
+    },
+    {
+      "id": "platinum-travel-service",
+      "title": "Platinum Travel Service",
+      "category": "other",
+      "source": "issuer",
+      "description": "Platinum Travel Consultants specialize in providing custom itineraries and tailored recommendations to help you make the most of your travels."
+    },
+    {
+      "id": "pay-over-time",
+      "title": "Pay Over Time",
+      "category": "other",
+      "source": "issuer",
+      "description": "Ability to carry a balance with interest up to your Pay Over Time Limit."
+    },
+    {
+      "id": "no-preset-spending-limit",
+      "title": "No Preset Spending Limit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Spending limit adapts based on factors such as your purchase, payment, and credit history rather than having a set limit."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Annual Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "Stay on top of what employees are buying with real-time Merchant Category Alerts. No annual fee option for employee cards."
+    },
+    {
+      "id": "one-ap-statement-credit",
+      "title": "$2,400 American Express One AP Statement Credit (after $250K spend)",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Unlock up to $2,400 in statement credits for use in the next calendar year on American Express One AP monthly fees after spending $250,000 on eligible purchases on the Business Platinum Card in this calendar year."
+    },
+    {
+      "id": "amex-travel-flight-credit",
+      "title": "$1,200 Amex Travel Online Flight Statement Credit (after $250K spend)",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Unlock up to $1,200 in statement credits on flights booked on AmexTravel.com with the Business Platinum Card, for use in the next calendar year, after spending $250,000 in eligible purchases in this calendar year."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Global Lounge Collection (Centurion Lounge, Delta Sky Club, Priority Pass Select, partner lounges)",
+      "notes": "Access to over 1,550 airport lounges worldwide. 10 complimentary Delta Sky Club visits per year when flying eligible Delta flights. Priority Pass Select enrollment required."
+    },
+    "tsa_precheck_credit": {
+      "amount": 85,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "global_entry_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": "Marriott Bonvoy Gold Elite Status and Hilton Honors Gold Status",
+    "other": [
+      "Up to $600 hotel credit on FHR/THC bookings",
+      "Up to $200 airline fee credit",
+      "Up to $219 CLEAR+ credit",
+      "Up to $200 Hilton credit",
+      "Up to $1,150 Dell Technologies credit",
+      "$300 ChatGPT Business credit",
+      "$250 Adobe credit",
+      "Up to $360 Indeed credit",
+      "Up to $120 wireless credit",
+      "35% points back on Pay with Points for flights",
+      "Leaders Club Sterling Status",
+      "Car Rental Privileges (Avis, Hertz, National)",
+      "$2,400 One AP credit + $1,200 Amex Travel flight credit after $250K spend"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-platinum.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-platinum-credit-card-amex/"
+  ],
+  "notes": "Business Platinum Card from American Express. $895 annual fee. No foreign transaction fees. 5X on flights and prepaid hotels through Amex Travel, 2X on key business categories (up to $2M/calendar year), 1X on other purchases. 35% points back on Pay with Points for flights. Global Lounge Collection with 1,550+ lounges. Marriott Bonvoy Gold + Hilton Honors Gold status. Multiple statement credits: $600 hotel, $200 airline fee, $219 CLEAR+, $200 Hilton, $1,150 Dell, $300 ChatGPT, $250 Adobe, $360 Indeed, $120 wireless. No signup bonus or APR visible on product page.",
+  "segment": "business"
+}

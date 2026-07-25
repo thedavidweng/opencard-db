@@ -1,0 +1,238 @@
+{
+  "id": "us-chase-ihg-premier",
+  "schema_version": "1.0.0",
+  "name": "IHG One Rewards Premier Credit Card",
+  "localized_names": {
+    "en": "IHG One Rewards Premier Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 99,
+    "currency": "USD",
+    "first_year": 99,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Purchase and cash advance APRs vary with the market based on the Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fee: None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ihg_one_rewards_points",
+    "currency_label": "IHG One Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 3,
+      "description": "3x points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Qualifying purchases at IHG Hotels and Resorts",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Travel excluding IHG purchases that qualify for 10x",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Gas stations",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Dining at restaurants including takeout and eligible delivery services",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points earned during a billing cycle are automatically transferred to IHG One Rewards after the end of each billing cycle.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 140000,
+    "unit": "points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 140,000 bonus points after spending $3,000 on purchases in the first 3 months from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "authorized-user-bonus",
+      "title": "Authorized user bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Earn 10,000 bonus points after adding an authorized user in the first 3 months from account opening."
+    },
+    {
+      "id": "platinum-elite-status",
+      "title": "Automatic Platinum Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic IHG One Rewards Platinum Elite status as long as you remain an IHG One Rewards Premier cardmember."
+    },
+    {
+      "id": "anniversary-free-night",
+      "title": "Anniversary Free Night",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Anniversary Free Night each account anniversary year with a current point redemption cap of 40,000 points; cardmembers can add points for hotels above that level."
+    },
+    {
+      "id": "annual-spend-credit",
+      "title": "$100 statement credit and 10,000 bonus points",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn a $100 statement credit and 10,000 bonus points each calendar year after spending $20,000 in purchases."
+    },
+    {
+      "id": "fourth-reward-night-free",
+      "title": "Redeem 3 Nights, Get 4th Night Free",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive every fourth Reward Night free on eligible IHG reward stays of four or more consecutive nights at the same property."
+    },
+    {
+      "id": "diamond-elite-status",
+      "title": "Diamond Elite Status after annual spend",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Qualify for Diamond Elite Status through December 31 of the following year after $40,000 or more in purchases each calendar year."
+    },
+    {
+      "id": "save-20-percent-points-purchases",
+      "title": "Save 20% on Reward Points Purchases",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Save 20% when you purchase points with your IHG One Rewards Premier credit card."
+    },
+    {
+      "id": "early-access-reward-night-sales",
+      "title": "Early Access to IHG Reward Night Sales",
+      "category": "other",
+      "source": "co-brand",
+      "description": "As an IHG One Rewards Cardmember, you are eligible for early access to Reward Night sales each year."
+    },
+    {
+      "id": "global-entry-tsa-nexus",
+      "title": "Global Entry, TSA PreCheck or NEXUS statement credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive a statement credit of up to $120 every four years as reimbursement for a Global Entry, TSA PreCheck or NEXUS application fee charged to the card."
+    },
+    {
+      "id": "united-travelbank-credit",
+      "title": "United TravelBank Cash",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive up to $50 United TravelBank Cash each calendar year after registering the card with your MileagePlus account."
+    },
+    {
+      "id": "baggage-delay",
+      "title": "Baggage Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses up to $100 a day for up to 3 days for essential purchases when baggage is delayed over 6 hours."
+    },
+    {
+      "id": "lost-luggage",
+      "title": "Lost Luggage Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Provides reimbursement up to $3,000 per covered traveler for lost, damaged or stolen checked or carry-on baggage during a covered trip."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covers eligible new purchases for 120 days against damage or theft up to $500 per item."
+    },
+    {
+      "id": "trip-cancellation-interruption",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses eligible prepaid, non-refundable travel expenses up to $5,000 per covered traveler and $10,000 per trip for covered cancellations or interruptions."
+    },
+    {
+      "id": "doordash-dashpass",
+      "title": "DoorDash DashPass",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get one-year complimentary DashPass for both DoorDash and Caviar, providing unlimited deliveries with $0 delivery fees and lower service fees on eligible orders. Activate by Dec 31, 2027. Plus, DashPass members get up to $10 off quarterly on non-restaurant DoorDash orders through Dec 31, 2027."
+    },
+    {
+      "id": "instacart-credit",
+      "title": "Instacart+ and monthly Instacart credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive a monthly $10 Instacart credit, up to $120 annually, plus a complimentary 3-month Instacart+ membership. Benefits end 12/31/27."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every_four_years"
+    },
+    "global_entry_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every_four_years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": "Automatic IHG One Rewards Platinum Elite Status; Diamond Elite Status after $40,000 in purchases each calendar year.",
+    "other": [
+      "Anniversary Free Night with a current point redemption cap of 40,000 points",
+      "Redeem 3 Nights, Get 4th Night Free on eligible IHG reward stays",
+      "Up to $50 United TravelBank Cash each calendar year after registration",
+      "No foreign transaction fees",
+      "Save 20% on Reward Points Purchases",
+      "Early Access to IHG Reward Night Sales",
+      "DoorDash DashPass (activate by Dec 31, 2027)",
+      "Instacart monthly $10 credit up to $120 annually (ends 12/31/27)"
+    ]
+  },
+  "official_url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
+  "image": {
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ihg_premier_card.png",
+    "attribution": "© JPMorgan Chase Bank, N.A.",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC60778.html",
+    "https://creditcards.chase.com/mastercard-credit-cards"
+  ],
+  "notes": "Offer details, APRs and benefits can change; verify on Chase before publishing comparisons.",
+  "segment": "personal"
+}

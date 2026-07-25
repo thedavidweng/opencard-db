@@ -1,0 +1,339 @@
+{
+  "id": "us-amex-delta-skymiles-reserve",
+  "schema_version": "1.0.0",
+  "name": "Delta SkyMiles® Reserve American Express Card",
+  "localized_names": {
+    "en": "Delta SkyMiles® Reserve American Express Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 650,
+    "currency": "USD",
+    "first_year": 650,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product page and no terms URL provided in batch. See American Express for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Enjoy international travel without additional fees on purchases made abroad."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "skymiles",
+    "currency_label": "Delta SkyMiles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X miles on all other eligible purchases. There's no limit to how many you can earn."
+    },
+    "categories": [
+      {
+        "label": "Delta purchases made directly with Delta (including Delta flights and Delta Vacations)",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "SkyMiles program rules apply. Card Members can use Pay with Miles: take up to $50 off the cost of your ticket for every 5,000 miles you redeem when you book on delta.com.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "companion-certificate",
+      "title": "Companion Certificate",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy a Companion Certificate on a Delta First, Delta Comfort, or Delta Main round-trip flight within the U.S. and to Mexico, the Caribbean, or Central America each year after renewal of your Card. The Companion Certificate requires payment of government-imposed taxes and fees of between $22 and $250 (for itineraries with up to four flight segments)."
+    },
+    {
+      "id": "mqd-headstart",
+      "title": "MQD Headstart",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Receive $2,500 Medallion Qualification Dollars each Medallion Qualification Year and get closer to elevated Status for next Medallion Year."
+    },
+    {
+      "id": "mqd-boost",
+      "title": "MQD Boost",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Get $1 Medallion Qualification Dollar for each $10 in purchases on your Card in a calendar year, getting you closer to Medallion Status for next Medallion Year quicker."
+    },
+    {
+      "id": "delta-sky-club-access",
+      "title": "Delta Sky Club Access",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "Card Members enjoy 15 Visits each Medallion Year to the Delta Sky Club when flying Delta and can unlock Unlimited Delta Sky Club Access after spending $75,000 in purchases on your Card during a calendar year."
+    },
+    {
+      "id": "centurion-lounge-access",
+      "title": "Complimentary Access to The Centurion Lounge",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Enjoy complimentary access to The Centurion Lounge when you book your Delta flight with your Reserve Card."
+    },
+    {
+      "id": "resy-credit",
+      "title": "$240 Resy Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "With your enrolled Card, you can earn up to $20 per month in statement credits on eligible purchases at over 10,000 qualifying U.S. Resy restaurants."
+    },
+    {
+      "id": "rideshare-credit",
+      "title": "$120 Rideshare Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn up to $10 in statement credits each month after using your Card on U.S. rideshare purchases with select providers. That's up to $120 back each year. Enrollment required."
+    },
+    {
+      "id": "takeoff-15",
+      "title": "TakeOff 15",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Take 15% off anytime you book Award Travel with miles on Delta flights when using delta.com and the Fly Delta app. Discount not applicable to partner-operated flights or to taxes and fees."
+    },
+    {
+      "id": "upgrade-priority",
+      "title": "Upgrade Priority",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive upgrade priority over others with your Medallion tier, product and fare experience purchased, and Million Miler milestone when you fly with Delta."
+    },
+    {
+      "id": "complimentary-upgrade-list",
+      "title": "Complimentary Upgrade List",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Delta SkyMiles Reserve Card Members with an eligible ticket will be added to the Complimentary Upgrade list, after Delta SkyMiles Medallion Members."
+    },
+    {
+      "id": "global-entry-tsa-credit",
+      "title": "Fee Credit for Global Entry or TSA PreCheck",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive either a $120 statement credit for a Global Entry application fee or a statement credit up to $85 for a TSA PreCheck application fee every 4 years, when charged to your Card. Card Members approved for Global Entry will also receive access to TSA PreCheck at no additional cost."
+    },
+    {
+      "id": "delta-stays-credit",
+      "title": "$200 Delta Stays Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Elevate your travel experience with an annual statement credit of up to $200 after using your Card to book prepaid hotels or vacation rentals through Delta Stays on delta.com."
+    },
+    {
+      "id": "hertz-presidents-circle-status",
+      "title": "Hertz President's Circle Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Transform your car rental experience with Hertz President's Circle Status, compliments of your Card. Enrollment in the Hertz Gold+ program is required."
+    },
+    {
+      "id": "checked-bag-fee-waiver",
+      "title": "First Bag Free and NEW Second Bag Free",
+      "category": "waiver",
+      "source": "co-brand",
+      "description": "Enjoy your first checked bag free on Delta flights worldwide – and on domestic Delta flights, your second bag flies free too."
+    },
+    {
+      "id": "pay-with-miles",
+      "title": "Pay with Miles",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Take up to $50 off the cost of your ticket for every 5,000 miles you redeem with Pay with Miles when you book on delta.com."
+    },
+    {
+      "id": "priority-boarding",
+      "title": "Zone 5 Priority Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive Zone 5 Priority Boarding on Delta flights; board early, stow your carry-on bag and settle in sooner."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for lost, damaged, or stolen Baggage when purchasing the Entire Fare for a Common Carrier Vehicle ticket on an Eligible Card. Up to $1,250 for carry-on Baggage and up to $500 for checked Baggage. For New York State residents, there is a $10,000 aggregate maximum limit per Covered Trip."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy international travel without additional fees on purchases made abroad."
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round-trip is paid for entirely with your Eligible Card and a covered reason delays your trip more than 6 hours, Trip Delay Insurance can help reimburse certain additional expenses, up to $500 per trip, maximum 2 claims per Eligible Card per 12 consecutive month period. Coverage is provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "trip-cancellation-insurance",
+      "title": "Trip Cancellation and Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a covered reason cancels or interrupts your trip, reimburses non-refundable travel expenses up to $10,000 per trip and up to $20,000 per Eligible Card per 12 consecutive month period. Coverage is provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary coverage for damage or theft of rental vehicle when reserving and paying with the Card and declining CDW. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand."
+    },
+    {
+      "id": "premium-global-assist",
+      "title": "Premium Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 emergency assistance and coordination services when traveling more than 100 miles from home, including medical, legal, and financial referrals. Emergency medical transportation assistance may be provided at no cost only if approved and coordinated by Premium Global Assist Hotline."
+    },
+    {
+      "id": "inflight-purchase-credit",
+      "title": "20% Back on In-Flight Purchases",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Receive a 20% savings in the form of a statement credit after you use your Card on eligible Delta in-flight purchases of food and beverages."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to one extra year added to the Original Manufacturer's Warranty. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories."
+    },
+    {
+      "id": "global-dining-access",
+      "title": "Global Dining Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Unlock access to exclusive reservations and special dining experiences with Global Dining Access by Resy when you add your Card to your Resy profile."
+    },
+    {
+      "id": "return-protection",
+      "title": "Return Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "May return eligible purchases to American Express if the seller won't take them back up to 90 days from the date of purchase. American Express may refund the full purchase price up to $300 per item, up to a maximum of $1,000 per calendar year per Card account."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against accidental damage, theft, or loss for up to 90 days. Up to $10,000 per Covered Purchase, up to $50,000 per calendar year."
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members can access Amex Presale Tickets and Amex Reserved Tickets to select events across sports, music, and more."
+    },
+    {
+      "id": "venue-collection",
+      "title": "American Express Venue Collection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy an enhanced experience at select stadiums and arenas with on-site benefits including dedicated entrances or fast lanes. Enroll your Card and get 10% back on qualifying concessions purchases up to $250 per calendar year."
+    },
+    {
+      "id": "send-and-split",
+      "title": "Send & Split",
+      "category": "other",
+      "source": "issuer",
+      "description": "Send money and split purchases with other Venmo and PayPal users, all in the American Express App. Enrollment required."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses repair or replacement costs for damaged or stolen cell phone for a maximum of up to $800 per claim with a limit of 2 approved claims per 12-month period. A $50 deductible applies. Coverage is provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue."
+    },
+    {
+      "id": "year-end-summary",
+      "title": "Year-End Summary",
+      "category": "other",
+      "source": "issuer",
+      "description": "The Online Year-End Summary, typically available in January, reflects charges posted to your account from January 1st through December 31st of the prior year."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Delta Sky Club: 15 visits per Medallion Year when flying Delta; unlimited access after $75,000 spend in a calendar year. The Centurion Lounge: complimentary access when booking Delta flight with Reserve Card."
+    },
+    "tsa_precheck_credit": {
+      "amount": 85.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": "First checked bag free on Delta flights worldwide; second checked bag free on domestic Delta flights.",
+    "hotel_status": null,
+    "other": [
+      "Zone 5 Priority Boarding on eligible Delta flights",
+      "TakeOff 15 award travel discount on eligible Delta-operated award tickets",
+      "Pay with Miles on eligible Delta flights",
+      "No foreign transaction fees",
+      "Companion Certificate each year after Card renewal (Delta First/Comfort/Main)",
+      "MQD Headstart ($2,500 MQD) and MQD Boost ($1 MQD per $10 spent)",
+      "Upgrade Priority over others with same Medallion tier",
+      "Complimentary Upgrade List eligibility",
+      "Hertz President's Circle Status",
+      "$240 Resy Credit ($20/month)",
+      "$120 Rideshare Credit ($10/month)",
+      "$200 Delta Stays Credit",
+      "Premium Global Assist Hotline",
+      "Trip Delay Insurance ($500/trip)",
+      "Trip Cancellation and Interruption Insurance ($10,000/trip)",
+      "Return Protection ($300/item, $1,000/year)",
+      "Global Dining Access by Resy",
+      "Cell Phone Protection ($800/claim)"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/",
+  "image": {
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000270_480x304_straight_withname.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-reserve-american-express-card/"
+  ],
+  "notes": "Product name Reserve is not a Network Tier; network_tier is none for Amex network packages. Annual fee $650. Rewards currency corrected from membership_rewards to skymiles based on product page. APR not visible on product page and no terms URL provided; signup_bonus not visible on product page. Benefits, rewards, FX fee, lounge access, and annual fee verified on official Amex product page on 2026-07-24.",
+  "segment": "personal"
+}

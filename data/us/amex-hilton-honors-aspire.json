@@ -1,0 +1,285 @@
+{
+  "id": "us-amex-hilton-honors-aspire",
+  "schema_version": "1.0.0",
+  "name": "Hilton Honors American Express Aspire Card",
+  "localized_names": {
+    "en": "Hilton Honors American Express Aspire Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 550,
+    "currency": "USD",
+    "first_year": 550,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR based on creditworthiness and the Prime Rate. Cash advance APR 28.74%. Penalty APR 29.99%. Accurate as of 07/24/26. APR not visible on product page; preserved from prior terms verification."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees from American Express."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Not explicitly stated; Amex generally requires good to excellent credit."
+  },
+  "rewards": {
+    "currency": "hilton_honors_points",
+    "currency_label": "Hilton Honors Bonus Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 3,
+      "description": "3X Points on all other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Hilton hotels and resorts (eligible purchases made directly with hotels and resorts within the Hilton Portfolio)",
+        "points_per_dollar": 14,
+        "cap": null
+      },
+      {
+        "label": "Select travel: flights booked directly with airlines or AmexTravel.com, and car rentals booked directly with select car rental companies",
+        "points_per_dollar": 7,
+        "cap": null
+      },
+      {
+        "label": "U.S. restaurants, including takeout and delivery",
+        "points_per_dollar": 7,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeemable for reward nights, car rentals, shopping, and exclusive experiences through Hilton Honors.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 175000,
+    "unit": "hilton_honors_bonus_points",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 175,000 Hilton Honors Bonus Points after spending $6,000 in first 6 months. Signup bonus not visible on product page; preserved from prior verification.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "hilton-diamond-status",
+      "title": "Hilton Honors Diamond Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Diamond status with your Card. Diamond status gives you a 100% Bonus on Base Points you earn on every stay, Premium Wi-Fi and space-available room upgrades at select properties, executive lounge access at select properties, and more."
+    },
+    {
+      "id": "hilton-resort-credit",
+      "title": "$400 Hilton Resort Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Up to $200 in statement credits semi-annually, for up to $400 back per year, on eligible purchases made directly with participating Hilton Resorts using your Card."
+    },
+    {
+      "id": "annual-free-night",
+      "title": "Annual Free Night Reward",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy an Annual Free Night Reward from Hilton Honors in your first year of Card Membership and every year upon Card renewal. Plus, each calendar year, you can earn a Free Night Reward after you spend $30,000 in purchases on your Card and earn another Free Night Reward after you spend an additional $30,000 in purchases on your Card."
+    },
+    {
+      "id": "flight-credit",
+      "title": "$200 Flight Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Get up to $50 in statement credits each quarter, for a total of up to $200 back each year, on flight purchases made directly with an airline, through AmexTravel.com, or through the Amex Travel App using your Card."
+    },
+    {
+      "id": "clear-plus-credit",
+      "title": "$209 CLEAR+ Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive up to $209 in statement credits per calendar year after you pay for your CLEAR+ Membership (subject to auto-renewal) with the Hilton Honors American Express Aspire Card."
+    },
+    {
+      "id": "property-credit",
+      "title": "$100 Property Credit at Waldorf Astoria & Conrad",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Receive up to a $100 credit for qualifying charges at Waldorf Astoria Hotels & Resorts and Conrad Hotels & Resorts properties when you book a 2 night minimum stay with your Card at HiltonHonorsAspireCard.com and select the Aspire Card Benefit rate option."
+    },
+    {
+      "id": "national-car-rental-status",
+      "title": "National Car Rental Emerald Club Executive Status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary National Car Rental Emerald Club Executive status, including perks like Executive Area Access (for full-size reservations and above) in the USA and Canada. Card Members must enroll through their American Express online account."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy international travel without additional fees on purchases made abroad."
+    },
+    {
+      "id": "car-rental-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Secondary coverage for damage or theft of rental vehicle when reserving and paying with the Card and declining CDW. Coverage is not available for vehicles rented in Australia, Italy, and New Zealand."
+    },
+    {
+      "id": "premium-global-assist",
+      "title": "Premium Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 medical, legal, financial, and other select emergency coordination and assistance services while traveling more than 100 miles from home. Emergency medical transportation assistance may be provided at no cost only if approved and coordinated by Premium Global Assist Hotline."
+    },
+    {
+      "id": "baggage-insurance",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for lost, damaged, or stolen Baggage. Up to a combined maximum of $3,000 for checked and carry-on Baggage, which includes up to $2,000 for checked Baggage and up to $1,000 for any High Risk Items. Subject to a $3,000 aggregate limit per Covered Trip. For New York State residents, there is a $2,000 per bag/suitcase limit with a $10,000 aggregate maximum per Covered Trip."
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round-trip is paid for entirely with your Eligible Card and a covered reason delays your trip more than 6 hours, Trip Delay Insurance can help reimburse certain additional expenses, up to $500 per trip, maximum 2 claims per Eligible Card per 12 consecutive month period. Coverage is provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "trip-cancellation-insurance",
+      "title": "Trip Cancellation & Interruption Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a covered reason cancels or interrupts your trip, reimburses non-refundable expenses up to $10,000 per trip and up to $20,000 per Eligible Card per 12 consecutive month period. Coverage is provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects covered purchases against accidental damage, theft, or loss for up to 90 days. Up to $10,000 per Covered Purchase, up to $50,000 per calendar year."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Matches the Original Manufacturer's Warranty for up to one additional year. Applies to warranties of 5 years or less. Coverage limited to the actual amount charged on your Card up to $10,000 per item and $50,000 per calendar year."
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members have access to purchase Amex Presale Tickets and Amex Reserved Tickets to select events across sports, music, and more."
+    },
+    {
+      "id": "return-protection",
+      "title": "Return Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "May return eligible purchases to American Express if the seller won't take them back up to 90 days from the date of purchase. American Express may refund the full purchase price up to $300 per item, up to a maximum of $1,000 per calendar year per Card account."
+    },
+    {
+      "id": "global-dining-access",
+      "title": "Global Dining Access by Resy",
+      "category": "other",
+      "source": "issuer",
+      "description": "Special access to sought-after U.S. Resy restaurants when you add your Card to your Resy profile. Access to exclusive reservations, premium dining experiences, Priority Notify, and more."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimburses repair or replacement costs for damaged or stolen cell phone for a maximum of $800 per claim with a limit of 2 approved claims per 12-month period. A $50 deductible applies. Coverage is provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "send-and-split",
+      "title": "Send & Split",
+      "category": "other",
+      "source": "issuer",
+      "description": "Send money and split purchases with other Venmo and PayPal users, all in the American Express App. Enrollment required."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "American Express can work with you and the merchant to help resolve unrecognized or incorrect charges on your statement."
+    },
+    {
+      "id": "year-end-summary",
+      "title": "Year-End Summary",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get access to a Year-End Summary of charges so you can review your annual spending."
+    },
+    {
+      "id": "additional-cards",
+      "title": "Additional Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can add an Additional Card for anyone who makes purchases for you."
+    },
+    {
+      "id": "instant-card-number",
+      "title": "Instant Card Number",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your application is approved and you are eligible, you can begin using your Card number online and through your digital wallet, including Apple Pay, Google Pay, Samsung Pay, PayPal, and Amazon Pay today."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Hilton Honors Diamond Status (complimentary)",
+    "other": [
+      "No foreign transaction fees",
+      "$400 Hilton Resort Credit (semi-annually)",
+      "$200 Flight Credit (quarterly)",
+      "$209 CLEAR+ Credit",
+      "$100 Property Credit at Waldorf Astoria & Conrad",
+      "Annual Free Night Reward + spend-based Free Night Rewards ($30K and $60K)",
+      "National Car Rental Emerald Club Executive Status",
+      "Premium Global Assist Hotline",
+      "Trip Delay Insurance ($500/trip)",
+      "Trip Cancellation & Interruption Insurance ($10,000/trip)",
+      "Return Protection ($300/item, $1,000/year)",
+      "Global Dining Access by Resy",
+      "Cell Phone Protection ($800/claim)"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/hilton-honors-aspire/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/member/terms/hilton-honors-aspire-credit-card/36182-11-0"
+  ],
+  "notes": "Product name Aspire is not a Network Tier; network_tier is none for Amex network packages. Annual fee $550. CORRECTION: CLEAR+ Credit is $209 (not $219 as previously recorded) — verified from product page on 2026-07-24. Purchase Protection limit corrected to $10,000 per Covered Purchase (Aspire-specific). APR and signup bonus not visible on product page; preserved from prior terms verification.",
+  "segment": "personal"
+}

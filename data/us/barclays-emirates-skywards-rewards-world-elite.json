@@ -1,0 +1,156 @@
+{
+  "id": "us-barclays-emirates-skywards-rewards-world-elite",
+  "schema_version": "1.0.0",
+  "name": "Emirates Skywards Rewards World Elite Mastercard",
+  "localized_names": {
+    "en": "Emirates Skywards Rewards World Elite Mastercard"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 99.0,
+    "currency": "USD",
+    "first_year": 99.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for 12 billing cycles on balance transfers within 45 days of account opening, then 19.49% to 29.49%. Cash advance APR 29.74% variable. Minimum monthly interest charge $1.00. Balance transfer fee 5% (min $5). Cash advance fee 5% (min $10)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "skywards_miles",
+    "currency_label": "Skywards Miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1 Skywards Mile on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Emirates purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Eligible travel purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Skywards Miles don't expire while your account is open. No limit to the number of Skywards Miles you can earn.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 40000.0,
+    "unit": "miles",
+    "spend_required": 3000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 40,000 bonus Skywards Miles after spending $3,000 on purchases in the first 90 days. Plus enjoy Emirates Skywards Silver tier membership during your first year.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "emirates-silver-tier",
+      "title": "Emirates Skywards Silver Tier Membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy Emirates Skywards Silver tier membership during your first year, and retain your tier status by spending $20,000 each cardmembership year."
+    },
+    {
+      "id": "miles-never-expire",
+      "title": "Skywards Miles Don't Expire",
+      "category": "other",
+      "source": "issuer",
+      "description": "The Skywards Miles you earn will not expire as long as your account remains open."
+    },
+    {
+      "id": "no-limit-miles",
+      "title": "No Limit on Skywards Miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "There is no limit to the number of Skywards Miles you can earn as long as your account remains open, active and in good standing."
+    },
+    {
+      "id": "buy-gift-miles-savings",
+      "title": "25% Savings When You Buy or Gift Miles",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a 25% savings when you Buy Skywards Miles for yourself or Gift Miles."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "complimentary-fico-score",
+      "title": "Complimentary FICO® Credit Score",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary online access to your FICO® Credit Score. Keep an eye on your credit score and get alerts when we learn that your score has changed."
+    },
+    {
+      "id": "zero-fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for charges you did not authorize."
+    },
+    {
+      "id": "intro-bt-apr",
+      "title": "Introductory APR on Balance Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% intro APR for 12 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 19.49% to 29.49%."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Emirates Skywards Silver tier membership during first year",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://cards.barclaycardus.com/banking/cards/emirates-skywards-rewards-world-elite-mastercard/",
+  "image": {
+    "url": null,
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://cards.barclaycardus.com/banking/cards/emirates-skywards-rewards-world-elite-mastercard/"
+  ],
+  "notes": "Verified from official Barclays product page. Annual fee $99, purchase APR 19.49%-29.49% variable, cash advance 29.74% variable, FX fee 0%. Rewards: 3X Skywards Miles on Emirates purchases, 2X on eligible travel, 1X on all other. 40,000 bonus miles after $3,000 spend in 90 days + Emirates Silver tier first year."
+}

@@ -1,0 +1,95 @@
+{
+  "id": "us-us-bank-smartly",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Smartly™ Visa Signature® Card",
+  "localized_names": {
+    "en": "U.S. Bank Smartly™ Visa Signature® Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "0% intro APR on purchases and balance transfers for the first 12 billing cycles. After that, a variable APR applies (specific rate shown as placeholder on page, not a numeric value)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Not stated on product page. Preserved as null — not re-verified."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "In general, our credit card products are for customers with a credit score in the good to excellent range."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 2.0,
+      "description": "Unlimited 2% cash back on every purchase with no caps. These cash back rates can be obtained when rewards are redeemed into an eligible U.S. Bank deposit account."
+    },
+    "categories": [],
+    "redemption_notes": "Get cash back directly deposited into U.S. Bank checking or savings account, as a statement credit, a rewards card, merchant gift cards and more. Cash back rates obtained when rewards are redeemed into an eligible U.S. Bank deposit account."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "cashback-deals",
+      "title": "Cash-back deals from brands you love",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get cash back from the brands you love via Cash-back deals, personalized offers based on your previous spending. Access them through the U.S. Bank Mobile App or online banking."
+    },
+    {
+      "id": "flexible-redemption",
+      "title": "Flexible redemption",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get your cash back directly deposited into your U.S. Bank checking or savings account, as a statement credit, a rewards card, merchant gift cards and more."
+    },
+    {
+      "id": "extendpay",
+      "title": "Pay over time with U.S. Bank ExtendPay® Plan",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html",
+  "image": {
+    "url": null,
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.usbank.com/credit-cards/bank-smartly-visa-signature-credit-card.html"
+  ],
+  "notes": "Verified from official U.S. Bank product page. Visa Signature confirmed from page title. APR specific rate not available (shown as placeholder on page). Credit required 'good to excellent' from FAQ section."
+}

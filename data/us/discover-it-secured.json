@@ -1,0 +1,143 @@
+{
+  "id": "us-discover-it-secured",
+  "schema_version": "1.0.0",
+  "name": "Discover it Secured Cash Back Credit Card",
+  "localized_names": {
+    "en": "Discover it Secured Cash Back Credit Card"
+  },
+  "country": "us",
+  "issuer": "Discover",
+  "issuer_id": "discover",
+  "network": "discover",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product page or terms page. Both pages returned same content without explicit APR numbers."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not mentioned on fetched pages."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "No credit score required to apply: We may use credit scores if available."
+  },
+  "rewards": {
+    "currency": "cashback",
+    "currency_label": "Cash Back (USD)",
+    "rate_type": "cashback_percent",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1% cash back on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Rotating quarterly bonus categories (activation required, up to quarterly maximum)",
+        "points_per_dollar": 5.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Unlimited Cashback Match: Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "cashback-match",
+      "title": "Unlimited Cashback Match",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an unlimited dollar-for-dollar match of all the cash back you earn at the end of your first year, automatically. There is no limit to how much we'll match."
+    },
+    {
+      "id": "refundable-deposit",
+      "title": "Refundable Deposit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Refundable deposits as low as $49 unlock credit lines starting at $200. Deposit amount will be $49, $99, or $200 based on creditworthiness."
+    },
+    {
+      "id": "no-credit-score-required",
+      "title": "No Credit Score Required to Apply",
+      "category": "other",
+      "source": "issuer",
+      "description": "No credit score required to apply. We may use credit scores if available."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're never responsible for unauthorized purchases on your Discover Card."
+    },
+    {
+      "id": "ssn-alerts",
+      "title": "Free Social Security Number Alerts",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an alert if we find your Social Security number on the dark web. Sign up to activate this free benefit."
+    },
+    {
+      "id": "freeze-account",
+      "title": "Freeze Your Account",
+      "category": "other",
+      "source": "issuer",
+      "description": "If you misplace your card, you can prevent new purchases and cash advances in seconds with the on/off switch on our mobile app and website."
+    },
+    {
+      "id": "fico-score",
+      "title": "FICO Score and More",
+      "category": "other",
+      "source": "issuer",
+      "description": "It's free and checking your score doesn't hurt your credit."
+    },
+    {
+      "id": "customer-service",
+      "title": "Real Human Customer Service 24/7",
+      "category": "other",
+      "source": "issuer",
+      "description": "You can talk to a real human on our customer service team any time."
+    },
+    {
+      "id": "tap-to-pay",
+      "title": "Tap to Pay",
+      "category": "other",
+      "source": "issuer",
+      "description": "It's fast and easy to pay with your contactless Discover Card."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.discover.com/credit-cards/secured/",
+  "image": {
+    "url": null,
+    "attribution": "© Discover",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.discover.com/credit-cards/secured/",
+    "https://www.discover.com/credit-cards/secured-credit-card/?iq_id=dp-dbr-inet-acceptance-pdisplay"
+  ],
+  "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Image URL cleared: prior asset was a Capital One CDN card-art file for the Discover it Cash Back (unsecured) product, not the Secured card.",
+  "segment": "personal"
+}

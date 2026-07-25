@@ -1,0 +1,210 @@
+{
+  "id": "us-amex-business-gold",
+  "schema_version": "1.0.0",
+  "name": "American Express Business Gold Card",
+  "localized_names": {
+    "en": "American Express Business Gold Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "charge",
+  "status": "active",
+  "annual_fee": {
+    "amount": 375.0,
+    "currency": "USD",
+    "first_year": 375.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not displayed on product page; see Rates & Fees link for current rates. Card is a charge card with Pay Over Time option."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No Foreign Transaction Fees — 'Do business globally and pay no foreign transaction fees on your purchases.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on all other eligible purchases made using the Business Gold Card."
+    },
+    "categories": [
+      {
+        "label": "Top 2 Eligible Categories Each Month",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 150000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Flights & Pre-Paid Hotels on AmexTravel.com",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards points can be used for travel, gift cards, statement credits, and more. Can be transferred to participating airline and hotel loyalty programs.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "flexible-business-credit",
+      "title": "$240 Flexible Business Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Earn up to $20 in statement credits monthly after you use the Business Gold Card for eligible U.S. purchases at FedEx (through 10/01/2026), Grubhub, and Office Supply Stores. Annual savings of up to $240. Enrollment required."
+    },
+    {
+      "id": "chatgpt-business-credit",
+      "title": "$300 ChatGPT Business Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Get up to $300 in statement credits per calendar year on U.S. purchases of ChatGPT Business subscriptions on the Business Gold Card. Enrollment required."
+    },
+    {
+      "id": "squarespace-credit",
+      "title": "$150 Squarespace Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Enroll and get up to $150 in statement credits per calendar year for U.S. purchases with Squarespace on the Business Gold Card."
+    },
+    {
+      "id": "walmart-plus-credit",
+      "title": "$155 Walmart+ Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive a statement credit for one monthly Walmart+ membership after you pay for Walmart+ each month with the Business Gold Card. Up to $12.95 plus applicable local sales tax. Plus Ups not eligible."
+    },
+    {
+      "id": "card-design-choice",
+      "title": "Card Design Choice",
+      "category": "other",
+      "source": "issuer",
+      "description": "When you apply for the Business Gold Card you have the option to choose your Card's design: Gold, Rose Gold or White Gold."
+    },
+    {
+      "id": "no-preset-spending-limit",
+      "title": "No Preset Spending Limit",
+      "category": "other",
+      "source": "issuer",
+      "description": "The amount you can spend adapts based on factors such as your purchase, payment, and credit history. Could grow your purchasing power the more you consistently use your Card and regularly make payments."
+    },
+    {
+      "id": "pay-over-time",
+      "title": "Pay Over Time",
+      "category": "other",
+      "source": "issuer",
+      "description": "Eligible charges are automatically added to your Pay Over Time balance, up to your Pay Over Time Limit. You can choose to pay for those charges over time with interest."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Do business globally and pay no foreign transaction fees on your purchases. American Express will not charge any foreign transaction fee on purchases made outside of the United States."
+    },
+    {
+      "id": "the-hotel-collection",
+      "title": "The Hotel Collection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a suite of benefits with an average total value of $150 at over 1,300 hotels when you book a minimum two-night stay through AmexTravel.com. Includes $100 credit towards eligible charges and room upgrade upon arrival when available."
+    },
+    {
+      "id": "global-assist-hotline",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "Whenever you travel more than 100 miles from home, Global Assist Hotline is available for 24/7 emergency assistance and coordination services, including medical and legal referrals, emergency cash wires, and missing luggage assistance."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Let employees buy what they need within limits you set. Earn Membership Rewards points on their purchases. Annual fee for Employee Business Gold Card is $95 for the first five Cards and then $95 for each Card after that. Up to 99 Employee Cards."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursed up to $800 per claim with a limit of two approved claims per 12-month period, subject to a $50 deductible per claim, when your prior month's wireless bill was paid utilizing an Eligible Card Account. Coverage provided by New Hampshire Insurance Company, an AIG Company."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "The terms of the Original Manufacturer's Warranty can be extended up to one additional year. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Can help protect Covered Purchases for up to 90 days from the Covered Purchase date if it is stolen or accidentally damaged. Up to $1,000 per Covered Purchase, up to $50,000 per Card Member account per calendar year."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Coverage for up to $1,250 for carry-on Baggage and up to $500 for checked Baggage, in excess of coverage provided by the Common Carrier. For New York State residents, $10,000 aggregate maximum limit for all Covered Persons per Covered Trip."
+    },
+    {
+      "id": "car-rental-loss-and-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for Damage to or Theft of a Rental Vehicle when you use your Eligible Card to reserve and pay for the Entire Rental and decline the CDW. Not available for vehicles rented in Australia, Italy, and New Zealand. Secondary coverage."
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a covered reason delays your trip more than 12 hours, can help reimburse certain additional expenses purchased on the same Eligible Card, up to $300 per trip, maximum 2 claims per Eligible Card per 12 consecutive month period. Coverage provided by New Hampshire Insurance Company, an AIG Company."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "The Hotel Collection ($100 credit + room upgrade)",
+      "Card Design Choice (Gold, Rose Gold, White Gold)"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-gold.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex/"
+  ],
+  "notes": "Verified from official product page. Type corrected to 'charge' per FAQ: 'Yes, the American Express® Business Gold Card is a charge card with No Preset Spending Limit.' Lounge access confirmed as none per FAQ. APR not shown on page.",
+  "segment": "business"
+}

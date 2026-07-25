@@ -1,0 +1,232 @@
+{
+  "id": "us-amex-marriott-bonvoy-bevy",
+  "schema_version": "1.0.0",
+  "name": "Marriott Bonvoy Bevy® American Express® Card",
+  "localized_names": {
+    "en": "Marriott Bonvoy Bevy® American Express® Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 250,
+    "currency": "USD",
+    "first_year": 250,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product page; see American Express for current APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees from American Express."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "marriott_bonvoy_points",
+    "currency_label": "Marriott Bonvoy points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2X points on all other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Hotels participating in Marriott Bonvoy",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Restaurants worldwide and U.S. Supermarkets",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 15000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "Redeem Marriott Bonvoy points for free nights at over 10,000 hotels participating in Marriott Bonvoy. Plus, redeem points for flights or car rentals with Air+Car, or transfer points for travel program rewards with over 38 airline partners. Earn up to 18.5X Marriott Bonvoy points at Marriott properties (6X from card + up to 10X from Marriott Bonvoy membership + up to 2.5X from Gold Elite 25% Bonus Points on Stays).",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "marriott-1k-bonus-points-per-stay",
+      "title": "Marriott Bonvoy 1K Bonus Points Per Stay",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn 1,000 Marriott Bonvoy bonus points per paid eligible stay booked directly with Marriott for properties participating in Marriott Bonvoy."
+    },
+    {
+      "id": "marriott-gold-elite-status",
+      "title": "Marriott Bonvoy Gold Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary Marriott Bonvoy Gold Elite status, earn up to 2.5X points from Marriott Bonvoy on eligible hotel purchases with the 25% Bonus Points on stays benefit."
+    },
+    {
+      "id": "15-elite-night-credits",
+      "title": "15 Elite Night Credits",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Each calendar year, receive 15 Elite Night Credits towards the next level of Marriott Bonvoy Elite status."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees from American Express when using the Card on purchases abroad."
+    },
+    {
+      "id": "free-night-award",
+      "title": "Free Night Award",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn 1 Free Night Award after spending $15,000 on eligible purchases in a calendar year. Award can be used for one night (redemption level at or under 50,000 Marriott Bonvoy points) at a participating hotel."
+    },
+    {
+      "id": "car-rental-loss-and-damage-insurance",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "When you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver (CDW), you can be covered for Damage to or Theft of a Rental Vehicle. Secondary coverage; does not include liability coverage. Not available for vehicles rented in Australia, Italy, and New Zealand.",
+      "details": {
+        "type": "secondary",
+        "exclusions": "['Australia', 'Italy', 'New Zealand']"
+      }
+    },
+    {
+      "id": "global-assist-hotline",
+      "title": "Global Assist Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "24/7 access to help with many emergency situations from select emergency coordination and assistance services when traveling more than 100 miles from home. Card Members are responsible for costs charged by third-party service providers."
+    },
+    {
+      "id": "baggage-insurance-plan",
+      "title": "Baggage Insurance Plan",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Covered for lost, damaged, or stolen Baggage when you purchase the Entire Fare for a Common Carrier Vehicle ticket on an Eligible Card. Up to $1,250 for carry-on Baggage and up to $500 for checked Baggage, in excess of coverage provided by the Common Carrier. New York State residents: $10,000 aggregate maximum limit per Covered Trip.",
+      "details": {
+        "carry_on_max": 1250,
+        "checked_max": 500,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "trip-delay-insurance",
+      "title": "Trip Delay Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If a round-trip is paid for entirely with your Eligible Card and a covered reason delays your trip more than 12 hours, Trip Delay Insurance can help reimburse certain additional expenses purchased on the same Eligible Card, up to $300 per trip, maximum 2 claims per Eligible Card per 12 consecutive month period. Coverage provided by New Hampshire Insurance Company, an AIG Company.",
+      "details": {
+        "max_per_trip": 300,
+        "currency": "USD",
+        "delay_threshold_hours": 12,
+        "max_claims_per_12_months": 2
+      }
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to purchase Amex Presale Tickets and Amex Reserved Tickets to select events across sports, music, and more."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "When you use your Eligible Card for Covered Purchases, your Membership can help protect them for up to 90 days from the Covered Purchase date. Up to $10,000 per Covered Purchase, up to $50,000 per calendar year.",
+      "details": {
+        "max_per_purchase": 10000,
+        "max_per_year": 50000,
+        "currency": "USD",
+        "coverage_days": 90
+      }
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "Up to one extra year added to the Original Manufacturer's Warranty. Applies to warranties of 5 years or less on Covered Purchases in the United States or its territories or possessions."
+    },
+    {
+      "id": "amex-offers",
+      "title": "Earn More with Amex Offers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members can explore available Amex Offers, add them to their eligible Card, and earn extra rewards on qualifying purchases made at select brands."
+    },
+    {
+      "id": "send-and-split",
+      "title": "Send & Split",
+      "category": "other",
+      "source": "issuer",
+      "description": "Send & Split feature available to Card Members."
+    },
+    {
+      "id": "instant-card-number",
+      "title": "Instant Card Number",
+      "category": "other",
+      "source": "issuer",
+      "description": "Instant Card Number feature available to Card Members."
+    },
+    {
+      "id": "dispute-resolution",
+      "title": "Dispute Resolution",
+      "category": "other",
+      "source": "issuer",
+      "description": "If there is a fraudulent or incorrect charge on your statement, American Express will work with you to help resolve the issue."
+    },
+    {
+      "id": "year-end-summary",
+      "title": "Year-End Summary",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get access to a Year-End Summary of charges."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Marriott Bonvoy Gold Elite status",
+    "other": [
+      "1,000 bonus points per paid eligible stay at Marriott Bonvoy properties",
+      "15 Elite Night Credits per calendar year",
+      "Free Night Award after $15,000 spend in a calendar year"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-bevy/",
+  "image": {
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000311_480x304_straight_withname.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-bevy/"
+  ],
+  "notes": "Marriott Bonvoy Bevy Amex Card. $250 annual fee. No foreign transaction fees. 6X at Marriott hotels, 4X at restaurants/U.S. supermarkets (up to $15K combined/calendar year then 2X), 2X on all other purchases. Complimentary Marriott Bonvoy Gold Elite status, 15 Elite Night Credits, 1K bonus points per stay, Free Night Award after $15K spend. No lounge access. APR not visible on product page.",
+  "segment": "personal"
+}

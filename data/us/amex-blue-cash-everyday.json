@@ -1,0 +1,180 @@
+{
+  "id": "us-amex-blue-cash-everyday",
+  "schema_version": "1.0.0",
+  "name": "Blue Cash Everyday® Card",
+  "localized_names": {
+    "en": "Blue Cash Everyday® Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for the first 15 months from account opening on purchases and qualifying balance transfers; standard variable APRs apply after that. APR values preserved from terms page (terms URL returned 403 on this fetch and could not be re-verified)."
+  },
+  "fx_fee": {
+    "percent": 2.7,
+    "notes": "Foreign transaction fee is 2.7% on each transaction after conversion to U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "reward_dollars",
+    "currency_label": "Reward Dollars",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1% cash back on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "U.S. supermarkets",
+        "points_per_dollar": 3.0,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "U.S. online retail purchases",
+        "points_per_dollar": 3.0,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "U.S. gas stations",
+        "points_per_dollar": 3.0,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back is received in the form of Reward Dollars that can be redeemed as a statement credit. Reward Dollars can also be used at Amazon.com checkout.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "reward_dollars",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Official terms describe a personalized welcome offer as high as $200 cash back; exact eligible amount is shown before accepting the Card if approved. Spend required ($2,000 in 6 months) preserved from previous data; not re-verified from product page (terms URL returned 403).",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "disney-streaming-credit",
+      "title": "$84 Disney Streaming Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "With the $84 Disney Streaming Credit, get up to a $7 monthly statement credit after using your enrolled Blue Cash Everyday® Card for a subscription purchase, including a bundle subscription purchase, at DisneyPlus.com, Hulu.com, or Stream.ESPN.com U.S. websites."
+    },
+    {
+      "id": "car-rental-loss-damage",
+      "title": "Car Rental Loss and Damage Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "When you use your Eligible Card to reserve and pay for the Entire Rental and decline the collision damage waiver (CDW) at the Rental Company counter, you can be covered for Damage to or Theft of a Rental Vehicle in a Covered Territory. This product provides secondary coverage and does not include liability coverage."
+    },
+    {
+      "id": "global-assist-hotline",
+      "title": "Global Assist® Hotline",
+      "category": "other",
+      "source": "issuer",
+      "description": "Whenever you travel more than 100 miles from home, Global Assist® Hotline is available for 24/7 emergency assistance and coordination services, including medical and legal referrals, emergency cash wires, and missing luggage assistance. Card Members are responsible for the costs charged by third-party service providers."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "When an American Express® Card Member charges a Covered Purchase with their Eligible Card, Purchase Protection can help protect their Covered Purchases for up to 90 days from the Covered Purchase date if it is stolen or accidentally damaged. The coverage is limited up to $1,000 per Covered Purchase, up to $50,000 per Card Member account per calendar year."
+    },
+    {
+      "id": "amazon-checkout-redemption",
+      "title": "Cash Back at Amazon.com Checkout",
+      "category": "other",
+      "source": "issuer",
+      "description": "Shop now and conveniently use cash back at checkout at Amazon.com. Your cash back has the same value at Amazon checkout as it does if you redeem as a statement credit."
+    },
+    {
+      "id": "send-and-split",
+      "title": "Send & Split®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Send money, split purchases, and focus on the moments that matter with Send & Split®. Powered by Venmo and PayPal. Enrollment required. Terms apply."
+    },
+    {
+      "id": "amex-special-ticket-access",
+      "title": "Amex Special Ticket Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members can access Amex Presale Tickets® and Amex Reserved Tickets® to select events across sports, music, and more."
+    },
+    {
+      "id": "amex-offers",
+      "title": "Earn More with Amex Offers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card Members can explore the Amex Offers available to add to their eligible Card and earn extra rewards on qualifying purchases made at select brands."
+    },
+    {
+      "id": "instant-card-number",
+      "title": "Instant Card Number",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your application is approved and you are eligible, you can begin using your Card number online and through your digital wallet, including Apple Pay™, Google Pay™, Samsung Pay, PayPal and Amazon Pay today."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Global Assist® Hotline coordination and assistance services are available at no additional charge; third-party service costs are the Card Member's responsibility."
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/",
+  "image": {
+    "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000305_480x304_straight_withname.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/blue-cash-everyday/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/blue-cash-everyday-credit-card/91101-10-0"
+  ],
+  "notes": "Product page lists 'All Benefits (11)'. The 'Home Chef Credit' benefit from the previous version was NOT found on the current product page and has been removed. APR values (purchase 19.49-28.49, cash advance 28.74) and signup bonus spend/timing preserved from previous data; the terms URL returned HTTP 403 and could not be re-verified. network_tier is 'none' for Amex network packages as Blue Cash Everyday is not a Network Tier.",
+  "segment": "personal"
+}

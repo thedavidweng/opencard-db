@@ -1,0 +1,113 @@
+{
+  "id": "us-bank-of-america-travel-rewards",
+  "schema_version": "1.0.0",
+  "name": "Bank of America® Travel Rewards Credit Card",
+  "localized_names": {
+    "en": "Bank of America® Travel Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "0% intro APR for the first 15 billing cycles for purchases and qualifying balance transfers; then a variable APR applies."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Bank of America points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 points for every $1 spent on all purchases"
+    },
+    "categories": [
+      {
+        "label": "Travel purchases booked through the Bank of America Travel Center",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points can be redeemed for statement credits toward travel and dining purchases; points do not expire as long as the account remains open.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 25000,
+    "unit": "points",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "25,000 online bonus points after at least $1,000 in purchases in the first 90 days of account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "zero-liability",
+      "title": "$0 Liability Guarantee",
+      "category": "other",
+      "source": "issuer",
+      "description": "Bank of America provides a $0 Liability Guarantee for fraudulent transactions."
+    },
+    {
+      "id": "balance-connect",
+      "title": "Balance Connect for overdraft protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Optional overdraft-protection service when linked to an eligible Bank of America checking account; other fees may apply."
+    },
+    {
+      "id": "digital-wallets",
+      "title": "Digital wallet support",
+      "category": "other",
+      "source": "issuer",
+      "description": "Card can be added to supported mobile wallets including Apple Pay, Google Pay, and Samsung Pay."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
+    "https://www.bankofamerica.com/credit-cards/travel-credit-cards/",
+    "https://www.bankofamerica.com/content/documents/creditcard/bank_of_america_travel_rewards_english.pdf"
+  ],
+  "notes": "Credit score requirements and non-listed travel perks were not stated in the official Bank of America sources.",
+  "segment": "personal"
+}

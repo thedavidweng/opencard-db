@@ -30,6 +30,7 @@
     "percent": 0,
     "notes": "No foreign transaction fees."
   },
+
   "credit_required": {
     "score_band": "good_to_excellent",
     "notes": "Chase generally targets good-to-excellent credit."
@@ -69,7 +70,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary."
+    "redemption_notes": "Points transfer to travel partners; Chase Travel portal redemption rates vary.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 75000,
@@ -135,5 +137,6 @@
     "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
     "https://www.chase.com/personal/credit-cards/sapphire/preferred"
   ],
-  "notes": "Signup bonus refreshed 2026-07-24 from Chase official product page (75k after $5k/3mo). Cross-checked against credit-card-bonuses-api as a discovery clue only; official Chase page remains Source."
+  "notes": "Signup bonus refreshed 2026-07-24 from Chase official product page (75k after $5k/3mo). Cross-checked against credit-card-bonuses-api as a discovery clue only; official Chase page remains Source.",
+  "segment": "personal"
 }

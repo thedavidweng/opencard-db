@@ -1,0 +1,210 @@
+{
+  "id": "us-wells-fargo-autograph-journey",
+  "schema_version": "1.0.0",
+  "name": "Wells Fargo Autograph Journey℠ Card",
+  "localized_names": {
+    "en": "Wells Fargo Autograph Journey℠ Card"
+  },
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.49,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR is 19.49%, 25.49%, or 28.49%, based on creditworthiness; APRs vary with the market based on the U.S. Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign currency conversion / foreign transaction fee is none per Wells Fargo Important Credit Terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Credit card is subject to credit qualification."
+  },
+  "rewards": {
+    "currency": "wells_fargo_rewards",
+    "currency_label": "Wells Fargo Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other net purchases"
+    },
+    "categories": [
+      {
+        "label": "Hotels",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Airlines",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Other travel",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem Wells Fargo Rewards for travel, Pay with Rewards, eligible purchases, gift cards, account credits, or points transfers; redemption values vary by option.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "points",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 60,000 bonus points after spending $4,000 in purchases in the first 3 months; Wells Fargo markets this as $600 toward your next trip.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "annual-airline-credit",
+      "title": "$50 annual airline statement credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "One-time $50 statement credit each year after the card is used for the first airline purchase of at least $50.",
+      "details": {
+        "amount": 50,
+        "currency": "USD",
+        "minimum_purchase": 50,
+        "merchant_category": "airlines and air carriers"
+      }
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Worldwide Automatic Common Carrier Travel Accident Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Travel Accident Insurance protection of up to $1,000,000 when an airline or other common carrier ticket is purchased with the eligible card.",
+      "details": {
+        "coverage_amount": 1000000,
+        "coverage_currency": "USD"
+      }
+    },
+    {
+      "id": "lost-baggage-reimbursement",
+      "title": "Lost Baggage Reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to $3,000 in luggage reimbursement per trip if bags are lost due to theft or misdirection by a common carrier while traveling.",
+      "details": {
+        "coverage_amount": 3000,
+        "coverage_currency": "USD"
+      }
+    },
+    {
+      "id": "trip-cancellation-interruption",
+      "title": "Trip Cancellation and Interruption Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement of up to $15,000 for eligible lodging, flights, and activities if a trip paid with the eligible card is canceled or interrupted for a covered reason.",
+      "details": {
+        "coverage_amount": 15000,
+        "coverage_currency": "USD"
+      }
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement for covered rental car damage or theft when the rental is paid for with the eligible card and coverage from the rental company is declined."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cellular Telephone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to $1,000 of cell phone protection against damage, theft, or unintended separation, subject to a $25 deductible.",
+      "details": {
+        "coverage_amount": 1000,
+        "coverage_currency": "USD",
+        "deductible": 25
+      }
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel and Emergency Assistance Services",
+      "category": "other",
+      "source": "issuer",
+      "description": "Available for covered Wells Fargo cardholders. Count on emergency assistance while traveling anywhere in the world."
+    },
+    {
+      "id": "roadside-dispatch",
+      "title": "Roadside Dispatch®",
+      "category": "other",
+      "source": "issuer",
+      "description": "Available whenever you're in need of a tow - for eligible Wells Fargo cardholders 24/7 with no membership required."
+    },
+    {
+      "id": "visa-signature-concierge",
+      "title": "Visa Signature Concierge Services",
+      "category": "other",
+      "source": "network",
+      "description": "Complimentary 24/7 Visa Signature Concierge Services for help with tickets, travel, dining reservations, and more.",
+      "network_tier_required": "signature"
+    },
+    {
+      "id": "visa-signature-luxury-hotel",
+      "title": "Visa Signature Luxury Hotel Collection",
+      "category": "other",
+      "source": "network",
+      "description": "Access to a premium collection of benefits at participating Visa Signature Luxury Hotel Collection properties.",
+      "network_tier_required": "signature"
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fee",
+      "$50 annual airline statement credit",
+      "Visa Signature Luxury Hotel Collection",
+      "Visa Signature Concierge Services",
+      "Travel and Emergency Assistance Services",
+      "Roadside Dispatch"
+    ]
+  },
+  "official_url": "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card",
+  "image": {
+    "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-7-26_v2/images/Products/AutographJourney/WF_Autograph_Journey_Card_d.png",
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card",
+    "https://www.wellsfargo.com/credit-cards/autograph-journey-visa/terms/?product_code=CC&subproduct_code=MT"
+  ],
+  "notes": "Distinct from the no-annual-fee Wells Fargo Autograph Card; Autograph Journey has a $95 annual fee and travel-focused earn rates.",
+  "segment": "personal"
+}
