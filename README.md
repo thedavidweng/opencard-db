@@ -99,6 +99,29 @@ Official free instance (when deployed): requires a meaningful `User-Agent` or `X
 - **Data** (`data/**`): [CC BY 4.0](LICENSE-DATA)
 - **Images:** optional; issuer art stays bank copyright. Missing faces use a generic OpenCard placeholder via the API — see [`images/README.md`](images/README.md)
 
+**Contribute card art in one command:** on a Mac with the card in Apple Pay, run
+[`npx opencard-export`](packages/opencard-export) — it scans your Wallet, compares
+against the live DB, and helps you open a PR. Everything runs locally; nothing is
+uploaded.
+
+### Card-art grades
+
+Every exported card carries a derived `art_grade` describing the quality of its
+card face (computed at build time — it is **not** stored in `data/`):
+
+- **`apple-pay`** — *graduated* art: a committed local face with `apple-pay`
+  provenance, i.e. the lossless Apple Pay export with SHA lineage
+  (`image.provenance.source_sha256`). The highest grade.
+- **`issuer`** — official issuer-site artwork (a local face or an `image.url`)
+  without Apple Pay provenance.
+- **`none`** — no card face; consumers fall back to the generic placeholder.
+
+Catalog-wide counts live in [`exports/meta.json`](exports/meta.json) under
+`art_grades`, and each row of [`exports/cards.csv`](exports/cards.csv) ends with
+an `art_grade` column. See
+[`docs/schema-notes.md`](docs/schema-notes.md#card-art-lineage--graduation-2026-07)
+for the lineage model.
+
 ## Status
 
 Implementation map: [Map: OpenCard DB v1 production system](https://github.com/thedavidweng/opencard-db/issues/1)

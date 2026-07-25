@@ -29,6 +29,7 @@
     "us-amex-marriott-bonvoy-brilliant",
     "us-amex-marriott-bonvoy-business",
     "us-amex-platinum",
+    "us-amex-platinum-morgan-stanley",
     "us-amex-platinum-schwab",
     "us-amex-schwab-investor"
   ],
@@ -52,7 +53,9 @@
     "us-first-avianca-lifemiles",
     "us-first-avianca-lifemiles-elite",
     "us-first-cardless-qatar-infinite",
-    "us-first-latam-airlines"
+    "us-first-cardless-qatar-signature",
+    "us-first-latam-airlines",
+    "us-first-latam-airlines-standard"
   ],
   "goldman-sachs": [
     "us-apple-card"
@@ -150,7 +153,8 @@
     "us-chase-united-explorer",
     "us-chase-united-gateway",
     "us-chase-united-quest",
-    "us-chase-world-of-hyatt"
+    "us-chase-world-of-hyatt",
+    "us-chase-world-of-hyatt-business"
   ],
   "citi": [
     "us-citi-aadvantage-business-world-elite",
@@ -166,6 +170,9 @@
     "us-citi-simplicity",
     "us-citi-strata-elite",
     "us-citi-strata-premier"
+  ],
+  "column": [
+    "us-column-bilt-blue"
   ],
   "comenity": [
     "us-comenity-aaa-daily-advantage",
@@ -189,6 +196,7 @@
   ],
   "penfed": [
     "us-penfed-pathfinder",
+    "us-penfed-platinum-rewards",
     "us-penfed-power-cash-rewards"
   ],
   "pnc": [

@@ -95,6 +95,8 @@ jobs:
 
       - name: Auto-fix PR title when we can infer it
         env:
+          PAYLOAD_TITLE: ${{ github.event.pull_request.title }}
+          PAYLOAD_BODY: ${{ github.event.pull_request.body }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
         run: |
@@ -108,9 +110,13 @@ jobs:
             stdio: "inherit",
           });
           NODE
-          # Re-classify after title fix
-          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
-          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          # Re-classify after title fix; fall back to the event payload if
+          # the gh re-read fails (rate limits) so an API hiccup can't produce
+          # a bogus empty title/body.
+          export PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          [ -n "$PR_TITLE" ] || PR_TITLE="$PAYLOAD_TITLE"
+          export PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          [ -n "$PR_BODY" ] || PR_BODY="$PAYLOAD_BODY"
           export PR_FILES="$(cat /tmp/pr-files.txt)"
           export PR_TRIAGE_MODE=labels
           node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
@@ -165,6 +171,8 @@ jobs:
           ensure "missing-sources" "B60205" "Card PR is missing official source URLs"
           ensure "title-needs-fix" "F9D0C4" "PR title must be Conventional Commits: card(add|update): … or feat:/fix:/docs:/…"
           ensure "duplicate" "cfd3d7" "Likely duplicates another open card PR"
+          ensure "high-impact-change" "B60205" "Key card fields changed — verify against official sources before merging"
+          ensure "needs-verification" "5319E7" "New/updated card from an external contributor — verify identity fields against the cited official page"
 
       - name: Collect changed files
         env:
@@ -178,6 +186,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           # Other open PRs — used to detect duplicate card(add|update) work.
           # Best-effort: fall back to [] on transient gh/API failures (rate limits)
@@ -186,8 +195,16 @@ jobs:
             --json number,title,url,author \
             --jq '[.[] | {number, title, url, author: .author.login}]' \
             > /tmp/open-prs.json || echo '[]' > /tmp/open-prs.json
+          # Fetch the PR head commit as DATA ONLY so build-base-cards.ts can
+          # `git show <head_sha>:<path>` the proposed card versions and diff key
+          # fields (old → new). We never check it out or run PR-authored code —
+          # the head blob is treated exactly like the untrusted PR title/body
+          # (read, parsed, compared). refs/pull/<n>/head resolves for fork PRs
+          # too; the SHA env is the authenticated integrity anchor.
+          git fetch --no-tags --depth=1 origin "refs/pull/${PR}/head" 2>/dev/null || \
+            git fetch --no-tags origin "$HEAD_SHA" 2>/dev/null || true
           export PR_FILES="$(cat /tmp/pr-files.txt)"
-          export BASE_SHA
+          export BASE_SHA HEAD_SHA
           node --experimental-strip-types scripts/build-base-cards.ts > /tmp/base-cards.json
           echo "open PRs:" "$(wc -l < /tmp/open-prs.json)"
           echo "base cards:" "$(cat /tmp/base-cards.json)"
@@ -195,13 +212,20 @@ jobs:
       - name: Check title and form fields
         id: check
         env:
+          PAYLOAD_TITLE: ${{ github.event.pull_request.title }}
+          PAYLOAD_BODY: ${{ github.event.pull_request.body }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
           PR_TRIAGE_MODE: check
         run: |
-          # Re-read title/body after Labels may have auto-fixed the title.
-          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
-          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          # Re-read title/body after Labels may have auto-fixed the title;
+          # fall back to the event payload if the gh re-read fails (rate
+          # limits) so an API hiccup can't fail the form on an empty title.
+          export PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          [ -n "$PR_TITLE" ] || PR_TITLE="$PAYLOAD_TITLE"
+          export PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          [ -n "$PR_BODY" ] || PR_BODY="$PAYLOAD_BODY"
           export PR_FILES="$(cat /tmp/pr-files.txt)"
           export PR_NUMBER="$PR"
           export OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"

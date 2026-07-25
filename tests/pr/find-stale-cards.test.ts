@@ -83,3 +83,12 @@ describe("find stale cards", () => {
     assert.equal(DEFAULT_STALE_DAYS, 180);
   });
 });
+it("skips discontinued cards (no live page to re-verify)", () => {
+  const cards = [
+    { file: "data/us/gone.json", card: { id: "us-gone", country: "us", issuer_id: "x", network: "visa", network_tier: "none", status: "discontinued", name: "Gone", last_verified: "2020-01-01" } },
+    { file: "data/us/live.json", card: { id: "us-live", country: "us", issuer_id: "x", network: "visa", network_tier: "none", status: "active", name: "Live", last_verified: "2020-01-01" } },
+  ] as never;
+  const out = findStaleCards(cards, 180, new Date("2026-07-25T00:00:00Z"));
+  assert.deepEqual(out.map((c) => c.id), ["us-live"]);
+});
+

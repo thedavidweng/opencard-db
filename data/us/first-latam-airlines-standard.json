@@ -1,0 +1,115 @@
+{
+  "id": "us-first-latam-airlines-standard",
+  "schema_version": "1.0.0",
+  "name": "LATAM Airlines Mastercard",
+  "localized_names": {
+    "en": "LATAM Airlines Mastercard"
+  },
+  "country": "us",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
+  "network": "mastercard",
+  "network_tier": "standard",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product page; see Rates and Fees disclosure (linked but not fetched)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees stated on page for both Mastercard and World Elite Mastercard."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "LATAM Pass Miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1x mile on everything else"
+    },
+    "categories": [
+      {
+        "label": "LATAM Airlines purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Rideshare, taxis, and public transit",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earn LATAM Pass Miles to redeem for new adventures and dreams with LATAM Airlines. Welcome Bonus miles do not count toward LATAM Pass Elite status.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 15000.0,
+    "unit": "miles",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "15,000 miles welcome bonus after spending $1,000 in the first 3 months",
+    "as_of": "2026-07-25"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Use your card when you travel just as you do at home, with no fees for the purchases you make abroad."
+    },
+    {
+      "id": "qualifying-points",
+      "title": "Qualifying Points for LATAM Pass Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn Qualifying Points towards LATAM Pass Elite status and Elite status benefits. 30% qualifying points."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": null
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Qualifying Points towards LATAM Pass Elite status (30%)"
+    ]
+  },
+  "official_url": "https://latampass.latam.com/en_us/earn-miles/latam-airlines-credit-cards",
+  "image": {
+    "url": "https://d3rwujusajfqlr.cloudfront.net/uploads/cb_7ebe1c2d71fec91f1055675feadf4b95/latam-airlines-credit-cards%202/image/latam_mastercard.png",
+    "attribution": "© First Electronic Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://latampass.latam.com/en_us/earn-miles/latam-airlines-credit-cards"
+  ],
+  "notes": "Verified from official LATAM Pass product page. This entry is for the base (non-elite) LATAM Airlines Mastercard variant with no annual fee. The page also lists a World Elite Mastercard variant ($99 annual fee, us-first-latam-airlines). Products and services are serviced by Cardless, Inc.; cards issued by First Electronic Bank. Lounge access, cabin upgrades, and courtesy segments are exclusive to World Elite cardholders. APR not visible on page; see Rates and Fees disclosure."
+}

@@ -6,8 +6,11 @@ import {
   buildExports,
   CSV_COLUMNS,
 } from "../../scripts/build-exports.ts";
-import { buildIndexArtifacts } from "../../scripts/build-indexes.ts";
-import { loadAllCards } from "../../scripts/lib.ts";
+import {
+  buildIndexArtifacts,
+  deriveArtGrade,
+} from "../../scripts/build-indexes.ts";
+import { loadAllCards, type Card } from "../../scripts/lib.ts";
 
 describe("exports build contract", () => {
   it("writes all export files with the expected card count", async () => {
@@ -76,6 +79,71 @@ describe("exports build contract", () => {
       row.includes('"Bank, ""The"" One"'),
       `expected escaped issuer, got: ${row}`,
     );
+  });
+
+  it("cards.csv exposes art_grade as the final column", async () => {
+    assert.equal(CSV_COLUMNS[CSV_COLUMNS.length - 1], "art_grade");
+    const artifacts = await buildIndexArtifacts();
+    const cards = artifacts["cards:all"];
+    const csv = buildCardsCsv(cards);
+    const dataLines = csv.split("\n").filter((l) => l.length > 0).slice(1);
+    // art_grade is the last column and its values never need CSV escaping,
+    // so the final comma-separated segment is the grade even when earlier
+    // fields contain quoted commas.
+    for (let i = 0; i < cards.length; i++) {
+      const cell = dataLines[i].split(",").pop();
+      assert.equal(cell, deriveArtGrade(cards[i]));
+    }
+  });
+
+  it("derives art_grade for all three grades", () => {
+    const base = {
+      id: "xx-t",
+      country: "xx",
+      issuer_id: "t",
+      network: "visa",
+      network_tier: "none",
+      status: "active",
+      name: "T",
+      issuer: "T",
+    };
+    const applePay = {
+      ...base,
+      image: {
+        local_path: "images/us/xx-t.webp",
+        provenance: { source: "apple-pay", source_sha256: "a".repeat(64) },
+      },
+    } as unknown as Card;
+    const issuerLocal = {
+      ...base,
+      image: { local_path: "images/us/xx-t.webp" },
+    } as unknown as Card;
+    const issuerUrl = {
+      ...base,
+      image: { url: "https://issuer.example/card.png", local_path: null },
+    } as unknown as Card;
+    // local_path set but provenance is issuer-site → issuer, not apple-pay.
+    const issuerProv = {
+      ...base,
+      image: {
+        local_path: "images/us/xx-t.webp",
+        provenance: { source: "issuer-site", source_sha256: "b".repeat(64) },
+      },
+    } as unknown as Card;
+    const noneNull = { ...base, image: null } as unknown as Card;
+    const noneEmpty = {
+      ...base,
+      image: { url: null, local_path: null },
+    } as unknown as Card;
+    const noneMissing = { ...base } as unknown as Card;
+
+    assert.equal(deriveArtGrade(applePay), "apple-pay");
+    assert.equal(deriveArtGrade(issuerLocal), "issuer");
+    assert.equal(deriveArtGrade(issuerUrl), "issuer");
+    assert.equal(deriveArtGrade(issuerProv), "issuer");
+    assert.equal(deriveArtGrade(noneNull), "none");
+    assert.equal(deriveArtGrade(noneEmpty), "none");
+    assert.equal(deriveArtGrade(noneMissing), "none");
   });
 
   it("cards.yaml body is valid JSON (JSON-is-valid-YAML) matching cards-all", async () => {

@@ -1,0 +1,150 @@
+{
+  "id": "us-penfed-platinum-rewards",
+  "schema_version": "1.0.0",
+  "name": "Platinum Rewards",
+  "localized_names": {
+    "en": "Platinum Rewards"
+  },
+  "country": "us",
+  "issuer": "PenFed",
+  "issuer_id": "penfed",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.99,
+      "max": 17.99,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "17.99% variable APR based on creditworthiness; varies with the market based on the Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Good/Excellent credit generally recommended; PenFed membership required."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "PenFed Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5X points on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Gas & EV Charging",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Supermarkets",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "TV, Radio, Cable & Streaming Services",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "5X on gas paid at the pump and EV charging stations; 3X at supermarkets (including most Target and Walmart locations) and restaurants, and on TV, radio, cable, and streaming services; 1.5X on all other purchases. Unlimited points. Points valued at a minimum of $0.0085 each, up to $0.01. Redeem for travel, merchandise, and gift cards. Points expire 5 years from the date earned."
+  },
+  "signup_bonus": {
+    "amount": 15000,
+    "unit": "points",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "One-time 15,000 bonus points after spending $1,500 in qualified purchase transactions within 90 days of account opening.",
+    "as_of": "2026-07-25"
+  },
+  "benefits": [
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protect your cell phone against theft and damage for the next calendar month by paying your monthly wireless bill with your PenFed credit card."
+    },
+    {
+      "id": "travel-accident-coverage",
+      "title": "Travel Accident Coverage",
+      "category": "insurance",
+      "source": "network",
+      "description": "When you purchase your travel ticket with your PenFed credit card, you are eligible for accident coverage of up to $250,000."
+    },
+    {
+      "id": "visa-signature-offers",
+      "title": "Visa Signature Member Offers",
+      "category": "other",
+      "source": "network",
+      "description": "Member-only discounts and special savings on food and wine, shopping, sports, hotels, car rentals, entertainment, and more exclusive to Visa Signature."
+    },
+    {
+      "id": "luxury-hotel-collection",
+      "title": "Access to Luxury Hotel Collection",
+      "category": "other",
+      "source": "network",
+      "description": "Access to premium offers and discounts on luxury hotels around the world."
+    },
+    {
+      "id": "concierge",
+      "title": "Complimentary Concierge Service",
+      "category": "other",
+      "source": "network",
+      "description": "Visa concierge service available 24 hours a day, 365 days a year for travel, dining, and entertainment needs."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Use your PenFed credit card worldwide without any additional fees."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Travel Accident Coverage up to $250,000",
+      "Access to Luxury Hotel Collection",
+      "Visa Signature Concierge Service"
+    ]
+  },
+  "official_url": "https://www.penfed.org/credit-cards/platinum-rewards-visa",
+  "image": {
+    "url": "https://www.penfed.org/content/dam/penfed/en/products/credit-cards/cards/platinum-rewards.webp",
+    "attribution": "© PenFed",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.penfed.org/credit-cards/platinum-rewards-visa",
+    "https://www.penfed.org/credit-cards/compare-credit-cards"
+  ],
+  "notes": "Visa Signature. $0 annual fee. 5X gas/EV charging, 3X supermarkets/restaurants/streaming, 1.5X all other purchases. No foreign transaction fees."
+}

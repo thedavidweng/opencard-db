@@ -27,6 +27,13 @@ npm run embed:default-card
 
 ### Preferred: Apple Pay extract (“graduation-level”)
 
+**One command (recommended):** on a Mac with the card in Apple Pay, run
+[`npx opencard-export --export`](../packages/opencard-export). It finds your payment
+cards, names each exported face after the matched Card Id, and prints the exact
+attribution to record. Everything runs locally; nothing is uploaded.
+
+Manual fallback:
+
 1. On a Mac that already has the card in Wallet, copy  
    `~/Library/Passes/Cards/<id>.pkpass/cardBackgroundCombined@2x.png`
 2. Rename to the Card Id, e.g. `us-chase-sapphire-preferred.png`, and add under `images/`.
@@ -46,6 +53,17 @@ npm run optimize:images
 ```
 
 You can paste a preview into the PR description on GitHub; that preview is **not** stored in the database — use an official URL or an `images/` upload for the Card record.
+
+## The card-art SHA verification chain (CI)
+
+When a PR adds or changes a raster (`images/<card-id>.png` / `.jpg`), the **Optimize Images** workflow runs a deterministic chain (`scripts/optimize-images.ts`; run it locally with `npm run optimize:images`):
+
+1. **Verify the claim.** If the card JSON declares `image.provenance.source_sha256`, CI computes the sha256 of the submitted raster and it **must** match `source_sha256` (or an entry of `alternate_sha256`). A mismatch is a **hard error** — the submitted file is not the one the provenance block describes; re-export the art or fix the block. A card with **no** `image.provenance` block is a **warning, not a failure** (issuer-site art has no Apple Pay lineage); add verifiable provenance with `npx opencard-export --repo .`.
+2. **Convert.** Lossless WebP at native dimensions (no downscale) — Apple Pay `cardBackgroundCombined@2x.png` is the quality bar.
+3. **Archive on replace — never delete.** If `images/<card-id>.webp` already existed on the base branch, the old file is moved to `images/archive/<card-id>.<YYYYMMDD>.webp` (never overwritten) and an `image.history[]` entry recording the **old** art's provenance is appended. Banks refresh designs and grandfathered cardholders keep theirs, so superseded versions stay addressable.
+4. **Fill the hashes.** CI writes `image.provenance.converted_sha256` (sha256 of the committed WebP) and sets `image.local_path` when it is absent.
+
+**In short:** submit the PNG plus its provenance block → CI verifies it, converts to lossless WebP, fills `converted_sha256`, and archives any art it replaces. On same-repo PRs CI commits `images/` + `data/` back to the branch; on **fork** PRs CI can't push, so it leaves a comment listing the same steps to run locally (`npm run optimize:images`, then commit `images/` and `data/`).
 
 ## Copyright
 

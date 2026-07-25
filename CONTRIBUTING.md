@@ -52,6 +52,11 @@ auto-creates folders from the filename, so you never leave the browser.
 If a check goes red, open the [validation FAQ](docs/faq.md) — it maps each error
 message to the exact fix.
 
+**Card art:** if you hold the card and have it in Apple Pay on a Mac, run
+[`npx opencard-export`](packages/opencard-export) to check whether it's already in
+the DB and to export the card face for your PR. Everything runs locally; nothing is
+uploaded.
+
 ## Path C — Local clone (full tooling)
 
 Best if you'll add several cards or want to validate before pushing.
@@ -73,6 +78,12 @@ npm run optimize:images   # only if you added files under images/
 Open a PR with title `card(add): us-my-card` (or `card(update): …` when editing an
 existing card) and fill in the PR form.
 
+**Card art in one command:** on a Mac with the card in Apple Pay, run
+[`npx opencard-export --export`](packages/opencard-export). It scans your Wallet,
+compares against the live DB, names the exported face after the matched Card Id, and
+prints the attribution to record — then add it under `images/` and run
+`npm run optimize:images`. Everything runs locally; nothing is uploaded.
+
 ---
 
 ## What the checks do
@@ -86,6 +97,11 @@ existing card) and fill in the PR form.
 
 If **Form check** is red, edit **this** PR (title/body or a new commit) — don't open a
 duplicate.
+
+> **Reviewers:** green CI means a PR is *well-formed*, not *verified*. See
+> [REVIEWING.md](docs/REVIEWING.md) for the trust model — what the machine checks
+> (schema, lints, issuer-domain allowlist, update diff flags) versus what a human
+> must confirm against the cited official page before merging.
 
 ## Licenses
 

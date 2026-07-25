@@ -1,0 +1,131 @@
+{
+  "id": "us-first-cardless-qatar-signature",
+  "schema_version": "1.0.0",
+  "name": "Qatar Airways Privilege Club Credit Card (Signature)",
+  "localized_names": {
+    "en": "Qatar Airways Privilege Club Credit Card (Signature)"
+  },
+  "country": "us",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 99.0,
+    "currency": "USD",
+    "first_year": 99.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not displayed on the compare page. See Rates & Fees PDF at https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf for full pricing details."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "avios",
+    "currency_label": "Avios",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Avios when you use your Privilege Club Card everywhere else."
+    },
+    "categories": [],
+    "redemption_notes": "You'll get 2 Qpoints for every 2,000 Avios you earn using your card. Miles do not expire for as long as you use your card.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 40000,
+    "unit": "avios",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn up to 40,000 Avios: 20,000 Avios after your first transaction + 20,000 Avios after spending a total of $3,000 in the first 90 days.",
+    "as_of": "2026-07-25"
+  },
+  "benefits": [
+    {
+      "id": "miles-no-expiry",
+      "title": "Miles do not expire",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Miles do not expire for as long as you use your card."
+    },
+    {
+      "id": "no-foreign-transaction-fee",
+      "title": "No foreign transaction fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fee."
+    },
+    {
+      "id": "visa-zero-liability",
+      "title": "Visa Zero Liability",
+      "category": "other",
+      "source": "network",
+      "description": "Visa Zero Liability protection."
+    },
+    {
+      "id": "travel-emergency-assistance",
+      "title": "Travel Emergency Assistance",
+      "category": "other",
+      "source": "network",
+      "description": "Travel Emergency Assistance."
+    },
+    {
+      "id": "roadside-dispatch",
+      "title": "Roadside Dispatch®",
+      "category": "other",
+      "source": "network",
+      "description": "Roadside Dispatch® service."
+    },
+    {
+      "id": "privilege-club-silver-first-year",
+      "title": "First year Privilege Club Silver status (oneworld Ruby)",
+      "category": "other",
+      "source": "co-brand",
+      "description": "In your first year, experience Privilege Club Silver with access to benefits: 25% tier bonus on eligible flights, Priority stand-by, Priority check-in & boarding, Save 20% on seat selection, 15kg (33 lbs) extra baggage allowance, Lounge access. oneworld tier: Ruby."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": null,
+      "visits_per_year": null,
+      "notes": "Lounge access (via first year Privilege Club Silver status)"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "15kg (33 lbs) extra baggage allowance (via first year Privilege Club Silver status)",
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fee",
+      "First year Privilege Club Silver (oneworld Ruby): 25% tier bonus on eligible flights, priority stand-by, priority check-in & boarding, 20% off seat selection, lounge access"
+    ]
+  },
+  "official_url": "https://qatarairways.cardless.com/compare",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://qatarairways.cardless.com/compare",
+    "https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf"
+  ],
+  "notes": "Verified from the official Cardless compare page on 2026-07-25. The page lists two cards; this entry is the lower-tier Signature card ($99 annual fee), distinct from the Infinite card ($499, us-first-cardless-qatar-infinite). Signature grants first-year Privilege Club Silver (oneworld Ruby) and earns 2 Qpoints for every 2,000 Avios; the Infinite grants Gold and a richer benefit set. Per-category Avios earn multipliers (Qatar Airways purchases, dining, everywhere else) are not exposed as machine-readable numbers on the official compare page (JS-rendered; headline states \"up to 5x Avios\"), so categories are left empty and the base rate is null. APR not shown on the compare page; the Rates & Fees PDF (legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf) is the official pricing document. No official card art was confidently identifiable for the Signature variant, so image is null."
+}

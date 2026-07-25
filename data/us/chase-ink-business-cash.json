@@ -29,8 +29,8 @@
     "notes": "0% intro APR for 12 months from account opening on purchases. After that, 16.74% Min. of (6.75+9.99) and 29.99% to 24.74% Min. of (6.75+17.99) and 29.99% variable APR."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Not stated on product page. Preserved as null — not re-verified."
+    "percent": 0,
+    "notes": "No foreign transaction fee (per product page benefits)."
   },
   "credit_required": {
     "score_band": null,
@@ -116,7 +116,7 @@
   },
   "official_url": "https://creditcards.chase.com/business-credit-cards/ink/cash",
   "image": {
-    "url": null,
+    "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/ink_cash_card.png",
     "attribution": "© Chase",
     "local_path": null
   },

@@ -100,6 +100,73 @@ describe("semantic lints", () => {
     assert.deepEqual(lintCard(explicit, ctx), []);
   });
 
+
+  it("accepts wayback-wrapped official sources; rejects wrapped foreign domains", async () => {
+    const ctx = await loadLintContext();
+    const archivedOfficial = baseCard({
+      sources: [
+        "https://web.archive.org/web/20260101000000/https://creditcards.chase.com/x",
+      ],
+    });
+    assert.deepEqual(lintCard(archivedOfficial, ctx), []);
+
+    const archivedForeign = baseCard({
+      sources: [
+        "https://web.archive.org/web/20260101000000/https://evil.example.com/x",
+      ],
+    });
+    assert.match(lintCard(archivedForeign, ctx)[0], /not in the domain allowlist/);
+
+    const malformed = baseCard({
+      sources: ["https://web.archive.org/web/oops"],
+    });
+    assert.match(lintCard(malformed, ctx)[0], /malformed web\.archive\.org/);
+  });
+
+  it("secondary_sources only on discontinued cards", async () => {
+    const ctx = await loadLintContext();
+    const active = baseCard({ secondary_sources: ["https://blog.example.com/x"] });
+    assert.match(
+      lintCard(active, ctx).join(" "),
+      /secondary_sources are only permitted on discontinued/,
+    );
+    const gone = baseCard({
+      status: "discontinued",
+      discontinued_date: "2026-01-01",
+      secondary_sources: ["https://blog.example.com/x"],
+    });
+    assert.equal(
+      lintCard(gone, ctx).some((p) => p.includes("secondary_sources")),
+      false,
+    );
+  });
+
+  it("provenance requires committed art; history must live in images/archive/", async () => {
+    const ctx = await loadLintContext();
+    const orphan = baseCard({
+      image: {
+        url: null,
+        attribution: null,
+        local_path: null,
+        provenance: { source: "apple-pay", source_sha256: "a".repeat(64) },
+      },
+    });
+    assert.match(lintCard(orphan, ctx).join(" "), /provenance is set but image\.local_path is null/);
+
+    const badHistory = baseCard({
+      image: {
+        url: null,
+        attribution: null,
+        local_path: "images/us-demo-card.webp",
+        provenance: { source: "apple-pay", source_sha256: "a".repeat(64) },
+        history: [
+          { local_path: "images/us-demo-card.old.webp", source: "issuer-site", superseded_at: "2026-07-25" },
+        ],
+      },
+    });
+    assert.match(lintCard(badHistory, ctx).join(" "), /must live under images\/archive\//);
+  });
+
   it("flags future dates", async () => {
     const ctx = await loadLintContext();
     assert.match(
@@ -131,6 +198,60 @@ describe("semantic lints", () => {
       )[0],
       /scraped page title/,
     );
+  });
+
+  it("passes sources/official_url on an issuer's allow-listed domain", async () => {
+    const ctx = await loadLintContext();
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://creditcards.chase.com/rewards/sapphire",
+      sources: [
+        "https://www.chase.com/personal/credit-cards/sapphire",
+        "https://creditcards.chase.com/rewards/sapphire",
+      ],
+    });
+    assert.deepEqual(lintCard(card, ctx), []);
+  });
+
+  it("errors on a source domain not in the issuer's allowlist", async () => {
+    const ctx = await loadLintContext();
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://creditcards.chase.com/ok",
+      sources: [
+        "https://creditcards.chase.com/ok",
+        "https://totally-fabricated.example/cards/x",
+      ],
+    });
+    const problems = lintCard(card, ctx);
+    assert.equal(problems.length, 1);
+    assert.match(problems[0], /sources\[1\]/);
+    assert.match(problems[0], /totally-fabricated\.example/);
+    assert.match(problems[0], /domain allowlist for issuer "chase"/);
+    assert.match(problems[0], /same PR/);
+  });
+
+  it("accepts allow-listed co-brand + subdomain hosts (parent-domain match)", async () => {
+    const ctx = await loadLintContext();
+    // chase allows amazon.com (co-brand); www. is a subdomain of chase.com.
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://www.amazon.com/dp/prime-card",
+      sources: ["https://creditcards.chase.com/amazon"],
+    });
+    assert.deepEqual(lintCard(card, ctx), []);
+  });
+
+  it("skips the domain lint for issuers with no domains allowlist", async () => {
+    const ctx = await loadLintContext();
+    // Simulate an issuer registered without a domains[] allowlist.
+    ctx.issuerDomains.delete("chase");
+    const card = baseCard({
+      issuer_id: "chase",
+      official_url: "https://anything.example/x",
+      sources: ["https://anything.example/x"],
+    });
+    assert.deepEqual(lintCard(card, ctx), []);
   });
 
   it("flags discontinued_date on an active card and duplicate benefit ids", async () => {

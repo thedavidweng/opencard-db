@@ -56,6 +56,9 @@ export function findStaleCards(
 ): StaleCard[] {
   const out: StaleCard[] = [];
   for (const { file, card } of cards) {
+    // Discontinued products have no live page to re-verify against — they are
+    // kept for grandfathered cardholders and exempt from the staleness nag.
+    if (card.status === "discontinued") continue;
     const lastVerified = card.last_verified;
     if (typeof lastVerified !== "string") continue;
     const days = daysSince(lastVerified, today);
