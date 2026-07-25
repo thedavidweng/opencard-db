@@ -50,7 +50,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Cash back redeemed as statement credit, deposit to U.S. Bank checking or savings account, or as a U.S. Bank Rewards Card. Cash Rewards expire if no reward, purchase, or balance activity for 12 consecutive statement cycles."
+    "redemption_notes": "Cash back redeemed as statement credit, deposit to U.S. Bank checking or savings account, or as a U.S. Bank Rewards Card. Cash Rewards expire if no reward, purchase, or balance activity for 12 consecutive statement cycles.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": null,
   "benefits": [
@@ -102,5 +103,6 @@
   "sources": [
     "https://www.usbank.com/credit-cards/shield-visa-credit-card.html"
   ],
-  "notes": "Visa card (confirmed by name). Network_tier (signature) preserved from existing JSON but not re-verified on page. 0% intro APR for 21 billing cycles on purchases and BTs, then variable (rate not shown). $0 annual fee confirmed. 4% cash back on Travel Center prepaid bookings. $20 annual statement credit. Cell phone protection up to $600. FX fee not mentioned on page."
+  "notes": "Visa card (confirmed by name). Network_tier (signature) preserved from existing JSON but not re-verified on page. 0% intro APR for 21 billing cycles on purchases and BTs, then variable (rate not shown). $0 annual fee confirmed. 4% cash back on Travel Center prepaid bookings. $20 annual statement credit. Cell phone protection up to $600. FX fee not mentioned on page.",
+  "segment": "personal"
 }

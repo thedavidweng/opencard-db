@@ -63,7 +63,8 @@
         }
       }
     ],
-    "redemption_notes": "Points redeemed through the Rapid Rewards program for Southwest Airlines flights and other rewards."
+    "redemption_notes": "Points redeemed through the Rapid Rewards program for Southwest Airlines flights and other rewards.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -181,5 +182,6 @@
     "https://creditcards.chase.com/business-credit-cards/southwest/premier-business",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC61808.html"
   ],
-  "notes": "Network corrected from mastercard to visa based on terms page stating 'Visa Business Card cardmember'. Network tier set to null (not stated on page; previous 'world' was a Mastercard tier). Rewards currency corrected from ultimate_rewards to rapid_rewards_points."
+  "notes": "Network corrected from mastercard to visa based on terms page stating 'Visa Business Card cardmember'. Network tier set to null (not stated on page; previous 'world' was a Mastercard tier). Rewards currency corrected from ultimate_rewards to rapid_rewards_points.",
+  "segment": "business"
 }

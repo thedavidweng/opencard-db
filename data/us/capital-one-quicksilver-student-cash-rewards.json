@@ -43,7 +43,8 @@
       "description": "1.5% cash back on every purchase, every day."
     },
     "categories": [],
-    "redemption_notes": "1.5% cash back on every purchase, every day."
+    "redemption_notes": "1.5% cash back on every purchase, every day.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 100.0,
@@ -75,5 +76,6 @@
     "https://www.capitalone.com/credit-cards/quicksilver-student/",
     "https://www.capitalone.com/credit-cards/fair-and-building/"
   ],
-  "notes": "Verified from official Capital One product page and fair-and-building listing page. Annual fee $0 (confirmed from fair-and-building listing). $100 cash bonus after $300 spend in 3 months (confirmed from product page footnote). 1.5% cash back on every purchase. APR and foreign transaction fee not visible on fetched pages. Name updated to 'Quicksilver Rewards for Students' per official page."
+  "notes": "Verified from official Capital One product page and fair-and-building listing page. Annual fee $0 (confirmed from fair-and-building listing). $100 cash bonus after $300 spend in 3 months (confirmed from product page footnote). 1.5% cash back on every purchase. APR and foreign transaction fee not visible on fetched pages. Name updated to 'Quicksilver Rewards for Students' per official page.",
+  "segment": "personal"
 }

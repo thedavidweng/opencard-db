@@ -48,7 +48,8 @@
       "description": "Earn 1% in Disney Rewards Dollars on all card purchases with no limits to the amount you can earn."
     },
     "categories": [],
-    "redemption_notes": "Redeem toward most anything Disney at most Disney U.S. locations. Use toward Disney Theme Park Tickets, Resort stays, shopping, dining, Disney Cruise Line sailings and more in the U.S. There are no block-out dates when redeeming Rewards Dollars."
+    "redemption_notes": "Redeem toward most anything Disney at most Disney U.S. locations. Use toward Disney Theme Park Tickets, Resort stays, shopping, dining, Disney Cruise Line sailings and more in the U.S. There are no block-out dates when redeeming Rewards Dollars.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 150,
@@ -151,5 +152,6 @@
     "https://creditcards.chase.com/rewards-credit-cards/disney/rewards",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC63171.html"
   ],
-  "notes": "Network corrected from mastercard to visa based on product page stating 'Disney Visa Card'. Network tier set to null (not stated on page; previous 'world' was a Mastercard tier). Name corrected from 'Disney Card from Chase: No Annual Fee' to 'Disney Visa Card' per product page."
+  "notes": "Network corrected from mastercard to visa based on product page stating 'Disney Visa Card'. Network tier set to null (not stated on page; previous 'world' was a Mastercard tier). Name corrected from 'Disney Card from Chase: No Annual Fee' to 'Disney Visa Card' per product page.",
+  "segment": "personal"
 }

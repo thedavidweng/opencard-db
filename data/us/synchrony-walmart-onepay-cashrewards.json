@@ -59,7 +59,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Cash back is earned as points on purchases made with your OnePay CashRewards Mastercard, which can be redeemed as a statement credit, as a deposit into a OnePay deposit account, or other available options. Must have at least 25 points to make a redemption. OnePay Points redeemed for a statement credit or electronic deposit redeem at a value of $0.01 per OnePay Point. Walmart+ membership required for 5% rate."
+    "redemption_notes": "Cash back is earned as points on purchases made with your OnePay CashRewards Mastercard, which can be redeemed as a statement credit, as a deposit into a OnePay deposit account, or other available options. Must have at least 25 points to make a redemption. OnePay Points redeemed for a statement credit or electronic deposit redeem at a value of $0.01 per OnePay Point. Walmart+ membership required for 5% rate.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 35,
@@ -138,5 +139,6 @@
     "https://www.onepay.com/help-center/articles/about-the-onepay-credit-card",
     "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e079073.pdf"
   ],
-  "notes": "Issued by Synchrony Bank. World Mastercard. CORRECTION: APR updated from rates PDF (20.24%/30.74% purchase, 22.24%/32.24% cash advance) — prior values of 20.99%/31.49% and 22.99%/32.99% were incorrect. Signup bonus updated: product page says '$35 cash back upon account opening' with no spend requirement mentioned (prior version cited $75 spend in 30 days — not found on official pages). Credit score band changed from 'fair' to 'unknown' — prior 'fair' was based on third-party WalletHub, not official source."
+  "notes": "Issued by Synchrony Bank. World Mastercard. CORRECTION: APR updated from rates PDF (20.24%/30.74% purchase, 22.24%/32.24% cash advance) — prior values of 20.99%/31.49% and 22.99%/32.99% were incorrect. Signup bonus updated: product page says '$35 cash back upon account opening' with no spend requirement mentioned (prior version cited $75 spend in 30 days — not found on official pages). Credit score band changed from 'fair' to 'unknown' — prior 'fair' was based on third-party WalletHub, not official source.",
+  "segment": "personal"
 }

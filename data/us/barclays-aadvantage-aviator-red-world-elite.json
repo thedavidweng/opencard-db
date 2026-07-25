@@ -54,7 +54,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "No limit to the number of AAdvantage miles you can earn. Miles earn 1 Loyalty Point per $1 spent toward AAdvantage status. American Airlines miles expire 24 months after last account activity."
+    "redemption_notes": "No limit to the number of AAdvantage miles you can earn. Miles earn 1 Loyalty Point per $1 spent toward AAdvantage status. American Airlines miles expire 24 months after last account activity.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -163,5 +164,6 @@
     "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
     "https://cards.barclaycardus.com/credit-card/744a9f7a-4f12-4480-8481-e72155061cd8"
   ],
-  "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026."
+  "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026.",
+  "segment": "personal"
 }
