@@ -37,6 +37,35 @@ describe("API contract /v1", () => {
     assert.equal(body.ok, true);
   });
 
+  it("answers CORS preflight with 204 and allowed methods", async () => {
+    const res = await handleTestRequest(
+      new Request("https://example.test/v1/cards", { method: "OPTIONS" }),
+      { kv, MODE: "official", REQUIRE_CLIENT_ID: "true" },
+    );
+    assert.equal(res.status, 204);
+    assert.equal(res.headers.get("Access-Control-Allow-Origin"), "*");
+    assert.equal(
+      res.headers.get("Access-Control-Allow-Methods"),
+      "GET, HEAD, OPTIONS",
+    );
+    assert.equal(
+      res.headers.get("Access-Control-Allow-Headers"),
+      "X-Client-Name",
+    );
+    assert.equal(res.headers.get("Access-Control-Max-Age"), "86400");
+  });
+
+  it("sets Access-Control-Allow-Origin on GET responses", async () => {
+    const res = await handleTestRequest(
+      new Request("https://example.test/v1/cards?limit=1", {
+        headers: { "User-Agent": "OpenCardTest/1.0" },
+      }),
+      { kv, MODE: "selfhost" },
+    );
+    assert.equal(res.status, 200);
+    assert.equal(res.headers.get("Access-Control-Allow-Origin"), "*");
+  });
+
   it("official mode requires client identification", async () => {
     const res = await handleTestRequest(
       new Request("https://example.test/v1/cards"),
