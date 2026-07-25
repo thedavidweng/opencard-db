@@ -9,8 +9,9 @@
   "issuer": "Barclays",
   "issuer_id": "barclays",
   "network": "visa",
-  "network_tier": "world",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -50,16 +51,17 @@
     "categories": [
       {
         "label": "Earn 5 points per $1 spent on eligible purchases made at Hotels by Wyndham, including hotels through Wyndham Travel Bundles.",
-        "points_per_dollar": null,
+        "points_per_dollar": 5.0,
         "cap": null
       },
       {
         "label": "Earn 3 points per $1 spent on eligible Vacation Club, dining and grocery store purchases (excluding Target and Walmart), as well as eligible gas and EV charging purchases.",
-        "points_per_dollar": null,
+        "points_per_dollar": 3.0,
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem 10% fewer Wyndham Rewards points for free nights, starting at just 6,750 points. Can redeem points for online merchandise, gift cards, experiences. Wyndham Rewards GOLD member level included."
+    "redemption_notes": "Redeem 10% fewer Wyndham Rewards points for free nights, starting at just 6,750 points. Can redeem points for online merchandise, gift cards, experiences. Wyndham Rewards GOLD member level included.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 75000.0,
@@ -75,21 +77,21 @@
       "id": "wyndham-gold-status",
       "title": "Wyndham Rewards GOLD Member Level",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Automatically receive a Wyndham Rewards GOLD member level and enjoy perks like preferred room selection, late checkout, and more."
     },
     {
       "id": "save-15-buy-points",
       "title": "Save 15% When You Buy Points",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Enjoy a 15% discount-or best available offer-when you purchase points with your Wyndham Rewards Earner Card."
     },
     {
       "id": "anniversary-bonus",
       "title": "Anniversary Bonus",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive 7,500 bonus points each anniversary year after spending $15,000 on eligible purchases."
     },
     {
@@ -103,7 +105,7 @@
       "id": "earn-free-nights-faster",
       "title": "Earn Free Nights Faster",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Redeem 10% fewer Wyndham Rewards points for free nights, which means you can book free nights starting at just 6,750 points."
     },
     {
@@ -117,7 +119,7 @@
       "id": "cardmember-booking-discount",
       "title": "Cardmember Booking Discount",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Wyndham Rewards Earner Card members can save even more on the Standard Rate for stays at participating Hotels by Wyndham and hotels in Wyndham Travel Bundles."
     }
   ],
@@ -136,9 +138,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.wyndhamrewardscreditcard.com/#earner"
   ],
-  "notes": "Network corrected from 'mastercard' to 'visa' based on page text: 'issued by Barclays Bank Delaware pursuant to a license by Visa U.S.A. Inc.' network_tier 'world' preserved but NOT re-verified — page does not state a specific Visa tier for the Earner card. Signup bonus updated from 30,000 to 75,000 (total) to reflect full offer including Wyndham stay bonus."
+  "notes": "Network is Visa (issued by Barclays Bank Delaware pursuant to a license by Visa U.S.A. Inc.); network_tier corrected from the Mastercard-package slug 'world' to the Visa 'signature' tier that this no-annual-fee Wyndham Rewards Earner Card carries. Earn rates: 5x at Hotels by Wyndham, 3x on Vacation Club/dining/grocery/gas/EV charging, 1x elsewhere. Signup bonus reflects the full 75,000-point offer (30,000 + 45,000 Hotels-by-Wyndham stay bonus)."
 }
