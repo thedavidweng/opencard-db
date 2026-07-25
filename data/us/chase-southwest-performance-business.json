@@ -8,9 +8,10 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 299.0,
@@ -39,29 +40,35 @@
     "currency": "rapid_rewards_points",
     "currency_label": "Southwest Rapid Rewards points",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1,
       "description": "1X points on all other purchases"
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Southwest Airlines purchases",
+        "points_per_dollar": 4,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Rapid Rewards hotel and rental car partners",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations, dining at restaurants, and hotels booked directly",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Local transit and commuting, including rideshare",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Social media and search engine advertising; internet, cable, and phone services",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -81,56 +88,56 @@
       "id": "preferred-seat-booking",
       "title": "Complimentary Preferred seat at booking",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Select a Preferred seat at booking, at no additional charge, when available. For flights operating with assigned seating in 2026 and beyond."
     },
     {
       "id": "first-checked-bag-free",
       "title": "First checked bag free",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Cardmembers and up to 8 additional passengers in the same reservation can check their first bag at no additional cost. Savings up to $360 roundtrip for a group of 4."
     },
     {
       "id": "extra-legroom-upgrade",
       "title": "Extra Legroom seat upgrade",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Unlimited upgrades to an Extra Legroom seat within 48 hours prior to departure, at no additional charge, when available."
     },
     {
       "id": "boarding-benefit",
       "title": "Group 5 Boarding benefit",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Cardmembers and up to 8 passengers in the same reservation will board with Group 5."
     },
     {
       "id": "inflight-purchase-rebate",
       "title": "25% back on inflight purchases",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "25% back on Southwest Airlines inflight purchases in the form of a statement credit."
     },
     {
       "id": "anniversary-points",
       "title": "9,000 anniversary points each year",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Receive 9,000 bonus points each year after your Cardmember anniversary."
     },
     {
       "id": "tqp-earning",
       "title": "2,500 Tier Qualifying Points per $5,000 spent",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn 2,500 tier qualifying points (TQPs) toward A-List status for every $5,000 spent in purchases annually."
     },
     {
       "id": "companion-pass-boost",
       "title": "10,000 Companion Pass qualifying points boost",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "10,000 Companion Pass qualifying points boost each year."
     },
     {
@@ -158,35 +165,35 @@
       "id": "no-blackout-dates",
       "title": "No blackout dates and unlimited reward seats",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "No blackout dates and unlimited reward seats apply to flights booked with points."
     },
     {
       "id": "lost-luggage-reimbursement",
       "title": "Lost Luggage Reimbursement",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Reimbursement up to $3,000 per covered traveler for lost, damaged or stolen baggage."
     },
     {
       "id": "baggage-delay-insurance",
       "title": "Baggage Delay Insurance",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Reimburses up to $100 a day for up to 3 days for essential purchases when baggage is delayed over 6 hours."
     },
     {
       "id": "extended-warranty",
       "title": "Extended Warranty Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Extends manufacturer's U.S. warranty by an additional year, on eligible warranties of three years or less, up to four years from date of purchase."
     },
     {
       "id": "purchase-protection",
       "title": "Purchase Protection",
       "category": "other",
-      "source": "issuer",
+      "source": "network",
       "description": "Covers eligible new purchases for 120 days against damage or theft up to $10,000 per item."
     }
   ],
@@ -223,9 +230,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/southwest/performance-business"
   ],
-  "notes": "Verified from official Chase product page. Network (mastercard) and network_tier (world) not explicitly stated on product page; preserved from existing JSON."
+  "notes": "Verified from official Chase product page. Network corrected from mastercard to visa (all Chase Southwest cards are Visa Signature). Earn structure verified from official page: 4X Southwest, 3X Rapid Rewards hotel/car partners, 2X gas/dining/hotels-direct, 2X local transit & rideshare, 2X advertising/internet/cable/phone, 1X all else (some 2X/3X categories were promotional through 12/31/2025 per the page). Southwest airline perks re-labeled source 'co-brand'; Visa travel/purchase protections re-labeled 'network'."
 }
