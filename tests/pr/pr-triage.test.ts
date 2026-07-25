@@ -3,11 +3,18 @@ import { describe, it } from "node:test";
 import {
   compareIsoDates,
   detectRegions,
+  diffCardFields,
   findDuplicatePrs,
+  highImpactChanges,
+  isMaintainer,
   parseTitle,
+  renderDiffTable,
   suggestTitle,
   triagePullRequest,
+  urlHostname,
+  type CardKeyFields,
 } from "../../scripts/pr-triage.ts";
+import { extractKeyFields } from "../../scripts/build-base-cards.ts";
 
 const goodBody = `
 ## What kind of change is this?
@@ -498,5 +505,302 @@ describe("pr triage", () => {
       },
     });
     assert.ok(r.issues.some((i) => i.code === "does-not-exist"));
+  });
+});
+
+// --- Truth signals: update diffs + high-impact flags (anti-vandalism) -------
+
+function keyFields(overrides: Partial<CardKeyFields> = {}): CardKeyFields {
+  return {
+    name: "Chase Demo",
+    issuer_id: "chase",
+    network: "visa",
+    network_tier: "signature",
+    annual_fee_amount: 95,
+    fx_fee_percent: 0,
+    base_rate_points_per_dollar: 1,
+    official_url: "https://creditcards.chase.com/demo",
+    status: "active",
+    segment: "personal",
+    ...overrides,
+  };
+}
+
+const CHASE_UPDATE_BODY = `
+- [ ] **New card**
+- [x] **Update existing card**
+- **Card ID:** \`us-chase-demo\`
+- **Product page:** https://creditcards.chase.com/demo
+- **Last verified (YYYY-MM-DD):** 2026-07-20
+- [x] **D. No image yet**
+`;
+
+function updateTriage(
+  base: CardKeyFields,
+  head: CardKeyFields,
+  extra: { prAuthor?: string } = {},
+) {
+  const path = "data/us/chase-demo.json";
+  return triagePullRequest({
+    title: "card(update): us-chase-demo",
+    body: CHASE_UPDATE_BODY,
+    changedFiles: [path],
+    prAuthor: extra.prAuthor ?? "thedavidweng",
+    baseCards: {
+      [path]: {
+        path,
+        exists: true,
+        last_verified: "2026-07-01",
+        base,
+        head,
+      },
+    },
+  });
+}
+
+describe("truth signals: update diff table", () => {
+  it("urlHostname extracts host and tolerates junk", () => {
+    assert.equal(
+      urlHostname("https://creditcards.chase.com/x"),
+      "creditcards.chase.com",
+    );
+    assert.equal(urlHostname("not a url"), null);
+    assert.equal(urlHostname(null), null);
+  });
+
+  it("diffs only the key fields that changed", () => {
+    const rows = diffCardFields(
+      keyFields(),
+      keyFields({ name: "Renamed", annual_fee_amount: 250 }),
+    );
+    assert.deepEqual(
+      rows.map((r) => r.field).sort(),
+      ["annual_fee.amount", "name"],
+    );
+    const nameRow = rows.find((r) => r.field === "name");
+    assert.match(nameRow!.old, /Chase Demo/);
+    assert.match(nameRow!.new, /Renamed/);
+  });
+
+  it("renders a markdown table (null when nothing changed)", () => {
+    assert.equal(renderDiffTable([]), null);
+    const table = renderDiffTable(diffCardFields(keyFields(), keyFields({ status: "discontinued" })));
+    assert.match(table!, /\| Field \| Old/);
+    assert.match(table!, /`status`/);
+  });
+
+  it("puts the diff table + reviewer warning in the sticky comment", () => {
+    const r = updateTriage(keyFields(), keyFields({ annual_fee_amount: 550 }));
+    assert.match(r.commentMarkdown, /Key field changes — `us-chase-demo`/);
+    assert.match(r.commentMarkdown, /annual_fee\.amount/);
+    assert.match(r.commentMarkdown, /REVIEWING\.md/);
+  });
+});
+
+describe("truth signals: high-impact flags", () => {
+  it("no flags when nothing high-impact changed", () => {
+    // base_rate change is diffed but not high-impact
+    assert.deepEqual(
+      highImpactChanges(
+        "us-chase-demo",
+        keyFields(),
+        keyFields({ base_rate_points_per_dollar: 2 }),
+      ),
+      [],
+    );
+    const r = updateTriage(
+      keyFields(),
+      keyFields({ base_rate_points_per_dollar: 2 }),
+    );
+    assert.ok(!r.completenessLabelsAdd.includes("high-impact-change"));
+    assert.ok(r.completenessLabelsRemove.includes("high-impact-change"));
+  });
+
+  it("flags an annual-fee jump over $100 (warn)", () => {
+    const hi = highImpactChanges(
+      "us-chase-demo",
+      keyFields({ annual_fee_amount: 95 }),
+      keyFields({ annual_fee_amount: 550 }),
+    );
+    const fee = hi.find((i) => i.code === "high-impact-annual-fee");
+    assert.equal(fee?.severity, "warn");
+    // a $30 bump does not flag
+    assert.equal(
+      highImpactChanges(
+        "us-chase-demo",
+        keyFields({ annual_fee_amount: 95 }),
+        keyFields({ annual_fee_amount: 125 }),
+      ).length,
+      0,
+    );
+  });
+
+  it("flags an annual-fee change to/from null (warn)", () => {
+    const hi = highImpactChanges(
+      "us-chase-demo",
+      keyFields({ annual_fee_amount: 0 }),
+      keyFields({ annual_fee_amount: null }),
+    );
+    assert.ok(hi.some((i) => i.code === "high-impact-annual-fee"));
+  });
+
+  it("flags a network flip and a network_tier flip (warn)", () => {
+    const net = highImpactChanges(
+      "us-chase-demo",
+      keyFields({ network: "visa" }),
+      keyFields({ network: "mastercard" }),
+    );
+    assert.equal(
+      net.find((i) => i.code === "high-impact-network")?.severity,
+      "warn",
+    );
+    const tier = highImpactChanges(
+      "us-chase-demo",
+      keyFields({ network_tier: "signature" }),
+      keyFields({ network_tier: "world_elite" }),
+    );
+    assert.ok(tier.some((i) => i.code === "high-impact-network-tier"));
+  });
+
+  it("flags an official_url hostname change (warn), ignoring path-only edits", () => {
+    const hostChange = highImpactChanges(
+      "us-chase-demo",
+      keyFields({ official_url: "https://creditcards.chase.com/a" }),
+      keyFields({ official_url: "https://phishing.example/a" }),
+    );
+    assert.equal(
+      hostChange.find((i) => i.code === "high-impact-official-url")?.severity,
+      "warn",
+    );
+    // same host, different path → not flagged
+    assert.equal(
+      highImpactChanges(
+        "us-chase-demo",
+        keyFields({ official_url: "https://creditcards.chase.com/a" }),
+        keyFields({ official_url: "https://creditcards.chase.com/b" }),
+      ).length,
+      0,
+    );
+  });
+
+  it("flags status change to discontinued (warn)", () => {
+    const hi = highImpactChanges(
+      "us-chase-demo",
+      keyFields({ status: "active" }),
+      keyFields({ status: "discontinued" }),
+    );
+    assert.ok(hi.some((i) => i.code === "high-impact-status-discontinued"));
+  });
+
+  it("treats an issuer_id change as an ERROR that fails the form", () => {
+    const hi = highImpactChanges(
+      "us-chase-demo",
+      keyFields({ issuer_id: "chase" }),
+      keyFields({ issuer_id: "citi" }),
+    );
+    const err = hi.find((i) => i.code === "high-impact-issuer-id");
+    assert.equal(err?.severity, "error");
+
+    const r = updateTriage(
+      keyFields({ issuer_id: "chase" }),
+      keyFields({ issuer_id: "citi" }),
+    );
+    assert.ok(r.issues.some((i) => i.code === "high-impact-issuer-id"));
+    assert.ok(r.missing.length > 0, "issuer_id change must fail the form");
+    assert.ok(r.completenessLabelsAdd.includes("high-impact-change"));
+  });
+
+  it("adds the high-impact-change label on a flagged update", () => {
+    const r = updateTriage(keyFields(), keyFields({ network: "mastercard" }));
+    assert.ok(r.completenessLabelsAdd.includes("high-impact-change"));
+    assert.match(r.commentMarkdown, /High-impact fields changed/);
+  });
+});
+
+describe("truth signals: provenance / needs-verification", () => {
+  it("isMaintainer recognizes the repo owner (case/@-insensitive)", () => {
+    assert.equal(isMaintainer("thedavidweng"), true);
+    assert.equal(isMaintainer("@TheDavidWeng"), true);
+    assert.equal(isMaintainer("random-contributor"), false);
+    assert.equal(isMaintainer(""), false);
+    assert.equal(isMaintainer(undefined), false);
+  });
+
+  it("adds needs-verification for a non-maintainer new card", () => {
+    const r = triagePullRequest({
+      title: "card(add): us-chase-sapphire-preferred",
+      body: goodBody,
+      changedFiles: ["data/us/chase-sapphire-preferred.json"],
+      prAuthor: "external-contributor",
+      baseCards: {
+        "data/us/chase-sapphire-preferred.json": {
+          path: "data/us/chase-sapphire-preferred.json",
+          exists: false,
+          last_verified: null,
+        },
+      },
+    });
+    assert.ok(r.issues.some((i) => i.code === "needs-verification"));
+    assert.ok(r.completenessLabelsAdd.includes("needs-verification"));
+    assert.match(r.commentMarkdown, /verify the identity fields/);
+  });
+
+  it("adds needs-verification for a non-maintainer update", () => {
+    const r = updateTriage(keyFields(), keyFields(), {
+      prAuthor: "external-contributor",
+    });
+    const note = r.issues.find((i) => i.code === "needs-verification");
+    assert.ok(note);
+    assert.equal(note.severity, "warn");
+    assert.ok(r.completenessLabelsAdd.includes("needs-verification"));
+  });
+
+  it("skips needs-verification for a maintainer-authored PR", () => {
+    const r = updateTriage(keyFields(), keyFields(), {
+      prAuthor: "thedavidweng",
+    });
+    assert.ok(!r.issues.some((i) => i.code === "needs-verification"));
+    assert.ok(r.completenessLabelsRemove.includes("needs-verification"));
+  });
+});
+
+describe("build-base-cards: extractKeyFields (pure)", () => {
+  it("extracts nested key fields and null-safes junk", () => {
+    const raw = JSON.stringify({
+      name: "X",
+      issuer_id: "chase",
+      network: "visa",
+      network_tier: "signature",
+      annual_fee: { amount: 95 },
+      fx_fee: { percent: 0 },
+      rewards: { base_rate: { points_per_dollar: 1.5 } },
+      official_url: "https://creditcards.chase.com/x",
+      status: "active",
+      segment: "personal",
+    });
+    assert.deepEqual(extractKeyFields(raw), {
+      name: "X",
+      issuer_id: "chase",
+      network: "visa",
+      network_tier: "signature",
+      annual_fee_amount: 95,
+      fx_fee_percent: 0,
+      base_rate_points_per_dollar: 1.5,
+      official_url: "https://creditcards.chase.com/x",
+      status: "active",
+      segment: "personal",
+    });
+  });
+
+  it("returns null for missing/invalid blobs", () => {
+    assert.equal(extractKeyFields(null), null);
+    assert.equal(extractKeyFields("{ not json"), null);
+  });
+
+  it("null-safes a missing annual_fee.amount and absent segment", () => {
+    const raw = JSON.stringify({ name: "X", annual_fee: {} });
+    const f = extractKeyFields(raw)!;
+    assert.equal(f.annual_fee_amount, null);
+    assert.equal(f.segment, null);
   });
 });
