@@ -1,0 +1,163 @@
+{
+  "id": "us-barclays-wyndham-rewards-earner-plus",
+  "schema_version": "1.0.0",
+  "name": "Wyndham Rewards Earner Plus Card",
+  "localized_names": {
+    "en": "Wyndham Rewards Earner Plus Card"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95.0,
+    "currency": "USD",
+    "first_year": 95.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR on balance transfers made within 45 days of account opening for first 15 billing cycles. 0% promotional APR on Wyndham Timeshare Purchases for 6 billing cycles. Variable APR for purchases is 19.24% to 29.99%. Variable APR for cash advances is 29.99%. APRs vary with the market based on the Prime Rate. Minimum monthly interest charge $1. Balance transfer fee: 5% (min. $5). Cash advance fee: 5% (min. $10)."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on international purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Not everyone will qualify for the Visa Signature credit card; if credit criteria not met, may receive a Platinum card with varying benefits."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Wyndham Rewards points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1 point per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Hotels by Wyndham and eligible gas purchases",
+        "points_per_dollar": 6.0,
+        "cap": null
+      },
+      {
+        "label": "Eligible grocery store, dining and utility purchases",
+        "points_per_dollar": 4.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Free Nights require 7,500-30,000 points per bedroom. Redeem 10% fewer points for free nights (starting at 6,750 points). Points Payback allows redeeming points for statement credit on purchases within last 90 days. Can redeem for merchandise, gift cards, experiences."
+  },
+  "signup_bonus": {
+    "amount": 100000.0,
+    "unit": "points",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 45,000 bonus points after spending $1,000 on purchases in the first 90 days and also earn 55,000 bonus points after spending $500 at Hotels by Wyndham in the first 180 days. Total up to 100,000 bonus points.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "diamond-then-platinum",
+      "title": "DIAMOND then PLATINUM Member Level",
+      "category": "other",
+      "source": "issuer",
+      "description": "Automatically receive a Wyndham Rewards DIAMOND member level during your first year. After that, become a Wyndham Rewards PLATINUM member and enjoy perks like early check-in, late checkout, and more."
+    },
+    {
+      "id": "emerald-club-executive",
+      "title": "Complimentary Emerald Club Executive status with National",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy access to the Executive area, guaranteed upgrades, and so much more."
+    },
+    {
+      "id": "meal-delivery-credit",
+      "title": "$50 Meal Delivery Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy up to $25 in statement credits back every 6 months on eligible meal delivery purchases when you pay with your card—up to $50 each calendar year."
+    },
+    {
+      "id": "free-night-annually",
+      "title": "Book 1 Free Night Every Year",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy a free night worth up to 15,000 Wyndham Rewards points after you stay five or more nights in a calendar year."
+    },
+    {
+      "id": "anniversary-bonus",
+      "title": "Anniversary Bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive 15,000 bonus points each anniversary year after payment of your annual fee."
+    },
+    {
+      "id": "cardmember-booking-discount",
+      "title": "Cardmember Booking Discount",
+      "category": "other",
+      "source": "issuer",
+      "description": "Save even more on Standard Rate for stays at participating Hotels by Wyndham and hotels in Wyndham Travel Bundles."
+    },
+    {
+      "id": "buy-points-discount",
+      "title": "Save 15% When You Buy Points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Enjoy a 15% discount-or best available offer-when you purchase points with your Wyndham Rewards Earner Plus Card."
+    },
+    {
+      "id": "points-payback",
+      "title": "Redeem Points for a Statement Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "Points Payback allows you to redeem points for a statement credit for purchases made within the last 90 days."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for charges you did not authorize."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "DIAMOND first year, then PLATINUM",
+    "other": [
+      "Complimentary Emerald Club Executive status with National",
+      "No Foreign Transaction Fees"
+    ]
+  },
+  "official_url": "https://www.wyndhamrewardscreditcard.com/#earnerplus",
+  "image": {
+    "url": null,
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.wyndhamrewardscreditcard.com/#earnerplus"
+  ],
+  "notes": "Verified from official issuer page (Visa Signature, issued by Barclays Bank Delaware). Renamed to 'Wyndham Rewards Earner Plus Card' to disambiguate from the Business card. Filled the 6X (Hotels by Wyndham and gas) and 4X (grocery, dining and utilities) bonus tiers, which were empty placeholders; base earn is 1X. Network corrected from mastercard to visa. Annual fee corrected from $0 to $95. Signup bonus corrected to 100,000 points."
+}
