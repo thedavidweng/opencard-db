@@ -58,13 +58,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.head_ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
@@ -125,12 +125,15 @@ jobs:
 
           Spec: **lossless WebP**, native dimensions (Apple Pay `cardBackgroundCombined@2x.png` quality bar — no 800px downscale). See `images/README.md`.
           EOF
-          # upsert
-          list=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate)
-          id=$(echo "$list" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const j=JSON.parse(d);const x=j.find(c=>String(c.body).includes('opencard-image-opt')); console.log(x?x.id:'')})")
+          # upsert — the comment is purely informational, so a fork-PR 403
+          # (read-only GITHUB_TOKEN) must not mask this job's real result: the
+          # `exit 1` below that flags "images still need a local optimize pass".
+          # Guard every gh call with `|| true` so we always reach that exit.
+          list=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate || true)
+          id=$(echo "$list" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const j=JSON.parse(d);const x=j.find(c=>String(c.body).includes('opencard-image-opt')); console.log(x?x.id:'')}catch{console.log('')}})")
           if [ -n "$id" ]; then
-            gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -F body=@/tmp/img-comment.md
+            gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -F body=@/tmp/img-comment.md || true
           else
-            gh pr comment "$PR" --body-file /tmp/img-comment.md
+            gh pr comment "$PR" --body-file /tmp/img-comment.md || true
           fi
           exit 1

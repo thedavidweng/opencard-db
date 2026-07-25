@@ -1,11 +1,38 @@
 # Two contributor-facing checks (separate jobs so failures are obvious):
 #   Labels     — classifies the PR (new-card / US / enhancement / …). Never fails.
 #   Form check — required title + beginner form fields. Fails when incomplete.
+#
+# TRIGGER: pull_request_target (NOT pull_request).
+# ---------------------------------------------------------------------------
+# For PRs opened from a FORK, GitHub downgrades the default GITHUB_TOKEN to
+# read-only under `pull_request`, no matter what `permissions:` says. That
+# silently breaks the whole point of this workflow: label writes no-op, the
+# title auto-fix 403s, and the sticky form-check comment 403s (turning the
+# Form check job red on a permission error rather than a real form problem).
+# `pull_request_target` runs in the context of the BASE repo and therefore
+# gets a WRITE token even for fork PRs, so triage keeps working for external
+# contributors (this repo's target audience).
+#
+# SAFETY MODEL (pull_request_target is privileged — treat it carefully):
+#   * NEVER check out the PR head ref. Every `actions/checkout@v4` below uses
+#     no `ref:` / no fork `repository:` — that resolves to the BASE repo
+#     default branch, i.e. trusted code only. We never run PR-authored code
+#     (no build of fork sources, no fork-supplied npm scripts).
+#   * The triage scripts (scripts/pr-triage.ts via scripts/run-pr-triage.ts,
+#     scripts/build-base-cards.ts) are pure and come from the base checkout.
+#   * Untrusted PR data (title/body/author) is passed ONLY through `env:`
+#     values and read as `$PR_TITLE` etc. inside scripts — it is NEVER
+#     interpolated as `${{ github.event.pull_request.title }}` into a `run:`
+#     body (that would allow shell injection from a malicious title). The PR
+#     number is likewise passed via `env: PR:` and used as `"$PR"`.
+#   * Changed files (`gh pr diff`), the open-PR list (`gh pr list`) and base
+#     card snapshots all work over the API / base checkout without touching
+#     the head ref.
 
 name: PR Checks
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, edited, synchronize, reopened, ready_for_review]
 
 concurrency:
@@ -22,9 +49,10 @@ jobs:
     name: Labels
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # No ref / no fork repository → base repo default branch (trusted code).
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
@@ -51,8 +79,9 @@ jobs:
       - name: Collect changed files
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
         run: |
-          gh pr diff "${{ github.event.pull_request.number }}" --name-only > /tmp/pr-files.txt || true
+          gh pr diff "$PR" --name-only > /tmp/pr-files.txt || true
 
       - name: Classify PR
         env:
@@ -107,11 +136,14 @@ jobs:
     needs: labels
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # No ref / no fork repository → base repo default branch (trusted code).
+      # fetch-depth: 0 gives build-base-cards.ts full history so it can
+      # `git show <base.sha>:<path>` the pre-PR version of each card file.
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
@@ -137,8 +169,9 @@ jobs:
       - name: Collect changed files
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
         run: |
-          gh pr diff "${{ github.event.pull_request.number }}" --name-only > /tmp/pr-files.txt || true
+          gh pr diff "$PR" --name-only > /tmp/pr-files.txt || true
 
       - name: Collect open PRs + base card snapshots
         env:
