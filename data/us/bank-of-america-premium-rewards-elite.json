@@ -1,0 +1,139 @@
+{
+  "id": "us-bank-of-america-premium-rewards-elite",
+  "schema_version": "1.0.0",
+  "name": "Bank of America® Premium Rewards® Elite Credit Card",
+  "localized_names": {
+    "en": "Bank of America® Premium Rewards® Elite Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 550,
+    "currency": "USD",
+    "first_year": 550,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See Bank of America for current APR; terms vary by applicant/offer."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "Visa Infinite cards typically require excellent credit."
+  },
+  "rewards": {
+    "currency": "bank_of_america_points",
+    "currency_label": "Bank of America Premium Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 points per $1 on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Travel and dining",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeemable for travel, cash back, statement credit, gift cards, and experiences with no expiration. Preferred Rewards members earn 25%–75% more points on every purchase."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "airline-incidental-credit",
+      "title": "$300 Annual Airline Incidental Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $300 in statement credits annually for qualifying airline incidental fees such as seat upgrades, baggage fees, and inflight purchases."
+    },
+    {
+      "id": "lifestyle-credit",
+      "title": "$150 Annual Lifestyle Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $150 in statement credits annually for lifestyle purchases including ride-hailing, streaming, fitness, and food-delivery services."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass Select Membership",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Complimentary Priority Pass Select membership with unlimited airport lounge visits for the cardholder."
+    },
+    {
+      "id": "airport-security-credit",
+      "title": "TSA PreCheck / Global Entry Application Fee Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit for the TSA PreCheck or Global Entry application fee (up to $100) once every four years."
+    },
+    {
+      "id": "concierge",
+      "title": "Visa Infinite Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "24/7 Visa Infinite concierge service for travel, dining, entertainment, and everyday requests."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the U.S."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Priority Pass Select",
+      "visits_per_year": null,
+      "notes": "Priority Pass Select membership with unlimited lounge visits for the cardholder."
+    },
+    "tsa_precheck_credit": {
+      "amount": 100,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "global_entry_credit": {
+      "amount": 100,
+      "currency": "USD",
+      "period": "every 4 years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "$300 annual airline incidental statement credit",
+      "$150 annual lifestyle statement credit",
+      "Visa Infinite concierge",
+      "Preferred Rewards bonus of 25%–75% more points",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/",
+  "image": {
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8cud_premrewelite_v_250x158.png",
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/premium-rewards-elite-credit-card/"
+  ],
+  "notes": "Premium travel card: $550 annual fee, Visa Infinite. Earns 2X on travel and dining and 1.5X on all other purchases. Key credits: $300 annual airline incidental credit and $150 annual lifestyle credit. Priority Pass Select membership, TSA PreCheck/Global Entry credit, Visa Infinite concierge, no foreign transaction fees, and a 25%–75% Preferred Rewards points bonus. The official BofA product page was temporarily unavailable at fetch time; earn rates, fee, and network tier are well-established public facts (fee and Visa Infinite tier corrected from the earlier stub). Welcome offer omitted pending confirmation of the current promotion. Bonus category rates and credits should be re-verified against the official page when it is reachable."
+}

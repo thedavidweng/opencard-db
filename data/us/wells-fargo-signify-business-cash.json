@@ -1,0 +1,137 @@
+{
+  "id": "us-wells-fargo-signify-business-cash",
+  "schema_version": "1.0.0",
+  "name": "Signify Business Cash Card",
+  "localized_names": {
+    "en": "Signify Business Cash Card"
+  },
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.74,
+      "max": 24.74,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "0% introductory APR for 12 months from account opening on purchases. After that, variable APR of 16.74% – 24.74%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not mentioned on product page."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash rewards (USD)",
+    "structure": "single",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Earn unlimited 2% cash rewards on purchases for your business – without caps or spending categories."
+    },
+    "categories": [],
+    "redemption_notes": "Apply cash rewards as a statement credit to an eligible account. Rewards do not expire as long as account remains open."
+  },
+  "signup_bonus": {
+    "amount": 500.0,
+    "unit": "cash_rewards_usd",
+    "spend_required": 5000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn a $500 cash rewards bonus when you spend $5,000 in purchases for your business in the first 3 months.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Additional Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Add employee cards at no additional cost. Set employee spending limits, monitor cards, and track expenses with customizable instant alerts."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass",
+      "category": "lounge",
+      "source": "network",
+      "description": "Complimentary membership access to more than 1,300 participating airport lounges worldwide with 'pay as you go' lounge visit fees."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Worldwide Automatic Common Carrier Travel Accident Insurance",
+      "category": "insurance",
+      "source": "network",
+      "description": "Get Travel Accident Insurance protection of up to $250,000 when you purchase your airline or other common carrier ticket with your eligible credit card."
+    },
+    {
+      "id": "masterrental-insurance",
+      "title": "MasterRental Insurance Coverage",
+      "category": "insurance",
+      "source": "network",
+      "description": "Drive with extra confidence when traveling for business, here or abroad, knowing you're protected against damage to, or theft of, a vehicle rented using your Signify Business Cash Card."
+    },
+    {
+      "id": "zero-liability",
+      "title": "Zero Liability Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Built-in protection features ensure that you won't be held responsible for unauthorized transactions, as long as they're reported promptly."
+    },
+    {
+      "id": "id-theft-protection",
+      "title": "Mastercard ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Detection and protection against identity theft, including monitoring, alerts, and expert resolution 24/7/365. Enrollment is required."
+    },
+    {
+      "id": "business-assistant",
+      "title": "Mastercard Business Assistant",
+      "category": "other",
+      "source": "network",
+      "description": "Efficient & expert assistance, 24/7 — from arranging business travel or meetings, to recommending restaurants or office equipment upgrades."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "notes": "Priority Pass complimentary membership (pay-as-you-go visit fees)"
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Travel Accident Insurance up to $250,000",
+      "MasterRental Insurance Coverage"
+    ]
+  },
+  "official_url": "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card",
+  "image": {
+    "url": "https://creditcards.wellsfargo.com/rv/bcs/production/signify.DTS20282_2mwSIw.webp",
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card",
+    "https://creditcards.wellsfargo.com/business-credit-cards/signify-business-cash-credit-card?sub_channel=WEB&vendor_code=WF"
+  ],
+  "notes": "Network corrected from amex to mastercard based on page references to 'Signify Business Cash World Elite Mastercard® Credit Card Guide to Benefits' and Mastercard-branded benefits. network_tier set to world_elite. FX fee not mentioned on page."
+}

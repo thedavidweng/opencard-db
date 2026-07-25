@@ -1,0 +1,153 @@
+{
+  "id": "us-capital-one-quicksilver",
+  "schema_version": "1.0.0",
+  "name": "Quicksilver from Capital One",
+  "localized_names": {
+    "en": "Quicksilver from Capital One"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "platinum",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months on purchases and balance transfers; variable after that. Specific variable APR range not stated on fetched pages."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees when making purchases outside the U.S."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "Capital One product page and benefits page both state 'Excellent' credit level."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "cash back",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on every purchase, every day"
+    },
+    "categories": [
+      {
+        "label": "Capital One Entertainment purchases",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Hotels, rental cars, vacation rentals and activities booked through Capital One Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back rewards do not expire for the life of the account. No limit on how much you can earn. Can redeem for cash, statement credit, covering a recent purchase, gift cards, or Amazon.com and PayPal purchases."
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "cash_bonus",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn a $200 cash bonus after spending $500 on purchases within the first 3 months from account opening. Existing or previous cardmembers are not eligible if they have received a new cardmember bonus for this product in the past 48 months.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "You won't pay foreign transaction fees when you make purchases outside the U.S."
+    },
+    {
+      "id": "concierge-service",
+      "title": "Complimentary Concierge Service",
+      "category": "other",
+      "source": "issuer",
+      "description": "Comprehensive, personalized assistance for dining, entertainment and travel needs, 24 hours a day, 365 days a year. Terms, conditions and exclusions apply."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extend the manufacturer's warranty at no charge on eligible items purchased with a qualifying card."
+    },
+    {
+      "id": "travel-assistance",
+      "title": "24-hour Travel Assistance Services",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive an emergency replacement card and a cash advance if your card is lost or stolen, subject to credit availability."
+    },
+    {
+      "id": "travel-accident-insurance",
+      "title": "Travel Accident Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If you use your Quicksilver card to purchase your fare, you may be eligible for automatic insurance at no extra charge."
+    },
+    {
+      "id": "purchase-protection",
+      "title": "Purchase Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If you buy something with your Quicksilver card and it's damaged or stolen within 90 days of the purchase date, you may be covered up to $1,000 per loss and up to $25,000 per year."
+    },
+    {
+      "id": "price-protection",
+      "title": "Price Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "If you buy an eligible item and see it advertised at a lower price within 120 days of purchase, you may be reimbursed for the difference in price."
+    },
+    {
+      "id": "zero-fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your card is lost or stolen, you won't be responsible for unauthorized charges."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Hertz Five Star status: Skip the rental counter at select locations and enjoy access to a wider selection of available vehicles with a complimentary upgrade"
+    ]
+  },
+  "official_url": "https://www.capitalone.com/credit-cards/quicksilver/",
+  "image": {
+    "url": "https://ecm.capitalone.com/WCM/card/products/quicksilver_cardart.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/quicksilver/",
+    "https://www.capitalone.com/learn-grow/money-management/quicksilver-card-benefits/",
+    "https://www.capitalone.com/credit-cards/cash-back/quicksilver/"
+  ],
+  "notes": "network_tier set to 'platinum' (Quicksilver is a Visa Platinum-class product); some issuances are Visa Signature. The 'Capital One Travel price match' perk from the previous version was not found on fetched pages and has been removed. Specific variable APR range is not disclosed on the official page (rendered via template/disclosures); only '0% intro APR for 15 months' and 'variable after that' are confirmed, so apr.purchase min/max remain null pending re-verification against Rates & Fees."
+}

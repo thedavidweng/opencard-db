@@ -1,0 +1,147 @@
+{
+  "id": "us-amex-marriott-bonvoy-business",
+  "schema_version": "1.0.0",
+  "name": "Marriott Bonvoy Business Credit Card",
+  "localized_names": {
+    "en": "Marriott Bonvoy Business Credit Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 125,
+    "currency": "USD",
+    "first_year": 125,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No Foreign Transaction Fees — 'Marriott Bonvoy Card Members enjoy international travel without foreign transaction fees from American Express when using their Card on purchases abroad.'"
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "marriott_bonvoy_points",
+    "currency_label": "Marriott Bonvoy points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2X Marriott Bonvoy points on other purchases made using the Marriott Bonvoy Business American Express Card."
+    },
+    "categories": [
+      {
+        "label": "Hotels Participating in Marriott Bonvoy",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Restaurants Worldwide, U.S. Gas Stations, Wireless Telephone Services, U.S. Shipping",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Marriott Bonvoy points can be redeemed for free nights at participating hotels, and through Air+Car for flights and car rentals."
+  },
+  "signup_bonus": {
+    "amount": 5,
+    "unit": "free_night_awards",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 3 Free Night Awards (each redeemable for a stay up to 50,000 Marriott Bonvoy points) after spending $6,000 on eligible purchases in the first 6 months, plus 2 additional Free Night Awards after spending an additional $3,000 within the first 6 months. Certain hotels have resort fees.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "marriott-room-rate-discount",
+      "title": "Marriott Bonvoy Room Rate Discount",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive a 7% discount on eligible bookings at hotels which participate in the Marriott Bonvoy program when you book directly through an eligible Marriott channel under the Amex Business Card Rate."
+    },
+    {
+      "id": "marriott-gold-elite-status",
+      "title": "Marriott Bonvoy Gold Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy complimentary Gold Elite status with your Marriott Bonvoy Business American Express Card. Includes priority late checkout (until 2 p.m., subject to availability) and earn 25% more points on every eligible hotel purchase. Must book with a Qualifying Rate at participating hotels."
+    },
+    {
+      "id": "free-night-awards",
+      "title": "Earn & Redeem Free Nights",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 1 Free Night Award every year after your Card renewal month. Plus, earn an additional Free Night Award after you spend $60K in purchases on your Card in a calendar year. Awards can be used for one night (redemption level at or under 35,000 Marriott Bonvoy points) at participating hotels. Certain hotels have resort fees."
+    },
+    {
+      "id": "elite-night-credits",
+      "title": "Elite Night Credits",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Each calendar year, receive 15 Elite Night Credits towards the next level of Marriott Bonvoy Elite status. Limitations apply per Marriott Bonvoy member account."
+    },
+    {
+      "id": "air-car-transfer-program",
+      "title": "Air+Car Transfer Program",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Air+Car allows members to redeem Marriott Bonvoy points for flights and car rentals across hundreds of travel partners around the world."
+    },
+    {
+      "id": "premium-internet-access",
+      "title": "Premium on-property Internet Access",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive free in-room, premium Internet access while staying at participating Marriott Bonvoy hotels. Booking requirements apply."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Marriott Bonvoy Card Members enjoy international travel without foreign transaction fees from American Express when using their Card on purchases abroad."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Marriott Bonvoy Gold Elite",
+    "other": [
+      "Marriott Bonvoy Room Rate Discount (7%)",
+      "Free Night Award annually + additional after $60K spend",
+      "15 Elite Night Credits per year",
+      "Premium on-property Internet Access"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/amex-marriott-bonvoy-business.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amex-marriott-bonvoy-business-credit-card/",
+    "https://www.marriott.com/credit-cards/marriott-bonvoy-business-american-express-card.mi"
+  ],
+  "notes": "Business co-brand hotel card. $125 annual fee (confirmed via Marriott's official card page). Rewards currency is Marriott Bonvoy points (not Membership Rewards): 6X at participating Marriott Bonvoy hotels, 4X at restaurants/U.S. gas/wireless/U.S. shipping, 2X on all other purchases. Welcome offer of 5 Free Night Awards (3 after $6,000 spend, plus 2 after an additional $3,000, within 6 months) as of July 2026; offers rotate. No foreign transaction fees. APR is not shown on the Amex product page."
+}

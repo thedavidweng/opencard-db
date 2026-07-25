@@ -53,7 +53,8 @@
         }
       }
     ],
-    "redemption_notes": "Cash back earned is automatically credited to your statement in the form of a statement credit, which is issued monthly."
+    "redemption_notes": "Cash back earned is automatically credited to your statement in the form of a statement credit, which is issued monthly.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -133,5 +134,6 @@
   "sources": [
     "https://www.americanexpress.com/en-us/business/credit-cards/blue-business-cash/"
   ],
-  "notes": "Verified from official product page. Rewards currency is cash back (statement credit), not Membership Rewards. APR not shown on page."
+  "notes": "Verified from official product page. Rewards currency is cash back (statement credit), not Membership Rewards. APR not shown on page.",
+  "segment": "business"
 }

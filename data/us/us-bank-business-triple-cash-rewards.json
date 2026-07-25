@@ -1,0 +1,130 @@
+{
+  "id": "us-us-bank-business-triple-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Triple Cash Rewards Visa® Business Credit Card",
+  "localized_names": {
+    "en": "U.S. Bank Triple Cash Rewards Visa® Business Credit Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "0% intro APR on purchases and balance transfers for the first 12 billing cycles. After that, a variable APR applies (amount not displayed on page). Introductory rate does not apply to cash advances. Balance Transfer fee of 5% of each transfer amount, $5 minimum."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not displayed on page."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other eligible purchases. There is no limit on the total rewards you can earn."
+    },
+    "categories": [
+      {
+        "label": "Gas stations and EV charging stations (on transactions of $200 or less)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Office supply stores",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Cell phone service providers",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Maximum Cash Rewards value applies to Cash Rewards redeemed for a statement credit or deposit into an eligible U.S. Bank Account. Redemption value may differ for other rewards such as a U.S. Bank Rewards Card. Cash Rewards will expire if there is no reward, purchase, or balance activity on your account for 12 consecutive statement cycles. No limit on total rewards you can earn."
+  },
+  "signup_bonus": {
+    "amount": 750,
+    "unit": "cash_back_usd",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Get rewarded with $750 cash back. One-time $750 cash back will be awarded if eligible Net Purchases totaling $6,000 or more are made to the Account Owner's Card within 180 days from account opening.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "software-subscription-credit",
+      "title": "$100 Software Subscription Credit",
+      "category": "other",
+      "source": "issuer",
+      "description": "An automatic statement credit of $100 per 12-month period for recurring software subscription expenses such as FreshBooks or QuickBooks, applied within 1-2 statement billing cycles following 11 consecutive months of eligible software service purchases made directly with a software service provider."
+    },
+    {
+      "id": "spend-management",
+      "title": "U.S. Bank Spend Management",
+      "category": "other",
+      "source": "issuer",
+      "description": "Take control of your card spend with U.S. Bank Spend Management – a game-changing platform for monitoring and managing business expenses."
+    },
+    {
+      "id": "extendpay-offer",
+      "title": "ExtendPay® Plan $0 Fee Offer",
+      "category": "other",
+      "source": "issuer",
+      "description": "Receive a new cardmember $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening. Not all accounts are eligible for ExtendPay Plans."
+    },
+    {
+      "id": "free-employee-cards",
+      "title": "Free Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "There is no annual fee and employee credit cards are free."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html",
+  "image": {
+    "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/illustrations-business-triple-cash-back.png",
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.usbank.com/business-banking/business-credit-cards/business-triple-cash-back-credit-card.html"
+  ],
+  "notes": "Product page fetched successfully. Annual fee confirmed as $0. APR shown as 0% intro for 12 billing cycles then variable (specific rate not displayed). Signup bonus is $750 cash back after $6,000 spend in 180 days."
+}

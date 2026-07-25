@@ -20,15 +20,15 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 16.74,
+      "max": 28.49,
       "type": "variable"
     },
-    "notes": "APR not displayed on product page; see Rates & Fees link for current rates."
+    "notes": "16.74% to 28.49% variable APR on purchases (after a 0% introductory APR for the first 12 months). Verified from the official American Express Rates & Fees disclosure."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Foreign transaction fee not mentioned on product page."
+    "percent": 2.7,
+    "notes": "2.7% of each transaction after conversion to U.S. dollars, per the official Rates & Fees disclosure."
   },
   "credit_required": {
     "score_band": null,
@@ -53,9 +53,18 @@
         }
       }
     ],
-    "redemption_notes": "Membership Rewards points can be used for eligible travel through Pay with Points, redeemed for a Statement Credit, redeemed for Gift Cards, or transferred to participating airline and hotel loyalty programs. Can also be used with participating partners at Checkout through Pay with Points."
+    "redemption_notes": "Membership Rewards points can be used for eligible travel through Pay with Points, redeemed for a Statement Credit, redeemed for Gift Cards, or transferred to participating airline and hotel loyalty programs. Can also be used with participating partners at Checkout through Pay with Points.",
+    "rate_type": "points_multiplier"
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 15000,
+    "unit": "points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 15,000 Membership Rewards® points after you spend $3,000 in eligible purchases within the first 3 months of Card Membership.",
+    "as_of": "2026-07-25"
+  },
   "benefits": [
     {
       "id": "expanded-buying-power",
@@ -136,9 +145,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-blue-business-plus-credit-card-amex/"
   ],
-  "notes": "Verified from official product page. Rewards currency is Membership Rewards points. APR not shown on page. No foreign transaction fee info on page."
+  "notes": "Verified from official product page. Rewards currency is Membership Rewards points. APR not shown on page. No foreign transaction fee info on page.",
+  "segment": "business"
 }

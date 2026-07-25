@@ -69,7 +69,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem Wells Fargo Rewards for travel, Pay with Rewards, eligible purchases, gift cards, account credits, or points transfers; redemption values vary by option."
+    "redemption_notes": "Redeem Wells Fargo Rewards for travel, Pay with Rewards, eligible purchases, gift cards, account credits, or points transfers; redemption values vary by option.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -204,5 +205,6 @@
     "https://creditcards.wellsfargo.com/autograph-journey-visa-credit-card",
     "https://www.wellsfargo.com/credit-cards/autograph-journey-visa/terms/?product_code=CC&subproduct_code=MT"
   ],
-  "notes": "Distinct from the no-annual-fee Wells Fargo Autograph Card; Autograph Journey has a $95 annual fee and travel-focused earn rates."
+  "notes": "Distinct from the no-annual-fee Wells Fargo Autograph Card; Autograph Journey has a $95 annual fee and travel-focused earn rates.",
+  "segment": "personal"
 }

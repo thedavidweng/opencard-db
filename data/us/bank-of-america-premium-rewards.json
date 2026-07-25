@@ -54,7 +54,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem for cash back as a deposit into eligible Bank of America checking or savings accounts, credit to eligible Merrill accounts including 529 accounts, statement credit, gift cards, or purchases at BofA Travel."
+    "redemption_notes": "Redeem for cash back as a deposit into eligible Bank of America checking or savings accounts, credit to eligible Merrill accounts including 529 accounts, statement credit, gift cards, or purchases at BofA Travel.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": 60000,
@@ -154,5 +155,6 @@
     "https://www.bankofamerica.com/credit-cards/products/premium-rewards-credit-card/",
     "https://www.bankofamerica.com/salesservices/productProperties?campaignID=4079485&poCode=UN&locale=en_US&failquiet=true"
   ],
-  "notes": "Preferred Rewards relationship bonuses can increase earn rates for eligible clients; base earn rates are shown here. Product page was temporarily unavailable at verification time; facts verified from the Bank of America product properties (terms) JSON endpoint."
+  "notes": "Preferred Rewards relationship bonuses can increase earn rates for eligible clients; base earn rates are shown here. Product page was temporarily unavailable at verification time; facts verified from the Bank of America product properties (terms) JSON endpoint.",
+  "segment": "personal"
 }

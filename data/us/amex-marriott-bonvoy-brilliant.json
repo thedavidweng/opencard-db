@@ -64,7 +64,8 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Redeem Marriott Bonvoy points for free nights at over 10,000 hotels participating in Marriott Bonvoy. Plus, redeem points for flights or car rental with Air+Car, or transfer your points for travel program rewards with over 38 airline partners."
+    "redemption_notes": "Redeem Marriott Bonvoy points for free nights at over 10,000 hotels participating in Marriott Bonvoy. Plus, redeem points for flights or car rental with Air+Car, or transfer your points for travel program rewards with over 38 airline partners.",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
   "benefits": [
@@ -346,5 +347,6 @@
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card/marriott-bonvoy-brilliant/"
   ],
-  "notes": "Official Amex card page did not expose a stable public welcome-offer amount in static content at verification time; signup_bonus is null. The page lists 26 benefits, all of which are included. APR values were not shown on the page. Product name Brilliant is not a network tier; network_tier is none for Amex."
+  "notes": "Official Amex card page did not expose a stable public welcome-offer amount in static content at verification time; signup_bonus is null. The page lists 26 benefits, all of which are included. APR values were not shown on the page. Product name Brilliant is not a network tier; network_tier is none for Amex.",
+  "segment": "personal"
 }

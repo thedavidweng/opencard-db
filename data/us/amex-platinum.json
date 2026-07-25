@@ -1,0 +1,155 @@
+{
+  "id": "us-amex-platinum",
+  "schema_version": "1.0.0",
+  "name": "The Platinum Card®",
+  "localized_names": {
+    "en": "The Platinum Card®"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 895,
+    "currency": "USD",
+    "first_year": 895,
+    "waiver_conditions": "$195 annual fee for each Additional Platinum Card; Companion Cards may have $0 annual fee — confirm current terms."
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "See American Express Rates and Fees; product may use Pay Over Time features."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other eligible purchases"
+    },
+    "categories": [
+      {
+        "label": "Flights booked directly with airlines or through American Express Travel",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 500000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Prepaid hotels booked on American Express Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards transfer partners and Pay with Points options vary.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Welcome Membership Rewards points are personalized; Amex product HTML bundles other cards' spend language. Do not treat a single spend figure as authoritative without the live welcome module. Third-party trackers (e.g. credit-card-bonuses-api) often show ~100,000 points after $8,000 in 6 months — discovery clue only.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "global-lounge-collection",
+      "title": "Global Lounge Collection",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Access to Centurion Lounges, Priority Pass (enrollment required), limited Delta Sky Club visits when flying eligible Delta, and other partner lounges — over 1,550 lounges marketed."
+    },
+    {
+      "id": "global-entry-tsa",
+      "title": "Global Entry or TSA PreCheck fee credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit every 4 years for Global Entry ($120) or TSA PreCheck (up to $85 through CLEAR; confirm current Amex terms) when application fee is charged to the card."
+    },
+    {
+      "id": "uber-cash",
+      "title": "Uber Cash",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $200 Uber Cash annually when Card is added to Uber account ($15 monthly + $20 December bonus); terms apply."
+    },
+    {
+      "id": "uber-one",
+      "title": "Uber One credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $120 in statement credits per calendar year for auto-renewing Uber One membership."
+    },
+    {
+      "id": "airline-fee-credit",
+      "title": "Airline Fee Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $200 airline fee credit for incidental fees charged by a selected airline; categories and eligibility per Amex terms."
+    },
+    {
+      "id": "hotel-fine-hotels",
+      "title": "Fine Hotels + Resorts / Hotel Collection perks",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary benefits on eligible prepaid Fine Hotels + Resorts and Hotel Collection stays (e.g., property credit, breakfast, upgrade when available)."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Global Lounge Collection (Centurion + Priority Pass + partners)",
+      "visits_per_year": null,
+      "notes": "Delta Sky Club access is limited (e.g., 10 visits when flying eligible Delta); confirm current enrollment rules."
+    },
+    "tsa_precheck_credit": {
+      "amount": 85,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 120,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Airline fee credit",
+      "Uber Cash"
+    ]
+  },
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+  "image": {
+    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png",
+    "attribution": "© American Express",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/platinum/",
+    "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/platinum-card.png"
+  ],
+  "notes": "Credits and lounge entitlements are offer/enrollment-dependent. Cross-checked fee $895 and 5x flight/hotel earn against Amex official page; welcome bonus left null after third-party cross-check showed conflict with polluted $3,000 spend text in page bundle.",
+  "segment": "personal"
+}

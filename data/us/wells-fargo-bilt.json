@@ -1,0 +1,129 @@
+{
+  "id": "us-wells-fargo-bilt",
+  "schema_version": "1.0.0",
+  "name": "Bilt Card",
+  "localized_names": {
+    "en": "Bilt Card"
+  },
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not visible on product or terms page; see cardholder agreement for current APR."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not stated on fetched pages."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Bilt does not publish minimum score requirements."
+  },
+  "rewards": {
+    "currency": "bilt_points",
+    "currency_label": "Bilt Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Dining",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "Travel",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Rent",
+        "points_per_dollar": 1.0,
+        "cap": {
+          "amount": 100000,
+          "currency": "bilt_points",
+          "period": "calendar_year"
+        }
+      }
+    ],
+    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "no-rent-transaction-fee",
+      "title": "No transaction fee on rent, mortgage and HOA",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every Bilt Card lets you earn rewards on rent and mortgage payments made through Bilt with no transaction fee. Bypass landlord credit card fees via ACH, Venmo, PayPal, or check."
+    },
+    {
+      "id": "bilt-neighborhood-dining",
+      "title": "Bilt Neighborhood Dining bonus points",
+      "category": "other",
+      "source": "issuer",
+      "description": "At Bilt Neighborhood Dining restaurants — 20,000+ participating locations — you earn bonus Bilt Points per dollar on top of your card's standard earn rate. No activation required."
+    },
+    {
+      "id": "lyft-bonus",
+      "title": "Lyft bonus points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides. Blue cardholders earn 3X total on Lyft."
+    },
+    {
+      "id": "bilt-travel-portal-bonus",
+      "title": "Bilt Travel Portal bonus points",
+      "category": "other",
+      "source": "issuer",
+      "description": "Booking hotels earns +2X and flights +1X bonus Bilt Points on top of your card's base rate through the Bilt Travel Portal."
+    },
+    {
+      "id": "transfer-partners",
+      "title": "28 airline and hotel transfer partners",
+      "category": "other",
+      "source": "issuer",
+      "description": "Points transfer at a 1:1 ratio for Bilt travel partners, including major domestic and international airline programs and leading hotel loyalty programs."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.biltrewards.com/card",
+  "image": {
+    "url": "https://img.bilt.com/43819/1769037123-card-2-banner.png",
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.biltrewards.com/card",
+    "https://www.bilt.com/card"
+  ],
+  "notes": "Verified against official Bilt Rewards page 2026-07-24. Page now describes Bilt Card 2.0 with three tiers (Blue/Obsidian/Palladium); this record maps to the no-annual-fee Bilt Blue Card. APR and FX fee not stated on fetched pages. No signup bonus advertised.",
+  "segment": "personal"
+}

@@ -76,7 +76,8 @@
         }
       }
     ],
-    "redemption_notes": "Cash rewards can be redeemed for statement credits, deposits to eligible Bank of America accounts, eligible Merrill accounts, qualifying 529 contributions, checks, Amazon.com, or PayPal; some redemption methods have a $25 minimum."
+    "redemption_notes": "Cash rewards can be redeemed for statement credits, deposits to eligible Bank of America accounts, eligible Merrill accounts, qualifying 529 contributions, checks, Amazon.com, or PayPal; some redemption methods have a $25 minimum.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 200,
@@ -131,5 +132,6 @@
     "https://www.bankofamerica.com/credit-cards/terms-and-conditions/?campaignid=4075151&productoffercode=Q4&locale=en_US",
     "https://www.bankofamerica.com/content/documents/creditcard/bank_of_america_customized_cash_rewards_english.pdf"
   ],
-  "notes": "The product page was temporarily unavailable during verification. APR and FX fee were verified from the official sample Credit Card Agreement PDF (Prime Rate as of 03/31/2026). The sample agreement states 'Actual pricing will vary from one cardholder to another.' Rewards structure, signup bonus, and benefits preserved from previous data and not re-verified. The previous APR range (17.49-27.49) has been updated to match the sample agreement (16.49-28.49). FX fee was previously null and is now confirmed as 3% from the sample agreement."
+  "notes": "The product page was temporarily unavailable during verification. APR and FX fee were verified from the official sample Credit Card Agreement PDF (Prime Rate as of 03/31/2026). The sample agreement states 'Actual pricing will vary from one cardholder to another.' Rewards structure, signup bonus, and benefits preserved from previous data and not re-verified. The previous APR range (17.49-27.49) has been updated to match the sample agreement (16.49-28.49). FX fee was previously null and is now confirmed as 3% from the sample agreement.",
+  "segment": "personal"
 }
