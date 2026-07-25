@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -40,17 +41,17 @@
     "notes": null
   },
   "rewards": {
-    "currency": "cash_back",
+    "currency": "cashback",
     "currency_label": "Cash Back",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
+      "points_per_dollar": 1,
       "description": "1% cash back on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores",
+        "points_per_dollar": 5,
         "cap": {
           "amount": 500.0,
           "currency": "USD",
@@ -58,8 +59,8 @@
         }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas and electric vehicle charging",
+        "points_per_dollar": 3,
         "cap": {
           "amount": 500.0,
           "currency": "USD",
@@ -67,8 +68,8 @@
         }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Wholesale clubs",
+        "points_per_dollar": 3,
         "cap": {
           "amount": 500.0,
           "currency": "USD",
@@ -76,22 +77,23 @@
         }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Streaming services",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Pharmacy",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "AAA purchases",
+        "points_per_dollar": 3,
         "cap": null
       }
     ],
-    "redemption_notes": "Cash Back can be redeemed as Statement Credits, Direct Deposit, Rewards and qualifying purchases at participating AAA locations. Cash back rewards will expire 5 years after the date that they are posted to your Cash Back balance."
+    "redemption_notes": "Cash Back can be redeemed as Statement Credits, Direct Deposit, Rewards and qualifying purchases at participating AAA locations. Maximum of $500 cash back earned per calendar year at grocery stores, wholesale clubs and gas stations combined (1% thereafter). Cash back expires 5 years after posting.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": 100,
@@ -118,7 +120,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.ace.aaa.com/financial/aaa-credit-card.html",
     "https://finance.aaa.com/credit-card",
