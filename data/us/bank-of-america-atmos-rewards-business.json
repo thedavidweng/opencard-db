@@ -1,9 +1,9 @@
 {
   "id": "us-bank-of-america-atmos-rewards-business",
   "schema_version": "1.0.0",
-  "name": "Travel rewards credit cards",
+  "name": "Atmos™ Rewards Visa Signature® Business Card",
   "localized_names": {
-    "en": "Travel rewards credit cards"
+    "en": "Atmos™ Rewards Visa Signature® Business Card"
   },
   "country": "us",
   "issuer": "Bank of America",
@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 70,
@@ -37,6 +38,7 @@
   "rewards": {
     "currency": "alaska_mileage_plan",
     "currency_label": "Alaska Mileage Plan miles",
+    "rate_type": "miles_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
