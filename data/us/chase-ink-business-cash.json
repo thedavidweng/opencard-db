@@ -1,16 +1,17 @@
 {
   "id": "us-chase-ink-business-cash",
   "schema_version": "1.0.0",
-  "name": "Ink Business Cash Credit Card: Cash Back",
+  "name": "Ink Business Cash Credit Card",
   "localized_names": {
-    "en": "Ink Business Cash Credit Card: Cash Back"
+    "en": "Ink Business Cash Credit Card"
   },
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "mastercard",
-  "network_tier": "world",
+  "network": "visa",
+  "network_tier": "signature",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -39,25 +40,29 @@
     "currency": "cash_back",
     "currency_label": "Cash Back rewards (tracked as points; each $1 in Cash Back = 100 points)",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1% cash back on all other purchases with no limit to the amount you can earn."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
+        "label": "Office supply stores and internet, cable and phone services (combined)",
+        "points_per_dollar": 5.0,
+        "cap": {
+          "amount": 25000,
+          "currency": "USD",
+          "period": "anniversary_year"
+        }
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
+        "label": "Gas stations and restaurants (combined)",
+        "points_per_dollar": 2.0,
+        "cap": {
+          "amount": 25000,
+          "currency": "USD",
+          "period": "anniversary_year"
+        }
       }
     ],
     "redemption_notes": "Redeem for cash back as a statement credit, direct deposit to most U.S. checking and savings accounts, travel through Chase Travel, Apple Ultimate Rewards Store, or gift cards. No minimums to redeem."
@@ -116,9 +121,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.chase.com/business-credit-cards/ink/cash"
   ],
-  "notes": "Verified from official Chase product page. Network (mastercard/world) not explicitly stated on page — preserved from existing, not re-verified. Signup bonus updated from $1,000 to $750 based on current page display showing $750 with $1,000 struck through; offer details text still references $1,000 (may be stale)."
+  "notes": "Verified from official Chase product page. Network corrected to Visa (Chase Ink Business cards are Visa Business; Signature-tier benefits such as primary business auto rental coverage present); the page does not print a network logo but lists Visa/Mastercard category links only. Current live offer is $750 cash back after $8,000 spend in 4 months (page shows $750 with a prior $1,000 struck through; the fine-print body still references the older $1,000 figure)."
 }
