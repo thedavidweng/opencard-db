@@ -21,7 +21,11 @@
     "waiver_conditions": "消费达标或指定条件可减免年费；以招行当期规则为准。"
   },
   "apr": {
-    "purchase": { "min": null, "max": null, "type": null },
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
     "notes": "中国大陆信用卡利息与分期费率以招行最新公告为准。"
   },
   "fx_fee": {
@@ -41,7 +45,8 @@
       "description": "按招行积分规则累计；不同商户类别倍率不同。"
     },
     "categories": [],
-    "redemption_notes": "积分兑换礼品、航空里程等，以招行积分商城为准。"
+    "redemption_notes": "积分兑换礼品、航空里程等，以招行积分商城为准。",
+    "rate_type": "points_multiplier"
   },
   "signup_bonus": {
     "amount": null,
@@ -114,5 +119,6 @@
     "https://creditcard.cmbchina.com/",
     "https://www.cmbchina.com/"
   ],
-  "notes": "经典白金系列具体产品线、年费与贵宾厅次数请以招行产品页为准；本记录为代表性银联白金结构样例。"
+  "notes": "经典白金系列具体产品线、年费与贵宾厅次数请以招行产品页为准；本记录为代表性银联白金结构样例。",
+  "segment": "personal"
 }
