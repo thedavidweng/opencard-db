@@ -44,13 +44,13 @@
     "currency_label": "Reward Dollars",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1.0,
       "description": "1% cash back on other eligible purchases"
     },
     "categories": [
       {
         "label": "U.S. supermarkets",
-        "points_per_dollar": 0.03,
+        "points_per_dollar": 3.0,
         "cap": {
           "amount": 6000,
           "currency": "USD",
@@ -59,7 +59,7 @@
       },
       {
         "label": "U.S. online retail purchases",
-        "points_per_dollar": 0.03,
+        "points_per_dollar": 3.0,
         "cap": {
           "amount": 6000,
           "currency": "USD",
@@ -68,7 +68,7 @@
       },
       {
         "label": "U.S. gas stations",
-        "points_per_dollar": 0.03,
+        "points_per_dollar": 3.0,
         "cap": {
           "amount": 6000,
           "currency": "USD",
@@ -76,7 +76,8 @@
         }
       }
     ],
-    "redemption_notes": "Cash back is received in the form of Reward Dollars that can be redeemed as a statement credit. Reward Dollars can also be used at Amazon.com checkout."
+    "redemption_notes": "Cash back is received in the form of Reward Dollars that can be redeemed as a statement credit. Reward Dollars can also be used at Amazon.com checkout.",
+    "rate_type": "cashback_percent"
   },
   "signup_bonus": {
     "amount": null,
