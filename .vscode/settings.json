@@ -1,0 +1,14 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/data/us/*.json",
+        "/data/ca/*.json",
+        "/data/cn/*.json",
+        "!/data/issuers.json",
+        "!/data/network-tiers.json"
+      ],
+      "url": "./schema.json"
+    }
+  ]
+}
