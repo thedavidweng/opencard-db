@@ -1,33 +1,32 @@
 name: Refresh exports
 
-# Regenerates the committed exports/ directory whenever the source data, schema,
-# or build scripts change on main, and commits the result back so the
-# jsDelivr-servable @main files stay in sync. Tag-pinned production URLs are cut
-# by the release workflow; this keeps the preview (@main) path fresh.
+# Regenerates the committed exports/ directory so the jsDelivr-servable @main
+# files stay reasonably fresh. Tag-pinned production URLs are built by the
+# release workflow at tag time, so per-push freshness is not required here.
+#
+# Why a PR instead of a direct push: main's branch protection requires status
+# checks, which rejects direct pushes from github-actions[bot] (GH006). And a
+# PR opened with the default GITHUB_TOKEN does not trigger CI (GitHub's
+# anti-recursion rule), so it cannot auto-merge either — a maintainer merges
+# the refresh PR after its checks pass (re-open/close it once to trigger CI,
+# or merge with admin rights).
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "data/**"
-      - "schema.json"
-      - "scripts/**"
+  schedule:
+    - cron: "41 4 * * 1" # weekly, Monday
+  workflow_dispatch:
 
-# Serialize with itself so back-to-back merges don't race on the push.
 concurrency:
   group: exports-main
   cancel-in-progress: false
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    # Loop guard: the commit this job pushes only touches exports/, which is in
-    # the paths filter above and would retrigger the workflow. Skip when the
-    # head commit is one of ours. (paths-ignore cannot be combined with paths.)
-    if: ${{ !startsWith(github.event.head_commit.message, 'chore(exports)') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v7
@@ -40,14 +39,18 @@ jobs:
         run: npm run validate
       - name: Build exports
         run: npm run build:exports
-      - name: Commit refreshed exports
-        run: |
-          if [ -z "$(git status --porcelain exports/)" ]; then
-            echo "exports/ unchanged; nothing to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add exports/
-          git commit -m "chore(exports): refresh generated exports [skip ci]"
-          git push
+      - name: Open refresh PR if exports changed
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: exports/
+          branch: bot/refresh-exports
+          commit-message: "chore(exports): refresh generated exports"
+          title: "chore(exports): refresh generated exports"
+          body: |
+            ## What kind of change is this?
+
+            - [x] **Not a card** (docs / CI / code / bulk data maintenance)
+
+            Weekly regeneration of the committed `exports/` directory (jsDelivr `@main` preview path).
+          labels: enhancement
+          delete-branch: true
