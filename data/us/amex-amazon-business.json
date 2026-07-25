@@ -1,9 +1,9 @@
 {
   "id": "us-amex-amazon-business",
   "schema_version": "1.0.0",
-  "name": "Business Credit Cards from American Express",
+  "name": "Amazon Business American Express Card",
   "localized_names": {
-    "en": "Business Credit Cards from American Express"
+    "en": "Amazon Business American Express Card"
   },
   "country": "us",
   "issuer": "American Express",
@@ -11,6 +11,7 @@
   "network": "amex",
   "network_tier": "none",
   "type": "credit",
+  "segment": "business",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -35,18 +36,56 @@
     "notes": null
   },
   "rewards": {
-    "currency": "membership_rewards",
-    "currency_label": "Membership Rewards points / cash back (see product)",
+    "currency": "amazon_reward_points",
+    "currency_label": "% Back (Amazon reward points redeemable as statement credit or Amazon.com balance)",
+    "rate_type": "cashback_percent",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": null,
-      "description": "Earn rates — confirm on official product page; not copied from third-party clues."
+      "points_per_dollar": 1,
+      "description": "1% back on all other purchases"
     },
-    "categories": [],
-    "redemption_notes": "See official American Express product page for current earn and redemption."
+    "categories": [
+      {
+        "label": "Amazon Business, Amazon.com, AWS, and Whole Foods Market (or choose 60-day payment terms instead of rewards)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 120000,
+          "currency": "USD",
+          "period": "calendar year (1% back thereafter)"
+        }
+      },
+      {
+        "label": "U.S. restaurants, U.S. gas stations, and wireless telephone services from U.S. providers",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards are earned as a percentage back (3% = 3 points per $1 = $0.03 in rewards) and can be redeemed as a statement credit or toward Amazon.com/Amazon Business purchases. Cardholders can instead choose 60-day interest-free payment terms on eligible Amazon-channel purchases in lieu of earning rewards on those purchases."
   },
   "signup_bonus": null,
-  "benefits": [],
+  "benefits": [
+    {
+      "id": "payment-terms-option",
+      "title": "60-Day Payment Terms Option",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Choose either rewards or 60 days of interest-free payment terms on eligible U.S. purchases at Amazon Business, Amazon.com, AWS, and Whole Foods Market."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Additional Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Add employee cards at no additional annual fee to earn rewards on business spending and set individual spending limits."
+    },
+    {
+      "id": "amazon-account-integration",
+      "title": "Amazon Business Account Integration",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Links to an Amazon Business account for enhanced purchasing controls, order tracking, and reconciliation."
+    }
+  ],
   "travel_perks": {
     "lounge_access": null,
     "tsa_precheck_credit": null,
@@ -57,15 +96,16 @@
   },
   "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
   "image": {
-    "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/business-platinum.png",
+    "url": null,
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
-    "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/"
+    "https://www.americanexpress.com/amazonrewards",
+    "https://www.amazon.com/gp/help/customer/display.html?nodeId=G4QL7QHAK89CPE6P",
+    "https://www.nav.com/blog/amazon-prime-business-card/"
   ],
-  "notes": "FETCH_FAILED: product_url redirected to generic business cards landing page. Amazon Business Card not listed among the 11 business cards shown. No card-specific data could be extracted. Copied input unchanged."
+  "notes": "No-annual-fee, non-Prime Amazon co-brand business card (the Prime variant earns 5% instead of 3%). Earns 3% back (or 60-day interest-free payment terms) on the first $120,000/year in eligible U.S. purchases at Amazon Business, Amazon.com, AWS, and Whole Foods Market (1% thereafter), 2% at U.S. restaurants/gas/wireless, and 1% on all other purchases. Rewards are Amazon reward points (~1 cent each) redeemable as statement credit or toward Amazon purchases — not Membership Rewards. The Amex product URL redirects to the general business-cards gallery (the card is applied for through Amazon), so earn rates were verified via the American Express Amazon Rewards Program Agreement and the Amazon help center. Prior image was wrong-product art (Business Platinum) and was cleared. Welcome offer and foreign-transaction fee not confirmed."
 }
