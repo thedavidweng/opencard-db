@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="504" viewBox="0 0 800 504">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2a37"/>
+      <stop offset="55%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="504" rx="28" fill="url(#g)"/>
+  <rect x="0" y="0" width="800" height="504" rx="28" fill="url(#shine)"/>
+  <rect x="56" y="72" width="72" height="56" rx="8" fill="#cbd5e1" opacity="0.85"/>
+  <circle cx="680" cy="100" r="28" fill="#94a3b8" opacity="0.35"/>
+  <circle cx="710" cy="100" r="28" fill="#64748b" opacity="0.35"/>
+  <text x="56" y="220" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" fill="#e2e8f0" letter-spacing="4">OPENCARD</text>
+  <text x="56" y="280" font-family="ui-monospace, monospace" font-size="26" fill="#94a3b8" letter-spacing="6">•••• •••• •••• ••••</text>
+  <text x="56" y="420" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#cbd5e1">GENERIC CARD FACE</text>
+  <text x="56" y="452" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#64748b">Placeholder — not bank artwork</text>
+</svg>
