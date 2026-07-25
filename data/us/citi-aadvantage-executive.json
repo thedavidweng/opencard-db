@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 595.0,
@@ -49,22 +50,18 @@
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible hotels (aadvantagehotels.com) and car rentals (aadvantagecars.com)",
+        "points_per_dollar": 10,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible American Airlines purchases",
+        "points_per_dollar": 4,
         "cap": null
       }
     ],
-    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster."
+    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster.",
+    "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
     "amount": 70000,
@@ -80,14 +77,14 @@
       "id": "admirals-club-membership",
       "title": "Complimentary Admirals Club® membership",
       "category": "lounge",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Primary cardmembers can enjoy access to Admirals Club® lounges worldwide – a value of up to $850. Enjoy complimentary drinks and snacks, stay connected with free Wi-Fi, get access to conference rooms and much more."
     },
     {
       "id": "additional-loyalty-points",
       "title": "Up to 20,000 additional Loyalty Points",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn a 10,000 Loyalty Point bonus after reaching 50,000 Loyalty Points in a status qualification year. Earn another 10,000 Loyalty Point bonus after reaching 90,000 Loyalty Points in the same status qualification year."
     },
     {
@@ -101,21 +98,21 @@
       "id": "enhanced-airport-experience",
       "title": "Enhanced airport experience",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Enjoy an enhanced airport experience including priority check-in, screening, and boarding when flying with American Airlines."
     },
     {
       "id": "first-checked-bag-free",
       "title": "First checked bag free",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Your first checked bag is free on domestic American Airlines itineraries for you and up to eight companions traveling with you on the same reservation, a savings of up to $900 per round trip."
     },
     {
       "id": "save-25-inflight",
       "title": "Save 25% on inflight food and beverage purchases",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "25% savings on inflight food and beverage purchases on American Airlines flights when you use your credit card."
     },
     {
@@ -129,7 +126,7 @@
       "id": "travel-protection-benefits",
       "title": "Travel protection benefits",
       "category": "insurance",
-      "source": "issuer",
+      "source": "network",
       "description": "Help protect your next trip with Trip Cancellation & Interruption Protection, Trip Delay Protection, Lost Baggage Protection and Worldwide Car Rental Insurance Coverage."
     },
     {
@@ -187,7 +184,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
     "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/"
