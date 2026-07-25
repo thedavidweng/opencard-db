@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0,
@@ -27,8 +28,8 @@
     "notes": "See Citi Important Terms; rates personalized."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Foreign purchase fee percentage is disclosed on Citi pricing table (value personalized in HTML); confirm current percentage in Important Terms."
+    "percent": 3,
+    "notes": "Citi Double Cash charges a 3% fee for foreign purchases (disclosed, not personalized)."
   },
   "credit_required": {
     "score_band": "good_to_excellent",
@@ -37,13 +38,20 @@
   "rewards": {
     "currency": "cash_back",
     "currency_label": "Cash back",
-    "structure": "single",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 2,
       "description": "Unlimited 2% cash back: 1% when you buy plus an additional 1% as you pay"
     },
-    "categories": [],
-    "redemption_notes": "No category enrollment; no stated earn caps on the product page."
+    "categories": [
+      {
+        "label": "Hotels, car rentals, and attractions booked through Citi Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "No category enrollment; no stated earn caps. Citi Travel bookings earn 5% total (2% base plus an additional 3%). Cash back is earned as ThankYou Points."
   },
   "signup_bonus": {
     "amount": null,
@@ -51,8 +59,8 @@
     "spend_required": null,
     "spend_currency": "USD",
     "months": null,
-    "description": "Cash back bonus after qualifying purchases; dollar amount personalized on Citi.com.",
-    "as_of": "2026-07-23"
+    "description": "Cash back welcome bonus after a qualifying spend within the first months; amount, spend, and window are rendered as template variables on the official page and not disclosed there.",
+    "as_of": "2026-07-25"
   },
   "benefits": [
     {
@@ -71,9 +79,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.citi.com/credit-cards/citi-double-cash-credit-card"
   ],
-  "notes": "Classic 1%+1% cash-back structure; bonus and FX fee percent are dynamically inserted — verify Important Terms before quoting exact figures."
+  "notes": "Classic 1%+1% (2% total) cash-back structure, plus 5% total on Citi Travel bookings. APR range and welcome-bonus amount/spend/months are rendered as template variables on the official page and are not disclosed there; left null pending re-verification against Citi Pricing Details."
 }
