@@ -62,6 +62,11 @@ Graduation bar for local mirrors: **Apple Pay** digital wallet art (`cardBackgro
 - [ ] **A. Official issuer image URL** (stable product-page art)
   - **Image URL:** https://www.example-bank.com/cardart/example.png
 - [ ] **B. Apple Pay extract (preferred local mirror — “graduation-level”)**
+  - **One command:** on a Mac with the card in Apple Pay, run
+    `npx opencard-export --export` (see [`packages/opencard-export`](packages/opencard-export)).
+    It exports the card face named after the matched Card Id and prints the
+    attribution. Everything runs locally; nothing is uploaded. Then do steps 3–5.
+  - Manual fallback:
   1. On a Mac with the card in Wallet, copy  
      `~/Library/Passes/Cards/*.pkpass/cardBackgroundCombined@2x.png`
   2. Rename to `{card-id}.png` (e.g. `us-example-card.png`) and add under `images/`
