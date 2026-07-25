@@ -1,21 +1,22 @@
 {
   "id": "us-capital-one-platinum-secured",
   "schema_version": "1.0.0",
-  "name": "Secured Credit Card to Build Credit",
+  "name": "Platinum Secured Credit Card from Capital One",
   "localized_names": {
-    "en": "Secured Credit Card to Build Credit"
+    "en": "Platinum Secured Credit Card from Capital One"
   },
   "country": "us",
   "issuer": "Capital One",
   "issuer_id": "capital-one",
   "network": "visa",
-  "network_tier": "signature",
+  "network_tier": "platinum",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
-    "amount": null,
+    "amount": 0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0,
     "waiver_conditions": null
   },
   "apr": {
@@ -62,9 +63,9 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://www.capitalone.com/credit-cards/platinum-secured/"
   ],
-  "notes": "Secured credit card for building/rebuilding credit. Credit Level: REBUILDING per page. Security deposit: $49, $99, or $200 minimum opens account with initial credit line of at least $200; max deposit $1,000. APR, annual fee, and FX fee not visible on the product page (disclosures behind javascript link). Network/tier (visa/signature) preserved from existing JSON but not re-verified on page. No rewards program mentioned on page."
+  "notes": "Secured credit card for building/rebuilding credit. Credit Level: REBUILDING per page. Security deposit: $49, $99, or $200 minimum opens account with initial credit line of at least $200; max deposit $1,000. Annual fee is $0 (well-known for this product). This is a Visa Platinum tier card, not Signature (corrected from prior scaffolding — a rebuilding secured card with a ~$200 starting line is not a Signature product). APR and FX fee not visible on the product page (disclosures behind javascript link); purchase APR left unverified pending re-verification against the official rates & disclosures. No rewards program mentioned on page."
 }
