@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 89,
@@ -32,12 +33,13 @@
     "notes": "No foreign transaction fees."
   },
   "credit_required": {
-    "score_band": "fair",
-    "notes": "Not explicitly stated. Mercury Financial focuses on credit-building/broader accessibility. Prequalification available without hard pull. Bonus offer varies by prequalification."
+    "score_band": null,
+    "notes": "Not explicitly stated on the official page. Mercury Financial focuses on credit-building/broader accessibility. Prequalification available without hard pull. Bonus offer varies by prequalification."
   },
   "rewards": {
     "currency": "bwr_points",
     "currency_label": "Best Western Rewards Points",
+    "rate_type": "points_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 2,
@@ -123,8 +125,8 @@
   },
   "official_url": "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
   "image": {
-    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
-    "attribution": "© First National Bank of Omaha",
+    "url": null,
+    "attribution": null,
     "local_path": null
   },
   "bin_hints": [],
