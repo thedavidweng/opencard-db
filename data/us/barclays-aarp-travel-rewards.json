@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "world",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -43,24 +44,20 @@
     "currency": "cashback",
     "currency_label": "Cash back (USD)",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": 0.01,
-      "description": "1% cash back on all other purchases (1 cent per dollar)."
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Airfare, hotels, and car rentals",
+        "points_per_dollar": 3,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
-        "cap": null
-      },
-      {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Restaurants",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -129,7 +126,7 @@
       "No foreign transaction fees on international purchases"
     ]
   },
-  "official_url": "https://www.aarp.org/membership/benefits/finance/aarp-travel-rewards-mastercard-from-barclays/",
+  "official_url": "https://cards.barclaycardus.com/banking/credit-card/aarp/mastercard-world/co-brand-partner-site/be971ac5-4adc-4971-917e-bd44e931a8b7/?referrerid=PTRBAMBMODAL100ART",
   "image": {
     "url": "https://aarp.widen.net/content/bbspsktipe/jpeg/1140x641-barclays-travel-card-on-laptop-feb-2022.jpeg",
     "attribution": "© Barclays",
