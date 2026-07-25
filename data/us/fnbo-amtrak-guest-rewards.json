@@ -1,0 +1,157 @@
+{
+  "id": "us-fnbo-amtrak-guest-rewards",
+  "schema_version": "1.0.0",
+  "name": "Amtrak Guest Rewards",
+  "localized_names": {
+    "en": "Amtrak Guest Rewards"
+  },
+  "country": "us",
+  "issuer": "First National Bank of Omaha",
+  "issuer_id": "fnbo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 26.49,
+      "max": 26.49,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "26.49% variable APR. APR not visible on fetched product page; Summary of Credit Terms is JS-rendered (firstbankcard.com/lynx). Existing value preserved from prior verification — NOT re-verified from official page on 2026-07-24."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on purchases made with your card outside the United States."
+  },
+  "credit_required": {
+    "score_band": "unknown",
+    "notes": "Not specified on the official FNBO product page."
+  },
+  "rewards": {
+    "currency": "amtrak_guest_rewards_points",
+    "currency_label": "Amtrak Guest Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 spent everywhere else"
+    },
+    "categories": [
+      {
+        "label": "Amtrak travel (including onboard purchases)",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Dining",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeemable for Amtrak travel. 5% points rebate when redeeming points for Amtrak travel. Points do not expire as long as account remains open.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "amtrak_guest_rewards_points",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn up to 20,000 bonus points: 15,000 points after spending $1,000, plus 5,000 points after adding an authorized user. All within first 3 billing cycles. Apply by 9/2/26.",
+    "as_of": "2026-07-24"
+  },
+  "benefits": [
+    {
+      "id": "onboard-rebate",
+      "title": "10% Rebate on Onboard Food and Beverage",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "10% rebate on Amtrak onboard food and beverage purchases in the form of a statement credit."
+    },
+    {
+      "id": "points-rebate",
+      "title": "5% Points Rebate on Amtrak Travel Redemptions",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "5% points rebate when you redeem your points for Amtrak travel."
+    },
+    {
+      "id": "points-no-expire",
+      "title": "Points Don't Expire",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Points do not expire as long as your account remains open."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made with your card outside the United States."
+    },
+    {
+      "id": "companion-coupon",
+      "title": "Round-Trip Companion Coupon",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Round-trip companion coupon upon account opening and card anniversary."
+    },
+    {
+      "id": "one-class-upgrade",
+      "title": "One-Class Upgrade",
+      "category": "other",
+      "source": "co-brand",
+      "description": "One-class upgrade upon account opening and card anniversary."
+    },
+    {
+      "id": "station-lounge-pass",
+      "title": "Station Lounge Pass",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "Station lounge pass upon account opening and card anniversary."
+    },
+    {
+      "id": "tier-status-faster",
+      "title": "Earn Tier Status Faster",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn 1,000 TQPs (Tier Qualifying Points) each time you make $5,000 in qualifying purchases."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Amtrak Station Lounge Pass",
+      "notes": "Station lounge pass upon account opening and card anniversary."
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Round-trip companion coupon upon account opening and card anniversary",
+      "One-class upgrade upon account opening and card anniversary",
+      "Earn 1,000 TQPs per $5,000 in qualifying purchases"
+    ]
+  },
+  "official_url": "https://www.card.fnbo.com/amtrakguestrewards/apply",
+  "image": {
+    "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+    "attribution": "© First National Bank of Omaha",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-24",
+  "sources": [
+    "https://www.card.fnbo.com/amtrakguestrewards/apply",
+    "https://www.card.fnbo.com/amtrakguestrewards"
+  ],
+  "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted.",
+  "segment": "personal"
+}
