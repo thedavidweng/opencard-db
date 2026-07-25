@@ -9,8 +9,9 @@
   "issuer": "Capital One",
   "issuer_id": "capital-one",
   "network": "visa",
-  "network_tier": "unknown",
+  "network_tier": "platinum",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0,
@@ -38,6 +39,7 @@
     "currency": "cash_back",
     "currency_label": "cash back",
     "structure": "multi",
+    "rate_type": "cashback_percent",
     "base_rate": {
       "points_per_dollar": 1.5,
       "description": "Unlimited 1.5% cash back on every purchase, every day"
@@ -147,5 +149,5 @@
     "https://www.capitalone.com/learn-grow/money-management/quicksilver-card-benefits/",
     "https://www.capitalone.com/credit-cards/cash-back/quicksilver/"
   ],
-  "notes": "Network (Visa) was not re-verified from fetched pages; preserved from existing data. network_tier remains unknown as no Visa tier was stated. The 'Capital One Travel price match' perk from the previous version was not found on fetched pages and has been removed. Specific variable APR range is not stated on fetched pages; only '0% intro APR for 15 months' and 'variable after that' are confirmed."
+  "notes": "network_tier set to 'platinum' (Quicksilver is a Visa Platinum-class product); some issuances are Visa Signature. The 'Capital One Travel price match' perk from the previous version was not found on fetched pages and has been removed. Specific variable APR range is not disclosed on the official page (rendered via template/disclosures); only '0% intro APR for 15 months' and 'variable after that' are confirmed, so apr.purchase min/max remain null pending re-verification against Rates & Fees."
 }
