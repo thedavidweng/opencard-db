@@ -11,6 +11,7 @@
   "network": "mastercard",
   "network_tier": "none",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -43,19 +44,20 @@
     "currency": "aadvantage_miles",
     "currency_label": "AAdvantage® miles",
     "structure": "multi",
+    "rate_type": "miles_multiplier",
     "base_rate": {
       "points_per_dollar": 1.0,
       "description": "1 AAdvantage® mile for every $1 spent on all other purchases."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Grocery stores (including grocery delivery services)",
+        "points_per_dollar": 2,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Eligible American Airlines purchases",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -75,14 +77,14 @@
       "id": "inflight-savings",
       "title": "25% Savings on Inflight Food and Beverage",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "25% savings on inflight food and beverage purchases on American Airlines flights when you use your credit card."
     },
     {
       "id": "authorized-users",
       "title": "Add Authorized Users at No Additional Charge",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn more AAdvantage® miles with purchases made by authorized users added to your account at no additional charge."
     },
     {
@@ -96,7 +98,7 @@
       "id": "loyalty-points",
       "title": "AAdvantage Loyalty Points",
       "category": "other",
-      "source": "issuer",
+      "source": "co-brand",
       "description": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster."
     }
   ],
@@ -115,7 +117,7 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
     "https://creditcards.aa.com/citi-mileup-card-american-airlines-direct/",
     "https://creditcards.aa.com/credit-cards/citi-mileup-card-american-airlines-direct/"
