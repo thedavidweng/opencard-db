@@ -11,6 +11,7 @@
   "network": "visa",
   "network_tier": "signature",
   "type": "credit",
+  "segment": "personal",
   "status": "active",
   "annual_fee": {
     "amount": 0.0,
@@ -40,22 +41,23 @@
     "notes": null
   },
   "rewards": {
-    "currency": "cash_back",
-    "currency_label": "% back rewards (tracked as points; each $1 in % back rewards = 100 points)",
+    "currency": "points",
+    "currency_label": "Amazon Prime Rewards points (100 points = $1 at Amazon.com or Chase.com)",
     "structure": "multi",
+    "rate_type": "points_multiplier",
     "base_rate": {
-      "points_per_dollar": 1.0,
-      "description": "1% back on all other purchases anywhere Visa is accepted."
+      "points_per_dollar": 1,
+      "description": "1 point ($0.01, i.e. 1% back) per $1 on all other purchases anywhere Visa is accepted."
     },
     "categories": [
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Amazon.com, Audible.com, Whole Foods Market, and Chase Travel (with an eligible Prime membership; 3 points without Prime)",
+        "points_per_dollar": 5,
         "cap": null
       },
       {
-        "label": "Category",
-        "points_per_dollar": null,
+        "label": "Gas stations, restaurants, and local transit & commuting (including rideshare)",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
@@ -150,18 +152,18 @@
     "hotel_status": null,
     "other": []
   },
-  "official_url": "https://www.amazon.com/dp/BT00LN946S",
+  "official_url": "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards",
   "image": {
     "url": "https://m.media-amazon.com/images/G/01/credit/CBCC/acq-landing-page/pd23/hero_card-art_dual-vertical.png",
     "attribution": "© Chase",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-07-25",
   "sources": [
-    "https://www.amazon.com/dp/BT00LN946S",
     "https://creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards",
+    "https://www.amazon.com/dp/BT00LN946S",
     "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC59329.html"
   ],
-  "notes": "Amazon product page (amazon.com/dp/BT00LN946S) returned HTTP 500 on fetch; data verified from official Chase product page at creditcards.chase.com/cash-back-credit-cards/amazon-prime-rewards and Chase pricing & terms page. Annual fee $0, purchase APR 18.74%-27.49% variable, cash advance 28.49%, penalty up to 29.99%, no foreign transaction fees. Signup bonus updated from $300/$600/3mo to $150 Amazon Gift Card on approval (no spend required). 5% back at Amazon/Whole Foods/Chase Travel (Prime members), 2% at gas/restaurants/transit, 1% on all other. Name updated to 'Prime Visa'."
+  "notes": "Verified from the official Chase product page (official_url now points to the Chase domain rather than the Amazon retail listing) and Chase pricing & terms page. Rewards are Chase points tracked at 100 points = $1: 5 points per $1 (5% back) at Amazon.com/Audible.com/Whole Foods Market/Chase Travel with an eligible Prime membership (3 points without Prime), 2 points per $1 (2%) at gas stations/restaurants/local transit & commuting, 1 point per $1 (1%) on all other purchases. Annual fee $0, purchase APR 18.74%-27.49% variable, cash advance 28.49%, penalty up to 29.99%, no foreign transaction fees. Signup bonus is a $150 Amazon Gift Card on approval (Prime members; no spend required)."
 }
