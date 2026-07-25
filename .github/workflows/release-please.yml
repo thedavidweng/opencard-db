@@ -65,6 +65,13 @@ jobs:
   # main on every update, discarding the previous refresh commit; this job
   # re-adds it right after, so the branch always converges to
   # "release edits + fresh exports".
+  #
+  # The config sets always-update: true, which matters here: without it,
+  # release-please skips the PR (and reports prs_created=false) whenever the
+  # recomputed body is byte-identical to the open PR, which is exactly what a
+  # hidden-type commit (chore:, build:, ...) that edits data/ produces. The
+  # skip would leave this job ungated and the branch un-recreated, so a
+  # chore-typed bulk data edit could reach the tag with stale exports.
   refresh-exports:
     needs: release-please
     if: needs.release-please.outputs.prs_created == 'true' && needs.release-please.outputs.pr != ''
@@ -108,9 +115,12 @@ jobs:
           git push origin "HEAD:$BRANCH"
 
   # Attach the exports committed at the tag to the GitHub Release as a
-  # direct-download mirror of the jsDelivr tag-pinned files. No rebuild here:
-  # uploading the committed bytes keeps Release assets and
-  # cdn.jsdelivr.net/gh/...@<tag>/exports/* identical.
+  # direct-download mirror of the jsDelivr tag-pinned files. The committed
+  # bytes are uploaded (not a rebuild) so Release assets and
+  # cdn.jsdelivr.net/gh/...@<tag>/exports/* stay identical. Before uploading,
+  # a rebuild-and-diff failsafe proves the committed exports actually match
+  # the tag's data/; if refresh-exports was ever skipped or raced, this run
+  # goes red instead of silently mirroring stale data.
   upload-assets:
     needs: release-please
     if: needs.release-please.outputs.release_created == 'true'
@@ -121,6 +131,23 @@ jobs:
       - uses: actions/checkout@v7
         with:
           ref: ${{ needs.release-please.outputs.tag_name }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify committed exports match the tag's data
+        run: |
+          npm run build:exports
+          # generated_at is a build timestamp and always differs; any other
+          # diff means the tag was cut with stale exports.
+          if ! git diff -I '"generated_at"' --exit-code -- exports/; then
+            echo "::error::Committed exports at ${GITHUB_REF_NAME:-the tag} do not match a fresh build from its data/."
+            echo "::error::jsDelivr already serves this tag. Delete the release and tag, refresh exports, and re-cut."
+            exit 1
+          fi
+          git checkout -- exports/
       - name: Upload export assets to the release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
