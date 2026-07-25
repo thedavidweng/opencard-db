@@ -177,12 +177,22 @@ export function planArtEdits(input: ArtVerifyInput): {
         note: null,
       }
     : null;
+  // local_path must end up on the committed WebP. Update it when absent, and
+  // ALSO when it points at the same-stem source raster (the tooling that
+  // dropped the PNG sets local_path to the .png, which this run deletes after
+  // converting — leaving it would dangle). Custom paths with a different stem
+  // are left alone.
+  const stem = (p: string) => p.replace(/\.(png|jpe?g|webp)$/i, "");
+  const needsLocalPath =
+    !input.existingLocalPath ||
+    (stem(input.existingLocalPath) === stem(input.webpPath) &&
+      input.existingLocalPath !== input.webpPath);
   return {
     archivePath,
     jsonEdits: {
       // converted_sha256 has nowhere to live without a provenance block.
       convertedSha256: input.headProvenance ? input.convertedSha256 : null,
-      localPath: input.existingLocalPath ? null : input.webpPath,
+      localPath: needsLocalPath ? input.webpPath : null,
       appendHistory,
     },
   };
