@@ -1,0 +1,38 @@
+{
+  "id": "us-amex-plum",
+  "schema_version": "1.0.0",
+  "name": "American Express Plum® Card",
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "discontinued",
+  "discontinued_date": "2026-03-01",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "none",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": null
+    }
+  },
+  "benefits": [],
+  "official_url": "https://web.archive.org/web/20130801215735/http://www.americanexpress.com/us/content/card-benefits.html",
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://web.archive.org/web/20130801215735/http://www.americanexpress.com/us/content/card-benefits.html"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Discontinued March 2026 when Graphite card launched. Early-payment discount card for businesses."
+}
