@@ -1,9 +1,9 @@
 {
   "id": "us-hsbc-premier-world-elite",
   "schema_version": "1.0.0",
-  "name": "HSBC Premier World Elite Mastercard® Credit Card",
+  "name": "HSBC Premier World Elite Mastercard\u00ae Credit Card",
   "localized_names": {
-    "en": "HSBC Premier World Elite Mastercard® Credit Card"
+    "en": "HSBC Premier World Elite Mastercard\u00ae Credit Card"
   },
   "country": "us",
   "issuer": "HSBC",
@@ -14,7 +14,6 @@
   "segment": "personal",
   "status": "discontinued",
   "discontinued_date": "2021-01-01",
-  "replaced_by": "us-hsbc-elite",
   "annual_fee": {
     "amount": 395,
     "currency": "USD",
