@@ -1,0 +1,113 @@
+{
+  "id": "us-td-first-class",
+  "schema_version": "1.0.0",
+  "name": "TD First Class Visa Signature® Credit Card",
+  "localized_names": {
+    "en": "TD First Class Visa Signature® Credit Card"
+  },
+  "country": "us",
+  "issuer": "TD Bank",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "Annual fee of $89 is waived the first year."
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.74,
+      "max": 16.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "16.74% variable APR on purchases. 0% introductory APR on balance transfers for the first 12 billing cycles for transfers made within the first 90 days of account opening; after that, 16.74% variable APR. Cash advance fee is $10 or 3% of advance, whichever is greater."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "First Class miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1X First Class miles on all other purchases. Miles never expire as long as your account is open and in good standing."
+    },
+    "categories": [
+      {
+        "label": "Travel and dining purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem your miles for travel, cash, entertainment and more. 25,000 bonus miles equals a $250 statement credit towards travel or dining purchases.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 25000,
+    "unit": "miles",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 6,
+    "description": "Earn 25,000 bonus miles when you spend $3,000 within the first 6 billing cycles. 25,000 bonus miles equals a $250 statement credit towards travel or dining purchases. Bonus miles reflected on your credit card statement 6 to 8 weeks after a qualified first purchase.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "visa-zero-liability",
+      "title": "Visa Zero Liability",
+      "category": "insurance",
+      "source": "network",
+      "description": "Enjoy Visa security on purchases, plus protection against unauthorized charges."
+    },
+    {
+      "id": "emergency-card-replacement",
+      "title": "Emergency Card Replacement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every TD Bank Credit Card comes with an added layer of protection such as emergency card replacement."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every TD Bank Credit Card comes with roadside assistance and more."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.td.com/us/en/personal-banking/credit-cards/first-class-card",
+  "image": {
+    "url": "https://www.td.com/content/dam/tdb/images/personal-banking/onsite-first-class-1.2d-en.jpeg",
+    "attribution": "© TD Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.td.com/us/en/personal-banking/credit-cards/first-class-card"
+  ],
+  "notes": "Verified from official product page. 3X First Class miles on travel and dining purchases (flights, hotels, car rentals, cruises and dining), 1X miles on all other purchases. Miles never expire. $89 annual fee waived the first year. No foreign transaction fee. 16.74% variable APR on purchases. Visa Signature tier.",
+  "segment": "personal"
+}
