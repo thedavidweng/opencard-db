@@ -1,0 +1,132 @@
+{
+  "id": "us-chase-fairmont",
+  "schema_version": "1.0.0",
+  "name": "Fairmont Credit Card",
+  "localized_names": {
+    "en": "Fairmont Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2017-08-15",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "$0 introductory annual fee the first year; thereafter $95."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on purchases worldwide."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "fairmont_rewards_points",
+    "currency_label": "Fairmont Rewards points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Fairmont stays",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Airline tickets purchased directly with airlines",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Car rental agencies",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Local transit and commuting",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points earned through the Fairmont Rewards program; redeemable for Fairmont stays and rewards."
+  },
+  "signup_bonus": {
+    "amount": 2,
+    "unit": "complimentary_nights",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 2 Complimentary Nights after you make $3,000 in purchases within your first 3 months of account opening.",
+    "as_of": "2016-08-09"
+  },
+  "benefits": [
+    {
+      "id": "anniversary-free-night",
+      "title": "1 Complimentary Night Each Anniversary Year",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn 1 Complimentary Night each anniversary year that you make $12,000 in purchases with your card."
+    },
+    {
+      "id": "automatic-premier-status",
+      "title": "Automatic Upgrade to Premier Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic upgrade to Fairmont President's Club Premier status after your credit card account is approved."
+    },
+    {
+      "id": "platinum-status-acceleration",
+      "title": "Earn Platinum Status Faster",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "When you spend $7,500 on your card, receive a stay credit towards Platinum status, up to a maximum of two stay credits per calendar year."
+    },
+    {
+      "id": "gold-upgrade-certificate",
+      "title": "Annual Fairmont Gold Upgrade Certificate",
+      "category": "other",
+      "source": "co-brand",
+      "description": "For existing Premier and Platinum members: annual Fairmont Gold upgrade certificate plus dining certificates as long as you maintain Premier or Platinum membership status earned through stays."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases worldwide."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Automatic upgrade to Premier status on approval; Platinum status acceleration via $7,500 spend stay credits (max 2/year).",
+    "other": [
+      "1 complimentary night each anniversary year after $12,000 spend",
+      "Annual Fairmont Gold upgrade certificate for existing Premier/Platinum members",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://web.archive.org/web/20160809154338/https://creditcards.chase.com/a1/fairmont/LP",
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://web.archive.org/web/20160809154338/https://creditcards.chase.com/a1/fairmont/LP"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Applications closed after AccorHotels acquisition. Cards converted to Chase Sapphire Preferred on August 15, 2017."
+}
