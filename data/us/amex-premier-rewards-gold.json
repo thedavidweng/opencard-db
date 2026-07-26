@@ -1,0 +1,39 @@
+{
+  "id": "us-amex-premier-rewards-gold",
+  "schema_version": "1.0.0",
+  "name": "American Express Premier Rewards Gold Card",
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2018-10-01",
+  "replaced_by": "us-amex-gold",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "none",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": null
+    }
+  },
+  "benefits": [],
+  "official_url": "https://www.americanexpress.com/us/credit-cards/",
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Renamed to American Express Gold Card in October 2018."
+}
