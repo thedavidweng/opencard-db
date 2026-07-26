@@ -1,0 +1,123 @@
+{
+  "id": "us-us-bank-cash-plus",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Cash+® Visa Signature® Card",
+  "localized_names": {
+    "en": "U.S. Bank Cash+® Visa Signature® Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "0% intro APR on purchases and balance transfers for the first 15 billing cycles. After that, a variable APR applies (amount not displayed on page). Balance transfer fee applies."
+  },
+  "fx_fee": {
+    "percent": 3.0,
+    "notes": "Foreign transaction fee applies; confirm current rate in Cardmember Agreement."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cashback",
+    "currency_label": "Cash+ cash back",
+    "structure": "choice",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 0.01,
+      "description": "1% cash back on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "5% cash back on two categories you choose each quarter (first $2,000 in combined eligible purchases each quarter, then 1%)",
+        "points_per_dollar": 0.05,
+        "cap": {
+          "amount": 2000,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      },
+      {
+        "label": "2% cash back on one everyday category you choose each quarter (gas stations and EV charging, grocery stores, or restaurants)",
+        "points_per_dollar": 0.02,
+        "cap": null
+      },
+      {
+        "label": "5% cash back on prepaid travel (air, hotel and car reservations booked directly in the U.S. Bank Travel Center)",
+        "points_per_dollar": 0.05,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back can be redeemed as a statement credit, a rewards card, or directly deposited into a U.S. Bank checking or savings account. Choose and activate Cash+ Categories each quarter to earn."
+  },
+  "signup_bonus": {
+    "amount": 250,
+    "unit": "usd",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn a $250 rewards bonus after you spend $1,000 in eligible purchases within the first 90 days of account opening.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "cashback-deals",
+      "title": "Cash-back deals",
+      "category": "other",
+      "source": "issuer",
+      "description": "Personalized cash-back offers based on previous spending, accessible through the U.S. Bank Mobile App or online banking."
+    },
+    {
+      "id": "extend-pay",
+      "title": "ExtendPay® Plan",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay over time with a U.S. Bank ExtendPay® Plan; new cardmembers receive a $0 fee offer on ExtendPay Plans opened in the first 60 days after account opening."
+    },
+    {
+      "id": "flexible-redemption",
+      "title": "Flexible redemption",
+      "category": "other",
+      "source": "issuer",
+      "description": "Redeem cash back as a statement credit, a rewards card, or a direct deposit into a U.S. Bank checking or savings account."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
+  "image": {
+    "url": "https://www.usbank.com/content/dam/usbank/en/images/illustrations/card-art/credit-cards/photo-cash-plus-signature-angle-left.png",
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.usbank.com/credit-cards/cash-plus-visa-signature-credit-card.html",
+    "https://www.usbank.com/credit-cards.html"
+  ],
+  "notes": "No annual fee. 5% and 2% categories are chosen and activated each quarter; the 5% categories are capped at the first $2,000 in combined eligible purchases each quarter (then 1%). Annual fee amount and APR variable rate not displayed on page (shown as placeholders)."
+}
