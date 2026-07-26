@@ -1,0 +1,39 @@
+{
+  "id": "us-amex-mercedes-benz",
+  "schema_version": "1.0.0",
+  "name": "Mercedes-Benz Credit Card from American Express",
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2019-01-11",
+  "replaced_by": "us-amex-everyday-preferred",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "none",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": null
+    }
+  },
+  "benefits": [],
+  "official_url": "https://www.americanexpress.com/us/credit-cards/",
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Discontinued January 2019. Converted to Amex Everyday Preferred per Amex FAQ."
+}
