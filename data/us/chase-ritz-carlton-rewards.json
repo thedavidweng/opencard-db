@@ -1,0 +1,166 @@
+{
+  "id": "us-chase-ritz-carlton-rewards",
+  "schema_version": "1.0.0",
+  "name": "Ritz-Carlton Rewards® Credit Card",
+  "localized_names": {
+    "en": "Ritz-Carlton Rewards® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2018-07-26",
+  "annual_fee": {
+    "amount": 395,
+    "currency": "USD",
+    "first_year": 395,
+    "waiver_conditions": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on purchases worldwide."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ritz_carlton_rewards_points",
+    "currency_label": "Ritz-Carlton Rewards points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Stays at The Ritz-Carlton and Marriott hotels (room charges)",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Airline tickets purchased directly with the airline",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Car rental agencies",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points earned through the card program transferred to the Ritz-Carlton Rewards account. A 10% Annual Points Premium was awarded on points earned through card purchases during the previous year."
+  },
+  "signup_bonus": {
+    "amount": 2,
+    "unit": "complimentary_nights",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Enjoy two complimentary nights at any participating Tier 1-4 Ritz-Carlton hotel after you spend $4,000 on purchases in the first 3 months from account opening.",
+    "as_of": "2016-05-31"
+  },
+  "benefits": [
+    {
+      "id": "club-level-upgrade",
+      "title": "Upgrade to The Ritz-Carlton Club® Level 3 Times Annually",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Club Level upgrade on up to three qualifying paid stays per Account Year (seven-night maximum length of stay), subject to availability."
+    },
+    {
+      "id": "annual-points-premium",
+      "title": "10% Annual Points Premium",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn a 10% Annual Points Premium on Ritz-Carlton Rewards points earned through card purchases during the previous year."
+    },
+    {
+      "id": "points-no-expire",
+      "title": "Points Don't Expire",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Points do not expire as long as you make purchases on your credit card every 24 months."
+    },
+    {
+      "id": "hotel-credit",
+      "title": "$100 Hotel Credit on Paid Stays",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "$100 hotel credit on paid stays of 2 nights or longer."
+    },
+    {
+      "id": "annual-travel-credit",
+      "title": "$300 Annual Travel Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$300 annual travel credit for eligible travel purchases."
+    },
+    {
+      "id": "airport-lounge-access",
+      "title": "Worldwide Airport Lounge Access",
+      "category": "lounge",
+      "source": "network",
+      "description": "Worldwide airport lounge access via the Visa Infinite lounge program (Priority Pass)."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases worldwide."
+    },
+    {
+      "id": "gold-elite-status",
+      "title": "Automatic Gold Elite Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic Gold Elite status your first account year; maintain by spending $10,000 your first account year and each account year thereafter."
+    },
+    {
+      "id": "platinum-elite-status",
+      "title": "Platinum Elite Status after $75,000 Spend",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Achieve Platinum Elite status when you spend $75,000 on purchases each account year."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Priority Pass",
+      "visits_per_year": null,
+      "notes": "Worldwide airport lounge access included with the Visa Infinite card."
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": "Automatic Gold Elite status first year (maintain with $10,000 annual spend); Platinum Elite status at $75,000 annual spend.",
+    "other": [
+      "$300 annual travel credit",
+      "$100 hotel credit on paid stays of 2+ nights",
+      "Club Level upgrade 3x per year (7-night max)",
+      "10% Annual Points Premium",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://web.archive.org/web/20160531161213/https://creditcards.chase.com/a1/ritzcarlton/aep2CN",
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://web.archive.org/web/20160531161213/https://creditcards.chase.com/a1/ritzcarlton/aep2CN"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Closed to new applicants July 26, 2018. Marriott merged Ritz Carlton Rewards into Bonvoy."
+}
