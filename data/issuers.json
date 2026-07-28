@@ -1,5 +1,5 @@
 {
-  "$comment": "Canonical issuer registry. Every card's issuer_id must resolve to an entry here (scripts/validate.ts). Add new issuers in the same PR as their first card. aliases[] lists spellings that must NOT be used as issuer_id \u2014 the validator suggests the canonical id when it sees one. domains[] is an OPTIONAL provenance allowlist: every hostname used in a card's official_url / sources[] must suffix-match one of these registrable domains (parent-domain match, so www. and other subdomains are covered). Entries include the issuer's own sites plus the official co-brand-program and card-servicing domains its cards legitimately cite. When you add a card whose sources live on a new legitimate issuer/co-brand domain, add that domain here in the SAME PR (validate.ts errors otherwise). This is an anti-fabrication signal: a fabricated card tends to cite domains the issuer does not own.",
+  "$comment": "Canonical issuer registry. Every card's issuer_id must resolve to an entry here (scripts/validate.ts). Add new issuers in the same PR as their first card. aliases[] lists spellings that must NOT be used as issuer_id — the validator suggests the canonical id when it sees one. domains[] is an OPTIONAL provenance allowlist: every hostname used in a card's official_url / sources[] must suffix-match one of these registrable domains (parent-domain match, so www. and other subdomains are covered). Entries include the issuer's own sites plus the official co-brand-program and card-servicing domains its cards legitimately cite. When you add a card whose sources live on a new legitimate issuer/co-brand domain, add that domain here in the SAME PR (validate.ts errors otherwise). This is an anti-fabrication signal: a fabricated card tends to cite domains the issuer does not own.",
   "issuers": [
     {
       "id": "amex",
@@ -42,7 +42,8 @@
         "aarp.org",
         "boh.com",
         "wyndhamrewardscreditcard.com",
-        "hollandamericavisa.com"
+        "hollandamericavisa.com",
+        "rcimastercard.com"
       ]
     },
     {
@@ -65,7 +66,7 @@
     },
     {
       "id": "ccb",
-      "name": "China Construction Bank \u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c",
+      "name": "China Construction Bank 中国建设银行",
       "aliases": [
         "china-construction-bank"
       ],
@@ -111,7 +112,7 @@
     },
     {
       "id": "cmb",
-      "name": "China Merchants Bank \u62db\u5546\u94f6\u884c",
+      "name": "China Merchants Bank 招商银行",
       "aliases": [
         "china-merchants-bank"
       ],
@@ -182,7 +183,7 @@
     },
     {
       "id": "icbc",
-      "name": "Industrial and Commercial Bank of China \u4e2d\u56fd\u5de5\u5546\u94f6\u884c",
+      "name": "Industrial and Commercial Bank of China 中国工商银行",
       "aliases": [],
       "domains": [
         "icbc.com.cn"
