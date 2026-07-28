@@ -1,0 +1,39 @@
+{
+  "id": "us-us-bank-club-carlson-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "Club Carlson Rewards Visa",
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "classic",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2022-04-01",
+  "replaced_by": "us-us-bank-altitude-go",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "none",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": null
+    }
+  },
+  "benefits": [],
+  "official_url": "https://www.usbank.com/credit-cards/",
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.usbank.com/credit-cards/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Discontinued April 2022; converted to U.S. Bank Altitude Go. Co-brand with Radisson Hotels (formerly Club Carlson)."
+}

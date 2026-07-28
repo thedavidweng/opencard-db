@@ -1,0 +1,98 @@
+{
+  "id": "us-barclays-frontier-business",
+  "schema_version": "1.0.0",
+  "name": "Frontier Airlines Business Card",
+  "localized_names": {
+    "en": "Frontier Airlines Business Card"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "discontinued",
+  "annual_fee": {
+    "amount": 49.0,
+    "currency": "USD",
+    "first_year": 49.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Variable APR based on creditworthiness. $49 annual fee."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Frontier Miles / Travel Miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "Earn 1 mile for every dollar spent on regular purchases."
+    },
+    "categories": [
+      {
+        "label": "2x miles on Frontier Airlines ticket purchases",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem miles for Frontier Airlines award travel. 12,500 bonus miles when the card is activated.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 12500.0,
+    "unit": "miles",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "12,500 bonus miles when the card is activated.",
+    "as_of": "2018-01-01"
+  },
+  "benefits": [
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for unauthorized charges."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.barclaycardus.com/",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.barclaycardus.com/"
+  ],
+  "notes": "DOC 2018 marked as discontinued. Frontier-Barclays partnership extended to 2037 per SEC filings but business card availability unclear. The Frontier Airlines MasterCard BusinessCard carried a $49 annual fee, earned 2x miles on Frontier ticket purchases and 1x on other purchases, with 12,500 bonus miles on activation. Cardholders spending more than $60,000 per calendar year were upgraded to elite status. The official product page is no longer available; barclaycardus.com is cited as the issuer's homepage."
+}

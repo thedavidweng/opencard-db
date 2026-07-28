@@ -41,7 +41,8 @@
         "barclays.com",
         "aarp.org",
         "boh.com",
-        "wyndhamrewardscreditcard.com"
+        "wyndhamrewardscreditcard.com",
+        "hollandamericavisa.com"
       ]
     },
     {
@@ -126,7 +127,8 @@
       ],
       "domains": [
         "comenity.net",
-        "aaa.com"
+        "aaa.com",
+        "nfl.com"
       ]
     },
     {
@@ -230,7 +232,8 @@
         "td-bank"
       ],
       "domains": [
-        "td.com"
+        "td.com",
+        "tdbank.com"
       ]
     },
     {
@@ -268,14 +271,15 @@
       ]
     },
     {
-      "id": "hsbc",
-      "name": "HSBC",
+      "id": "city-national-bank",
+      "name": "City National Bank",
       "aliases": [
-        "hsbc-bank"
+        "cnb"
       ],
       "domains": [
-        "hsbc.com",
-        "us.hsbc.com"
+        "cnb.com",
+        "commercialap.cnb.com",
+        "cnbrewards.com"
       ]
     }
   ]

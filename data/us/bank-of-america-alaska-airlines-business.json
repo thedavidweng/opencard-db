@@ -1,0 +1,42 @@
+{
+  "id": "us-bank-of-america-alaska-airlines-business",
+  "schema_version": "1.0.0",
+  "name": "Alaska Airlines Visa Signature Business Card",
+  "localized_names": {
+    "en": "Alaska Airlines Visa Signature Business Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "discontinued",
+  "discontinued_date": "2025-08-20",
+  "replaced_by": "us-bank-of-america-atmos-rewards-business",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "none",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": null
+    }
+  },
+  "benefits": [],
+  "official_url": "https://www.bankofamerica.com/credit-cards/",
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/"
+  ],
+  "notes": "Rebranded to Atmos Rewards Business in August 2025."
+}
