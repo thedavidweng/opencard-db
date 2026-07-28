@@ -1,0 +1,123 @@
+{
+  "id": "us-penfed-gold-visa",
+  "schema_version": "1.0.0",
+  "name": "PenFed Gold Visa® Card",
+  "localized_names": {
+    "en": "PenFed Gold Visa® Card"
+  },
+  "country": "us",
+  "issuer": "PenFed Credit Union",
+  "issuer_id": "penfed",
+  "network": "visa",
+  "network_tier": "traditional",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.99,
+      "max": 17.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 17.99,
+      "max": 17.99,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for 15 months on purchases, after which a variable 17.99% APR applies based on creditworthiness and varies with the market based on the Prime Rate. 0% introductory APR for 15 months on balance transfers made in the first 60 days after account opening; after that, the APR for the unpaid balance is a standard non-variable rate of 17.99%. 3% balance transfer fee per transaction. 17.99% APR for cash advances; no cash advance fee."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Credit score of 700+ generally recommended; PenFed membership required."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No Rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No rewards earned; the PenFed Gold Visa is a low-APR / balance-transfer card, not a rewards card."
+    },
+    "categories": [],
+    "redemption_notes": null
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "zero-liability",
+      "title": "$0 Liability on Unauthorized Charges",
+      "category": "insurance",
+      "source": "network",
+      "description": "Visa Zero Liability protection means you are not responsible for unauthorized charges made with your card."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protect your cell phone against theft and damage by paying your monthly wireless bill with your PenFed credit card."
+    },
+    {
+      "id": "travel-accident-coverage",
+      "title": "Travel Accident Coverage",
+      "category": "insurance",
+      "source": "network",
+      "description": "When you purchase your travel ticket with your PenFed credit card, you are eligible for accident coverage of up to $250,000."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "network",
+      "description": "Automatic protection for physical damage, theft, reasonable and customary towing, and loss-of-use charges when renting with the card."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Use your PenFed credit card worldwide without any additional fees."
+    },
+    {
+      "id": "no-cash-advance-fee",
+      "title": "No Cash Advance Fee",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No cash advance fee; cash advance APR of 17.99% applies."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Travel Accident Coverage up to $250,000",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://www.penfed.org/credit-cards/gold-visa",
+  "image": {
+    "url": "https://www.penfed.org/content/dam/penfed/en/products/credit-cards/cards/gold-card-sm.webp",
+    "attribution": "© PenFed Credit Union",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.penfed.org/credit-cards/gold-visa",
+    "https://www.penfed.org/content/dam/penfed/general/pdf/creditcardpdfs/summary-terms/current/summary-of-terms-vsg-00.pdf"
+  ],
+  "notes": "Visa Traditional. $0 annual fee. Low-APR / balance-transfer card with no rewards. 0% intro APR for 15 months on purchases and on balance transfers made in the first 60 days, then 17.99% (variable for purchases, non-variable for balance transfers). 3% balance transfer fee. No foreign transaction fees. No cash advance fee."
+}
