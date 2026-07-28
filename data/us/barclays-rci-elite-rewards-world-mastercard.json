@@ -1,0 +1,128 @@
+{
+  "id": "us-barclays-rci-elite-rewards-world-mastercard",
+  "schema_version": "1.0.0",
+  "name": "RCI Elite Rewards World Mastercard®",
+  "localized_names": {
+    "en": "RCI Elite Rewards World Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 29.49,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Variable APR 19.24%–29.49% for purchases (based on creditworthiness). 0% introductory APR for the first fifteen billing cycles on balance transfers made within 45 days of account opening, then 19.24% to 29.49%. Balance transfer fee: $5 or 5% of each transfer, whichever is greater. APRs vary with the market based on the Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees on international purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "RCI Elite Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "Earn 1X Rewards for every $1 spent on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "5X Rewards on all eligible RCI purchases",
+        "points_per_dollar": 5.0,
+        "cap": null
+      },
+      {
+        "label": "2X Rewards on all eligible travel including rideshare, gas, and EV charging purchases",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem Rewards for cash back, statement credits, travel, gift cards, merchandise, Member Rewards or charitable donations. Get 5% Rewards back every time you redeem, as a bonus to use toward your next redemption. 5,000 Bonus Rewards worth $50 in RCI Member Rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 5000.0,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Earn 5,000 Bonus Rewards after making your first purchase — worth $50 in RCI Member Rewards.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "intro-balance-transfer",
+      "title": "0% Intro APR on Balance Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% introductory APR for the first fifteen billing cycles following each balance transfer that posts to your account within 45 days of account opening. After that, 19.24% to 29.49% variable APR."
+    },
+    {
+      "id": "vacation-credit",
+      "title": "$250 USD Vacation Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Earn a $250 USD Vacation Credit after spending $10,000 in net purchases each calendar year."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "$0 Fraud Liability protection means you're not responsible for unauthorized charges you report to us."
+    },
+    {
+      "id": "rewards-redemption-bonus",
+      "title": "5% Rewards Back on Redemption",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Get 5% Rewards back every time you redeem, as a bonus to use toward your next redemption."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.rcimastercard.com/",
+  "image": {
+    "url": "https://www.rcimastercard.com/content/dam/bcuspublic/card-plastic/card-angled/RCI_CD_card_RCI_PM_WM_Angle_L_359x246.png",
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.rcimastercard.com/"
+  ],
+  "notes": "No annual fee. World Mastercard. Rewards: 5x on eligible RCI purchases, 2x on eligible travel (rideshare, gas, EV charging), 1x elsewhere. 5% rewards back on every redemption. $250 vacation credit after $10,000 annual spend. All rates/fees/benefits verified from official RCI Mastercard product page."
+}

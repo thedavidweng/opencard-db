@@ -1,0 +1,152 @@
+{
+  "id": "us-barclays-priceline-vip-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "Priceline VIP Rewards Visa® Card",
+  "localized_names": {
+    "en": "Priceline VIP Rewards Visa® Card"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Variable APR 19.49%–29.99% for purchases (based on creditworthiness); cash advance APR 29.99%. 0% introductory APR for 15 billing cycles on balance transfers made within 45 days of account opening. Balance transfer fee: 5% (min. $5). Cash advance fee: 5% (min. $10). Minimum monthly interest charge $0.50."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "Foreign transaction fee: 0%. No foreign transaction fees on international purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Priceline VIP Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "Earn 1X points on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "5X points on Priceline bookings",
+        "points_per_dollar": 5.0,
+        "cap": null
+      },
+      {
+        "label": "10X points on Avis and Budget car rentals booked through Priceline",
+        "points_per_dollar": 10.0,
+        "cap": null
+      },
+      {
+        "label": "2X points on gas and restaurant purchases, including delivery services",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for statement credits, gift cards, and more. For example, redeem 5,000 points for a $50 statement credit. No limit on the number of points you can earn.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000.0,
+    "unit": "points",
+    "spend_required": 500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 20,000 Bonus points after spending $500 within the first 90 days after account opening — enough to redeem for a $200 statement credit.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "intro-balance-transfer",
+      "title": "Low Intro APR on Balance Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% Intro APR for 15 months on balance transfers made within 45 days of account opening. After that, a variable APR will apply, 19.49% to 29.99%."
+    },
+    {
+      "id": "global-entry-tsa-precheck-credit",
+      "title": "Up to $120 Global Entry or TSA PreCheck Application Fee Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $120 Global Entry or TSA PreCheck application fee statement credit each anniversary year if you spend $10,000 on purchases."
+    },
+    {
+      "id": "cruise-statement-credit",
+      "title": "$50 Cruise Statement Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Earn a $50 cruise statement credit when you make a Priceline cruise booking."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on international purchases."
+    },
+    {
+      "id": "fico-score",
+      "title": "Free Online FICO Credit Score Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free online access to your FICO Score lets you keep an eye on your credit score and get email alerts when we learn that your score has changed."
+    },
+    {
+      "id": "priceline-vip-gold-status",
+      "title": "Priceline VIP Gold Status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic Priceline VIP Gold Status and exclusive deals, including coupons up to 20% off."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "anniversary_year (requires $10,000 spend)"
+    },
+    "global_entry_credit": {
+      "amount": 120.0,
+      "currency": "USD",
+      "period": "anniversary_year (requires $10,000 spend)"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.pricelinevisa.com/",
+  "image": {
+    "url": "https://www.pricelinevisa.com/content/dam/bcuspublic/credit-card/priceline/card-art/PRV_LP_G_Card_Priceline_VS_360x230_112321.png",
+    "attribution": "© Barclays",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.pricelinevisa.com/"
+  ],
+  "notes": "No annual fee. Visa Signature card (applicants not meeting credit criteria may receive a Platinum card with different benefits). Rewards: 5x on Priceline bookings, 10x on Avis/Budget car rentals via Priceline, 2x on gas/restaurants, 1x elsewhere. All rates/fees/benefits verified from official Priceline Visa product page."
+}
