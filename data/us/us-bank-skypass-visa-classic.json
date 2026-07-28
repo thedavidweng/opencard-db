@@ -1,0 +1,80 @@
+{
+  "id": "us-us-bank-skypass-visa-classic",
+  "schema_version": "1.0.0",
+  "name": "SKYPASS Visa Classic Card",
+  "localized_names": {
+    "en": "SKYPASS Visa Classic Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "classic",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Variable APR applies; rate not displayed on the site. Refer to the Cardmember Agreement for current terms."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not displayed on page; confirm current terms in the Cardmember Agreement."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Korean Air SKYPASS miles",
+    "structure": "single",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn SKYPASS miles on eligible purchases; refer to the Cardmember Agreement for the earning rate."
+    },
+    "redemption_notes": "Miles accumulate in a Korean Air SKYPASS frequent flyer account and can be redeemed for Korean Air awards. No mileage caps on any SKYPASS Visa card."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "skypass-mile-earning",
+      "title": "SKYPASS mile earning",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn Korean Air SKYPASS miles on eligible purchases; miles accumulate to one SKYPASS mileage account."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.skypassvisa.com/credit/contactUs.do",
+  "image": {
+    "url": "https://www.skypassvisa.com/credit/mmcore-webapp/skypass/credit/static/img/SKYPASSVisaCreditCard.png",
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-28",
+  "sources": [
+    "https://www.skypassvisa.com/credit/contactUs.do",
+    "https://www.skypassvisa.com/credit/faqs.do"
+  ],
+  "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. No longer available for new applications; not listed in site navigation. Still serviced for existing cardholders per the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Visa Secured). The SkyBlue Visa is also marked 'no longer available' on its product page."
+}
