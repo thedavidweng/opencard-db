@@ -12,7 +12,7 @@
   "network_tier": "classic",
   "type": "credit",
   "segment": "personal",
-  "status": "active",
+  "status": "discontinued",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -71,10 +71,10 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-07-28",
   "sources": [
     "https://www.skypassvisa.com/credit/contactUs.do",
     "https://www.skypassvisa.com/credit/faqs.do"
   ],
-  "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. The SKYPASS Classic Visa is a lower-tier card confirmed via the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Visa Secured for servicing) but has no dedicated product page on skypassvisa.com; specific fees/APR/earning rates are not displayed on the site."
+  "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. No longer available for new applications; not listed in site navigation. Still serviced for existing cardholders per the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Visa Secured). The SkyBlue Visa is also marked 'no longer available' on its product page."
 }
