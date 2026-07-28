@@ -1,0 +1,64 @@
+{
+  "id": "us-comenity-virgin-america-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Virgin America Visa Signature Card",
+  "localized_names": {
+    "en": "Virgin America Visa Signature® Card"
+  },
+  "country": "us",
+  "issuer": "Comenity Bank (Bread Financial)",
+  "issuer_id": "comenity",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2018-01-04",
+  "annual_fee": {
+    "amount": 49,
+    "currency": "USD",
+    "first_year": 49,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "elevate_points",
+    "currency_label": "Elevate Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x Elevate point per dollar on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Virgin America purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earned Elevate points redeemable toward Virgin America flights and rewards. Program terminated when the card was discontinued."
+  },
+  "benefits": [],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://d.comenity.net/legaldocs/virginamericavisa/legal-documents/termsandconditions",
+  "image": {
+    "url": null,
+    "attribution": "© Comenity Capital Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "sources": [
+    "https://d.comenity.net/legaldocs/virginamericavisa/legal-documents/termsandconditions"
+  ],
+  "notes": "Discontinued January 4, 2018 following Alaska Airlines' acquisition of Virgin America. $49 annual fee. Cards were not converted to Alaska Airlines products."
+}

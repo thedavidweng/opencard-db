@@ -1,0 +1,163 @@
+{
+  "id": "us-hsbc-premier-world",
+  "schema_version": "1.0.0",
+  "name": "HSBC Premier World Mastercard® Credit Card",
+  "localized_names": {
+    "en": "HSBC Premier World Mastercard® Credit Card"
+  },
+  "country": "us",
+  "issuer": "HSBC",
+  "issuer_id": "hsbc",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": "$0 annual fee for primary cardholder and authorized users when the cardholder holds a Private Banking Account relationship or HSBC US employee status at the time of application and on each subsequent account anniversary date."
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 24.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.99,
+      "max": 28.99,
+      "type": "variable"
+    },
+    "notes": "Variable Purchase APR 19.99% to 24.99% depending on creditworthiness; variable Balance Transfer APR 19.99% to 24.99%; variable Cash APR 28.99%. Maximum APR 29.99%. Transaction fee of $10 or 5% (whichever is greater) per balance transfer, check, or cash advance. Minimum interest charge $1.00."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Requires an existing U.S. HSBC Premier checking account to apply."
+  },
+  "rewards": {
+    "currency": "hsbc_rewards_points",
+    "currency_label": "HSBC Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1x Points on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas and groceries",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "Travel (flights, hotels, car rentals)",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points can be redeemed for cash back as a direct deposit to an eligible HSBC Bank USA consumer checking or savings account, or as a statement credit. Rewards for Miles program allows transferring points into any of HSBC's 11 airline and 2 hotel partners' loyalty programs. Travel booked through HSBC Travel offers enhanced redemption value."
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "hsbc_rewards_points",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 50,000 Welcome Bonus Points, worth up to $625 in travel when booked through HSBC Travel, after spending $4,000 in the first 3 months of opening your card.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "streaming-statement-credit",
+      "title": "Streaming Statement Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Receive up to $60 in statement credits annually when you pay for your TV and radio streaming subscription with your Premier credit card."
+    },
+    {
+      "id": "instacart-plus",
+      "title": "Instacart+ Membership",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Get up to $140 annually with Instacart+. When you sign up as a new member, receive 3 free months of Instacart+ and $10 off your second order each month."
+    },
+    {
+      "id": "lyft-credit",
+      "title": "Lyft Monthly Credit",
+      "category": "credit",
+      "source": "co-brand",
+      "description": "Take 3 rides, and get a $5 Lyft App credit every month with your Premier credit card."
+    },
+    {
+      "id": "global-entry-tsa-credit",
+      "title": "Global Entry / TSA PreCheck Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Speed up airport screening with up to $85 towards Global Entry, TSA PreCheck, TSA PreCheck by Clear, or NEXUS application fees, once every 4.5 years."
+    },
+    {
+      "id": "rewards-for-miles",
+      "title": "Rewards for Miles",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Rewards for Miles program allows you to transfer your points into any of HSBC's 11 airline and 2 hotel partners' loyalty programs."
+    },
+    {
+      "id": "cellular-wireless-protection",
+      "title": "Cellular Wireless Telephone Protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Cellular Wireless Telephone Protection provides reimbursements up to $600 per claim if your cellphone is stolen or damaged."
+    },
+    {
+      "id": "mastercard-id-theft-protection",
+      "title": "Mastercard ID Theft Protection™",
+      "category": "insurance",
+      "source": "network",
+      "description": "Mastercard ID Theft Protection™ and Identity Fraud Expense Reimbursement provide support and expense reimbursement if your identity is compromised through identity fraud."
+    },
+    {
+      "id": "purchase-assurance",
+      "title": "Purchase Assurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Purchase Assurance covers most purchases from damage or theft within 90 days of purchase up to $1,000."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": {
+      "amount": 85,
+      "currency": "USD",
+      "period": "every_4.5_years"
+    },
+    "global_entry_credit": {
+      "amount": 85,
+      "currency": "USD",
+      "period": "every_4.5_years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Rewards for Miles: transfer points to 11 airline and 2 hotel loyalty programs."
+    ]
+  },
+  "official_url": "https://www.us.hsbc.com/credit-cards/products/premier/",
+  "image": {
+    "url": "https://www.us.hsbc.com/content/dam/hsbc/us/images/tile-16-9/14388-hsbc-premier-mastercard-pearl-bg-1600x900.jpg",
+    "attribution": "© HSBC",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.us.hsbc.com/credit-cards/products/premier/"
+  ],
+  "notes": "Available only to customers with an existing U.S. HSBC Premier checking account. Benefits valued by HSBC at over $1,200 in the first year and $600 per year thereafter. Issued by HSBC Bank USA, N.A."
+}

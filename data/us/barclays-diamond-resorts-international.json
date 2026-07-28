@@ -1,0 +1,127 @@
+{
+  "id": "us-barclays-diamond-resorts-international",
+  "schema_version": "1.0.0",
+  "name": "Diamond Resorts World Mastercard®",
+  "localized_names": {
+    "en": "Diamond Resorts World Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2021-03-10",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.74,
+      "max": 24.99,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Variable APR 15.74%, 19.99%, or 24.99% based on creditworthiness. 0% promotional APR for 6 billing cycles on Qualifying Diamond Resorts Vacation Ownership Purchases, then 15.74%, 19.99%, or 24.99%. 0% introductory APR for 15 months on balance transfers made within 45 days of account opening. Balance transfer fee: 3% (min. $5). Cash advance fee: 5% (min. $10)."
+  },
+  "fx_fee": {
+    "percent": 3.0,
+    "notes": "Foreign transaction fee: 3%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Diamond Plus Points®",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "Earn 1X Diamond Plus Points® for every $1 you spend on purchases elsewhere (excluding down payments)."
+    },
+    "categories": [
+      {
+        "label": "2X Diamond Plus Points® on Diamond Resorts purchases (excluding down payments)",
+        "points_per_dollar": 2.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for statement credits toward Diamond Resorts purchases of $25 or more, and toward airfare and car rental purchases of $50 or more, made within the last 120 days. Earn 500 Diamond Plus Points for every $2,000 in spend (excluding down payments).",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 2500.0,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Earn 2,500 bonus Diamond Plus Points® after your first purchase or balance transfer.",
+    "as_of": "2021-02-27"
+  },
+  "benefits": [
+    {
+      "id": "promo-apr-diamond-purchases",
+      "title": "0% Promo APR on Diamond Vacation Ownership",
+      "category": "other",
+      "source": "co-brand",
+      "description": "0% promotional APR for 6 months on any Diamond Vacation Ownership interest down payment. After that, a variable APR of 15.74%, 19.99%, or 24.99%."
+    },
+    {
+      "id": "intro-balance-transfer",
+      "title": "Low Intro APR on Balance Transfers",
+      "category": "other",
+      "source": "issuer",
+      "description": "0% introductory APR for 15 months for each balance transfer made within 45 days of account opening. After that, a variable APR of 15.74%, 19.99%, or 24.99%."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "Means you're not responsible for charges you did not authorize."
+    },
+    {
+      "id": "chip-technology",
+      "title": "Chip Technology",
+      "category": "other",
+      "source": "issuer",
+      "description": "Paying for your purchases is more secure at chip-card terminals in the U.S. and abroad."
+    },
+    {
+      "id": "diamond-flexibility-benefit",
+      "title": "Diamond Flexibility Benefit",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive a 10% rebate on Diamond Flexibility points purchase."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://web.archive.org/web/20210227185747/https://cards.barclaycardus.com/banking/cards/diamond-resorts-international-mastercard/",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://web.archive.org/web/20210227185747/https://cards.barclaycardus.com/banking/cards/diamond-resorts-international-mastercard/"
+  ],
+  "notes": "Discontinued after Diamond Resorts acquired by Hilton Grand Vacations. The card was a World Mastercard (not Visa as sometimes reported). Earned 2x Diamond Plus Points on Diamond Resorts purchases, 1x elsewhere. $0 annual fee, 3% foreign transaction fee. Verified from Wayback Machine snapshot of the official Barclays product page (Feb 2021)."
+}

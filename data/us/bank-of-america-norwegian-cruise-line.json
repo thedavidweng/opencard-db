@@ -1,0 +1,122 @@
+{
+  "id": "us-bank-of-america-norwegian-cruise-line",
+  "schema_version": "1.0.0",
+  "name": "Norwegian Cruise Line® World Mastercard®",
+  "localized_names": {
+    "en": "Norwegian Cruise Line® World Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not available from page text; official product page was temporarily unavailable at last verification. See Bank of America for current APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "good",
+    "notes": "Recommended credit score of at least 670 (per third-party reviews); not stated on the official product page."
+  },
+  "rewards": {
+    "currency": "worldpoints",
+    "currency_label": "WorldPoints® points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 WorldPoints® point per $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Norwegian Cruise Line purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Eligible air and hotel purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for stateroom upgrades, travel discounts, exclusive redemption opportunities for last minute cruises, onboard credits, car rentals, hotel stays, cash and gift cards. Rewards begin at 2,500 points. Points expire 5 years after the month they are earned. Enrich your experience as a Bank of America customer with the BofA Rewards™ program — starting with a rewards bonus on every credit card purchase."
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "points",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Online Offer: Get 20,000 bonus points after you make $1,000 or more in purchases in the first 90 days of account opening — which can be redeemed for $200 off your next Norwegian cruise.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the U.S."
+    },
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No annual fee for the card."
+    },
+    {
+      "id": "bofa-rewards-bonus",
+      "title": "BofA Rewards™ Program Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Enrich your experience as a Bank of America customer with the BofA Rewards™ program — starting with a rewards bonus on every credit card purchase. Visit BofA Rewards to learn more about eligibility and enrollment."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No annual fee",
+      "No foreign transaction fees",
+      "BofA Rewards™ program bonus with eligible Bank of America account"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/norwegian-cruise-lines-credit-card/",
+  "image": {
+    "url": null,
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/norwegian-cruise-lines-credit-card/"
+  ],
+  "notes": "Norwegian Cruise Line® World Mastercard®. No annual fee, no foreign transaction fees. 3X Norwegian, 2X air/hotel, 1X other. 20K bonus points ($200 off cruise) after $1,000 in 90 days. WorldPoints® rewards redeemable for stateroom upgrades, onboard credits, travel, cash and gift cards. Official product page was temporarily unavailable at last verification; rewards/fees/benefits sourced from Bank of America page content."
+}

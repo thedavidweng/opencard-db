@@ -1,0 +1,107 @@
+{
+  "id": "us-barclays-arrival",
+  "schema_version": "1.0.0",
+  "name": "Barclays Arrival® World Mastercard®",
+  "localized_names": {
+    "en": "Barclays Arrival® World Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2016-09-01",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.99,
+      "max": 24.99,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Variable APR based on creditworthiness. No annual fee."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Arrival Miles",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2.0,
+      "description": "Earn 2x miles on travel purchases and 1x mile on all other purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Redeem miles for travel statement credits toward qualifying travel purchases. Get 10% miles back to use toward your next redemption, every time you redeem.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000.0,
+    "unit": "miles",
+    "spend_required": 1000.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn 20,000 bonus miles after spending $1,000 on purchases in the first 90 days — enough to redeem for a $200 travel statement credit.",
+    "as_of": "2019-08-23"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made while traveling abroad."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for unauthorized charges."
+    },
+    {
+      "id": "miles-back-on-redemption",
+      "title": "10% Miles Back on Redemption",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Get 10% miles back to use toward your next redemption, every time you redeem."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://web.archive.org/web/20190823001527/https://cards.barclaycardus.com/banking/about-us/newsroom/barclaycard-arrival-world-mastercard-travel-rewards-card/",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://web.archive.org/web/20190823001527/https://cards.barclaycardus.com/banking/about-us/newsroom/barclaycard-arrival-world-mastercard-travel-rewards-card/"
+  ],
+  "notes": "Discontinued 2016. No-annual-fee version of Arrival+. Earned 2x miles on travel and 1x on all other purchases with 10% miles back on redemption. No foreign transaction fees. The official product page is no longer live; verified from a Wayback Machine snapshot of the Barclays newsroom announcement page (Aug 2019)."
+}

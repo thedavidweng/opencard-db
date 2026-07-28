@@ -1,0 +1,66 @@
+{
+  "id": "us-chase-ihg-rewards-club-select",
+  "schema_version": "1.0.0",
+  "name": "IHG Rewards Club Select Credit Card",
+  "localized_names": {
+    "en": "IHG Rewards Club Select Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2018-04-05",
+  "replaced_by": "us-chase-ihg-premier",
+  "annual_fee": {
+    "amount": 49,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ihg_rewards_club_points",
+    "currency_label": "IHG Rewards Club points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Stays at IHG hotels",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Gas stations, grocery stores and restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null
+  },
+  "benefits": [],
+  "official_url": "https://creditcards.chase.com/",
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Discontinued 2018 when Chase launched IHG Premier and Traveler cards."
+}
