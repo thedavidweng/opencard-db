@@ -132,7 +132,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-26",
   "sources": [
-    "https://www.td.com/us/en/personal-banking/credit-cards/cash-card"
+    "https://www.td.com/us/en/personal-banking/credit-cards/cash-card",
+    "https://www.td.com/content/dam/tdb/document/pdf/personal-banking/tdcash-personal-terms-en.pdf"
   ],
   "notes": "Verified from official product page. Customizable 3-2-1% cash back: choose two spend categories each quarter for 3% and 2%, plus 1% on all other purchases. Default at opening is 3% Dining and 2% Grocery Stores. No annual fee. 0% intro APR on purchases for 12 billing cycles and on balance transfers for 15 billing cycles. Foreign transaction fee 3%.",
   "segment": "personal"
