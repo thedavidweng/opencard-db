@@ -41,13 +41,13 @@
     "structure": "choice",
     "rate_type": "cashback_percent",
     "base_rate": {
-      "points_per_dollar": 0.01,
+      "points_per_dollar": 1,
       "description": "1% cash back on all other eligible purchases."
     },
     "categories": [
       {
         "label": "5% cash back on two categories you choose each quarter (first $2,000 in combined eligible purchases each quarter, then 1%)",
-        "points_per_dollar": 0.05,
+        "points_per_dollar": 5,
         "cap": {
           "amount": 2000,
           "currency": "USD",
@@ -56,12 +56,12 @@
       },
       {
         "label": "2% cash back on one everyday category you choose each quarter (gas stations and EV charging, grocery stores, or restaurants)",
-        "points_per_dollar": 0.02,
+        "points_per_dollar": 2,
         "cap": null
       },
       {
         "label": "5% cash back on prepaid travel (air, hotel and car reservations booked directly in the U.S. Bank Travel Center)",
-        "points_per_dollar": 0.05,
+        "points_per_dollar": 5,
         "cap": null
       }
     ],
