@@ -1,0 +1,47 @@
+{
+  "id": "us-capital-one-spark-miles-for-business",
+  "schema_version": "1.0.0",
+  "name": "Capital One Spark Miles for Business",
+  "localized_names": {
+    "en": "Capital One Spark Miles for Business"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "discontinued",
+  "replaced_by": "us-capital-one-venture-business",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Capital One miles",
+    "structure": "single",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2X miles on every purchase (predecessor earn rate)."
+    },
+    "categories": [],
+    "redemption_notes": "Miles redeemed through Capital One Travel or transferred to partners."
+  },
+  "benefits": [],
+  "official_url": "https://www.capitalone.com/credit-cards/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Rebranded to Venture Business."
+}
