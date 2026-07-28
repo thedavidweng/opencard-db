@@ -1,6 +1,6 @@
 {
   "name": "opencard-db",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Open-source structured credit card product metadata (CN/US/CA) with schema, PR contributions, and Cloudflare Workers API",
   "license": "MIT",

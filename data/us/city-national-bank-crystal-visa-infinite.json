@@ -1,0 +1,100 @@
+{
+  "id": "us-city-national-bank-crystal-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "City National Bank Crystal Visa Infinite\u00ae Credit Card",
+  "localized_names": {
+    "en": "City National Bank Crystal Visa Infinite\u00ae Credit Card"
+  },
+  "country": "us",
+  "issuer": "City National Bank",
+  "issuer_id": "city-national-bank",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "invite_only",
+  "annual_fee": {
+    "amount": 400.0,
+    "currency": "USD",
+    "first_year": 400.0,
+    "waiver_conditions": "Additional Card Fee of $95 annually for each card issued after the first card."
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.5,
+      "max": 24.5,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 26.5,
+      "max": 26.5,
+      "type": "variable"
+    },
+    "notes": "APR for Purchases and Balance Transfers is 20.50% or 24.50% when you open your account, based on creditworthiness; thereafter varies with the Prime Rate (margin of 13.75% or 17.75%). Cash Advance APR is 26.50% (margin of 19.75%). Minimum interest charge $0.70. As of July 24, 2026."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fees (Foreign Transaction: None)."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "Relationship-based product for high-net-worth clients; not publicly marketed with a credit-score band."
+  },
+  "rewards": {
+    "currency": "city_national_rewards",
+    "currency_label": "City National Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earn rates are governed by the separately provided City National Rewards Program Terms, Conditions and Program Rules (www.cnb.com/rewards); not disclosed in the card agreement."
+    },
+    "categories": [],
+    "redemption_notes": "Rewards services and awards are described in the City National Rewards Program Terms and City National Rewards Householding Program Rules, available at www.cnb.com/rewards. Terms may change at any time.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "city-national-rewards",
+      "title": "City National Rewards\u00ae Program",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to the City National Rewards program and Householding Program; services and awards described in separately provided Rewards Program Terms (www.cnb.com/rewards)."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "No foreign transaction fee on purchases made outside the United States (Foreign Transaction: None per pricing information)."
+    },
+    {
+      "id": "visa-infinite-benefits",
+      "title": "Visa Infinite\u00ae benefits",
+      "category": "other",
+      "source": "network",
+      "description": "Card is a Visa Infinite product; third-party and network-provided benefits and services may apply but are not described in the card agreement and may be added, deleted or changed without notice.",
+      "network_tier_required": "infinite"
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "City National Rewards program"
+    ]
+  },
+  "official_url": "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
+    "https://www.cnb.com/personal-banking/lending/credit-cards"
+  ],
+  "notes": "Requires in-branch application or calling (800) 773-7100. Relationship-based product for high-net-worth clients. Pricing verified from the Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 07/2026, as of July 24, 2026): $400 annual fee, $95 additional card fee, purchase APR 20.50%\u201324.50% variable, cash advance APR 26.50% variable, no foreign transaction fee. Earn rates are not in the agreement \u2014 they live in the separately provided City National Rewards Program Terms (www.cnb.com/rewards), so rewards.base_rate.points_per_dollar is null. No public landing page; the live cnb.com credit-cards page returned HTTP 403 to automated fetch, so the card agreement PDF is the primary source."
+}

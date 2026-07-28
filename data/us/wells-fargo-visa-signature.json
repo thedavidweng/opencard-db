@@ -1,0 +1,41 @@
+{
+  "id": "us-wells-fargo-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Wells Fargo Visa Signature® Card",
+  "country": "us",
+  "issuer": "Wells Fargo",
+  "issuer_id": "wells-fargo",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2021-09-01",
+  "replaced_by": "us-wells-fargo-autograph",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "none",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": null
+    },
+    "categories": [],
+    "redemption_notes": null
+  },
+  "benefits": [],
+  "official_url": "https://www.wellsfargo.com/credit-cards/",
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.wellsfargo.com/credit-cards/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Not accepting new applications since fall 2021. 50% bonus on airfare redemption."
+}

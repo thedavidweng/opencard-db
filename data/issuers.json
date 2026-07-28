@@ -100,18 +100,6 @@
       ]
     },
     {
-      "id": "city-national-bank",
-      "name": "City National Bank",
-      "aliases": [
-        "cnb"
-      ],
-      "domains": [
-        "cnb.com",
-        "commercialap.cnb.com",
-        "cnbrewards.com"
-      ]
-    },
-    {
       "id": "column",
       "name": "Column N.A.",
       "aliases": [
@@ -142,8 +130,8 @@
       "domains": [
         "comenity.net",
         "aaa.com",
-        "playstation.com",
-        "nfl.com"
+        "nfl.com",
+        "playstation.com"
       ]
     },
     {
@@ -193,15 +181,6 @@
       "aliases": [],
       "domains": [
         "apple.com"
-      ]
-    },
-    {
-      "id": "hsbc",
-      "name": "HSBC",
-      "aliases": [],
-      "domains": [
-        "hsbc.com",
-        "us.hsbc.com"
       ]
     },
     {
@@ -292,6 +271,30 @@
         "wf.com",
         "bilt.com",
         "biltrewards.com"
+      ]
+    },
+    {
+      "id": "city-national-bank",
+      "name": "City National Bank",
+      "aliases": [
+        "cnb"
+      ],
+      "domains": [
+        "cnb.com",
+        "commercialap.cnb.com",
+        "cnbrewards.com"
+      ]
+    },
+    {
+      "id": "hsbc",
+      "name": "HSBC",
+      "aliases": [
+        "HSBC Bank",
+        "HSBC Bank USA"
+      ],
+      "domains": [
+        "hsbc.com",
+        "us.hsbc.com"
       ]
     }
   ]

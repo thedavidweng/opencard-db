@@ -1,0 +1,130 @@
+{
+  "id": "us-comenity-playstation-visa",
+  "schema_version": "1.0.0",
+  "name": "PlayStation Visa Credit Card",
+  "localized_names": {
+    "en": "PlayStation® Visa® Credit Card"
+  },
+  "country": "us",
+  "issuer": "Comenity Bank (Bread Financial)",
+  "issuer_id": "comenity",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Points",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in points on all other purchases everywhere Visa is accepted"
+    },
+    "categories": [
+      {
+        "label": "PlayStation and Sony Store purchases (direct)",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Internet, cable, and streaming (monthly subscriptions and bill payments)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores and restaurants (dine-in, takeout, and delivery)",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for PlayStation Store codes, gift cards, hardware and electronics, or statement credits via Account Center. Rewards program provided by Sony Interactive Entertainment; full terms at comenity.net/playstationvisa."
+  },
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "usd",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 2,
+    "description": "Get a $100 statement credit when you spend $500 in the first 60 days with the PlayStation Visa Credit Card. Valid one time only; maximum of $100.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "no-annual-fee",
+      "title": "No Annual Fee",
+      "category": "other",
+      "source": "issuer",
+      "description": "No annual fee on the PlayStation Visa Credit Card."
+    },
+    {
+      "id": "playstation-plus-premium-membership",
+      "title": "PlayStation Plus Premium Membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn a 12-month PlayStation Plus Premium membership when you spend $6,000 in a calendar year. Offer must be claimed via email within 90 days of receiving. Limited to one code per calendar year per account. At the end of the free 12-month period, the subscription auto-renews at then-current pricing (currently $159.99/year) until cancelled."
+    },
+    {
+      "id": "exclusive-playstation-experiences",
+      "title": "Exclusive PlayStation Experiences",
+      "category": "other",
+      "source": "issuer",
+      "description": "Access to special cardholder opportunities and experiences made for PlayStation fans."
+    },
+    {
+      "id": "visa-zero-liability",
+      "title": "Visa Zero Liability",
+      "category": "other",
+      "source": "network",
+      "description": "With Visa's Zero Liability Policy, you won't be held responsible for unauthorized transactions made with your Visa card."
+    },
+    {
+      "id": "roadside-dispatch",
+      "title": "Roadside Dispatch",
+      "category": "other",
+      "source": "network",
+      "description": "Pay-per-use roadside assistance program available 24x7."
+    },
+    {
+      "id": "emergency-cash-disbursement",
+      "title": "Emergency Cash Disbursement",
+      "category": "other",
+      "source": "network",
+      "description": "In case of emergency, a wire cash transfer can be arranged to your local Western Union within 2 hours of approval from your bank."
+    },
+    {
+      "id": "emergency-card-replacement",
+      "title": "Emergency Card Replacement",
+      "category": "other",
+      "source": "network",
+      "description": "Visa can work with your bank to expedite replacement of your card and ship it globally within 24 to 72 hours."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.playstation.com/en-us/playstation-credit-card/",
+  "image": {
+    "url": "https://gmedia.playstation.com/is/image/SIEPDC/playstation-visa-controller-card-keyart-en-08oct25",
+    "attribution": "© Comenity Capital Bank / Sony Interactive Entertainment",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.playstation.com/en-us/playstation-credit-card/"
+  ],
+  "notes": "Issued by Comenity Capital Bank. Originally issued by Capital One; moved to Comenity in November 2019. Rewards program provided by Sony Interactive Entertainment. Choose from over 20 card designs inspired by PlayStation worlds and characters. Manage via the Bread Financial app."
+}
