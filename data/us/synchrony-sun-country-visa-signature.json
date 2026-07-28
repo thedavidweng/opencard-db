@@ -1,0 +1,183 @@
+{
+  "id": "us-synchrony-sun-country-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Sun Country Visa Signature® Card",
+  "localized_names": {
+    "en": "Sun Country Visa Signature® Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "USD",
+    "first_year": 89,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Purchase APR not stated on benefits or FAQ page. See Credit Card Terms for details."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees when you use your card."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Not explicitly stated on page. Subject to credit approval."
+  },
+  "rewards": {
+    "currency": "sun_country_points",
+    "currency_label": "Sun Country Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x point per $1 spent on everything else."
+    },
+    "categories": [
+      {
+        "label": "Sun Country purchases (3x when you buy with your card, plus 2x when you fly)",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Gas station purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Grocery store purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "100 points equals $1 in Sun Country purchases. Points can be redeemed for flights, vacation packages, seat selections, and bag options. You can mix and match points and dollars to pay. Points do not expire as long as your account is open and in good standing."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "first-bag-discount",
+      "title": "50% Off First Bag",
+      "category": "other",
+      "source": "co-brand",
+      "description": "50% off your first bag for you and your travel companion on the same itinerary when purchasing pre-flight on SunCountry.com."
+    },
+    {
+      "id": "seat-selection-discount",
+      "title": "50% Off Best and Standard Seat Selections",
+      "category": "other",
+      "source": "co-brand",
+      "description": "50% off Best and Standard seat selections for you and your travel companion on the same itinerary when purchasing pre-flight on SunCountry.com."
+    },
+    {
+      "id": "anniversary-bonus",
+      "title": "10,000-Point Anniversary Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Earn 10,000 bonus points when you spend $10,000 in the 12-month period following every account opening anniversary date."
+    },
+    {
+      "id": "preferred-boarding",
+      "title": "Preferred Boarding (Zone 2)",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Start your journey stress-free with Preferred Boarding (Zone 2) and find your seat on the aircraft early."
+    },
+    {
+      "id": "free-premium-drink",
+      "title": "Free Premium Drink on Every Flight",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Enjoy a complimentary free premium drink of your choice on every flight."
+    },
+    {
+      "id": "food-beverage-discount",
+      "title": "25% Off Food and Beverages on Sun Country Flights",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Receive 25% off food and beverages as an exclusive cardmember discount when you use your card on Sun Country flights."
+    },
+    {
+      "id": "no-fx-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Travel internationally with no foreign transaction fees when you use your card."
+    },
+    {
+      "id": "points-no-expiry",
+      "title": "Points Don't Expire",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Points do not expire as long as your account is open and in good standing."
+    },
+    {
+      "id": "plus-status-path",
+      "title": "Path to Sun Country Plus Status",
+      "category": "acceleration",
+      "source": "co-brand",
+      "description": "Earn Sun Country Rewards Plus status by taking 10 qualifying Sun Country flights or spending $10,000 on your Sun Country Visa Signature card in a calendar year. Plus status benefits include: 1 additional point per dollar on Sun Country flights booked online, Complimentary Flexible Fare (change/cancel without change fees), Priority Check-in, Priority Boarding (Zone 1), and priority security line access at MSP Terminal 2."
+    },
+    {
+      "id": "visa-signature-travel-emergency",
+      "title": "Travel & Emergency Assistance Services",
+      "category": "other",
+      "source": "network",
+      "description": "Access to Travel & Emergency Assistance Services — call anytime, from anywhere in the world. Certain terms, conditions and exclusions apply. Refer to your Guide to Benefits for more information."
+    },
+    {
+      "id": "visa-signature-roadside-dispatch",
+      "title": "Roadside Dispatch®",
+      "category": "other",
+      "source": "network",
+      "description": "Access to a 24/7 pay-per-use roadside assistance program. Certain terms, conditions and exclusions apply. Refer to your Guide to Benefits for more information."
+    },
+    {
+      "id": "visa-signature-enhanced-travel-lifestyle",
+      "title": "Enhanced Travel & Lifestyle Benefits",
+      "category": "other",
+      "source": "network",
+      "description": "Perks and discounts for hotels, car rentals, shows, golf, dining, and more through Visa Signature Enhanced Travel & Lifestyle Benefits."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": "50% off first bag for cardmember and travel companion on same itinerary when purchasing pre-flight on SunCountry.com",
+    "hotel_status": null,
+    "other": [
+      "50% off Best and Standard seat selections for cardmember and travel companion",
+      "Preferred Boarding (Zone 2)",
+      "Free premium drink on every flight",
+      "25% off food and beverages on Sun Country flights",
+      "No foreign transaction fees",
+      "Path to Sun Country Plus status (10 flights or $10,000 spend per calendar year)",
+      "10,000-point anniversary bonus at $10,000 annual spend",
+      "Visa Signature benefits: Travel & Emergency Assistance, Roadside Dispatch, Enhanced Travel & Lifestyle Benefits"
+    ]
+  },
+  "official_url": "https://www.synchrony.com/partner/sun-country/benefits",
+  "image": {
+    "url": "https://www.synchrony.com/syc/img/sun-country-single-card-art.png",
+    "attribution": "© Synchrony",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.synchrony.com/partner/sun-country/benefits",
+    "https://www.synchrony.com/partner/sun-country"
+  ],
+  "notes": "Issued by Synchrony Bank. The Sun Country Visa Signature® card moved from FNBO to Synchrony on September 19, 2025. Annual fee $89 for new accounts (existing converted accounts may have different terms). Rewards: up to 5x points on Sun Country purchases (3x when buying with card plus 2x when flying), 2x on gas stations and grocery stores, 1x on everything else. 100 points = $1 toward Sun Country purchases. No signup bonus visible on benefits or FAQ page as of 2026-07-26. Purchase APR not stated on page; refer to Credit Card Terms at apply.syf.com."
+}

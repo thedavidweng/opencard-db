@@ -1,0 +1,66 @@
+{
+  "id": "us-chase-united-mileageplus-explorer-business",
+  "schema_version": "1.0.0",
+  "name": "United MileagePlus Explorer Business Card",
+  "localized_names": {
+    "en": "United MileagePlus Explorer Business Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "discontinued",
+  "discontinued_date": "2020-01-23",
+  "replaced_by": "us-chase-united-business",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "mileageplus_miles",
+    "currency_label": "United MileagePlus miles",
+    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 mile per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Eligible United flights",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas stations, office supply stores and restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null
+  },
+  "benefits": [],
+  "official_url": "https://creditcards.chase.com/",
+  "bin_hints": [],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://creditcards.chase.com/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Closed to new applicants January 2020, replaced by United Business Card."
+}

@@ -1,0 +1,147 @@
+{
+  "id": "us-capital-one-spark-cash",
+  "schema_version": "1.0.0",
+  "name": "Capital One Spark Cash for Business",
+  "localized_names": {
+    "en": "Capital One Spark Cash for Business"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "Introductory $0 annual fee for the first year; $95 after that."
+  },
+  "apr": {
+    "purchase": {
+      "min": 24.49,
+      "max": 24.49,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "24.49% variable APR on purchases, per the product page."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on purchases made outside of the United States."
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "Excellent credit indicated on the product page."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back on every purchase, everywhere, no limits or category restrictions."
+    },
+    "categories": [
+      {
+        "label": "Hotels and rental cars booked through Capital One Business Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem cash back through a statement credit or check via your Capital One Business account."
+  },
+  "signup_bonus": {
+    "amount": 1000,
+    "unit": "USD",
+    "spend_required": 10000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn a $1,000 cash bonus when you spend $10,000 in the first 3 months from account opening.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "Pay zero foreign transaction fees on purchases made outside of the United States."
+    },
+    {
+      "id": "free-employee-cards",
+      "title": "Free Employee Cards",
+      "category": "other",
+      "source": "issuer",
+      "description": "Track employee spending while earning all the rewards from their purchases."
+    },
+    {
+      "id": "virtual-cards",
+      "title": "Virtual Card Numbers",
+      "category": "other",
+      "source": "issuer",
+      "description": "Make safer payments online without exposing your actual card number with merchants."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get free additional warranty and protection on eligible items you purchase with your card."
+    },
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability",
+      "category": "other",
+      "source": "issuer",
+      "description": "If your card is lost or stolen, you can get an emergency replacement and a cash advance."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Business cards offer services to help during auto-related emergencies, such as jump-starting, tire changing and towing."
+    },
+    {
+      "id": "year-end-summaries",
+      "title": "Year-End Summaries",
+      "category": "other",
+      "source": "issuer",
+      "description": "Get an itemized report of your spending to simplify budgeting and tax time."
+    },
+    {
+      "id": "capital-one-business-travel",
+      "title": "Capital One Business Travel",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary access to an all-in-one business travel management solution."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "No foreign transaction fees",
+      "Roadside assistance"
+    ]
+  },
+  "official_url": "https://www.capitalone.com/small-business/credit-cards/spark-cash/",
+  "image": {
+    "url": "https://ecm.capitalone.com/WCM/card/products/compressed-1.5x-spark-cash-card-art.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.capitalone.com/small-business/credit-cards/spark-cash/"
+  ],
+  "notes": "Verified against the official Capital One product page on 2026-07-26. Also marketed as 'Spark 2% Cash'. Earns unlimited 2% cash back on every purchase plus 5% cash back on hotels and rental cars booked through Capital One Business Travel. Introductory $0 annual fee for the first year, then $95. Business (small-business) card; segment set to 'business'."
+}

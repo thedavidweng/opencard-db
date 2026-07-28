@@ -1,0 +1,70 @@
+{
+  "id": "us-city-national-bank-visa-crystal-commercial",
+  "schema_version": "1.0.0",
+  "name": "City National Bank Visa Crystal Commercial Card",
+  "localized_names": {
+    "en": "City National Bank Visa Crystal Commercial Card"
+  },
+  "country": "us",
+  "issuer": "City National Bank",
+  "issuer_id": "city-national-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "invite_only",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "cash_advance": null,
+    "notes": "APR and fee schedule are not publicly disclosed; terms are provided to existing clients on application."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not publicly disclosed."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Requires existing client relationship; not publicly marketed with a credit-score band."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "None publicly documented",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No rewards structure is publicly documented for the Visa Crystal Commercial Card. The 2025 CRA products-and-services document lists it as an active commercial card without a published earn rate."
+    },
+    "categories": [],
+    "redemption_notes": null
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "commercial-card-program",
+      "title": "Commercial card program",
+      "category": "other",
+      "source": "issuer",
+      "description": "Listed in City National Bank's 2025 CRA Products and Services document as an active commercial credit card product, alongside Commercial AP virtual cards for vendor payments and commercial cash management services."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.cnb.com/content/dam/cnb/brands/city-national-bank/documents/cra/2025/cra-products-and-services-2025.pdf",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.cnb.com/content/dam/cnb/brands/city-national-bank/documents/cra/2025/cra-products-and-services-2025.pdf",
+    "https://www.cnb.com/business-banking"
+  ],
+  "notes": "Listed in 2025 CRA document as active product. Requires existing client relationship. The 2025 CRA Products and Services document (as of 04/01/2025) lists the 'Visa Crystal Commercial Card' under Commercial Cards; no fee schedule, APR, or rewards structure is published there. network_tier set to 'none' because no Visa package (e.g. Signature/Infinite) is documented for this commercial product. No public landing page."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "us-citi-thankyou-premier",
+  "schema_version": "1.0.0",
+  "name": "Citi ThankYou Premier® Card",
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2024-05-09",
+  "replaced_by": "us-citi-strata-premier",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "thankyou_points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x on other purchases"
+    }
+  },
+  "benefits": [],
+  "official_url": "https://www.citi.com/credit-cards/citi-premier-credit-card",
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "last_verified": "2026-07-25",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-premier-credit-card"
+  ],
+  "notes": "Renamed to Citi Strata Premier in May 2024."
+}
