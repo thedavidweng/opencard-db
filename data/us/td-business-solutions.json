@@ -1,0 +1,129 @@
+{
+  "id": "us-td-business-solutions",
+  "schema_version": "1.0.0",
+  "name": "TD Business Solutions Credit Card",
+  "localized_names": {
+    "en": "TD Business Solutions Credit Card"
+  },
+  "country": "us",
+  "issuer": "TD Bank",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR on purchases for the first 12 billing cycles after account opening. After that, 17.49%, 22.49% or 27.49% variable APR based on creditworthiness. Balance transfer APR is 17.49%, 22.49% or 27.49% variable."
+  },
+  "fx_fee": {
+    "percent": 3.0,
+    "notes": "Foreign transaction fee is 3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "Cash back (statement credit)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Earn unlimited 2% Cash Back on all eligible purchases. No rotating spend categories, no caps or limits as long as your credit card account is open and in good standing."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back earned is redeemed in the form of a statement credit.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 400,
+    "unit": "usd",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn $400 Cash Back in the form of a statement credit when you spend $3,000 within the first 90 days after account opening. Maximum bonus accumulation for this promotional offer is 40,000 Bonus Points, equal to $400.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "visa-spend-clarity-for-business",
+      "title": "Visa Spend Clarity for Business",
+      "category": "other",
+      "source": "network",
+      "description": "At no cost to you, access a suite of spend management tools to keep spending on track with dashboards and reporting, card controls and integration with accounting software."
+    },
+    {
+      "id": "employee-cards",
+      "title": "Employee Cards at No Cost",
+      "category": "other",
+      "source": "issuer",
+      "description": "Add Employee cards at no cost with the ability to set spending limits."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell Phone Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Get Visa benefits like cell phone protection when you pay your monthly mobile bill with your card."
+    },
+    {
+      "id": "visa-zero-liability",
+      "title": "Visa Zero Liability",
+      "category": "insurance",
+      "source": "network",
+      "description": "Enjoy Visa security on purchases, plus protection against unauthorized charges."
+    },
+    {
+      "id": "emergency-card-replacement",
+      "title": "Emergency Card Replacement",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every TD Bank Credit Card comes with an added layer of protection such as emergency card replacement."
+    },
+    {
+      "id": "roadside-assistance",
+      "title": "Roadside Assistance",
+      "category": "other",
+      "source": "issuer",
+      "description": "Every TD Bank Credit Card comes with roadside assistance and more."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.td.com/us/en/personal-banking/credit-cards/business-solutions-credit-card",
+  "image": {
+    "url": "https://www.td.com/content/dam/tdb/images/personal-banking/onsite-business-solutions-1.2d-en.jpeg",
+    "attribution": "© TD Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.td.com/us/en/personal-banking/credit-cards/business-solutions-credit-card",
+    "https://www.td.com/content/dam/tdb/document/pdf/personal-banking/business-solutions-terms-en.pdf"
+  ],
+  "notes": "Verified from official product page. Unlimited 2% cash back on all eligible purchases with no caps or limits. No annual fee. 0% intro APR on purchases for first 12 billing cycles, then 17.49%-27.49% variable. Foreign transaction fee 3%.",
+  "segment": "business"
+}

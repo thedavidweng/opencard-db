@@ -1,0 +1,107 @@
+{
+  "id": "us-barclays-cashforward",
+  "schema_version": "1.0.0",
+  "name": "Barclays CashForward® World Mastercard®",
+  "localized_names": {
+    "en": "Barclays CashForward® World Mastercard®"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2017-11-30",
+  "annual_fee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "first_year": 0.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.99,
+      "max": 24.99,
+      "type": "variable"
+    },
+    "cash_advance": null,
+    "notes": "Variable APR based on creditworthiness. No annual fee. 0% introductory APR on balance transfers."
+  },
+  "fx_fee": {
+    "percent": 3.0,
+    "notes": "Foreign transaction fee: 3%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "CashForward Rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Earn 1.5% cash back on all purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Earn 5% bonus on all rewards redeemed into a Barclays account. Redeem cash back as statement credits, deposits into a Barclays account, or gift cards.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 100.0,
+    "unit": "USD",
+    "spend_required": 500.0,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn $100 cash back after spending $500 on purchases in the first 90 days.",
+    "as_of": "2017-02-14"
+  },
+  "benefits": [
+    {
+      "id": "fraud-liability",
+      "title": "$0 Fraud Liability Protection",
+      "category": "other",
+      "source": "issuer",
+      "description": "You're not responsible for unauthorized charges."
+    },
+    {
+      "id": "fico-score",
+      "title": "Free Online FICO Credit Score Access",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free online access to your FICO Credit Score."
+    },
+    {
+      "id": "redemption-bonus",
+      "title": "5% Redemption Bonus",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Get a 5% bonus on all rewards redeemed into a Barclays account."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://web.archive.org/web/20170214231009/https://home.barclaycardus.com/cards/barclaycard-cashforward.html",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://web.archive.org/web/20170214231009/https://home.barclaycardus.com/cards/barclaycard-cashforward.html"
+  ],
+  "notes": "Discontinued November 2017. 1.5% cashback with 5% redemption bonus when redeeming into a Barclays account. No annual fee, 3% foreign transaction fee. Verified from Wayback Machine snapshot of the official Barclays product page (Feb 2017)."
+}
