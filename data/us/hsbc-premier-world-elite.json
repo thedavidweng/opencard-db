@@ -1,0 +1,103 @@
+{
+  "id": "us-hsbc-premier-world-elite",
+  "schema_version": "1.0.0",
+  "name": "HSBC Premier World Elite Mastercard\u00ae Credit Card",
+  "localized_names": {
+    "en": "HSBC Premier World Elite Mastercard\u00ae Credit Card"
+  },
+  "country": "us",
+  "issuer": "HSBC",
+  "issuer_id": "hsbc",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2021-01-01",
+  "replaced_by": "us-hsbc-elite",
+  "annual_fee": {
+    "amount": 395,
+    "currency": "USD",
+    "first_year": 395,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 25.99,
+      "max": 25.99,
+      "type": "variable"
+    },
+    "notes": "APR values preserved from historical terms; not re-verified. Card is discontinued."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Required an existing U.S. HSBC Premier checking account to apply."
+  },
+  "rewards": {
+    "currency": "hsbc_rewards_points",
+    "currency_label": "HSBC Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1x Points on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Travel (flights, hotels, car rentals)",
+        "points_per_dollar": 3.0,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points could be redeemed for cash back, travel through HSBC Travel, or transferred to airline and hotel loyalty partners via the Rewards for Miles program."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "priority-pass-lounge",
+      "title": "Priority Pass Lounge Access",
+      "category": "lounge",
+      "source": "co-brand",
+      "description": "Complimentary Priority Pass lounge access for the cardholder and guests."
+    },
+    {
+      "id": "rewards-for-miles",
+      "title": "Rewards for Miles",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Rewards for Miles program allowed transferring points into airline and hotel partners' loyalty programs."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Priority Pass",
+      "visits_per_year": null,
+      "notes": "Complimentary lounge access for the cardholder and guests."
+    },
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://www.us.hsbc.com/credit-cards/products/elite/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.us.hsbc.com/credit-cards/products/elite/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Renamed to HSBC Elite Credit Card in early 2021. This card was the World Elite Mastercard tier predecessor to the current HSBC Elite credit card. Rewards and benefits shown are minimal/historical; the successor product (us-hsbc-elite) carries the current, richer benefits structure."
+}
