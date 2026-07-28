@@ -10,7 +10,7 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2019-01-01",
+  "discontinued_date": "2023-05-24",
   "replaced_by": "us-wells-fargo-autograph",
   "annual_fee": {
     "amount": 0,
@@ -30,7 +30,7 @@
   },
   "benefits": [],
   "official_url": "https://www.wellsfargo.com/credit-cards/",
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-07-28",
   "sources": [
     "https://www.wellsfargo.com/credit-cards/"
   ],
