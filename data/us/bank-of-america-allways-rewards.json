@@ -1,0 +1,145 @@
+{
+  "id": "us-bank-of-america-allways-rewards",
+  "schema_version": "1.0.0",
+  "name": "Allegiant® Allways Rewards Visa® Card",
+  "localized_names": {
+    "en": "Allegiant® Allways Rewards Visa® Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "traditional",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 59,
+    "currency": "USD",
+    "first_year": 59,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR not available from page text; official product page was temporarily unavailable at last verification. See Bank of America for current APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "good",
+    "notes": "Recommended credit score of 670 or above (per third-party reviews); not stated on the official product page."
+  },
+  "rewards": {
+    "currency": "allways_rewards_points",
+    "currency_label": "Allways Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 spent on all other purchases"
+    },
+    "categories": [
+      {
+        "label": "Allegiant purchases (air, hotel, car rental and attractions)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Qualifying dining purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points can be redeemed for airfare, hotels and car rentals on Allegiant.com. No blackout dates, no destination restrictions, and no minimum points redemption. Points don't expire as long as your card account is open. No limit to the points you can earn."
+  },
+  "signup_bonus": {
+    "amount": 30000,
+    "unit": "points",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Online Offer: Earn 30,000 Bonus Points — equal to $300 off a future Allegiant trip when you redeem points — after you make $1,500 or more in purchases within the first 90 days of account opening.",
+    "as_of": "2026-07-26"
+  },
+  "benefits": [
+    {
+      "id": "priority-boarding",
+      "title": "Complimentary Priority Check-in and Boarding",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary priority check-in, priority boarding and one free beverage every time you fly Allegiant when you present your Allways Rewards Visa® card, for you and everyone else on your itinerary."
+    },
+    {
+      "id": "free-beverage",
+      "title": "One Free Beverage",
+      "category": "other",
+      "source": "co-brand",
+      "description": "One free beverage every time you fly Allegiant when you present your Allways Rewards Visa® card."
+    },
+    {
+      "id": "bogo-airfare",
+      "title": "Buy One, Get One Free Airfare",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Buy one, get one free airfare offer anytime you use your card to purchase a vacation package from Allegiant with 4 or more hotel nights or 7 or more rental car days on the same itinerary when you call Allegiant Member Services for booking."
+    },
+    {
+      "id": "dedicated-member-services",
+      "title": "Dedicated Allegiant Member Services Line",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Dedicated priority phone number (702-800-2088) for assisting Allways Rewards Visa® cardholders with all travel needs."
+    },
+    {
+      "id": "exclusive-promotions",
+      "title": "Exclusive Cardholder Promotions",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Exclusive cardholder-only travel deals and discounts delivered straight to your inbox."
+    },
+    {
+      "id": "no-ftf",
+      "title": "No Foreign Transaction Fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees on purchases made outside the U.S."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Complimentary priority check-in and priority boarding on Allegiant flights",
+      "One free beverage on Allegiant flights",
+      "Buy one, get one free airfare with eligible Allegiant vacation packages",
+      "Dedicated Allegiant Member Services line",
+      "Exclusive cardholder promotions"
+    ]
+  },
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/allegiant-credit-card/",
+  "image": {
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/ragp_sigcm_v_250.png",
+    "attribution": "© Bank of America",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/allegiant-credit-card/"
+  ],
+  "notes": "Rebranded from Allegiant World Mastercard to Allways Rewards Visa in September 2023. $59 annual fee. 3X Allegiant, 2X dining, 1X other. 30K bonus points ($300) after $1,500 in 90 days. No foreign transaction fees. Official product page was temporarily unavailable at last verification; rewards/fees/benefits sourced from Bank of America page content and Allegiant co-brand site."
+}

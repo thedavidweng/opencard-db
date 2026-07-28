@@ -1,0 +1,95 @@
+{
+  "id": "us-td-ameritrade-client-rewards",
+  "schema_version": "1.0.0",
+  "name": "TD Ameritrade Client Rewards Card",
+  "localized_names": {
+    "en": "TD Ameritrade Client Rewards Card"
+  },
+  "country": "us",
+  "issuer": "TD Bank",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "status": "discontinued",
+  "discontinued_date": "2021-10-06",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "cash_advance": {
+      "min": null,
+      "max": null,
+      "type": null
+    },
+    "notes": "APR not available; product is discontinued and the official FAQ PDF is the only remaining source."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Foreign transaction fee not documented in the remaining source."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Reward points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Earn 1 point per dollar on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "TD Ameritrade brokerage deposits",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points could be redeemed for cash back deposited into a TD Ameritrade brokerage account or for other rewards. Redemption details per the archived FAQ.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "brokerage-redemption",
+      "title": "Redeem Points to TD Ameritrade Brokerage Account",
+      "category": "other",
+      "source": "issuer",
+      "description": "Cardholders could redeem reward points for cash back deposited into a linked TD Ameritrade brokerage account."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": []
+  },
+  "official_url": "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf"
+  ],
+  "notes": "Discontinued October 6, 2021 due to TD Ameritrade acquisition by Charles Schwab. Replaced by TD Cash Credit Card. Rewards and benefits are minimal/reconstructed from the archived FAQ PDF; exact rates and fee structure are no longer fully documented.",
+  "segment": "personal"
+}

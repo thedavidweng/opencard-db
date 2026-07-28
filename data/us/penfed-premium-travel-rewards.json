@@ -1,0 +1,75 @@
+{
+  "id": "us-penfed-premium-travel-rewards",
+  "schema_version": "1.0.0",
+  "name": "PenFed Premium Travel Rewards American Express® Card",
+  "localized_names": {
+    "en": "PenFed Premium Travel Rewards American Express® Card"
+  },
+  "country": "us",
+  "issuer": "PenFed Credit Union",
+  "issuer_id": "penfed",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2018-01-16",
+  "replaced_by": "us-penfed-pathfinder",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": null,
+    "cash_advance": null,
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "PenFed Premium Travel Rewards Points",
+    "rate_type": "points_multiplier",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earned points on travel purchases; exact rates no longer documented for this discontinued product."
+    },
+    "categories": [],
+    "redemption_notes": "Points redeemed for travel through the PenFed rewards program. Product discontinued January 2018; redemption details no longer documented."
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "travel-rewards",
+      "title": "Travel Rewards",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Earned rewards points on travel purchases. Product discontinued January 2018; benefit details no longer documented."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.penfed.org/credit-cards/",
+  "image": {
+    "url": null,
+    "attribution": null,
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.penfed.org/credit-cards/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Discontinued January 2018, replaced by PenFed Pathfinder Rewards."
+}
