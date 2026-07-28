@@ -284,6 +284,18 @@
         "commercialap.cnb.com",
         "cnbrewards.com"
       ]
+    },
+    {
+      "id": "hsbc",
+      "name": "HSBC",
+      "aliases": [
+        "HSBC Bank",
+        "HSBC Bank USA"
+      ],
+      "domains": [
+        "hsbc.com",
+        "us.hsbc.com"
+      ]
     }
   ]
 }
