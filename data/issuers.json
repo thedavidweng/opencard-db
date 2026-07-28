@@ -41,7 +41,8 @@
         "barclays.com",
         "aarp.org",
         "boh.com",
-        "wyndhamrewardscreditcard.com"
+        "wyndhamrewardscreditcard.com",
+        "hollandamericavisa.com"
       ]
     },
     {
@@ -127,7 +128,7 @@
       "domains": [
         "comenity.net",
         "aaa.com",
-        "playstation.com"
+        "nfl.com"
       ]
     },
     {
@@ -231,7 +232,8 @@
         "td-bank"
       ],
       "domains": [
-        "td.com"
+        "td.com",
+        "tdbank.com"
       ]
     },
     {
@@ -266,6 +268,18 @@
         "wf.com",
         "bilt.com",
         "biltrewards.com"
+      ]
+    },
+    {
+      "id": "city-national-bank",
+      "name": "City National Bank",
+      "aliases": [
+        "cnb"
+      ],
+      "domains": [
+        "cnb.com",
+        "commercialap.cnb.com",
+        "cnbrewards.com"
       ]
     }
   ]

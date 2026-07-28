@@ -1,0 +1,53 @@
+{
+  "id": "us-capital-one-premier-dining-rewards",
+  "schema_version": "1.0.0",
+  "name": "Capital One Premier Dining Rewards",
+  "localized_names": {
+    "en": "Capital One Premier Dining Rewards"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "replaced_by": "us-capital-one-savor",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "rate_type": "cashback_percent",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on other purchases (predecessor earn rate)."
+    },
+    "categories": [
+      {
+        "label": "Dining",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back redeemed via statement credit or other Capital One options."
+  },
+  "benefits": [],
+  "official_url": "https://www.capitalone.com/credit-cards/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-07-26",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/"
+  ],
+  "secondary_sources": [
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Launched March 2017, rebranded to Savor then SavorOne. Current successor is Capital One Savor."
+}
