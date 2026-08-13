@@ -352,7 +352,7 @@
     },
     "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
     "image": {
-      "url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card/_jcr_content/root/container/responsivegrid/container_307418962_/container/bannerimage.coreimg.jpeg/1707764569803/aeroplan-infinite-750x510.jpeg",
+      "url": null,
       "attribution": "© The Toronto-Dominion Bank",
       "local_path": null
     },
@@ -364,7 +364,7 @@
     ],
     "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "cn-ccb-unionpay-diamond": {
     "id": "cn-ccb-unionpay-diamond",
@@ -7380,7 +7380,7 @@
     },
     "official_url": "https://www.apple.com/apple-card/",
     "image": {
-      "url": "https://www.apple.com/v/apple-card/n/images/meta/og__dtukeczp0ygm_overview.png?202605221100",
+      "url": null,
       "attribution": "© Goldman Sachs",
       "local_path": null
     },
@@ -7390,7 +7390,7 @@
       "https://www.apple.com/apple-card/"
     ],
     "notes": "Annual fee confirmed as $0 ('No annual...fees'). APR 17.49%-27.74% variable as of January 1, 2026. No foreign transaction fees. No signup bonus found on page. network_tier set to null (was 'world' but not stated on page). Mastercard confirmed as global payment network.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-bank-of-america-air-france-klm": {
     "id": "us-bank-of-america-air-france-klm",
@@ -7498,7 +7498,7 @@
     },
     "official_url": "https://www.bankofamerica.com/credit-cards/products/air-france-credit-card/",
     "image": {
-      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8azc_cshcm_v_250x158.png",
+      "url": null,
       "attribution": "© Bank of America",
       "local_path": null
     },
@@ -7509,7 +7509,7 @@
       "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire"
     ],
     "notes": "Issued by Bank of America. Visa Signature. Annual fee $89 (not $0 as previously scaffolded). No foreign transaction fees.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-bank-of-america-alaska-airlines-business": {
     "id": "us-bank-of-america-alaska-airlines-business",
@@ -8908,7 +8908,7 @@
     },
     "official_url": "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/",
     "image": {
-      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8azc_cshcm_v_250x158.png",
+      "url": null,
       "attribution": "© Bank of America",
       "local_path": null
     },
@@ -8918,7 +8918,7 @@
       "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/"
     ],
     "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-bank-of-america-norwegian-cruise-line": {
     "id": "us-bank-of-america-norwegian-cruise-line",
@@ -9852,7 +9852,7 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© Barclays",
       "local_path": null
     },
@@ -9864,7 +9864,7 @@
     ],
     "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-barclays-aarp-essential-rewards": {
     "id": "us-barclays-aarp-essential-rewards",
@@ -11528,9 +11528,9 @@
   "us-barclays-hawaiian-airlines-world-elite": {
     "id": "us-barclays-hawaiian-airlines-world-elite",
     "schema_version": "1.0.0",
-    "name": "Hawaiian Airlines® World Elite Mastercard®",
+    "name": "Hawaiian Airlines® Bank of Hawaii World Elite Mastercard®",
     "localized_names": {
-      "en": "Hawaiian Airlines® World Elite Mastercard®"
+      "en": "Hawaiian Airlines® Bank of Hawaii World Elite Mastercard®"
     },
     "country": "us",
     "issuer": "Barclays",
@@ -11647,7 +11647,7 @@
     "official_url": "https://www.boh.com/personal/credit-card",
     "image": {
       "url": "https://www.boh.com/siteassets/blocks/text--image-side-by-side/credit-card/credit-card-hal-consumer-2025-ta-864x864.png",
-      "attribution": "© Barclays",
+      "attribution": "© Barclays Bank Delaware",
       "local_path": null
     },
     "bin_hints": [],
@@ -11656,7 +11656,7 @@
       "https://www.boh.com/personal/credit-card",
       "https://cards.barclaycardus.com/?p=hawaiian"
     ],
-    "notes": "Standard ongoing annual fee is $99 (first_year $1 reflects a limited-time promo). Variable purchase APR 19.49%–29.49%, cash advance 29.74%, verified from the official Bank of Hawaii/Barclays product page. No foreign transaction fee. Earns 3x on Hawaiian/Alaska Airlines, 2x on gas/dining/grocery, 1x elsewhere. Direct applications on the Barclays site were curtailed around Oct 2025, but the card remains available to new applicants via the Bank of Hawaii/Barclays product page (which carries a current 2026 promotion); status kept 'active'.",
+    "notes": "Standard ongoing annual fee is $99 (first_year $1 reflects a limited-time promo). Variable purchase APR 19.49%–29.49%, cash advance 29.74%, verified from the official Bank of Hawaii/Barclays product page. No foreign transaction fee. Earns 3x on Hawaiian/Alaska Airlines, 2x on gas/dining/grocery, 1x elsewhere. Direct applications on the Barclays site were curtailed around Oct 2025, but the card remains available to new applicants via the Bank of Hawaii/Barclays product page (which carries a current 2026 promotion); status kept 'active'. Marketed face is Bank of Hawaii branded; the card is still issued by Barclays Bank Delaware (stated on boh.com).",
     "art_grade": "issuer"
   },
   "us-barclays-hawaiian-airlines-world-elite-business": {
@@ -16506,7 +16506,7 @@
     },
     "official_url": "https://www.capitalone.com/small-business/credit-cards/ventureone-business/",
     "image": {
-      "url": "https://ecm.capitalone.com/WCM/card/products/image-optimization/compressed-vb-card-art.png",
+      "url": null,
       "attribution": "© Capital One",
       "local_path": null
     },
@@ -16516,7 +16516,7 @@
       "https://www.capitalone.com/small-business/credit-cards/ventureone-business/"
     ],
     "notes": "Verified against the official Capital One product page on 2026-07-25. Earns unlimited 1.5X miles on every purchase plus 5X miles on hotels, vacation rentals and rental cars booked through Capital One Business Travel. Business (small-business) card; segment set to 'business'.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-chase-aer-lingus-signature": {
     "id": "us-chase-aer-lingus-signature",
@@ -20454,7 +20454,7 @@
     },
     "official_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
     "image": {
-      "url": "https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png",
+      "url": null,
       "attribution": "© JPMorgan Chase Bank, N.A.",
       "local_path": null
     },
@@ -20466,7 +20466,7 @@
     ],
     "notes": "Signup bonus refreshed 2026-07-24 from Chase official product page (75k after $5k/3mo). Cross-checked against credit-card-bonuses-api as a discovery clue only; official Chase page remains Source.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-chase-sapphire-reserve": {
     "id": "us-chase-sapphire-reserve",
@@ -24274,7 +24274,7 @@
     },
     "official_url": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
     "image": {
-      "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2025/12/CardArt-1.webp",
+      "url": null,
       "attribution": "© Citi",
       "local_path": null
     },
@@ -24284,7 +24284,7 @@
       "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/"
     ],
     "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text. Base rate of 1X on all other purchases is standard for Citi AAdvantage cards but not explicitly listed on this page for the Globe card — noted as inferred from card family pattern.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-citi-aadvantage-mileup": {
     "id": "us-citi-aadvantage-mileup",
@@ -26165,7 +26165,7 @@
     },
     "official_url": "https://www.ace.aaa.com/financial/aaa-credit-card.html",
     "image": {
-      "url": "https://www.ace.aaa.com/content/dam/ace/new30-cards/getty-1286018041-mom-and-daughter-shopping-online-1200x800.jpg",
+      "url": null,
       "attribution": "© Comenity",
       "local_path": null
     },
@@ -26177,7 +26177,7 @@
       "https://d.comenity.net/legaldocs/advantage/legal-documents/cca"
     ],
     "notes": "The original product_url (ace.aaa.com) returned empty content (JavaScript-rendered page). Data verified from finance.aaa.com/credit-card (official AAA financial page) and d.comenity.net legal docs (official Comenity Capital Bank credit card agreement). Name updated from 'AAA Credit Card' to 'AAA Daily Advantage Visa Signature® Credit Card'. Network tier updated from 'world' to 'signature' based on official page stating 'Visa Signature®'. Issuer updated from 'Comenity' to 'Comenity Capital Bank' per official legal docs.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-comenity-aaa-travel-advantage": {
     "id": "us-comenity-aaa-travel-advantage",
@@ -26291,7 +26291,7 @@
     },
     "official_url": "https://www.ace.aaa.com/financial/aaa-credit-card.html",
     "image": {
-      "url": "https://www.ace.aaa.com/content/dam/ace/new30-cards/getty-1286018041-mom-and-daughter-shopping-online-1200x800.jpg",
+      "url": null,
       "attribution": "© Comenity Capital Bank",
       "local_path": null
     },
@@ -26302,7 +26302,7 @@
       "https://finance.aaa.com/credit-card/travel"
     ],
     "notes": "Original product_url (ace.aaa.com) returned empty content. Card details verified from official AAA financial page at finance.aaa.com/credit-card/travel. Corrections: network changed from mastercard to visa, network_tier changed from world to signature, issuer updated to Comenity Capital Bank, name updated to AAA Travel Advantage Visa Signature Credit Card — all based on page text. APR and fee details from footnote 3 on finance.aaa.com page.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-comenity-nfl-extra-points": {
     "id": "us-comenity-nfl-extra-points",
@@ -26378,7 +26378,7 @@
     },
     "official_url": "https://www.nfl.com/extra-points",
     "image": {
-      "url": "https://www.nflextrapoints.com/content/dam/nfl-extrapoints/cards/card_shadow.png",
+      "url": null,
       "attribution": "© Comenity Capital Bank",
       "local_path": null
     },
@@ -26389,7 +26389,7 @@
       "https://d.comenity.net/legaldocs/nflvisa/legal-documents/cca"
     ],
     "notes": "Issued by Comenity Capital Bank. Originally issued by Barclays; moved to Comenity in 2022. Currently a Visa product; certain NFL cards are scheduled to move to the American Express network starting August 20, 2026, with new rebranded NFL Extra Points American Express Credit Cards arriving by September 13, 2026 — the account will still be issued by Comenity Capital Bank. Rewards terms at comenity.net/nflvisa.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-comenity-playstation-visa": {
     "id": "us-comenity-playstation-visa",
@@ -27386,7 +27386,7 @@
     },
     "official_url": "https://www.anacardusa.com/en/",
     "image": {
-      "url": "https://www.anacardusa.com/wp-content/uploads/2025/02/card-new.png",
+      "url": null,
       "attribution": "© First National Bank of Omaha",
       "local_path": null
     },
@@ -27397,7 +27397,7 @@
     ],
     "notes": "Verified from official ANA CARD U.S.A. product page. Corrections: name updated from 'Home' to 'ANA CARD U.S.A. Plus'; first_year updated from $85 to $0 (campaign: $0 Intro Annual Fee for the 1st year); issuer updated from 'First Bankcard' to 'First National Bank of Omaha' (page states 'Cards are issued by First National Bank of Omaha (FNBO®)'). Signup bonus of 10,000 miles includes 5,000 after first purchase; remaining 5,000 likely from campaign spend (page says 'Earn up to 10,000 Bonus Miles'). Campaign also mentions '$100 e-gift card for flying ANA/ANA Group North America routes'.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-first-avianca-lifemiles": {
     "id": "us-first-avianca-lifemiles",
@@ -27653,7 +27653,7 @@
     },
     "official_url": "https://www.cardless.com/cards/avianca/lifemiles-elite",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© First Electronic Bank",
       "local_path": null
     },
@@ -27665,7 +27665,7 @@
     ],
     "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. Annual fee $249. No cash advance/ATM access feature. Signup bonus up to 100,000 miles (tiered breakdown preserved from prior verification — not fully visible in fetched product page text).",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-first-cardless-qatar-infinite": {
     "id": "us-first-cardless-qatar-infinite",
@@ -28398,7 +28398,7 @@
     },
     "official_url": "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© First National Bank of Omaha",
       "local_path": null
     },
@@ -28410,7 +28410,7 @@
     ],
     "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-fnbo-amtrak-guest-rewards-preferred": {
     "id": "us-fnbo-amtrak-guest-rewards-preferred",
@@ -28558,7 +28558,7 @@
     },
     "official_url": "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© First National Bank of Omaha",
       "local_path": null
     },
@@ -28570,7 +28570,7 @@
     ],
     "notes": "Issued by FNBO. $99 annual fee. Preferred tier with companion coupon, one-class upgrade, station lounge pass, and 20% onboard rebate. No foreign transaction fees. APR not re-verified on 2026-07-24 (Summary of Credit Terms is JS-rendered).",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-fnbo-best-western-rewards": {
     "id": "us-fnbo-best-western-rewards",
@@ -29619,7 +29619,7 @@
     },
     "official_url": "https://www.penfed.org/credit-cards/pathfinder-rewards",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© PenFed",
       "local_path": null
     },
@@ -29631,7 +29631,7 @@
     ],
     "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-penfed-platinum-rewards": {
     "id": "us-penfed-platinum-rewards",
@@ -30830,7 +30830,7 @@
     },
     "official_url": "https://www.synchrony.com/s/partner/virgin-red-rewards-card/benefits",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© Synchrony",
       "local_path": null
     },
@@ -30843,7 +30843,7 @@
     ],
     "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-synchrony-walmart-onepay-cashrewards": {
     "id": "us-synchrony-walmart-onepay-cashrewards",
@@ -30975,7 +30975,7 @@
     },
     "official_url": "https://www.onepay.com/credit-card",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© Synchrony",
       "local_path": null
     },
@@ -30988,7 +30988,7 @@
     ],
     "notes": "Issued by Synchrony Bank. World Mastercard. CORRECTION: APR updated from rates PDF (20.24%/30.74% purchase, 22.24%/32.24% cash advance) — prior values of 20.99%/31.49% and 22.99%/32.99% were incorrect. Signup bonus updated: product page says '$35 cash back upon account opening' with no spend requirement mentioned (prior version cited $75 spend in 30 days — not found on official pages). Credit score band changed from 'fair' to 'unknown' — prior 'fair' was based on third-party WalletHub, not official source.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-td-ameritrade-client-rewards": {
     "id": "us-td-ameritrade-client-rewards",
@@ -31343,7 +31343,7 @@
     },
     "official_url": "https://www.td.com/us/en/personal-banking/credit-cards/cash-card",
     "image": {
-      "url": "https://www.td.com/content/dam/tdb/images/personal-banking/cashccaward-1-2d-en.png",
+      "url": null,
       "attribution": "© TD Bank",
       "local_path": null
     },
@@ -31355,7 +31355,7 @@
     ],
     "notes": "Verified from official product page. Customizable 3-2-1% cash back: choose two spend categories each quarter for 3% and 2%, plus 1% on all other purchases. Default at opening is 3% Dining and 2% Grocery Stores. No annual fee. 0% intro APR on purchases for 12 billing cycles and on balance transfers for 15 billing cycles. Foreign transaction fee 3%.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-td-first-class": {
     "id": "us-td-first-class",
@@ -33357,7 +33357,7 @@
     },
     "official_url": "https://www.skypassvisa.com/credit/contactUs.do",
     "image": {
-      "url": "https://www.skypassvisa.com/credit/mmcore-webapp/skypass/credit/static/img/SKYPASSVisaCreditCard.png",
+      "url": null,
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -33368,7 +33368,7 @@
       "https://www.skypassvisa.com/credit/faqs.do"
     ],
     "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. No longer available for new applications; not listed in site navigation. Still serviced for existing cardholders per the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Visa Secured). The SkyBlue Visa is also marked 'no longer available' on its product page.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-us-bank-skypass-visa-secured": {
     "id": "us-us-bank-skypass-visa-secured",
@@ -33445,7 +33445,7 @@
     },
     "official_url": "https://www.skypassvisa.com/credit/visaSecuredCard.do",
     "image": {
-      "url": "https://www.skypassvisa.com/credit/mmcore-webapp/skypass/credit/static/img/SKYPASSVisaCreditCard.png",
+      "url": null,
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -33457,7 +33457,7 @@
       "https://www.skypassvisa.com/credit/faqs.do"
     ],
     "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. The visaSecuredCard.do product page redirects to the SKYPASS Visa welcome page, so specific fees/APR/earning rates are not displayed; the card is confirmed as an active product via the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Classic Visa for servicing). Secured card for credit building requiring a refundable deposit.",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-us-bank-smartly": {
     "id": "us-us-bank-smartly",
@@ -34661,7 +34661,7 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
     "image": {
-      "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-7-26_v2/images/Products/ChoicePrivileges/choice_privileges_social_banner_1220x627_english.jpg",
+      "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-21-26/images/Products/ChoicePrivileges/WF_Choice_NoFee_Card_LTO.png",
       "attribution": "© Wells Fargo",
       "local_path": null
     },
@@ -34806,7 +34806,7 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/wells-fargo-choice-privileges-credit-cards",
     "image": {
-      "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-7-26_v2/images/Products/ChoicePrivileges/choice_privileges_social_banner_1220x627_english.jpg",
+      "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-21-26/images/Products/ChoicePrivilegesSelect/WF_Choice_Fee_Card.png",
       "attribution": "© Wells Fargo",
       "local_path": null
     },
@@ -34959,7 +34959,7 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/one-key-credit-card/",
     "image": {
-      "url": "https://cdn.builder.io/api/v1/image/assets%2F1b77ce3a269a43e985e77f3d65f715ba%2F09107bb2b866495f8542b8df3a3d78e4?1",
+      "url": null,
       "attribution": "© Wells Fargo",
       "local_path": null
     },
@@ -34971,7 +34971,7 @@
     ],
     "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-wells-fargo-propel": {
     "id": "us-wells-fargo-propel",
@@ -35196,7 +35196,7 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/reflect-visa-credit-card/",
     "image": {
-      "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v7-7-26_v2/images/Products/Reflect/reflect_social_banner_1220x627_english.jpg",
+      "url": null,
       "attribution": "© Wells Fargo",
       "local_path": null
     },
@@ -35208,7 +35208,7 @@
     ],
     "notes": "Verified against official Wells Fargo product page 2026-07-24. Name updated to 'Wells Fargo Reflect® Card'. APR (17.49%-28.24% variable, 0% intro 21 months) and 3% FX fee confirmed from page.",
     "segment": "personal",
-    "art_grade": "issuer"
+    "art_grade": "none"
   },
   "us-wells-fargo-rewards": {
     "id": "us-wells-fargo-rewards",

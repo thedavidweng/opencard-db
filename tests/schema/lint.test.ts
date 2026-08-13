@@ -1,6 +1,12 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { lintCard, loadLintContext } from "../../scripts/validate.ts";
+import {
+  findMissingArtFiles,
+  findSharedImageUrlProblems,
+  lintCard,
+  lintImageUrl,
+  loadLintContext,
+} from "../../scripts/validate.ts";
 import type { Card } from "../../scripts/lib.ts";
 
 function baseCard(overrides: Record<string, unknown> = {}): Card {
@@ -267,5 +273,114 @@ describe("semantic lints", () => {
       ],
     });
     assert.match(lintCard(card, ctx)[0], /duplicate benefit id/);
+  });
+
+  it("flags Getty stock, social banners, OG images, award badges", async () => {
+    const ctx = await loadLintContext();
+    assert.equal(
+      lintCard(
+        baseCard({
+          image: {
+            url: "https://creditcards.chase.com/K-Marketplace/images/cardart/x.png",
+          },
+        }),
+        ctx,
+      ).filter((p) => p.startsWith("image.url")).length,
+      0,
+    );
+    assert.match(
+      lintImageUrl(
+        "https://www.ace.aaa.com/content/dam/ace/new30-cards/getty-1286018041-mom-and-daughter-shopping-online-1200x800.jpg",
+      ) ?? "",
+      /Getty/,
+    );
+    assert.match(
+      lintImageUrl(
+        "https://creditcards.wellsfargo.com/x/choice_privileges_social_banner_1220x627_english.jpg",
+      ) ?? "",
+      /social\/OG banner/,
+    );
+    assert.match(
+      lintImageUrl(
+        "https://www.apple.com/v/apple-card/n/images/meta/og__dtukeczp0ygm_overview.png",
+      ) ?? "",
+      /Open Graph/,
+    );
+    assert.match(
+      lintImageUrl(
+        "https://www.td.com/content/dam/tdb/images/personal-banking/cashccaward-1-2d-en.png",
+      ) ?? "",
+      /award badge/,
+    );
+    assert.equal(
+      lintImageUrl(
+        "https://creditcards.chase.com/K-Marketplace/images/cardart/sapphire_preferred_card.png",
+      ),
+      null,
+    );
+  });
+
+  it("allows Quicksilver family to share one official face; rejects cross-product reuse", () => {
+    const ok = findSharedImageUrlProblems([
+      { id: "us-capital-one-quicksilver", url: "https://ecm.example/qs.png" },
+      {
+        id: "us-capital-one-quicksilver-secured-cash-rewards",
+        url: "https://ecm.example/qs.png",
+      },
+      {
+        id: "us-capital-one-quicksilver-cash-rewards",
+        url: "https://ecm.example/qs.png",
+      },
+    ]);
+    assert.deepEqual(ok, []);
+
+    const bad = findSharedImageUrlProblems([
+      { id: "us-bank-of-america-air-france-klm", url: "https://bofa.example/cshcm.png" },
+      { id: "us-bank-of-america-free-spirit", url: "https://bofa.example/cshcm.png" },
+    ]);
+    assert.equal(bad.length, 2);
+    assert.match(bad[0].message, /us-bank-of-america-free-spirit/);
+    assert.match(bad[1].message, /SHARED_ART_FAMILIES/);
+  });
+
+  it("flags a local_path whose file is missing, and accepts a real file", async () => {
+    const { mkdtemp, writeFile, mkdir, rm } = await import("node:fs/promises");
+    const path = await import("node:path");
+    const os = await import("node:os");
+    const dir = await mkdtemp(path.join(os.tmpdir(), "oce-art-"));
+    try {
+      await mkdir(path.join(dir, "images"), { recursive: true });
+      await writeFile(path.join(dir, "images", "us-demo.webp"), "x");
+      const missing = findMissingArtFiles(
+        [
+          {
+            file: path.join(dir, "data/us/ghost.json"),
+            card: baseCard({
+              id: "us-ghost",
+              image: { local_path: "images/us-ghost.webp" },
+            }),
+          },
+        ],
+        dir,
+      );
+      assert.equal(missing.length, 1);
+      assert.match(missing[0].message, /does not exist/);
+
+      const ok = findMissingArtFiles(
+        [
+          {
+            file: path.join(dir, "data/us/demo.json"),
+            card: baseCard({
+              id: "us-demo",
+              image: { local_path: "images/us-demo.webp" },
+            }),
+          },
+        ],
+        dir,
+      );
+      assert.deepEqual(ok, []);
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
   });
 });

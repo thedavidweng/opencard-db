@@ -66,6 +66,11 @@ git clone https://github.com/thedavidweng/opencard-db.git
 cd opencard-db
 npm ci
 
+# After npm ci, `npx opencard-export` is the local CLI (not the npm copy).
+# From a Mac with the card in Apple Pay:
+#   npx opencard-export --export --repo .
+#   npx opencard-export --export --pr    # commit + open the PR (needs gh)
+
 # Scaffold a new card (interactive, or pass flags):
 npm run new:card -- --country us --slug my-card --name "My Card"
 

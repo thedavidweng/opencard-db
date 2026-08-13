@@ -24,7 +24,9 @@ indexes and query results.
    pointer to extend the allowlist — freedom with a consistency gate.
 3. **Semantic lints in `validate.ts`** (placeholder categories, rate-less
    categories, fraction-encoded rates, future dates, fee-currency/country
-   mismatch, scraped names, lifecycle coherence, duplicate benefit ids), all
+   mismatch, scraped names, lifecycle coherence, duplicate benefit ids,
+   image-URL heuristics, cross-card URL reuse, and committed `local_path`
+   files), all
    emitted as GitHub `::error file=` annotations so failures render inline on
    the PR diff.
 4. **New optional fields**: `segment` (personal/business/corporate),

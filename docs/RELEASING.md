@@ -12,6 +12,8 @@ Every merge to `main` uses a Conventional Commits title (`card(add):`, `card(upd
 
 The release PR also carries a `chore(exports): refresh generated exports for release` commit. The workflow rebuilds `exports/` on the PR branch after every update, so the tagged commit always serves current data on `cdn.jsdelivr.net/gh/thedavidweng/opencard-db@<tag>/exports/*`. The old pre-tag manual refresh is gone.
 
+`exports/` on `@main` (what `npx opencard-export` fetches) is also refreshed by `.github/workflows/exports.yml`: weekly on Monday, on every `main` push that touches `data/` or `images/`, and via `workflow_dispatch`. Art PRs additionally rebuild `exports/` inside Optimize Images so the lineage is current the moment the PR merges.
+
 There are two release units, versioned independently from the same release PR:
 
 | Unit | Path | Tag format | Published as |

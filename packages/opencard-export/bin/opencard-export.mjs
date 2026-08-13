@@ -9,6 +9,8 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { spawnSync } from 'node:child_process';
+
 import { scanCards, defaultCardsDir } from '../lib/passes.mjs';
 import { matchCard } from '../lib/match.mjs';
 import {
@@ -26,6 +28,13 @@ import {
   provenanceSnippet,
   today,
 } from '../lib/art.mjs';
+import { replaceImageBlock } from '../lib/json-edit.mjs';
+import {
+  isOpencardRepo,
+  findOpencardRepo,
+  loadRepoCards,
+} from '../lib/catalog.mjs';
+import { buildArtPr, nextStepCommands } from '../lib/pr.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -63,6 +72,7 @@ function parseArgs(argv) {
     noRemote: false,
     repo: null,
     passesDir: null,
+    pr: false,
     color: undefined,
   };
   for (let i = 0; i < argv.length; i++) {
@@ -99,6 +109,9 @@ function parseArgs(argv) {
         args.passesDir = argv[++i] || null;
         break;
       }
+      case '--pr':
+        args.pr = true;
+        break;
       case '--no-color':
         args.color = false;
         break;
@@ -126,8 +139,9 @@ nothing.
 FLAGS
   --export [dir]    write card art PNGs (default: images/ in a checkout, else .)
   --repo <path>     an OpenCard DB checkout; also writes provenance into card JSON
+  --pr              after --export --repo, commit and open a GitHub PR (needs gh)
   --json            machine-readable output
-  --no-remote       skip the database comparison
+  --no-remote       skip the remote export; a checkout still compares against data/
   --passes-dir <p>  override the Wallet passes directory
   --no-color        disable color (NO_COLOR is also honored)
   -h, --help        show help
@@ -259,18 +273,6 @@ function slugify(name) {
   );
 }
 
-async function isOpencardRepo(dir) {
-  if (!dir) return false;
-  try {
-    await fs.access(path.join(dir, 'schema.json'));
-    await fs.access(path.join(dir, 'images'));
-    await fs.access(path.join(dir, 'data'));
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 function plural(n, singular, pluralForm) {
   return n === 1 ? singular : pluralForm;
 }
@@ -309,14 +311,73 @@ async function writeProvenanceToRepo(repoRoot, card, provenance) {
     throw e;
   }
   const parsed = JSON.parse(raw);
-  const image = parsed.image && typeof parsed.image === 'object' ? parsed.image : {};
+  const image = parsed.image && typeof parsed.image === 'object' ? { ...parsed.image } : {};
   image.provenance = provenance;
   if (image.local_path == null) {
     image.local_path = `images/${card.id}.png`;
   }
-  parsed.image = image;
-  await fs.writeFile(file, JSON.stringify(parsed, null, 2) + '\n', 'utf-8');
+  const wantAttr = attributionLine(card.issuer || parsed.issuer);
+  if (!image.attribution || !/apple pay/i.test(String(image.attribution))) {
+    image.attribution = wantAttr;
+  }
+  const next = replaceImageBlock(raw, image);
+  await fs.writeFile(file, next.endsWith('\n') ? next : next + '\n', 'utf-8');
   return { written: true, path: file };
+}
+
+function runGit(repoRoot, args) {
+  return spawnSync('git', args, {
+    cwd: repoRoot,
+    encoding: 'utf8',
+  });
+}
+
+function openArtPr({ repoRoot, branch, files, title, bodyFile }) {
+  const gitDir = runGit(repoRoot, ['rev-parse', '--is-inside-work-tree']);
+  if (gitDir.status !== 0 || String(gitDir.stdout).trim() !== 'true') {
+    return { ok: false, message: `${repoRoot} is not a git work tree` };
+  }
+  const head = runGit(repoRoot, ['rev-parse', '--abbrev-ref', 'HEAD']);
+  const current = String(head.stdout || '').trim();
+  if (current === 'main' || current === 'master') {
+    const co = runGit(repoRoot, ['checkout', '-b', branch]);
+    if (co.status !== 0) {
+      return {
+        ok: false,
+        message: `could not create branch ${branch}: ${(co.stderr || co.stdout || '').trim()}`,
+      };
+    }
+  }
+  const add = runGit(repoRoot, ['add', '--', ...files]);
+  if (add.status !== 0) {
+    return { ok: false, message: `git add failed: ${(add.stderr || '').trim()}` };
+  }
+  const commit = runGit(repoRoot, ['commit', '-m', title]);
+  if (commit.status !== 0) {
+    const msg = `${commit.stderr || ''} ${commit.stdout || ''}`;
+    if (!/nothing to commit/i.test(msg)) {
+      return { ok: false, message: `git commit failed: ${msg.trim()}` };
+    }
+  }
+  const push = runGit(repoRoot, ['push', '-u', 'origin', 'HEAD']);
+  if (push.status !== 0) {
+    return {
+      ok: false,
+      message: `git push failed: ${(push.stderr || push.stdout || '').trim()}`,
+    };
+  }
+  const pr = spawnSync(
+    'gh',
+    ['pr', 'create', '--title', title, '--body-file', bodyFile],
+    { cwd: repoRoot, encoding: 'utf8' },
+  );
+  if (pr.status !== 0) {
+    return {
+      ok: false,
+      message: `gh pr create failed: ${(pr.stderr || pr.stdout || '').trim()}`,
+    };
+  }
+  return { ok: true, message: String(pr.stdout || '').trim() || 'PR opened' };
 }
 
 // ── main ────────────────────────────────────────────────────────────────
@@ -343,6 +404,10 @@ async function main() {
     process.stdout.write(readVersion() + '\n');
     return 0;
   }
+  if (args.pr && !args.export) {
+    process.stderr.write('error: --pr requires --export (and a checkout via --repo or cwd)\n');
+    return 2;
+  }
 
   // macOS-only guard (skipped when a passes dir is supplied for testing).
   if (process.platform !== 'darwin' && !args.passesDir) {
@@ -356,6 +421,23 @@ async function main() {
   const passesDir = args.passesDir || defaultCardsDir();
   const spinnerAnimated = process.stderr.isTTY && !args.json;
   const spinner = new Spinner(process.stderr, { animated: spinnerAnimated });
+
+  // A checkout is the source of truth for match + lineage (includes art
+  // just written). Detect --repo or walk up from cwd so `npx` from a
+  // subdirectory still finds the repo.
+  let repoRoot = null;
+  if (args.repo) {
+    const resolved = path.resolve(args.repo);
+    if (await isOpencardRepo(resolved)) repoRoot = resolved;
+    else {
+      process.stderr.write(
+        `error: --repo ${args.repo} is not an OpenCard DB checkout (need schema.json, data/, images/)\n`,
+      );
+      return 2;
+    }
+  } else {
+    repoRoot = await findOpencardRepo(process.cwd());
+  }
 
   // Permission preflight.
   let records;
@@ -409,16 +491,50 @@ async function main() {
   const payment = records.filter((r) => r.kind === 'payment');
   const others = records.filter((r) => r.kind !== 'payment');
 
-  // Remote DB compare (unless disabled / offline).
+  // Local data/ wins for ids it has (so a just-written provenance block is
+  // visible). The public export / OPENCARD_DB_FILE fills any ids the
+  // checkout doesn't contain (tests, partial trees).
   let db = null;
   let remoteNote = null;
-  if (!args.noRemote) {
-    spinner.start('Fetching OpenCard DB…');
-    db = await fetchDb();
+  let localCards = [];
+  if (repoRoot) {
+    spinner.start('Reading local OpenCard DB…');
+    localCards = await loadRepoCards(repoRoot);
     spinner.stop();
-    if (!db) remoteNote = 'offline';
-  } else {
+  }
+  let remote = null;
+  if (!args.noRemote || process.env.OPENCARD_DB_FILE) {
+    if (!process.env.OPENCARD_DB_FILE) spinner.start('Fetching OpenCard DB…');
+    remote = await fetchDb();
+    if (!process.env.OPENCARD_DB_FILE) spinner.stop();
+  }
+  if (localCards.length || (remote && remote.cards.length)) {
+    const byId = new Map();
+    if (remote) {
+      for (const c of remote.cards) if (c && c.id) byId.set(c.id, c);
+    }
+    const hasArt = (img) =>
+      !!(img && (img.url || img.local_path || img.provenance));
+    for (const local of localCards) {
+      if (!local || !local.id) continue;
+      const prev = byId.get(local.id);
+      if (!prev) {
+        byId.set(local.id, local);
+        continue;
+      }
+      const merged = { ...prev, ...local };
+      if (!hasArt(local.image) && prev.image) merged.image = prev.image;
+      byId.set(local.id, merged);
+    }
+    db = {
+      cards: [...byId.values()],
+      source: localCards.length ? `repo:${repoRoot}` : remote.source,
+    };
+    remoteNote = localCards.length ? 'repo' : remote ? null : 'offline';
+  } else if (args.noRemote && !process.env.OPENCARD_DB_FILE) {
     remoteNote = 'skipped';
+  } else {
+    remoteNote = 'offline';
   }
 
   // Match payment cards to DB. For every card with an extractable art asset we
@@ -458,22 +574,16 @@ async function main() {
   // ── export ────────────────────────────────────────────────────────────
   const exportResults = [];
   if (args.export) {
-    // Resolve target dir; prefer an opencard-db checkout's images/ when found.
-    let targetDir = args.exportDir;
-    let repoRoot = null;
-    if (args.repo && (await isOpencardRepo(args.repo))) {
-      repoRoot = args.repo;
-      targetDir = path.join(args.repo, 'images');
-    } else if (!targetDir) {
-      const cwd = process.cwd();
-      if (await isOpencardRepo(cwd)) {
-        repoRoot = cwd;
-        targetDir = path.join(cwd, 'images');
-      } else {
-        targetDir = '.';
-      }
-    }
+    // PNGs that will go into a PR must land in images/ so CI can convert
+    // them. An extra --export dir is a convenience copy, not a substitute.
+    const imagesDir = repoRoot ? path.join(repoRoot, 'images') : null;
+    let targetDir = imagesDir || args.exportDir || '.';
+    const extraDir =
+      args.exportDir && imagesDir && path.resolve(args.exportDir) !== path.resolve(imagesDir)
+        ? args.exportDir
+        : null;
     await fs.mkdir(targetDir, { recursive: true });
+    if (extraDir) await fs.mkdir(extraDir, { recursive: true });
 
     for (const row of rows) {
       const { rec, match } = row;
@@ -491,6 +601,9 @@ async function main() {
       const src = path.join(rec.bundleDir, rec.artAsset);
       try {
         await fs.copyFile(src, dest);
+        if (extraDir) {
+          await fs.copyFile(src, path.join(extraDir, destName));
+        }
         // Provenance block (only meaningful for a matched card: it anchors the
         // sha into the DB card's art lineage).
         let provenance = null;
@@ -541,6 +654,68 @@ async function main() {
     }
   }
 
+  let contribution = null;
+  if (args.export && repoRoot && db) {
+    const contributed = exportResults.filter(
+      (r) => r.exported && r.matchedId && r.repoWrite && r.repoWrite.written && !r.sameArt,
+    );
+    if (contributed.length > 0) {
+      const prCards = contributed.map(
+        (r) => db.cards.find((c) => c.id === r.matchedId) || { id: r.matchedId },
+      );
+      const spec = buildArtPr(prCards, today());
+      const files = [];
+      for (const r of contributed) {
+        files.push(path.relative(repoRoot, r.dest));
+        if (r.repoWrite && r.repoWrite.path) {
+          files.push(path.relative(repoRoot, r.repoWrite.path));
+        }
+      }
+      const branch =
+        spec.kind === 'card-update' ? `card-art/${prCards[0].id}` : 'card-art/apple-pay';
+      const bodyFile = path.join(repoRoot, '.git', 'opencard-export-pr.md');
+      try {
+        await fs.mkdir(path.dirname(bodyFile), { recursive: true });
+        await fs.writeFile(bodyFile, spec.body, 'utf-8');
+      } catch {
+        // tests / missing .git
+      }
+      contribution = {
+        spec,
+        files: [...new Set(files)],
+        branch,
+        bodyFile,
+        cmds: nextStepCommands({
+          branch,
+          files: [...new Set(files)],
+          title: spec.title,
+          bodyFile: path.relative(repoRoot, bodyFile),
+        }),
+      };
+    }
+  }
+
+  if (args.pr) {
+    if (!contribution) {
+      process.stderr.write(
+        'error: --pr found nothing to contribute (need a checkout, a DB match, and new art)\n',
+      );
+      return 2;
+    }
+    const prResult = openArtPr({
+      repoRoot,
+      branch: contribution.branch,
+      files: contribution.files,
+      title: contribution.spec.title,
+      bodyFile: contribution.bodyFile,
+    });
+    if (!prResult.ok) {
+      process.stderr.write(`error: --pr failed: ${prResult.message}\n`);
+      return 2;
+    }
+    contribution.prUrl = prResult.message;
+  }
+
   // ── JSON output ───────────────────────────────────────────────────────────
   if (args.json) {
     const out = {
@@ -576,6 +751,15 @@ async function main() {
       },
       remote: { note: remoteNote, source: db ? db.source : null },
       export: args.export ? exportResults : undefined,
+      contribution: contribution
+        ? {
+            title: contribution.spec.title,
+            branch: contribution.branch,
+            files: contribution.files,
+            cmds: contribution.cmds,
+            prUrl: contribution.prUrl || null,
+          }
+        : undefined,
     };
     process.stdout.write(JSON.stringify(out, null, 2) + '\n');
     return 0;
@@ -725,13 +909,31 @@ async function main() {
     ];
     if (nExported > 0) {
       summaryBits.push(
-        'Next: open a PR; CI verifies the sha chain and converts the PNG to lossless WebP.',
+        'CI verifies the sha chain and converts the PNG to lossless WebP.',
       );
       summaryBits.push(attributionNotice());
     }
     process.stdout.write(
       '\n' + summaryBits.map((l) => c(ANSI.dim, l)).join('\n') + '\n',
     );
+
+    if (contribution) {
+      process.stdout.write(
+        '\n' +
+          c(ANSI.dim, 'Next — contribute this art:') +
+          '\n' +
+          contribution.cmds.map((line) => c(ANSI.dim, '  ' + line)).join('\n') +
+          '\n',
+      );
+      if (contribution.prUrl) {
+        process.stdout.write(c(ANSI.green, '✓') + ` ${contribution.prUrl}\n`);
+      } else {
+        process.stdout.write(
+          c(ANSI.dim, 'Or rerun with --pr to commit and open the PR (requires gh).') +
+            '\n',
+        );
+      }
+    }
   }
 
   return 0;

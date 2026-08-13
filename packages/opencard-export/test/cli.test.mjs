@@ -31,9 +31,10 @@ function synthPng(width, height) {
 const ANSI_RE = /\x1b\[[0-9;]*m/g;
 const strip = (s) => String(s).replace(ANSI_RE, '');
 
-function runCli(args, env = {}) {
+function runCli(args, env = {}, opts = {}) {
   const res = spawnSync(process.execPath, [BIN, ...args], {
     encoding: 'utf8',
+    cwd: opts.cwd || os.tmpdir(),
     env: { ...process.env, NO_COLOR: '1', ...env },
   });
   return { code: res.status, stdout: strip(res.stdout || ''), stderr: strip(res.stderr || '') };
@@ -482,6 +483,94 @@ test('--repo writes image.provenance into the card JSON (and refuses when it is 
   } finally {
     await fs.rm(root, { recursive: true, force: true });
     await fs.rm(repo, { recursive: true, force: true });
+  }
+});
+
+test('--pr without --export exits 2', () => {
+  const { code, stderr } = runCli(['--pr', '--passes-dir', '/tmp']);
+  assert.equal(code, 2);
+  assert.match(stderr, /--pr requires --export/);
+});
+
+test('a checkout is compared against local data/ even with --no-remote', async () => {
+  const { root } = await fourTierFixture();
+  const repo = await fs.mkdtemp(path.join(os.tmpdir(), 'oce-localdb-'));
+  try {
+    await fs.writeFile(path.join(repo, 'schema.json'), '{}');
+    await fs.mkdir(path.join(repo, 'images'), { recursive: true });
+    await fs.mkdir(path.join(repo, 'data', 'nw'), { recursive: true });
+    await fs.writeFile(
+      path.join(repo, 'data', 'nw', 'borealis-platinum.json'),
+      JSON.stringify(
+        {
+          id: 'nw-borealis-platinum',
+          name: 'Borealis Platinum Card',
+          issuer: 'Northwind Bank',
+          country: 'nw',
+          image: { url: null },
+        },
+        null,
+        2,
+      ) + '\n',
+    );
+    const { code, stdout } = runCli(
+      ['--passes-dir', root, '--no-remote', '--repo', repo, '--json'],
+      {},
+    );
+    assert.equal(code, 0, stdout);
+    const out = JSON.parse(stdout);
+    assert.equal(out.remote.note, 'repo');
+    const borealis = out.walletCards.find((w) => w.name.includes('Borealis'));
+    assert.equal(borealis.matchedId, 'nw-borealis-platinum');
+    assert.equal(borealis.status, 'art-wanted');
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+    await fs.rm(repo, { recursive: true, force: true });
+  }
+});
+
+test('--export dest still writes images/ + provenance when --repo is set', async () => {
+  const { root, dbFile } = await fourTierFixture();
+  const repo = await fs.mkdtemp(path.join(os.tmpdir(), 'oce-both-'));
+  const extra = await fs.mkdtemp(path.join(os.tmpdir(), 'oce-extra-'));
+  const UPGR_SHA = sha256(UPGR_PNG);
+  try {
+    await fs.writeFile(path.join(repo, 'schema.json'), '{}');
+    await fs.mkdir(path.join(repo, 'images'), { recursive: true });
+    await fs.mkdir(path.join(repo, 'data', 'nw'), { recursive: true });
+    const cardPath = path.join(repo, 'data', 'nw', 'borealis-platinum.json');
+    await fs.writeFile(
+      cardPath,
+      JSON.stringify(
+        {
+          id: 'nw-borealis-platinum',
+          name: 'Borealis Platinum Card',
+          issuer: 'Northwind Bank',
+          annual_fee: { amount: 85.0, currency: 'USD' },
+          image: { url: null, attribution: null },
+        },
+        null,
+        2,
+      ) + '\n',
+    );
+    const { code, stdout } = runCli(
+      ['--passes-dir', root, '--export', extra, '--repo', repo],
+      { OPENCARD_DB_FILE: dbFile },
+    );
+    assert.equal(code, 0, stdout);
+    await fs.access(path.join(repo, 'images', 'nw-borealis-platinum.png'));
+    await fs.access(path.join(extra, 'nw-borealis-platinum.png'));
+    const written = JSON.parse(await fs.readFile(cardPath, 'utf-8'));
+    assert.equal(written.annual_fee.amount, 85);
+    assert.equal(written.image.attribution, '© Northwind Bank (Apple Pay digital card art)');
+    assert.equal(written.image.provenance.source_sha256, UPGR_SHA);
+    assert.equal(written.image.local_path, 'images/nw-borealis-platinum.png');
+    assert.match(stdout, /Next — contribute this art/);
+    assert.match(stdout, /card\(update\): nw-borealis-platinum/);
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+    await fs.rm(repo, { recursive: true, force: true });
+    await fs.rm(extra, { recursive: true, force: true });
   }
 });
 

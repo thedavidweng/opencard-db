@@ -139,7 +139,7 @@ describe("API contract /v1", () => {
   it("keeps real issuer image URLs", async () => {
     const res = await handleTestRequest(
       new Request(
-        "https://example.test/v1/cards/us-chase-sapphire-preferred",
+        "https://example.test/v1/cards/us-chase-sapphire-reserve",
         { headers: { "X-Client-Name": "tests" } },
       ),
       { kv },

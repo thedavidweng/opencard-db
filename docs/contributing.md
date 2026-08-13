@@ -74,6 +74,7 @@ validator unwraps archived official pages, so a snapshot counts as a valid Sourc
 npm run validate
 npm test
 npm run optimize:images   # if you added files under images/
+npx opencard-export --export --repo .   # Apple Pay art (after npm ci)
 ```
 
 ## PR title cheatsheet
