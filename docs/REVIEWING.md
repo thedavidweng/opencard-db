@@ -25,7 +25,7 @@ gets checked. The machine's job is to hand you the evidence.
 | Check | What it proves | What it does **not** prove |
 | --- | --- | --- |
 | **Schema** (`npm run validate`) | Every required field is present and correctly typed. | That the values are real. |
-| **Semantic lints** | Issuer is registered, network tier is atomic and allow-listed, rates aren't fraction-encoded, dates aren't in the future, fee currency matches the market. | That the rate/fee/date is the one on the bank's page. |
+| **Semantic lints** | Issuer is registered, network tier is atomic and allow-listed, rates aren't fraction-encoded, dates aren't in the future, fee currency matches the market, `image.url` is not a stock photo / social banner / OG image / award badge, and two Card Ids do not share a URL unless they are in `SHARED_ART_FAMILIES`. | That the rate/fee/date is the one on the bank's page, or that a unique `image.url` actually depicts this product. |
 | **Domain allowlist** (anti-fabrication) | Every `official_url` / `sources[]` host belongs to the card's issuer or a known co-brand domain (`data/issuers.json` → `domains`). A source on a domain the issuer doesn't own is an **error**. | That the page at that URL actually documents the claim. |
 | **Update diff flags** (anti-vandalism) | For `card(update)` PRs, a field-level diff (old → new) of key fields, with **warn** flags on high-impact changes (fee jump >$100 or to/from null, network / tier flip, `official_url` host change, status → discontinued) and a hard **error** if `issuer_id` changes. | Which of the two values is the correct one. |
 | **Labels / Form check** | The PR is classified and the beginner form is filled in. | Anything about the data's accuracy. |

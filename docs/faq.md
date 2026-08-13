@@ -116,6 +116,24 @@ is required.
 **Fix:** add the product page and/or terms page URL(s) to the `sources` array (and
 `official_url`). Blogs and third-party databases don't count as sources.
 
+## `image.url looks like Getty stock photography` / `social/OG banner` / `Open Graph share image` / `award badge`
+
+**Means:** the URL is marketing chrome (stock photo, social banner, OG share
+image, award ribbon), not isolated card art.
+
+**Fix:** replace it with the product-page card face, or set `image.url` to
+`null`. Wrong art is worse than no art — the API will serve the generic
+fallback.
+
+## `image.url is also used by …`
+
+**Means:** two different Card Ids point at the same image URL. That is almost
+always a paste error (one product's face reused on another).
+
+**Fix:** give each card its own official face, or null the extras. Only if the
+issuer really prints the same plastic for those variants, add the Card Ids to
+`SHARED_ART_FAMILIES` in `scripts/validate.ts` in the same PR.
+
 ---
 
 Still stuck? Re-read the [domain rules](contributing.md) and

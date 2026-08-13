@@ -1,9 +1,9 @@
 {
   "id": "us-barclays-hawaiian-airlines-world-elite",
   "schema_version": "1.0.0",
-  "name": "Hawaiian Airlines® World Elite Mastercard®",
+  "name": "Hawaiian Airlines® Bank of Hawaii World Elite Mastercard®",
   "localized_names": {
-    "en": "Hawaiian Airlines® World Elite Mastercard®"
+    "en": "Hawaiian Airlines® Bank of Hawaii World Elite Mastercard®"
   },
   "country": "us",
   "issuer": "Barclays",
@@ -120,7 +120,7 @@
   "official_url": "https://www.boh.com/personal/credit-card",
   "image": {
     "url": "https://www.boh.com/siteassets/blocks/text--image-side-by-side/credit-card/credit-card-hal-consumer-2025-ta-864x864.png",
-    "attribution": "© Barclays",
+    "attribution": "© Barclays Bank Delaware",
     "local_path": null
   },
   "bin_hints": [],
@@ -129,5 +129,5 @@
     "https://www.boh.com/personal/credit-card",
     "https://cards.barclaycardus.com/?p=hawaiian"
   ],
-  "notes": "Standard ongoing annual fee is $99 (first_year $1 reflects a limited-time promo). Variable purchase APR 19.49%–29.49%, cash advance 29.74%, verified from the official Bank of Hawaii/Barclays product page. No foreign transaction fee. Earns 3x on Hawaiian/Alaska Airlines, 2x on gas/dining/grocery, 1x elsewhere. Direct applications on the Barclays site were curtailed around Oct 2025, but the card remains available to new applicants via the Bank of Hawaii/Barclays product page (which carries a current 2026 promotion); status kept 'active'."
+  "notes": "Standard ongoing annual fee is $99 (first_year $1 reflects a limited-time promo). Variable purchase APR 19.49%–29.49%, cash advance 29.74%, verified from the official Bank of Hawaii/Barclays product page. No foreign transaction fee. Earns 3x on Hawaiian/Alaska Airlines, 2x on gas/dining/grocery, 1x elsewhere. Direct applications on the Barclays site were curtailed around Oct 2025, but the card remains available to new applicants via the Bank of Hawaii/Barclays product page (which carries a current 2026 promotion); status kept 'active'. Marketed face is Bank of Hawaii branded; the card is still issued by Barclays Bank Delaware (stated on boh.com)."
 }

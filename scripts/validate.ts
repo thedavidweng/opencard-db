@@ -111,6 +111,103 @@ export function unwrapArchiveUrl(url: string): string | null {
   }
 }
 
+/**
+ * Card-id groups that may share one official face because the issuer
+ * actually prints the same plastic for those variants (e.g. Quicksilver
+ * secured uses the unsecured Quicksilver art). Distinct products must
+ * not share a URL unless listed here.
+ */
+export const SHARED_ART_FAMILIES: readonly (readonly string[])[] = [
+  [
+    "us-capital-one-quicksilver",
+    "us-capital-one-quicksilver-cash-rewards",
+    "us-capital-one-quicksilver-secured-cash-rewards",
+  ],
+];
+
+export function cardImageUrl(card: Card): string | null {
+  const image = card.image as { url?: string | null } | null | undefined;
+  if (!image || typeof image !== "object") return null;
+  const url = image.url;
+  if (typeof url !== "string") return null;
+  const trimmed = url.trim();
+  return trimmed ? trimmed : null;
+}
+
+/**
+ * URL-only heuristics for "this is not a card face". No network fetch —
+ * banks block bots, and a flaky download must never brick validate.
+ */
+export function lintImageUrl(url: string): string | null {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return `image.url "${url}" is not a valid URL`;
+  }
+  const host = parsed.hostname.toLowerCase();
+  let path = parsed.pathname.toLowerCase();
+  try {
+    path = decodeURIComponent(parsed.pathname).toLowerCase();
+  } catch {
+    // keep the raw lowercased path
+  }
+
+  if (host.includes("gettyimages") || path.includes("getty-") || path.includes("/getty")) {
+    return `image.url looks like Getty stock photography, not card art`;
+  }
+  if (path.includes("social_banner") || path.includes("social-banner")) {
+    return `image.url filename is a social/OG banner, not isolated card art`;
+  }
+  if (
+    path.includes("/og__") ||
+    path.includes("og-image") ||
+    path.includes("opengraph") ||
+    path.includes("/meta/og")
+  ) {
+    return `image.url looks like an Open Graph share image, not card art`;
+  }
+  if (/award/i.test(path) && /(badge|ribbon|best[-_]|cashccaward)/i.test(path)) {
+    return `image.url looks like an award badge, not card art`;
+  }
+  return null;
+}
+
+export function findSharedImageUrlProblems(
+  cards: { id: string; url: string | null }[],
+): Array<{ id: string; message: string }> {
+  const familyIndex = new Map<string, number>();
+  SHARED_ART_FAMILIES.forEach((family, i) => {
+    for (const id of family) familyIndex.set(id, i);
+  });
+
+  const byUrl = new Map<string, string[]>();
+  for (const card of cards) {
+    if (!card.url) continue;
+    const list = byUrl.get(card.url) ?? [];
+    list.push(card.id);
+    byUrl.set(card.url, list);
+  }
+
+  const out: Array<{ id: string; message: string }> = [];
+  for (const ids of byUrl.values()) {
+    if (ids.length < 2) continue;
+    const fam = ids.map((id) => familyIndex.get(id));
+    const first = fam[0];
+    const allowed =
+      first !== undefined && fam.every((f) => f !== undefined && f === first);
+    if (allowed) continue;
+    const others = (id: string) => ids.filter((x) => x !== id).join(", ");
+    for (const id of ids) {
+      out.push({
+        id,
+        message: `image.url is also used by ${others(id)} — distinct cards must not share art unless they belong to the same SHARED_ART_FAMILIES group in scripts/validate.ts (issuer really uses the same plastic)`,
+      });
+    }
+  }
+  return out;
+}
+
 function tierProblem(tier: string, ctx: LintContext): string | null {
   if (ctx.tiers.has(tier)) return null;
   if (tier.includes(":")) {
@@ -303,6 +400,12 @@ export function lintCard(card: Card, ctx: LintContext): string[] {
     }
   }
 
+  const imageUrl = cardImageUrl(card);
+  if (imageUrl) {
+    const imageUrlProblem = lintImageUrl(imageUrl);
+    if (imageUrlProblem) problems.push(imageUrlProblem);
+  }
+
   // benefit.id uniqueness within the card
   const benefitIds = new Set<string>();
   for (const b of (card.benefits as { id?: string }[] | undefined) ?? []) {
@@ -390,6 +493,16 @@ async function main(): Promise<void> {
     for (const p of lintCard(card, ctx)) {
       emit(rel, p, errors);
     }
+  }
+
+  const shareHits = findSharedImageUrlProblems(
+    loaded.map(({ card }) => ({ id: card.id, url: cardImageUrl(card) })),
+  );
+  const fileById = new Map(loaded.map(({ file, card }) => [card.id, file]));
+  for (const hit of shareHits) {
+    const file = fileById.get(hit.id);
+    if (!file) continue;
+    emit(path.relative(root, file), hit.message, errors);
   }
 
   if (errors.length) {
