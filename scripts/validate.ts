@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import Ajv2020Import from "ajv/dist/2020.js";
@@ -171,6 +172,54 @@ export function lintImageUrl(url: string): string | null {
     return `image.url looks like an award badge, not card art`;
   }
   return null;
+}
+
+function resolveRepoPath(root: string, rel: string): string {
+  return path.isAbsolute(rel) ? rel : path.join(root, rel);
+}
+
+/**
+ * Provenance / local_path must point at a file that is actually in the
+ * checkout. Otherwise a JSON-only PR can merge with a dangling face path
+ * (Optimize Images never runs without a raster).
+ */
+export function findMissingArtFiles(
+  cards: Array<{ file: string; card: Card }>,
+  root: string,
+): Array<{ file: string; message: string }> {
+  const out: Array<{ file: string; message: string }> = [];
+  for (const { file, card } of cards) {
+    const image = card.image as
+      | {
+          local_path?: string | null;
+          history?: Array<{ local_path?: string }>;
+        }
+      | null
+      | undefined;
+    if (!image || typeof image !== "object") continue;
+    const lp = image.local_path;
+    if (typeof lp === "string" && lp.trim()) {
+      if (!existsSync(resolveRepoPath(root, lp))) {
+        out.push({
+          file,
+          message: `image.local_path "${lp}" does not exist — commit the art file (or set local_path to null)`,
+        });
+      }
+    }
+    if (Array.isArray(image.history)) {
+      for (const [i, h] of image.history.entries()) {
+        const hp = h?.local_path;
+        if (typeof hp !== "string" || !hp.trim()) continue;
+        if (!existsSync(resolveRepoPath(root, hp))) {
+          out.push({
+            file,
+            message: `image.history[${i}].local_path "${hp}" does not exist`,
+          });
+        }
+      }
+    }
+  }
+  return out;
 }
 
 export function findSharedImageUrlProblems(
@@ -503,6 +552,10 @@ async function main(): Promise<void> {
     const file = fileById.get(hit.id);
     if (!file) continue;
     emit(path.relative(root, file), hit.message, errors);
+  }
+
+  for (const miss of findMissingArtFiles(loaded, root)) {
+    emit(path.relative(root, miss.file), miss.message, errors);
   }
 
   if (errors.length) {

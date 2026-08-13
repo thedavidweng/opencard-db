@@ -58,3 +58,28 @@ test('matchCard tolerates empty / missing DB gracefully', () => {
   assert.equal(matchCard({ name: 'X', issuer: 'Y' }, []), null);
   assert.equal(matchCard({ name: 'X', issuer: 'Y' }, null), null);
 });
+
+test('sibling products: Gold Card does not match Business Gold', () => {
+  const db = [
+    { id: 'us-amex-business-gold', name: 'American Express Business Gold Card', issuer: 'American Express' },
+    { id: 'us-amex-gold', name: 'American Express® Gold Card', issuer: 'American Express' },
+  ];
+  const personal = matchCard({ name: 'Gold Card', issuer: 'American Express' }, db);
+  assert.ok(personal);
+  assert.equal(personal.card.id, 'us-amex-gold');
+
+  const biz = matchCard({ name: 'Business Gold', issuer: 'American Express' }, db);
+  assert.ok(biz);
+  assert.equal(biz.card.id, 'us-amex-business-gold');
+});
+
+test('sibling products: Sapphire Preferred vs Reserve', () => {
+  const db = [
+    { id: 'us-chase-sapphire-preferred', name: 'Chase Sapphire Preferred® Card', issuer: 'Chase' },
+    { id: 'us-chase-sapphire-reserve', name: 'Chase Sapphire Reserve®', issuer: 'Chase' },
+  ];
+  const pref = matchCard({ name: 'Sapphire Preferred', issuer: 'Chase' }, db);
+  assert.equal(pref.card.id, 'us-chase-sapphire-preferred');
+  const res = matchCard({ name: 'Sapphire Reserve', issuer: 'Chase' }, db);
+  assert.equal(res.card.id, 'us-chase-sapphire-reserve');
+});

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
+  findMissingArtFiles,
   findSharedImageUrlProblems,
   lintCard,
   lintImageUrl,
@@ -340,5 +341,46 @@ describe("semantic lints", () => {
     assert.equal(bad.length, 2);
     assert.match(bad[0].message, /us-bank-of-america-free-spirit/);
     assert.match(bad[1].message, /SHARED_ART_FAMILIES/);
+  });
+
+  it("flags a local_path whose file is missing, and accepts a real file", async () => {
+    const { mkdtemp, writeFile, mkdir, rm } = await import("node:fs/promises");
+    const path = await import("node:path");
+    const os = await import("node:os");
+    const dir = await mkdtemp(path.join(os.tmpdir(), "oce-art-"));
+    try {
+      await mkdir(path.join(dir, "images"), { recursive: true });
+      await writeFile(path.join(dir, "images", "us-demo.webp"), "x");
+      const missing = findMissingArtFiles(
+        [
+          {
+            file: path.join(dir, "data/us/ghost.json"),
+            card: baseCard({
+              id: "us-ghost",
+              image: { local_path: "images/us-ghost.webp" },
+            }),
+          },
+        ],
+        dir,
+      );
+      assert.equal(missing.length, 1);
+      assert.match(missing[0].message, /does not exist/);
+
+      const ok = findMissingArtFiles(
+        [
+          {
+            file: path.join(dir, "data/us/demo.json"),
+            card: baseCard({
+              id: "us-demo",
+              image: { local_path: "images/us-demo.webp" },
+            }),
+          },
+        ],
+        dir,
+      );
+      assert.deepEqual(ok, []);
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
   });
 });

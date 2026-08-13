@@ -134,6 +134,16 @@ always a paste error (one product's face reused on another).
 issuer really prints the same plastic for those variants, add the Card Ids to
 `SHARED_ART_FAMILIES` in `scripts/validate.ts` in the same PR.
 
+## `image.local_path "…" does not exist`
+
+**Means:** the card JSON claims a local face (`images/<id>.webp` or `.png`) but
+that file is not in the checkout. A JSON-only art PR would leave a dangling
+path — Optimize Images never runs unless a raster is in the diff.
+
+**Fix:** commit the matching file under `images/`, or set `image.local_path` (and
+`image.provenance` if it only described that file) to `null`. Prefer
+`npx opencard-export --export --repo .` so the PNG and provenance land together.
+
 ---
 
 Still stuck? Re-read the [domain rules](contributing.md) and

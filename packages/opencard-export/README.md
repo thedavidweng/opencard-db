@@ -30,17 +30,26 @@ bunx opencard-export@latest
 Common flags:
 
 ```bash
-npx opencard-export --export            # copy card art into ./ (or images/ in a repo checkout)
-npx opencard-export --export ~/Desktop  # copy card art into a chosen folder
+npx opencard-export --export            # copy card art into images/ in a checkout, else ./
+npx opencard-export --export ~/Desktop  # extra copy; a checkout still gets images/ + provenance
+npx opencard-export --export --pr       # commit and open the GitHub PR (needs gh)
 npx opencard-export --json              # machine-readable report (no colors)
-npx opencard-export --no-remote         # skip the live DB comparison (offline)
+npx opencard-export --no-remote         # skip the public export; a checkout still reads data/
 npx opencard-export --help              # show help
 ```
 
-- `--repo <path>` — an OpenCard DB checkout; exports go straight into its `images/`,
-  and each matched card's JSON gets its `image.provenance` block written in place.
+- `--repo <path>` — an OpenCard DB checkout; compared against local `data/`
+  (not the stale public export), PNGs go into `images/`, and each matched
+  card's JSON gets `image.provenance` + Apple Pay attribution written in place.
+  A checkout is also auto-detected by walking up from the current directory.
+- `--pr` — after a successful `--export` into a checkout, commit the art and
+  open a filled-in `card(update)` (or bulk) Pull Request. Requires `git` + `gh`.
 - `--passes-dir <path>` — override the Wallet directory (advanced / testing).
 - `--no-color` — disable ANSI color (also honors `NO_COLOR`).
+
+In a clone, run `npm ci` first so `npx opencard-export` uses this checkout's
+CLI (the root package exposes the local bin). Without a clone, `npx` fetches
+the published package from npm.
 
 Non-payment passes (loyalty cards, tickets, boarding passes, store cards) are
 never shown and never exported — they're just counted in a one-line summary.

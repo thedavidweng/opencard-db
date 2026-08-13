@@ -100,29 +100,73 @@ function jaccard(aArr, bArr) {
   return union === 0 ? 0 : inter / union;
 }
 
-/**
- * Score a wallet card against a DB card in [0, 1]. Name-token overlap dominates;
- * a shared issuer token adds a bounded bonus.
- * @param {{name?:string, issuer?:string}} wallet
- * @param {{name?:string, issuer?:string}} db
- * @returns {number}
- */
-export function scoreMatch(wallet, db) {
+// Tokens that distinguish sibling products (Gold vs Business Gold, Preferred
+// vs Reserve). A DB-only discriminator is a strong negative — better to miss
+// than to write art onto the wrong Card Id.
+export const DISCRIMINATOR_TOKENS = new Set([
+  'business', 'corp', 'corporate', 'commercial',
+  'reserve', 'preferred', 'premier', 'plus', 'infinite',
+  'select', 'secured', 'student', 'rise', 'flex',
+  'signature', 'platinum', 'gold', 'green', 'blue',
+  'explorer', 'explore', 'quest', 'gateway', 'club',
+  'aspire', 'surpass', 'brilliant', 'bevy',
+  'bold', 'boundless', 'bountiful',
+]);
+
+function dbNameVariants(db) {
+  const out = [];
+  if (db && db.name) out.push(db.name);
+  if (db && db.localized_names && typeof db.localized_names === 'object') {
+    for (const v of Object.values(db.localized_names)) {
+      if (v) out.push(String(v));
+    }
+  }
+  if (db && db.id) {
+    out.push(String(db.id).replace(/^[a-z]{2}-/, '').replace(/-/g, ' '));
+  }
+  return out;
+}
+
+function scoreAgainstName(wallet, dbName, dbIssuer) {
   const wName = nameTokens(wallet.name);
-  const dName = nameTokens(db.name);
+  const dName = nameTokens(dbName);
+  if (normalizeText(wallet.name) && normalizeText(wallet.name) === normalizeText(dbName)) {
+    return 1;
+  }
   const nameScore = jaccard(wName, dName);
 
   const wIss = new Set(normalizeIssuer(wallet.issuer));
-  const dIss = new Set(normalizeIssuer(db.issuer));
+  const dIss = new Set(normalizeIssuer(dbIssuer));
   let issuerShared = false;
   for (const t of wIss) if (dIss.has(t)) { issuerShared = true; break; }
 
-  // Name overlap is the primary signal (0..1). Issuer agreement nudges it up;
-  // an issuer *conflict* (both known but disjoint) nudges it down slightly.
   let score = nameScore;
   if (issuerShared) score = Math.min(1, score + 0.15);
   else if (wIss.size && dIss.size) score = Math.max(0, score - 0.1);
-  return score;
+
+  const wSet = new Set(wName);
+  let penalty = 0;
+  for (const t of dName) {
+    if (DISCRIMINATOR_TOKENS.has(t) && !wSet.has(t)) penalty += 0.2;
+  }
+  return Math.max(0, score - penalty);
+}
+
+/**
+ * Score a wallet card against a DB card in [0, 1]. Name-token overlap dominates;
+ * a shared issuer token adds a bounded bonus. Extra DB-only product-line
+ * tokens (business / reserve / …) are penalised so siblings don't collide.
+ * @param {{name?:string, issuer?:string}} wallet
+ * @param {{name?:string, issuer?:string, id?:string, localized_names?:object}} db
+ * @returns {number}
+ */
+export function scoreMatch(wallet, db) {
+  let best = 0;
+  for (const name of dbNameVariants(db)) {
+    const s = scoreAgainstName(wallet, name, db && db.issuer);
+    if (s > best) best = s;
+  }
+  return best;
 }
 
 /**

@@ -98,6 +98,10 @@ jobs:
           written=$(node -e "const j=require('/tmp/opt.json'); console.log((j.written||[]).length)")
           echo "written=$written" >> "$GITHUB_OUTPUT"
 
+      - name: Refresh exports so npx lineage matches this PR
+        if: steps.opt.outputs.written != '0'
+        run: npm run build:exports
+
       - name: Detect changes
         id: changes
         run: |
@@ -115,8 +119,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # images/ = new WebP + archived old art; data/ = converted_sha256,
-          # local_path and image.history[] edits the chain wrote to card JSON.
-          git add images/ data/
+          # local_path and image.history[] edits the chain wrote to card JSON;
+          # exports/ = public lineage npx compares against.
+          git add images/ data/ exports/
           git commit -m "ci: verify + optimize card art to lossless WebP"
           git push
 
@@ -132,12 +137,13 @@ jobs:
           <!-- opencard-image-opt -->
           ### Image optimization needed
 
-          This PR adds raster images under `images/`. Because the branch lives on a **fork**, CI cannot push the results back automatically. Run the same chain locally, then commit both `images/` and `data/`:
+          This PR adds raster images under `images/`. Because the branch lives on a **fork**, CI cannot push the results back automatically. Run the same chain locally, then commit `images/`, `data/`, and `exports/`:
 
           ```bash
           npm ci
           npm run optimize:images
-          git add images/ data/
+          npm run build:exports
+          git add images/ data/ exports/
           git commit -m "ci: verify + optimize card art to lossless WebP"
           git push
           ```

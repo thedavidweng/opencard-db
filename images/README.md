@@ -27,10 +27,14 @@ npm run embed:default-card
 
 ### Preferred: Apple Pay extract (“graduation-level”)
 
-**One command (recommended):** on a Mac with the card in Apple Pay, run
-[`npx opencard-export --export`](../packages/opencard-export). It finds your payment
-cards, names each exported face after the matched Card Id, and prints the exact
-attribution to record. Everything runs locally; nothing is uploaded.
+**One command (recommended):** on a Mac with the card in Apple Pay, from a
+checkout after `npm ci`, run
+[`npx opencard-export --export --repo .`](../packages/opencard-export)
+(or just `npx opencard-export --export` — a checkout is auto-detected). It
+writes `images/<card-id>.png`, fills `image.provenance` + Apple Pay
+attribution, and prints the exact `git` / `gh pr create` steps (or pass
+`--pr` to open the PR). Everything runs locally; nothing is uploaded until
+you push.
 
 Manual fallback:
 

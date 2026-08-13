@@ -13,6 +13,14 @@ name: Refresh exports
 # needs a close/re-open or an admin merge.
 
 on:
+  schedule:
+    # Monday 06:00 UTC — keep @main exports (what npx compares against) fresh.
+    - cron: "0 6 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "images/**"
   workflow_dispatch:
 
 concurrency:
