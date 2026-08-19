@@ -47,7 +47,8 @@ permissions:
 jobs:
   labels:
     name: Labels
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
     steps:
       # No ref / no fork repository → base repo default branch (trusted code).
       - uses: actions/checkout@v7.0.1
