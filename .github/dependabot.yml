@@ -2,11 +2,19 @@ version: 2
 updates:
   # Keep GitHub Actions pinned in .github/workflows up to date.
   - package-ecosystem: github-actions
+  - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: weekly
 
   # Root npm project (schema, scripts, tests).
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
   - package-ecosystem: npm
     directory: "/"
     schedule:
