@@ -22,19 +22,16 @@ You get an unlimited (within **your** Free plan quotas) private API. No paid Clo
 ```bash
 cd worker
 npm install
-npx wrangler login
-npx wrangler kv namespace create OPENCARD_KV
+npx cf auth login
+npx cf kv namespaces create --title OPENCARD_KV
 ```
 
-Copy the namespace id into the top-level `kv_namespaces` entry of
-[`worker/wrangler.jsonc`](../worker/wrangler.jsonc) (the top level of that file
-is the self-host configuration; the `env.production` section is the official
-instance and is not used by a plain `wrangler deploy`):
+Copy the namespace ID into the self-host value of `OPENCARD_KV` in
+[`worker/cloudflare.config.ts`](../worker/cloudflare.config.ts). The production
+ID belongs to the official instance:
 
-```jsonc
-"kv_namespaces": [
-  { "binding": "OPENCARD_KV", "id": "<your-namespace-id>" }
-]
+```ts
+id: mode === "production" ? "<official-namespace-id>" : "<your-namespace-id>",
 ```
 
 ## 2. Build and upload indexes
@@ -53,13 +50,15 @@ Upload keys (few bulk keys only — fits Free write budget):
 export CLOUDFLARE_API_TOKEN=…
 export CLOUDFLARE_ACCOUNT_ID=…
 export KV_NAMESPACE_ID=<your-namespace-id>
-npx wrangler kv key put meta --path dist/indexes/meta.json --namespace-id $KV_NAMESPACE_ID --remote
-npx wrangler kv key put cards:all --path dist/indexes/cards-all.json --namespace-id $KV_NAMESPACE_ID --remote
-npx wrangler kv key put cards:by-id --path dist/indexes/cards-by-id.json --namespace-id $KV_NAMESPACE_ID --remote
-npx wrangler kv key put index:country --path dist/indexes/index-country.json --namespace-id $KV_NAMESPACE_ID --remote
-npx wrangler kv key put index:issuer --path dist/indexes/index-issuer.json --namespace-id $KV_NAMESPACE_ID --remote
-npx wrangler kv key put index:network --path dist/indexes/index-network.json --namespace-id $KV_NAMESPACE_ID --remote
-npx wrangler kv key put index:network_tier --path dist/indexes/index-network-tier.json --namespace-id $KV_NAMESPACE_ID --remote
+cd worker
+npx cf kv keys put meta --file ../dist/indexes/meta.json --namespace-id "$KV_NAMESPACE_ID"
+npx cf kv keys put cards:all --file ../dist/indexes/cards-all.json --namespace-id "$KV_NAMESPACE_ID"
+npx cf kv keys put cards:by-id --file ../dist/indexes/cards-by-id.json --namespace-id "$KV_NAMESPACE_ID"
+npx cf kv keys put index:country --file ../dist/indexes/index-country.json --namespace-id "$KV_NAMESPACE_ID"
+npx cf kv keys put index:issuer --file ../dist/indexes/index-issuer.json --namespace-id "$KV_NAMESPACE_ID"
+npx cf kv keys put index:network --file ../dist/indexes/index-network.json --namespace-id "$KV_NAMESPACE_ID"
+npx cf kv keys put index:network_tier --file ../dist/indexes/index-network-tier.json --namespace-id "$KV_NAMESPACE_ID"
+cd ..
 ```
 
 Or run `node --experimental-strip-types scripts/upload-kv.ts` after setting the
@@ -71,7 +70,7 @@ otherwise read from `worker/wrangler.jsonc`).
 ```bash
 cd worker
 # Self-host defaults: MODE=selfhost, rate limits off
-npx wrangler deploy
+npm run deploy
 ```
 
 > **A fresh deploy returns 404 until KV is seeded.** `/v1/health` and
@@ -91,17 +90,12 @@ npx wrangler deploy
 
 ## 4. Optional: official-style policy on your instance
 
-In the top-level `vars` of `worker/wrangler.jsonc`:
+In the self-host values of `worker/cloudflare.config.ts`:
 
-```jsonc
-"vars": {
-  "MODE": "official",
-  "REQUIRE_CLIENT_ID": "true",
-  "RATE_LIMIT_ENABLED": "true",
-  "RATE_LIMIT_PER_MINUTE": "30",
-  "RATE_LIMIT_PER_DAY": "500",
-  "CACHE_MAX_AGE": "300"
-}
+```ts
+MODE: bindings.text("official"),
+REQUIRE_CLIENT_ID: bindings.text("true"),
+RATE_LIMIT_ENABLED: bindings.text("true"),
 ```
 
 ## GitHub Actions secrets (official deploy)

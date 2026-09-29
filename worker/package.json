@@ -4,14 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "deploy:production": "wrangler deploy --env production",
-    "types": "wrangler types",
-    "typecheck": "wrangler types && tsc --noEmit"
+    "dev": "cf dev --mode selfhost",
+    "deploy": "cf deploy --mode selfhost",
+    "deploy:production": "cf deploy --mode production",
+    "types": "cf workers types --mode production",
+    "typecheck": "npm run types && tsc --noEmit"
   },
   "devDependencies": {
+    "cf": "1.0.0-beta.5",
     "typescript": "^7.0.2",
-    "wrangler": "^4.133.0"
+    "wrangler": "4.136.0"
   }
 }

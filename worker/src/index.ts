@@ -10,7 +10,7 @@ import {
   DEFAULT_CARD_WEBP_BASE64,
 } from "./default-card-asset";
 import { checkRateLimit } from "./rate-limit";
-// Env comes from worker-configuration.d.ts, generated from wrangler.jsonc by
+// Env comes from .cloudflare/types/index.d.ts, generated from cloudflare.config.ts by
 // `npm run types` (Cloudflare's recommended practice: never hand-write Env).
 import type { Card, Meta } from "./types";
 
