@@ -90,7 +90,8 @@ jobs:
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_TRIAGE_MODE: labels
         run: |
-          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_FILES
           node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
           cat /tmp/triage.json
 
@@ -114,11 +115,14 @@ jobs:
           # Re-classify after title fix; fall back to the event payload if
           # the gh re-read fails (rate limits) so an API hiccup can't produce
           # a bogus empty title/body.
-          export PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          export PR_TITLE
           [ -n "$PR_TITLE" ] || PR_TITLE="$PAYLOAD_TITLE"
-          export PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          export PR_BODY
           [ -n "$PR_BODY" ] || PR_BODY="$PAYLOAD_BODY"
-          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_FILES
           export PR_TRIAGE_MODE=labels
           node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
 
@@ -204,7 +208,8 @@ jobs:
           # too; the SHA env is the authenticated integrity anchor.
           git fetch --no-tags --depth=1 origin "refs/pull/${PR}/head" 2>/dev/null || \
             git fetch --no-tags origin "$HEAD_SHA" 2>/dev/null || true
-          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_FILES
           export BASE_SHA HEAD_SHA
           node --experimental-strip-types scripts/build-base-cards.ts > /tmp/base-cards.json
           echo "open PRs:" "$(wc -l < /tmp/open-prs.json)"
@@ -223,14 +228,19 @@ jobs:
           # Re-read title/body after Labels may have auto-fixed the title;
           # fall back to the event payload if the gh re-read fails (rate
           # limits) so an API hiccup can't fail the form on an empty title.
-          export PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          PR_TITLE="$(gh pr view "$PR" --json title -q .title || true)"
+          export PR_TITLE
           [ -n "$PR_TITLE" ] || PR_TITLE="$PAYLOAD_TITLE"
-          export PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          PR_BODY="$(gh pr view "$PR" --json body -q .body || true)"
+          export PR_BODY
           [ -n "$PR_BODY" ] || PR_BODY="$PAYLOAD_BODY"
-          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_FILES
           export PR_NUMBER="$PR"
-          export OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"
-          export BASE_CARDS_JSON="$(cat /tmp/base-cards.json)"
+          OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"
+          export OPEN_CARD_PRS_JSON
+          BASE_CARDS_JSON="$(cat /tmp/base-cards.json)"
+          export BASE_CARDS_JSON
           set +e
           node --experimental-strip-types scripts/run-pr-triage.ts > /tmp/triage.json
           code=$?
@@ -263,12 +273,17 @@ jobs:
           PR: ${{ github.event.pull_request.number }}
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
-          export PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
-          export PR_BODY="$(gh pr view "$PR" --json body -q .body)"
-          export PR_FILES="$(cat /tmp/pr-files.txt)"
+          PR_TITLE="$(gh pr view "$PR" --json title -q .title)"
+          export PR_TITLE
+          PR_BODY="$(gh pr view "$PR" --json body -q .body)"
+          export PR_BODY
+          PR_FILES="$(cat /tmp/pr-files.txt)"
+          export PR_FILES
           export PR_NUMBER="$PR"
-          export OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"
-          export BASE_CARDS_JSON="$(cat /tmp/base-cards.json)"
+          OPEN_CARD_PRS_JSON="$(cat /tmp/open-prs.json)"
+          export OPEN_CARD_PRS_JSON
+          BASE_CARDS_JSON="$(cat /tmp/base-cards.json)"
+          export BASE_CARDS_JSON
           export PR_TRIAGE_MODE=check
           export PR_AUTHOR
           # Mask exit 1 from incomplete forms — we still need the JSON to write the comment.

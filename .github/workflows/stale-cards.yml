@@ -95,7 +95,7 @@ jobs:
 
             # Build the issue body from the checked-out card file
             # (official_url + sources), guarded so a bad read skips one card.
-            if ! node -e '
+          CARD_BODY_JS=$(cat <<'NODE'
               const fs = require("fs");
               const [file, days, lastVerified] = process.argv.slice(1);
               let cardData = {};
@@ -118,10 +118,12 @@ jobs:
               lines.push("");
               lines.push("A contributor should re-check the official pages above, update any fields that changed, and bump `last_verified` to the date they checked. Then open a `card(update): " + (cardData.id || "") + "` PR (one card per PR).");
               fs.writeFileSync("/tmp/issue-body.md", lines.join("\n") + "\n");
-            ' "$file" "$days" "$last_verified"; then
-              echo "::warning::could not build issue body for $id; skipping"
-              continue
-            fi
+          NODE
+          )
+          if ! node -e "$CARD_BODY_JS" "$file" "$days" "$last_verified"; then
+            echo "::warning::could not build issue body for $id; skipping"
+            continue
+          fi
 
             if gh issue create \
               --title "$title" \
