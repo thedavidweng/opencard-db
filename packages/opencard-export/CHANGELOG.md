@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/thedavidweng/opencard-db/compare/opencard-export-v0.4.0...opencard-export-v0.4.1) (2026-10-10)
+
+
+### Bug Fixes
+
+* **data:** remove misattributed card-face URLs ([#417](https://github.com/thedavidweng/opencard-db/issues/417)) ([9178b89](https://github.com/thedavidweng/opencard-db/commit/9178b89bc6eb1de176da9af91095befe348c2e76))
+
 ## [0.4.0](https://github.com/thedavidweng/opencard-db/compare/opencard-export-v0.3.0...opencard-export-v0.4.0) (2026-07-25)
 
 
