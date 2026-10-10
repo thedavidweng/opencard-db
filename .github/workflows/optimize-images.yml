@@ -23,8 +23,7 @@ on:
       - "images/**.TIFF"
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: optimize-images-${{ github.event.pull_request.number }}
@@ -34,6 +33,7 @@ jobs:
   # Cheap gate: skip the sharp/npm job if the path filter matched a rename
   # edge case or non-raster somehow. Avoids wasting minutes on npm ci.
   gate:
+    timeout-minutes: 60
     runs-on: ubuntu-latest
     outputs:
       needs_optimize: ${{ steps.check.outputs.needs_optimize }}
@@ -53,6 +53,10 @@ jobs:
           fi
 
   optimize:
+    permissions:
+      contents: write
+      pull-requests: write
+    timeout-minutes: 60
     needs: gate
     if: needs.gate.outputs.needs_optimize == 'true'
     runs-on: ubuntu-latest
@@ -69,7 +73,7 @@ jobs:
           # the upstream base commit and degrade gracefully (no archive step).
           fetch-depth: 0
 
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: "24"
           cache: npm

@@ -14,7 +14,7 @@ updates:
           - "minor"
           - "patch"
     cooldown:
-      default-days: 5
+      default-days: 7
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
