@@ -11,12 +11,19 @@ on:
     types: [opened, labeled]
 
 permissions:
-  contents: write
-  pull-requests: write
-  issues: write
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
 
 jobs:
   scaffold:
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    timeout-minutes: 60
     name: Scaffold card from request
     if: contains(github.event.issue.labels.*.name, 'card-request')
     runs-on: ubuntu-latest
