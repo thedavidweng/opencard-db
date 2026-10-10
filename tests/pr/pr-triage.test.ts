@@ -1,5 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
+import { mkdtempSync, writeFileSync, rmSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import {
   compareIsoDates,
   detectRegions,
@@ -14,7 +17,7 @@ import {
   urlHostname,
   type CardKeyFields,
 } from "../../scripts/pr-triage.ts";
-import { extractKeyFields } from "../../scripts/build-base-cards.ts";
+import { extractKeyFields, readHeadBlob } from "../../scripts/build-base-cards.ts";
 
 const goodBody = `
 ## What kind of change is this?
@@ -802,5 +805,52 @@ describe("build-base-cards: extractKeyFields (pure)", () => {
     const f = extractKeyFields(raw)!;
     assert.equal(f.annual_fee_amount, null);
     assert.equal(f.segment, null);
+  });
+});
+
+
+describe("privileged PR card reads", () => {
+  it("reads only API data, distinguishes absent files, and exposes API failures", () => {
+    const dir = mkdtempSync(path.join(tmpdir(), "card-api-"));
+    const oldPath = process.env.PATH;
+    const oldRepo = process.env.GITHUB_REPOSITORY;
+    const oldCase = process.env.CARD_API_TEST_CASE;
+    writeFileSync(
+      path.join(dir, "gh"),
+      `#!${process.execPath}
+const mode = process.env.CARD_API_TEST_CASE;
+if (mode === "missing") { console.error("gh: Not Found (HTTP 404)"); process.exit(1); }
+if (mode === "denied") { console.error("gh: Forbidden (HTTP 403)"); process.exit(1); }
+process.stdout.write(JSON.stringify(process.argv.slice(2)));
+`,
+      { mode: 0o755 },
+    );
+    process.env.PATH = `${dir}${path.delimiter}${oldPath}`;
+    process.env.GITHUB_REPOSITORY = "example/cards";
+    try {
+      process.env.CARD_API_TEST_CASE = "success";
+      assert.deepEqual(JSON.parse(readHeadBlob("abc123", "data/us/card.json")!), [
+        "api",
+        "repos/example/cards/contents/data/us/card.json?ref=abc123",
+        "--header",
+        "Accept: application/vnd.github.raw+json",
+      ]);
+      process.env.CARD_API_TEST_CASE = "missing";
+      assert.equal(readHeadBlob("abc123", "data/us/card.json"), null);
+      process.env.CARD_API_TEST_CASE = "denied";
+      assert.throws(() => readHeadBlob("abc123", "data/us/card.json"), /HTTP 403/);
+      const workflow = readFileSync(new URL("../../.github/workflows/pr-checks.yml", import.meta.url), "utf8");
+      assert.doesNotMatch(workflow, /git fetch/);
+      assert.match(workflow, /persist-credentials: false/);
+      assert.doesNotMatch(workflow, /ref:.*head/);
+    } finally {
+      if (oldPath === undefined) delete process.env.PATH;
+      else process.env.PATH = oldPath;
+      if (oldRepo === undefined) delete process.env.GITHUB_REPOSITORY;
+      else process.env.GITHUB_REPOSITORY = oldRepo;
+      if (oldCase === undefined) delete process.env.CARD_API_TEST_CASE;
+      else process.env.CARD_API_TEST_CASE = oldCase;
+      rmSync(dir, { recursive: true });
+    }
   });
 });

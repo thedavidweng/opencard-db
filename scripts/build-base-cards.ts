@@ -6,16 +6,16 @@
  *   - decide add vs update and compare last_verified (base version), and
  *   - diff/flag high-impact key-field changes (base → head, anti-vandalism).
  *
- * Env: PR_FILES, BASE_SHA, HEAD_SHA (optional)
+ * Env: PR_FILES, BASE_SHA, HEAD_SHA (optional), GITHUB_REPOSITORY, GH_TOKEN
  * Prints JSON (path → BaseCardSnapshot) to stdout.
  *
- * Trust model: this only READS git blobs (`git show <sha>:<path>`) and parses
- * them as data — it never checks out or runs PR-authored code. The head blob is
+ * Trust model: read trusted base blobs with git and untrusted head JSON with
+ * the GitHub Contents API. Never fetch, check out, or run PR-authored code. The head blob is
  * treated exactly like the (untrusted) PR title/body: read, parsed, compared.
  * The blob-reading side effects live in main(); the field extraction is pure
  * and exported for unit tests.
  */
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import path from "node:path";
 import type { BaseCardSnapshot, CardKeyFields } from "./pr-triage.ts";
 
@@ -111,6 +111,23 @@ function gitShow(sha: string, filePath: string): string | null {
   }
 }
 
+export function readHeadBlob(sha: string, filePath: string): string | null {
+  const result = spawnSync(
+    "gh",
+    [
+      "api",
+      `repos/${process.env.GITHUB_REPOSITORY}/contents/${filePath}?ref=${sha}`,
+      "--header",
+      "Accept: application/vnd.github.raw+json",
+    ],
+    { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] },
+  );
+  if (result.error) throw result.error;
+  if (result.status === 0) return result.stdout;
+  if (result.stderr.includes("(HTTP 404)")) return null;
+  throw new Error(result.stderr);
+}
+
 function main(): void {
   const baseSha = process.env.BASE_SHA ?? "";
   const headSha = process.env.HEAD_SHA ?? "";
@@ -118,7 +135,9 @@ function main(): void {
     .split(/\r?\n/)
     .map((s) => s.trim())
     .filter((f) => CARD_PATH_RE.test(f));
-  const out = buildSnapshots(files, baseSha, headSha, gitShow);
+  const out = buildSnapshots(files, baseSha, headSha, (sha, filePath) =>
+    sha === headSha ? readHeadBlob(sha, filePath) : gitShow(sha, filePath),
+  );
   process.stdout.write(JSON.stringify(out));
 }
 

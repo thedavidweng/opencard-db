@@ -211,14 +211,8 @@ jobs:
             --json number,title,url,author \
             --jq '[.[] | {number, title, url, author: .author.login}]' \
             > /tmp/open-prs.json || echo '[]' > /tmp/open-prs.json
-          # Fetch the PR head commit as DATA ONLY so build-base-cards.ts can
-          # `git show <head_sha>:<path>` the proposed card versions and diff key
-          # fields (old → new). We never check it out or run PR-authored code —
-          # the head blob is treated exactly like the untrusted PR title/body
-          # (read, parsed, compared). refs/pull/<n>/head resolves for fork PRs
-          # too; the SHA env is the authenticated integrity anchor.
-          git fetch --no-tags --depth=1 origin "refs/pull/${PR}/head" 2>/dev/null || \
-            git fetch --no-tags origin "$HEAD_SHA" 2>/dev/null || true
+          # Read head card JSON through the Contents API in the trusted script.
+          # Do not fetch PR Git objects into this privileged job's checkout.
           PR_FILES="$(cat /tmp/pr-files.txt)"
           export PR_FILES
           export BASE_SHA HEAD_SHA
