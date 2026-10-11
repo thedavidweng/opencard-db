@@ -14,14 +14,14 @@ You get an unlimited (within **your** Free plan quotas) private API. No paid Clo
 ## Prerequisites
 
 - Cloudflare account (Free)
-- Node.js 20+
+- Node.js >=24 (matching root `package.json` engines)
 - This repository
 
 ## 1. Create a KV namespace
 
 ```bash
 cd worker
-npm install
+npm ci
 npx cf auth login
 npx cf kv namespaces create --title OPENCARD_KV
 ```
