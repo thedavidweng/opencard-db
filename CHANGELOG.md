@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.2](https://github.com/thedavidweng/opencard-db/compare/v0.3.1...v0.3.2) (2026-10-15)
+
+
+### Bug Fixes
+
+* **data:** remove misattributed card-face URLs ([#417](https://github.com/thedavidweng/opencard-db/issues/417)) ([9178b89](https://github.com/thedavidweng/opencard-db/commit/9178b89bc6eb1de176da9af91095befe348c2e76))
+
+
+### Documentation
+
+* **agents:** refactor guidance with progressive disclosure ([#448](https://github.com/thedavidweng/opencard-db/issues/448)) ([dcb2e34](https://github.com/thedavidweng/opencard-db/commit/dcb2e34dab5d002db434f88de0e548ca47097a10))
+
 ## [0.3.1](https://github.com/thedavidweng/opencard-db/compare/v0.3.0...v0.3.1) (2026-07-28)
 
 
