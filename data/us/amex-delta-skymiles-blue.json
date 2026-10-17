@@ -158,8 +158,16 @@
   "official_url": "https://www.americanexpress.com/us/credit-cards/card/delta-skymiles-blue-american-express-card/",
   "image": {
     "url": "https://icm.aexp-static.com/acquisition/card-art/NUS000000386_480x304_straight_withname.png",
-    "attribution": "© American Express",
-    "local_path": null
+    "attribution": "© American Express (Apple Pay digital card art)",
+    "local_path": "images/us-amex-delta-skymiles-blue.webp",
+    "provenance": {
+      "source": "apple-pay",
+      "source_sha256": "d17f60569599fca3f6ea7872f45671f32bdacd2a40c1d16ca9c083481b55d5d7",
+      "width": 1536,
+      "height": 969,
+      "exported_at": "2026-10-17",
+      "converted_sha256": "ff7d95e238b59b82bbcebef2937efdf8a88d74b08fe75f7e399716def8b939fa"
+    }
   },
   "bin_hints": [],
   "last_verified": "2026-07-25",

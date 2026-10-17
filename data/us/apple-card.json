@@ -146,8 +146,16 @@
   "official_url": "https://www.apple.com/apple-card/",
   "image": {
     "url": null,
-    "attribution": "© Goldman Sachs",
-    "local_path": null
+    "attribution": "© Apple Card (Apple Pay digital card art)",
+    "local_path": "images/us-apple-card.webp",
+    "provenance": {
+      "source": "apple-pay",
+      "source_sha256": "df7b76bc1bec2f455ff5a666ea13131711437adacc1f403ea8cff93c64c4bdbe",
+      "width": 764,
+      "height": 480,
+      "exported_at": "2026-10-17",
+      "converted_sha256": "96b93a647c49b44d3818880c5f3989ab43254b5f67d18976de1aa4d0a67a24e3"
+    }
   },
   "bin_hints": [],
   "last_verified": "2026-07-25",
