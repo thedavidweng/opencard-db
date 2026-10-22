@@ -412,6 +412,17 @@
       ]
     },
     {
+      "id": "elan",
+      "name": "Elan Financial Services",
+      "aliases": [
+        "Elan"
+      ],
+      "domains": [
+        "elanfinancialservices.com",
+        "fidelity.com"
+      ]
+    },
+    {
       "id": "ubs",
       "name": "UBS Bank USA",
       "aliases": [

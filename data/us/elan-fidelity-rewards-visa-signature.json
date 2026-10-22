@@ -1,0 +1,76 @@
+{
+  "id": "us-elan-fidelity-rewards-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Fidelity Rewards Visa Signature Card",
+  "localized_names": {
+    "en": "Fidelity Rewards Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "Elan Financial Services",
+  "issuer_id": "elan",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "fidelity_rewards_points",
+    "currency_label": "Fidelity Rewards Points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 Points per $1 in eligible net purchases."
+    },
+    "categories": [],
+    "redemption_notes": "The 2% cash back value applies only to Points redeemed as a deposit into an eligible Fidelity account; Points can also go to travel, merchandise, gift cards or a statement credit.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "global-entry-tsa-precheck",
+      "title": "Global Entry or TSA PreCheck credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $100 in Reward Points when you pay the Global Entry or TSA PreCheck application fee with the card."
+    },
+    {
+      "id": "auto-rental-cdw",
+      "title": "Auto Rental Collision Damage Waiver",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Auto Rental Collision Damage Waiver for up to $75,000."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.fidelity.com/spend-save/visa-signature-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.fidelity.com/spend-save/visa-signature-card"
+  ],
+  "notes": "Elan Financial Services reviews applications and services the account; Fidelity is not involved in credit decisions. APRs are not stated on the product page, so they are null."
+}
