@@ -133,7 +133,8 @@
   "last_verified": "2026-07-24",
   "sources": [
     "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
-    "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html"
+    "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html",
+    "https://web.archive.org/web/20260108130049/https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html"
   ],
-  "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (managed by Mercury Financial) in Aug 2024. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page (no standalone First Bank & Trust public page). Visa Signature."
+  "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (program managed by Mercury Financial) in 2024: Best Western's press release dated September 17, 2024 announces the launch of the two Best Western Rewards® Visa Signature® cards with Mercury Financial, and the official card page (archived 2026-01-08) states \"This card is issued by First Bank & Trust, Brookings, SD\". The earlier \"Aug 2024\" month is not on either page. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page (no standalone First Bank & Trust public page). Visa Signature. The card id keeps its legacy 'fnbo' prefix for id stability; the issuer and issuer_id fields carry the current issuer. Whether FNBO-era accounts were moved to First Bank & Trust or closed is not stated on these pages."
 }

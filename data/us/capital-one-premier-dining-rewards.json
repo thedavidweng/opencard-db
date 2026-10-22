@@ -9,7 +9,7 @@
   "issuer": "Capital One",
   "issuer_id": "capital-one",
   "network": "mastercard",
-  "network_tier": "world",
+  "network_tier": "world_elite",
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
@@ -39,15 +39,21 @@
   },
   "benefits": [],
   "official_url": "https://www.capitalone.com/credit-cards/",
-  "image": null,
+  "image": {
+    "url": "https://web.archive.org/web/20170930115820im_/https://www.capitalone.com/assets/credit-cards/img/4yKPqhJJAIW8gYAyysoqEO/7c6e9a90ddfff65e5bae4d2ac96c09f3/www-blue-steel-mc-worldelite-240x151.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
   "bin_hints": [],
   "last_verified": "2026-10-20",
   "sources": [
     "https://www.capitalone.com/credit-cards/",
-    "https://www.capitalone.com/credit-cards/savor/"
+    "https://www.capitalone.com/credit-cards/savor/",
+    "https://web.archive.org/web/20170504203433/https://www.capitalone.com/credit-cards/premier-dining-rewards/",
+    "https://web.archive.org/web/20170930115820/https://www.capitalone.com/credit-cards/premier-dining-rewards/"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Capital One catalog and Savor page establish a current Savor product, not the historical Premier Dining Rewards rebrand/conversion chain. Removed the unsupported replaced_by relationship and the unverified launch/rebrand chronology. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Capital One catalog and Savor page establish a current Savor product, not the historical Premier Dining Rewards rebrand/conversion chain. Removed the unsupported replaced_by relationship and the unverified launch/rebrand chronology. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Network tier correction (checked 2026-10-21): Capital One's own Premier Dining Rewards product page, archived 2017-05-04 and 2017-09-30, states \"The Premier Dining Rewards card also comes with World Elite Mastercard® Benefits\" and links the \"Complete Guide to World Elite Mastercard Benefits\", so network_tier is world_elite (was world). Card art: image.url is the issuer asset that the 2017-09-30 page's own product data assigns to \"Premier Dining Rewards\" (www-blue-steel-mc-worldelite-240x151.png, 240x151, reading 'world elite' with the Mastercard mark), served via its Internet Archive capture."
 }
