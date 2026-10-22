@@ -203,6 +203,7 @@
     "ca-td-first-class-travel-visa-infinite",
     "ca-td-platinum-travel-visa",
     "ca-td-rewards-visa",
+    "ca-td-us-dollar-visa",
     "us-td-aeroplan-visa-signature",
     "us-td-ameritrade-client-rewards",
     "us-td-business-solutions",
@@ -273,6 +274,7 @@
   "coastal-community-bank": [
     "us-aven-home-equity-visa",
     "us-aven-rewards-visa",
+    "us-onepay-builder-card",
     "us-robinhood-gold-card"
   ],
   "bank-of-america": [
