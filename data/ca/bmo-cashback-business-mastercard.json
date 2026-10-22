@@ -1,0 +1,80 @@
+{
+  "id": "ca-bmo-cashback-business-mastercard",
+  "schema_version": "1.0.0",
+  "name": "BMO CashBack Business Mastercard",
+  "localized_names": {
+    "en": "BMO CashBack Business Mastercard"
+  },
+  "country": "ca",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.99,
+      "max": 20.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "notes": "20.99% on purchases; 23.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian business owner who has reached the age of majority."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.75,
+      "description": "0.75% cash back on all other card purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas, office supplies, and cellphone and internet bill payments",
+        "points_per_dollar": 1.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back can be deposited to a chequing account or used to pay off the card balance.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 3,
+    "description": "10% cash back on gas, office supplies, and cellphone and internet bill payments for the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/main/business/credit-cards/bmo-cashback-no-fee-business-mastercard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/main/business/credit-cards/bmo-cashback-no-fee-business-mastercard/"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
