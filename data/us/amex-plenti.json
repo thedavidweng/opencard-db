@@ -9,8 +9,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "personal",
-  "status": "discontinued",
-  "discontinued_date": "2018-02-16",
+  "status": "unknown",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -27,12 +26,9 @@
   },
   "benefits": [],
   "official_url": "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html",
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-19",
   "sources": [
     "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html"
   ],
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
-  "notes": "Card discontinued February 2018. Plenti rewards program ended July 2018."
+  "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. This is not a credit-card withdrawal or conversion notice and does not support the previously recorded February 16, 2018 card withdrawal date. The old card URL returns a generic shell and the checked servicing URL returns 404; card availability, withdrawal date and successor remain unknown. Historical fees and rewards remain unverified."
 }
