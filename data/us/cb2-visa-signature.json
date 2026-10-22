@@ -1,0 +1,90 @@
+{
+  "id": "us-cb2-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "CB2 Visa Signature Credit Card",
+  "localized_names": {
+    "en": "CB2 Visa Signature Credit Card"
+  },
+  "country": "us",
+  "issuer": "First Bank & Trust",
+  "issuer_id": "first-bank-trust",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 33.49,
+      "type": "variable"
+    },
+    "notes": "Variable purchase APR 19.99% to 33.49% based on creditworthiness."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "brand_rewards",
+    "currency_label": "Reward Dollars",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in Reward Dollars on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Crate & Barrel, Crate & Barrel Kids, CB2 and Hudson Grace",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Dining (through 12/31/2026)",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Reward Dollars are redeemable at Crate & Barrel, CB2 and Crate & Barrel Kids.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 50,
+    "unit": "USD",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$50 in Reward Dollars after $1,000 in purchases outside Crate & Barrel, Crate & Barrel Kids, CB2 and Hudson Grace within the first 90 days.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "visa-signature-benefits",
+      "title": "Visa Signature benefits",
+      "category": "other",
+      "source": "network",
+      "description": "Visa Signature card benefits apply as described in the Visa Guide to Benefits."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.cb2.com/rewards/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cb2.com/rewards/",
+    "https://cb2.imprint.co/credit/legal/rewards-terms/en-us",
+    "https://cb2.imprint.co/credit/legal/credit-cardholder-agreement/en-us"
+  ],
+  "notes": "Issued by First Bank & Trust and serviced by Imprint Payments, Inc. Reward Dollars are a store currency."
+}
