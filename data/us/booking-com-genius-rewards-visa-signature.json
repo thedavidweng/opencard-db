@@ -1,0 +1,98 @@
+{
+  "id": "us-booking-com-genius-rewards-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Booking.com Genius Rewards Visa Signature Credit Card",
+  "localized_names": {
+    "en": "Booking.com Genius Rewards Visa Signature Credit Card"
+  },
+  "country": "us",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 23.24,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "notes": "Variable purchase APR 23.24% to 33.24% based on creditworthiness."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No currency conversion fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "travel_credits",
+    "currency_label": "Booking.com Travel Credits",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2% in Travel Credits on everything else."
+    },
+    "categories": [
+      {
+        "label": "Stays booked in the Booking.com app",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Flights, stays, car rentals, attractions, cruises and airport taxis on Booking.com",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Purchases at your destination during a stay booked on Booking.com",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Dining, gas and groceries",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "$1 in Travel Credits is $1 to use on Booking.com stays, flights, car rentals, airport taxis and attractions with no minimum.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 150,
+    "unit": "USD",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Limited-time offer for the first 10,000 new cardholders: $150 in Travel Credits after $1,500 in purchases in the first 90 days.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "genius-level-3",
+      "title": "Genius Level 3 status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Genius Level 3 with 10-20% off select stays, 10-15% off select rental cars and priority support."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.booking.com/co_brand_card.en-us.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.booking.com/co_brand_card.en-us.html"
+  ],
+  "notes": "Serviced by Imprint Payments, Inc."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "us-coinbase-one-card",
+  "schema_version": "1.0.0",
+  "name": "Coinbase One Card",
+  "localized_names": {
+    "en": "Coinbase One Card"
+  },
+  "country": "us",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "bitcoin",
+    "currency_label": "Bitcoin back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2% Bitcoin back at Tier 1 (Assets on Coinbase under $10,000). Higher tiers earn 2.5%, 3% or 4% on the first $10,000 in eligible purchases per calendar month, then 2%."
+    },
+    "categories": [
+      {
+        "label": "Flights, hotels and cars booked through Coinbase One Card Travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Bitcoin rewards are credited to the Coinbase digital asset wallet.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.coinbase.com/creditcard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.coinbase.com/creditcard",
+    "https://www.coinbase.com/legal/creditcard/rewards"
+  ],
+  "notes": "Serviced by Cardless, Inc. and offered through Coinbase, Inc. An active, paid Coinbase One membership (from $49.99 per year) is required to open and keep the card and to earn rewards; the card itself has no annual fee. Rewards tier depends on Assets on Coinbase. No American Express network package applies, so network_tier is none."
+}
