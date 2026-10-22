@@ -10,8 +10,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2022-04-01",
-  "replaced_by": "us-us-bank-altitude-go",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -35,5 +33,5 @@
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Discontinued April 2022; converted to U.S. Bank Altitude Go. Co-brand with Radisson Hotels (formerly Club Carlson)."
+  "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required."
 }

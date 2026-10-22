@@ -13,7 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2021-10-22",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -126,5 +125,5 @@
   "sources": [
     "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber"
   ],
-  "notes": "Discontinued October 2021. Cardholders product-changed to Barclays View Mastercard. The Uber Visa was a no-annual-fee Visa Signature card earning 4% back on dining/Uber Eats, 3% on travel/Uber rides, 2% on online purchases, 1% elsewhere. No foreign transaction fees. Verified from Wayback Machine snapshot of the official Barclays product page (Aug 2020)."
+  "notes": "Historical Uber Visa record. The retained August 2020 Wayback URL checked 2026-10-20 returns generic Barclays welcome/browser-update content, not readable Uber product terms. It does not verify the stored financial fields, exact withdrawal date, or a conversion to Barclays View Mastercard. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor, financial terms and historical artwork remain unknown; a readable official product archive or conversion notice is still required."
 }

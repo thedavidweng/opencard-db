@@ -10,8 +10,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2023-05-24",
-  "replaced_by": "us-wells-fargo-autograph",
   "annual_fee": {
     "amount": 0,
     "currency": "USD",
@@ -37,5 +35,5 @@
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Stopped accepting new applications 2021, fully deactivated Aug 2023. Replaced by Autograph."
+  "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required."
 }
