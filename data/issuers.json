@@ -556,6 +556,17 @@
         "bankpatriot.com",
         "mercury.com"
       ]
+    },
+    {
+      "id": "evolve-bank-trust",
+      "name": "Evolve Bank & Trust",
+      "aliases": [
+        "Evolve"
+      ],
+      "domains": [
+        "getevolved.com",
+        "step.com"
+      ]
     }
   ]
 }
