@@ -314,6 +314,17 @@
         "us.hsbc.com",
         "files.consumerfinance.gov"
       ]
+    },
+    {
+      "id": "navy-federal",
+      "name": "Navy Federal Credit Union",
+      "aliases": [
+        "Navy Federal",
+        "NFCU"
+      ],
+      "domains": [
+        "navyfederal.org"
+      ]
     }
   ]
 }

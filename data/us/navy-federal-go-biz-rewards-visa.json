@@ -1,0 +1,61 @@
+{
+  "id": "us-navy-federal-go-biz-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "Navy Federal GO BIZ Rewards Visa Credit Card",
+  "localized_names": {
+    "en": "Navy Federal GO BIZ Rewards Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "Navy Federal Credit Union",
+  "issuer_id": "navy-federal",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.65,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "As of 10/01/2026, APR 16.65% to 18% based on creditworthiness, varying with the Wall Street Journal Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "navy_federal_rewards_points",
+    "currency_label": "Navy Federal Rewards points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X point for every dollar spent."
+    },
+    "categories": [],
+    "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.navyfederal.org/services/business/credit-cards.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.navyfederal.org/services/business/credit-cards.html"
+  ],
+  "notes": "GO BIZ Rewards is available as a Visa or a Mastercard; this record is the Visa version."
+}

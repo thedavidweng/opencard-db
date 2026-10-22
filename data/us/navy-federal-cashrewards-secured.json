@@ -1,0 +1,67 @@
+{
+  "id": "us-navy-federal-cashrewards-secured",
+  "schema_version": "1.0.0",
+  "name": "Navy Federal cashRewards Secured Credit Card",
+  "localized_names": {
+    "en": "Navy Federal cashRewards Secured Credit Card"
+  },
+  "country": "us",
+  "issuer": "Navy Federal Credit Union",
+  "issuer_id": "navy-federal",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.0,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer variable APR 18.00%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Secured card for building credit; credit limit increase review after 3 months and upgrade review after 6 months."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% cash back on all purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back accrues with no cap until redeemed.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards-secured.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards-secured.html"
+  ],
+  "notes": "The page lists both Visa and Mastercard benefits without naming which network a given account uses, so the card is recorded as Visa with Mastercard as an additional network.",
+  "additional_networks": [
+    {
+      "network": "mastercard",
+      "network_tier": "none"
+    }
+  ]
+}

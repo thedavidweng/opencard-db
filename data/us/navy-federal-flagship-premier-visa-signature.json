@@ -1,0 +1,88 @@
+{
+  "id": "us-navy-federal-flagship-premier-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Navy Federal Flagship Premier Visa Signature Card",
+  "localized_names": {
+    "en": "Navy Federal Flagship Premier Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "Navy Federal Credit Union",
+  "issuer_id": "navy-federal",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.74,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "As of 10/22/2026, purchase, balance transfer and convenience check APR 15.74% to 18.00% based on creditworthiness."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "navy_federal_rewards_points",
+    "currency_label": "Navy Federal Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on everything else."
+    },
+    "categories": [
+      {
+        "label": "Travel",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Dining",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 4000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "50,000 bonus points after $4,000 in eligible purchases within 90 days, for accounts applied for between 9/10/2026 and 1/3/2027.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "airline-credit",
+      "title": "Annual airline credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$100 statement credit each year after spending $100 or more on eligible airline purchases."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-premier-visa-signature.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.navyfederal.org/loans-cards/credit-cards/flagship-premier-visa-signature.html"
+  ],
+  "notes": "Membership in Navy Federal Credit Union is required."
+}

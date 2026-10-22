@@ -1,0 +1,78 @@
+{
+  "id": "us-navy-federal-go-rewards",
+  "schema_version": "1.0.0",
+  "name": "Navy Federal GO REWARDS Credit Card",
+  "localized_names": {
+    "en": "Navy Federal GO REWARDS Credit Card"
+  },
+  "country": "us",
+  "issuer": "Navy Federal Credit Union",
+  "issuer_id": "navy-federal",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 13.49,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "0.99% intro APR on purchases for the first 6 months of account opening, then purchase and balance transfer variable APR 13.49% to 18.00%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "navy_federal_rewards_points",
+    "currency_label": "Navy Federal Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on everything else."
+    },
+    "categories": [
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/go-rewards.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.navyfederal.org/loans-cards/credit-cards/go-rewards.html"
+  ],
+  "notes": "The page lists Visa, Visa Signature, Mastercard and World Mastercard benefits, so the package depends on the account; network_tier is none.",
+  "additional_networks": [
+    {
+      "network": "mastercard",
+      "network_tier": "none"
+    }
+  ]
+}
