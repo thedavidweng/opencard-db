@@ -1,5 +1,55 @@
 # Changelog
 
+## [0.3.2](https://github.com/thedavidweng/opencard-db/compare/v0.3.1...v0.3.2) (2026-10-22)
+
+
+### Cards
+
+* **add:** us-column-bilt-obsidian ([#482](https://github.com/thedavidweng/opencard-db/issues/482)) ([c19e6a2](https://github.com/thedavidweng/opencard-db/commit/c19e6a2c8527764b0cadb03bc5a005989e1c9e9c))
+* **add:** us-column-bilt-palladium ([#483](https://github.com/thedavidweng/opencard-db/issues/483)) ([fbf6d9e](https://github.com/thedavidweng/opencard-db/commit/fbf6d9ebd21cd09cd4537f1f32f5165905975ec6))
+* **add:** us-discover-it-miles ([#458](https://github.com/thedavidweng/opencard-db/issues/458)) ([58b7f74](https://github.com/thedavidweng/opencard-db/commit/58b7f74151f3ed527b88927c0fc305abd990df2d))
+* **update:** us-column-bilt-blue ([#484](https://github.com/thedavidweng/opencard-db/issues/484)) ([858fc20](https://github.com/thedavidweng/opencard-db/commit/858fc20d2e4829adebc269fff27bac929ba7a7df))
+* **update:** us-td-ameritrade-client-rewards ([#454](https://github.com/thedavidweng/opencard-db/issues/454)) ([5208e89](https://github.com/thedavidweng/opencard-db/commit/5208e89b55000437d960c09b5f7b2553c30f37f0))
+* **update:** us-td-cash ([#456](https://github.com/thedavidweng/opencard-db/issues/456)) ([d3b1d36](https://github.com/thedavidweng/opencard-db/commit/d3b1d36f93df0d27a907dcc3ec7966472503db22))
+* **update:** us-us-bank-skypass-blue ([#457](https://github.com/thedavidweng/opencard-db/issues/457)) ([76fb309](https://github.com/thedavidweng/opencard-db/commit/76fb3096b80e03e4d5a232be868f3a2538e94c06))
+* **update:** us-us-bank-skypass-visa-secured ([#455](https://github.com/thedavidweng/opencard-db/issues/455)) ([004fd39](https://github.com/thedavidweng/opencard-db/commit/004fd39bad77f6450a489de060b104ffb44acbe7))
+* **update:** us-wells-fargo-bilt ([#485](https://github.com/thedavidweng/opencard-db/issues/485)) ([2e62edd](https://github.com/thedavidweng/opencard-db/commit/2e62edd38416f96652dea5e545a5cc960453aab8))
+* **update:** us-wells-fargo-reflect ([#453](https://github.com/thedavidweng/opencard-db/issues/453)) ([7a33ff4](https://github.com/thedavidweng/opencard-db/commit/7a33ff4899a10e129f05540c4e8a246ccc126b52))
+* **update:** verify Citi Executive World Legend against official terms ([#464](https://github.com/thedavidweng/opencard-db/issues/464)) ([bcbab67](https://github.com/thedavidweng/opencard-db/commit/bcbab67fb645709b5a76f21656c5be9b1afed149))
+
+
+### Bug Fixes
+
+* **card:** cite supported Citi Premier rebrand evidence ([#466](https://github.com/thedavidweng/opencard-db/issues/466)) ([51b9a15](https://github.com/thedavidweng/opencard-db/commit/51b9a15f25ac3e9a80a981ef490c4afd5df8f785))
+* **card:** match Spark Cash artwork to official product ([#467](https://github.com/thedavidweng/opencard-db/issues/467)) ([4d6bc31](https://github.com/thedavidweng/opencard-db/commit/4d6bc31388fc52cea952bf3f800f802912eb797e))
+* **cards:** associate four official product images ([#474](https://github.com/thedavidweng/opencard-db/issues/474)) ([eeb8a57](https://github.com/thedavidweng/opencard-db/commit/eeb8a5711419363e6ddb8bb37715cb9bea6587a3))
+* **cards:** link exact Bank of America co-brand artwork ([#475](https://github.com/thedavidweng/opencard-db/issues/475)) ([d6268b7](https://github.com/thedavidweng/opencard-db/commit/d6268b7dac6895919e4cbfc2ee37c40bf3365c14))
+* **data:** add official card art URLs for 6 cards missing images ([#449](https://github.com/thedavidweng/opencard-db/issues/449)) ([0f2192e](https://github.com/thedavidweng/opencard-db/commit/0f2192e73974b26a9940b21302568227deee8d19))
+* **data:** add three verified official card images ([#478](https://github.com/thedavidweng/opencard-db/issues/478)) ([c84ad8c](https://github.com/thedavidweng/opencard-db/commit/c84ad8cf9d1039eea76fb101a758ef826379eba3))
+* **data:** add verified official One Key artwork ([#473](https://github.com/thedavidweng/opencard-db/issues/473)) ([f3106a0](https://github.com/thedavidweng/opencard-db/commit/f3106a04f62cde6c8f02cbcd79ce293e58cacdc2))
+* **data:** audit Amazon and Lowes legacy Amex provenance ([#481](https://github.com/thedavidweng/opencard-db/issues/481)) ([486bfa1](https://github.com/thedavidweng/opencard-db/commit/486bfa1d62f7a1e3d933b1f02b8a6afef33e726f))
+* **data:** bound nine historical claims and retain five archived card images ([#476](https://github.com/thedavidweng/opencard-db/issues/476)) ([bf7ee45](https://github.com/thedavidweng/opencard-db/commit/bf7ee45e5f4f081d1ae2da695d3382baf03b00a8))
+* **data:** bound seven historical lifecycle claims to official evidence ([#471](https://github.com/thedavidweng/opencard-db/issues/471)) ([e7980b4](https://github.com/thedavidweng/opencard-db/commit/e7980b4691f33549ac0611a770355d44466326d2))
+* **data:** bound Virgin America lifecycle claims to issuer evidence ([#470](https://github.com/thedavidweng/opencard-db/issues/470)) ([40508f5](https://github.com/thedavidweng/opencard-db/commit/40508f52dcee81481bdaad9f44579c41a513c42c))
+* **data:** cite official Spark Miles rebrand announcement ([#465](https://github.com/thedavidweng/opencard-db/issues/465)) ([95c1be6](https://github.com/thedavidweng/opencard-db/commit/95c1be6177cef2092cbdba220d93724709e2d090))
+* **data:** distinguish Plenti loyalty and card lifecycle ([#461](https://github.com/thedavidweng/opencard-db/issues/461)) ([617d066](https://github.com/thedavidweng/opencard-db/commit/617d066f662c693a5346ffd6199f3797c9dd1f06))
+* **data:** distinguish proven Alaska rebrand from unknown lineage ([#468](https://github.com/thedavidweng/opencard-db/issues/468)) ([c4e2798](https://github.com/thedavidweng/opencard-db/commit/c4e27983537beb45d7876a12a507623a47e3c41c))
+* **data:** document Frontier Business official identity limits ([#479](https://github.com/thedavidweng/opencard-db/issues/479)) ([77da8fb](https://github.com/thedavidweng/opencard-db/commit/77da8fba0bbb78749d6b8a1d911d46c1ce6e5661))
+* **data:** mark unproven Plum lifecycle unknown ([#460](https://github.com/thedavidweng/opencard-db/issues/460)) ([a4decdd](https://github.com/thedavidweng/opencard-db/commit/a4decddbff959098cfed8152f6feecaaae229ec8))
+* **data:** remove fourteen unsupported historical lifecycle claims ([#477](https://github.com/thedavidweng/opencard-db/issues/477)) ([3af0cdd](https://github.com/thedavidweng/opencard-db/commit/3af0cdd3ad817e568245e6d00b099d44815c57b2))
+* **data:** remove misattributed card-face URLs ([#417](https://github.com/thedavidweng/opencard-db/issues/417)) ([9178b89](https://github.com/thedavidweng/opencard-db/commit/9178b89bc6eb1de176da9af91095befe348c2e76))
+* **data:** remove unsupported SimplyCash withdrawal date ([#459](https://github.com/thedavidweng/opencard-db/issues/459)) ([131fb24](https://github.com/thedavidweng/opencard-db/commit/131fb24c1906016488bbe1a2ead4ffd0cd22a364))
+* **data:** remove unsupported SKYPASS Classic availability and fee ([#462](https://github.com/thedavidweng/opencard-db/issues/462)) ([2ca66f6](https://github.com/thedavidweng/opencard-db/commit/2ca66f642db8e86b469eb2bdb3c527e7417a452c))
+* **data:** restore Discover artwork from matching official pages ([#469](https://github.com/thedavidweng/opencard-db/issues/469)) ([c3788cb](https://github.com/thedavidweng/opencard-db/commit/c3788cb5a79f259eeb77ebc8dc1995218403141f))
+* **data:** restore Schwab official product provenance ([#480](https://github.com/thedavidweng/opencard-db/issues/480)) ([8f40631](https://github.com/thedavidweng/opencard-db/commit/8f406310d17eacc0ba9506c77f1b45f3e0babe57))
+* **data:** verify Crystal pricing against September agreement ([#472](https://github.com/thedavidweng/opencard-db/issues/472)) ([cec2959](https://github.com/thedavidweng/opencard-db/commit/cec2959f04e779146be8cd2c64d3e88702d0cac4))
+* **release:** match root-only manifest release component ([#452](https://github.com/thedavidweng/opencard-db/issues/452)) ([910cf71](https://github.com/thedavidweng/opencard-db/commit/910cf71fc777f4f7756817b45d737b88586867a6))
+
+
+### Documentation
+
+* **agents:** refactor guidance with progressive disclosure ([#448](https://github.com/thedavidweng/opencard-db/issues/448)) ([dcb2e34](https://github.com/thedavidweng/opencard-db/commit/dcb2e34dab5d002db434f88de0e548ca47097a10))
+
 ## [0.3.1](https://github.com/thedavidweng/opencard-db/compare/v0.3.0...v0.3.1) (2026-07-28)
 
 
