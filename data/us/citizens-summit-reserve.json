@@ -1,0 +1,119 @@
+{
+  "id": "us-citizens-summit-reserve",
+  "schema_version": "1.0.0",
+  "name": "Citizens Summit Reserve World Elite Mastercard",
+  "localized_names": {
+    "en": "Citizens Summit Reserve World Elite Mastercard"
+  },
+  "country": "us",
+  "issuer": "Citizens",
+  "issuer_id": "citizens",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 295,
+    "currency": "USD",
+    "first_year": 295,
+    "waiver_conditions": "Waived for Citizens Private Client checking and Private Bank customers; reduced to $95 for customers with a Citizens Quest checking relationship."
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "19.49% to 28.49% variable APR on purchases and balance transfers. Cash advance APR 28.49%. Balance transfer fee $10 or 5%, whichever is greater. No penalty APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on everything else."
+    },
+    "categories": [
+      {
+        "label": "Dining",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Groceries",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Entertainment, including streaming services",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "global-entry-tsa-precheck",
+      "title": "Global Entry or TSA PreCheck credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Credit of up to $120 for Global Entry or TSA PreCheck every 4.5 years."
+    },
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Priority Pass membership with four free lounge visits each year."
+    },
+    {
+      "id": "travel-credit",
+      "title": "Annual travel credits",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $120 in annual statement credits when you charge $10 or more on eligible travel purchases."
+    },
+    {
+      "id": "lyft-credit",
+      "title": "Lyft credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$10 statement credit each month you spend $25 or more on Lyft rides."
+    },
+    {
+      "id": "concierge",
+      "title": "Citizens Concierge",
+      "category": "other",
+      "source": "issuer",
+      "description": "Complimentary 24/7 concierge service."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.citizensbank.com/credit-cards/summit-reserve.aspx",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citizensbank.com/credit-cards/summit-reserve.aspx",
+    "https://www.citizensbank.com/dam/1886c965-3b09-418e-89e9-b3fa012b2caa/cc-summit-reserve-tc-pass-original-file.pdf"
+  ],
+  "notes": ""
+}

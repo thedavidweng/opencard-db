@@ -1,0 +1,86 @@
+{
+  "id": "us-citizens-summit",
+  "schema_version": "1.0.0",
+  "name": "Citizens Summit World Mastercard",
+  "localized_names": {
+    "en": "Citizens Summit World Mastercard"
+  },
+  "country": "us",
+  "issuer": "Citizens",
+  "issuer_id": "citizens",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "17.49% to 27.49% variable APR on purchases. 0% intro APR on balance transfers for the first 12 billing cycles from account opening, then 17.49% to 27.49%. Cash advance APR 28.49%. Balance transfer fee $10 or 5%, whichever is greater. No penalty APR."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Either $1.50 or 3% of the U.S. dollar amount of each transaction, whichever is greater. Waived for cardholders with a Citizens Quest Checking Account, a Private Client Checking Account or a Private Bank relationship."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on everything else."
+    },
+    "categories": [
+      {
+        "label": "Dining",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Groceries",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "lyft-credit",
+      "title": "Lyft credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$5 Lyft credit when you take three eligible rides in the same month."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.citizensbank.com/credit-cards/summit.aspx",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citizensbank.com/credit-cards/summit.aspx",
+    "https://www.citizensbank.com/dam/aa33478d-82af-4775-883f-b3fa01028915/cc-summit-passive-tc-original-file.pdf"
+  ],
+  "notes": ""
+}

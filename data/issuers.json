@@ -348,6 +348,16 @@
         "merrickbank.com",
         "ollocard.com"
       ]
+    },
+    {
+      "id": "citizens",
+      "name": "Citizens",
+      "aliases": [
+        "Citizens Bank"
+      ],
+      "domains": [
+        "citizensbank.com"
+      ]
     }
   ]
 }
