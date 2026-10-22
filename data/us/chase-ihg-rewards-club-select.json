@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2018-04-05",
-  "replaced_by": "us-chase-ihg-premier",
   "annual_fee": {
     "amount": 49,
     "currency": "USD",
@@ -55,12 +53,13 @@
   "benefits": [],
   "official_url": "https://creditcards.chase.com/",
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-20",
   "sources": [
-    "https://creditcards.chase.com/"
+    "https://creditcards.chase.com/",
+    "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Discontinued 2018 when Chase launched IHG Premier and Traveler cards."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Chase catalog and quarterly sample-agreement registry do not establish the historical Select card's precise application-withdrawal date or an explicit conversion to IHG Premier. The current IHG One Rewards Premier Select product is separately named and does not prove that lineage. Removed unsupported 2018-04-05 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
 }

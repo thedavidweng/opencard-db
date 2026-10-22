@@ -13,7 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "replaced_by": "us-capital-one-savor",
   "annual_fee": {
     "amount": 0,
     "currency": "USD",
@@ -42,12 +41,13 @@
   "official_url": "https://www.capitalone.com/credit-cards/",
   "image": null,
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-20",
   "sources": [
-    "https://www.capitalone.com/credit-cards/"
+    "https://www.capitalone.com/credit-cards/",
+    "https://www.capitalone.com/credit-cards/savor/"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Launched March 2017, rebranded to Savor then SavorOne. Current successor is Capital One Savor."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Capital One catalog and Savor page establish a current Savor product, not the historical Premier Dining Rewards rebrand/conversion chain. Removed the unsupported replaced_by relationship and the unverified launch/rebrand chronology. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
 }

@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "business",
   "status": "discontinued",
-  "discontinued_date": "2016-11-03",
-  "replaced_by": "us-chase-ink-business-preferred",
   "annual_fee": {
     "amount": 95,
     "currency": "USD",
@@ -59,12 +57,13 @@
   "benefits": [],
   "official_url": "https://creditcards.chase.com/",
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-20",
   "sources": [
-    "https://creditcards.chase.com/"
+    "https://creditcards.chase.com/",
+    "https://creditcards.chase.com/business-credit-cards/ink/business-preferred"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Discontinued when Ink Business Preferred launched."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Ink Business Preferred product page and Chase sample-agreement registry do not establish the historical Ink Plus card's withdrawal date or an explicit conversion. Removed unsupported 2016-11-03 and Ink Business Preferred replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
 }

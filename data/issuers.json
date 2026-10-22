@@ -86,7 +86,8 @@
       ],
       "domains": [
         "chase.com",
-        "amazon.com"
+        "amazon.com",
+        "files.consumerfinance.gov"
       ]
     },
     {
@@ -200,7 +201,8 @@
       "name": "PenFed Credit Union",
       "aliases": [],
       "domains": [
-        "penfed.org"
+        "penfed.org",
+        "files.consumerfinance.gov"
       ]
     },
     {
@@ -299,7 +301,8 @@
       ],
       "domains": [
         "hsbc.com",
-        "us.hsbc.com"
+        "us.hsbc.com",
+        "files.consumerfinance.gov"
       ]
     }
   ]

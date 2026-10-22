@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2018-01-16",
-  "replaced_by": "us-penfed-pathfinder",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -64,12 +62,13 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-20",
   "sources": [
-    "https://www.penfed.org/credit-cards/"
+    "https://www.penfed.org/credit-cards/",
+    "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Discontinued January 2018, replaced by PenFed Pathfinder Rewards."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Pentagon Federal Credit Union/PenFed Premium Travel Rewards American Express Affinity Groups.pdf\" explicitly names this historical American Express product. Another archived agreement names both Pathfinder and Premium Travel Rewards American Express cards; co-listing is not a conversion notice and does not prove transition to the current Pathfinder Visa product. Removed unsupported 2018-01-16 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
 }

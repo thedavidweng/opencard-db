@@ -1,9 +1,9 @@
 {
   "id": "us-hsbc-premier-world-elite",
   "schema_version": "1.0.0",
-  "name": "HSBC Premier World Elite Mastercard\u00ae Credit Card",
+  "name": "HSBC Premier World Elite Mastercard® Credit Card",
   "localized_names": {
-    "en": "HSBC Premier World Elite Mastercard\u00ae Credit Card"
+    "en": "HSBC Premier World Elite Mastercard® Credit Card"
   },
   "country": "us",
   "issuer": "HSBC",
@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2021-01-01",
-  "replaced_by": "us-hsbc-elite",
   "annual_fee": {
     "amount": 395,
     "currency": "USD",
@@ -92,12 +90,13 @@
   "official_url": "https://www.us.hsbc.com/credit-cards/products/elite/",
   "image": null,
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-20",
   "sources": [
-    "https://www.us.hsbc.com/credit-cards/products/elite/"
+    "https://www.us.hsbc.com/credit-cards/products/elite/",
+    "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Renamed to HSBC Elite Credit Card in early 2021. This card was the World Elite Mastercard tier predecessor to the current HSBC Elite credit card. Rewards and benefits shown are minimal/historical; the successor product (us-hsbc-elite) carries the current, richer benefits structure."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"HSBC Bank USA/Premier World Elite MasterCard Cardmember Agreement and Disclosure.pdf\" explicitly names this personal product and HSBC Bank USA, N.A. on its 10/2018 agreement cover. Current HSBC Elite product and terms pages establish the current product, not the date or terms of a historical conversion. Removed unsupported 2021-01-01, early-2021 rename and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
 }

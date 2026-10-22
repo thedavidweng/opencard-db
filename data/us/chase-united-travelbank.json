@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2020-09-21",
-  "replaced_by": "us-chase-united-gateway",
   "annual_fee": {
     "amount": 0,
     "currency": "USD",
@@ -55,12 +53,14 @@
   "benefits": [],
   "official_url": "https://creditcards.chase.com/",
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-20",
   "sources": [
-    "https://creditcards.chase.com/"
+    "https://creditcards.chase.com/",
+    "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+    "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Discontinued 2020, replaced by United Gateway Card."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Chase Bank USA/United TravelBank Visa Agreement.pdf\" associates this historical product with Chase; its body is a general cardmember agreement. The current Gateway product page is not a conversion notice. Removed unsupported 2020-09-21 and Gateway replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
 }

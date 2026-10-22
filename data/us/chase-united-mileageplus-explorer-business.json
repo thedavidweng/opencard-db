@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "business",
   "status": "discontinued",
-  "discontinued_date": "2020-01-23",
-  "replaced_by": "us-chase-united-business",
   "annual_fee": {
     "amount": 95,
     "currency": "USD",
@@ -55,12 +53,13 @@
   "benefits": [],
   "official_url": "https://creditcards.chase.com/",
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-20",
   "sources": [
-    "https://creditcards.chase.com/"
+    "https://creditcards.chase.com/",
+    "https://creditcards.chase.com/business-credit-cards/united/united-business-card"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Closed to new applicants January 2020, replaced by United Business Card."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current United Business product page and Chase sample-agreement registry do not prove an exact withdrawal date or conversion for the historical MileagePlus Explorer Business product. Removed unsupported 2020-01-23 and United Business replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
 }
