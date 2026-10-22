@@ -1,0 +1,111 @@
+{
+  "id": "us-us-bank-flexperks-travel-rewards",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank FlexPerks Travel Rewards Visa Signature Card",
+  "localized_names": {
+    "en": "U.S. Bank FlexPerks Travel Rewards Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "annual_fee": {
+    "amount": 49,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "Archived 2019 terms: $0 introductory annual fee for the first 12 months, then $49; U.S. Bank Platinum Checking customers received a second-year annual fee waiver."
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.99,
+      "max": 25.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 25.99,
+      "max": 25.99,
+      "type": "variable"
+    },
+    "notes": "Archived 2019-08-25 Credit Card Terms: purchase and balance transfer APR 15.99%-25.99% variable based on creditworthiness; cash advance APR 25.99% variable; no penalty APR. Balance transfer fee 3% ($5 minimum); cash advance fee 4% ($10 minimum); late fee up to $39. Rates vary with the Prime Rate and are historical."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Archived 2019 terms list Foreign Transaction: None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "FlexPoints",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 FlexPoint for every $1 on all other eligible Net Purchases."
+    },
+    "categories": [
+      {
+        "label": "Airlines, gas stations or grocery stores, whichever category has the most spend in each monthly billing cycle",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Most cell phone service providers",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Qualifying charitable donations",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Archived 2019 product page: redeem FlexPoints for airfare, hotel stays, car rentals and cruises (25,000 FlexPoints shown as worth $375 in travel), plus merchandise, gift cards, cash back and live events; Real-Time Mobile Rewards redemption. Up to $25 reimbursement per round-trip air travel award ticket toward baggage fees or in-flight food and drinks."
+  },
+  "signup_bonus": {
+    "amount": 25000,
+    "unit": "points",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 4,
+    "description": "Archived offer (2019-08-25): 25,000 enrollment FlexPoints after $2,000 in eligible Net Purchases within the first four months of account opening. The card no longer accepts new applications, so this offer is historical.",
+    "as_of": "2019-08-25"
+  },
+  "benefits": [
+    {
+      "id": "award-ticket-incidental-reimbursement",
+      "title": "Award ticket incidental reimbursement",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Reimbursement of up to $25 per round-trip air travel award ticket toward baggage fees or in-flight food and drinks."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://web.archive.org/web/20190825232548/https://www.usbank.com/credit-cards/flexperks-travel-rewards-visa-signature-credit-card.html",
+  "image": {
+    "url": "https://web.archive.org/web/20190902140119im_/https://www.usbank.com/dam/images/rps/large/cardArt_flexperks_travel-large-333x209.png",
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-10-21",
+  "sources": [
+    "https://web.archive.org/web/20190825232548/https://www.usbank.com/credit-cards/flexperks-travel-rewards-visa-signature-credit-card.html",
+    "https://web.archive.org/web/20190825232548/https://applications.usbank.com/oad/termsSimpleApply.controller?locationCode=8985&offerId=H13PP2RR7H&sourceCode=97632",
+    "https://www.usbank.com/credit-cards/benefits.html"
+  ],
+  "notes": "Status evidence: the official U.S. Bank card benefits page (checked 2026-10-21) lists U.S. Bank FlexPerks Travel Rewards Visa Signature Card under \"Personal Credit Cards (no longer accepting new applications)\". U.S. Bank does not state the date applications closed, so discontinued_date is omitted, and no successor is asserted. Fees, APRs, earning rates and the welcome offer come from the retained 2019-08-25 archives of the official product page and its linked Credit Card Terms; they describe that offer generation only and current terms for existing cardmembers were not verified. The archived product page footnotes were not captured, so category caps and the credit-score band are left unknown. The card image is the official product-page asset (alt text \"flexperks travel rewards visa signature credit card\"); it resolves to a 2019-09-02 archive capture and was visually inspected as the black U.S. Bank FlexPerks travel rewards Visa Signature card."
+}
