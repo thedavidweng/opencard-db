@@ -1,0 +1,67 @@
+{
+  "id": "us-affinity-fcu-premium-visa",
+  "schema_version": "1.0.0",
+  "name": "Affinity FCU Premium Visa",
+  "localized_names": {
+    "en": "Affinity FCU Premium Visa"
+  },
+  "country": "us",
+  "issuer": "Affinity Federal Credit Union",
+  "issuer_id": "affinity-fcu",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 12.1,
+      "max": 16.1,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 18.0,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR 12.10% to 16.10% per the credit card disclosure dated 12/17/2025; cash advance APR 18.00%."
+  },
+  "fx_fee": {
+    "percent": 2,
+    "notes": "2% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Affinity membership required ($5 membership eligibility account)."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised for this card."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.affinityfcu.com/personal-banking/banking/credit-card/premium-visa",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.affinityfcu.com/personal-banking/banking/credit-card/premium-visa",
+    "https://www.affinityfcu.com/Privacy-Disclosures/CC-Disclosure.pdf"
+  ],
+  "notes": "No Visa network package is stated, so network_tier is none."
+}

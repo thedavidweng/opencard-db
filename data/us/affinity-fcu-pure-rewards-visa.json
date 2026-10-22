@@ -1,0 +1,75 @@
+{
+  "id": "us-affinity-fcu-pure-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "Affinity FCU Pure Rewards Visa",
+  "localized_names": {
+    "en": "Affinity FCU Pure Rewards Visa"
+  },
+  "country": "us",
+  "issuer": "Affinity Federal Credit Union",
+  "issuer_id": "affinity-fcu",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.5,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 18.0,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR 15.50% to 18.00% per the credit card disclosure dated 12/17/2025; cash advance APR 18.00%."
+  },
+  "fx_fee": {
+    "percent": 2,
+    "notes": "2% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Affinity membership required ($5 membership eligibility account)."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Affinity Rewards points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 spent."
+    },
+    "categories": [],
+    "redemption_notes": "Points never expire and redeem for cash back, travel and other rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 5000,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "5,000 bonus points on the first purchase, plus 5,000 bonus points for $10,000 in purchases in the first 12 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.affinityfcu.com/personal-banking/banking/credit-card/pure-rewards-visa",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.affinityfcu.com/personal-banking/banking/credit-card/pure-rewards-visa",
+    "https://www.affinityfcu.com/Privacy-Disclosures/CC-Disclosure.pdf"
+  ],
+  "notes": "The product page mentions Visa Signature Concierge, but the card is disclosed with the standard Visa cards rather than the Visa Signature disclosure, so network_tier is none."
+}
