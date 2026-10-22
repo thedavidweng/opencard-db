@@ -12,7 +12,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "business",
-  "status": "active",
+  "status": "unknown",
   "annual_fee": {
     "amount": 0,
     "currency": "USD",
@@ -108,7 +108,7 @@
   },
   "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/lowes-credit-cards/",
   "image": {
-    "url": null,
+    "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/policies/images/lowes_sbs_240x152.jpg",
     "attribution": "© American Express",
     "local_path": null
   },
@@ -116,7 +116,9 @@
   "last_verified": "2026-07-25",
   "sources": [
     "https://www.lowes.com/l/Credit/business-credit-center",
-    "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2024-q2-pdf-cmas/gcs-small-business/lowes-business-rewards-card-07-04-2024.pdf"
+    "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2024-q2-pdf-cmas/gcs-small-business/lowes-business-rewards-card-07-04-2024.pdf",
+    "https://www.synchrony.com/contenthub/newsroom/synchrony-expands-partnership-with-lowes.html",
+    "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
   ],
-  "notes": "No-annual-fee Lowe's co-brand business card issued by American Express (usable anywhere Amex is accepted). Earns 2% cash back at Lowe's, U.S. restaurants, U.S. office supply stores, and U.S. wireless telephone services, and 1% on all other eligible purchases. Intro offer: 5% back at Lowe's for the first six months. Cardholders also get an automatic 5% discount on eligible Lowe's purchases. Rewards are Lowe's Business Rewards points (~1 cent each), redeemable as statement credits or Lowe's/Amex gift cards — not Membership Rewards (corrected). Amex-branded protections (car rental, extended warranty, purchase protection, Global Assist) and up to 99 free employee cards. The Amex product URL redirects to the general business-cards gallery (card is applied for through Lowe's), so earn rates and benefits were verified via the American Express cardmember agreement and Business Insider. Prior image was wrong-product art (Business Platinum) and was cleared."
+  "notes": "No-annual-fee Lowe's co-brand business card issued by American Express (usable anywhere Amex is accepted). Earns 2% cash back at Lowe's, U.S. restaurants, U.S. office supply stores, and U.S. wireless telephone services, and 1% on all other eligible purchases. Intro offer: 5% back at Lowe's for the first six months. Cardholders also get an automatic 5% discount on eligible Lowe's purchases. Rewards are Lowe's Business Rewards points (~1 cent each), redeemable as statement credits or Lowe's/Amex gift cards — not Membership Rewards (corrected). Amex-branded protections (car rental, extended warranty, purchase protection, Global Assist) and up to 99 free employee cards. The Amex product URL redirects to the general business-cards gallery (card is applied for through Lowe's), so earn rates and benefits were verified via the American Express cardmember agreement and Business Insider. Prior image was wrong-product art (Business Platinum) and was cleared. Official-source audit (2026-10-20): Synchrony's April 30, 2026 announcement identifies the newly available MyLowe's Pro Rewards American Express Card as issued by Synchrony, with American Express continuing as the payment network. That is not proof of the old American Express-issued Lowe's Business Rewards account's exact closure or conversion date. This record retains the historical American Express issuer and July 25, 2026 financial snapshot; current lifecycle is unknown, and no unverified successor ID or discontinuation date is assigned. The earlier Lowe's application-channel note is historical and does not describe the new Synchrony offer. American Express's insurance directory associates the Lowe's Business Rewards label with the linked legacy artwork. The issuer-hosted image does not revalidate financial terms, current design, current availability, or separate reuse permission."
 }

@@ -12,7 +12,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "business",
-  "status": "active",
+  "status": "unknown",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -94,9 +94,9 @@
     "hotel_status": null,
     "other": []
   },
-  "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
+  "official_url": "https://www.americanexpress.com/us/customer-service/faq.amazon-program-update.html",
   "image": {
-    "url": null,
+    "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/policies/Card_Art/amazon_bus_d1_240x152.jpg",
     "attribution": "© American Express",
     "local_path": null
   },
@@ -104,7 +104,9 @@
   "last_verified": "2026-07-24",
   "sources": [
     "https://www.americanexpress.com/amazonrewards",
-    "https://www.amazon.com/gp/help/customer/display.html?nodeId=G4QL7QHAK89CPE6P"
+    "https://www.amazon.com/gp/help/customer/display.html?nodeId=G4QL7QHAK89CPE6P",
+    "https://www.americanexpress.com/us/customer-service/faq.amazon-program-update.html",
+    "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
   ],
-  "notes": "No-annual-fee, non-Prime Amazon co-brand business card (the Prime variant earns 5% instead of 3%). Earns 3% back (or 60-day interest-free payment terms) on the first $120,000/year in eligible U.S. purchases at Amazon Business, Amazon.com, AWS, and Whole Foods Market (1% thereafter), 2% at U.S. restaurants/gas/wireless, and 1% on all other purchases. Rewards are Amazon reward points (~1 cent each) redeemable as statement credit or toward Amazon purchases — not Membership Rewards. The Amex product URL redirects to the general business-cards gallery (the card is applied for through Amazon), so earn rates were verified via the American Express Amazon Rewards Program Agreement and the Amazon help center. Prior image was wrong-product art (Business Platinum) and was cleared. Welcome offer and foreign-transaction fee not confirmed."
+  "notes": "No-annual-fee, non-Prime Amazon co-brand business card (the Prime variant earns 5% instead of 3%). Earns 3% back (or 60-day interest-free payment terms) on the first $120,000/year in eligible U.S. purchases at Amazon Business, Amazon.com, AWS, and Whole Foods Market (1% thereafter), 2% at U.S. restaurants/gas/wireless, and 1% on all other purchases. Rewards are Amazon reward points (~1 cent each) redeemable as statement credit or toward Amazon purchases — not Membership Rewards. The Amex product URL redirects to the general business-cards gallery (the card is applied for through Amazon), so earn rates were verified via the American Express Amazon Rewards Program Agreement and the Amazon help center. Prior image was wrong-product art (Business Platinum) and was cleared. Welcome offer and foreign-transaction fee not confirmed. Official-source audit (2026-10-20): the American Express program-update FAQ says the Amazon co-brand relationship is ending and accounts are expected to move to U.S. Bank on August 14, 2026, with exceptions and an exact Replacement Date to be provided by U.S. Bank. This is an announced transition, not evidence that every account transferred on that date; current lifecycle is unknown, with no exact discontinued_date or unverified replacement-card ID assigned. The retained rewards and fees are the historical July 24, 2026 snapshot, not current U.S. Bank terms; the earlier application-channel note is historical. American Express's insurance directory explicitly associates the non-Prime Amazon Business label with this artwork, separately from Amazon Business Prime. The image is issuer-hosted historical artwork, not proof of current card availability, current design, or separate reuse permission."
 }
