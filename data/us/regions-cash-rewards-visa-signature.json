@@ -1,0 +1,76 @@
+{
+  "id": "us-regions-cash-rewards-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Regions Cash Rewards Visa Signature",
+  "localized_names": {
+    "en": "Regions Cash Rewards Visa Signature"
+  },
+  "country": "us",
+  "issuer": "Regions Bank",
+  "issuer_id": "regions",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 12 months on purchases that post in the same period and on balance transfers that post within 60 days of account opening. Balance transfer and cash advance fees are $10 or 4%, whichever is greater. Late fee up to $39. The filed agreement (pricing as of April 1, 2026) shows 18.49% to 28.49%; the product page shows the current 18.74% to 28.74%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "regions_relationship_rewards",
+    "currency_label": "Regions Relationship Rewards points (cash back)",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on all qualifying purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Relationship Rewards can be redeemed for a direct deposit into a Regions account, a statement credit, travel, gift cards, and more.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "USD",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Earn $200 bonus Cash Rewards if you spend $1,000 in the first 90 days, or earn a $100 bonus when you spend $500 in the first 90 days. If earned, the bonus is awarded 91-100 days from account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.regions.com/personal-banking/credit-cards/cash-rewards-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.regions.com/personal-banking/credit-cards/cash-rewards-credit-card",
+    "https://www.regions.com/personal-banking/credit-cards",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/REGIONS_BANK/F03-BE40-8-Unsecured-556853.pdf"
+  ],
+  "notes": "Issued by Regions Bank. Cash back is earned as Regions Relationship Rewards points."
+}
