@@ -650,6 +650,16 @@
       "domains": [
         "brimfinancial.com"
       ]
+    },
+    {
+      "id": "national-bank",
+      "name": "National Bank",
+      "aliases": [
+        "nbc"
+      ],
+      "domains": [
+        "nbc.ca"
+      ]
     }
   ]
 }
