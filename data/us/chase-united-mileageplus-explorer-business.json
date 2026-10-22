@@ -52,14 +52,20 @@
   },
   "benefits": [],
   "official_url": "https://creditcards.chase.com/",
+  "image": {
+    "url": "https://web.archive.org/web/20190428174505im_/https://creditcards.chase.com/K-Marketplace/images/cardart/united_biz_card.png",
+    "attribution": "© Chase",
+    "local_path": null
+  },
   "bin_hints": [],
   "last_verified": "2026-10-20",
   "sources": [
     "https://creditcards.chase.com/",
-    "https://creditcards.chase.com/business-credit-cards/united/united-business-card"
+    "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
+    "https://web.archive.org/web/20190428082926/https://creditcards.chase.com/travel-credit-cards"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current United Business product page and Chase sample-agreement registry do not prove an exact withdrawal date or conversion for the historical MileagePlus Explorer Business product. Removed unsupported 2020-01-23 and United Business replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current United Business product page and Chase sample-agreement registry do not prove an exact withdrawal date or conversion for the historical MileagePlus Explorer Business product. Removed unsupported 2020-01-23 and United Business replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Historical artwork provenance (checked 2026-10-21): the retained 2019-04-28 archive of the official Chase travel credit cards page shows this card art with alt text \"Clickable card art links to United(Service Mark) Explorer Business Card product page\". The linked image resolves to a 2019-04-28 archive capture of the Chase-hosted asset and was visually inspected as the navy United Explorer MileagePlus Business Visa Signature card (the face prints Explorer, MileagePlus and Business). It is a low-resolution 289x181 historical image documenting the product as marketed at that date; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update."
 }
