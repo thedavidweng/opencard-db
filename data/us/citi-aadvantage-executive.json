@@ -1,36 +1,36 @@
 {
   "id": "us-citi-aadvantage-executive",
   "schema_version": "1.0.0",
-  "name": "Citi® / AAdvantage® Executive World Elite Mastercard®",
+  "name": "Citi® / AAdvantage® Executive World Legend Mastercard®",
   "localized_names": {
-    "en": "Citi® / AAdvantage® Executive World Elite Mastercard®"
+    "en": "Citi® / AAdvantage® Executive World Legend Mastercard®"
   },
   "country": "us",
   "issuer": "Citi",
   "issuer_id": "citi",
   "network": "mastercard",
-  "network_tier": "world_elite",
+  "network_tier": "world_legend",
   "type": "credit",
   "segment": "personal",
   "status": "active",
   "annual_fee": {
-    "amount": 595.0,
+    "amount": 695.0,
     "currency": "USD",
-    "first_year": 595.0,
+    "first_year": 695.0,
     "waiver_conditions": null
   },
   "apr": {
     "purchase": {
-      "min": 19.49,
-      "max": 29.49,
-      "type": "variable"
-    },
-    "cash_advance": {
-      "min": 29.74,
+      "min": 19.74,
       "max": 29.74,
       "type": "variable"
     },
-    "notes": "The variable APR for purchases and balance transfers is 19.49% – 29.49%, based on your creditworthiness. The variable APR for cash advances is 29.74%. The variable Penalty APR is up to 29.99%. Minimum interest charge – $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee – either $5 or 5% of the amount of each transfer, whichever is greater. The annual fee for Authorized Users is $175 for up to 3 Authorized Users and $175 for each Authorized User thereafter."
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "The variable APR for purchases and balance transfers is 19.74% – 29.74%, based on your creditworthiness. The variable APR for cash advances is 29.99%. The variable Penalty APR is up to 29.99%. Minimum interest charge – $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee – either $5 or 5% of the amount of each transfer, whichever is greater. The annual fee for Authorized Users is $175 for up to 3 Authorized Users and $175 for each Authorized User thereafter."
   },
   "fx_fee": {
     "percent": 0.0,
@@ -51,7 +51,7 @@
     "categories": [
       {
         "label": "Eligible hotels (aadvantagehotels.com) and car rentals (aadvantagecars.com)",
-        "points_per_dollar": 10,
+        "points_per_dollar": 12,
         "cap": null
       },
       {
@@ -60,17 +60,17 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster.",
+    "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster. After $150,000 in purchases in a calendar year, earn a total of 5 AAdvantage miles per $1 on eligible American Airlines purchases for the remainder of that year.",
     "rate_type": "miles_multiplier"
   },
   "signup_bonus": {
-    "amount": 70000,
+    "amount": 125000,
     "unit": "AAdvantage® bonus miles",
-    "spend_required": 7000,
+    "spend_required": 15000,
     "spend_currency": "USD",
-    "months": 3,
-    "description": "Earn 70,000 American Airlines AAdvantage® bonus miles and enjoy the only credit card with Admirals Club® membership. Bonus miles earned after $7,000 in purchases within the first 3 months of account opening.",
-    "as_of": "2026-07-24"
+    "months": 5,
+    "description": "Earn 125,000 AAdvantage bonus miles after $15,000 in purchases within the first 5 months of account opening. This page-specific limited-time offer may vary elsewhere. Not available after a new-account bonus for an Executive account in the past 48 months, or after conversion of another Citi account on which a new-account bonus was earned in the last 48 months into an Executive account.",
+    "as_of": "2026-10-19"
   },
   "benefits": [
     {
@@ -78,14 +78,14 @@
       "title": "Complimentary Admirals Club® membership",
       "category": "lounge",
       "source": "co-brand",
-      "description": "Primary cardmembers can enjoy access to Admirals Club® lounges worldwide – a value of up to $850. Enjoy complimentary drinks and snacks, stay connected with free Wi-Fi, get access to conference rooms and much more."
+      "description": "Primary cardmembers and up to two guests or immediate family members can enjoy unlimited visits to more than 100 Admirals Club and partner lounges worldwide; membership value up to $1,400."
     },
     {
       "id": "additional-loyalty-points",
-      "title": "Up to 20,000 additional Loyalty Points",
+      "title": "Up to 40,000 additional Loyalty Points",
       "category": "other",
       "source": "co-brand",
-      "description": "Earn a 10,000 Loyalty Point bonus after reaching 50,000 Loyalty Points in a status qualification year. Earn another 10,000 Loyalty Point bonus after reaching 90,000 Loyalty Points in the same status qualification year."
+      "description": "Earn a 10,000 Loyalty Point bonus after reaching each of 50,000, 90,000, 165,000 and 240,000 Loyalty Points in the same status qualification year."
     },
     {
       "id": "global-entry-tsa-precheck-credit",
@@ -99,7 +99,7 @@
       "title": "Enhanced airport experience",
       "category": "other",
       "source": "co-brand",
-      "description": "Enjoy an enhanced airport experience including priority check-in, screening, and boarding when flying with American Airlines."
+      "description": "Priority check-in, airport screening where available, and priority boarding when flying American Airlines for you and up to eight companions on the same reservation."
     },
     {
       "id": "first-checked-bag-free",
@@ -109,11 +109,11 @@
       "description": "Your first checked bag is free on domestic American Airlines itineraries for you and up to eight companions traveling with you on the same reservation, a savings of up to $900 per round trip."
     },
     {
-      "id": "save-25-inflight",
-      "title": "Save 25% on inflight food and beverage purchases",
+      "id": "inflight-admirals-club-credit",
+      "title": "Up to $100 back on inflight and eligible Admirals Club purchases",
       "category": "other",
       "source": "co-brand",
-      "description": "25% savings on inflight food and beverage purchases on American Airlines flights when you use your credit card."
+      "description": "Every calendar year, earn up to $100 in statement credits on inflight and eligible Admirals Club purchases when you use your card."
     },
     {
       "id": "no-foreign-transaction-fees",
@@ -138,22 +138,36 @@
     },
     {
       "id": "lyft-credit",
-      "title": "Up to $120 Lyft credit",
+      "title": "Up to $180 in Lyft credits",
       "category": "other",
       "source": "issuer",
-      "description": "After taking 3 eligible rides in a calendar month, you will earn a $10 Lyft credit, for a total of up to $120 back in Lyft credits annually."
+      "description": "After three eligible rides in a calendar month, earn a $15 Lyft credit, for up to $180 in Lyft credits annually."
     },
     {
-      "id": "grubhub-credits",
-      "title": "Up to $120 back on eligible Grubhub purchases",
+      "id": "american-airlines-vacations-credit",
+      "title": "Up to $500 back on eligible American Airlines Vacations purchases",
       "category": "other",
       "source": "issuer",
-      "description": "Earn a statement credit of up to $10 per monthly billing statement on eligible Grubhub purchases, for a total of up to $120 every 12 billing statements."
+      "description": "Every calendar year, earn up to $250 in statement credits January through June and up to $250 July through December on eligible American Airlines Vacations travel packages or experiences."
+    },
+    {
+      "id": "omni-champion-free-night",
+      "title": "Omni Champion Status and Free Night Award",
+      "category": "other",
+      "source": "issuer",
+      "description": "Primary cardmembers are eligible to enroll in Omni Hotels and Resorts Champion Status. Once per calendar year, earn an Omni Free Night Award after a qualifying stay of two or more consecutive nights booked directly through Omni Hotels and Resorts on omnihotels.com. Enrollment in Champion Status is required."
+    },
+    {
+      "id": "avis-presidents-club-status",
+      "title": "Complimentary Avis President's Club status",
+      "category": "other",
+      "source": "issuer",
+      "description": "Primary cardmembers are eligible to enroll in complimentary Avis President's Club status through August 31, 2028 via the AAdvantage Rewards page in their AAdvantage account."
     }
   ],
   "travel_perks": {
     "lounge_access": {
-      "notes": "Complimentary Admirals Club® membership – access to Admirals Club® lounges worldwide (value up to $850)"
+      "notes": "Complimentary Admirals Club membership for the primary cardmember with up to two guests or immediate family members; membership value up to $1,400."
     },
     "tsa_precheck_credit": {
       "amount": 120.0,
@@ -166,28 +180,31 @@
       "period": "every_4_years"
     },
     "free_checked_bags": "First checked bag free on domestic American Airlines itineraries for you and up to 8 companions (savings up to $900 per round trip)",
-    "hotel_status": null,
+    "hotel_status": "Omni Hotels and Resorts Champion Status for primary cardmembers; enrollment required.",
     "other": [
-      "Enhanced airport experience: priority check-in, screening, and boarding on AA flights",
-      "Save 25% on inflight food and beverage purchases on AA flights",
+      "Priority check-in, airport screening where available, and priority boarding on American Airlines for you and up to eight companions on the same reservation",
+      "Up to $100 in statement credits per calendar year for inflight and eligible Admirals Club purchases",
       "No foreign transaction fees",
       "Travel protection: Trip Cancellation & Interruption, Trip Delay, Lost Baggage, Worldwide Car Rental Insurance",
-      "Up to $120 back on Avis and Budget car rentals per calendar year",
-      "Up to $120 Lyft credit annually",
-      "Up to $120 back on Grubhub purchases per 12 billing statements"
+      "Up to $120 back on eligible prepaid Avis and Budget car rentals per calendar year",
+      "Up to $180 in Lyft credits annually: $15 after three eligible rides per calendar month",
+      "Up to $500 in eligible American Airlines Vacations credits per calendar year, split into two $250 half-year limits",
+      "Omni Free Night Award once per calendar year after a qualifying two-or-more-night direct stay; Champion Status enrollment required",
+      "Avis President's Club status through August 31, 2028; enrollment required"
     ]
   },
   "official_url": "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
   "image": {
-    "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2024/05/CardArt-8.png",
+    "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2026/08/CardArt-Exec.png",
     "attribution": "© Citi",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-19",
   "sources": [
     "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
-    "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/"
+    "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/",
+    "https://www.citi.com/credit-cards/citi-aadvantage-executive-world-legend-mastercard"
   ],
-  "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text."
+  "notes": "Verified against the official American Airlines Executive product page and Citi World Legend product page on 2026-10-19. Pricing and the page-specific 125,000-mile offer are from the AA page; Citi corroborates World Legend identity, 12x hotels/cars, elevated AA earning after $150,000 spend, and current benefits. No exact historical upgrade/conversion date is established. The former 25% inflight savings and Grubhub credit are not represented as current benefits; current official pages instead list the $100 inflight/Admirals Club credit. Matching clean card artwork is served by the official AA product page; copyright remains Citi."
 }
