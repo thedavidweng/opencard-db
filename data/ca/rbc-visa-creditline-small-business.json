@@ -1,0 +1,61 @@
+{
+  "id": "ca-rbc-visa-creditline-small-business",
+  "schema_version": "1.0.0",
+  "name": "RBC Visa CreditLine for Small Business",
+  "localized_names": {
+    "en": "RBC Visa CreditLine for Small Business"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Variable purchase rate from Prime + 2.9% to 11.9%, set at approval."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian business owner who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "avion_points",
+    "currency_label": "Avion points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "1 Avion point per $2 in net purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Avion points redeem for travel, gift cards, merchandise, statement credits and transfers to partner programs.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/visa-creditline.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/visa-creditline.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

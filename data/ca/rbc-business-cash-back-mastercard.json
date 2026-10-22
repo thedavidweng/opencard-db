@@ -1,0 +1,74 @@
+{
+  "id": "ca-rbc-business-cash-back-mastercard",
+  "schema_version": "1.0.0",
+  "name": "RBC Business Cash Back Mastercard",
+  "localized_names": {
+    "en": "RBC Business Cash Back Mastercard"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 19.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "19.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian business owner who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on net purchases, including pre-authorized bill payments."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back is credited to the account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 3,
+    "description": "An additional 1% cash back (2% total) for the first 3 full monthly statement periods.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/business-cash-back-mastercard.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/business-cash-back-mastercard.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

@@ -1,0 +1,66 @@
+{
+  "id": "ca-rbc-avion-visa-infinite-business",
+  "schema_version": "1.0.0",
+  "name": "RBC Avion Visa Infinite Business",
+  "localized_names": {
+    "en": "RBC Avion Visa Infinite Business"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 175,
+    "currency": "CAD",
+    "first_year": 175,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 19.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "19.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "One of: personal income of $60,000, household income of $100,000, business sales revenue of $500,000, or $250,000 in assets under management."
+  },
+  "rewards": {
+    "currency": "avion_points",
+    "currency_label": "Avion points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.25,
+      "description": "1.25 Avion points per $1 in net purchases, on up to $75,000 per year."
+    },
+    "categories": [],
+    "redemption_notes": "Avion points redeem for travel, gift cards, merchandise, statement credits and transfers to partner programs.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/avion-visa-infinite-business.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/business/credit-cards/small-business-credit-cards/avion-visa-infinite-business.html"
+  ],
+  "notes": "Network tier is Visa Infinite per the card name. The 1.25 rate applies on up to $75,000 in purchases per year; the page does not state the rate above that."
+}
