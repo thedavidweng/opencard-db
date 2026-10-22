@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2025-08-20",
-  "replaced_by": "us-bank-of-america-atmos-rewards-ascent",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -30,13 +28,14 @@
     }
   },
   "benefits": [],
-  "official_url": "https://www.bankofamerica.com/credit-cards/",
+  "official_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-19",
   "sources": [
-    "https://www.bankofamerica.com/credit-cards/"
+    "https://www.bankofamerica.com/credit-cards/",
+    "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html"
   ],
-  "notes": "Rebranded to Atmos Rewards Ascent in August 2025. Lower-tier version for credit limits under $5,000."
+  "notes": "Historical lower-tier Alaska record retained. The official August 20, 2025 Atmos announcement names Alaska Airlines Visa Signature, not this Platinum Plus generation. It does not prove this record's exact withdrawal date or successor; both are unknown and unsupported values are removed. Historical credit-limit threshold, fees and rewards are retained, not re-verified. No Signature or successor artwork is borrowed."
 }

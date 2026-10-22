@@ -13,8 +13,6 @@
   "type": "credit",
   "segment": "business",
   "status": "discontinued",
-  "discontinued_date": "2025-08-20",
-  "replaced_by": "us-bank-of-america-atmos-rewards-business",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -30,13 +28,14 @@
     }
   },
   "benefits": [],
-  "official_url": "https://www.bankofamerica.com/credit-cards/",
+  "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-19",
   "sources": [
-    "https://www.bankofamerica.com/credit-cards/"
+    "https://www.bankofamerica.com/credit-cards/",
+    "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
   ],
-  "notes": "Rebranded to Atmos Rewards Business in August 2025."
+  "notes": "Historical Alaska business record retained. The current issuer product page confirms an Atmos Rewards Visa Signature Business card, but does not explicitly document conversion from this historical record or its withdrawal date. Unsupported exact date and successor link are removed pending an official conversion notice. Historical fees/rewards are retained, not re-verified. No current Atmos artwork is assigned to this predecessor."
 }
