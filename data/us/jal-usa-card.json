@@ -1,0 +1,69 @@
+{
+  "id": "us-jal-usa-card",
+  "schema_version": "1.0.0",
+  "name": "JAL USA Card",
+  "localized_names": {
+    "en": "JAL USA Card"
+  },
+  "country": "us",
+  "issuer": "First National Bank of Omaha",
+  "issuer_id": "fnbo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 35,
+    "currency": "USD",
+    "first_year": 35,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 23.49,
+      "max": 23.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Variable APRs based on the Prime Rate (6.75% as of the 08/31/2026 determination date). Purchase and balance transfer APR is Prime plus 16.74%; cash advance APR is Prime plus 21.99%. No penalty APR. Balance transfer fee is $10 or 5%, cash advance fee is $5 or 5%, whichever is greater. Late fee up to $40. Minimum interest charge $1.75."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fee is None per the Summary of Credit Terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Applicants must be JAL Mileage Bank members, 18 or older, with a U.S. address."
+  },
+  "rewards": {
+    "currency": "jal_mileage_bank",
+    "currency_label": "JAL Mileage Bank miles",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "Basic Rewards: earn 1 point for each $2.00 spent on Net Purchases; each point equals 1 JMB Airmile."
+    },
+    "categories": [],
+    "redemption_notes": "Each Point earned in the Credit Card Rewards Program will equate to 1 JMB Airmile, which will be redeemable only through the JMB Program.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.site.jalusacardsupport.com/en/application",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.site.jalusacardsupport.com/en/application",
+    "https://www.firstbankcard.com/lynx/api/v1/lynx/soct/SCYC3VX14X7T8",
+    "https://www.card.fnbo.com/content/dam/global/documents/customer-reward-terms/322.pdf",
+    "https://www.card.fnbo.com/content/dam/global/documents/customer-reward-terms/323.pdf"
+  ],
+  "notes": "Issued by First National Bank of Omaha (FNBO) under a license from Mastercard. The Summary of Credit Terms says approved applicants may receive a Platinum Edition Mastercard or a World Mastercard, so network_tier is none. Recorded values are the Basic Rewards option with a $35 annual fee. The optional Premium Rewards option adds a $50 annual Credit Card Rewards Program fee and earns 2 points per $1 on JAL Purchases (JAL flight tickets bought directly from JAL) and 1 point per $1 on other Net Purchases. A separate set of credit terms for campaign-code applications shows no annual fee for the first year, then $35."
+}
