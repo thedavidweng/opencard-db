@@ -513,6 +513,15 @@
       "domains": [
         "wescom.org"
       ]
+    },
+    {
+      "id": "lead-bank",
+      "name": "Lead Bank",
+      "aliases": [],
+      "domains": [
+        "lead.bank",
+        "nibbles.com"
+      ]
     }
   ]
 }

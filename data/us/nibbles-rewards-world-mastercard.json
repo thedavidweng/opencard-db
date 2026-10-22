@@ -1,0 +1,75 @@
+{
+  "id": "us-nibbles-rewards-world-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Nibbles Rewards Credit Card",
+  "localized_names": {
+    "en": "Nibbles Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "Lead Bank",
+  "issuer_id": "lead-bank",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 24.74,
+      "max": 24.74,
+      "type": "variable"
+    },
+    "notes": "Variable APR of the U.S. Prime Rate + 17.74% (currently 24.74%), with a maximum of 29.99%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Nibbles points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x points (1 point = $0.01) everywhere else Mastercard is accepted."
+    },
+    "categories": [
+      {
+        "label": "Pet stores, pet services and licensed veterinarians",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points currently redeem for statement credits; options include pet-related expenses and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "included-pet-insurance",
+      "title": "Included pet insurance",
+      "category": "insurance",
+      "source": "co-brand",
+      "description": "Pet health insurance for one pet with the premium paid by Nibbles (80% reimbursement after a $700 annual deductible, up to $10,000 per year, or other plan options), subject to eligibility."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://nibbles.com/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://nibbles.com/"
+  ],
+  "notes": "Nibbles is a program manager; the card is issued by Lead Bank and is a World Mastercard Program, per the Nibbles site."
+}
