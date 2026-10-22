@@ -20,8 +20,8 @@
   },
   "apr": {
     "purchase": {
-      "min": 19.49,
-      "max": 28.49,
+      "min": 19.74,
+      "max": 28.74,
       "type": "variable"
     },
     "cash_advance": {
@@ -29,7 +29,7 @@
       "max": 28.74,
       "type": "variable"
     },
-    "notes": "0% introductory APR for first 6 months from account opening. Then 19.49% to 28.49% variable based on creditworthiness. Cash Advance APR 28.74%. Penalty APR 29.99%. Variable APRs will not exceed 29.99%. 0% introductory plan fee for first 6 months, then up to 1.33%. Accurate as of 07/24/26."
+    "notes": "Schwab's official Investor product page lists 0% introductory purchase APR for 6 months, then 19.74% to 28.74% variable based on creditworthiness and other factors. Purchase APR checked 2026-10-20. Cash advance APR and plan-fee fields remain the unverified July 2026 snapshot; this partial correction does not reverify those terms."
   },
   "fx_fee": {
     "percent": 2.7,
@@ -73,7 +73,7 @@
       "title": "0% Introductory APR for 6 Months",
       "category": "other",
       "source": "issuer",
-      "description": "0% introductory APR on purchases for first 6 months from account opening, plus 0% introductory plan fee for first 6 months. After that, APR 19.49% to 28.49% variable and plan fee up to 1.33%."
+      "description": "0% introductory APR on purchases for first 6 months from account opening, then 19.74% to 28.74% variable based on creditworthiness and other factors. Plan-fee terms are not reverified by this purchase APR source."
     },
     {
       "id": "venue-collection-concessions-credit",
@@ -93,17 +93,19 @@
       "2.7% foreign transaction fee"
     ]
   },
-  "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false",
+  "official_url": "https://www.schwab.com/credit-cards",
   "image": {
-    "url": null,
+    "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/policies/images/schwab_cob_ch_240x152.png",
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false"
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false",
+    "https://www.schwab.com/credit-cards",
+    "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
   ],
-  "notes": "Charles Schwab Investor Credit Card from American Express. $0 annual fee. 1.5% flat cash back auto-deposited to Schwab brokerage. 2.7% foreign transaction fee. 0% intro APR for 6 months. $200 statement credit after $1,000 in first 3 months (corrected from prior $300 — page shows $200). Issued by American Express National Bank.",
+  "notes": "Charles Schwab Investor Credit Card from American Express, issued by American Express National Bank. Schwab's co-brand product page identifies the Investor card separately from the Schwab Platinum card and requires an eligible Schwab account. The inherited Amex ep-ADAP application URL is retained as a historical reference, not a readable current offer. Purchase APR is corrected from the readable product page; other financial fields and last_verified remain the July 2026 snapshot, not a complete current verification. Current product-specific disclosures are still needed to reverify those terms. The separate linked InvestorCard.jpg returned an HTML authorization error rather than image bytes and could not be used. Artwork-only verification on 2026-10-20: the American Express car-rental insurance directory labels this exact co-brand and links the 240x152 issuer-hosted image used here. This low-resolution benefit-directory artwork does not establish current design availability, application status or a full financial-terms refresh. Copyright attribution identifies the issuer; it is not a separate permission grant.",
   "segment": "personal"
 }
