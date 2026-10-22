@@ -1,5 +1,28 @@
 # Changelog
 
+## [0.3.3](https://github.com/thedavidweng/opencard-db/compare/v0.3.2...v0.3.3) (2026-10-22)
+
+
+### Cards
+
+* **add:** us-us-bank-altitude-reserve ([#495](https://github.com/thedavidweng/opencard-db/issues/495)) ([d0a4f39](https://github.com/thedavidweng/opencard-db/commit/d0a4f3970dae0c1b1baeb377e55552dc2022aeff))
+* **add:** us-us-bank-flexperks-travel-rewards ([#496](https://github.com/thedavidweng/opencard-db/issues/496)) ([90d94f0](https://github.com/thedavidweng/opencard-db/commit/90d94f07d5aeebff4ac9072b325faa0cf6f1cbb1))
+
+
+### Bug Fixes
+
+* **data:** add archived official art for Capital One Spark Miles cards ([#491](https://github.com/thedavidweng/opencard-db/issues/491)) ([5ef8cea](https://github.com/thedavidweng/opencard-db/commit/5ef8cea78e9c095fb83728d7faa1597982ed356f))
+* **data:** add archived official art for Club Carlson Visa Signature cards ([#493](https://github.com/thedavidweng/opencard-db/issues/493)) ([2e330b3](https://github.com/thedavidweng/opencard-db/commit/2e330b338cd53e143190dc74d40ab6abaa1fe92b))
+* **data:** add archived official art for HSBC Premier World Elite and TD Ameritrade cards ([#494](https://github.com/thedavidweng/opencard-db/issues/494)) ([a8f1e1a](https://github.com/thedavidweng/opencard-db/commit/a8f1e1a4ca85428c9d60e0af0bc72f14c270eb39))
+* **data:** add archived official art for six legacy Wells Fargo cards ([#489](https://github.com/thedavidweng/opencard-db/issues/489)) ([ab8e612](https://github.com/thedavidweng/opencard-db/commit/ab8e612da37bd1064b60489e9583b08d9fbd3014))
+* **data:** add archived official art for two legacy Chase United cards ([#492](https://github.com/thedavidweng/opencard-db/issues/492)) ([c5276ac](https://github.com/thedavidweng/opencard-db/commit/c5276acb5d8062321c7d3be3366469df79471f54))
+* **data:** add official art for five active US cards ([#486](https://github.com/thedavidweng/opencard-db/issues/486)) ([dcb876e](https://github.com/thedavidweng/opencard-db/commit/dcb876e475ac22aa7c357b26771212957d580be1))
+* **data:** add official Barclays art for Aviator Red and Uber Visa ([#490](https://github.com/thedavidweng/opencard-db/issues/490)) ([1812fe3](https://github.com/thedavidweng/opencard-db/commit/1812fe3a5e95cc8eaaff97205e926ccf8624dec8))
+* **data:** correct Club Carlson Platinum Rewards Visa annual fee ([#499](https://github.com/thedavidweng/opencard-db/issues/499)) ([dad2dad](https://github.com/thedavidweng/opencard-db/commit/dad2dada856fb5532e0e601ab18d21f2d0f93bde))
+* **data:** correct IHG Select network, Club Carlson fees and Free Spirit status ([#497](https://github.com/thedavidweng/opencard-db/issues/497)) ([09a6cd1](https://github.com/thedavidweng/opencard-db/commit/09a6cd1541b1b2cd44b27c22f7e1ba346cdbbd64))
+* **data:** mark SPG Business, Business Gold Rewards and Plenti discontinued ([#504](https://github.com/thedavidweng/opencard-db/issues/504)) ([5374136](https://github.com/thedavidweng/opencard-db/commit/53741367b9d9d978ef983407ac8c1711684691b2))
+* **data:** Premier Dining World Elite tier and art; ANA, Free Spirit and Best Western notes ([#505](https://github.com/thedavidweng/opencard-db/issues/505)) ([25944f1](https://github.com/thedavidweng/opencard-db/commit/25944f155041bd6e3dac6296f1c99ed0cb5e2db9))
+
 ## [0.3.2](https://github.com/thedavidweng/opencard-db/compare/v0.3.1...v0.3.2) (2026-10-22)
 
 
