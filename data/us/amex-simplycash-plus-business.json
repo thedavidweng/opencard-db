@@ -10,7 +10,6 @@
   "type": "credit",
   "segment": "business",
   "status": "discontinued",
-  "discontinued_date": "2019-07-01",
   "replaced_by": "us-amex-blue-business-cash",
   "annual_fee": {
     "amount": null,
@@ -28,12 +27,17 @@
   },
   "benefits": [],
   "official_url": "https://www.americanexpress.com/us/business/credit-cards/simplycash-plus-vs-blue-business-cash/",
-  "last_verified": "2026-07-28",
+  "last_verified": "2026-10-19",
   "sources": [
-    "https://www.americanexpress.com/us/business/credit-cards/simplycash-plus-vs-blue-business-cash/"
+    "https://www.americanexpress.com/us/business/credit-cards/simplycash-plus-vs-blue-business-cash/",
+    "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Replaced by Blue Business Cash Card in July 2019."
+  "notes": "American Express states that SimplyCash Plus is being replaced by Blue Business Cash and is no longer accepting new applications. The official comparison page does not state the exact application-withdrawal or account-conversion date; its July 5, 2019 rate date applies to the successor's APR, not this card's lifecycle. Historical fees and rewards remain unverified. On 2026-10-20, the American Express insurance directory supplied matching issuer-hosted SimplyCash Plus historical artwork; this does not establish a current design, financial terms or an exact withdrawal/conversion date.",
+  "image": {
+    "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/Q32024-New-Card-Art/SimplyCashPlusupdated.jpg",
+    "attribution": "© American Express"
+  }
 }
