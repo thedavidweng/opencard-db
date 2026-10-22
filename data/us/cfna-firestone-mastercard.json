@@ -1,0 +1,82 @@
+{
+  "id": "us-cfna-firestone-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Firestone Mastercard",
+  "localized_names": {
+    "en": "Firestone Mastercard"
+  },
+  "country": "us",
+  "issuer": "Credit First National Association",
+  "issuer_id": "cfna",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 33.24,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "notes": "Variable Mastercard APR 33.24% as of January 31, 2026; it will not exceed 34.99%. Minimum finance charge $2.00."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "mycfna_points",
+    "currency_label": "myCFNA Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in rewards on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Firestone Complete Auto Care locations (4% at Tier 3, $2,500+ net spend per calendar year)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Fuel and other automotive purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards redeem at Firestone Complete Auto Care locations.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "promotional-financing",
+      "title": "6-month promotional financing",
+      "category": "other",
+      "source": "issuer",
+      "description": "6 months promotional financing on purchases of $149 or more at Firestone Complete Auto Care locations; if not paid in full within 6 months, interest is charged from the purchase date."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.cfna.com/firestone-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cfna.com/firestone-credit-card",
+    "https://www.cfna.com/firestone-credit-card/mycfna-rewards-program",
+    "https://www.firestonecompleteautocare.com/credit-card/"
+  ],
+  "notes": "myCFNA Rewards is tiered on calendar-year net spend: Passenger and Driver (under $2,500) earn 3% at Firestone Complete Auto Care, Adventurer ($2,500 and up) earns 4%. The program is operated and funded by the credit division of Bridgestone Retail Operations, LLC. No Mastercard network package is stated, so network_tier is none."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "us-cfna-firestone-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Firestone Credit Card",
+  "localized_names": {
+    "en": "Firestone Credit Card"
+  },
+  "country": "us",
+  "issuer": "Credit First National Association",
+  "issuer_id": "cfna",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 34.99,
+      "max": 34.99,
+      "type": "variable"
+    },
+    "notes": "Private label card APR 34.99%. Minimum finance charge $2.00."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "The myCFNA Rewards Program is exclusive to Firestone Mastercard cardholders."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "promotional-financing",
+      "title": "6-month promotional financing",
+      "category": "other",
+      "source": "issuer",
+      "description": "6 months promotional financing on purchases of $149 or more at Firestone Complete Auto Care locations; if not paid in full within 6 months, interest is charged from the purchase date."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.cfna.com/firestone-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cfna.com/firestone-credit-card",
+    "https://www.firestonecompleteautocare.com/credit-card/"
+  ],
+  "notes": "Private label card for use at participating automotive retail locations, so network is other. Applicants are approved for either the Firestone Credit Card or the Firestone Mastercard based on credit."
+}

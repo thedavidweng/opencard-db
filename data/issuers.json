@@ -432,6 +432,17 @@
       "domains": [
         "ubs.com"
       ]
+    },
+    {
+      "id": "cfna",
+      "name": "Credit First National Association",
+      "aliases": [
+        "CFNA"
+      ],
+      "domains": [
+        "cfna.com",
+        "firestonecompleteautocare.com"
+      ]
     }
   ]
 }
