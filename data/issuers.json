@@ -672,6 +672,46 @@
       ]
     },
     {
+      "id": "national-bank",
+      "name": "National Bank",
+      "aliases": [
+        "nbc"
+      ],
+      "domains": [
+        "nbc.ca"
+      ]
+    },
+    {
+      "id": "simplii",
+      "name": "Simplii Financial",
+      "aliases": [
+        "simplii-financial"
+      ],
+      "domains": [
+        "simplii.com"
+      ]
+    },
+    {
+      "id": "canadian-tire-bank",
+      "name": "Canadian Tire Bank",
+      "aliases": [
+        "ctfs"
+      ],
+      "domains": [
+        "ctfs.com"
+      ]
+    },
+    {
+      "id": "manulife-bank",
+      "name": "Manulife Bank",
+      "aliases": [
+        "manulife"
+      ],
+      "domains": [
+        "manulifebank.ca"
+      ]
+    },
+    {
       "id": "wealthsimple",
       "name": "Wealthsimple",
       "aliases": [
