@@ -1,0 +1,65 @@
+{
+  "id": "us-fifth-third-secured",
+  "schema_version": "1.0.0",
+  "name": "Fifth Third Secured Credit Card",
+  "localized_names": {
+    "en": "Fifth Third Secured Credit Card"
+  },
+  "country": "us",
+  "issuer": "Fifth Third Bank",
+  "issuer_id": "fifth-third",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 24,
+    "currency": "USD",
+    "first_year": 24,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 27.74,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "27.74% variable APR on purchases and balance transfers. Cash advance variable APR 28.74%. Balance transfer fee $5 or 4%, whichever is greater. APRs as of 10/6/2026."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "International Transaction Fee of 3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Secured card. Requires a security deposit of $300 to $5,000 in a Fifth Third Momentum Savings account, which sets the credit line. California residents are not eligible."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.53.com/content/fifth-third/en/personal-banking/bank/credit-cards/secured-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.53.com/content/fifth-third/en/personal-banking/bank/credit-cards/secured-card.html"
+  ],
+  "notes": "No Mastercard network package is stated for this card, so network_tier is none."
+}
