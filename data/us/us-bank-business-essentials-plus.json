@@ -1,0 +1,88 @@
+{
+  "id": "us-us-bank-business-essentials-plus",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Business Essentials Plus Visa Signature Card",
+  "localized_names": {
+    "en": "U.S. Bank Business Essentials Plus Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 295,
+    "currency": "USD",
+    "first_year": 295,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usbank_rewards_points",
+    "currency_label": "U.S. Bank rewards points (cash back)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2 points (2% cash back) per $1 on every purchase."
+    },
+    "categories": [
+      {
+        "label": "Top eligible spend category, applied automatically (up to $200,000 annually)",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 200000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Business Essentials Plus Earning Bonus with $150,000 or more in qualifying business checking balances (2.5% with $15,000 to $74,999; 3% with $75,000 to $149,999; on $200,000 annually)",
+        "points_per_dollar": 3.5,
+        "cap": {
+          "amount": 200000,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Points redeem as cash back by deposit to an eligible U.S. Bank account or statement credit; other redemptions may be at a reduced rate.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 100000,
+    "unit": "points",
+    "spend_required": 15000,
+    "spend_currency": "USD",
+    "months": 5,
+    "description": "100,000 bonus points (worth up to $1,000) after $15,000 in eligible net purchases within 150 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-essentials-plus-credit-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.usbank.com/business-banking/business-credit-cards/business-essentials-plus-credit-card.html"
+  ],
+  "notes": "The purchase APR is not shown on the product page."
+}

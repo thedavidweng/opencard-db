@@ -1,0 +1,105 @@
+{
+  "id": "us-us-bank-state-farm-premier-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "State Farm Premier Cash Rewards Visa Signature Card",
+  "localized_names": {
+    "en": "State Farm Premier Cash Rewards Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "Variable purchase and balance transfer APR 17.74% to 30.74%; cash advance APR 30.74%. Balance transfer fee 5% ($5 min); cash advance fee 5% ($10 min)."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee 3%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Insurance premium payments (first $4,000 annually)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 4000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Gas stations and EV charging stations, drugstores, grocery stores and dining",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem as a statement credit, deposit to a U.S. Bank savings or checking account, or a Rewards Card ($25 minimum). Cash back expires three years after it is earned.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 150,
+    "unit": "USD",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$150 bonus cash back after $500 in eligible net purchases within 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "auto-deductible-reimbursement",
+      "title": "Auto deductible reimbursement",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Reimbursement of up to $200 of an auto policy deductible after a covered loss, with at least 8 net purchases in the prior month."
+    },
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell phone protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to $600 if an eligible phone is stolen or damaged when the monthly bill is paid with the card."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://alliance.usbank.com/en-us/statefarm/credit-cards/premier-cash-rewards-visa-signature-credit-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://alliance.usbank.com/en-us/statefarm/credit-cards/premier-cash-rewards-visa-signature-credit-card.html",
+    "https://alliance.usbank.com/en-us/statefarm/credit-cards1/premier-cash-rewards-visa-signature-credit-card-agency.html"
+  ],
+  "notes": "Issued by U.S. Bank National Association. Applying through a State Farm agent adds 2% cash back on insurance premiums in the first year (up to 5% total)."
+}
