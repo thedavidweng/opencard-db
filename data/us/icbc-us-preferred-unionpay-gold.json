@@ -1,0 +1,74 @@
+{
+  "id": "us-icbc-us-preferred-unionpay-gold",
+  "schema_version": "1.0.0",
+  "name": "ICBC Preferred UnionPay Gold Card",
+  "localized_names": {
+    "en": "ICBC Preferred UnionPay Gold Card"
+  },
+  "country": "us",
+  "issuer": "ICBC (USA) N.A.",
+  "issuer_id": "icbc",
+  "network": "unionpay",
+  "network_tier": "gold",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.49,
+      "max": 22.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 16.49% to 22.49% based on creditworthiness; cash advance APR 28.49%. APRs vary with the Prime Rate. Cash advance fee $10 or 5%, whichever is greater."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on every purchase."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 50,
+    "unit": "USD",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$50 cash bonus after $1,000 in purchases in the first 3 months from account opening. Limited to one new card per network (Visa or UnionPay) per customer in the past 12 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.icbc-us.com/en/column/1438058793715253373.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.icbc-us.com/en/column/1438058793715253373.html"
+  ],
+  "notes": "Only existing ICBC USA customers are eligible to apply. ICBC (USA) UnionPay credit cards are blocked from use in certain high-risk countries."
+}

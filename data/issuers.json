@@ -196,7 +196,8 @@
       "name": "Industrial and Commercial Bank of China 中国工商银行",
       "aliases": [],
       "domains": [
-        "icbc.com.cn"
+        "icbc.com.cn",
+        "icbc-us.com"
       ]
     },
     {
@@ -421,6 +422,16 @@
       "domains": [
         "elanfinancialservices.com",
         "fidelity.com"
+      ]
+    },
+    {
+      "id": "ubs",
+      "name": "UBS Bank USA",
+      "aliases": [
+        "UBS"
+      ],
+      "domains": [
+        "ubs.com"
       ]
     }
   ]
