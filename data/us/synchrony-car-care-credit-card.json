@@ -1,0 +1,60 @@
+{
+  "id": "us-synchrony-car-care-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Synchrony Car Care Credit Card",
+  "localized_names": {
+    "en": "Synchrony Car Care Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 34.99,
+      "max": 34.99,
+      "type": "variable"
+    },
+    "notes": "New accounts as of 7/31/25: purchase APR 34.99%, penalty APR 39.99%, minimum interest charge $2."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/financing/car-care/cardholder",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/financing/car-care/cardholder"
+  ],
+  "notes": "Issued by Synchrony Bank. Accepted at participating gas stations, auto parts stores and repair shops; 6 months promotional financing on purchases of $199 or more; gas station purchases are not eligible for promotional financing. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

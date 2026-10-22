@@ -1,0 +1,62 @@
+{
+  "id": "us-synchrony-mylowes-rewards-credit-card",
+  "schema_version": "1.0.0",
+  "name": "MyLowe's Rewards Credit Card",
+  "localized_names": {
+    "en": "MyLowe's Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 31.99,
+      "max": 31.99,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 31.99%; penalty APR 36.99%; minimum interest charge $2."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "mylowes_money",
+    "currency_label": "MyLowe's Money",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Earn rate not stated on the issuer page."
+    },
+    "categories": [],
+    "redemption_notes": "MyLowe's Money is applied at checkout on Lowe's website, app or in store.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/partner/lowes",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/partner/lowes",
+    "https://www.synchronybankterms.com/syfterms/pdf/MyLowes_Rewards_Credit_Card_Account_Agreement_And_Pricing_Addendum.pdf"
+  ],
+  "notes": "Issued by Synchrony Bank and usable at Lowe's. The Synchrony page confirms the card earns MyLowe's Money but does not state the earn rate, so the rate is left null. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

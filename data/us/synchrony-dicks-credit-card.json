@@ -1,0 +1,71 @@
+{
+  "id": "us-synchrony-dicks-credit-card",
+  "schema_version": "1.0.0",
+  "name": "DICK'S Credit Card",
+  "localized_names": {
+    "en": "DICK'S Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 30.49,
+      "max": 30.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 30.49% variable."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "scorecard_rewards",
+    "currency_label": "ScoreCard Rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 10,
+      "description": "10% back in ScoreCard Rewards on qualifying purchases at DICK'S family of stores."
+    },
+    "categories": [],
+    "redemption_notes": "Earned as ScoreCard Rewards for use at DICK'S.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 30,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "$30 bonus reward when the qualifying purchase is made at a DICK'S family store on the day the account is approved; applicants approved later receive the $30 Bonus Reward in their card package.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/partner/dicks-sporting-goods",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/partner/dicks-sporting-goods",
+    "https://www.synchrony.com/contenthub/newsroom/dicks-sporting-goods-and-synchrony-level-up.html",
+    "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e078339.pdf"
+  ],
+  "notes": "Issued by Synchrony Bank. Usable at DICK'S Sporting Goods, DICK'S House of Sport, Golf Galaxy, Public Lands and Going Going Gone!. Formerly the ScoreRewards Credit Card; relaunched in May 2026. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

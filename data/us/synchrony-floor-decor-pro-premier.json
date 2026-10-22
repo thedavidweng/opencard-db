@@ -1,0 +1,69 @@
+{
+  "id": "us-synchrony-floor-decor-pro-premier",
+  "schema_version": "1.0.0",
+  "name": "Floor & Decor PRO Premier Credit Card",
+  "localized_names": {
+    "en": "Floor & Decor PRO Premier Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 26.99,
+      "max": 26.99,
+      "type": "variable"
+    },
+    "notes": "New accounts as of 02/01/25: purchase APR 26.99%; minimum interest charge $2."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Targeted 2026 offer: eligible participants presented with the offer by Synchrony receive a 5% statement credit on qualifying purchases made between 1/1/2026 and 12/31/2026 that post by 1/7/2027; not combinable with special financing.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.flooranddecor.com/customer-care/procredit.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.flooranddecor.com/customer-care/procredit.html",
+    "https://www.synchrony.com/financing/synchrony-mastercards"
+  ],
+  "notes": "Business credit card for Floor & Decor PRO customers. Synchrony lists Floor & Decor among its commercial credit cards. Promotional financing: no interest if paid in full in 180 days on purchases of $299 or more. Floor & Decor's separate Commercial Business Account (30-day terms) is a different product and is not covered here. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

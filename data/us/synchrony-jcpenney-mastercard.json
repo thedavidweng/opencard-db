@@ -1,0 +1,86 @@
+{
+  "id": "us-synchrony-jcpenney-mastercard",
+  "schema_version": "1.0.0",
+  "name": "JCPenney Mastercard",
+  "localized_names": {
+    "en": "JCPenney Mastercard"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 33.24,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 33.24,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "notes": "Purchase and cash advance APR are prime + 26.49% (33.24% as of January 1, 2026); penalty APR prime + 36.49%. Cash advance fee $10 or 5%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee 3% of each transaction."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "jcpenney_cashpass",
+    "currency_label": "JCPenney CashPass Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in CashPass Rewards everywhere else Mastercard is accepted."
+    },
+    "categories": [
+      {
+        "label": "Qualifying JCPenney purchases (Insider and Elite tiers)",
+        "points_per_dollar": 7.5,
+        "cap": null
+      },
+      {
+        "label": "Qualifying JCPenney purchases after $1,000 in a calendar year (VIP)",
+        "points_per_dollar": 10,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "200 points = $10 CashPass Reward.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 3,
+    "description": "5% back in CashPass Rewards on gas station and grocery store purchases for the first 90 days from account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://jcpcreditcard.com/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://jcpcreditcard.com/",
+    "https://www.synchronybankterms.com/syfterms/pdf/JCPenney_Mastercard_Account_Agreement_and_Pricing_Addendum.pdf"
+  ],
+  "notes": "Issued by Synchrony Bank. No Mastercard package is stated, so network_tier is none."
+}

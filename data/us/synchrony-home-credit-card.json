@@ -1,0 +1,60 @@
+{
+  "id": "us-synchrony-home-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Synchrony HOME Credit Card",
+  "localized_names": {
+    "en": "Synchrony HOME Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 34.99,
+      "max": 34.99,
+      "type": "variable"
+    },
+    "notes": "New accounts as of 7/31/2025: purchase APR 34.99%, penalty APR 39.99%, minimum interest charge $2."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/financing/home/synchrony-home-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/financing/home/synchrony-home-credit-card"
+  ],
+  "notes": "Issued by Synchrony Bank. Accepted at Synchrony HOME partner locations. Everyday promotional financing: no interest if paid in full within 6 months on purchases of $299 to $1,998.99 or 12 months on $1,999 or more; select partners offer 12 to 60 months. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

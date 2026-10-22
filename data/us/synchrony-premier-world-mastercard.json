@@ -1,0 +1,75 @@
+{
+  "id": "us-synchrony-premier-world-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Synchrony Premier World Mastercard",
+  "localized_names": {
+    "en": "Synchrony Premier World Mastercard"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.49,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.49,
+      "max": 36.24,
+      "type": "variable"
+    },
+    "notes": "New accounts as of 8/28/26: variable purchase and balance transfer APR 20.49%, 27.49% or 33.24%; variable cash APR 23.49%, 30.49% or 36.24%; penalty APR 30.49%, 37.49% or 39.99%. Balance transfer fee 5% ($5 min); cash advance fee 5% ($10 min)."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee 3%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2% cash back on every purchase, credited automatically to the statement."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back posts as a statement credit within two billing periods after the purchase.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "USD",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 2,
+    "description": "$100 cash back as a statement credit after spending $1,000 or more on purchases in the first 60 days.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/financing/synchrony-mastercards",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/financing/synchrony-mastercards",
+    "https://www.synchronycredit.com/essimages/cs/groups/ess_webasset/dualcard/@tru/en/promohtmls/ess048627.html"
+  ],
+  "notes": "Issued by Synchrony Bank. The product name carries the World Mastercard tier. Synchrony also offers the invitation-only Plus World Mastercard (1% cash back) and Preferred Mastercard, which are not covered here."
+}

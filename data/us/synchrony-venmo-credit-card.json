@@ -1,0 +1,78 @@
+{
+  "id": "us-synchrony-venmo-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Venmo Credit Card",
+  "localized_names": {
+    "en": "Venmo Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "Variable purchase APR 18.74% (Account Type 1), 27.74% (Type 2) or 30.74% (Type 3) based on creditworthiness; cash advance APR 30.74%; penalty APR 34.24%. Cash advance fee $10 or 5%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Dining and entertainment (an extra 1% when the transaction is split and paid back in Venmo)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Paying with Venmo online, paying a business on Venmo or paying for goods and services on Venmo",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back is deposited daily into the linked Venmo account and can be used for payments, transfers or automatic crypto purchases.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://venmo.com/about/creditcard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://venmo.com/about/creditcard/",
+    "https://www.synchronybankterms.com/syfterms/html/VenmoVCCApplyTerms_combo.htm"
+  ],
+  "notes": "Issued by Synchrony Bank. The account agreement covers the Venmo Visa Signature Credit Card and the Venmo Visa Credit Card; the package is assigned on approval, so network_tier is none."
+}
