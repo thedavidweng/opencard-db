@@ -454,6 +454,16 @@
       ]
     },
     {
+      "id": "becu",
+      "name": "BECU",
+      "aliases": [
+        "Boeing Employees Credit Union"
+      ],
+      "domains": [
+        "becu.org"
+      ]
+    },
+    {
       "id": "alliant",
       "name": "Alliant Credit Union",
       "aliases": [],
