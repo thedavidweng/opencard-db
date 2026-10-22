@@ -1,0 +1,72 @@
+{
+  "id": "us-fnbo-bp-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "bp rewards Visa",
+  "localized_names": {
+    "en": "bp rewards Visa"
+  },
+  "country": "us",
+  "issuer": "FNBO",
+  "issuer_id": "fnbo",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "fnbo_rewards_points",
+    "currency_label": "bp rewards Visa points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x point per $1 on all other qualifying purchases."
+    },
+    "categories": [
+      {
+        "label": "Non-fuel bp and Amoco purchases",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Grocery, dining and food delivery",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.card.fnbo.com/bp",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.card.fnbo.com/bp"
+  ],
+  "notes": "Saves 30 cents per gallon at bp and Amoco stations for the first 60 days and 15 cents per gallon thereafter. APRs, fees and the foreign transaction fee are in the Summary of Credit Terms, which the product page loads with script, so they are null here. No Visa network package is stated, so network_tier is none."
+}
