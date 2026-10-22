@@ -1,0 +1,100 @@
+{
+  "id": "ca-national-bank-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "National Bank World Elite Mastercard",
+  "localized_names": {
+    "en": "National Bank World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "National Bank",
+  "issuer_id": "national-bank",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 150,
+    "currency": "CAD",
+    "first_year": 150,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.99,
+      "max": 20.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.49,
+      "max": 22.49,
+      "type": "variable"
+    },
+    "notes": "20.99% purchase rate; 22.49% on balance transfers and cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum annual income of $80,000 for the applicant or $150,000 household income. Subject to National Bank credit approval."
+  },
+  "rewards": {
+    "currency": "nbc_rewards_points",
+    "currency_label": "National Bank rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per dollar on other purchases."
+    },
+    "categories": [
+      {
+        "label": "Groceries and restaurants (5 points on the first $2,500 in gross monthly purchases charged to the account, then 2 points)",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Gas and electric vehicle charging, recurring bill payments, and A la carte Travel",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem your points for rewards such as items, gift cards and travel discounts, or use them to pay off your card balance; $100 off per 10,000 points on A la carte Travel.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 35000,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "10,000 points for payment insurance enrollment for the first 90 days, 5,000 points after $5,000 in net purchases in the first 90 days, 10,000 points after $20,000 in net purchases in the first 12 months, and 10,000 points for opening a first eligible current account.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "travel-refund",
+      "title": "Travel expense refund",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to a $150 refund per year on travel expenses."
+    },
+    {
+      "id": "national-bank-lounge",
+      "title": "National Bank Lounge access",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Free and unlimited access with a guest and two children aged 12 or under to the National Bank Lounge at Montreal-Trudeau Airport."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.nbc.ca/personal/mastercard-credit-cards/world-elite.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.nbc.ca/personal/mastercard-credit-cards/world-elite.html"
+  ],
+  "notes": "Annual fee for the second authorized card is $50. Network tier is World Elite Mastercard per the card name."
+}
