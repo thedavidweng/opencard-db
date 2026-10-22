@@ -350,6 +350,16 @@
       ]
     },
     {
+      "id": "citizens",
+      "name": "Citizens",
+      "aliases": [
+        "Citizens Bank"
+      ],
+      "domains": [
+        "citizensbank.com"
+      ]
+    },
+    {
       "id": "bmo",
       "name": "BMO",
       "aliases": [
