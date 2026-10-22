@@ -568,6 +568,16 @@
         "getevolved.com",
         "step.com"
       ]
+    },
+    {
+      "id": "stanford-fcu",
+      "name": "Stanford Federal Credit Union",
+      "aliases": [
+        "Stanford FCU"
+      ],
+      "domains": [
+        "sfcu.org"
+      ]
     }
   ]
 }
