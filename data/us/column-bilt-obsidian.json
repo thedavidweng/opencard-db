@@ -1,0 +1,283 @@
+{
+  "id": "us-column-bilt-obsidian",
+  "schema_version": "1.0.0",
+  "name": "Bilt Obsidian Card",
+  "localized_names": {
+    "en": "Bilt Obsidian Card"
+  },
+  "country": "us",
+  "issuer": "Column N.A.",
+  "issuer_id": "column",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95.0,
+    "currency": "USD",
+    "first_year": 95.0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 26.74,
+      "max": 34.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 31.74,
+      "max": 34.74,
+      "type": "variable"
+    },
+    "notes": "Purchase APR varies with the U.S. Prime Rate: Prime + 19.99% to 27.99% (Prime 6.75% as of 2026-01-14), maximum 35.99%. A 10.00% introductory APR applies to new card purchases for the first 12 billing cycles after account opening. Balance transfer APR 26.74% to 34.74%; cash advance APR 31.74% to 34.74%."
+  },
+  "fx_fee": {
+    "percent": 0.0,
+    "notes": "No foreign transaction fee — the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Approval decisions are made by the issuing bank based on credit profile; Bilt does not publish minimum score requirements. No credit score impact to apply and see if approved."
+  },
+  "rewards": {
+    "currency": "bilt_points",
+    "currency_label": "Bilt Points",
+    "rate_type": "points_multiplier",
+    "structure": "choice",
+    "base_rate": {
+      "points_per_dollar": 1.0,
+      "description": "1X on other everyday purchases."
+    },
+    "categories": [
+      {
+        "label": "Bilt partner restaurants",
+        "points_per_dollar": 6.0,
+        "cap": null
+      },
+      {
+        "label": "Selected 3X category (dining or grocery; grocery capped at $25,000/year)",
+        "points_per_dollar": 3.0,
+        "cap": {
+          "amount": 25000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Hotels through Bilt Travel",
+        "points_per_dollar": 4.0,
+        "cap": null
+      },
+      {
+        "label": "Lyft (linked account, total)",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "Flights through Bilt Travel",
+        "points_per_dollar": 3.0,
+        "cap": null
+      },
+      {
+        "label": "Other travel",
+        "points_per_dollar": 2.0,
+        "cap": null
+      },
+      {
+        "label": "Rent & mortgage (housing-only rewards selected)",
+        "points_per_dollar": 1.25,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), the Bilt Travel Portal, future rent or mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. Category rates are the headline totals published by Bilt and are inclusive of the Bilt loyalty membership and the Bilt Card multiplier earn; Bilt partner restaurant rates are \"up to\" and vary by restaurant. The 3X category is chosen annually: dining is the default, may be switched to grocery within 30 days of account opening, and can be changed once each January thereafter; grocery purchases beyond $25,000 in a calendar year earn 1X. Under Housing-only rewards the housing multiplier (0.5X to 1.25X) is set each billing cycle from everyday spend relative to the housing payment, with a 250-point floor."
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "bilt_cash",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "$200 in Bilt Cash credited to the Bilt account upon approval — no spend requirement. Bilt Cash is a dollar-denominated Bilt rewards credit redeemable at Bilt partner merchants and toward housing point unlocks; it expires December 31 each year with up to $100 carried over.",
+    "as_of": "2026-10-21"
+  },
+  "benefits": [
+    {
+      "id": "no-housing-transaction-fee",
+      "title": "No transaction fee on rent, mortgage and HOA",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Earn rewards on rent, mortgage and HOA payments made through Bilt with no transaction fee. Pay via ACH (account and routing number), Venmo, PayPal, or a mailed check to bypass landlord or servicer card fees. Bilt Card 2.0 has no transaction minimum to earn on housing."
+    },
+    {
+      "id": "no-foreign-transaction-fee",
+      "title": "No foreign transaction fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Purchases made outside the U.S. carry no foreign transaction fee; the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
+    },
+    {
+      "id": "bilt-travel-hotel-credit",
+      "title": "$100 annual Bilt Travel Hotel credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Two $50 statement credits per year (January–June and July–December) applied to qualifying hotel bookings of 2 nights or more made through the Bilt Travel Portal. Credits do not roll over between halves of the year or to the next year, and stack with Bilt Points and Bilt Cash."
+    },
+    {
+      "id": "point-accelerator",
+      "title": "Point Accelerator",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Redeem $200 in Bilt Cash to add 1X on everyday spending for the next $5,000 of qualifying purchases — up to 5 times per year ($25,000 of eligible purchases annually). On the Obsidian Card this lifts the chosen 3X category to 4X, 2X travel to 3X and the 1X base rate to 2X until the $5,000 is used or the year ends."
+    },
+    {
+      "id": "bilt-neighborhood-dining",
+      "title": "Bilt Neighborhood Dining bonus points",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "At Bilt Neighborhood Dining restaurants (20,000+ participating locations) you earn bonus Bilt Points per dollar on top of the card's standard earn rate, up to 6X in total on the Obsidian Card when dining is the selected 3X category. The bonus varies by restaurant and is shown in the Bilt app at the time of visit. No activation required."
+    },
+    {
+      "id": "lyft-bonus",
+      "title": "Lyft bonus points",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides; combined with the 1X everyday base rate, Obsidian cardholders earn 3X total on Lyft. Uncapped."
+    },
+    {
+      "id": "bilt-travel-portal-bonus",
+      "title": "Bilt Travel Portal bonus points",
+      "category": "acceleration",
+      "source": "issuer",
+      "description": "Booking through the Bilt Travel Portal earns +2X on hotels and +1X on flights in bonus Bilt Points on top of the card's base rate — 4X total on hotels and 3X total on flights."
+    },
+    {
+      "id": "transfer-partners",
+      "title": "28 airline and hotel transfer partners",
+      "category": "other",
+      "source": "issuer",
+      "description": "Bilt Points transfer at a 1:1 ratio to Bilt's 28 airline and hotel transfer partners, including major domestic and international airline programs and leading hotel loyalty programs."
+    },
+    {
+      "id": "cellular-wireless-telephone-protection",
+      "title": "Cellular Wireless Telephone Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Reimbursement for covered damage or theft of your cellphone.",
+      "details": {
+        "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "trip-cancellation-and-interruption-protection",
+      "title": "Trip Cancellation and Interruption Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Coverage for eligible trip cancellation and interruption.",
+      "details": {
+        "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "trip-delay-reimbursement",
+      "title": "Trip Delay Reimbursement",
+      "category": "insurance",
+      "source": "network",
+      "description": "Reimbursement for qualifying trip delays.",
+      "details": {
+        "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "purchase-assurance",
+      "title": "Purchase Assurance",
+      "category": "insurance",
+      "source": "network",
+      "description": "Mastercard Purchase Assurance coverage for eligible purchases.",
+      "details": {
+        "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "masterrental-coverage",
+      "title": "MasterRental Coverage",
+      "category": "insurance",
+      "source": "network",
+      "description": "Reimbursement for covered damage or theft to your rental car.",
+      "details": {
+        "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended Warranty",
+      "category": "insurance",
+      "source": "network",
+      "description": "Extended warranty coverage for eligible purchases of covered items.",
+      "details": {
+        "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "lost-or-damaged-luggage-insurance",
+      "title": "Lost or Damaged Luggage Insurance",
+      "category": "insurance",
+      "source": "network",
+      "description": "Coverage for eligible loss or damage of checked luggage.",
+      "details": {
+        "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "world-elite-mastercard-benefits",
+      "title": "World Elite Mastercard benefits",
+      "category": "other",
+      "source": "network",
+      "description": "As a World Elite Mastercard, the Bilt Obsidian Card includes Mastercard Travel & Lifestyle Services and other World Elite Mastercard benefits per the card's Guide to Benefits."
+    },
+    {
+      "id": "mastercard-id-theft-protection",
+      "title": "Mastercard ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Mastercard ID Theft Protection monitors for possible identity theft and provides resolution services. Enrollment is required to receive the benefit.",
+      "details": {
+        "conditions": "Enroll at mastercardus.idprotectiononline.com; see the Bilt Obsidian Card Guide to Benefits."
+      }
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": null,
+    "tsa_precheck_credit": null,
+    "global_entry_credit": null,
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "World Elite Mastercard Travel & Lifestyle Services"
+    ]
+  },
+  "official_url": "https://www.bilt.com/card/obsidian",
+  "image": {
+    "url": "https://img.bilt.com/43819/1790799681-bilt-vail.webp",
+    "attribution": "© Bilt Technologies, Inc.",
+    "local_path": "images/us-column-bilt-obsidian.webp",
+    "provenance": {
+      "source": "issuer-site",
+      "source_sha256": "1a88e7a82acfc8b6c9e3f23494514f4d1722034d6f25813950e2156486ee143a",
+      "converted_sha256": "b044508d7cc8a84d14edb965111c3f1aee00d64749db0016f0f04462b5453ad9",
+      "width": 500,
+      "height": 317,
+      "exported_at": "2026-10-21"
+    }
+  },
+  "bin_hints": [],
+  "last_verified": "2026-10-21",
+  "sources": [
+    "https://www.bilt.com/card/obsidian",
+    "https://www.bilt.com/card",
+    "https://legal.cardless.com/schumer/bilt/rates_and_fees.pdf",
+    "https://www.biltrewards.com/terms/obsidian-card-guide-to-benefits",
+    "https://www.biltrewards.com/terms/bilt-card-offer-terms"
+  ],
+  "notes": "Bilt Card 2.0 middle tier, verified 2026-10-21 against bilt.com/card/obsidian, the bilt.com/card comparison table, the Bilt Cards Rates & Fees disclosure and the Bilt Card Offer Terms. Issued by Column N.A., Member FDIC and serviced by Cardless, Inc.; a World Elite Mastercard. $95 annual fee with a $50 per-year authorized user fee. The card's headline feature is an annually chosen 3X category (dining or grocery, grocery capped at $25,000 per year) on top of 4X hotels and 3X flights through the Bilt Travel Portal, 3X on Lyft, 2X other travel and a 1X base rate. Bilt partner restaurants reach up to 6X. Welcome offer is $200 in Bilt Cash with no spend requirement; there is no spend-based points bonus. Includes a $100 annual Bilt Travel Hotel credit (two $50 statement credits, 2-night minimum) and the Point Accelerator. Travel protections per the official bilt.com/card comparison table: cellular wireless telephone protection, purchase assurance, MasterRental coverage, trip cancellation and interruption protection, trip delay reimbursement, extended warranty and lost or damaged luggage insurance. Priority Pass lounge access is not included on this tier. APR is the Prime-based variable range published in the Rates & Fees disclosure, with a 10.00% introductory APR for the first 12 billing cycles on new card purchases."
+}
