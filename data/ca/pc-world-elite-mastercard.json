@@ -1,0 +1,82 @@
+{
+  "id": "ca-pc-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "PC World Elite Mastercard",
+  "localized_names": {
+    "en": "PC World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "PC Financial",
+  "issuer_id": "pc-financial",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.97,
+      "max": 22.97,
+      "type": "variable"
+    },
+    "notes": "Standard rates: 21.99% on purchases; 22.97% on cash advances (21.97% in Quebec)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $80,000 personal or $150,000 household annual income."
+  },
+  "rewards": {
+    "currency": "pc_optimum_points",
+    "currency_label": "PC Optimum points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 10,
+      "description": "10 points per $1 (1% back) on dining, transit and everywhere else."
+    },
+    "categories": [
+      {
+        "label": "Shoppers Drug Mart and Pharmaprix (4.5% back)",
+        "points_per_dollar": 45,
+        "cap": null
+      },
+      {
+        "label": "Participating grocery stores (3% back)",
+        "points_per_dollar": 30,
+        "cap": null
+      },
+      {
+        "label": "Joe Fresh (3% back)",
+        "points_per_dollar": 30,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "PC Optimum points redeem instantly in stores and in the app, or to pay down the card balance.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.pcfinancial.ca/en/credit-cards/world-elite/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.pcfinancial.ca/en/credit-cards/world-elite/"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name. Earn rates are shown on the page as percent back in PC Optimum points; 10 points per $1 equals 1% back, so rates are recorded as points per $1. Gas earns points per litre at Esso and Mobil stations, which is not a per-dollar rate."
+}

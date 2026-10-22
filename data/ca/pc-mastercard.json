@@ -1,0 +1,82 @@
+{
+  "id": "ca-pc-mastercard",
+  "schema_version": "1.0.0",
+  "name": "PC Mastercard",
+  "localized_names": {
+    "en": "PC Mastercard"
+  },
+  "country": "ca",
+  "issuer": "PC Financial",
+  "issuer_id": "pc-financial",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.97,
+      "max": 22.97,
+      "type": "variable"
+    },
+    "notes": "Standard rates: 21.99% on purchases; 22.97% on cash advances (21.97% in Quebec)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority; subject to credit approval."
+  },
+  "rewards": {
+    "currency": "pc_optimum_points",
+    "currency_label": "PC Optimum points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 10,
+      "description": "10 points per $1 (1% back) on dining, transit and everywhere else."
+    },
+    "categories": [
+      {
+        "label": "Shoppers Drug Mart and Pharmaprix (2.5% back)",
+        "points_per_dollar": 25,
+        "cap": null
+      },
+      {
+        "label": "Participating grocery stores (1% back)",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Joe Fresh (1% back)",
+        "points_per_dollar": 10,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "PC Optimum points redeem instantly in stores and in the app, or to pay down the card balance.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.pcfinancial.ca/en/credit-cards/pc-mastercard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.pcfinancial.ca/en/credit-cards/pc-mastercard/"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none. Earn rates are shown on the page as percent back in PC Optimum points; 10 points per $1 equals 1% back, so rates are recorded as points per $1. Gas earns points per litre at Esso and Mobil stations, which is not a per-dollar rate."
+}
