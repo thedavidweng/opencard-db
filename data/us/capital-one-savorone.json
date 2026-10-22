@@ -1,0 +1,69 @@
+{
+  "id": "us-capital-one-savorone",
+  "schema_version": "1.0.0",
+  "name": "SavorOne Rewards",
+  "localized_names": {
+    "en": "SavorOne Rewards"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 39,
+    "currency": "USD",
+    "first_year": 39,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 29.24,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "notes": "Purchase rate 29.24% variable APR per the product page."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+  },
+  "credit_required": {
+    "score_band": "fair",
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Grocery stores, dining, entertainment and popular streaming services",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.capitalone.com/credit-cards/savorone/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/savorone/",
+    "https://www.mastercard.com/us/en/personal/find-a-card/credit-card/issuers/capital-one.html",
+    "https://www.capitalone.com/learn-grow/money-management/no-foreign-transaction-fee-credit-card/"
+  ],
+  "notes": "Fair-credit SavorOne with a $39 annual fee, distinct from Savor (us-capital-one-savor). Mastercard network per Mastercard's Capital One card listing (Capital One SavorOne Cash Rewards Credit Card). network_tier is recorded as none because no official page names the Mastercard package."
+}

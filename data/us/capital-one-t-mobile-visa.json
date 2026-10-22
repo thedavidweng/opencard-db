@@ -1,0 +1,75 @@
+{
+  "id": "us-capital-one-t-mobile-visa",
+  "schema_version": "1.0.0",
+  "name": "T-Mobile Visa",
+  "localized_names": {
+    "en": "T-Mobile Visa"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "t_mobile_rewards",
+    "currency_label": "T-Mobile Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2% back in T-Mobile Rewards on all other net purchases."
+    },
+    "categories": [
+      {
+        "label": "Phones, devices and accessories bought at T-Mobile.com, the T-Life app, T-Mobile stores and authorized retailers",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards can be used toward a new phone, device or the T-Mobile bill and don't expire for the life of the account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "autopay-line-discount",
+      "title": "T-Mobile AutoPay discount",
+      "category": "other",
+      "source": "co-brand",
+      "description": "$5 off per line per month when the card is used for T-Mobile AutoPay (eligible plans only, up to 8 lines)."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.capitalone.com/credit-cards/t-mobile/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/t-mobile/"
+  ],
+  "notes": "Available only to T-Mobile customers. The product page footnotes describe 'T-Mobile Visa Signature cardholders' and link to the Visa Signature benefits, so network_tier is signature. APR is in the rates and disclosures overlay and is not captured."
+}
