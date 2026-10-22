@@ -462,6 +462,16 @@
       "domains": [
         "becu.org"
       ]
+    },
+    {
+      "id": "wescom",
+      "name": "Wescom Financial",
+      "aliases": [
+        "Wescom Credit Union"
+      ],
+      "domains": [
+        "wescom.org"
+      ]
     }
   ]
 }
