@@ -1,6 +1,19 @@
 {
   "amex": [
+    "ca-amex-aeroplan",
+    "ca-amex-aeroplan-business-reserve",
+    "ca-amex-aeroplan-reserve",
+    "ca-amex-business-gold-rewards",
+    "ca-amex-business-platinum",
     "ca-amex-cobalt",
+    "ca-amex-essential",
+    "ca-amex-gold-rewards",
+    "ca-amex-green",
+    "ca-amex-marriott-bonvoy",
+    "ca-amex-marriott-bonvoy-business",
+    "ca-amex-platinum",
+    "ca-amex-simplycash",
+    "ca-amex-simplycash-preferred",
     "us-amex-amazon-business",
     "us-amex-blue-business-cash",
     "us-amex-blue-business-plus",
@@ -53,7 +66,10 @@
     "us-td-ameritrade-client-rewards",
     "us-td-business-solutions",
     "us-td-cash",
-    "us-td-first-class"
+    "us-td-double-up",
+    "us-td-first-class",
+    "us-td-target-circle-credit",
+    "us-td-target-mastercard"
   ],
   "ccb": [
     "cn-ccb-unionpay-diamond"
@@ -62,10 +78,28 @@
     "cn-cmb-classic-platinum"
   ],
   "icbc": [
-    "cn-icbc-amex-platinum"
+    "cn-icbc-amex-platinum",
+    "us-icbc-us-preferred-unionpay-gold",
+    "us-icbc-us-preferred-visa",
+    "us-icbc-us-premier-unionpay-platinum",
+    "us-icbc-us-premier-visa-signature"
+  ],
+  "affinity-fcu": [
+    "us-affinity-fcu-business-first-visa",
+    "us-affinity-fcu-cash-rewards-visa-signature",
+    "us-affinity-fcu-premium-visa",
+    "us-affinity-fcu-pure-rewards-visa",
+    "us-affinity-fcu-secured-visa"
+  ],
+  "alliant": [
+    "us-alliant-visa-platinum",
+    "us-alliant-visa-signature-cashback"
   ],
   "first-electronic-bank": [
     "us-amex-rakuten",
+    "us-booking-com-genius-rewards-visa-signature",
+    "us-coinbase-one-card",
+    "us-fetch-american-express",
     "us-first-avianca-lifemiles",
     "us-first-avianca-lifemiles-elite",
     "us-first-cardless-qatar-infinite",
@@ -73,8 +107,18 @@
     "us-first-latam-airlines",
     "us-first-latam-airlines-standard"
   ],
+  "aod-fcu": [
+    "us-aod-fcu-share-secured-visa-platinum",
+    "us-aod-fcu-visa-platinum",
+    "us-aod-fcu-visa-signature"
+  ],
   "goldman-sachs": [
     "us-apple-card"
+  ],
+  "coastal-community-bank": [
+    "us-aven-home-equity-visa",
+    "us-aven-rewards-visa",
+    "us-robinhood-gold-card"
   ],
   "bank-of-america": [
     "us-bank-of-america-air-france-klm",
@@ -85,15 +129,18 @@
     "us-bank-of-america-atmos-rewards-ascent",
     "us-bank-of-america-atmos-rewards-business",
     "us-bank-of-america-atmos-rewards-summit",
+    "us-bank-of-america-bankamericard",
     "us-bank-of-america-business-advantage-customized-cash",
     "us-bank-of-america-business-advantage-travel-rewards",
     "us-bank-of-america-business-advantage-unlimited-cash",
     "us-bank-of-america-customized-cash-rewards",
     "us-bank-of-america-free-spirit",
+    "us-bank-of-america-nea-ratesmart",
     "us-bank-of-america-norwegian-cruise-line",
     "us-bank-of-america-platinum-plus",
     "us-bank-of-america-premium-rewards",
     "us-bank-of-america-premium-rewards-elite",
+    "us-bank-of-america-susan-g-komen-customized-cash-rewards",
     "us-bank-of-america-travel-rewards",
     "us-bank-of-america-unlimited-cash-rewards"
   ],
@@ -135,6 +182,18 @@
     "us-barclays-wyndham-rewards-earner-premier",
     "us-barclays-xbox"
   ],
+  "becu": [
+    "us-becu-cash-back-visa",
+    "us-becu-low-rate-visa"
+  ],
+  "bmo": [
+    "us-bmo-boost-secured",
+    "us-bmo-cash-back",
+    "us-bmo-escape",
+    "us-bmo-platinum",
+    "us-bmo-platinum-rewards",
+    "us-bmo-premium-rewards"
+  ],
   "brex": [
     "us-brex-card"
   ],
@@ -164,6 +223,18 @@
     "us-capital-one-venture-x-business",
     "us-capital-one-ventureone",
     "us-capital-one-ventureone-business"
+  ],
+  "first-bank-trust": [
+    "us-cb2-visa-signature",
+    "us-crate-and-barrel-visa-signature",
+    "us-fnbo-best-western-rewards",
+    "us-fnbo-best-western-rewards-premium",
+    "us-kroger-rewards-world-elite-mastercard",
+    "us-shop-your-way-5321-visa"
+  ],
+  "cfna": [
+    "us-cfna-firestone-credit-card",
+    "us-cfna-firestone-mastercard"
   ],
   "chase": [
     "us-chase-aer-lingus-signature",
@@ -239,6 +310,12 @@
     "us-citi-strata-premier",
     "us-citi-thankyou-premier"
   ],
+  "citizens": [
+    "us-citizens-amp",
+    "us-citizens-spring",
+    "us-citizens-summit",
+    "us-citizens-summit-reserve"
+  ],
   "city-national-bank": [
     "us-city-national-bank-crystal-visa-infinite",
     "us-city-national-bank-visa-crystal-commercial"
@@ -251,32 +328,75 @@
   "comenity": [
     "us-comenity-aaa-daily-advantage",
     "us-comenity-aaa-travel-advantage",
+    "us-comenity-bread-cashback-amex",
+    "us-comenity-bread-rewards-amex",
     "us-comenity-nfl-extra-points",
     "us-comenity-playstation-visa",
     "us-comenity-virgin-america-premium-visa-signature",
     "us-comenity-virgin-america-visa-signature"
   ],
+  "credit-one-bank": [
+    "us-credit-one-bank-amex-rebuilding-credit",
+    "us-credit-one-bank-omni-rewards-amex",
+    "us-credit-one-bank-platinum-rewards-visa-no-annual-fee",
+    "us-credit-one-bank-platinum-visa",
+    "us-credit-one-bank-platinum-visa-rebuilding-credit",
+    "us-credit-one-bank-platinum-x5-visa-signature",
+    "us-credit-one-bank-premier-amex",
+    "us-credit-one-bank-secured",
+    "us-credit-one-bank-vegas-golden-knights-visa",
+    "us-credit-one-bank-wander-amex"
+  ],
+  "cross-river-bank": [
+    "us-cross-river-bank-upgrade-onecard-essentials",
+    "us-current-build-visa"
+  ],
   "discover": [
     "us-discover-it-cash-back",
     "us-discover-it-chrome",
     "us-discover-it-miles",
+    "us-discover-it-nhl",
     "us-discover-it-secured",
     "us-discover-it-student-cash-back",
     "us-discover-it-student-chrome"
   ],
+  "elan": [
+    "us-elan-fidelity-rewards-visa-signature"
+  ],
+  "fifth-third": [
+    "us-fifth-third-1-67-cash-back",
+    "us-fifth-third-preferred-cash-back",
+    "us-fifth-third-secured"
+  ],
   "fnbo": [
     "us-first-ana-card-usa-plus",
     "us-fnbo-amtrak-guest-rewards",
-    "us-fnbo-amtrak-guest-rewards-preferred"
+    "us-fnbo-amtrak-guest-rewards-preferred",
+    "us-fnbo-bp-rewards-visa",
+    "us-fnbo-ducks-unlimited-rewards",
+    "us-fnbo-evergreen",
+    "us-fnbo-evergreen-business-edition"
   ],
-  "first-bank-trust": [
-    "us-fnbo-best-western-rewards",
-    "us-fnbo-best-western-rewards-premium"
+  "first-tech-fcu": [
+    "us-first-tech-choice-rewards-world-mastercard"
+  ],
+  "harvard-fcu": [
+    "us-harvard-alumni-world-mastercard",
+    "us-harvard-fcu-platinum-mastercard",
+    "us-harvard-fcu-platinum-rewards-mastercard",
+    "us-harvard-fcu-platinum-rewards-plus-mastercard"
   ],
   "hsbc": [
     "us-hsbc-elite",
     "us-hsbc-premier-world",
     "us-hsbc-premier-world-elite"
+  ],
+  "patriot-bank": [
+    "us-mercury-io-mastercard"
+  ],
+  "merrick-bank": [
+    "us-merrick-bank-ollo-everyday-rewards",
+    "us-merrick-bank-ollo-select-rewards"
   ],
   "navy-federal": [
     "us-navy-federal-cashrewards",
@@ -289,6 +409,10 @@
     "us-navy-federal-more-rewards-amex",
     "us-navy-federal-platinum"
   ],
+  "lead-bank": [
+    "us-nibbles-rewards-world-mastercard",
+    "us-revolut-secured-mastercard"
+  ],
   "penfed": [
     "us-penfed-gold-visa",
     "us-penfed-pathfinder",
@@ -297,7 +421,19 @@
     "us-penfed-premium-travel-rewards"
   ],
   "pnc": [
-    "us-pnc-cash-rewards-visa-signature-business"
+    "us-pnc-cash-rewards-visa",
+    "us-pnc-cash-rewards-visa-signature-business",
+    "us-pnc-cash-unlimited-visa"
+  ],
+  "sofi": [
+    "us-sofi-everyday-cash-rewards",
+    "us-sofi-unlimited-2"
+  ],
+  "stanford-fcu": [
+    "us-stanford-fcu-tech-card-visa-signature"
+  ],
+  "evolve-bank-trust": [
+    "us-step-visa-card"
   ],
   "synchrony": [
     "us-synchrony-amazon-prime-store",
@@ -326,6 +462,19 @@
     "us-synchrony-verizon-visa",
     "us-synchrony-virgin-red-rewards",
     "us-synchrony-walmart-onepay-cashrewards"
+  ],
+  "truist": [
+    "us-truist-enjoy-beyond",
+    "us-truist-enjoy-cash",
+    "us-truist-enjoy-travel",
+    "us-truist-future"
+  ],
+  "ubs": [
+    "us-ubs-cash-rewards-visa-business",
+    "us-ubs-visa-infinite",
+    "us-ubs-visa-infinite-business",
+    "us-ubs-visa-signature",
+    "us-ubs-visa-signature-business"
   ],
   "us-bank": [
     "us-us-bank-aaa-cashback-visa-signature",
@@ -384,5 +533,8 @@
     "us-wells-fargo-rewards",
     "us-wells-fargo-signify-business-cash",
     "us-wells-fargo-visa-signature"
+  ],
+  "wescom": [
+    "us-wescom-bruin-edge-visa"
   ]
 }
