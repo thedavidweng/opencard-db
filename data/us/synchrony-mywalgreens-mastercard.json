@@ -28,7 +28,7 @@
     "cash_advance": {
       "min": 34.99,
       "max": 34.99,
-      "type": "variable"
+      "type": "fixed"
     },
     "notes": "Variable purchase APR 24.24% (Account Type 1) or 33.24% (Type 2); cash advance APR 34.99%; penalty APR 34.99% or 39.99%. Cash advance fee 5% ($10 min)."
   },

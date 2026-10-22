@@ -21,11 +21,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 26.99,
+      "max": 26.99,
       "type": "variable"
     },
-    "notes": null
+    "notes": "New accounts as of 02/01/25: purchase APR 26.99%; minimum interest charge $2."
   },
   "fx_fee": {
     "percent": null,
@@ -36,23 +36,25 @@
     "notes": null
   },
   "rewards": {
-    "currency": "cash_back",
-    "currency_label": "Statement credit",
-    "structure": "multi",
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
     "base_rate": {
       "points_per_dollar": null
     },
-    "categories": [
-      {
-        "label": "Qualifying Floor & Decor purchases (2026 promotion, in lieu of special financing)",
-        "points_per_dollar": 5,
-        "cap": null
-      }
-    ],
-    "redemption_notes": "Posted as a statement credit.",
-    "rate_type": "cashback_percent"
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Targeted 2026 offer: eligible participants presented with the offer by Synchrony receive a 5% statement credit on qualifying purchases made between 1/1/2026 and 12/31/2026 that post by 1/7/2027; not combinable with special financing.",
+    "as_of": "2026-10-22"
+  },
   "benefits": [],
   "travel_perks": null,
   "official_url": "https://www.flooranddecor.com/customer-care/procredit.html",
@@ -63,5 +65,5 @@
     "https://www.flooranddecor.com/customer-care/procredit.html",
     "https://www.synchrony.com/financing/synchrony-mastercards"
   ],
-  "notes": "Business card for Floor & Decor PRO customers with Net 30 terms. Synchrony lists Floor & Decor among its commercial credit cards. The 5% back is a statement credit on qualifying purchases made between 1/1/2026 and 12/31/2026, offered as an alternative to 180 days special financing on purchases of $299 or more. The standard APR is not stated on the page. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+  "notes": "Business credit card for Floor & Decor PRO customers. Synchrony lists Floor & Decor among its commercial credit cards. Promotional financing: no interest if paid in full in 180 days on purchases of $299 or more. Floor & Decor's separate Commercial Business Account (30-day terms) is a different product and is not covered here. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
 }

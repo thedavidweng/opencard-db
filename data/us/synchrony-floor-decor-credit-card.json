@@ -21,11 +21,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 34.99,
+      "max": 34.99,
       "type": "variable"
     },
-    "notes": null
+    "notes": "New accounts as of 07/31/2025: purchase APR 34.99%; penalty APR 39.99%; minimum interest charge $2."
   },
   "fx_fee": {
     "percent": null,
@@ -56,5 +56,5 @@
   "sources": [
     "https://www.flooranddecor.com/customer-care/credit.html"
   ],
-  "notes": "Issued by Synchrony Bank and usable at Floor & Decor. Promotional financing: no interest if paid in full within 6, 12 or 18 months on purchases of $299, $999 or $1,999 or more, or 6.99% APR for 48 months with fixed payments. The standard purchase APR is not stated on the page. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+  "notes": "Issued by Synchrony Bank and usable at Floor & Decor. Promotional financing: no interest if paid in full within 6, 12 or 18 months on purchases of $299, $999 or $1,999 or more, or 6.99% APR for 48 months with fixed payments. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
 }

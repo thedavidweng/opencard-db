@@ -27,10 +27,10 @@
     },
     "cash_advance": {
       "min": 25.15,
-      "max": null,
+      "max": 31.15,
       "type": "variable"
     },
-    "notes": "Purchase APR is prime + 13.40% (Account Type 1) or prime + 21.40% (Type 2); cash advance APR prime + 18.40% or prime + 24.40%. The agreement shows 20.15% and 28.15% for purchases as of January 1, 2026. Cash advance fee $5 or 3%."
+    "notes": "Purchase APR is prime + 13.40% (Account Type 1) or prime + 21.40% (Type 2); cash advance APR prime + 18.40% or prime + 24.40%. The agreement shows 20.15% and 28.15% for purchases and 25.15% and 31.15% for cash advances as of January 1, 2026. Cash advance fee $5 or 3%."
   },
   "fx_fee": {
     "percent": 0,

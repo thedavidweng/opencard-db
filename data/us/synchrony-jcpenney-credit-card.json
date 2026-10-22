@@ -21,11 +21,11 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 33.24,
+      "max": 33.24,
       "type": "variable"
     },
-    "notes": null
+    "notes": "New accounts as of 01/01/26: variable purchase APR 33.24%; variable penalty APR 39.99%; minimum interest charge $2."
   },
   "fx_fee": {
     "percent": null,
@@ -63,5 +63,5 @@
   "sources": [
     "https://jcpcreditcard.com/"
   ],
-  "notes": "Issued by Synchrony Bank and usable at JCPenney stores and jcp.com. Purchase APR is not stated on the program page. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+  "notes": "Issued by Synchrony Bank and usable at JCPenney stores and jcp.com. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
 }

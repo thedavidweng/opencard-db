@@ -28,9 +28,9 @@
     "cash_advance": {
       "min": 34.99,
       "max": 34.99,
-      "type": "variable"
+      "type": "fixed"
     },
-    "notes": "Purchase APR is prime + 23.74% (30.49% as of January 1, 2026); cash advance APR 34.99%; penalty APR prime + 33.74%. Cash advance fee $10 or 4%."
+    "notes": "Purchase APR is prime + 23.74% (30.49% as of January 1, 2026); cash advance APR 34.99% (not tied to the Prime Rate); penalty APR prime + 33.74%. Cash advance fee $10 or 4%."
   },
   "fx_fee": {
     "percent": 0,

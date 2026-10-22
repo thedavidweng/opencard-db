@@ -28,9 +28,9 @@
     "cash_advance": {
       "min": 29.99,
       "max": 29.99,
-      "type": "variable"
+      "type": "fixed"
     },
-    "notes": "Purchase APR 30.49% variable; cash advance APR 29.99% variable. Cash advance fee $10 or 5%."
+    "notes": "Purchase APR 30.49% variable; cash advance APR 29.99% (the agreement does not tie it to the Prime Rate). Cash advance fee $10 or 5%."
   },
   "fx_fee": {
     "percent": 3,
@@ -64,7 +64,7 @@
     "spend_required": null,
     "spend_currency": null,
     "months": null,
-    "description": "$30 bonus reward after opening and using the new card at a DICK'S family store.",
+    "description": "$30 bonus reward when the qualifying purchase is made at a DICK'S family store on the day the account is approved; applicants approved later receive the $30 Bonus Reward in their card package.",
     "as_of": "2026-10-22"
   },
   "benefits": [],

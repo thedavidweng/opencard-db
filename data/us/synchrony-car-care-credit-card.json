@@ -56,5 +56,5 @@
   "sources": [
     "https://www.synchrony.com/financing/car-care/cardholder"
   ],
-  "notes": "Issued by Synchrony Bank. Accepted at participating gas stations, auto parts stores and repair shops; 6 months promotional financing on purchases of $199 or more. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+  "notes": "Issued by Synchrony Bank. Accepted at participating gas stations, auto parts stores and repair shops; 6 months promotional financing on purchases of $199 or more; gas station purchases are not eligible for promotional financing. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
 }
