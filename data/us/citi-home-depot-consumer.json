@@ -1,0 +1,70 @@
+{
+  "id": "us-citi-home-depot-consumer",
+  "schema_version": "1.0.0",
+  "name": "The Home Depot Consumer Credit Card",
+  "localized_names": {
+    "en": "The Home Depot Consumer Credit Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "APR 29.99%; minimum interest charge $2. Special financing offers apply to qualifying purchases."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised on the product page."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "usd",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Save up to $100 on qualifying purchases the day the account is opened (limited-time offer).",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-home-depot-consumer-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-home-depot-consumer-credit-card",
+    "https://www.citi.com/credit-cards/view-all-credit-cards"
+  ],
+  "notes": "Closed-loop Home Depot store card issued by Citi, usable only at The Home Depot, so network is other. Citi's card catalog lists no annual fee."
+}

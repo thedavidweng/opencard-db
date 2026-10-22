@@ -1,0 +1,61 @@
+{
+  "id": "us-citi-home-depot-pro-xtra",
+  "schema_version": "1.0.0",
+  "name": "The Home Depot Pro Xtra Credit Card",
+  "localized_names": {
+    "en": "The Home Depot Pro Xtra Credit Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Pricing as of 4/1/24: minimum finance charge $1; late fee up to $40. APR is in the card agreement and not shown on the product page."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "pro_xtra_perks",
+    "currency_label": "Pro Xtra Perks",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 4,
+      "description": "Every $1 spent on qualifying purchases with the card counts as $4 toward earning Pro Xtra Perks."
+    },
+    "categories": [],
+    "redemption_notes": "Perks are earned at spend thresholds starting at $2,500 in qualifying purchases, up to $1,000,000 spent per program period.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/home-depot-pro-xtra-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/home-depot-pro-xtra-credit-card"
+  ],
+  "notes": "Business store card for Home Depot Pro Xtra members, issued by Citi; usable only at The Home Depot, so network is other. The product page states annual fee: None."
+}

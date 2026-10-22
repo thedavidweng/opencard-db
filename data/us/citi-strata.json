@@ -1,0 +1,100 @@
+{
+  "id": "us-citi-strata",
+  "schema_version": "1.0.0",
+  "name": "Citi Strata Card",
+  "localized_names": {
+    "en": "Citi Strata Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months on purchases and balance transfers, then 18.74% to 28.74% variable based on creditworthiness. Cash advance APR 29.99% variable; penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Fee for foreign purchases is 3% of the U.S. dollar amount of each purchase."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "thankyou_points",
+    "currency_label": "ThankYou Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per dollar on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Hotels, car rentals and attractions booked on cititravel.com",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Supermarkets",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas and EV charging stations and select transit",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "One self-select category (fitness clubs, select streaming, live entertainment, cosmetic stores/barber shops/hair salons, or pet supply stores)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "ThankYou Points can be redeemed for gift cards, cash back, shopping with points, Citi Travel bookings, or transferred to partners such as American Airlines, JetBlue and Virgin Atlantic.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "points",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "20,000 bonus points after spending $1,000 in the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-strata-credit-card"
+  ],
+  "notes": "The product page lists Mastercard ID Theft Protection, establishing the Mastercard network. Pricing comes from the Pricing Details block on the product page. network_tier is recorded as none because the official page does not name the network package."
+}

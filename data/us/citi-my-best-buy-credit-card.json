@@ -1,0 +1,68 @@
+{
+  "id": "us-citi-my-best-buy-credit-card",
+  "schema_version": "1.0.0",
+  "name": "My Best Buy Credit Card",
+  "localized_names": {
+    "en": "My Best Buy Credit Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": "Annual fee $0 to $59 based on creditworthiness."
+  },
+  "apr": {
+    "purchase": {
+      "min": 30.99,
+      "max": 30.99,
+      "type": "variable"
+    },
+    "notes": "Pricing as of 9/22/26: purchase APR 30.99% variable; minimum interest charge $2."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "best_buy_rewards",
+    "currency_label": "My Best Buy rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Rewards are earned only on Best Buy purchases."
+    },
+    "categories": [
+      {
+        "label": "Best Buy purchases when the rewards option is chosen",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points are redeemable for Best Buy reward certificates ($5 certificate for every $100 spent) and gift cards. Cardholders choose rewards or flexible financing.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+    "https://www.citi.com/credit-cards/view-all-credit-cards"
+  ],
+  "notes": "Closed-loop Best Buy store card issued by Citi; usable only at Best Buy, so network is other. The page offers 10% back in rewards on the first day of purchases for new cardmembers. Annual fee ranges from $0 to $59 by creditworthiness, so annual_fee.amount is null."
+}
