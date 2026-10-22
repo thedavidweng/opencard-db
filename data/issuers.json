@@ -515,6 +515,38 @@
       ]
     },
     {
+      "id": "first-tech-fcu",
+      "name": "First Tech Federal Credit Union",
+      "aliases": [
+        "First Tech"
+      ],
+      "domains": [
+        "firsttechfed.com"
+      ]
+    },
+    {
+      "id": "coastal-community-bank",
+      "name": "Coastal Community Bank",
+      "aliases": [
+        "Coastal Bank"
+      ],
+      "domains": [
+        "coastalbank.com",
+        "robinhood.com",
+        "aven.com"
+      ]
+    },
+    {
+      "id": "lead-bank",
+      "name": "Lead Bank",
+      "aliases": [],
+      "domains": [
+        "lead.bank",
+        "nibbles.com",
+        "revolut.com"
+      ]
+    },
+    {
       "id": "patriot-bank",
       "name": "Patriot Bank, N.A.",
       "aliases": [

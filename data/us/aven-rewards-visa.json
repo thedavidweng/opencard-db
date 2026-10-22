@@ -1,0 +1,72 @@
+{
+  "id": "us-aven-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "Aven Rewards Visa Card",
+  "localized_names": {
+    "en": "Aven Rewards Visa Card"
+  },
+  "country": "us",
+  "issuer": "Coastal Community Bank",
+  "issuer_id": "coastal-community-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Variable APR equal to the Prime Rate plus a margin based on creditworthiness, with a 0.25 percentage point AutoPay discount; no numeric range is published on the product page. 2.5% fee on cash outs and balance transfers."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Aven Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 points per $1 (2% cash back) with AutoPay on after the first $10,000 each account year; 0 points with AutoPay off."
+    },
+    "categories": [
+      {
+        "label": "All eligible purchases, first $10,000 each account year (AutoPay on)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 10000,
+          "currency": "USD",
+          "period": "account_year"
+        }
+      }
+    ],
+    "redemption_notes": "Points redeem as cash back.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.aven.com/rewards-visa-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.aven.com/rewards-visa-card",
+    "https://www.aven.com/"
+  ],
+  "notes": "Serviced by Aven. Rewards require AutoPay. No Visa network package is stated, so network_tier is none."
+}
