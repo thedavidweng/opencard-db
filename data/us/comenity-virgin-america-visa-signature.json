@@ -13,7 +13,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2018-01-04",
   "annual_fee": {
     "amount": 49,
     "currency": "USD",
@@ -53,12 +52,12 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-20",
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
   "sources": [
     "https://d.comenity.net/legaldocs/virginamericavisa/legal-documents/termsandconditions"
   ],
-  "notes": "Discontinued January 4, 2018 following Alaska Airlines' acquisition of Virgin America. $49 annual fee. Cards were not converted to Alaska Airlines products."
+  "notes": "Historical discontinued record. The retained official Comenity agreement explicitly names Virgin America Visa, Visa Signature, Premium Visa and Premium Visa Signature accounts for personal, family or household use, issued by Comenity Capital Bank. The agreement is not dated and does not establish an exact application-withdrawal or account-closure date, a successor, or conversion/non-conversion to Alaska Airlines. The unsupported 2018-01-04 date has been removed. Historical fees and benefits retained from the existing record have not been reverified from a dated issuer fee schedule. Accessible legacy legal text does not establish current application availability."
 }
