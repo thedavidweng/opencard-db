@@ -9,8 +9,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "business",
-  "status": "discontinued",
-  "discontinued_date": "2026-03-25",
+  "status": "unknown",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -26,13 +25,15 @@
     }
   },
   "benefits": [],
-  "official_url": "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/graphite-business-cash-unlimited-card/",
-  "last_verified": "2026-07-28",
+  "official_url": "https://web.archive.org/web/20250110024850/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-plum-card-amex/",
+  "last_verified": "2026-10-19",
   "sources": [
-    "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/graphite-business-cash-unlimited-card/"
+    "https://web.archive.org/web/20250110024850/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-plum-card-amex/"
   ],
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
-  "notes": "Discontinued March 2026 when Graphite card launched. Early-payment discount card for businesses."
+  "notes": "The January 10, 2025 archived official Plum product page confirms the historical product and early-payment discount. The live product URL now redirects to the business-card catalog. The Graphite launch article (https://www.americanexpress.com/en-us/business/trends-and-insights/articles/graphite-business-cash-unlimited-card/) does not mention Plum, its withdrawal, or a conversion, so it is context rather than a source for Plum. No accessible official notice establishes current availability, an exact withdrawal date, or a successor; lifecycle remains unknown. Historical fees and rewards have not been comprehensively reverified. Historical artwork checked 2026-10-20: the retained official product-page capture dated 2025-01-10 directly references this Plum card image. The image resolves to its own 2025-01-09 archive capture and was visually verified as the matching American Express Business Plum design. Image provenance does not verify present availability or the stored financial fields.",
+  "image": {
+    "url": "https://web.archive.org/web/20250109115034im_/https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/plum.png",
+    "attribution": "© American Express",
+    "local_path": null
+  }
 }
