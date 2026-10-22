@@ -1,0 +1,70 @@
+{
+  "id": "us-harvard-fcu-platinum-rewards-plus-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Harvard FCU Platinum Rewards+ Mastercard",
+  "localized_names": {
+    "en": "Harvard FCU Platinum Rewards+ Mastercard"
+  },
+  "country": "us",
+  "issuer": "Harvard Federal Credit Union",
+  "issuer_id": "harvard-fcu",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.24,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for the first 12 billing cycles on purchases and balance transfers (2% balance transfer fee), then 17.24% to 18.00% variable APR based on creditworthiness."
+  },
+  "fx_fee": {
+    "percent": 1,
+    "notes": "1% of the U.S. dollar amount of each transaction made outside the United States."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Harvard FCU membership required."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% cash back rewards on all net purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back is issued as a statement credit or a deposit to a Harvard FCU checking or savings account; travel and merchandise rewards are also available. Points do not expire.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 10000,
+    "unit": "points",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "10,000 bonus points after $500 in purchases in the first 90 days of card membership.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://harvardfcu.org/credit-cards/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://harvardfcu.org/credit-cards/",
+    "https://harvardfcu.org/credit-cards/platinum-rewards-plus-mastercard-terms-conditions/"
+  ],
+  "notes": "Mastercard is named without a network package, so network_tier is none."
+}

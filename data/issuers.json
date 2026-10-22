@@ -470,6 +470,19 @@
       "domains": [
         "alliantcreditunion.org"
       ]
+    },
+    {
+      "id": "harvard-fcu",
+      "name": "Harvard Federal Credit Union",
+      "aliases": [
+        "Harvard FCU",
+        "HUECU"
+      ],
+      "domains": [
+        "harvardfcu.org",
+        "huecu.org",
+        "harvardcard.com"
+      ]
     }
   ]
 }

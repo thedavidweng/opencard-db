@@ -1,0 +1,62 @@
+{
+  "id": "us-harvard-fcu-platinum-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Harvard FCU Platinum Mastercard",
+  "localized_names": {
+    "en": "Harvard FCU Platinum Mastercard"
+  },
+  "country": "us",
+  "issuer": "Harvard Federal Credit Union",
+  "issuer_id": "harvard-fcu",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 13.24,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for the first 12 billing cycles on purchases and balance transfers (2% balance transfer fee), then 13.24% to 18.00% variable APR based on creditworthiness."
+  },
+  "fx_fee": {
+    "percent": 1,
+    "notes": "1% of the U.S. dollar amount of each transaction made outside the United States."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Harvard FCU membership required."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised for this card."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://harvardfcu.org/credit-cards/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://harvardfcu.org/credit-cards/",
+    "https://harvardfcu.org/credit-cards/platinum-mastercard-terms-conditions/"
+  ],
+  "notes": "Mastercard is named without a network package, so network_tier is none."
+}
