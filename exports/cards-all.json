@@ -2357,6 +2357,90 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-amex-corporate-platinum",
+    "schema_version": "1.0.0",
+    "name": "American Express Corporate Platinum Card",
+    "localized_names": {
+      "en": "American Express Corporate Platinum Card"
+    },
+    "country": "us",
+    "issuer": "American Express",
+    "issuer_id": "amex",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "corporate",
+    "status": "active",
+    "annual_fee": {
+      "amount": 550,
+      "currency": "USD",
+      "first_year": 550,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "membership_rewards",
+      "currency_label": "Membership Rewards points",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "Rewards depend on the company's corporate Membership Rewards enrollment; no earn rate is stated on the product page."
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "airline-fee-credit",
+        "title": "Airline fee credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Up to $200 in statement credits per calendar year for incidental fees with one selected qualifying airline."
+      },
+      {
+        "id": "clear-plus-credit",
+        "title": "CLEAR+ credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Up to $219 per calendar year in statement credits for an auto-renewing CLEAR+ membership."
+      },
+      {
+        "id": "uber-cash",
+        "title": "Uber Cash on business rides",
+        "category": "other",
+        "source": "issuer",
+        "description": "5% Uber Cash on business Uber rides and Uber Eats orders charged to the card, with enrollment."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.americanexpress.com/en-us/business/corporate/cards/platinum-card/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.americanexpress.com/en-us/business/corporate/cards/platinum-card/"
+    ],
+    "notes": "Corporate card issued through a company program for employees. APR and foreign transaction fee are not stated on the product page.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-amex-delta-skymiles-blue",
     "schema_version": "1.0.0",
     "name": "Delta SkyMiles® Blue American Express Card",
@@ -4150,6 +4234,84 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-amex-everyday",
+    "schema_version": "1.0.0",
+    "name": "Amex EveryDay Credit Card",
+    "localized_names": {
+      "en": "Amex EveryDay Credit Card"
+    },
+    "country": "us",
+    "issuer": "American Express",
+    "issuer_id": "amex",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "membership_rewards",
+      "currency_label": "Membership Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 point per eligible dollar; 20% extra points on purchases in any billing period with 20 or more separate purchases."
+      },
+      "categories": [
+        {
+          "label": "U.S. supermarkets (first $6,000 per calendar year, then 1X)",
+          "points_per_dollar": 2,
+          "cap": {
+            "amount": 6000,
+            "currency": "USD",
+            "period": "calendar_year"
+          }
+        },
+        {
+          "label": "Eligible travel booked through AmexTravel.com or the Amex Travel App",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Membership Rewards points can be redeemed for travel, gift cards, statement credits and transfers to partners.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.americanexpress.com/us/credit-cards/card/amex-everyday/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.americanexpress.com/us/credit-cards/card/amex-everyday/",
+      "https://www.americanexpress.com/us/credit-cards/card-application/apply/supplementary/terms/amex-everyday-credit-card/36182-9-0"
+    ],
+    "notes": "Issued by American Express National Bank. Earn rates come from the card's published benefit terms. The public prospect offer terms currently show \"Offer No Longer Available\", so APR and foreign transaction fee are left null.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-amex-everyday-preferred",
     "schema_version": "1.0.0",
     "name": "Amex EveryDay® Preferred Credit Card",
@@ -4389,6 +4551,83 @@
     "notes": "Product name Gold is not a Network Tier; network_tier is none for Amex network packages.",
     "segment": "personal",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-amex-graphite-business-cash-unlimited",
+    "schema_version": "1.0.0",
+    "name": "American Express Graphite Business Cash Unlimited Card",
+    "localized_names": {
+      "en": "American Express Graphite Business Cash Unlimited Card"
+    },
+    "country": "us",
+    "issuer": "American Express",
+    "issuer_id": "amex",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 295,
+      "currency": "USD",
+      "first_year": 295,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 17.99,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "Pay Over Time APR 17.99% (Prime + 10.99%) to 28.74% variable based on creditworthiness; variable APRs will not exceed 29.99%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Foreign transaction fee: none."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "amex_reward_dollars",
+      "currency_label": "Reward Dollars (cash back)",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "Unlimited 2% cash back on all eligible purchases."
+      },
+      "categories": [
+        {
+          "label": "Scheduled flights and prepaid hotels booked through American Express Travel",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Reward Dollars redeem as statement credits or at Amazon.com checkout, with no minimum.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 1500,
+      "unit": "USD",
+      "spend_required": 50000,
+      "spend_currency": "USD",
+      "months": 6,
+      "description": "$1,500 cash back in Reward Dollars after $50,000 in eligible purchases within the first 6 months.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/graphite-business-cash-unlimited-card/",
+      "https://www.americanexpress.com/en-us/credit-cards/apply/terms/business/prospect/graphite-business-card/45094-9-0?key=tncBody&rwdFlag=rwd"
+    ],
+    "notes": "Charge card with no preset spending limit and a Pay Over Time feature. Employee Graphite cards cost $95 each; Employee Business Expense Cards with no annual fee are also available.",
+    "art_grade": "none"
   },
   {
     "id": "us-amex-green",
@@ -10492,6 +10731,178 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-barclays-athleta-encore-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Athleta Encore Mastercard",
+    "localized_names": {
+      "en": "Athleta Encore Mastercard"
+    },
+    "country": "us",
+    "issuer": "Barclays",
+    "issuer_id": "barclays",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "notes": "Purchase, balance transfer and cash advance APR 33.49% variable (when using the Mastercard)."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "gap_encore_points",
+      "currency_label": "Encore points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X point per $1 spent everywhere else Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Gap Inc. family of brands",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Eligible retail apparel brands",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "500 points = $1 reward, redeemable in the Encore Market or on purchases at the Gap Inc. family of brands.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "20% off the first purchase with the new card at Athleta.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://cards.barclaycardus.com/banking/cards/athleta-encore-mastercard/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://cards.barclaycardus.com/banking/cards/athleta-encore-mastercard/"
+    ],
+    "notes": "Issued by Barclays Bank Delaware. Applicants are first considered for the Athleta Encore Mastercard and, if not approved, for the Athleta Encore Credit Card usable only at Gap Inc. stores; this record covers the Mastercard. The page footnote names World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none. Foreign transaction fee is not stated on the product page.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-barclays-banana-republic-encore-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Banana Republic Encore Mastercard",
+    "localized_names": {
+      "en": "Banana Republic Encore Mastercard"
+    },
+    "country": "us",
+    "issuer": "Barclays",
+    "issuer_id": "barclays",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "notes": "Purchase, balance transfer and cash advance APR 33.49% variable (when using the Mastercard)."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "gap_encore_points",
+      "currency_label": "Encore points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X point per $1 spent everywhere else Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Gap Inc. family of brands",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Eligible retail apparel brands",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "500 points = $1 reward, redeemable in the Encore Market or on purchases at the Gap Inc. family of brands.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "20% off the first purchase with the new card at Banana Republic.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://cards.barclaycardus.com/banking/cards/banana-republic-encore-mastercard/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://cards.barclaycardus.com/banking/cards/banana-republic-encore-mastercard/"
+    ],
+    "notes": "Issued by Barclays Bank Delaware. Applicants are first considered for the Banana Republic Encore Mastercard and, if not approved, for the Banana Republic Encore Credit Card usable only at Gap Inc. stores; this record covers the Mastercard. The page footnote names World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none. Foreign transaction fee is not stated on the product page.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-barclays-breeze",
     "schema_version": "1.0.0",
     "name": "Breeze Easy® Visa® Credit Card",
@@ -11631,6 +12042,173 @@
       "https://www.flyfrontier.com/frontiermiles/terms-and-conditions/"
     ],
     "notes": "Frontier's official FRONTIER Miles terms name the Frontier Airlines Business Mastercard and identify Barclays Bank Delaware as its issuer. The terms direct cardholders to their Barclays cardholder agreement for card-specific earning terms. This acknowledgement does not establish that the current program reference is the same generation as the inherited 2018 record. Current application availability, withdrawal date, conversion and successor remain unknown; the prior discontinued classification relied on a secondary source. The inherited $49 fee, 2x/1x earning rates, 12,500-mile activation offer and other financial terms have not been verified against an official agreement for that historical generation. No matching historical official artwork has been established. Historical secondary reference (not an official source for lifecycle or terms): https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-barclays-gap-encore-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Gap Encore Mastercard",
+    "localized_names": {
+      "en": "Gap Encore Mastercard"
+    },
+    "country": "us",
+    "issuer": "Barclays",
+    "issuer_id": "barclays",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "notes": "Purchase, balance transfer and cash advance APR 33.49% variable (when using the Mastercard)."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "gap_encore_points",
+      "currency_label": "Encore points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X point per $1 spent everywhere else Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Gap Inc. family of brands",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Eligible retail apparel brands",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "500 points = $1 reward, redeemable in the Encore Market or on purchases at the Gap Inc. family of brands.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "20% off the first purchase with the new card at Gap.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://cards.barclaycardus.com/banking/cards/gap-encore-mastercard/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://cards.barclaycardus.com/banking/cards/gap-encore-mastercard/"
+    ],
+    "notes": "Issued by Barclays Bank Delaware. Applicants are first considered for the Gap Encore Mastercard and, if not approved, for the Gap Encore Credit Card usable only at Gap Inc. stores; this record covers the Mastercard. The page footnote names World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none. Foreign transaction fee is not stated on the product page.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-barclays-gm-rewards-mastercard",
+    "schema_version": "1.0.0",
+    "name": "GM Rewards Mastercard",
+    "localized_names": {
+      "en": "GM Rewards Mastercard"
+    },
+    "country": "us",
+    "issuer": "Barclays",
+    "issuer_id": "barclays",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 22.49,
+        "max": 32.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "notes": "Purchase and balance transfer APR 22.49% to 32.49% variable; cash advance APR 33.49% variable. 0% intro APR for 9 billing cycles on qualifying GM purchases over $499 made within 30 days of opening, then 0% promotional APR for 6 billing cycles on qualifying GM purchases over $499."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Foreign transaction fee: 3%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "gm_rewards_points",
+      "currency_label": "GM Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 3,
+        "description": "3x points per $1 on all other purchases, including groceries, gas, restaurants and travel."
+      },
+      "categories": [
+        {
+          "label": "Eligible GM purchases (card earn, before up to 3x GM Rewards member earn)",
+          "points_per_dollar": 7,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Points are redeemable for items related to Chevrolet, Buick, GMC, Cadillac and other GM products and services.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 30000,
+      "unit": "points",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "30,000 bonus points after spending $1,000 in the first 90 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://cards.barclaycardus.com/banking/cards/general-motors/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://cards.barclaycardus.com/banking/cards/general-motors/"
+    ],
+    "notes": "Issued by Barclays Bank Delaware. The page footnote names World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none. A separate GM Business card exists and is not covered here.",
     "art_grade": "none"
   },
   {
@@ -12964,6 +13542,92 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-barclays-old-navy-encore-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Old Navy Encore Mastercard",
+    "localized_names": {
+      "en": "Old Navy Encore Mastercard"
+    },
+    "country": "us",
+    "issuer": "Barclays",
+    "issuer_id": "barclays",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.49,
+        "max": 33.49,
+        "type": "variable"
+      },
+      "notes": "Purchase, balance transfer and cash advance APR 33.49% variable (when using the Mastercard)."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "gap_encore_points",
+      "currency_label": "Encore points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X point per $1 spent everywhere else Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Gap Inc. family of brands",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Eligible retail apparel brands",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "500 points = $1 reward, redeemable in the Encore Market or on purchases at the Gap Inc. family of brands.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "30% off the first purchase with the new card at Old Navy.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://cards.barclaycardus.com/banking/cards/old-navy-encore-mastercard/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://cards.barclaycardus.com/banking/cards/old-navy-encore-mastercard/"
+    ],
+    "notes": "Issued by Barclays Bank Delaware. Applicants are first considered for the Old Navy Encore Mastercard and, if not approved, for the Old Navy Encore Credit Card usable only at Gap Inc. stores; this record covers the Mastercard. The page footnote names World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none. Foreign transaction fee is not stated on the product page.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-barclays-priceline-vip-rewards-visa",
     "schema_version": "1.0.0",
     "name": "Priceline VIP Rewards Visa® Card",
@@ -14107,6 +14771,142 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-barclays-wyndham-rewards-earner-premier",
+    "schema_version": "1.0.0",
+    "name": "Wyndham Rewards Earner Premier Card",
+    "localized_names": {
+      "en": "Wyndham Rewards Earner Premier Card"
+    },
+    "country": "us",
+    "issuer": "Barclays",
+    "issuer_id": "barclays",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 395,
+      "currency": "USD",
+      "first_year": 395,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 19.49,
+        "max": 29.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 29.99,
+        "max": 29.99,
+        "type": "variable"
+      },
+      "notes": "Purchase APR 19.49% to 29.99% variable; cash advance APR 29.99% variable. 0% promotional APR for 6 billing cycles on Wyndham Timeshare Purchases; 0% intro APR for 15 billing cycles on balance transfers posted within 45 days of opening."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees on international purchases."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "wyndham_rewards_points",
+      "currency_label": "Wyndham Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 point per $1 on all other purchases (excluding Wyndham Vacation Club down payments)."
+      },
+      "categories": [
+        {
+          "label": "Hotels by Wyndham, including Wyndham Travel Bundles",
+          "points_per_dollar": 8,
+          "cap": null
+        },
+        {
+          "label": "Dining, grocery stores (excluding Target and Walmart) and travel",
+          "points_per_dollar": 4,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Free nights from 3,750 points with 25% fewer points required; points also redeem for online shopping and gift cards.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 120000,
+      "unit": "points",
+      "spend_required": 6000,
+      "spend_currency": "USD",
+      "months": 4,
+      "description": "90,000 bonus points after spending $6,000 and paying the annual fee within the first 120 days, plus 30,000 bonus points after spending $750 at Hotels by Wyndham in the first 180 days.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "anniversary-bonus-points",
+        "title": "Anniversary bonus points",
+        "category": "other",
+        "source": "co-brand",
+        "description": "30,000 bonus points each anniversary year after payment of the annual fee."
+      },
+      {
+        "id": "diamond-status",
+        "title": "Wyndham Rewards Diamond status",
+        "category": "other",
+        "source": "co-brand",
+        "description": "Automatic Wyndham Rewards Diamond member level."
+      },
+      {
+        "id": "hotel-credit",
+        "title": "Wyndham hotel statement credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$100 statement credit after spending $100 or more at eligible Wyndham hotel brands each calendar year."
+      },
+      {
+        "id": "meal-delivery-credit",
+        "title": "Meal delivery credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Up to $10 in statement credits each month (up to $120 per calendar year) on qualifying meal delivery purchases."
+      },
+      {
+        "id": "streaming-credit",
+        "title": "Streaming credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Up to $100 in statement credits each calendar year on qualifying streaming service purchases."
+      },
+      {
+        "id": "wholesale-club-credit",
+        "title": "Wholesale club membership credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$65 statement credit each calendar year after qualifying wholesale club membership purchases."
+      },
+      {
+        "id": "tsa-precheck-global-entry",
+        "title": "TSA PreCheck or Global Entry credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Up to $120 statement credit every 4 years for the application fee."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-premier-card/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-premier-card/"
+    ],
+    "notes": "Issued by Barclays Bank Delaware. The page's offer terms refer to the Wyndham Rewards Visa Signature credit card, so network_tier is signature.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-barclays-xbox",
     "schema_version": "1.0.0",
     "name": "Xbox Mastercard",
@@ -14398,6 +15198,132 @@
     ],
     "notes": "Verified against the official Brex product and rewards pages on 2026-07-25. Brex is a pay-in-full corporate charge card (no personal guarantee); type set to 'charge' and segment 'corporate'. No annual fee ($0). Reward multipliers: 7x rideshare, 4x Brex Travel (flights & prepaid hotels), 3x restaurants, 2x recurring software, 1x on everything else — the higher 'Brex Exclusive' tiers apply to the daily-payment card. APR and US FX-fee percent are not published on the product page (left null).",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-capital-one-key-rewards-visa",
+    "schema_version": "1.0.0",
+    "name": "Key Rewards Visa",
+    "localized_names": {
+      "en": "Key Rewards Visa"
+    },
+    "country": "us",
+    "issuer": "Capital One",
+    "issuer_id": "capital-one",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "key_rewards",
+      "currency_label": "Key Rewards",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "Up to 5% back in rewards; the official listing does not break the rate down by merchant."
+      },
+      "categories": [],
+      "redemption_notes": "Intro 10% back on in-store purchases per the official listing.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.capitalone.com/credit-cards/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.capitalone.com/credit-cards/"
+    ],
+    "notes": "Williams-Sonoma family Key Rewards Visa issued by Capital One, listed on Capital One's credit card catalog with a $0 annual fee, up to 5% back in rewards and intro 10% back on in-store purchases. The catalog also lists brand versions (Pottery Barn, Williams Sonoma, West Elm); this record covers the unbranded Key Rewards Visa. No product page with the full earn structure or APR was found, so those fields are null. network_tier is recorded as none because the listing does not name the Visa package.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-capital-one-platinum",
+    "schema_version": "1.0.0",
+    "name": "Platinum Mastercard from Capital One",
+    "localized_names": {
+      "en": "Platinum Mastercard from Capital One"
+    },
+    "country": "us",
+    "issuer": "Capital One",
+    "issuer_id": "capital-one",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 29.24,
+        "max": 29.24,
+        "type": "variable"
+      },
+      "notes": "Purchase rate 29.24% variable APR per the product page."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+    },
+    "credit_required": {
+      "score_band": "fair",
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "No purchase rewards are advertised on the product page."
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.capitalone.com/credit-cards/platinum/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.capitalone.com/credit-cards/platinum/",
+      "https://www.mastercard.com/us/en/personal/find-a-card/credit-card/issuers/capital-one.html",
+      "https://www.capitalone.com/learn-grow/money-management/no-foreign-transaction-fee-credit-card/"
+    ],
+    "notes": "Unsecured credit-building card for fair credit, distinct from Platinum Secured (us-capital-one-platinum-secured). Mastercard network per Mastercard's Capital One card listing (Capital One Platinum Credit Card). network_tier is recorded as none because no official page names the Mastercard package.",
+    "art_grade": "none"
   },
   {
     "id": "us-capital-one-platinum-secured",
@@ -14946,6 +15872,151 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-capital-one-quicksilverone",
+    "schema_version": "1.0.0",
+    "name": "QuicksilverOne Rewards",
+    "localized_names": {
+      "en": "QuicksilverOne Rewards"
+    },
+    "country": "us",
+    "issuer": "Capital One",
+    "issuer_id": "capital-one",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 39,
+      "currency": "USD",
+      "first_year": 39,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 29.24,
+        "max": 29.24,
+        "type": "variable"
+      },
+      "notes": "Purchase rate 29.24% variable APR per the product page."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+    },
+    "credit_required": {
+      "score_band": "fair",
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usd",
+      "currency_label": "Cash back",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 1.5,
+        "description": "Unlimited 1.5% cash back on every purchase."
+      },
+      "categories": [],
+      "redemption_notes": "Cash back can be redeemed for any amount as a check, statement credit, to cover recent purchases, or for gift cards. Rewards don't expire for the life of the account.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.capitalone.com/credit-cards/quicksilverone/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.capitalone.com/credit-cards/quicksilverone/",
+      "https://www.mastercard.com/us/en/personal/find-a-card/credit-card/issuers/capital-one.html",
+      "https://www.capitalone.com/learn-grow/money-management/no-foreign-transaction-fee-credit-card/"
+    ],
+    "notes": "Fair-credit version of Quicksilver. Mastercard network per Mastercard's Capital One card listing (Capital One QuicksilverOne Cash Rewards Credit Card). network_tier is recorded as none because no official page names the Mastercard package.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-capital-one-rei-co-op-mastercard",
+    "schema_version": "1.0.0",
+    "name": "REI Co-op Mastercard",
+    "localized_names": {
+      "en": "REI Co-op Mastercard"
+    },
+    "country": "us",
+    "issuer": "Capital One",
+    "issuer_id": "capital-one",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 17.49,
+        "max": 28.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.49,
+        "max": 28.49,
+        "type": "variable"
+      },
+      "notes": "Purchase and transfer APR 17.49% to 28.49% variable; cash advance APR 28.49% variable."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usd",
+      "currency_label": "REI Co-op Mastercard Rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1.5,
+        "description": "1.5% in card rewards on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "REI Co-op purchases at REI stores and REI.com, and donations to the REI Cooperative Action Fund",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Rewards can be redeemed as soon as they post and don't expire for the life of the account.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 100,
+      "unit": "usd",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": 2,
+      "description": "$100 REI gift card after the first purchase outside of REI within 60 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.capitalone.com/credit-cards/rei/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.capitalone.com/credit-cards/rei/"
+    ],
+    "notes": "Available to REI Co-op members. The product page lists no annual fee and no foreign transaction fees. network_tier is recorded as none because the page does not name the Mastercard package.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-capital-one-savor",
     "schema_version": "1.0.0",
     "name": "Capital One Savor Cash Rewards Credit Card",
@@ -15141,6 +16212,76 @@
     ],
     "notes": "Verified from official Capital One product page and fair-and-building listing page. Capital One Savor is a Mastercard (network corrected from visa; the Visa-only 'signature' tier was invalid). Annual fee $0. $100 cash bonus after $300 spend in 3 months. 3% cash back on grocery stores, dining, entertainment, and popular streaming; 1% on all other purchases. Mastercard tier (world vs world_elite) not stated on the page, so network_tier left 'none'. APR and foreign transaction fee not visible on fetched pages (behind JS overlay). Name updated to 'Savor Rewards for Students' per official page.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-capital-one-savorone",
+    "schema_version": "1.0.0",
+    "name": "SavorOne Rewards",
+    "localized_names": {
+      "en": "SavorOne Rewards"
+    },
+    "country": "us",
+    "issuer": "Capital One",
+    "issuer_id": "capital-one",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 39,
+      "currency": "USD",
+      "first_year": 39,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 29.24,
+        "max": 29.24,
+        "type": "variable"
+      },
+      "notes": "Purchase rate 29.24% variable APR per the product page."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+    },
+    "credit_required": {
+      "score_band": "fair",
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usd",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "Grocery stores, dining, entertainment and popular streaming services",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.capitalone.com/credit-cards/savorone/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.capitalone.com/credit-cards/savorone/",
+      "https://www.mastercard.com/us/en/personal/find-a-card/credit-card/issuers/capital-one.html",
+      "https://www.capitalone.com/learn-grow/money-management/no-foreign-transaction-fee-credit-card/"
+    ],
+    "notes": "Fair-credit SavorOne with a $39 annual fee, distinct from Savor (us-capital-one-savor). Mastercard network per Mastercard's Capital One card listing (Capital One SavorOne Cash Rewards Credit Card). network_tier is recorded as none because no official page names the Mastercard package.",
+    "art_grade": "none"
   },
   {
     "id": "us-capital-one-spark-1-5-cash-select",
@@ -15700,6 +16841,82 @@
     ],
     "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles Select will now be known as VentureOne Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. No successor artwork is used. Historical artwork provenance (checked 2026-10-21): the retained 2020-01-01 archive of the official Capital One Spark Miles Select product page lists the product \"Spark® Miles Select\" (brand code SPARKMILESSELECT) with the image Spark-Miles-Select.png. The linked image resolves to a 2019-12-04 archive capture of that Capital One-hosted asset and was visually inspected as the blue Spark Business card; the face does not print the product name or network mark, so the product-data association is the evidence. It is a 384x242 historical image documenting the predecessor brand as marketed at that date; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-capital-one-t-mobile-visa",
+    "schema_version": "1.0.0",
+    "name": "T-Mobile Visa",
+    "localized_names": {
+      "en": "T-Mobile Visa"
+    },
+    "country": "us",
+    "issuer": "Capital One",
+    "issuer_id": "capital-one",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "t_mobile_rewards",
+      "currency_label": "T-Mobile Rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "2% back in T-Mobile Rewards on all other net purchases."
+      },
+      "categories": [
+        {
+          "label": "Phones, devices and accessories bought at T-Mobile.com, the T-Life app, T-Mobile stores and authorized retailers",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Rewards can be used toward a new phone, device or the T-Mobile bill and don't expire for the life of the account.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "autopay-line-discount",
+        "title": "T-Mobile AutoPay discount",
+        "category": "other",
+        "source": "co-brand",
+        "description": "$5 off per line per month when the card is used for T-Mobile AutoPay (eligible plans only, up to 8 lines)."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.capitalone.com/credit-cards/t-mobile/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.capitalone.com/credit-cards/t-mobile/"
+    ],
+    "notes": "Available only to T-Mobile customers. The product page footnotes describe 'T-Mobile Visa Signature cardholders' and link to the Visa Signature benefits, so network_tier is signature. APR is in the rates and disclosures overlay and is not captured.",
+    "art_grade": "none"
   },
   {
     "id": "us-capital-one-venture",
@@ -17157,6 +18374,93 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-chase-amazon-visa",
+    "schema_version": "1.0.0",
+    "name": "Amazon Visa",
+    "localized_names": {
+      "en": "Amazon Visa"
+    },
+    "country": "us",
+    "issuer": "Chase",
+    "issuer_id": "chase",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.99,
+        "max": 27.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "Purchase and balance transfer APR 18.99% to 27.74% variable based on creditworthiness; cash advance APR 28.74% variable; penalty APR up to 29.99%. Variable APRs are based on the 7.00% Prime Rate."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Pricing & Terms list foreign transaction fees as None."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usd",
+      "currency_label": "Amazon rewards (cash back)",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "Unlimited 1% back on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "Amazon.com, Audible.com, Whole Foods Market and Chase Travel purchases",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Gas stations, restaurants, and local transit and commuting (including rideshare)",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Rewards can be redeemed at Amazon.com checkout with no minimum, or for cash back, gift cards and travel at Chase.com.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 50,
+      "unit": "usd",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$50 Amazon Gift Card loaded into the Amazon account Gift Card Balance on approval of the credit card application.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards",
+      "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC59318.html"
+    ],
+    "notes": "Amazon Visa without a Prime membership requirement, distinct from the Prime Visa (us-chase-amazon-prime). Fees, APRs and earn rates come from the Chase product page and its Pricing & Terms page checked on the verification date. network_tier is recorded as none because neither the product page nor the Pricing & Terms page names the network package.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-chase-british-airways-signature",
     "schema_version": "1.0.0",
     "name": "British Airways Credit Card",
@@ -17455,6 +18759,120 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-chase-disney-inspire",
+    "schema_version": "1.0.0",
+    "name": "Disney Inspire Visa Card",
+    "localized_names": {
+      "en": "Disney Inspire Visa Card"
+    },
+    "country": "us",
+    "issuer": "Chase",
+    "issuer_id": "chase",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 149,
+      "currency": "USD",
+      "first_year": 149,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.49,
+        "max": 27.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "Purchase APR 18.49% to 27.99% variable; cash advance APR 28.74% variable; penalty APR up to 29.99%. 0% promotional APR for 6 months on select Disney vacation packages, then the variable purchase APR."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Pricing & Terms list foreign transaction fees as None."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "disney_rewards_dollars",
+      "currency_label": "Disney Rewards Dollars",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% in Disney Rewards Dollars on all other card purchases."
+      },
+      "categories": [
+        {
+          "label": "Purchases made directly at DisneyPlus.com, Hulu.com or Stream.ESPN.com",
+          "points_per_dollar": 10,
+          "cap": null
+        },
+        {
+          "label": "Gas stations and most other U.S. Disney locations",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Grocery stores and restaurants",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Rewards Dollars can be redeemed through Pay Yourself Back for statement credits toward purchases at most U.S. Disney locations and Disney sites, or toward airline tickets purchased with the card.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 200,
+      "unit": "usd",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "$300 Disney Gift Card eGift upon approval, plus a $200 statement credit after spending $1,000 on purchases in the first 3 months.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "disney-streaming-credit",
+        "title": "Disney streaming credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$10 statement credit each month after spending $10 or more on qualifying subscriptions at DisneyPlus.com, Hulu.com or Stream.ESPN.com. Yearly activation required."
+      },
+      {
+        "id": "disney-resort-rewards",
+        "title": "Disney resort and cruise spend bonus",
+        "category": "other",
+        "source": "issuer",
+        "description": "$200 Disney Rewards Dollars after spending $2,000 per anniversary year on U.S. Disney Resort stays and Disney Cruise Line bookings."
+      },
+      {
+        "id": "theme-park-ticket-credit",
+        "title": "Theme park ticket credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$100 statement credit after spending $200 per anniversary year on U.S. Disney theme park tickets."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://creditcards.chase.com/rewards-credit-cards/disney/inspire",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://creditcards.chase.com/rewards-credit-cards/disney/inspire",
+      "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64083.html"
+    ],
+    "notes": "Issued by JPMorgan Chase Bank, N.A. network_tier is recorded as none because neither the product page nor the Pricing & Terms page names the network package.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-chase-disney-premier",
     "schema_version": "1.0.0",
     "name": "Disney Premier Visa Card",
@@ -17594,6 +19012,106 @@
     ],
     "notes": "Verified from official Chase product page. Network corrected from mastercard to visa based on page title 'Disney® Premier Visa® Card'. Network tier set to null (was 'world' tied to mastercard assumption; page does not state a Visa tier).",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-chase-doordash-rewards-mastercard",
+    "schema_version": "1.0.0",
+    "name": "DoorDash Rewards Mastercard",
+    "localized_names": {
+      "en": "DoorDash Rewards Mastercard"
+    },
+    "country": "us",
+    "issuer": "Chase",
+    "issuer_id": "chase",
+    "network": "mastercard",
+    "network_tier": "world_elite",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.49,
+        "max": 27.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "Purchase and balance transfer APR 18.49% to 27.99% variable based on creditworthiness; cash advance APR 28.74% variable; penalty APR up to 29.99%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Pricing & Terms list foreign transaction fees as None."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usd",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "DoorDash and Caviar orders",
+          "points_per_dollar": 4,
+          "cap": null
+        },
+        {
+          "label": "Dining purchased directly from a restaurant",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Grocery stores, online or in-store",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "Approved applicants receive a free year of DashPass ($96 value) that auto-renews at the then-current annual fee.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "dashpass-anniversary",
+        "title": "DashPass anniversary bonus",
+        "category": "other",
+        "source": "co-brand",
+        "description": "Complimentary DashPass membership each year with $10,000 in annual card spend."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://creditcards.chase.com/cash-back-credit-cards/doordash",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://creditcards.chase.com/cash-back-credit-cards/doordash",
+      "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC61934.html"
+    ],
+    "notes": "Issued by JPMorgan Chase Bank, N.A. The product page lists Mastercard World Elite benefits including World Elite Concierge, which supports network_tier world_elite.",
+    "art_grade": "none"
   },
   {
     "id": "us-chase-fairmont",
@@ -18808,6 +20326,108 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-chase-ihg-premier-select",
+    "schema_version": "1.0.0",
+    "name": "IHG One Rewards Premier Select Credit Card",
+    "localized_names": {
+      "en": "IHG One Rewards Premier Select Credit Card"
+    },
+    "country": "us",
+    "issuer": "Chase",
+    "issuer_id": "chase",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 350,
+      "currency": "USD",
+      "first_year": 350,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 19.49,
+        "max": 27.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "Purchase APR 19.49% to 27.99% variable; cash advance APR 28.74% variable; penalty APR up to 29.99%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Pricing & Terms list foreign transaction fees as None."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "ihg_one_rewards_points",
+      "currency_label": "IHG One Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 3,
+        "description": "3X points per $1 on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "IHG Hotels and Resorts (card earn only)",
+          "points_per_dollar": 12,
+          "cap": null
+        },
+        {
+          "label": "Dining and all other travel, including rideshare",
+          "points_per_dollar": 6,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Up to 28X total at IHG including member and Platinum Elite status earn from IHG.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 200000,
+      "unit": "points",
+      "spend_required": 5000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "200,000 bonus points after spending $5,000 on purchases in the first 3 months, plus 10,000 bonus points after adding an authorized user in the first 3 months.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "anniversary-free-night",
+        "title": "Anniversary Free Night",
+        "category": "other",
+        "source": "co-brand",
+        "description": "Anniversary Free Night each year with a 60,000-point redemption cap, plus an additional free night after spending $40,000 in a calendar year."
+      },
+      {
+        "id": "platinum-elite-status",
+        "title": "IHG Platinum Elite status",
+        "category": "other",
+        "source": "co-brand",
+        "description": "Automatic Platinum Elite status while a cardmember, plus 20 Elite Night Credits at account opening and each calendar year."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
+      "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC65336.html"
+    ],
+    "notes": "Issued by JPMorgan Chase Bank, N.A. The product page footnote names both World Mastercard and World Elite Mastercard as trademarks without saying which package this card carries, so network_tier is recorded as none.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-chase-ihg-rewards-club-select",
     "schema_version": "1.0.0",
     "name": "IHG Rewards Club Select Credit Card",
@@ -19761,6 +21381,102 @@
     ],
     "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Ink Business Preferred product page and Chase sample-agreement registry do not establish the historical Ink Plus card's withdrawal date or an explicit conversion. Removed unsupported 2016-11-03 and Ink Business Preferred replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: 'Ink Business Plus' Chase Visa face on the discontinued Ink Plus review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-chase-instacart-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Instacart Mastercard",
+    "localized_names": {
+      "en": "Instacart Mastercard"
+    },
+    "country": "us",
+    "issuer": "Chase",
+    "issuer_id": "chase",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.49,
+        "max": 27.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "Purchase and balance transfer APR 18.49% to 27.99% variable based on creditworthiness; cash advance APR 28.74% variable; penalty APR up to 29.99%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Pricing & Terms list foreign transaction fees as None."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usd",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "Qualifying Instacart.com and Instacart app purchases",
+          "points_per_dollar": 5,
+          "cap": {
+            "amount": 6000,
+            "currency": "USD",
+            "period": "year"
+          }
+        },
+        {
+          "label": "Chase Travel purchases",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Restaurants (including orders on Instacart powered by Uber Eats), gas stations and select streaming services",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 50,
+      "unit": "usd",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$50 Instacart credit loaded into the Instacart account automatically upon approval.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://creditcards.chase.com/cash-back-credit-cards/instacart",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://creditcards.chase.com/cash-back-credit-cards/instacart",
+      "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC60680.html"
+    ],
+    "notes": "Issued by JPMorgan Chase Bank, N.A. Earn rates and fees come from the Chase product page and Pricing & Terms page. The product page footnote names both World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none.",
+    "art_grade": "none"
   },
   {
     "id": "us-chase-marriott-bonvoy-bold",
@@ -21035,6 +22751,74 @@
     ],
     "notes": "Verified from official Chase product page. Network corrected to visa; tier normalized to bare slug 'infinite'. Earn structure verified from official page: 8X Chase Travel, 4X flights/hotels booked direct, 3X social media and search engine advertising, 1X all else. FX fee confirmed 0% (no foreign transaction fees). APR not stated on product page (card described as 'Pay in Full' with Flex for Business); preserved as null. Signup bonus: main page shows 150,000 with 200,000 struck through; offer details confirm 200,000 points.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-chase-slate-edge",
+    "schema_version": "1.0.0",
+    "name": "Slate Edge Credit Card",
+    "localized_names": {
+      "en": "Slate Edge Credit Card"
+    },
+    "country": "us",
+    "issuer": "Chase",
+    "issuer_id": "chase",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 29.24,
+        "max": 29.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 29.24,
+        "max": 29.24,
+        "type": "variable"
+      },
+      "notes": "Purchase APR 29.24% variable; cash advance APR 29.24% variable; penalty APR up to 29.99%."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Pricing & Terms list a foreign transaction fee of 3% of the amount of each transaction in U.S. dollars."
+    },
+    "credit_required": {
+      "score_band": "fair",
+      "notes": "Chase markets Slate Edge as best for fair credit customers."
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "No purchase rewards are advertised on the product page."
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://creditcards.chase.com/credit-building-credit-cards/slate/edge",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://creditcards.chase.com/credit-building-credit-cards/slate/edge",
+      "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64148.html"
+    ],
+    "notes": "Credit-building card from Chase with no annual fee and no purchase rewards. network_tier is recorded as none because neither the product page nor the Pricing & Terms page names the network package.",
+    "art_grade": "none"
   },
   {
     "id": "us-chase-southwest-performance-business",
@@ -24927,6 +26711,102 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-citi-costco-anywhere-visa-business",
+    "schema_version": "1.0.0",
+    "name": "Costco Anywhere Visa Business Card by Citi",
+    "localized_names": {
+      "en": "Costco Anywhere Visa Business Card by Citi"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": "No annual fee with a paid, active Costco membership."
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.99,
+        "max": 26.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.99,
+        "max": 28.99,
+        "type": "variable"
+      },
+      "notes": "Purchase APR 18.99% to 26.99% variable based on creditworthiness; cash advance APR 28.99% variable; penalty APR up to 29.99%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Fee for foreign purchases: None."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usd",
+      "currency_label": "Costco cash back reward certificate",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "Gas at Costco",
+          "points_per_dollar": 5,
+          "cap": {
+            "amount": 7000,
+            "currency": "USD",
+            "period": "year, combined with other eligible gas and EV charging (1% thereafter)"
+          }
+        },
+        {
+          "label": "Other eligible gas and EV charging",
+          "points_per_dollar": 4,
+          "cap": {
+            "amount": 7000,
+            "currency": "USD",
+            "period": "year, combined with gas at Costco (1% thereafter)"
+          }
+        },
+        {
+          "label": "Restaurants and eligible travel, including Costco Travel",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "All other Costco and Costco.com purchases",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Cash back is issued as an annual reward certificate after the February billing statement closes, redeemable for cash or merchandise at U.S. Costco warehouses.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card"
+    ],
+    "notes": "Business version of the Costco Anywhere Visa Card by Citi. network_tier is recorded as none because the official page does not name the network package.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-citi-costco-anywhere-visa-card-by-citi",
     "schema_version": "1.0.0",
     "name": "Costco Anywhere Visa® Card by Citi",
@@ -25411,6 +27291,471 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-citi-home-depot-consumer",
+    "schema_version": "1.0.0",
+    "name": "The Home Depot Consumer Credit Card",
+    "localized_names": {
+      "en": "The Home Depot Consumer Credit Card"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 29.99,
+        "max": 29.99,
+        "type": "variable"
+      },
+      "notes": "APR 29.99%; minimum interest charge $2. Special financing offers apply to qualifying purchases."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "No purchase rewards are advertised on the product page."
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 100,
+      "unit": "usd",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "Save up to $100 on qualifying purchases the day the account is opened (limited-time offer).",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/citi-home-depot-consumer-credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/citi-home-depot-consumer-credit-card",
+      "https://www.citi.com/credit-cards/view-all-credit-cards"
+    ],
+    "notes": "Closed-loop Home Depot store card issued by Citi, usable only at The Home Depot, so network is other. Citi's card catalog lists no annual fee.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-citi-home-depot-pro-xtra",
+    "schema_version": "1.0.0",
+    "name": "The Home Depot Pro Xtra Credit Card",
+    "localized_names": {
+      "en": "The Home Depot Pro Xtra Credit Card"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": "Pricing as of 4/1/24: minimum finance charge $1; late fee up to $40. APR is in the card agreement and not shown on the product page."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "pro_xtra_perks",
+      "currency_label": "Pro Xtra Perks",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 4,
+        "description": "Every $1 spent on qualifying purchases with the card counts as $4 toward earning Pro Xtra Perks."
+      },
+      "categories": [],
+      "redemption_notes": "Perks are earned at spend thresholds starting at $2,500 in qualifying purchases, up to $1,000,000 spent per program period.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/home-depot-pro-xtra-credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/home-depot-pro-xtra-credit-card"
+    ],
+    "notes": "Business store card for Home Depot Pro Xtra members, issued by Citi; usable only at The Home Depot, so network is other. The product page states annual fee: None.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-citi-macys-american-express",
+    "schema_version": "1.0.0",
+    "name": "Macy's American Express Card",
+    "localized_names": {
+      "en": "Macy's American Express Card"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "macys_star_rewards_points",
+      "currency_label": "Macy's Star Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 point per $1 spent everywhere else."
+      },
+      "categories": [
+        {
+          "label": "Restaurants, including delivery",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Gas stations and supermarkets",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Macy's purchases, Silver status",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Macy's purchases, Gold status",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Macy's purchases, Platinum status",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "1,000 points = $10 in Star Money at Macy's.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "30% off macys.com purchases the day the card is opened (in-store discount varies), up to $100.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/citi-macys-credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/citi-macys-credit-card",
+      "https://www.citi.com/credit-cards/view-all-credit-cards"
+    ],
+    "notes": "American Express network version of the Macy's card, issued through Citi. Amex Offers are listed as a benefit. APR is not shown on the product page. network_tier none: American Express network cards have no separate package.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-citi-macys-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Macy's Credit Card",
+    "localized_names": {
+      "en": "Macy's Credit Card"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "macys_star_rewards_points",
+      "currency_label": "Macy's Star Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "2 points per $1 at Macy's for Silver members (3 for Gold, 5 for Platinum)."
+      },
+      "categories": [
+        {
+          "label": "Macy's purchases, Gold status ($500 to $1,199 annual Macy's card spend)",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Macy's purchases, Platinum status ($1,200+ annual Macy's card spend)",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "1,000 points = $10 in Star Money, usable on anything at Macy's except gift cards, services and fees.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "30% off macys.com purchases the day the card is opened (in-store discount varies), up to $100.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/citi-macys-credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/citi-macys-credit-card",
+      "https://www.citi.com/credit-cards/view-all-credit-cards"
+    ],
+    "notes": "Closed-loop Macy's store card issued through Citi; usable only at Macy's, so network is other. New cards open at Silver status. APR is not shown on the product page.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-citi-my-best-buy-credit-card",
+    "schema_version": "1.0.0",
+    "name": "My Best Buy Credit Card",
+    "localized_names": {
+      "en": "My Best Buy Credit Card"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": null,
+      "currency": "USD",
+      "first_year": null,
+      "waiver_conditions": "Annual fee $0 to $59 based on creditworthiness."
+    },
+    "apr": {
+      "purchase": {
+        "min": 30.99,
+        "max": 30.99,
+        "type": "variable"
+      },
+      "notes": "Pricing as of 9/22/26: purchase APR 30.99% variable; minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "best_buy_rewards",
+      "currency_label": "My Best Buy rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "Rewards are earned only on Best Buy purchases."
+      },
+      "categories": [
+        {
+          "label": "Best Buy purchases when the rewards option is chosen",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Points are redeemable for Best Buy reward certificates ($5 certificate for every $100 spent) and gift cards. Cardholders choose rewards or flexible financing.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+      "https://www.citi.com/credit-cards/view-all-credit-cards"
+    ],
+    "notes": "Closed-loop Best Buy store card issued by Citi; usable only at Best Buy, so network is other. The page offers 10% back in rewards on the first day of purchases for new cardmembers. Annual fee ranges from $0 to $59 by creditworthiness, so annual_fee.amount is null.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-citi-my-best-buy-visa",
+    "schema_version": "1.0.0",
+    "name": "My Best Buy Visa Card",
+    "localized_names": {
+      "en": "My Best Buy Visa Card"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": null,
+      "currency": "USD",
+      "first_year": null,
+      "waiver_conditions": "Annual fee $0 to $59 based on creditworthiness."
+    },
+    "apr": {
+      "purchase": {
+        "min": 30.99,
+        "max": 30.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 29.99,
+        "max": 29.99,
+        "type": "variable"
+      },
+      "notes": "Pricing as of 9/22/26: purchase and balance transfer APR 30.99% variable; cash APR 29.99% variable."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "The product page lists no foreign transaction fees for the Visa card."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "best_buy_rewards",
+      "currency_label": "My Best Buy rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% back in rewards on other purchases."
+      },
+      "categories": [
+        {
+          "label": "Best Buy purchases when the rewards option is chosen",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Gas",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Grocery, dining and takeout",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Points are redeemable for Best Buy reward certificates and gift cards.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+      "https://www.citi.com/credit-cards/view-all-credit-cards"
+    ],
+    "notes": "Visa version of the My Best Buy card, usable wherever Visa is accepted. Annual fee ranges from $0 to $59 by creditworthiness, so annual_fee.amount is null. network_tier is recorded as none because the official page does not name the network package.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-citi-simplicity",
     "schema_version": "1.0.0",
     "name": "Citi Simplicity® Credit Card",
@@ -25560,6 +27905,107 @@
     "notes": "Verified from official Citi product page. Annual fee confirmed as $0 from FAQ ('No annual fee — ever'). No late fees and no penalty rate confirmed. Card does not earn rewards (stated in FAQ). APR numbers rendered as dynamic placeholders (%) in fetched text — actual values not visible. Network confirmed as Mastercard from FAQ. Credit score: good to excellent recommended.",
     "segment": "personal",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-citi-strata",
+    "schema_version": "1.0.0",
+    "name": "Citi Strata Card",
+    "localized_names": {
+      "en": "Citi Strata Card"
+    },
+    "country": "us",
+    "issuer": "Citi",
+    "issuer_id": "citi",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 29.99,
+        "max": 29.99,
+        "type": "variable"
+      },
+      "notes": "0% intro APR for 15 months on purchases and balance transfers, then 18.74% to 28.74% variable based on creditworthiness. Cash advance APR 29.99% variable; penalty APR up to 29.99%."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Fee for foreign purchases is 3% of the U.S. dollar amount of each purchase."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "thankyou_points",
+      "currency_label": "ThankYou Points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 point per dollar on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "Hotels, car rentals and attractions booked on cititravel.com",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Supermarkets",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Gas and EV charging stations and select transit",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "One self-select category (fitness clubs, select streaming, live entertainment, cosmetic stores/barber shops/hair salons, or pet supply stores)",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Restaurants",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "ThankYou Points can be redeemed for gift cards, cash back, shopping with points, Citi Travel bookings, or transferred to partners such as American Airlines, JetBlue and Virgin Atlantic.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 20000,
+      "unit": "points",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "20,000 bonus points after spending $1,000 in the first 3 months.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.citi.com/credit-cards/citi-strata-credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.citi.com/credit-cards/citi-strata-credit-card"
+    ],
+    "notes": "The product page lists Mastercard ID Theft Protection, establishing the Mastercard network. Pricing comes from the Pricing Details block on the product page. network_tier is recorded as none because the official page does not name the network package.",
+    "art_grade": "none"
   },
   {
     "id": "us-citi-strata-elite",
@@ -30286,6 +32732,686 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-navy-federal-cashrewards",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal cashRewards Credit Card",
+    "localized_names": {
+      "en": "Navy Federal cashRewards Credit Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 14.15,
+        "max": 18,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 18,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "As of 10/22/2026, purchase, balance transfer and convenience check APR 14.15% to 18.00% based on creditworthiness and product type; cash advance APR 18%; penalty APR 18%. 1.99% intro APR for 12 months from account opening on balance transfers made within the first 60 days."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 1.5,
+        "description": "Unlimited 1.5% cash back on all purchases."
+      },
+      "categories": [],
+      "redemption_notes": "Cash back accrues with no cap until redeemed.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 250,
+      "unit": "USD",
+      "spend_required": 2500,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "$250 bonus cash back after $2,500 in eligible purchases within 90 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards.html"
+    ],
+    "notes": "Navy Federal issues cashRewards as cashRewards (1.5%) when the approved credit limit is under $5,000 and as cashRewards Plus (2%) when it is $5,000 or more. Membership in Navy Federal Credit Union is required. The card is offered as cashRewards Visa or cashRewards Mastercard.",
+    "additional_networks": [
+      {
+        "network": "mastercard",
+        "network_tier": "none"
+      }
+    ],
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-cashrewards-plus",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal cashRewards Plus Credit Card",
+    "localized_names": {
+      "en": "Navy Federal cashRewards Plus Credit Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 14.15,
+        "max": 18,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 18,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "As of 10/22/2026, purchase, balance transfer and convenience check APR 14.15% to 18.00% based on creditworthiness and product type; cash advance APR 18%; penalty APR 18%. 1.99% intro APR for 12 months from account opening on balance transfers made within the first 60 days."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "Unlimited 2% cash back on all purchases."
+      },
+      "categories": [],
+      "redemption_notes": "Cash back accrues with no cap until redeemed.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 250,
+      "unit": "USD",
+      "spend_required": 2500,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "$250 bonus cash back after $2,500 in eligible purchases within 90 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards.html"
+    ],
+    "notes": "Navy Federal issues cashRewards as cashRewards (1.5%) when the approved credit limit is under $5,000 and as cashRewards Plus (2%) when it is $5,000 or more. Membership in Navy Federal Credit Union is required. The card is offered as cashRewards Plus Visa Signature or cashRewards Plus World Mastercard.",
+    "additional_networks": [
+      {
+        "network": "mastercard",
+        "network_tier": "world"
+      }
+    ],
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-cashrewards-secured",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal cashRewards Secured Credit Card",
+    "localized_names": {
+      "en": "Navy Federal cashRewards Secured Credit Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "Purchase and balance transfer variable APR 18.00%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "Secured card for building credit; credit limit increase review after 3 months and upgrade review after 6 months."
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "Unlimited 1% cash back on all purchases."
+      },
+      "categories": [],
+      "redemption_notes": "Cash back accrues with no cap until redeemed.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards-secured.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards-secured.html"
+    ],
+    "notes": "The page lists both Visa and Mastercard benefits without naming which network a given account uses, so the card is recorded as Visa with Mastercard as an additional network.",
+    "additional_networks": [
+      {
+        "network": "mastercard",
+        "network_tier": "none"
+      }
+    ],
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-flagship-premier-visa-signature",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal Flagship Premier Visa Signature Card",
+    "localized_names": {
+      "en": "Navy Federal Flagship Premier Visa Signature Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 95,
+      "currency": "USD",
+      "first_year": 95,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 15.74,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "As of 10/22/2026, purchase, balance transfer and convenience check APR 15.74% to 18.00% based on creditworthiness."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "navy_federal_rewards_points",
+      "currency_label": "Navy Federal Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X points on everything else."
+      },
+      "categories": [
+        {
+          "label": "Travel",
+          "points_per_dollar": 4,
+          "cap": null
+        },
+        {
+          "label": "Dining",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 50000,
+      "unit": "points",
+      "spend_required": 4000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "50,000 bonus points after $4,000 in eligible purchases within 90 days, for accounts applied for between 9/10/2026 and 1/3/2027.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "airline-credit",
+        "title": "Annual airline credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$100 statement credit each year after spending $100 or more on eligible airline purchases."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/flagship-premier-visa-signature.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/loans-cards/credit-cards/flagship-premier-visa-signature.html"
+    ],
+    "notes": "Membership in Navy Federal Credit Union is required.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-go-biz-rewards-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal GO BIZ Rewards Mastercard",
+    "localized_names": {
+      "en": "Navy Federal GO BIZ Rewards Mastercard"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 16.65,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "As of 10/01/2026, APR 16.65% to 18% based on creditworthiness, varying with the Wall Street Journal Prime Rate."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "navy_federal_rewards_points",
+      "currency_label": "Navy Federal Rewards points",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X point for every dollar spent."
+      },
+      "categories": [],
+      "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/services/business/credit-cards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/services/business/credit-cards.html"
+    ],
+    "notes": "GO BIZ Rewards is available as a Visa or a Mastercard; this record is the Mastercard version.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-go-biz-rewards-visa",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal GO BIZ Rewards Visa Credit Card",
+    "localized_names": {
+      "en": "Navy Federal GO BIZ Rewards Visa Credit Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 16.65,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "As of 10/01/2026, APR 16.65% to 18% based on creditworthiness, varying with the Wall Street Journal Prime Rate."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "navy_federal_rewards_points",
+      "currency_label": "Navy Federal Rewards points",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X point for every dollar spent."
+      },
+      "categories": [],
+      "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/services/business/credit-cards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/services/business/credit-cards.html"
+    ],
+    "notes": "GO BIZ Rewards is available as a Visa or a Mastercard; this record is the Visa version.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-go-rewards",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal GO REWARDS Credit Card",
+    "localized_names": {
+      "en": "Navy Federal GO REWARDS Credit Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 13.49,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "0.99% intro APR on purchases for the first 6 months of account opening, then purchase and balance transfer variable APR 13.49% to 18.00%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "navy_federal_rewards_points",
+      "currency_label": "Navy Federal Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X points on everything else."
+      },
+      "categories": [
+        {
+          "label": "Restaurants",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Gas",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/go-rewards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/loans-cards/credit-cards/go-rewards.html"
+    ],
+    "notes": "The page lists Visa, Visa Signature, Mastercard and World Mastercard benefits, so the package depends on the account; network_tier is none.",
+    "additional_networks": [
+      {
+        "network": "mastercard",
+        "network_tier": "none"
+      }
+    ],
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-more-rewards-amex",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal More Rewards American Express Card",
+    "localized_names": {
+      "en": "Navy Federal More Rewards American Express Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 14.15,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "Purchase and balance transfer variable APR 14.15% to 18.00%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "navy_federal_rewards_points",
+      "currency_label": "Navy Federal Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X points on everything else."
+      },
+      "categories": [
+        {
+          "label": "Restaurants and food delivery",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Supermarkets",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Gas and transit",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 20000,
+      "unit": "points",
+      "spend_required": 2000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "20,000 bonus points after $2,000 in eligible purchases within 90 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/more-rewards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/loans-cards/credit-cards/more-rewards.html"
+    ],
+    "notes": "Membership in Navy Federal Credit Union is required.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-navy-federal-platinum",
+    "schema_version": "1.0.0",
+    "name": "Navy Federal Platinum Credit Card",
+    "localized_names": {
+      "en": "Navy Federal Platinum Credit Card"
+    },
+    "country": "us",
+    "issuer": "Navy Federal Credit Union",
+    "issuer_id": "navy-federal",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 10.24,
+        "max": 18,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 18,
+        "max": 18,
+        "type": "variable"
+      },
+      "notes": "As of 10/22/2026, purchase, balance transfer and convenience check APR 10.24% to 18.00%; cash advance APR 18%; penalty APR 18%. 0.99% intro APR for 12 months from account opening on balance transfers made within the first 60 days."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/platinum.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.navyfederal.org/loans-cards/credit-cards/platinum.html"
+    ],
+    "notes": "Offered as Platinum Visa or Platinum Mastercard. \"Platinum\" is the product name; no network package is stated, so network_tier is none.",
+    "additional_networks": [
+      {
+        "network": "mastercard",
+        "network_tier": "none"
+      }
+    ],
+    "art_grade": "none"
+  },
+  {
     "id": "us-penfed-gold-visa",
     "schema_version": "1.0.0",
     "name": "PenFed Gold Visa® Card",
@@ -31182,6 +34308,129 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-synchrony-car-care-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Synchrony Car Care Credit Card",
+    "localized_names": {
+      "en": "Synchrony Car Care Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 34.99,
+        "max": 34.99,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 7/31/25: purchase APR 34.99%, penalty APR 39.99%, minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/financing/car-care/cardholder",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/financing/car-care/cardholder"
+    ],
+    "notes": "Issued by Synchrony Bank. Accepted at participating gas stations, auto parts stores and repair shops; 6 months promotional financing on purchases of $199 or more; gas station purchases are not eligible for promotional financing. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-carecredit-credit-card",
+    "schema_version": "1.0.0",
+    "name": "CareCredit Credit Card",
+    "localized_names": {
+      "en": "CareCredit Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 32.99,
+        "max": 32.99,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 5/30/2024: purchase APR 32.99%, penalty APR 39.99%, minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.carecredit.com/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.carecredit.com/",
+      "https://www.carecredit.com/apply/"
+    ],
+    "notes": "Issued by Synchrony Bank. Health and wellness financing card accepted at more than 285,000 CareCredit network locations. Applicants who apply online may instead be approved for the CareCredit Rewards Mastercard, which is not covered here. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-synchrony-cathay-pacific",
     "schema_version": "1.0.0",
     "name": "Cathay Pacific Credit Card",
@@ -31319,6 +34568,1104 @@
     ],
     "notes": "Verified from official product page 2026-07-25. Card name on page is 'The Cathay World Elite Mastercard®'. Issued by Synchrony Bank. Rewards currency is Asia Miles. All member privileges (lounge redemption, priority check-in/boarding, flight discount, status points, award redemption discount) are Cathay Pacific/Asia Miles co-brand benefits. Image URL cleared: prior asset was a Cathay Pacific Facebook social-share image, not card art. Bonus category earn rates are not published on the marketing product page; base earn is 1 Asia Mile per USD1. Bonus category rates pending re-verification against the official page.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-synchrony-dicks-credit-card",
+    "schema_version": "1.0.0",
+    "name": "DICK'S Credit Card",
+    "localized_names": {
+      "en": "DICK'S Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 30.49,
+        "max": 30.49,
+        "type": "variable"
+      },
+      "notes": "Purchase APR 30.49% variable."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "scorecard_rewards",
+      "currency_label": "ScoreCard Rewards",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 10,
+        "description": "10% back in ScoreCard Rewards on qualifying purchases at DICK'S family of stores."
+      },
+      "categories": [],
+      "redemption_notes": "Earned as ScoreCard Rewards for use at DICK'S.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 30,
+      "unit": "USD",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$30 bonus reward when the qualifying purchase is made at a DICK'S family store on the day the account is approved; applicants approved later receive the $30 Bonus Reward in their card package.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/partner/dicks-sporting-goods",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/partner/dicks-sporting-goods",
+      "https://www.synchrony.com/contenthub/newsroom/dicks-sporting-goods-and-synchrony-level-up.html",
+      "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e078339.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank. Usable at DICK'S Sporting Goods, DICK'S House of Sport, Golf Galaxy, Public Lands and Going Going Gone!. Formerly the ScoreRewards Credit Card; relaunched in May 2026. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-dicks-mastercard",
+    "schema_version": "1.0.0",
+    "name": "DICK'S Mastercard",
+    "localized_names": {
+      "en": "DICK'S Mastercard"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 30.49,
+        "max": 30.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 29.99,
+        "max": 29.99,
+        "type": "fixed"
+      },
+      "notes": "Purchase APR 30.49% variable; cash advance APR 29.99% (the agreement does not tie it to the Prime Rate). Cash advance fee $10 or 5%."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Foreign transaction fee 3% of each transaction."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "scorecard_rewards",
+      "currency_label": "ScoreCard Rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% back in ScoreCard Rewards everywhere else Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Qualifying purchases at DICK'S family of stores",
+          "points_per_dollar": 10,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Earned as ScoreCard Rewards for use at DICK'S.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 30,
+      "unit": "USD",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$30 bonus reward when the qualifying purchase is made at a DICK'S family store on the day the account is approved; applicants approved later receive the $30 Bonus Reward in their card package.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/partner/dicks-sporting-goods",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/partner/dicks-sporting-goods",
+      "https://www.synchrony.com/contenthub/newsroom/dicks-sporting-goods-and-synchrony-level-up.html",
+      "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e078338.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank. No Mastercard package is stated, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-floor-decor-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Floor & Decor Credit Card",
+    "localized_names": {
+      "en": "Floor & Decor Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 34.99,
+        "max": 34.99,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 07/31/2025: purchase APR 34.99%; penalty APR 39.99%; minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.flooranddecor.com/customer-care/credit.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.flooranddecor.com/customer-care/credit.html"
+    ],
+    "notes": "Issued by Synchrony Bank and usable at Floor & Decor. Promotional financing: no interest if paid in full within 6, 12 or 18 months on purchases of $299, $999 or $1,999 or more, or 6.99% APR for 48 months with fixed payments. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-floor-decor-pro-premier",
+    "schema_version": "1.0.0",
+    "name": "Floor & Decor PRO Premier Credit Card",
+    "localized_names": {
+      "en": "Floor & Decor PRO Premier Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 26.99,
+        "max": 26.99,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 02/01/25: purchase APR 26.99%; minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "Targeted 2026 offer: eligible participants presented with the offer by Synchrony receive a 5% statement credit on qualifying purchases made between 1/1/2026 and 12/31/2026 that post by 1/7/2027; not combinable with special financing.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.flooranddecor.com/customer-care/procredit.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.flooranddecor.com/customer-care/procredit.html",
+      "https://www.synchrony.com/financing/synchrony-mastercards"
+    ],
+    "notes": "Business credit card for Floor & Decor PRO customers. Synchrony lists Floor & Decor among its commercial credit cards. Promotional financing: no interest if paid in full in 180 days on purchases of $299 or more. Floor & Decor's separate Commercial Business Account (30-day terms) is a different product and is not covered here. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-harbor-freight-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Harbor Freight Credit Card",
+    "localized_names": {
+      "en": "Harbor Freight Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 30.99,
+        "max": 30.99,
+        "type": "variable"
+      },
+      "notes": "Purchase APR is prime + 24.24% (30.99% as of January 1, 2026); penalty APR prime + 34.24%."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "harbor_freight_money",
+      "currency_label": "Harbor Freight Money",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 5,
+        "description": "5 reward points per $1 in net purchases (excluding equal pay purchases)."
+      },
+      "categories": [],
+      "redemption_notes": "Every 500 points issues a $5 Harbor Freight Money certificate.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/partner/harborfreight",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/partner/harborfreight",
+      "https://www.synchronybankterms.com/syfterms/pdf/Harbor_Freight_Tools_Credit_Card_Account_Agreement_and_Pricing_Addendum.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank and usable at Harbor Freight Tools. Equal-payment purchases of $299 or more carry 0% interest and do not earn points. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-home-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Synchrony HOME Credit Card",
+    "localized_names": {
+      "en": "Synchrony HOME Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 34.99,
+        "max": 34.99,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 7/31/2025: purchase APR 34.99%, penalty APR 39.99%, minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/financing/home/synchrony-home-credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/financing/home/synchrony-home-credit-card"
+    ],
+    "notes": "Issued by Synchrony Bank. Accepted at Synchrony HOME partner locations. Everyday promotional financing: no interest if paid in full within 6 months on purchases of $299 to $1,998.99 or 12 months on $1,999 or more; select partners offer 12 to 60 months. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-jcpenney-credit-card",
+    "schema_version": "1.0.0",
+    "name": "JCPenney Credit Card",
+    "localized_names": {
+      "en": "JCPenney Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 33.24,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 01/01/26: variable purchase APR 33.24%; variable penalty APR 39.99%; minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "jcpenney_cashpass",
+      "currency_label": "JCPenney CashPass Rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 7.5,
+        "description": "7.5% back (1.5 points per $1) in CashPass Rewards on qualifying JCPenney purchases at the Insider and Elite tiers where new cardmembers start."
+      },
+      "categories": [
+        {
+          "label": "Qualifying JCPenney purchases after $1,000 in a calendar year (VIP)",
+          "points_per_dollar": 10,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "200 points = $10 CashPass Reward.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://jcpcreditcard.com/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://jcpcreditcard.com/"
+    ],
+    "notes": "Issued by Synchrony Bank and usable at JCPenney stores and jcp.com. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-jcpenney-mastercard",
+    "schema_version": "1.0.0",
+    "name": "JCPenney Mastercard",
+    "localized_names": {
+      "en": "JCPenney Mastercard"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 33.24,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.24,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "notes": "Purchase and cash advance APR are prime + 26.49% (33.24% as of January 1, 2026); penalty APR prime + 36.49%. Cash advance fee $10 or 5%."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Foreign transaction fee 3% of each transaction."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "jcpenney_cashpass",
+      "currency_label": "JCPenney CashPass Rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% back in CashPass Rewards everywhere else Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Qualifying JCPenney purchases (Insider and Elite tiers)",
+          "points_per_dollar": 7.5,
+          "cap": null
+        },
+        {
+          "label": "Qualifying JCPenney purchases after $1,000 in a calendar year (VIP)",
+          "points_per_dollar": 10,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "200 points = $10 CashPass Reward.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": 3,
+      "description": "5% back in CashPass Rewards on gas station and grocery store purchases for the first 90 days from account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://jcpcreditcard.com/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://jcpcreditcard.com/",
+      "https://www.synchronybankterms.com/syfterms/pdf/JCPenney_Mastercard_Account_Agreement_and_Pricing_Addendum.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank. No Mastercard package is stated, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-mylowes-rewards-credit-card",
+    "schema_version": "1.0.0",
+    "name": "MyLowe's Rewards Credit Card",
+    "localized_names": {
+      "en": "MyLowe's Rewards Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 31.99,
+        "max": 31.99,
+        "type": "variable"
+      },
+      "notes": "Purchase APR 31.99%; penalty APR 36.99%; minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "mylowes_money",
+      "currency_label": "MyLowe's Money",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "Earn rate not stated on the issuer page."
+      },
+      "categories": [],
+      "redemption_notes": "MyLowe's Money is applied at checkout on Lowe's website, app or in store.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/partner/lowes",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/partner/lowes",
+      "https://www.synchronybankterms.com/syfterms/pdf/MyLowes_Rewards_Credit_Card_Account_Agreement_And_Pricing_Addendum.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank and usable at Lowe's. The Synchrony page confirms the card earns MyLowe's Money but does not state the earn rate, so the rate is left null. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-mywalgreens-credit-card",
+    "schema_version": "1.0.0",
+    "name": "myWalgreens Credit Card",
+    "localized_names": {
+      "en": "myWalgreens Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 33.24,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "notes": "Variable purchase APR 33.24%; penalty APR 39.99%."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "walgreens_cash",
+      "currency_label": "Walgreens Cash rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 5,
+        "description": "5% on all other brands and eligible pharmacy purchases at Walgreens."
+      },
+      "categories": [
+        {
+          "label": "Walgreens-branded products",
+          "points_per_dollar": 10,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Walgreens Cash rewards post to the myWalgreens member account for use on future Walgreens purchases.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 50,
+      "unit": "USD",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$50 in Walgreens Cash rewards after opening an account and making a first purchase within 45 days; the amount in personalized offers may vary.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.walgreens.com/creditcard",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.walgreens.com/creditcard",
+      "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e050787.pdf",
+      "https://www.synchrony.com/partner/walgreens"
+    ],
+    "notes": "Issued by Synchrony Bank. Usable at Walgreens, Duane Reade and Walgreens.com. Applicants are assigned the myWalgreens Credit Card or myWalgreens Mastercard based on credit. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-mywalgreens-mastercard",
+    "schema_version": "1.0.0",
+    "name": "myWalgreens Mastercard",
+    "localized_names": {
+      "en": "myWalgreens Mastercard"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 24.24,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 34.99,
+        "max": 34.99,
+        "type": "fixed"
+      },
+      "notes": "Variable purchase APR 24.24% (Account Type 1) or 33.24% (Type 2); cash advance APR 34.99%; penalty APR 34.99% or 39.99%. Cash advance fee 5% ($10 min)."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Foreign transaction fee 3%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "walgreens_cash",
+      "currency_label": "Walgreens Cash rewards",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% on other purchases everywhere Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Walgreens-branded products at Walgreens",
+          "points_per_dollar": 10,
+          "cap": null
+        },
+        {
+          "label": "All other brands and eligible pharmacy purchases at Walgreens",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Grocery and health and wellness purchases outside Walgreens",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Walgreens Cash rewards post to the myWalgreens member account for use on future Walgreens purchases.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 50,
+      "unit": "USD",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$50 in Walgreens Cash rewards after opening an account and making a first purchase within 45 days; the amount in personalized offers may vary.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.walgreens.com/creditcard",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.walgreens.com/creditcard",
+      "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e050787.pdf",
+      "https://www.synchrony.com/partner/walgreens"
+    ],
+    "notes": "Issued by Synchrony Bank. No Mastercard package is stated, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-paypal-cashback-mastercard",
+    "schema_version": "1.0.0",
+    "name": "PayPal Cashback Mastercard",
+    "localized_names": {
+      "en": "PayPal Cashback Mastercard"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.49,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.24,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "notes": "Variable purchase APR 18.49% (Account Type 1), 30.24% (Type 2) or 33.24% (Type 3) based on creditworthiness; cash advance APR 33.24%; penalty APR 34.24%. Cash advance fee $10 or 5%."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Foreign transaction fee 3% of each transaction."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1.5,
+        "description": "1.5% cash back on all other purchases everywhere Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Purchases when checking out with PayPal",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem cash back to a PayPal balance or linked bank account at any time with no minimum.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.paypal.com/us/digital-wallet/manage-money/paypal-cashback-mastercard",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.paypal.com/us/digital-wallet/manage-money/paypal-cashback-mastercard",
+      "https://www.synchronybankterms.com/gecrbterms/html/PayPalCashbackApplyTerms_combo.htm"
+    ],
+    "notes": "Issued by Synchrony Bank. The account agreement covers the PayPal Cashback Mastercard or PayPal Cashback World Mastercard; the package is assigned on approval and not stated up front, so network_tier is none. Requires a PayPal account.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-premier-world-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Synchrony Premier World Mastercard",
+    "localized_names": {
+      "en": "Synchrony Premier World Mastercard"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "mastercard",
+    "network_tier": "world",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 20.49,
+        "max": 33.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 23.49,
+        "max": 36.24,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 8/28/26: variable purchase and balance transfer APR 20.49%, 27.49% or 33.24%; variable cash APR 23.49%, 30.49% or 36.24%; penalty APR 30.49%, 37.49% or 39.99%. Balance transfer fee 5% ($5 min); cash advance fee 5% ($10 min)."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Foreign transaction fee 3%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "2% cash back on every purchase, credited automatically to the statement."
+      },
+      "categories": [],
+      "redemption_notes": "Cash back posts as a statement credit within two billing periods after the purchase.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 100,
+      "unit": "USD",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": 2,
+      "description": "$100 cash back as a statement credit after spending $1,000 or more on purchases in the first 60 days.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/financing/synchrony-mastercards",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/financing/synchrony-mastercards",
+      "https://www.synchronycredit.com/essimages/cs/groups/ess_webasset/dualcard/@tru/en/promohtmls/ess048627.html"
+    ],
+    "notes": "Issued by Synchrony Bank. The product name carries the World Mastercard tier. Synchrony also offers the invitation-only Plus World Mastercard (1% cash back) and Preferred Mastercard, which are not covered here.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-sams-club-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Sam's Club Mastercard",
+    "localized_names": {
+      "en": "Sam's Club Mastercard"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 20.15,
+        "max": 28.15,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 25.15,
+        "max": 31.15,
+        "type": "variable"
+      },
+      "notes": "Purchase APR is prime + 13.40% (Account Type 1) or prime + 21.40% (Type 2); cash advance APR prime + 18.40% or prime + 24.40%. The agreement shows 20.15% and 28.15% for purchases and 25.15% and 31.15% for cash advances as of January 1, 2026. Cash advance fee $5 or 3%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "The rates and fees table lists no foreign transaction fee."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "sams_cash",
+      "currency_label": "Sam's Cash",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% back in Sam's Cash on other purchases."
+      },
+      "categories": [
+        {
+          "label": "Gas and EV charging anywhere Mastercard is accepted (first $6,000 per year, then 1%)",
+          "points_per_dollar": 5,
+          "cap": {
+            "amount": 6000,
+            "currency": "USD",
+            "period": "year"
+          }
+        },
+        {
+          "label": "Sam's Club purchases for Plus members (Club members earn 1%)",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Dining and takeout",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Sam's Cash is redeemable at Sam's Club. Maximum of $5,000 in Sam's Cash per calendar year, aggregated across a member's accounts. An active Sam's Club membership is required.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/partner/sams-club",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/partner/sams-club",
+      "https://www.synchronybankterms.com/syfterms/pdf/Sams_Club_Mastercard_Account_Agreement_and_Pricing_Addendum.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank. Applicants are first considered for the Sam's Club Mastercard and otherwise for the Sam's Club Credit Card, which does not earn Sam's Cash. The page does not state a Mastercard package, so network_tier is none. A Sam's Club Business Mastercard with the same earn rates also exists and is not covered here.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-sport-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Synchrony Sport Credit Card",
+    "localized_names": {
+      "en": "Synchrony Sport Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 34.99,
+        "max": 34.99,
+        "type": "variable"
+      },
+      "notes": "New accounts as of 7/31/25: purchase APR 34.99%, penalty APR 39.99%, minimum interest charge $2."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/financing/sport",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/financing/sport"
+    ],
+    "notes": "Issued by Synchrony Bank. Accepted at participating sporting goods, bike, outdoor and powersports merchants; promotional financing varies by merchant. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
   },
   {
     "id": "us-synchrony-sun-country-visa-signature",
@@ -31503,6 +35850,227 @@
     ],
     "notes": "Issued by Synchrony Bank. The Sun Country Visa Signature® card moved from FNBO to Synchrony on September 19, 2025. Annual fee $89 for new accounts (existing converted accounts may have different terms). Rewards: up to 5x points on Sun Country purchases (3x when buying with card plus 2x when flying), 2x on gas stations and grocery stores, 1x on everything else. 100 points = $1 toward Sun Country purchases. No signup bonus visible on benefits or FAQ page as of 2026-07-26. Purchase APR not stated on page; refer to Credit Card Terms at apply.syf.com.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-synchrony-tjx-rewards-credit-card",
+    "schema_version": "1.0.0",
+    "name": "TJX Rewards Credit Card",
+    "localized_names": {
+      "en": "TJX Rewards Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 30.49,
+        "max": 30.49,
+        "type": "variable"
+      },
+      "notes": "Purchase APR is prime + 23.74% (30.49% as of January 1, 2026); penalty APR prime + 33.74%."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "tjx_rewards_points",
+      "currency_label": "TJX Rewards Points",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 5,
+        "description": "5 points per $1 at the TJX family of stores."
+      },
+      "categories": [],
+      "redemption_notes": "Each 1,000 points issues a $10 Rewards Certificate.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/partner/tjx",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/partner/tjx",
+      "https://www.synchronybankterms.com/syfterms/pdf/TJX_Rewards_Credit_Card_Account_Agreement_and_Pricing_Addendum.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank. Usable at U.S. and Puerto Rico TJX stores (T.J.Maxx, Marshalls, HomeGoods, Sierra, Homesense) and their websites. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-tjx-rewards-platinum-mastercard",
+    "schema_version": "1.0.0",
+    "name": "TJX Rewards Platinum Mastercard",
+    "localized_names": {
+      "en": "TJX Rewards Platinum Mastercard"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 30.49,
+        "max": 30.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 34.99,
+        "max": 34.99,
+        "type": "fixed"
+      },
+      "notes": "Purchase APR is prime + 23.74% (30.49% as of January 1, 2026); cash advance APR 34.99% (not tied to the Prime Rate); penalty APR prime + 33.74%. Cash advance fee $10 or 4%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "The rates and fees table lists no foreign transaction fee."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "tjx_rewards_points",
+      "currency_label": "TJX Rewards Points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 point per $1 everywhere else Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "TJX family of stores (T.J.Maxx, Marshalls, HomeGoods, Sierra, Homesense)",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Gas, grocery store and restaurant purchases",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Each 1,000 points issues a $10 Rewards Certificate for use at TJX stores.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.synchrony.com/partner/tjx",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.synchrony.com/partner/tjx",
+      "https://www.synchronybankterms.com/syfterms/pdf/TJX_Rewards_Platinum_Mastercard_Account_Agreement_and_Pricing_Addendum.pdf"
+    ],
+    "notes": "Issued by Synchrony Bank. \"Platinum\" is part of the product name; no Mastercard package is stated, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-synchrony-venmo-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Venmo Credit Card",
+    "localized_names": {
+      "en": "Venmo Credit Card"
+    },
+    "country": "us",
+    "issuer": "Synchrony",
+    "issuer_id": "synchrony",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 30.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "notes": "Variable purchase APR 18.74% (Account Type 1), 27.74% (Type 2) or 30.74% (Type 3) based on creditworthiness; cash advance APR 30.74%; penalty APR 34.24%. Cash advance fee $10 or 5%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fee."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on all other purchases."
+      },
+      "categories": [
+        {
+          "label": "Dining and entertainment (an extra 1% when the transaction is split and paid back in Venmo)",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Paying with Venmo online, paying a business on Venmo or paying for goods and services on Venmo",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Cash back is deposited daily into the linked Venmo account and can be used for payments, transfers or automatic crypto purchases.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://venmo.com/about/creditcard/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://venmo.com/about/creditcard/",
+      "https://www.synchronybankterms.com/syfterms/html/VenmoVCCApplyTerms_combo.htm"
+    ],
+    "notes": "Issued by Synchrony Bank. The account agreement covers the Venmo Visa Signature Credit Card and the Venmo Visa Credit Card; the package is assigned on approval, so network_tier is none.",
+    "art_grade": "none"
   },
   {
     "id": "us-synchrony-verizon-visa",
@@ -32536,6 +37104,88 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-us-bank-aaa-cashback-visa-signature",
+    "schema_version": "1.0.0",
+    "name": "AAA Cashback Visa Signature Card",
+    "localized_names": {
+      "en": "AAA Cashback Visa Signature Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on everything else."
+      },
+      "categories": [
+        {
+          "label": "Grocery stores, gas stations and dining",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "AAA membership, travel and insurance",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem as a statement credit or ACH deposit, or instantly with Real-Time Rewards.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": null,
+      "spend_required": null,
+      "spend_currency": null,
+      "months": 6,
+      "description": "4% cash back on AAA purchases, travel and insurance for the first 6 months, up to $6,000 in purchases; then 2%.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://card.creditcard.acg.aaa.com/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://card.creditcard.acg.aaa.com/",
+      "https://card.creditcard.acg.aaa.com/credit/rewardsCashback.do"
+    ],
+    "notes": "Issued by U.S. Bank NA dba ACG Card Services for members of participating AAA clubs. The purchase APR is not shown on the program pages.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-us-bank-altitude-connect",
     "schema_version": "1.0.0",
     "name": "U.S. Bank Altitude Connect Visa Signature Card",
@@ -32977,6 +37627,100 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-us-bank-amazon-business-card",
+    "schema_version": "1.0.0",
+    "name": "Amazon Business World Elite Mastercard",
+    "localized_names": {
+      "en": "Amazon Business World Elite Mastercard"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "mastercard",
+    "network_tier": "world_elite",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "amazon_business_rewards",
+      "currency_label": "Rewards (percent back)",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% back on all other eligible purchases anywhere Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Amazon.com, Amazon Business, AWS and Whole Foods Market (first $150,000 per calendar year, then 1%)",
+          "points_per_dollar": 3,
+          "cap": {
+            "amount": 150000,
+            "currency": "USD",
+            "period": "calendar_year"
+          }
+        },
+        {
+          "label": "Prepaid travel booked in the U.S. Bank Travel Center",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Top 3 monthly spend categories outside Amazon (first $150,000 per calendar year)",
+          "points_per_dollar": 2,
+          "cap": {
+            "amount": 150000,
+            "currency": "USD",
+            "period": "calendar_year"
+          }
+        }
+      ],
+      "redemption_notes": "Rewards do not expire while the account is open and in good standing.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 100,
+      "unit": "USD",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "Amazon gift card or statement credit of $100 or more on approval; the amount and any spend requirement are set in the individual offer.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.usbank.com/business-banking/business-credit-cards/amazon-business-credit-cards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usbank.com/business-banking/business-credit-cards/amazon-business-credit-cards.html"
+    ],
+    "notes": "Issued by U.S. Bank National Association. The purchase APR is not shown on the product page.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-us-bank-business-altitude-connect",
     "schema_version": "1.0.0",
     "name": "U.S. Bank Business Altitude® Connect Visa Signature® Card",
@@ -33290,6 +38034,180 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-us-bank-business-essentials",
+    "schema_version": "1.0.0",
+    "name": "U.S. Bank Business Essentials Visa Card",
+    "localized_names": {
+      "en": "U.S. Bank Business Essentials Visa Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 16.99,
+        "max": 27.99,
+        "type": "variable"
+      },
+      "notes": "0% introductory APR on purchases for the first 12 billing cycles, then 16.99% to 27.99% variable. Balance transfer fee 5% ($5 min)."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usbank_rewards_points",
+      "currency_label": "U.S. Bank rewards points (cash back)",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "Unlimited 2 points (2% cash back) per $1 on every purchase."
+      },
+      "categories": [
+        {
+          "label": "Prepaid hotels and car rentals booked directly in the Travel Center",
+          "points_per_dollar": 6,
+          "cap": null
+        },
+        {
+          "label": "Business Essentials Earning Bonus with qualifying U.S. Bank business checking balances (first $10,000 in net purchases each billing cycle)",
+          "points_per_dollar": 2.5,
+          "cap": {
+            "amount": 10000,
+            "currency": "USD",
+            "period": "billing_cycle"
+          }
+        }
+      ],
+      "redemption_notes": "Points redeem as cash back by deposit to an eligible U.S. Bank account or statement credit; other redemptions may be at a reduced rate.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 50000,
+      "unit": "points",
+      "spend_required": 5000,
+      "spend_currency": "USD",
+      "months": 5,
+      "description": "50,000 bonus points (worth up to $500) after $5,000 in eligible net purchases within 150 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-essentials-credit-card.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usbank.com/business-banking/business-credit-cards/business-essentials-credit-card.html"
+    ],
+    "notes": "The page names the card a Visa card without a Visa Signature or other package, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-us-bank-business-essentials-plus",
+    "schema_version": "1.0.0",
+    "name": "U.S. Bank Business Essentials Plus Visa Signature Card",
+    "localized_names": {
+      "en": "U.S. Bank Business Essentials Plus Visa Signature Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 295,
+      "currency": "USD",
+      "first_year": 295,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "usbank_rewards_points",
+      "currency_label": "U.S. Bank rewards points (cash back)",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "Unlimited 2 points (2% cash back) per $1 on every purchase."
+      },
+      "categories": [
+        {
+          "label": "Top eligible spend category, applied automatically (up to $200,000 annually)",
+          "points_per_dollar": 5,
+          "cap": {
+            "amount": 200000,
+            "currency": "USD",
+            "period": "year"
+          }
+        },
+        {
+          "label": "Business Essentials Plus Earning Bonus with $150,000 or more in qualifying business checking balances (2.5% with $15,000 to $74,999; 3% with $75,000 to $149,999; on $200,000 annually)",
+          "points_per_dollar": 3.5,
+          "cap": {
+            "amount": 200000,
+            "currency": "USD",
+            "period": "year"
+          }
+        }
+      ],
+      "redemption_notes": "Points redeem as cash back by deposit to an eligible U.S. Bank account or statement credit; other redemptions may be at a reduced rate.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 100000,
+      "unit": "points",
+      "spend_required": 15000,
+      "spend_currency": "USD",
+      "months": 5,
+      "description": "100,000 bonus points (worth up to $1,000) after $15,000 in eligible net purchases within 150 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-essentials-plus-credit-card.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usbank.com/business-banking/business-credit-cards/business-essentials-plus-credit-card.html"
+    ],
+    "notes": "The purchase APR is not shown on the product page.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-us-bank-business-leverage",
     "schema_version": "1.0.0",
     "name": "U.S. Bank Business Leverage® Visa Signature® Card",
@@ -33409,6 +38327,82 @@
     ],
     "notes": "Product page fetched successfully. Annual fee confirmed as $0 intro first year, $95 thereafter. APR not displayed on page. Signup bonus is 60,000 bonus points (up to $600 in rewards) after $6,000 spend in 120 days.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-us-bank-business-shield",
+    "schema_version": "1.0.0",
+    "name": "U.S. Bank Business Shield Visa Card",
+    "localized_names": {
+      "en": "U.S. Bank Business Shield Visa Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 16.49,
+        "max": 25.49,
+        "type": "variable"
+      },
+      "notes": "0% introductory APR on purchases for the first 12 billing cycles and on balance transfers made within 30 days of opening, then 16.49% to 25.49% variable."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "No base earn rate is stated."
+      },
+      "categories": [
+        {
+          "label": "Prepaid airfare, car and hotel reservations booked in the Travel Center",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Cash rewards redeem as a statement credit, deposit to a U.S. Bank account, Rewards Card, charitable contribution or Real-Time Rewards.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "travel-center-credit",
+        "title": "Annual travel statement credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$50 statement credit after $5,000 in qualified Travel Center bookings in each 12-month period from account opening."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html"
+    ],
+    "notes": "The former U.S. Bank Business Platinum card URL now redirects to this page. The page names the card a Visa card without a package, so network_tier is none.",
+    "art_grade": "none"
   },
   {
     "id": "us-us-bank-business-triple-cash-rewards",
@@ -33871,6 +38865,246 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-us-bank-edward-jones-business",
+    "schema_version": "1.0.0",
+    "name": "Edward Jones Everyday Solutions Business World Elite Mastercard",
+    "localized_names": {
+      "en": "Edward Jones Everyday Solutions Business World Elite Mastercard"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "mastercard",
+    "network_tier": "world_elite",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 30.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "notes": "0% introductory APR on purchases for the first 12 billing cycles, then 18.74% to 28.74% variable; cash advance APR 30.74%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Foreign transaction fee 0%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "edward_jones_loyalty_points",
+      "currency_label": "Edward Jones Loyalty Points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "2 Loyalty Points per $1 on every eligible net purchase."
+      },
+      "categories": [
+        {
+          "label": "Prepaid travel booked through the Travel Rewards Center",
+          "points_per_dollar": 6,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Loyalty Points have their maximum value when deposited into an eligible Edward Jones account (15,000 points worth up to $150); other redemptions such as statement credits, travel or gift cards may be worth less. Points expire 5 years after the calendar quarter in which they were earned.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 20000,
+      "unit": "points",
+      "spend_required": 1500,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "20,000 Loyalty Points after $1,500 in eligible net purchases within 90 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://alliance.usbank.com/en-us/edward-jones/credit-cards/business-world-elite-mastercard.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://alliance.usbank.com/en-us/edward-jones/credit-cards/business-world-elite-mastercard.html"
+    ],
+    "notes": "Issued by U.S. Bank National Association for Edward Jones clients.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-us-bank-edward-jones-flex-balance",
+    "schema_version": "1.0.0",
+    "name": "Edward Jones Everyday Solutions Flex Balance Mastercard",
+    "localized_names": {
+      "en": "Edward Jones Everyday Solutions Flex Balance Mastercard"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 17.24,
+        "max": 28.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 30.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "notes": "0% introductory APR on purchases and on balance transfers made within 60 days of opening for the first 15 billing cycles, then 17.24% to 28.24% variable; cash advance APR 30.74%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Foreign transaction fee 0%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "edward_jones_loyalty_points",
+      "currency_label": "Edward Jones Loyalty Points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "No base earn rate is stated."
+      },
+      "categories": [
+        {
+          "label": "Prepaid travel booked through the Travel Rewards Center",
+          "points_per_dollar": 4,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Loyalty Points have their maximum value when deposited into an eligible Edward Jones account (15,000 points worth up to $150); other redemptions such as statement credits, travel or gift cards may be worth less. Points expire 5 years after the calendar quarter in which they were earned.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://alliance.usbank.com/en-us/edward-jones/credit-cards/flex-balance-mastercard.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://alliance.usbank.com/en-us/edward-jones/credit-cards/flex-balance-mastercard.html"
+    ],
+    "notes": "Issued by U.S. Bank National Association for Edward Jones clients. No Mastercard package is stated, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-us-bank-edward-jones-triple-rewards",
+    "schema_version": "1.0.0",
+    "name": "Edward Jones Everyday Solutions Triple Rewards World Elite Mastercard",
+    "localized_names": {
+      "en": "Edward Jones Everyday Solutions Triple Rewards World Elite Mastercard"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "mastercard",
+    "network_tier": "world_elite",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 17.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 30.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "notes": "Variable purchase and balance transfer APR 17.74% to 30.74%; cash advance APR 30.74%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Foreign transaction fee 0%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "edward_jones_loyalty_points",
+      "currency_label": "Edward Jones Loyalty Points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 Loyalty Point per $1 on all other eligible net purchases."
+      },
+      "categories": [
+        {
+          "label": "Top three spend categories each month (excluding Amazon and discount stores/supercenters)",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Prepaid travel booked through the Travel Rewards Center",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Loyalty Points have their maximum value when deposited into an eligible Edward Jones account (15,000 points worth up to $150); other redemptions such as statement credits, travel or gift cards may be worth less. Points expire 5 years after the calendar quarter in which they were earned.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 15000,
+      "unit": "points",
+      "spend_required": 1500,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "15,000 Loyalty Points after $1,500 in eligible net purchases within 90 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://alliance.usbank.com/en-us/edward-jones/credit-cards/triple-rewards-world-elite-mastercard.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://alliance.usbank.com/en-us/edward-jones/credit-cards/triple-rewards-world-elite-mastercard.html"
+    ],
+    "notes": "Issued by U.S. Bank National Association for Edward Jones clients.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-us-bank-flexperks-travel-rewards",
     "schema_version": "1.0.0",
     "name": "U.S. Bank FlexPerks Travel Rewards Visa Signature Card",
@@ -33981,6 +39215,100 @@
     ],
     "notes": "Status evidence: the official U.S. Bank card benefits page (checked 2026-10-21) lists U.S. Bank FlexPerks Travel Rewards Visa Signature Card under \"Personal Credit Cards (no longer accepting new applications)\". U.S. Bank does not state the date applications closed, so discontinued_date is omitted, and no successor is asserted. Fees, APRs, earning rates and the welcome offer come from the retained 2019-08-25 archives of the official product page and its linked Credit Card Terms; they describe that offer generation only and current terms for existing cardmembers were not verified. The archived product page footnotes were not captured, so category caps and the credit-score band are left unknown. The card image is the official product-page asset (alt text \"flexperks travel rewards visa signature credit card\"); it resolves to a 2019-09-02 archive capture and was visually inspected as the black U.S. Bank FlexPerks travel rewards Visa Signature card.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-us-bank-prime-business-card",
+    "schema_version": "1.0.0",
+    "name": "Prime Business World Elite Mastercard",
+    "localized_names": {
+      "en": "Prime Business World Elite Mastercard"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "mastercard",
+    "network_tier": "world_elite",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": null
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "amazon_business_rewards",
+      "currency_label": "Rewards (percent back)",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% back on all other eligible purchases anywhere Mastercard is accepted."
+      },
+      "categories": [
+        {
+          "label": "Amazon.com, Amazon Business, AWS and Whole Foods Market (first $150,000 per calendar year, then 1%) with an eligible Prime membership",
+          "points_per_dollar": 5,
+          "cap": {
+            "amount": 150000,
+            "currency": "USD",
+            "period": "calendar_year"
+          }
+        },
+        {
+          "label": "Prepaid travel booked in the U.S. Bank Travel Center",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Top 3 monthly spend categories outside Amazon (first $150,000 per calendar year)",
+          "points_per_dollar": 2,
+          "cap": {
+            "amount": 150000,
+            "currency": "USD",
+            "period": "calendar_year"
+          }
+        }
+      ],
+      "redemption_notes": "Rewards do not expire while the account is open and in good standing.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 100,
+      "unit": "USD",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "Amazon gift card or statement credit of $100 or more on approval; the amount and any spend requirement are set in the individual offer.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.usbank.com/business-banking/business-credit-cards/amazon-business-credit-cards.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usbank.com/business-banking/business-credit-cards/amazon-business-credit-cards.html"
+    ],
+    "notes": "Issued by U.S. Bank National Association. The purchase APR is not shown on the product page. Requires an eligible Amazon Prime membership; without Prime, the account follows the Amazon Business Card program rules.",
+    "art_grade": "none"
   },
   {
     "id": "us-us-bank-shield-visa",
@@ -34889,6 +40217,202 @@
     ],
     "notes": "Verified from official U.S. Bank product page. Visa Signature confirmed from page title. APR specific rate not available (shown as placeholder on page). Credit required 'good to excellent' from FAQ section.",
     "art_grade": "issuer"
+  },
+  {
+    "id": "us-us-bank-state-farm-business-cash-rewards",
+    "schema_version": "1.0.0",
+    "name": "State Farm Business Cash Rewards Visa Signature Card",
+    "localized_names": {
+      "en": "State Farm Business Cash Rewards Visa Signature Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "business",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 17.74,
+        "max": 26.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 30.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "notes": "0% introductory APR on purchases for 12 billing cycles and on balance transfers made within 60 days of opening, then 17.74% to 26.74% variable; cash advance APR 30.74%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Foreign transaction fee 0%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on all other eligible purchases."
+      },
+      "categories": [
+        {
+          "label": "Insurance premium payments (first $4,000 annually)",
+          "points_per_dollar": 3,
+          "cap": {
+            "amount": 4000,
+            "currency": "USD",
+            "period": "year"
+          }
+        },
+        {
+          "label": "Gas and EV charging stations (transactions of $200 or less), cell phone service providers, office supply stores and dining",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem as a statement credit, deposit to a U.S. Bank savings or checking account, or a Rewards Card ($25 minimum).",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "software-credit",
+        "title": "Software credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$100 software credit (see the issuer page for terms)."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://alliance.usbank.com/en-us/statefarm/credit-cards/business-cash-rewards-visa-signature-credit-card.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://alliance.usbank.com/en-us/statefarm/credit-cards/business-cash-rewards-visa-signature-credit-card.html"
+    ],
+    "notes": "Issued by U.S. Bank National Association.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-us-bank-state-farm-premier-cash-rewards",
+    "schema_version": "1.0.0",
+    "name": "State Farm Premier Cash Rewards Visa Signature Card",
+    "localized_names": {
+      "en": "State Farm Premier Cash Rewards Visa Signature Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 17.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 30.74,
+        "max": 30.74,
+        "type": "variable"
+      },
+      "notes": "Variable purchase and balance transfer APR 17.74% to 30.74%; cash advance APR 30.74%. Balance transfer fee 5% ($5 min); cash advance fee 5% ($10 min)."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "Foreign transaction fee 3%."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "cash_back",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on all other eligible purchases."
+      },
+      "categories": [
+        {
+          "label": "Insurance premium payments (first $4,000 annually)",
+          "points_per_dollar": 3,
+          "cap": {
+            "amount": 4000,
+            "currency": "USD",
+            "period": "year"
+          }
+        },
+        {
+          "label": "Gas stations and EV charging stations, drugstores, grocery stores and dining",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem as a statement credit, deposit to a U.S. Bank savings or checking account, or a Rewards Card ($25 minimum). Cash back expires three years after it is earned.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 150,
+      "unit": "USD",
+      "spend_required": 500,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "$150 bonus cash back after $500 in eligible net purchases within 90 days of account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "auto-deductible-reimbursement",
+        "title": "Auto deductible reimbursement",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Reimbursement of up to $200 of an auto policy deductible after a covered loss, with at least 8 net purchases in the prior month."
+      },
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Up to $600 if an eligible phone is stolen or damaged when the monthly bill is paid with the card."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://alliance.usbank.com/en-us/statefarm/credit-cards/premier-cash-rewards-visa-signature-credit-card.html",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://alliance.usbank.com/en-us/statefarm/credit-cards/premier-cash-rewards-visa-signature-credit-card.html",
+      "https://alliance.usbank.com/en-us/statefarm/credit-cards1/premier-cash-rewards-visa-signature-credit-card-agency.html"
+    ],
+    "notes": "Issued by U.S. Bank National Association. Applying through a State Farm agent adds 2% cash back on insurance premiums in the first year (up to 5% total).",
+    "art_grade": "none"
   },
   {
     "id": "us-web-bank-gemini",
