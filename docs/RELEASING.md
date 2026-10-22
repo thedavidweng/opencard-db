@@ -23,6 +23,15 @@ There are two release units, versioned independently from the same release PR:
 
 Commits touching `packages/opencard-export` count toward the CLI version only; everything else counts toward the catalog.
 
+The root release config deliberately sets `package-name` to an empty string.
+In release-please 17.6.0, disabling component tags alone still infers the branch
+component from `package.json` (`opencard-db`). A catalog-only manifest PR has no
+branch component, so that inferred name causes release creation to be skipped.
+The empty config name keeps both components empty without changing the actual
+npm package name. `tests/release/release.test.mjs` exercises the pinned action's
+release-please version against catalog-only, CLI-only and combined PRs. Update
+that exact dev dependency when changing the action's bundled library version.
+
 ## Version bumps
 
 Standard release-please semantics:

@@ -152,7 +152,7 @@ jobs:
           # diff means the tag was cut with stale exports.
           if ! git diff -I '"generated_at"' --exit-code -- exports/; then
             echo "::error::Committed exports at ${GITHUB_REF_NAME:-the tag} do not match a fresh build from its data/."
-            echo "::error::jsDelivr already serves this tag. Delete the release and tag, refresh exports, and re-cut."
+            echo "::error::jsDelivr already serves this tag. Preserve it; refresh exports and publish a new version through the reviewed release flow."
             exit 1
           fi
           git checkout -- exports/
@@ -162,8 +162,7 @@ jobs:
           TAG: ${{ needs.release-please.outputs.tag_name }}
         run: |
           gh release upload "$TAG" \
-            exports/*.json exports/cards.csv exports/cards.yaml \
-            --clobber
+            exports/*.json exports/cards.csv exports/cards.yaml
 
   # Publish the CLI to npm via OIDC trusted publishing (no token; requires the
   # trusted publisher to be configured for opencard-export on npmjs.com and
