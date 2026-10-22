@@ -10,7 +10,6 @@
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
-  "discontinued_date": "2024-05-09",
   "replaced_by": "us-citi-strata-premier",
   "annual_fee": {
     "amount": 95,
@@ -27,13 +26,13 @@
     }
   },
   "benefits": [],
-  "official_url": "https://www.citi.com/credit-cards/citi-premier-credit-card",
+  "official_url": "https://www.citigroup.com/global/news/press-release/2024/citi-enhances-the-citi-premier-card-with-new-benefits-to-make-travel-adventures-more-rewarding",
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-19",
   "sources": [
-    "https://www.citi.com/credit-cards/citi-premier-credit-card"
+    "https://www.citigroup.com/global/news/press-release/2024/citi-enhances-the-citi-premier-card-with-new-benefits-to-make-travel-adventures-more-rewarding"
   ],
-  "notes": "Renamed to Citi Strata Premier in May 2024."
+  "notes": "Citi's May 13, 2024 issuer announcement describes Citi Strata Premier as an enhancement and new name for the existing Citi Premier Card, supporting the recorded successor. It does not establish the previously recorded May 9 withdrawal date; the exact withdrawal date is unknown. Historical Visa Signature metadata and predecessor fees/rewards are retained, not re-verified by this Mastercard-era announcement. No successor artwork is used."
 }
