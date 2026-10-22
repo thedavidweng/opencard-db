@@ -1,0 +1,72 @@
+{
+  "id": "ca-scotia-momentum-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Scotia Momentum Mastercard",
+  "localized_names": {
+    "en": "Scotia Momentum Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Scotiabank",
+  "issuer_id": "scotiabank",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.99,
+      "max": 20.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "20.99% on purchases; 22.99% on cash advances, balance transfers and cash-like transactions."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% cash back on all other eligible transactions."
+    },
+    "categories": [
+      {
+        "label": "Gas stations, grocery stores, drug stores and recurring bill payments",
+        "points_per_dollar": 1,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back is deposited to the account once a year in November.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/mastercard/momentum-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.scotiabank.com/ca/en/personal/credit-cards/mastercard/momentum-card.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
