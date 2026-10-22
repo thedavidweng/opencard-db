@@ -1,0 +1,71 @@
+{
+  "id": "us-navy-federal-platinum",
+  "schema_version": "1.0.0",
+  "name": "Navy Federal Platinum Credit Card",
+  "localized_names": {
+    "en": "Navy Federal Platinum Credit Card"
+  },
+  "country": "us",
+  "issuer": "Navy Federal Credit Union",
+  "issuer_id": "navy-federal",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 10.24,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 18,
+      "max": 18,
+      "type": "variable"
+    },
+    "notes": "As of 10/22/2026, purchase, balance transfer and convenience check APR 10.24% to 18.00%; cash advance APR 18%; penalty APR 18%. 0.99% intro APR for 12 months from account opening on balance transfers made within the first 60 days."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/platinum.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.navyfederal.org/loans-cards/credit-cards/platinum.html"
+  ],
+  "notes": "Offered as Platinum Visa or Platinum Mastercard. \"Platinum\" is the product name; no network package is stated, so network_tier is none.",
+  "additional_networks": [
+    {
+      "network": "mastercard",
+      "network_tier": "none"
+    }
+  ]
+}

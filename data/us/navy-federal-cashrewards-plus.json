@@ -1,0 +1,80 @@
+{
+  "id": "us-navy-federal-cashrewards-plus",
+  "schema_version": "1.0.0",
+  "name": "Navy Federal cashRewards Plus Credit Card",
+  "localized_names": {
+    "en": "Navy Federal cashRewards Plus Credit Card"
+  },
+  "country": "us",
+  "issuer": "Navy Federal Credit Union",
+  "issuer_id": "navy-federal",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 14.15,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 18,
+      "max": 18,
+      "type": "variable"
+    },
+    "notes": "As of 10/22/2026, purchase, balance transfer and convenience check APR 14.15% to 18.00% based on creditworthiness and product type; cash advance APR 18%; penalty APR 18%. 1.99% intro APR for 12 months from account opening on balance transfers made within the first 60 days."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back on all purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back accrues with no cap until redeemed.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 250,
+    "unit": "USD",
+    "spend_required": 2500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$250 bonus cash back after $2,500 in eligible purchases within 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.navyfederal.org/loans-cards/credit-cards/cash-rewards.html"
+  ],
+  "notes": "Navy Federal issues cashRewards as cashRewards (1.5%) when the approved credit limit is under $5,000 and as cashRewards Plus (2%) when it is $5,000 or more. Membership in Navy Federal Credit Union is required. The card is offered as cashRewards Plus Visa Signature or cashRewards Plus World Mastercard.",
+  "additional_networks": [
+    {
+      "network": "mastercard",
+      "network_tier": "world"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "us-navy-federal-more-rewards-amex",
+  "schema_version": "1.0.0",
+  "name": "Navy Federal More Rewards American Express Card",
+  "localized_names": {
+    "en": "Navy Federal More Rewards American Express Card"
+  },
+  "country": "us",
+  "issuer": "Navy Federal Credit Union",
+  "issuer_id": "navy-federal",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 14.15,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer variable APR 14.15% to 18.00%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "navy_federal_rewards_points",
+    "currency_label": "Navy Federal Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on everything else."
+    },
+    "categories": [
+      {
+        "label": "Restaurants and food delivery",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Supermarkets",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas and transit",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for cash, travel, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "points",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "20,000 bonus points after $2,000 in eligible purchases within 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.navyfederal.org/loans-cards/credit-cards/more-rewards.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.navyfederal.org/loans-cards/credit-cards/more-rewards.html"
+  ],
+  "notes": "Membership in Navy Federal Credit Union is required."
+}
