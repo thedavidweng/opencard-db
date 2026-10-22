@@ -26,10 +26,23 @@
   },
   "benefits": [],
   "official_url": "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": "images/us-amex-business-gold-rewards.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "7c666fc51840b9fb9506253a829745e63d2f8acb3d7b600b26f5d645a7951a57",
+      "width": 300,
+      "height": 189,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "c17793e4612c4b3066529679bf3ffbc5b3a7897ad037cbee3e46e7df081d5440"
+    }
+  },
   "last_verified": "2026-07-28",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
     "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf"
   ],
-  "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/."
+  "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://rankt.com/cards/amex_business_gold_rewards/; https://static.rankt.com/v1/public/static/images/cards/amex_business_gold_rewards.png. Match: classic engraved-border gold 'AMERICAN EXPRESS BUSINESS' face (pre-2018 Business Gold Rewards design, not the later metal Business Gold Card), from rankt's listing for this exact card. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

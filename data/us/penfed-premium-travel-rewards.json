@@ -58,8 +58,16 @@
   "official_url": "https://www.penfed.org/credit-cards/",
   "image": {
     "url": null,
-    "attribution": null,
-    "local_path": null
+    "attribution": "© Pentagon Federal Credit Union",
+    "local_path": "images/us-penfed-premium-travel-rewards.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "2552cd4c460694e7f4f95ba582622b1d344c0d40265a5b9660371b4320b312dc",
+      "width": 500,
+      "height": 315,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "92537fb12064f99227681f1d8d49faece771b049bc8c34218c82028f97e4646c"
+    }
   },
   "bin_hints": [],
   "last_verified": "2026-10-20",
@@ -68,7 +76,9 @@
     "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
   ],
   "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+    "https://wallethub.com/d/penfed-premium-travel-rewards-american-express-credit-card-324c",
+    "https://cdn.wallethub.com/common/product/images/creditcards/500/penfed-premium-travel-rewards-american-express-credit-card-0719324c.jpg"
   ],
-  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Pentagon Federal Credit Union/PenFed Premium Travel Rewards American Express Affinity Groups.pdf\" explicitly names this historical American Express product. Another archived agreement names both Pathfinder and Premium Travel Rewards American Express cards; co-listing is not a conversion notice and does not prove transition to the current Pathfinder Visa product. Removed unsupported 2018-01-16 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Pentagon Federal Credit Union/PenFed Premium Travel Rewards American Express Affinity Groups.pdf\" explicitly names this historical American Express product. Another archived agreement names both Pathfinder and Premium Travel Rewards American Express cards; co-listing is not a conversion notice and does not prove transition to the current Pathfinder Visa product. Removed unsupported 2018-01-16 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: black PenFed Credit Union American Express face with the vertical 'Premium Travel Rewards' legend, from WalletHub's listing for this exact card (the same design appears in a smaller capture on askmrcreditcard.com's PenFed Premium Travel Rewards review). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }
