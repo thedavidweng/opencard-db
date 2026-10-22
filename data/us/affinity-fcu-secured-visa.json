@@ -1,0 +1,67 @@
+{
+  "id": "us-affinity-fcu-secured-visa",
+  "schema_version": "1.0.0",
+  "name": "Affinity FCU Secured Visa",
+  "localized_names": {
+    "en": "Affinity FCU Secured Visa"
+  },
+  "country": "us",
+  "issuer": "Affinity Federal Credit Union",
+  "issuer_id": "affinity-fcu",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 14.35,
+      "max": 14.35,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 18.0,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "14.35% variable APR on purchases and balance transfers per the product page; cash advance APR 18.00% per the credit card disclosure dated 12/17/2025."
+  },
+  "fx_fee": {
+    "percent": 2,
+    "notes": "2% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": "limited",
+    "notes": "No credit check; a refundable deposit in an Affinity savings account secures the credit line. Affinity membership required."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised for this card."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.affinityfcu.com/personal-banking/banking/credit-card/secured-visa",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.affinityfcu.com/personal-banking/banking/credit-card/secured-visa",
+    "https://www.affinityfcu.com/Privacy-Disclosures/CC-Disclosure.pdf"
+  ],
+  "notes": "No Visa network package is stated, so network_tier is none."
+}

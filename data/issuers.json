@@ -483,6 +483,16 @@
         "huecu.org",
         "harvardcard.com"
       ]
+    },
+    {
+      "id": "affinity-fcu",
+      "name": "Affinity Federal Credit Union",
+      "aliases": [
+        "Affinity FCU"
+      ],
+      "domains": [
+        "affinityfcu.com"
+      ]
     }
   ]
 }
