@@ -21,6 +21,8 @@ on:
     paths:
       - "data/**"
       - "images/**"
+      - "scripts/build-indexes.ts"
+      - "scripts/build-exports.ts"
   workflow_dispatch:
 
 concurrency:

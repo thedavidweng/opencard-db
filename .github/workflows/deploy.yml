@@ -21,6 +21,9 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          # Two commits so the jsDelivr purge step can diff images/ changed
+          # by this push (squash merges: HEAD^ is the previous main).
+          fetch-depth: 2
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: "24"
@@ -53,3 +56,25 @@ jobs:
           else
             echo "WORKER_DEPLOY not true; KV uploaded only."
           fi
+      # jsDelivr caches branch (@main) files for up to 7 days and does not
+      # refresh on push, so the exports (and repo-hosted card art, whose
+      # derived image.url points at @main) can go stale. Purge them after the
+      # KV upload. Best-effort: a purge failure warns, never fails the deploy.
+      - name: Purge jsDelivr @main cache
+        run: |
+          files="exports/meta.json exports/cards-all.json exports/cards-by-id.json exports/index-country.json exports/index-issuer.json exports/index-network.json exports/index-network-tier.json exports/cards.csv exports/cards.yaml"
+          if git rev-parse -q --verify HEAD^ >/dev/null; then
+            changed=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD -- images/ | grep -E '\.(webp|png|jpe?g|svg)$' || true)
+            files="$files $changed"
+          fi
+          failed=0
+          for f in $files; do
+            url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f"
+            if curl -fsS --retry 2 -m 30 -o /dev/null "$url"; then
+              echo "purged $f"
+            else
+              echo "::warning::jsDelivr purge failed for $f"
+              failed=1
+            fi
+          done
+          [ "$failed" = 0 ] || echo "::warning::some jsDelivr purges failed; @main may serve stale files until the cache expires"

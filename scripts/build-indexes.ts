@@ -43,6 +43,46 @@ export function deriveArtGrade(card: Card): ArtGrade {
   return "none";
 }
 
+/**
+ * Public base URL for repo-hosted card art (`image.local_path`, e.g.
+ * `images/<card-id>.webp`). Source data keeps `image.url: null` for local
+ * mirrors (images/README.md); the build derives a hosted URL so exports and
+ * the API serve the real art instead of the generic placeholder.
+ *
+ * jsDelivr `@main` (not a release tag or commit SHA): a tag would 404 for art
+ * added since the last release, and a SHA would make exports
+ * non-deterministic. Deploy purges the jsDelivr `@main` cache for changed
+ * images, so replaced art does not linger. Forks/self-hosters can override
+ * with OPENCARD_IMAGE_BASE_URL.
+ */
+export const DEFAULT_IMAGE_BASE_URL =
+  "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main";
+
+export function imageBaseUrl(): string {
+  const fromEnv = process.env.OPENCARD_IMAGE_BASE_URL?.trim();
+  return (fromEnv || DEFAULT_IMAGE_BASE_URL).replace(/\/+$/, "");
+}
+
+/**
+ * Derive `image.url` from `image.local_path` when the card has a committed
+ * local face but no URL. Mutates the (build-time copy of the) card. An
+ * explicit `image.url` always wins.
+ */
+export function withRepoImageUrl(card: Card, base = imageBaseUrl()): Card {
+  const image = card.image;
+  if (!image || typeof image !== "object") return card;
+  const img = image as Record<string, unknown>;
+  const url = img.url;
+  if (typeof url === "string" && url.trim().length > 0) return card;
+  const localPath = img.local_path;
+  if (typeof localPath !== "string" || localPath.trim().length === 0) {
+    return card;
+  }
+  const rel = localPath.trim().replace(/^\.?\/+/, "");
+  img.url = `${base}/${rel.split("/").map(encodeURIComponent).join("/")}`;
+  return card;
+}
+
 export type ArtGradeCounts = Record<ArtGrade, number>;
 
 export type IndexArtifacts = {
@@ -87,6 +127,7 @@ export async function buildIndexArtifacts(): Promise<IndexArtifacts> {
     const grade = deriveArtGrade(card);
     card.art_grade = grade;
     artGrades[grade] += 1;
+    withRepoImageUrl(card);
 
     byId[card.id] = card;
     countries.add(card.country);
