@@ -1,0 +1,85 @@
+{
+  "id": "ca-bmo-ascend-world-elite-business-mastercard",
+  "schema_version": "1.0.0",
+  "name": "BMO Ascend World Elite Business Mastercard",
+  "localized_names": {
+    "en": "BMO Ascend World Elite Business Mastercard"
+  },
+  "country": "ca",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 175,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "Annual fee waived in the first year for the primary card and two employee cards."
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.99,
+      "max": 18.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "notes": "18.99% on purchases; 23.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $80,000 personal or $150,000 household income, $250,000 business revenue, or $400,000 in assets under management."
+  },
+  "rewards": {
+    "currency": "bmo_blue_rewards_points",
+    "currency_label": "BMO Blue Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 points per $1 on all other card purchases."
+    },
+    "categories": [
+      {
+        "label": "Office supplies, and cellphone and internet bill payments",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Gas",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeem through the BMO Blue Rewards loyalty program.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 150000,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Up to 150,000 bonus points in the first year.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-ca/main/business/credit-cards/bmo-ascend-world-elite-business-mastercard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-ca/main/business/credit-cards/bmo-ascend-world-elite-business-mastercard/"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name."
+}
