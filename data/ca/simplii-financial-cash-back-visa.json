@@ -1,0 +1,93 @@
+{
+  "id": "ca-simplii-financial-cash-back-visa",
+  "schema_version": "1.0.0",
+  "name": "Simplii Financial Cash Back Visa Card",
+  "localized_names": {
+    "en": "Simplii Financial Cash Back Visa Card"
+  },
+  "country": "ca",
+  "issuer": "Simplii Financial",
+  "issuer_id": "simplii",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% purchase interest rate; 22.99% cash interest rate."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum household annual income of $15,000."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% on all other credit card purchases with no limit."
+    },
+    "categories": [
+      {
+        "label": "Eligible restaurant, bar and coffee shop purchases",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Eligible gas, groceries, drugstore purchases and pre-authorized payments",
+        "points_per_dollar": 1.5,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back is applied as an annual credit on the primary cardholder’s January statement.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "CAD",
+    "spend_required": 500,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "Earn up to 20% cash back, up to $100, in the first 3 months on up to $500 in eligible gas, grocery and drugstore purchases and pre-authorized payments.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.simplii.com/en/credit-cards/cash-back-visa.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.simplii.com/en/credit-cards/cash-back-visa.html"
+  ],
+  "notes": "No annual fee for the primary cardholder and up to 3 additional cards. The issuer page does not name a Visa tier, so network_tier is none."
+}

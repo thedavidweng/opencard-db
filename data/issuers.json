@@ -650,6 +650,16 @@
       "domains": [
         "brimfinancial.com"
       ]
+    },
+    {
+      "id": "simplii",
+      "name": "Simplii Financial",
+      "aliases": [
+        "simplii-financial"
+      ],
+      "domains": [
+        "simplii.com"
+      ]
     }
   ]
 }
