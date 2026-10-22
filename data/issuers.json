@@ -630,6 +630,16 @@
       "domains": [
         "vancity.com"
       ]
+    },
+    {
+      "id": "tangerine",
+      "name": "Tangerine",
+      "aliases": [
+        "tangerine-bank"
+      ],
+      "domains": [
+        "tangerine.ca"
+      ]
     }
   ]
 }

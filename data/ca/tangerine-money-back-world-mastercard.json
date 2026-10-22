@@ -1,0 +1,80 @@
+{
+  "id": "ca-tangerine-money-back-world-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Tangerine Money-Back World Mastercard",
+  "localized_names": {
+    "en": "Tangerine Money-Back World Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Tangerine",
+  "issuer_id": "tangerine",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.95,
+      "max": 20.95,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.95,
+      "max": 22.95,
+      "type": "variable"
+    },
+    "notes": "20.95% purchase interest rate and 22.95% cash advance interest rate."
+  },
+  "fx_fee": {
+    "percent": 2.5,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum of $50,000 gross annual income, $80,000 gross household income, or $250,000 in Tangerine Savings and/or Investment Fund accounts."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% back on everything else."
+    },
+    "categories": [
+      {
+        "label": "Two categories of your choice (third with savings account deposit), chosen from grocery, restaurants, gas, entertainment, furniture, hotel-motel, drug store, recurring bill payments, home improvement, public transportation and parking, fitness and sports clubs, e-games and foreign currency spend",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back can be applied to your Credit Card against the balance owing, or deposited to your Tangerine Savings Account, which gives a third 2% category.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 120,
+    "unit": "CAD",
+    "spend_required": 1500,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "Get $120 after spending $1,500 in the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.tangerine.ca/en/products/spending/creditcard/world",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.tangerine.ca/en/products/spending/creditcard/world"
+  ],
+  "notes": "Categories can be changed every 90 days. Includes Mastercard Travel Pass airport lounge access provided by DragonPass, mobile device insurance and rental car insurance. Network tier is World Mastercard per the card name."
+}
