@@ -1,0 +1,84 @@
+{
+  "id": "ca-scotia-momentum-no-fee-visa",
+  "schema_version": "1.0.0",
+  "name": "Scotia Momentum No-Fee Visa Card",
+  "localized_names": {
+    "en": "Scotia Momentum No-Fee Visa Card"
+  },
+  "country": "ca",
+  "issuer": "Scotiabank",
+  "issuer_id": "scotiabank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.99,
+      "max": 20.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "20.99% on purchases; 22.99% on cash advances, balance transfers and cash-like transactions."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% cash back on all other eligible purchases and on accelerated categories after the annual spend limit."
+    },
+    "categories": [
+      {
+        "label": "Grocery, gas, EV charging, transit, rideshare, food delivery, drugstores and recurring bill payments (up to $15,000 annual spend)",
+        "points_per_dollar": 1,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back is deposited to the account once a year in November.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Welcome offer of 5% cash back on up to $2,000 in purchases in the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/momentum-no-fee-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.scotiabank.com/ca/en/personal/credit-cards/visa/momentum-no-fee-card.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

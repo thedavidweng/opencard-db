@@ -1,0 +1,85 @@
+{
+  "id": "ca-scotiabank-amex",
+  "schema_version": "1.0.0",
+  "name": "Scotiabank American Express Card",
+  "localized_names": {
+    "en": "Scotiabank American Express Card"
+  },
+  "country": "ca",
+  "issuer": "Scotiabank",
+  "issuer_id": "scotiabank",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances, balance transfers and cash-like transactions."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum personal income of $12,000 per year."
+  },
+  "rewards": {
+    "currency": "scene_plus",
+    "currency_label": "Scene+ points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Scene+ point per $1 on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Sobeys, Safeway, IGA, FreshCo, Foodland and other Sobeys family stores",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Other grocery, dining, entertainment, gas, transit and select streaming",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Scene+ points redeem for travel, groceries, dining, entertainment, gift cards and statement credits against purchases.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 2500,
+    "unit": "points",
+    "spend_required": 250,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "2,500 bonus Scene+ points after $250 in everyday eligible purchases in the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/american-express/no-fee-amex-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.scotiabank.com/ca/en/personal/credit-cards/american-express/no-fee-amex-card.html"
+  ],
+  "notes": "Scotiabank American Express cards carry no network package tier, so network_tier is none."
+}

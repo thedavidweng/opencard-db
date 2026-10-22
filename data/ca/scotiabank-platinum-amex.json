@@ -1,0 +1,74 @@
+{
+  "id": "ca-scotiabank-platinum-amex",
+  "schema_version": "1.0.0",
+  "name": "Scotiabank Platinum American Express Card",
+  "localized_names": {
+    "en": "Scotiabank Platinum American Express Card"
+  },
+  "country": "ca",
+  "issuer": "Scotiabank",
+  "issuer_id": "scotiabank",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 399,
+    "currency": "CAD",
+    "first_year": 399,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 9.99,
+      "max": 9.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 9.99,
+      "max": 9.99,
+      "type": "variable"
+    },
+    "notes": "9.99% on purchases and on cash advances, balance transfers and cash-like transactions."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees; only the exchange rate applies."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum personal income of $12,000 per year."
+  },
+  "rewards": {
+    "currency": "scene_plus",
+    "currency_label": "Scene+ points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 Scene+ points per $1 on eligible purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Scene+ points redeem for travel, groceries, dining, entertainment, gift cards and statement credits against purchases.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "points",
+    "spend_required": 5000,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "60,000 bonus Scene+ points after $5,000 in everyday eligible purchases in the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.scotiabank.com/ca/en/personal/credit-cards/american-express/platinum-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.scotiabank.com/ca/en/personal/credit-cards/american-express/platinum-card.html"
+  ],
+  "notes": "Scotiabank American Express cards carry no network package tier, so network_tier is none."
+}
