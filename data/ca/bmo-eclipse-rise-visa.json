@@ -1,0 +1,72 @@
+{
+  "id": "ca-bmo-eclipse-rise-visa",
+  "schema_version": "1.0.0",
+  "name": "BMO eclipse rise Visa Card",
+  "localized_names": {
+    "en": "BMO eclipse rise Visa Card"
+  },
+  "country": "ca",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 23.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian citizen or permanent resident who has reached the age of majority and has not declared bankruptcy in the past seven years."
+  },
+  "rewards": {
+    "currency": "bmo_blue_rewards_points",
+    "currency_label": "BMO Blue Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "1 point per $2 on everything else."
+    },
+    "categories": [
+      {
+        "label": "Recurring bill payments, groceries, dining, takeout and food delivery (5 points per $2)",
+        "points_per_dollar": 2.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "BMO Blue Rewards points redeem for travel booked with any provider, and toward eligible purchases from as little as $1.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-eclipse-rise-visa/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-eclipse-rise-visa/"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none. Category spend caps are not stated on the product page."
+}

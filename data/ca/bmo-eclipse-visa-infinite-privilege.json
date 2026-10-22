@@ -1,0 +1,72 @@
+{
+  "id": "ca-bmo-eclipse-visa-infinite-privilege",
+  "schema_version": "1.0.0",
+  "name": "BMO eclipse Visa Infinite Privilege Card",
+  "localized_names": {
+    "en": "BMO eclipse Visa Infinite Privilege Card"
+  },
+  "country": "ca",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "visa",
+  "network_tier": "infinite_privilege",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 599,
+    "currency": "CAD",
+    "first_year": 599,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 23.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $150,000 individual or $200,000 household annual income."
+  },
+  "rewards": {
+    "currency": "bmo_blue_rewards_points",
+    "currency_label": "BMO Blue Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on everything else."
+    },
+    "categories": [
+      {
+        "label": "Groceries, dining, drugstore, gas and travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "BMO Blue Rewards points redeem for travel booked with any provider, and toward eligible purchases from as little as $1.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-eclipse-visa-infinite-privilege/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-eclipse-visa-infinite-privilege/"
+  ],
+  "notes": "Network tier is Visa Infinite Privilege per the card name. Category spend caps are not stated on the product page."
+}
