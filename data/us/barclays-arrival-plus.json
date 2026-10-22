@@ -12,8 +12,7 @@
   "network_tier": "world_elite",
   "type": "credit",
   "segment": "personal",
-  "status": "discontinued",
-  "discontinued_date": "2019-01-01",
+  "status": "unknown",
   "annual_fee": {
     "amount": 89.0,
     "currency": "USD",
@@ -98,17 +97,14 @@
   },
   "official_url": "https://web.archive.org/web/20190119224625/https://cards.barclaycardus.com/banking/cards/barclaycard-arrival-plus-world-elite-mastercard/",
   "image": {
-    "url": null,
-    "attribution": null,
+    "url": "https://web.archive.org/web/20190118135018im_/https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-front/ArrivalPlusWE_NewMC_card_flat_230x157.png",
+    "attribution": "© Barclays Bank Delaware",
     "local_path": null
   },
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
   "bin_hints": [],
   "last_verified": "2026-07-26",
   "sources": [
     "https://web.archive.org/web/20190119224625/https://cards.barclaycardus.com/banking/cards/barclaycard-arrival-plus-world-elite-mastercard/"
   ],
-  "notes": "Closed to new applicants in 2019. Still exists for legacy cardholders. Earned unlimited 2x miles on every purchase with 5% miles back on redemption. $89 annual fee waived first year. No foreign transaction fees. Verified from Wayback Machine snapshot of the official Barclays product page (Jan 2019)."
+  "notes": "Historical Arrival Plus World Elite Mastercard record. Official-source evidence boundary: the retained January 2019 issuer-page archive identifies the product but does not establish a precise withdrawal date or current legacy servicing. The inherited financial terms (2x miles, 5% redemption rebate, $89 annual fee waived first year, no foreign transaction fees) remain historical metadata, not a current verification. Exact withdrawal date, successor and current servicing are unknown. Historical artwork provenance: the retained 2019-01-19 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2019-01-18 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 230x157 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed."
 }

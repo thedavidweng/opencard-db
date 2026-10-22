@@ -12,8 +12,7 @@
   "network_tier": "world",
   "type": "credit",
   "segment": "personal",
-  "status": "discontinued",
-  "discontinued_date": "2021-03-10",
+  "status": "unknown",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -111,17 +110,14 @@
   },
   "official_url": "https://web.archive.org/web/20210227185747/https://cards.barclaycardus.com/banking/cards/diamond-resorts-international-mastercard/",
   "image": {
-    "url": null,
-    "attribution": null,
+    "url": "https://web.archive.org/web/20210224104515im_/https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-front/DRI_Diamond_Flat_230x157.png",
+    "attribution": "© Barclays Bank Delaware",
     "local_path": null
   },
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
   "bin_hints": [],
   "last_verified": "2026-07-26",
   "sources": [
     "https://web.archive.org/web/20210227185747/https://cards.barclaycardus.com/banking/cards/diamond-resorts-international-mastercard/"
   ],
-  "notes": "Discontinued after Diamond Resorts acquired by Hilton Grand Vacations. The card was a World Mastercard (not Visa as sometimes reported). Earned 2x Diamond Plus Points on Diamond Resorts purchases, 1x elsewhere. $0 annual fee, 3% foreign transaction fee. Verified from Wayback Machine snapshot of the official Barclays product page (Feb 2021)."
+  "notes": "Historical Diamond Resorts World Mastercard record. Official-source evidence boundary: the retained February 2021 issuer-page archive identifies the product but does not establish a precise withdrawal date or a card closure caused by a corporate acquisition. The inherited financial terms (2x Diamond Resorts purchases, 1x elsewhere, $0 annual fee and 3% foreign transaction fee) remain historical metadata, not a current verification. Exact lifecycle and successor are unknown. Historical artwork provenance: the retained 2021-02-27 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2021-02-24 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 230x157 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed."
 }

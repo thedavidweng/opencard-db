@@ -9,8 +9,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "business",
-  "status": "discontinued",
-  "replaced_by": "us-amex-business-gold",
+  "status": "unknown",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -26,13 +25,11 @@
     }
   },
   "benefits": [],
-  "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
+  "official_url": "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf",
   "last_verified": "2026-07-28",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0"
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
+    "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf"
   ],
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
-  "notes": "Old name for Business Gold Card. Product refreshed multiple times."
+  "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/."
 }

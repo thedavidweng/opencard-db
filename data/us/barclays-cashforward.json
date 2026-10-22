@@ -12,8 +12,7 @@
   "network_tier": "world",
   "type": "credit",
   "segment": "personal",
-  "status": "discontinued",
-  "discontinued_date": "2017-11-30",
+  "status": "unknown",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -91,17 +90,14 @@
   },
   "official_url": "https://web.archive.org/web/20170214231009/https://home.barclaycardus.com/cards/barclaycard-cashforward.html",
   "image": {
-    "url": null,
-    "attribution": null,
+    "url": "https://web.archive.org/web/20170930123759im_/https://home.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/OCB_card_rRGB_CashForward_WM_Angled359x246_L.png",
+    "attribution": "© Barclays Bank Delaware",
     "local_path": null
   },
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
   "bin_hints": [],
   "last_verified": "2026-07-26",
   "sources": [
     "https://web.archive.org/web/20170214231009/https://home.barclaycardus.com/cards/barclaycard-cashforward.html"
   ],
-  "notes": "Discontinued November 2017. 1.5% cashback with 5% redemption bonus when redeeming into a Barclays account. No annual fee, 3% foreign transaction fee. Verified from Wayback Machine snapshot of the official Barclays product page (Feb 2017)."
+  "notes": "Historical CashForward World Mastercard record. Official-source evidence boundary: the retained February 2017 issuer-page archive identifies the product but does not establish a precise withdrawal date. The inherited financial terms (1.5% cash rewards, 5% redemption bonus, $0 annual fee and 3% foreign transaction fee) remain historical metadata, not a current verification. Exact lifecycle and successor are unknown. Historical artwork provenance: the retained 2017-02-14 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2017-09-30 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 359x246 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed."
 }

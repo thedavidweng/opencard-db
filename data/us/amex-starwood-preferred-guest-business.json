@@ -9,9 +9,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "business",
-  "status": "discontinued",
-  "discontinued_date": "2019-02-12",
-  "replaced_by": "us-amex-marriott-bonvoy-business",
+  "status": "unknown",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -27,13 +25,11 @@
     }
   },
   "benefits": [],
-  "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0",
+  "official_url": "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf",
   "last_verified": "2026-07-28",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0"
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0",
+    "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf"
   ],
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
-  "notes": "Converted to Marriott Bonvoy Business Card in February 2019."
+  "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. This establishes historical product identity, not a later withdrawal or conversion date. The retained Bonvoy Business terms URL returns 404 and is successor-branded; it does not establish this historical product or a transition. Exact lifecycle and successor remain unknown. Financial fields remain unverified and unchanged; this identity-only source repair does not advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/."
 }

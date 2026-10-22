@@ -12,8 +12,7 @@
   "network_tier": "infinite",
   "type": "credit",
   "segment": "personal",
-  "status": "discontinued",
-  "discontinued_date": "2018-07-26",
+  "status": "unknown",
   "annual_fee": {
     "amount": 395,
     "currency": "USD",
@@ -159,8 +158,10 @@
   "sources": [
     "https://web.archive.org/web/20160531161213/https://creditcards.chase.com/a1/ritzcarlton/aep2CN"
   ],
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
-  "notes": "Closed to new applicants July 26, 2018. Marriott merged Ritz Carlton Rewards into Bonvoy."
+  "notes": "Historical Ritz-Carlton Rewards record. Official-source evidence boundary: the retained May 2016 issuer-page archive establishes historical product identity, not a precise application-withdrawal date. A loyalty-program consolidation does not establish credit-card withdrawal or conversion. The inherited historical financial terms remain unverified; current application eligibility, exact withdrawal date and successor are unknown. Historical artwork provenance: the retained 2016-05-31 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2016-08-06 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 229x189 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed.",
+  "image": {
+    "url": "https://web.archive.org/web/20160806012749im_/https://creditcards.chase.com/T110-039/1100119/images/card_art_main_home_030216.png",
+    "attribution": "© JPMorgan Chase & Co.",
+    "local_path": null
+  }
 }

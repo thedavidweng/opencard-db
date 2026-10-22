@@ -9,9 +9,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "personal",
-  "status": "discontinued",
-  "discontinued_date": "2018-10-01",
-  "replaced_by": "us-amex-gold",
+  "status": "unknown",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -27,13 +25,12 @@
     }
   },
   "benefits": [],
-  "official_url": "https://www.americanexpress.com/us/credit-cards/features-benefits/calculator/premier-gold/",
+  "official_url": "https://www.americanexpress.com/us/campaigns/gold-card/gold-update-faqs.html",
   "last_verified": "2026-07-28",
   "sources": [
-    "https://www.americanexpress.com/us/credit-cards/features-benefits/calculator/premier-gold/"
+    "https://www.americanexpress.com/us/credit-cards/features-benefits/calculator/premier-gold/",
+    "https://www.americanexpress.com/us/campaigns/gold-card/gold-update-faqs.html"
   ],
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
-  "notes": "Renamed to American Express Gold Card in October 2018."
+  "notes": "Historical Premier Rewards Gold record. The American Express Gold update FAQ explicitly says the name changes from Premier Rewards Gold to American Express Gold Card, establishing the successor identity. Its October 4, 2018 benefit and metal-card availability dates are not an exact withdrawal date; discontinued_date remains absent and lifecycle status remains unknown. This retained historical FAQ is not current pricing evidence. The inherited historical financial terms and July last_verified snapshot are not reverified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/.",
+  "replaced_by": "us-amex-gold"
 }

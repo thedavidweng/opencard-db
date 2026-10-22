@@ -12,8 +12,7 @@
   "network_tier": "signature",
   "type": "credit",
   "segment": "personal",
-  "status": "discontinued",
-  "discontinued_date": "2017-08-15",
+  "status": "unknown",
   "annual_fee": {
     "amount": 95,
     "currency": "USD",
@@ -125,8 +124,10 @@
   "sources": [
     "https://web.archive.org/web/20160809154338/https://creditcards.chase.com/a1/fairmont/LP"
   ],
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
-  "notes": "Applications closed after AccorHotels acquisition. Cards converted to Chase Sapphire Preferred on August 15, 2017."
+  "notes": "Historical Fairmont Visa Signature record. Official-source evidence boundary: the retained August 2016 issuer-page archive identifies the product but does not establish a precise card closure date, conversion to Sapphire Preferred, or a closure caused by an acquisition. The inherited historical financial terms remain unverified; precise withdrawal/conversion dates and successor are unknown. Historical artwork provenance: the retained 2016-08-09 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2016-08-09 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 234x147 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed.",
+  "image": {
+    "url": "https://web.archive.org/web/20160809000636im_/https://creditcards.chase.com/T120-001/1200001/images/card_art.png",
+    "attribution": "© JPMorgan Chase & Co.",
+    "local_path": null
+  }
 }
