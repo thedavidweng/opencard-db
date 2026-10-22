@@ -30,13 +30,28 @@
   },
   "benefits": [],
   "official_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
+  "image": {
+    "url": null,
+    "attribution": "© Bank of America",
+    "local_path": "images/us-bank-of-america-alaska-airlines-visa-signature.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "c811aadaf09aa39b55c145b35a3111ced2ae2f3e59f96831d64ee74ee97caf3c",
+      "width": 226,
+      "height": 142,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "1495ae9a57eb0758b2f6c1a86053ca64ed3151f5d85780fe4bd951f2f810f6a8"
+    }
+  },
   "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+    "https://web.archive.org/web/20180515140730/https://www.nerdwallet.com/best/credit-cards/airline",
+    "https://web.archive.org/web/20180515140730im_/https://c1.nerdwallet.com/images/2015_9a1245b4eb3a111c59b0753e196fae74_L.jpg"
   ],
   "last_verified": "2026-10-19",
   "sources": [
     "https://www.bankofamerica.com/credit-cards/",
     "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html"
   ],
-  "notes": "Bank of America's August 20, 2025 announcement explicitly says the Alaska Airlines Visa Signature card transforms into Atmos Rewards Ascent Visa Signature. Existing benefits continue without interruption; replacement card faces arrive at expiration. The announcement date does not establish the exact application-withdrawal date, which is unknown. Historical fees/rewards and the credit-limit-tier note are retained, not re-verified. No successor artwork is used."
+  "notes": "Bank of America's August 20, 2025 announcement explicitly says the Alaska Airlines Visa Signature card transforms into Atmos Rewards Ascent Visa Signature. Existing benefits continue without interruption; replacement card faces arrive at expiration. The announcement date does not establish the exact application-withdrawal date, which is unknown. Historical fees/rewards and the credit-limit-tier note are retained, not re-verified. No successor artwork is used. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Alaska Airlines Mileage Plan Visa Signature face shown for the Alaska Airlines Visa Signature card on NerdWallet's airline-card page (archived 2018-05-15), Bank of America era. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

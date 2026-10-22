@@ -118,8 +118,16 @@
   "official_url": "https://www.biltrewards.com/card",
   "image": {
     "url": null,
-    "attribution": null,
-    "local_path": null
+    "attribution": "© Bilt Technologies, Inc.",
+    "local_path": "images/us-wells-fargo-bilt.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "6b43b2da78b34c0662fd916888d753bf49715bcc72856f1d3894067900c256b9",
+      "width": 1000,
+      "height": 635,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "e4d51fd35a555b110f7fb47038486e5ddd64e524572f5e712819a9ac0d16a2dd"
+    }
   },
   "bin_hints": [],
   "last_verified": "2026-10-21",
@@ -130,5 +138,9 @@
     "https://support.biltrewards.com/hc/en-us/articles/40834037331085-Bilt-Card-2-0-Transition",
     "https://support.biltrewards.com/hc/en-us/articles/42897766682381-Bilt-Card-2-0-Program-Overview"
   ],
-  "notes": "Legacy Bilt Card 1.0, issued by Wells Fargo. Discontinued: Bilt states that the Wells Fargo Bilt Mastercard (card 1.0) could be used through 2026-02-06 and was retired after that date, and that all card 1.0 cards were deactivated on 2026-02-07 when the Bilt Card 2.0 lineup went live — Bilt Blue (us-column-bilt-blue, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year), all issued by Column N.A. and serviced by Cardless. The earn structure recorded here is card 1.0's: 3X dining, 2X travel, 1X on other purchases and 1X on rent (capped at 100,000 points per calendar year). The live Bilt card pages now describe the 2.0 lineup, so the pre-launch product page is cited via its 2026-01-15 Internet Archive snapshot. APR and foreign transaction fee were not visible on the fetched card 1.0 pages (honest nulls); the 2.0 tiers charge no foreign transaction fee. The image published at the old image URL is a Bilt Card 2.0 marketing banner showing the three 2.0 cards rather than the card 1.0 Wells Fargo Bilt Mastercard, so image.url is nulled and the API serves the generic fallback art."
+  "secondary_sources": [
+    "https://www.uscreditcardguide.com/bilt-mastercard-credit-card/",
+    "https://www.uscreditcardguide.com/wp-content/uploads/Bilt_card_art.png"
+  ],
+  "notes": "Legacy Bilt Card 1.0, issued by Wells Fargo. Discontinued: Bilt states that the Wells Fargo Bilt Mastercard (card 1.0) could be used through 2026-02-06 and was retired after that date, and that all card 1.0 cards were deactivated on 2026-02-07 when the Bilt Card 2.0 lineup went live — Bilt Blue (us-column-bilt-blue, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year), all issued by Column N.A. and serviced by Cardless. The earn structure recorded here is card 1.0's: 3X dining, 2X travel, 1X on other purchases and 1X on rent (capped at 100,000 points per calendar year). The live Bilt card pages now describe the 2.0 lineup, so the pre-launch product page is cited via its 2026-01-15 Internet Archive snapshot. APR and foreign transaction fee were not visible on the fetched card 1.0 pages (honest nulls); the 2.0 tiers charge no foreign transaction fee. The image published at the old image URL is a Bilt Card 2.0 marketing banner showing the three 2.0 cards rather than the card 1.0 Wells Fargo Bilt Mastercard, so image.url is nulled and the API serves the generic fallback art. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: brushed-black BILT World Elite Mastercard (card 1.0) face, visibly distinct from the Column-issued Bilt 2.0 artwork. The 4772x3029 original (sha256 dfef0d2bc1d5a0fe2b17d2cfcbfde4a9d795d3179bd48d3efa28cc25442f9d38) was downscaled to 1000 px wide (Lanczos) before upload to keep the lossless WebP reasonable; source_sha256 is of that downscaled PNG. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

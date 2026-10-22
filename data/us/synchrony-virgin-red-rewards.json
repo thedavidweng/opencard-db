@@ -167,7 +167,15 @@
   "image": {
     "url": null,
     "attribution": "© Synchrony",
-    "local_path": null
+    "local_path": "images/us-synchrony-virgin-red-rewards.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "25723031bba3cea65f9e154f07667f95b7ada65e5786e4598fe6450977717803",
+      "width": 2232,
+      "height": 1410,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "61bc4779eee793991df8376567f252a3d8801dcec6080903dce1b85bea715bdc"
+    }
   },
   "bin_hints": [],
   "last_verified": "2026-07-24",
@@ -176,6 +184,6 @@
     "https://virginredrewardscard.syf.com/benefitsdetails",
     "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e074512.html"
   ],
-  "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page.",
+  "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/synchrony-virgin-red-rewards-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/vrrcc.png. Match: Virgin Red Rewards Mastercard face on the Synchrony Virgin Red Rewards review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
   "segment": "personal"
 }

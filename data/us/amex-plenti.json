@@ -26,9 +26,22 @@
   },
   "benefits": [],
   "official_url": "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": "images/us-amex-plenti.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "8719f4a52a40726e5ce6cb7f82913851e213a69269dd4a2209254b1b90a45c22",
+      "width": 480,
+      "height": 304,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "cb2371ce69400531f9a60949afa151f30e6e18da5ac043ab8d346605f5faa3d4"
+    }
+  },
   "last_verified": "2026-10-19",
   "sources": [
     "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html"
   ],
-  "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. This is not a credit-card withdrawal or conversion notice and does not support the previously recorded February 16, 2018 card withdrawal date. The old card URL returns a generic shell and the checked servicing URL returns 404; card availability, withdrawal date and successor remain unknown. Historical fees and rewards remain unverified."
+  "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. This is not a credit-card withdrawal or conversion notice and does not support the previously recorded February 16, 2018 card withdrawal date. The old card URL returns a generic shell and the checked servicing URL returns 404; card availability, withdrawal date and successor remain unknown. Historical fees and rewards remain unverified. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/amex-plenti-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/Plenti-AMEX.png. Match: Amex EveryDay-style Plenti Credit Card from American Express face on the card's review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

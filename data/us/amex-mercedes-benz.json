@@ -28,12 +28,27 @@
   },
   "benefits": [],
   "official_url": "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": "images/us-amex-mercedes-benz.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "89485e8b047ebea7c2f1c32971892b2249fed87564ba217b234e12226ad78490",
+      "width": 240,
+      "height": 152,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "949ebd821b4eb7f09aabeccd434754900bba73565f9f74184fc673621d433b67"
+    }
+  },
   "last_verified": "2026-07-28",
   "sources": [
     "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html"
   ],
   "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+    "https://www.uscreditcardguide.com/amex-mercedes-benz-credit-card/",
+    "https://www.uscreditcardguide.com/wp-content/uploads/mercedes-credit.png"
   ],
-  "notes": "Discontinued January 2019. Converted to Amex Everyday Preferred per Amex FAQ."
+  "notes": "Discontinued January 2019. Converted to Amex Everyday Preferred per Amex FAQ. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Mercedes-Benz Credit Card from American Express face on the discontinued card's review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

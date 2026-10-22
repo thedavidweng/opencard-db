@@ -28,12 +28,27 @@
   },
   "benefits": [],
   "official_url": "https://www.wellsfargo.com/credit-cards/",
+  "image": {
+    "url": null,
+    "attribution": "© Wells Fargo",
+    "local_path": "images/us-wells-fargo-business-platinum.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "7e200c2f9073b5042e3c5837b5415d647061f84d008f2f4e4a7ddae0337ba594",
+      "width": 290,
+      "height": 150,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "8eb6be0bcc4e9b72030d9111d3365d01033bac01d5d363b94e39d00096d83736"
+    }
+  },
   "last_verified": "2026-07-26",
   "sources": [
     "https://www.wellsfargo.com/credit-cards/"
   ],
   "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+    "https://www.uscreditcardguide.com/wells-fargo-business-platinum-credit-card/",
+    "https://www.uscreditcardguide.com/wp-content/uploads/bd-product-image-platinum-card_290x150.png"
   ],
-  "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required."
+  "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Wells Fargo Business Platinum Visa face; the filename is Wells Fargo's own product-image asset name. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }
