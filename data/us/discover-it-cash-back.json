@@ -85,7 +85,7 @@
   "travel_perks": null,
   "official_url": "https://www.discover.com/credit-cards/cash-back/it-card.html",
   "image": {
-    "url": null,
+    "url": "https://ecm.capitalone.com/WCM/dfs-card/products/cardart-cashit-with-shadow.png",
     "attribution": "© Discover / Capital One",
     "local_path": null
   },
@@ -94,5 +94,5 @@
   "sources": [
     "https://www.discover.com/credit-cards/cash-back/it-card.html"
   ],
-  "notes": "Discover is now under Capital One ownership for marketing assets; quarterly 5% categories require activation and have a quarterly maximum — confirm current cap on Discover disclosures."
+  "notes": "Discover is now under Capital One ownership for marketing assets; quarterly 5% categories require activation and have a quarterly maximum — confirm current cap on Discover disclosures. Artwork verified 2026-10-21: The official Discover it Cash Back page navigation serves this Capital One-hosted Discover card image labelled \"Discover it Cash Back Card\". The same issuer asset (imageId 002fc0cf-c32a-4dc6-9821-026bc44286bc) is also labelled for Discover it Secured, which already uses its rdesktop rendition; Discover offers the same it card designs on both products. Retained the existing attribution. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update."
 }

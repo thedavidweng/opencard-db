@@ -145,7 +145,7 @@
   },
   "official_url": "https://www.apple.com/apple-card/",
   "image": {
-    "url": null,
+    "url": "https://www.apple.com/v/apple-card/n/images/overview/titanium_card__edutuqq7hsuq_large.jpg",
     "attribution": "© Goldman Sachs",
     "local_path": null
   },
@@ -154,5 +154,5 @@
   "sources": [
     "https://www.apple.com/apple-card/"
   ],
-  "notes": "Annual fee confirmed as $0 ('No annual...fees'). APR 17.49%-27.74% variable as of January 1, 2026. No foreign transaction fees. No signup bonus found on page. network_tier set to null (was 'world' but not stated on page). Mastercard confirmed as global payment network."
+  "notes": "Annual fee confirmed as $0 ('No annual...fees'). APR 17.49%-27.74% variable as of January 1, 2026. No foreign transaction fees. No signup bonus found on page. network_tier set to null (was 'world' but not stated on page). Mastercard confirmed as global payment network. Artwork verified 2026-10-21: The official Apple Card overview page serves this titanium card image showing the front (Apple logo) and back (Goldman Sachs and Mastercard marks) of the card. Retained the existing Goldman Sachs attribution, which matches the issuer mark on the pictured card. The path is a versioned Apple asset and may change on a site refresh. The official image returned HTTP 200 and was visually inspected as the matching card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update."
 }
