@@ -269,6 +269,7 @@
   "us-bank": [
     "us-us-bank-altitude-connect",
     "us-us-bank-altitude-go",
+    "us-us-bank-altitude-reserve",
     "us-us-bank-business-altitude-connect",
     "us-us-bank-business-altitude-power",
     "us-us-bank-business-leverage",
@@ -279,6 +280,7 @@
     "us-us-bank-club-carlson-premier-visa-signature",
     "us-us-bank-club-carlson-rewards-visa",
     "us-us-bank-club-carlson-rewards-visa-signature",
+    "us-us-bank-flexperks-travel-rewards",
     "us-us-bank-shield-visa",
     "us-us-bank-skypass",
     "us-us-bank-skypass-blue",

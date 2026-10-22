@@ -7380,7 +7380,7 @@
     },
     "official_url": "https://www.apple.com/apple-card/",
     "image": {
-      "url": null,
+      "url": "https://www.apple.com/v/apple-card/n/images/overview/titanium_card__edutuqq7hsuq_large.jpg",
       "attribution": "© Goldman Sachs",
       "local_path": null
     },
@@ -7389,8 +7389,8 @@
     "sources": [
       "https://www.apple.com/apple-card/"
     ],
-    "notes": "Annual fee confirmed as $0 ('No annual...fees'). APR 17.49%-27.74% variable as of January 1, 2026. No foreign transaction fees. No signup bonus found on page. network_tier set to null (was 'world' but not stated on page). Mastercard confirmed as global payment network.",
-    "art_grade": "none"
+    "notes": "Annual fee confirmed as $0 ('No annual...fees'). APR 17.49%-27.74% variable as of January 1, 2026. No foreign transaction fees. No signup bonus found on page. network_tier set to null (was 'world' but not stated on page). Mastercard confirmed as global payment network. Artwork verified 2026-10-21: The official Apple Card overview page serves this titanium card image showing the front (Apple logo) and back (Goldman Sachs and Mastercard marks) of the card. Retained the existing Goldman Sachs attribution, which matches the issuer mark on the pictured card. The path is a versioned Apple asset and may change on a site refresh. The official image returned HTTP 200 and was visually inspected as the matching card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-air-france-klm",
@@ -9850,7 +9850,7 @@
     },
     "official_url": "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
     "image": {
-      "url": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-front/AA2_card_rRGB_AviatorRed_WE_359x246_4074_072418.png",
       "attribution": "© Barclays",
       "local_path": null
     },
@@ -9858,11 +9858,12 @@
     "last_verified": "2026-07-24",
     "sources": [
       "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
-      "https://cards.barclaycardus.com/credit-card/744a9f7a-4f12-4480-8481-e72155061cd8"
+      "https://cards.barclaycardus.com/credit-card/744a9f7a-4f12-4480-8481-e72155061cd8",
+      "https://cards.barclaycardus.com/"
     ],
-    "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026.",
+    "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026. Artwork verified 2026-10-21: the official Barclays US homepage cardmember hero for https://cards.barclaycardus.com/?p=aviator (\"Welcome, Aviator\") pairs this card-front image with a Learn more link to the AAdvantage Aviator Red World Elite Mastercard product path. The file name also names Aviator Red WE. Retained the existing Barclays attribution. The official image returned HTTP 200 and was visually inspected as the matching red-and-black AAdvantage Aviator World Elite Mastercard; it is a 359x246 asset dated 2018 in its file name. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-barclays-aarp-essential-rewards",
@@ -13368,8 +13369,8 @@
     },
     "official_url": "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/Uber_Biolumin_Cards_359x246.png",
+      "attribution": "© Barclays",
       "local_path": null
     },
     "secondary_sources": [
@@ -13378,10 +13379,11 @@
     "bin_hints": [],
     "last_verified": "2026-07-26",
     "sources": [
-      "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber"
+      "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber",
+      "https://cards.barclaycardus.com/"
     ],
-    "notes": "Historical Uber Visa record. The retained August 2020 Wayback URL checked 2026-10-20 returns generic Barclays welcome/browser-update content, not readable Uber product terms. It does not verify the stored financial fields, exact withdrawal date, or a conversion to Barclays View Mastercard. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor, financial terms and historical artwork remain unknown; a readable official product archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Uber Visa record. The retained August 2020 Wayback URL checked 2026-10-20 returns generic Barclays welcome/browser-update content, not readable Uber product terms. It does not verify the stored financial fields, exact withdrawal date, or a conversion to Barclays View Mastercard. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and financial terms remain unknown; a readable official product archive or conversion notice is still required. Artwork provenance (checked 2026-10-21): the official Barclays US homepage cardmember hero for https://cards.barclaycardus.com/?p=uber, the same vanity URL as this record's archived official_url, labels this card image \"Uber Visa Card\". It was visually inspected as the black Uber Visa card with the dotted-light pattern. The same page separately labels a later black design \"Uber Credit Card\" (Uber_Visa_Card_2019_Angle_2A_v2.png); that design was not used here. Attribution set to Barclays as the issuer hosting the asset. This is artwork evidence only; it does not verify lifecycle or the financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-barclays-upromise",
@@ -15496,17 +15498,22 @@
     },
     "benefits": [],
     "official_url": "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
-    "image": null,
+    "image": {
+      "url": "https://web.archive.org/web/20181028015258im_/https://www.capitalone.com/assets/credit-cards/img/sparkmiles-card-art.png",
+      "attribution": "© Capital One",
+      "local_path": null
+    },
     "bin_hints": [],
     "last_verified": "2026-10-19",
     "sources": [
-      "https://www.capitalone.com/about/newsroom/venture-business-rebrand/"
+      "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
+      "https://web.archive.org/web/20180716180154/https://www.capitalone.com/small-business/credit-cards/spark-miles/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles will now be known as Venture Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. Historical card artwork remains unverified; no successor artwork is used.",
-    "art_grade": "none"
+    "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles will now be known as Venture Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. No successor artwork is used. Historical artwork provenance (checked 2026-10-21): the retained 2018-07-16 archive of the official Capital One Spark Miles product page lists the Spark Miles product (brand codes SPARKMILES and SPARKMILESTS) with the image sparkmiles-card-art.png. The linked image resolves to a 2018-10-28 archive capture of that Capital One-hosted asset and was visually inspected as the blue Spark Business Visa Signature card. It is a low-resolution 300x189 historical image documenting the predecessor brand as marketed at that date; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-capital-one-spark-miles-select-for-business",
@@ -15544,17 +15551,22 @@
     },
     "benefits": [],
     "official_url": "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
-    "image": null,
+    "image": {
+      "url": "https://web.archive.org/web/20191204210231im_/https://www.capitalone.com/credit-cards/assets/img/Spark-Miles-Select.png",
+      "attribution": "© Capital One",
+      "local_path": null
+    },
     "bin_hints": [],
     "last_verified": "2026-10-19",
     "sources": [
-      "https://www.capitalone.com/about/newsroom/venture-business-rebrand/"
+      "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
+      "https://web.archive.org/web/20200101060946/https://www.capitalone.com/small-business/credit-cards/spark-miles-select/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles Select will now be known as VentureOne Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. Historical card artwork remains unverified; no successor artwork is used.",
-    "art_grade": "none"
+    "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles Select will now be known as VentureOne Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. No successor artwork is used. Historical artwork provenance (checked 2026-10-21): the retained 2020-01-01 archive of the official Capital One Spark Miles Select product page lists the product \"Spark® Miles Select\" (brand code SPARKMILESSELECT) with the image Spark-Miles-Select.png. The linked image resolves to a 2019-12-04 archive capture of that Capital One-hosted asset and was visually inspected as the blue Spark Business card; the face does not print the product name or network mark, so the product-data association is the evidence. It is a 384x242 historical image documenting the predecessor brand as marketed at that date; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-capital-one-venture",
@@ -22975,17 +22987,23 @@
     },
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
+    "image": {
+      "url": "https://web.archive.org/web/20190428174505im_/https://creditcards.chase.com/K-Marketplace/images/cardart/united_biz_card.png",
+      "attribution": "© Chase",
+      "local_path": null
+    },
     "bin_hints": [],
     "last_verified": "2026-10-20",
     "sources": [
       "https://creditcards.chase.com/",
-      "https://creditcards.chase.com/business-credit-cards/united/united-business-card"
+      "https://creditcards.chase.com/business-credit-cards/united/united-business-card",
+      "https://web.archive.org/web/20190428082926/https://creditcards.chase.com/travel-credit-cards"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current United Business product page and Chase sample-agreement registry do not prove an exact withdrawal date or conversion for the historical MileagePlus Explorer Business product. Removed unsupported 2020-01-23 and United Business replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
-    "art_grade": "none"
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current United Business product page and Chase sample-agreement registry do not prove an exact withdrawal date or conversion for the historical MileagePlus Explorer Business product. Removed unsupported 2020-01-23 and United Business replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Historical artwork provenance (checked 2026-10-21): the retained 2019-04-28 archive of the official Chase travel credit cards page shows this card art with alt text \"Clickable card art links to United(Service Mark) Explorer Business Card product page\". The linked image resolves to a 2019-04-28 archive capture of the Chase-hosted asset and was visually inspected as the navy United Explorer MileagePlus Business Visa Signature card (the face prints Explorer, MileagePlus and Business). It is a low-resolution 289x181 historical image documenting the product as marketed at that date; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-chase-united-quest",
@@ -23314,18 +23332,24 @@
     },
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
+    "image": {
+      "url": "https://web.archive.org/web/20190428082310im_/https://creditcards.chase.com/K-Marketplace/images/cardart/united_travelbank_card.png",
+      "attribution": "© Chase",
+      "local_path": null
+    },
     "bin_hints": [],
     "last_verified": "2026-10-20",
     "sources": [
       "https://creditcards.chase.com/",
       "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
-      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
+      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip",
+      "https://web.archive.org/web/20190428082926/https://creditcards.chase.com/travel-credit-cards"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Chase Bank USA/United TravelBank Visa Agreement.pdf\" associates this historical product with Chase; its body is a general cardmember agreement. The current Gateway product page is not a conversion notice. Removed unsupported 2020-09-21 and Gateway replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
-    "art_grade": "none"
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Chase Bank USA/United TravelBank Visa Agreement.pdf\" associates this historical product with Chase; its body is a general cardmember agreement. The current Gateway product page is not a conversion notice. Removed unsupported 2020-09-21 and Gateway replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Historical artwork provenance (checked 2026-10-21): the retained 2019-04-28 archive of the official Chase travel credit cards page shows this card art with alt text \"Clickable card art links to United (Service Mark) TravelBank Card product page\". The linked image resolves to a 2019-04-28 archive capture of the Chase-hosted asset and was visually inspected as the silver United TravelBank Visa Signature card (the face prints United TravelBank and Chase). It is a low-resolution 289x181 historical image documenting the product as marketed at that date; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-chase-world-of-hyatt",
@@ -27415,7 +27439,7 @@
     "travel_perks": null,
     "official_url": "https://www.discover.com/credit-cards/cash-back/it-card.html",
     "image": {
-      "url": null,
+      "url": "https://ecm.capitalone.com/WCM/dfs-card/products/cardart-cashit-with-shadow.png",
       "attribution": "© Discover / Capital One",
       "local_path": null
     },
@@ -27424,8 +27448,8 @@
     "sources": [
       "https://www.discover.com/credit-cards/cash-back/it-card.html"
     ],
-    "notes": "Discover is now under Capital One ownership for marketing assets; quarterly 5% categories require activation and have a quarterly maximum — confirm current cap on Discover disclosures.",
-    "art_grade": "none"
+    "notes": "Discover is now under Capital One ownership for marketing assets; quarterly 5% categories require activation and have a quarterly maximum — confirm current cap on Discover disclosures. Artwork verified 2026-10-21: The official Discover it Cash Back page navigation serves this Capital One-hosted Discover card image labelled \"Discover it Cash Back Card\". The same issuer asset (imageId 002fc0cf-c32a-4dc6-9821-026bc44286bc) is also labelled for Discover it Secured, which already uses its rdesktop rendition; Discover offers the same it card designs on both products. Retained the existing attribution. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-discover-it-chrome",
@@ -28257,8 +28281,8 @@
     },
     "official_url": "https://www.cardless.com/cards/avianca/lifemiles",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://www.cardless.com/_next/static/media/card-angled-standard.85056e73.png",
+      "attribution": "© First Electronic Bank",
       "local_path": null
     },
     "bin_hints": [],
@@ -28267,8 +28291,8 @@
       "https://www.cardless.com/cards/avianca/lifemiles",
       "https://www.cardless.com/rates-and-fees-99-avianca"
     ],
-    "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. APR not re-verified on 2026-07-24 (Rates & Fees PDF returned binary content).",
-    "art_grade": "none"
+    "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. APR not re-verified on 2026-07-24 (Rates & Fees PDF returned binary content). Artwork verified 2026-10-21: The official Cardless Avianca LifeMiles product page serves this angled red card render with alt text \"Avianca® Credit Card\" on the record's own official_url, which also states the $99 annual fee stored here, tying the artwork to this product generation. The page footer states the card is issued by First Electronic Bank, so attribution is set to that issuer. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-first-avianca-lifemiles-elite",
@@ -28397,7 +28421,7 @@
     },
     "official_url": "https://www.cardless.com/cards/avianca/lifemiles-elite",
     "image": {
-      "url": null,
+      "url": "https://www.cardless.com/_next/static/media/card-angled-premium.a4b2fc80.png",
       "attribution": "© First Electronic Bank",
       "local_path": null
     },
@@ -28407,9 +28431,9 @@
       "https://www.cardless.com/cards/avianca/lifemiles-elite",
       "https://www.cardless.com/rates-and-fees-249-avianca"
     ],
-    "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. Annual fee $249. No cash advance/ATM access feature. Signup bonus up to 100,000 miles (tiered breakdown preserved from prior verification — not fully visible in fetched product page text).",
+    "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. Annual fee $249. No cash advance/ATM access feature. Signup bonus up to 100,000 miles (tiered breakdown preserved from prior verification — not fully visible in fetched product page text). Artwork verified 2026-10-21: The official Cardless Avianca LifeMiles Elite product page serves this angled grey card render with alt text \"Avianca® Black Credit Card\", distinct from the red standard card, on the record's own official_url, which also states the $249 annual fee stored here, tying the artwork to this product generation. Retained the existing First Electronic Bank attribution. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-first-cardless-qatar-infinite",
@@ -30066,18 +30090,23 @@
       "other": []
     },
     "official_url": "https://www.us.hsbc.com/credit-cards/products/elite/",
-    "image": null,
+    "image": {
+      "url": "https://web.archive.org/web/20190503030713im_/https://www.us.hsbc.com/content/dam/hsbc/us/images/credit-card-comparison/cc_prem_elite_card_img_542x347.png",
+      "attribution": "© HSBC",
+      "local_path": null
+    },
     "bin_hints": [],
     "last_verified": "2026-10-20",
     "sources": [
       "https://www.us.hsbc.com/credit-cards/products/elite/",
-      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
+      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip",
+      "https://web.archive.org/web/20190626114404/https://www.us.hsbc.com/credit-cards/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"HSBC Bank USA/Premier World Elite MasterCard Cardmember Agreement and Disclosure.pdf\" explicitly names this personal product and HSBC Bank USA, N.A. on its 10/2018 agreement cover. Current HSBC Elite product and terms pages establish the current product, not the date or terms of a historical conversion. Removed unsupported 2021-01-01, early-2021 rename and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
-    "art_grade": "none"
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"HSBC Bank USA/Premier World Elite MasterCard Cardmember Agreement and Disclosure.pdf\" explicitly names this personal product and HSBC Bank USA, N.A. on its 10/2018 agreement cover. Current HSBC Elite product and terms pages establish the current product, not the date or terms of a historical conversion. Removed unsupported 2021-01-01, early-2021 rename and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Historical artwork provenance (checked 2026-10-21): the retained 2019-06-26 archive of the official HSBC US credit cards comparison page places this image (cc_prem_elite_card_img_542x347.png) directly above the product heading \"HSBC Premier World Elite Mastercard® credit card\". The linked image resolves to a 2019-05-03 archive capture of the HSBC-hosted asset and was visually inspected as the black HSBC Premier Mastercard with the geometric lion design. It is a 542x347 historical image documenting the product as marketed at that date; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-penfed-gold-visa",
@@ -30362,7 +30391,7 @@
     },
     "official_url": "https://www.penfed.org/credit-cards/pathfinder-rewards",
     "image": {
-      "url": null,
+      "url": "https://www.penfed.org/content/dam/penfed/en/products/credit-cards/cards/pathfinder-rewards.webp",
       "attribution": "© PenFed",
       "local_path": null
     },
@@ -30372,9 +30401,9 @@
       "https://www.penfed.org/credit-cards/pathfinder-rewards",
       "https://www.penfed.org/content/dam/penfed/en/general/pdf/credit-cards/Pathfinder_RWDTC.pdf"
     ],
-    "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included.",
+    "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included. Artwork verified 2026-10-21: The official PenFed Pathfinder Rewards product page serves this card image with alt text \"Pathfinder® Rewards Visa Signature® Card\". Retained the existing PenFed attribution. The image was rendered from the official page and visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-penfed-platinum-rewards",
@@ -31807,8 +31836,8 @@
     },
     "official_url": "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://web.archive.org/web/20150919162659im_/https://tdaclientrewards.tdbank.com/DATAHELIX/TD/MEMBRE_GROUPE/4_cardArt.jpg",
+      "attribution": "© TD Bank",
       "local_path": null
     },
     "secondary_sources": [
@@ -31817,11 +31846,12 @@
     "bin_hints": [],
     "last_verified": "2026-10-19",
     "sources": [
-      "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf"
+      "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf",
+      "https://web.archive.org/web/20150930103800/https://tdaclientrewards.tdbank.com/"
     ],
-    "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits.",
+    "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits. Historical artwork provenance (checked 2026-10-21): the retained 2015-09-30 archive of the official TD Ameritrade Client Rewards site shows this image with alt text \"TD Ameritrade Client Rewards Card Visa card\". The linked image resolves to a 2015-09-19 archive capture of the TD Bank-hosted asset and was visually inspected as the white TD Ameritrade Client Rewards card; the pictured face carries a Visa Signature mark, which is recorded here as an observation only and does not change network_tier. It is a low-resolution 200x126 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-td-business-solutions",
@@ -32494,6 +32524,160 @@
       "https://www.usbank.com/credit-cards.html"
     ],
     "notes": "Product URL redirected to general U.S. Bank Credit Cards page, but the Altitude Go card IS listed there with full details. Annual fee amount not displayed (shown as placeholder $). APR shown as 0% intro for 15 billing cycles then variable (specific rate not displayed).",
+    "art_grade": "issuer"
+  },
+  {
+    "id": "us-us-bank-altitude-reserve",
+    "schema_version": "1.0.0",
+    "name": "U.S. Bank Altitude Reserve Visa Infinite Card",
+    "localized_names": {
+      "en": "U.S. Bank Altitude Reserve Visa Infinite Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "infinite",
+    "type": "credit",
+    "segment": "personal",
+    "status": "discontinued",
+    "annual_fee": {
+      "amount": 400,
+      "currency": "USD",
+      "first_year": 400,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 29.99,
+        "max": 29.99,
+        "type": "variable"
+      },
+      "notes": "Archived 2024-03-02 product page: the purchase/balance-transfer variable APR value was not rendered in the capture (placeholder only); variable cash advance APR 29.99%. Cash advance fee 5% ($10 minimum); convenience check fee 3% ($5 minimum)."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees when making purchases outside the United States (archived 2024-03-02 product page)."
+    },
+    "credit_required": {
+      "score_band": "good_to_excellent",
+      "notes": "In general, our credit card products are for established credit with a credit score in the good to excellent range."
+    },
+    "rewards": {
+      "currency": "points",
+      "currency_label": "U.S. Bank Altitude Reserve Points",
+      "structure": "multi",
+      "rate_type": "points_multiplier",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X point on all other eligible Net Purchases."
+      },
+      "categories": [
+        {
+          "label": "Prepaid hotels and car rentals booked directly in the Altitude Rewards Center",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Eligible travel purchases made directly with travel merchants (airlines, hotels, car rentals, taxicabs, limousines, passenger trains, cruise lines)",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Mobile wallet purchases (Apple Pay, Google Pay, Samsung Pay)",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Archived 2024-03-02 terms: points are worth 50% more when redeemed for travel; points never expire; Real-Time Rewards redemption available after card registration. A transaction that is both mobile wallet and travel earns the additional points once (as mobile wallet)."
+    },
+    "signup_bonus": {
+      "amount": 50000,
+      "unit": "points",
+      "spend_required": 4500,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "Archived offer (2024-03-02): 50,000 bonus points after $4,500 in eligible Net Purchases within 90 days of account opening. The card no longer accepts new applications, so this offer is historical.",
+      "as_of": "2024-03-02"
+    },
+    "benefits": [
+      {
+        "id": "annual-travel-dining-credit",
+        "title": "Up to $325 annual travel and dining credits",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Automatic statement credits totaling up to $325 per cardmember year for purchases made directly with travel merchants and at restaurants, fast-food restaurants or bars."
+      },
+      {
+        "id": "priority-pass-select",
+        "title": "Priority Pass Select membership",
+        "category": "lounge",
+        "source": "issuer",
+        "description": "Complimentary Priority Pass Select membership with 8 free visits to participating airport lounges and experiences; enrollment with no membership fee is limited to one cardmember per account and further lounge visit fees apply."
+      },
+      {
+        "id": "tsa-precheck-global-entry-credit",
+        "title": "TSA PreCheck or Global Entry credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Up to $100 in statement credits to reimburse the TSA PreCheck or Global Entry application fee once every four years."
+      },
+      {
+        "id": "visa-infinite-luxury-hotel-collection",
+        "title": "Visa Infinite Luxury Hotel Collection",
+        "category": "other",
+        "source": "network",
+        "description": "Access to the Visa Infinite Luxury Hotel Collection benefits at participating properties."
+      },
+      {
+        "id": "no-foreign-transaction-fees",
+        "title": "No foreign transaction fees",
+        "category": "other",
+        "source": "issuer",
+        "description": "No foreign transaction fees when making purchases outside the United States."
+      }
+    ],
+    "travel_perks": {
+      "lounge_access": {
+        "program": "Priority Pass Select",
+        "visits_per_year": null,
+        "notes": "Archived page: complimentary membership with 8 free visits; the capture does not state whether the 8 visits reset annually. Enrollment limited to one cardmember per account."
+      },
+      "tsa_precheck_credit": {
+        "amount": 100,
+        "currency": "USD",
+        "period": "every_4_years"
+      },
+      "global_entry_credit": {
+        "amount": 100,
+        "currency": "USD",
+        "period": "every_4_years"
+      },
+      "free_checked_bags": null,
+      "hotel_status": null,
+      "other": [
+        "Up to $325 annual travel and dining credits",
+        "No foreign transaction fees"
+      ]
+    },
+    "official_url": "https://web.archive.org/web/20240302032351/https://www.usbank.com/credit-cards/altitude-reserve-visa-infinite-credit-card.html",
+    "image": {
+      "url": "https://web.archive.org/web/20240227191950im_/https://www.usbank.com/dam/images/rps/large/Altitude_Reserve_382x609.png",
+      "attribution": "© U.S. Bank",
+      "local_path": null
+    },
+    "bin_hints": [],
+    "last_verified": "2026-10-21",
+    "sources": [
+      "https://web.archive.org/web/20240302032351/https://www.usbank.com/credit-cards/altitude-reserve-visa-infinite-credit-card.html",
+      "https://www.usbank.com/credit-cards/benefits.html"
+    ],
+    "notes": "Status evidence: the official U.S. Bank card benefits page (checked 2026-10-21) lists U.S. Bank Altitude Reserve Visa Infinite Card under \"Personal Credit Cards (no longer accepting new applications)\", and the former product URL now redirects to the generic credit card catalog. U.S. Bank does not state the date applications closed, so discontinued_date is omitted. Fees, earning rates, benefits and the welcome offer come from the retained 2024-03-02 archive of the official product page and describe the product as marketed then; current terms for existing cardmembers were not verified and may have changed. The purchase APR was not rendered in the archived capture and is left null. The vertical card image is the official product-page asset (alt text \"U.S. Bank's premium credit card with up to 5 times bonus points on prepaid hotels and car rentals\"); it resolves to a 2024-02-27 archive capture and was visually inspected as the grey Altitude Reserve Visa Infinite card.",
     "art_grade": "issuer"
   },
   {
@@ -33289,15 +33473,21 @@
     },
     "benefits": [],
     "official_url": "https://www.usbank.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20150906140545im_/https://www.usbank.com/images/credit-card/222x139-ccsig.png",
+      "attribution": "© U.S. Bank",
+      "local_path": null
+    },
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.usbank.com/credit-cards/"
+      "https://www.usbank.com/credit-cards/",
+      "https://web.archive.org/web/20160508162403/https://www.usbank.com/credit-cards/club-carlson-premier-rewards-visa-signature-credit-card.html"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson℠ Premier Rewards Visa Signature® Card\". The official Club Carlson Rewards Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-us-bank-club-carlson-rewards-visa",
@@ -33365,15 +33555,133 @@
     },
     "benefits": [],
     "official_url": "https://www.usbank.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20150906140545im_/https://www.usbank.com/images/credit-card/222x139-ccsig.png",
+      "attribution": "© U.S. Bank",
+      "local_path": null
+    },
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.usbank.com/credit-cards/"
+      "https://www.usbank.com/credit-cards/",
+      "https://web.archive.org/web/20160508145027/https://www.usbank.com/credit-cards/club-carlson-rewards-visa-signature-credit-card.html"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson(SM) Rewards Visa Signature® Card\". The official Club Carlson Premier Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
+  },
+  {
+    "id": "us-us-bank-flexperks-travel-rewards",
+    "schema_version": "1.0.0",
+    "name": "U.S. Bank FlexPerks Travel Rewards Visa Signature Card",
+    "localized_names": {
+      "en": "U.S. Bank FlexPerks Travel Rewards Visa Signature Card"
+    },
+    "country": "us",
+    "issuer": "U.S. Bank",
+    "issuer_id": "us-bank",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "discontinued",
+    "annual_fee": {
+      "amount": 49,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": "Archived 2019 terms: $0 introductory annual fee for the first 12 months, then $49; U.S. Bank Platinum Checking customers received a second-year annual fee waiver."
+    },
+    "apr": {
+      "purchase": {
+        "min": 15.99,
+        "max": 25.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 25.99,
+        "max": 25.99,
+        "type": "variable"
+      },
+      "notes": "Archived 2019-08-25 Credit Card Terms: purchase and balance transfer APR 15.99%-25.99% variable based on creditworthiness; cash advance APR 25.99% variable; no penalty APR. Balance transfer fee 3% ($5 minimum); cash advance fee 4% ($10 minimum); late fee up to $39. Rates vary with the Prime Rate and are historical."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Archived 2019 terms list Foreign Transaction: None."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "points",
+      "currency_label": "FlexPoints",
+      "structure": "multi",
+      "rate_type": "points_multiplier",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 FlexPoint for every $1 on all other eligible Net Purchases."
+      },
+      "categories": [
+        {
+          "label": "Airlines, gas stations or grocery stores, whichever category has the most spend in each monthly billing cycle",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Most cell phone service providers",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Qualifying charitable donations",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Archived 2019 product page: redeem FlexPoints for airfare, hotel stays, car rentals and cruises (25,000 FlexPoints shown as worth $375 in travel), plus merchandise, gift cards, cash back and live events; Real-Time Mobile Rewards redemption. Up to $25 reimbursement per round-trip air travel award ticket toward baggage fees or in-flight food and drinks."
+    },
+    "signup_bonus": {
+      "amount": 25000,
+      "unit": "points",
+      "spend_required": 2000,
+      "spend_currency": "USD",
+      "months": 4,
+      "description": "Archived offer (2019-08-25): 25,000 enrollment FlexPoints after $2,000 in eligible Net Purchases within the first four months of account opening. The card no longer accepts new applications, so this offer is historical.",
+      "as_of": "2019-08-25"
+    },
+    "benefits": [
+      {
+        "id": "award-ticket-incidental-reimbursement",
+        "title": "Award ticket incidental reimbursement",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Reimbursement of up to $25 per round-trip air travel award ticket toward baggage fees or in-flight food and drinks."
+      },
+      {
+        "id": "no-foreign-transaction-fees",
+        "title": "No foreign transaction fees",
+        "category": "other",
+        "source": "issuer",
+        "description": "No foreign transaction fees."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://web.archive.org/web/20190825232548/https://www.usbank.com/credit-cards/flexperks-travel-rewards-visa-signature-credit-card.html",
+    "image": {
+      "url": "https://web.archive.org/web/20190902140119im_/https://www.usbank.com/dam/images/rps/large/cardArt_flexperks_travel-large-333x209.png",
+      "attribution": "© U.S. Bank",
+      "local_path": null
+    },
+    "bin_hints": [],
+    "last_verified": "2026-10-21",
+    "sources": [
+      "https://web.archive.org/web/20190825232548/https://www.usbank.com/credit-cards/flexperks-travel-rewards-visa-signature-credit-card.html",
+      "https://web.archive.org/web/20190825232548/https://applications.usbank.com/oad/termsSimpleApply.controller?locationCode=8985&offerId=H13PP2RR7H&sourceCode=97632",
+      "https://www.usbank.com/credit-cards/benefits.html"
+    ],
+    "notes": "Status evidence: the official U.S. Bank card benefits page (checked 2026-10-21) lists U.S. Bank FlexPerks Travel Rewards Visa Signature Card under \"Personal Credit Cards (no longer accepting new applications)\". U.S. Bank does not state the date applications closed, so discontinued_date is omitted, and no successor is asserted. Fees, APRs, earning rates and the welcome offer come from the retained 2019-08-25 archives of the official product page and its linked Credit Card Terms; they describe that offer generation only and current terms for existing cardmembers were not verified. The archived product page footnotes were not captured, so category caps and the credit-score band are left unknown. The card image is the official product-page asset (alt text \"flexperks travel rewards visa signature credit card\"); it resolves to a 2019-09-02 archive capture and was visually inspected as the black U.S. Bank FlexPerks travel rewards Visa Signature card.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-us-bank-shield-visa",
@@ -35222,15 +35530,21 @@
     },
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20180104021433im_/https://www04.wellsfargomedia.com/assets/images/photography/product/290x150/cash_back_college_visa_card.png",
+      "attribution": "© Wells Fargo",
+      "local_path": null
+    },
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.wellsfargo.com/credit-cards/"
+      "https://www.wellsfargo.com/credit-cards/",
+      "https://web.archive.org/web/20180104021512/https://www.wellsfargo.com/credit-cards/find-a-credit-card/all/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and conversion terms remain unknown; a readable product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2018-01-04 archive of the official Wells Fargo all-credit-cards page lists this product with an image whose alt text is \"Wells Fargo Cash Back College Card details\". The linked image resolves to a 2018-01-04 archive capture of the Wells Fargo-hosted asset and was visually inspected as the pale yellow Visa card (the face itself does not print the product name, so the alt-text association is the evidence). It is a low-resolution 290x150 historical image and documents the product as marketed at that date only; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-cash-wise",
@@ -35262,15 +35576,21 @@
     },
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20180104021433im_/https://www01.wellsfargomedia.com/assets/images/photography/product/credit-cards/cash_wise_visa_card.png",
+      "attribution": "© Wells Fargo",
+      "local_path": null
+    },
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.wellsfargo.com/credit-cards/"
+      "https://www.wellsfargo.com/credit-cards/",
+      "https://web.archive.org/web/20180104021512/https://www.wellsfargo.com/credit-cards/find-a-credit-card/all/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The current agreement index lists Cash Wise World Elite Mastercard; that does not establish a conversion from this historical Visa record. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The current agreement index lists Cash Wise World Elite Mastercard; that does not establish a conversion from this historical Visa record. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and conversion terms remain unknown; a readable product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2018-01-04 archive of the official Wells Fargo all-credit-cards page lists this product with an image whose alt text is \"Wells Fargo Cash Wise Visa Card details\". The linked image resolves to a 2018-01-04 archive capture of the Wells Fargo-hosted asset and was visually inspected as the gold Cash Wise Visa card. It is a low-resolution 290x150 historical image and documents the product as marketed at that date only; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-choice-privileges",
@@ -35730,15 +36050,21 @@
     },
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20180104021430im_/https://www01.wellsfargomedia.com/assets/images/photography/product/credit-cards/propel_american_express_card.png",
+      "attribution": "© Wells Fargo",
+      "local_path": null
+    },
     "last_verified": "2026-07-28",
     "sources": [
-      "https://www.wellsfargo.com/credit-cards/"
+      "https://www.wellsfargo.com/credit-cards/",
+      "https://web.archive.org/web/20180104021512/https://www.wellsfargo.com/credit-cards/find-a-credit-card/all/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and conversion terms remain unknown; a readable product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2018-01-04 archive of the official Wells Fargo all-credit-cards page lists this product with an image whose alt text is \"Wells Fargo Propel American Express Card details\". The linked image resolves to a 2018-01-04 archive capture of the Wells Fargo-hosted asset and was visually inspected as the white Propel American Express card with the copper stagecoach-horses design. It is a low-resolution 290x150 historical image and documents the product as marketed at that date only; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-propel-365",
@@ -35770,15 +36096,21 @@
     },
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20180104021431im_/https://www01.wellsfargomedia.com/assets/images/photography/product/credit-cards/propel_365_american_express_card.png",
+      "attribution": "© Wells Fargo",
+      "local_path": null
+    },
     "last_verified": "2026-07-28",
     "sources": [
-      "https://www.wellsfargo.com/credit-cards/"
+      "https://www.wellsfargo.com/credit-cards/",
+      "https://web.archive.org/web/20180104021512/https://www.wellsfargo.com/credit-cards/find-a-credit-card/all/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and conversion terms remain unknown; a readable product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2018-01-04 archive of the official Wells Fargo all-credit-cards page lists this product with an image whose alt text is \"Wells Fargo Propel 365 American Express Card details\". The linked image resolves to a 2018-01-04 archive capture of the Wells Fargo-hosted asset and was visually inspected as the white Propel 365 American Express card with the gold horses design and a 365 mark. It is a low-resolution 290x150 historical image and documents the product as marketed at that date only; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-propel-world",
@@ -35963,15 +36295,21 @@
     },
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20180104021432im_/https://www04.wellsfargomedia.com/assets/images/photography/product/290x150/rewards_visa_card.png",
+      "attribution": "© Wells Fargo",
+      "local_path": null
+    },
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.wellsfargo.com/credit-cards/"
+      "https://www.wellsfargo.com/credit-cards/",
+      "https://web.archive.org/web/20180104021512/https://www.wellsfargo.com/credit-cards/find-a-credit-card/all/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and conversion terms remain unknown; a readable product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2018-01-04 archive of the official Wells Fargo all-credit-cards page lists this product with an image whose alt text is \"Wells Fargo Rewards Visa Card details\". The linked image resolves to a 2018-01-04 archive capture of the Wells Fargo-hosted asset and was visually inspected as the grey Rewards Visa card. It is a low-resolution 290x150 historical image and documents the product as marketed at that date only; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-signify-business-cash",
@@ -36141,14 +36479,20 @@
     },
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
+    "image": {
+      "url": "https://web.archive.org/web/20180104021431im_/https://www04.wellsfargomedia.com/assets/images/photography/product/290x150/rewards_visa_signature_card.png",
+      "attribution": "© Wells Fargo",
+      "local_path": null
+    },
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.wellsfargo.com/credit-cards/"
+      "https://www.wellsfargo.com/credit-cards/",
+      "https://web.archive.org/web/20180104021512/https://www.wellsfargo.com/credit-cards/find-a-credit-card/all/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and conversion terms remain unknown; a readable product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2018-01-04 archive of the official Wells Fargo all-credit-cards page lists this product with an image whose alt text is \"Wells Fargo Visa Signature Card details\". The linked image resolves to a 2018-01-04 archive capture of the Wells Fargo-hosted asset and was visually inspected as the dark brown Rewards Visa Signature card. It is a low-resolution 290x150 historical image and documents the product as marketed at that date only; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   }
 ]
