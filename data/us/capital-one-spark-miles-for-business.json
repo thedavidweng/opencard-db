@@ -34,14 +34,19 @@
   },
   "benefits": [],
   "official_url": "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
-  "image": null,
+  "image": {
+    "url": "https://web.archive.org/web/20181028015258im_/https://www.capitalone.com/assets/credit-cards/img/sparkmiles-card-art.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
   "bin_hints": [],
   "last_verified": "2026-10-19",
   "sources": [
-    "https://www.capitalone.com/about/newsroom/venture-business-rebrand/"
+    "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
+    "https://web.archive.org/web/20180716180154/https://www.capitalone.com/small-business/credit-cards/spark-miles/"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles will now be known as Venture Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. Historical card artwork remains unverified; no successor artwork is used."
+  "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles will now be known as Venture Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. No successor artwork is used. Historical artwork provenance (checked 2026-10-21): the retained 2018-07-16 archive of the official Capital One Spark Miles product page lists the Spark Miles product (brand codes SPARKMILES and SPARKMILESTS) with the image sparkmiles-card-art.png. The linked image resolves to a 2018-10-28 archive capture of that Capital One-hosted asset and was visually inspected as the blue Spark Business Visa Signature card. It is a low-resolution 300x189 historical image documenting the predecessor brand as marketed at that date; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update."
 }
