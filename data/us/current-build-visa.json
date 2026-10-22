@@ -1,0 +1,62 @@
+{
+  "id": "us-current-build-visa",
+  "schema_version": "1.0.0",
+  "name": "Current Build Visa Credit Card",
+  "localized_names": {
+    "en": "Current Build Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "Cross River Bank",
+  "issuer_id": "cross-river-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "charge",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Secured charge card with no interest charges; the balance must be paid in full each payment due date."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of the full transaction amount for all foreign transactions."
+  },
+  "credit_required": {
+    "score_band": "limited",
+    "notes": "No hard credit check; a Current account is required and the limit equals the available balance."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Current Points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Points are earned on eligible categories and redeem for cash back; rates are not stated on the product page."
+    },
+    "categories": [],
+    "redemption_notes": "Points redeem for cash back.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://current.com/benefits/credit-building/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://current.com/benefits/credit-building/",
+    "https://cdn.current.com/agreements/crb_build_agreement_06_22_2026.pdf"
+  ],
+  "notes": "Distributed and serviced by Finco Services, Inc. dba Current. Agreement last revised June 22, 2026. No Visa network package is stated, so network_tier is none."
+}
