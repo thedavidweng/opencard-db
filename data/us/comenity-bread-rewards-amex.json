@@ -1,0 +1,67 @@
+{
+  "id": "us-comenity-bread-rewards-amex",
+  "schema_version": "1.0.0",
+  "name": "Bread Rewards American Express Credit Card",
+  "localized_names": {
+    "en": "Bread Rewards American Express Credit Card"
+  },
+  "country": "us",
+  "issuer": "Comenity Capital Bank",
+  "issuer_id": "comenity",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "bread_rewards_points",
+    "currency_label": "Bread Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas stations, grocery stores, dining and utilities",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for statement credits, gift cards, travel, merchandise and more. Rewards do not expire.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.breadfinancial.com/en/bread-rewards-credit-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.breadfinancial.com/en/bread-rewards-credit-card.html"
+  ],
+  "notes": "Earn 25% extra points in every billing cycle with 20 or more separate purchases. Issued by Comenity Capital Bank (Bread Financial) under license from American Express. APRs are not stated on the product page, so they are null."
+}
