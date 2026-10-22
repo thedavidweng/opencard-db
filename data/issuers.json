@@ -737,6 +737,18 @@
         "files.consumerfinance.gov",
         "consumerfinance.gov"
       ]
+    },
+    {
+      "id": "usaa",
+      "name": "USAA Federal Savings Bank",
+      "aliases": [
+        "USAA"
+      ],
+      "domains": [
+        "usaa.com",
+        "files.consumerfinance.gov",
+        "consumerfinance.gov"
+      ]
     }
   ]
 }
