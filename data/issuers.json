@@ -670,6 +670,16 @@
       "domains": [
         "tangerine.ca"
       ]
+    },
+    {
+      "id": "wealthsimple",
+      "name": "Wealthsimple",
+      "aliases": [
+        "wealthsimple-payments"
+      ],
+      "domains": [
+        "wealthsimple.com"
+      ]
     }
   ]
 }
