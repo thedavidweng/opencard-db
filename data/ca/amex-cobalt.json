@@ -14,7 +14,7 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": 12.99,
+    "amount": 155.88,
     "currency": "CAD",
     "first_year": 0,
     "waiver_conditions": "Monthly fee model; first months often promotional — confirm on Amex Canada."
@@ -101,6 +101,6 @@
     "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
     "https://www.americanexpress.com/ca/en/credit-cards/"
   ],
-  "notes": "Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
+  "notes": "The fee is charged as $12.99 monthly (recorded here as $155.88 a year). Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
   "segment": "personal"
 }
