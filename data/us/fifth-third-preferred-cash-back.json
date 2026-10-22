@@ -1,0 +1,66 @@
+{
+  "id": "us-fifth-third-preferred-cash-back",
+  "schema_version": "1.0.0",
+  "name": "Fifth Third Preferred Cash/Back Card",
+  "localized_names": {
+    "en": "Fifth Third Preferred Cash/Back Card"
+  },
+  "country": "us",
+  "issuer": "Fifth Third Bank",
+  "issuer_id": "fifth-third",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.24,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "19.24% to 29.24% variable APR on purchases and on balance transfers after any introductory period. Cash advance variable APR 28.74%. Balance transfer fee $5 or 4%, whichever is greater. APRs as of 10/6/2026."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "International Transaction Fee: None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 Rewards Points (2% cash back) for each $1 spent on qualified purchases; each point is worth $0.01."
+    },
+    "categories": [],
+    "redemption_notes": "Unlimited cash rewards with no caps and no expiration.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.53.com/content/fifth-third/en/personal-banking/bank/credit-cards/fifth-third-preferred-cash-back.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.53.com/content/fifth-third/en/personal-banking/bank/credit-cards/fifth-third-preferred-cash-back.html"
+  ],
+  "notes": "Available exclusively to Fifth Third Preferred Banking clients. The page lists Mastercard perks that apply to World, World Elite or World Legend cards without naming this card's package, so network_tier is none."
+}

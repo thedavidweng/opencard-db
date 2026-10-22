@@ -327,6 +327,16 @@
       "domains": [
         "navyfederal.org"
       ]
+    },
+    {
+      "id": "fifth-third",
+      "name": "Fifth Third Bank",
+      "aliases": [
+        "Fifth Third"
+      ],
+      "domains": [
+        "53.com"
+      ]
     }
   ]
 }
