@@ -104,7 +104,7 @@
   },
   "official_url": "https://www.bankofamerica.com/credit-cards/products/air-france-credit-card/",
   "image": {
-    "url": null,
+    "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/1bdx_cmsig_v-250.png",
     "attribution": "© Bank of America",
     "local_path": null
   },
@@ -114,5 +114,5 @@
     "https://www.bankofamerica.com/credit-cards/products/air-france-credit-card/",
     "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire"
   ],
-  "notes": "Issued by Bank of America. Visa Signature. Annual fee $89 (not $0 as previously scaffolded). No foreign transaction fees."
+  "notes": "Issued by Bank of America. Visa Signature. Annual fee $89 (not $0 as previously scaffolded). No foreign transaction fees. Artwork-only verification 2026-10-20: the rendered Bank of America product page displays this clean card image beside the exact product heading and offer. Image attribution retained; financial terms, verification date and product lifecycle were not reverified by this artwork check."
 }
