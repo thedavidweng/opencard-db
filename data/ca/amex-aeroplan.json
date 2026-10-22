@@ -1,0 +1,85 @@
+{
+  "id": "ca-amex-aeroplan",
+  "schema_version": "1.0.0",
+  "name": "American Express Aeroplan Card",
+  "localized_names": {
+    "en": "American Express Aeroplan Card"
+  },
+  "country": "ca",
+  "issuer": "Amex Bank of Canada",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "charge",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 120,
+    "currency": "CAD",
+    "first_year": 120,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Charge card: the balance must be paid in full each month; 30% annual interest applies to balances not paid in full."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident with a Canadian credit file."
+  },
+  "rewards": {
+    "currency": "aeroplan",
+    "currency_label": "Aeroplan points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X Aeroplan points on everything else."
+    },
+    "categories": [
+      {
+        "label": "Air Canada",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Dining and food delivery",
+        "points_per_dollar": 1.5,
+        "cap": null
+      },
+      {
+        "label": "Hyatt",
+        "points_per_dollar": 1.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Aeroplan points redeem for Air Canada and partner flights and other Aeroplan rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 35000,
+    "unit": "points",
+    "spend_required": 7500,
+    "spend_currency": "CAD",
+    "months": 6,
+    "description": "35,000 Aeroplan points after $7,500 in purchases in the first 6 months, plus 10,000 points for $1,000 in spend in month 13.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/en-ca/charge-cards/aeroplan-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/en-ca/charge-cards/aeroplan-card/"
+  ],
+  "notes": "The annual fee rises to $150 on Jan 12, 2027. American Express Canada cards have no network package tier, so network_tier is none."
+}

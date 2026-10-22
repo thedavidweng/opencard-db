@@ -1,0 +1,85 @@
+{
+  "id": "ca-amex-simplycash-preferred",
+  "schema_version": "1.0.0",
+  "name": "SimplyCash Preferred Card from American Express",
+  "localized_names": {
+    "en": "SimplyCash Preferred Card from American Express"
+  },
+  "country": "ca",
+  "issuer": "Amex Bank of Canada",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 119.88,
+    "currency": "CAD",
+    "first_year": 119.88,
+    "waiver_conditions": "Charged monthly at $9.99 for non-Quebec residents ($119.88 a year); Quebec residents pay $119 a year."
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "notes": "Preferred annual interest rate 21.99% on purchases and funds advances; higher rates apply after missed payments."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident with a Canadian credit file."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2% cash back on everything else."
+    },
+    "categories": [
+      {
+        "label": "Gas",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Grocery in Canada (up to $1,200 cash back annually)",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back is credited to the account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "CAD",
+    "spend_required": 2000,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "Bonus 10% cash back on up to $2,000 in purchases in the first 3 months (up to $200), plus a $50 statement credit for a purchase in month 13.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/en-ca/credit-cards/simply-cash-preferred/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/en-ca/credit-cards/simply-cash-preferred/"
+  ],
+  "notes": "American Express Canada cards have no network package tier, so network_tier is none."
+}

@@ -1,0 +1,90 @@
+{
+  "id": "ca-amex-aeroplan-business-reserve",
+  "schema_version": "1.0.0",
+  "name": "American Express Aeroplan Business Reserve Card",
+  "localized_names": {
+    "en": "American Express Aeroplan Business Reserve Card"
+  },
+  "country": "ca",
+  "issuer": "Amex Bank of Canada",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 599,
+    "currency": "CAD",
+    "first_year": 599,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "notes": "Preferred annual interest rate 21.99% on purchases and funds advances; higher rates apply after missed payments."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident with a Canadian credit file."
+  },
+  "rewards": {
+    "currency": "aeroplan",
+    "currency_label": "Aeroplan points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.25,
+      "description": "1.25X Aeroplan points on everything else."
+    },
+    "categories": [
+      {
+        "label": "Air Canada",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Hyatt",
+        "points_per_dollar": 2.5,
+        "cap": null
+      },
+      {
+        "label": "Eligible hotels and car rentals",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Aeroplan points redeem for Air Canada and partner flights and other Aeroplan rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 80000,
+    "unit": "points",
+    "spend_required": 10500,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "Elevated offer of 80,000 Aeroplan points after $10,500 in purchases in the first 3 months, plus a further bonus for $3,500 in spend in month 13.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/en-ca/credit-cards/aeroplan-business-reserve-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/en-ca/credit-cards/aeroplan-business-reserve-card/"
+  ],
+  "notes": "The annual fee rises to $799 on Jan 12, 2027. American Express Canada cards have no network package tier, so network_tier is none."
+}
