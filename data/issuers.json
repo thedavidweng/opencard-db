@@ -452,6 +452,16 @@
         "cfna.com",
         "firestonecompleteautocare.com"
       ]
+    },
+    {
+      "id": "becu",
+      "name": "BECU",
+      "aliases": [
+        "Boeing Employees Credit Union"
+      ],
+      "domains": [
+        "becu.org"
+      ]
     }
   ]
 }
