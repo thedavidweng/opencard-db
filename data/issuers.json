@@ -700,6 +700,16 @@
       "domains": [
         "ctfs.com"
       ]
+    },
+    {
+      "id": "manulife-bank",
+      "name": "Manulife Bank",
+      "aliases": [
+        "manulife"
+      ],
+      "domains": [
+        "manulifebank.ca"
+      ]
     }
   ]
 }
