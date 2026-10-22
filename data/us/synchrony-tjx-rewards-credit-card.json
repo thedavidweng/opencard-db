@@ -1,0 +1,62 @@
+{
+  "id": "us-synchrony-tjx-rewards-credit-card",
+  "schema_version": "1.0.0",
+  "name": "TJX Rewards Credit Card",
+  "localized_names": {
+    "en": "TJX Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 30.49,
+      "max": 30.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR is prime + 23.74% (30.49% as of January 1, 2026); penalty APR prime + 33.74%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "tjx_rewards_points",
+    "currency_label": "TJX Rewards Points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 5,
+      "description": "5 points per $1 at the TJX family of stores."
+    },
+    "categories": [],
+    "redemption_notes": "Each 1,000 points issues a $10 Rewards Certificate.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/partner/tjx",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/partner/tjx",
+    "https://www.synchronybankterms.com/syfterms/pdf/TJX_Rewards_Credit_Card_Account_Agreement_and_Pricing_Addendum.pdf"
+  ],
+  "notes": "Issued by Synchrony Bank. Usable at U.S. and Puerto Rico TJX stores (T.J.Maxx, Marshalls, HomeGoods, Sierra, Homesense) and their websites. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

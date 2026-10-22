@@ -1,0 +1,77 @@
+{
+  "id": "us-synchrony-mywalgreens-credit-card",
+  "schema_version": "1.0.0",
+  "name": "myWalgreens Credit Card",
+  "localized_names": {
+    "en": "myWalgreens Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 33.24,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "notes": "Variable purchase APR 33.24%; penalty APR 39.99%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "walgreens_cash",
+    "currency_label": "Walgreens Cash rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 5,
+      "description": "5% on all other brands and eligible pharmacy purchases at Walgreens."
+    },
+    "categories": [
+      {
+        "label": "Walgreens-branded products",
+        "points_per_dollar": 10,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Walgreens Cash rewards post to the myWalgreens member account for use on future Walgreens purchases.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 50,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "$50 in Walgreens Cash rewards after opening an account and making a first purchase within 45 days; the amount in personalized offers may vary.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.walgreens.com/creditcard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.walgreens.com/creditcard",
+    "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e050787.pdf",
+    "https://www.synchrony.com/partner/walgreens"
+  ],
+  "notes": "Issued by Synchrony Bank. Usable at Walgreens, Duane Reade and Walgreens.com. Applicants are assigned the myWalgreens Credit Card or myWalgreens Mastercard based on credit. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

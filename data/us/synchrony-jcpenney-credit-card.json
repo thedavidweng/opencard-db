@@ -1,0 +1,67 @@
+{
+  "id": "us-synchrony-jcpenney-credit-card",
+  "schema_version": "1.0.0",
+  "name": "JCPenney Credit Card",
+  "localized_names": {
+    "en": "JCPenney Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "jcpenney_cashpass",
+    "currency_label": "JCPenney CashPass Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 7.5,
+      "description": "7.5% back (1.5 points per $1) in CashPass Rewards on qualifying JCPenney purchases at the Insider and Elite tiers where new cardmembers start."
+    },
+    "categories": [
+      {
+        "label": "Qualifying JCPenney purchases after $1,000 in a calendar year (VIP)",
+        "points_per_dollar": 10,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "200 points = $10 CashPass Reward.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://jcpcreditcard.com/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://jcpcreditcard.com/"
+  ],
+  "notes": "Issued by Synchrony Bank and usable at JCPenney stores and jcp.com. Purchase APR is not stated on the program page. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

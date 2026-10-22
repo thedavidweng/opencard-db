@@ -1,0 +1,87 @@
+{
+  "id": "us-synchrony-sams-club-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Sam's Club Mastercard",
+  "localized_names": {
+    "en": "Sam's Club Mastercard"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.15,
+      "max": 28.15,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 25.15,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Purchase APR is prime + 13.40% (Account Type 1) or prime + 21.40% (Type 2); cash advance APR prime + 18.40% or prime + 24.40%. The agreement shows 20.15% and 28.15% for purchases as of January 1, 2026. Cash advance fee $5 or 3%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "The rates and fees table lists no foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "sams_cash",
+    "currency_label": "Sam's Cash",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in Sam's Cash on other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas and EV charging anywhere Mastercard is accepted (first $6,000 per year, then 1%)",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Sam's Club purchases for Plus members (Club members earn 1%)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Dining and takeout",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Sam's Cash is redeemable at Sam's Club. Maximum of $5,000 in Sam's Cash per calendar year, aggregated across a member's accounts. An active Sam's Club membership is required.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/partner/sams-club",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/partner/sams-club",
+    "https://www.synchronybankterms.com/syfterms/pdf/Sams_Club_Mastercard_Account_Agreement_and_Pricing_Addendum.pdf"
+  ],
+  "notes": "Issued by Synchrony Bank. Applicants are first considered for the Sam's Club Mastercard and otherwise for the Sam's Club Credit Card, which does not earn Sam's Cash. The page does not state a Mastercard package, so network_tier is none. A Sam's Club Business Mastercard with the same earn rates also exists and is not covered here."
+}

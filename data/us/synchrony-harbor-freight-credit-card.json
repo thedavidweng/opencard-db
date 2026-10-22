@@ -1,0 +1,62 @@
+{
+  "id": "us-synchrony-harbor-freight-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Harbor Freight Credit Card",
+  "localized_names": {
+    "en": "Harbor Freight Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 30.99,
+      "max": 30.99,
+      "type": "variable"
+    },
+    "notes": "Purchase APR is prime + 24.24% (30.99% as of January 1, 2026); penalty APR prime + 34.24%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "harbor_freight_money",
+    "currency_label": "Harbor Freight Money",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 5,
+      "description": "5 reward points per $1 in net purchases (excluding equal pay purchases)."
+    },
+    "categories": [],
+    "redemption_notes": "Every 500 points issues a $5 Harbor Freight Money certificate.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/partner/harborfreight",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/partner/harborfreight",
+    "https://www.synchronybankterms.com/syfterms/pdf/Harbor_Freight_Tools_Credit_Card_Account_Agreement_and_Pricing_Addendum.pdf"
+  ],
+  "notes": "Issued by Synchrony Bank and usable at Harbor Freight Tools. Equal-payment purchases of $299 or more carry 0% interest and do not earn points. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

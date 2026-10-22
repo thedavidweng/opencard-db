@@ -1,0 +1,61 @@
+{
+  "id": "us-synchrony-carecredit-credit-card",
+  "schema_version": "1.0.0",
+  "name": "CareCredit Credit Card",
+  "localized_names": {
+    "en": "CareCredit Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 32.99,
+      "max": 32.99,
+      "type": "variable"
+    },
+    "notes": "New accounts as of 5/30/2024: purchase APR 32.99%, penalty APR 39.99%, minimum interest charge $2."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.carecredit.com/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.carecredit.com/",
+    "https://www.carecredit.com/apply/"
+  ],
+  "notes": "Issued by Synchrony Bank. Health and wellness financing card accepted at more than 285,000 CareCredit network locations. Applicants who apply online may instead be approved for the CareCredit Rewards Mastercard, which is not covered here. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

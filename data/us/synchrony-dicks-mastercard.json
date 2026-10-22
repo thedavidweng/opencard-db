@@ -1,0 +1,82 @@
+{
+  "id": "us-synchrony-dicks-mastercard",
+  "schema_version": "1.0.0",
+  "name": "DICK'S Mastercard",
+  "localized_names": {
+    "en": "DICK'S Mastercard"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 30.49,
+      "max": 30.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 30.49% variable; cash advance APR 29.99% variable. Cash advance fee $10 or 5%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee 3% of each transaction."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "scorecard_rewards",
+    "currency_label": "ScoreCard Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in ScoreCard Rewards everywhere else Mastercard is accepted."
+    },
+    "categories": [
+      {
+        "label": "Qualifying purchases at DICK'S family of stores",
+        "points_per_dollar": 10,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earned as ScoreCard Rewards for use at DICK'S.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 30,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "$30 bonus reward after opening and using the new card at a DICK'S family store.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.synchrony.com/partner/dicks-sporting-goods",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.synchrony.com/partner/dicks-sporting-goods",
+    "https://www.synchrony.com/contenthub/newsroom/dicks-sporting-goods-and-synchrony-level-up.html",
+    "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e078338.pdf"
+  ],
+  "notes": "Issued by Synchrony Bank. No Mastercard package is stated, so network_tier is none."
+}

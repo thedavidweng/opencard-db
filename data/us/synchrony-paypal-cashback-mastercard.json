@@ -1,0 +1,73 @@
+{
+  "id": "us-synchrony-paypal-cashback-mastercard",
+  "schema_version": "1.0.0",
+  "name": "PayPal Cashback Mastercard",
+  "localized_names": {
+    "en": "PayPal Cashback Mastercard"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 33.24,
+      "max": 33.24,
+      "type": "variable"
+    },
+    "notes": "Variable purchase APR 18.49% (Account Type 1), 30.24% (Type 2) or 33.24% (Type 3) based on creditworthiness; cash advance APR 33.24%; penalty APR 34.24%. Cash advance fee $10 or 5%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee 3% of each transaction."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% cash back on all other purchases everywhere Mastercard is accepted."
+    },
+    "categories": [
+      {
+        "label": "Purchases when checking out with PayPal",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem cash back to a PayPal balance or linked bank account at any time with no minimum.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.paypal.com/us/digital-wallet/manage-money/paypal-cashback-mastercard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.paypal.com/us/digital-wallet/manage-money/paypal-cashback-mastercard",
+    "https://www.synchronybankterms.com/gecrbterms/html/PayPalCashbackApplyTerms_combo.htm"
+  ],
+  "notes": "Issued by Synchrony Bank. The account agreement covers the PayPal Cashback Mastercard or PayPal Cashback World Mastercard; the package is assigned on approval and not stated up front, so network_tier is none. Requires a PayPal account."
+}

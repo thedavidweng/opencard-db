@@ -1,0 +1,67 @@
+{
+  "id": "us-synchrony-floor-decor-pro-premier",
+  "schema_version": "1.0.0",
+  "name": "Floor & Decor PRO Premier Credit Card",
+  "localized_names": {
+    "en": "Floor & Decor PRO Premier Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Statement credit",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [
+      {
+        "label": "Qualifying Floor & Decor purchases (2026 promotion, in lieu of special financing)",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Posted as a statement credit.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.flooranddecor.com/customer-care/procredit.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.flooranddecor.com/customer-care/procredit.html",
+    "https://www.synchrony.com/financing/synchrony-mastercards"
+  ],
+  "notes": "Business card for Floor & Decor PRO customers with Net 30 terms. Synchrony lists Floor & Decor among its commercial credit cards. The 5% back is a statement credit on qualifying purchases made between 1/1/2026 and 12/31/2026, offered as an alternative to 180 days special financing on purchases of $299 or more. The standard APR is not stated on the page. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}

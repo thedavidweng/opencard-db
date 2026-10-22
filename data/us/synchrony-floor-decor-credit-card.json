@@ -1,0 +1,60 @@
+{
+  "id": "us-synchrony-floor-decor-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Floor & Decor Credit Card",
+  "localized_names": {
+    "en": "Floor & Decor Credit Card"
+  },
+  "country": "us",
+  "issuer": "Synchrony",
+  "issuer_id": "synchrony",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.flooranddecor.com/customer-care/credit.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.flooranddecor.com/customer-care/credit.html"
+  ],
+  "notes": "Issued by Synchrony Bank and usable at Floor & Decor. Promotional financing: no interest if paid in full within 6, 12 or 18 months on purchases of $299, $999 or $1,999 or more, or 6.99% APR for 48 months with fixed payments. The standard purchase APR is not stated on the page. It is a closed-loop private-label card that does not run on a payment network, so network is other and network_tier is none."
+}
