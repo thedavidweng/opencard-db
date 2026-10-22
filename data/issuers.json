@@ -632,6 +632,26 @@
       ]
     },
     {
+      "id": "rogers-bank",
+      "name": "Rogers Bank",
+      "aliases": [
+        "rogers"
+      ],
+      "domains": [
+        "rogersbank.com"
+      ]
+    },
+    {
+      "id": "brim-financial",
+      "name": "Brim Financial",
+      "aliases": [
+        "brim"
+      ],
+      "domains": [
+        "brimfinancial.com"
+      ]
+    },
+    {
       "id": "mbna",
       "name": "MBNA",
       "aliases": [

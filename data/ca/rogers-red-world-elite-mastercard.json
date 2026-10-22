@@ -1,0 +1,72 @@
+{
+  "id": "ca-rogers-red-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Rogers Red World Elite Mastercard",
+  "localized_names": {
+    "en": "Rogers Red World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Rogers Bank",
+  "issuer_id": "rogers-bank",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 25.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "notes": "Standard rate 21.99% to 25.99% on purchases and fees; 22.99% to 27.99% on cash advances, cash-like transactions and balance transfers."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $80,000 personal or $150,000 household annual income."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% cash back on eligible purchases; 2% with at least one qualifying Rogers, Fido, Shaw or Comwave service."
+    },
+    "categories": [
+      {
+        "label": "Purchases in U.S. dollars",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back redeems at 1.5 times its regular value against eligible Rogers purchases online and at participating Rogers and Fido stores.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rogersbank.com/en/rogers_red_worldelite_mastercard_details",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rogersbank.com/en/rogers_red_worldelite_mastercard_details"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name."
+}

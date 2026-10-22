@@ -1,0 +1,72 @@
+{
+  "id": "ca-rogers-red-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Rogers Red Mastercard",
+  "localized_names": {
+    "en": "Rogers Red Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Rogers Bank",
+  "issuer_id": "rogers-bank",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 25.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "notes": "Standard rate 21.99% to 25.99% on purchases and fees; 22.99% to 27.99% on cash advances, cash-like transactions and balance transfers."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Subject to credit assessment and income verification."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on eligible purchases; 2% with at least one qualifying Rogers, Fido, Shaw or Comwave service."
+    },
+    "categories": [
+      {
+        "label": "Purchases in U.S. dollars",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back redeems at 1.5 times its regular value against eligible Rogers purchases online and at participating Rogers and Fido stores.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rogersbank.com/en/rogers_red_mastercard_details",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rogersbank.com/en/rogers_red_mastercard_details"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
