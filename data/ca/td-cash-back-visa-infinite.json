@@ -1,0 +1,120 @@
+{
+  "id": "ca-td-cash-back-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "TD Cash Back Visa Infinite Card",
+  "localized_names": {
+    "en": "TD Cash Back Visa Infinite Card"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 139,
+    "currency": "CAD",
+    "first_year": 139,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $60,000 personal or $100,000 household annual income."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back Dollars",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% in Cash Back Dollars on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Grocery (first $15,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Gas and EV charging (first $15,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Public transit (first $15,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Recurring bill payments (first $15,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Streaming, digital gaming and media (first $15,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash Back Dollars can be redeemed as a statement credit.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Welcome offer includes 10% in Cash Back Dollars in the first 3 months on up to $3,500 in bonus-eligible purchases.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/cash-back/cash-back-visa-infinite-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/ca/en/personal-banking/products/credit-cards/cash-back/cash-back-visa-infinite-card"
+  ],
+  "notes": "Network tier is Visa Infinite per the card name."
+}

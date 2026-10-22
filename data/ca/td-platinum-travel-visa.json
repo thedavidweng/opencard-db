@@ -1,0 +1,108 @@
+{
+  "id": "ca-td-platinum-travel-visa",
+  "schema_version": "1.0.0",
+  "name": "TD Platinum Travel Visa Card",
+  "localized_names": {
+    "en": "TD Platinum Travel Visa Card"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "CAD",
+    "first_year": 89,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "td_rewards",
+    "currency_label": "TD Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 TD Rewards Points per $1 on other purchases."
+    },
+    "categories": [
+      {
+        "label": "Travel booked through Expedia For TD",
+        "points_per_dollar": 6,
+        "cap": null
+      },
+      {
+        "label": "Groceries (first $15,000 a year)",
+        "points_per_dollar": 4.5,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Dining (first $15,000 a year)",
+        "points_per_dollar": 4.5,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Public transit (first $15,000 a year)",
+        "points_per_dollar": 4.5,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Recurring bill payments and streaming, digital gaming and media (first $15,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "TD Rewards Points redeem for travel through Expedia For TD, other travel, statement credits, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/travel-rewards/platinum-travel-visa-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/ca/en/personal-banking/products/credit-cards/travel-rewards/platinum-travel-visa-card"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

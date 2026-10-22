@@ -1,0 +1,107 @@
+{
+  "id": "ca-td-business-travel-visa",
+  "schema_version": "1.0.0",
+  "name": "TD Business Travel Visa Card",
+  "localized_names": {
+    "en": "TD Business Travel Visa Card"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 149,
+    "currency": "CAD",
+    "first_year": 149,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 19.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "19.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "td_rewards",
+    "currency_label": "TD Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 TD Rewards Points per $1 on other business purchases."
+    },
+    "categories": [
+      {
+        "label": "Travel booked online through Expedia For TD",
+        "points_per_dollar": 9,
+        "cap": null
+      },
+      {
+        "label": "Dining, EV charging and public transit (first $80,000 a year)",
+        "points_per_dollar": 6,
+        "cap": {
+          "amount": 80000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Streaming, digital gaming and media and recurring bill payments (first $80,000 a year)",
+        "points_per_dollar": 6,
+        "cap": {
+          "amount": 80000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Foreign currency purchases (first $80,000 a year)",
+        "points_per_dollar": 6,
+        "cap": {
+          "amount": 80000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "TD Rewards Points redeem for travel through Expedia For TD, other travel, statement credits, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Welcome offer: 30,000 TD Rewards Points after the first purchase, 120,000 after $15,000 in the first 180 days, 30,000 after $25,000 in the first 365 days, and 20,000 for a purchase in the 15th month billing cycle.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/ca/en/business-banking/small-business/credit-cards/business-travel-visa-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/ca/en/business-banking/small-business/credit-cards/business-travel-visa-card"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

@@ -1,0 +1,108 @@
+{
+  "id": "ca-td-first-class-travel-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "TD First Class Travel Visa Infinite Card",
+  "localized_names": {
+    "en": "TD First Class Travel Visa Infinite Card"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 139,
+    "currency": "CAD",
+    "first_year": 139,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $60,000 personal or $100,000 household annual income."
+  },
+  "rewards": {
+    "currency": "td_rewards",
+    "currency_label": "TD Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 TD Rewards Points per $1 on other purchases."
+    },
+    "categories": [
+      {
+        "label": "Travel booked through Expedia For TD",
+        "points_per_dollar": 8,
+        "cap": null
+      },
+      {
+        "label": "Groceries (first $25,000 a year)",
+        "points_per_dollar": 6,
+        "cap": {
+          "amount": 25000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Dining (first $25,000 a year)",
+        "points_per_dollar": 6,
+        "cap": {
+          "amount": 25000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Public transit (first $25,000 a year)",
+        "points_per_dollar": 6,
+        "cap": {
+          "amount": 25000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Recurring bill payments and streaming, digital gaming and media (first $25,000 a year)",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 25000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "TD Rewards Points redeem for travel through Expedia For TD, other travel, statement credits, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/travel-rewards/first-class-travel-visa-infinite-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/ca/en/personal-banking/products/credit-cards/travel-rewards/first-class-travel-visa-infinite-card"
+  ],
+  "notes": "Network tier is Visa Infinite per the card name."
+}
