@@ -57187,6 +57187,265 @@
     "art_grade": "none"
   },
   {
+    "id": "us-usaa-eagle-adapt-visa",
+    "schema_version": "1.0.0",
+    "name": "USAA Eagle Adapt Visa",
+    "localized_names": {
+      "en": "USAA Eagle Adapt Visa"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 15.4,
+        "max": 27.4,
+        "type": "variable"
+      },
+      "notes": "The APR applies to purchases, balance transfers and cash advances. 0% intro APR through the May 2028 billing cycle on purchases, and on balance transfers and convenience checks that post by January 31, 2027. Convenience check fee is also 5%. Balance transfer and cash advance fee is 5% of each transaction amount (cash advance fee waived for electronic transfers to a USAA Bank deposit account). No penalty APR. Late and returned payment fees up to $35."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "USAA membership is required to apply."
+    },
+    "rewards": {
+      "currency": "usaa_rewards_points",
+      "currency_label": "USAA Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on other purchases."
+      },
+      "categories": [
+        {
+          "label": "Eligible spend categories (including groceries, dining, home improvement and more)",
+          "points_per_dollar": 3,
+          "cap": {
+            "amount": 3000,
+            "currency": "USD",
+            "period": "quarter"
+          }
+        }
+      ],
+      "redemption_notes": "Points never expire. Redeem through options including Cash Rewards (1 point = $0.01) and Shop with Rewards (1 point = $0.008).",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 200,
+      "unit": "USD",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": null,
+      "description": "Earn a $200 bonus after spending $1,000 on qualifying purchases by January 31, 2027.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "auto-deductible-reimbursement",
+        "title": "Auto deductible reimbursement",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Auto deductible reimbursement listed on the USAA card page. Not available in WA State. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "trip-cancellation-interruption",
+        "title": "Trip cancellation and interruption",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Trip cancellation and interruption listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "auto-rental-cdw",
+        "title": "Auto rental collision damage waiver",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Auto rental collision damage waiver listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Cell phone protection listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "purchase-security",
+        "title": "Purchase security",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Purchase security listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usaa.com/banking/credit-cards-public/cash-back/eagle-adapt/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usaa.com/banking/credit-cards-public/cash-back/eagle-adapt/",
+      "https://www.usaa.com/banking/credit-cards-public/cash-back/eagle-adapt/rates-and-fees/",
+      "https://www.usaa.com/banking/credit-cards-public/"
+    ],
+    "notes": "Launched in July 2026. The 3% rate applies to the first $3,000 in combined quarterly purchases across eligible spend categories; USAA lists groceries, dining and home improvement among them, and the full category list is not on the public page text. Rewards are earned as points at 1 point per $1. The disclosures name it the Eagle Adapt Visa Credit Card and do not state a Visa Signature or Platinum tier.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-usaa-eagle-ascend-amex",
+    "schema_version": "1.0.0",
+    "name": "USAA Eagle Ascend American Express",
+    "localized_names": {
+      "en": "USAA Eagle Ascend American Express"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 27.4,
+        "max": 27.4,
+        "type": "variable"
+      },
+      "notes": "The APR applies to purchases, balance transfers and cash advances. No intro APR. Balance transfer and cash advance fee is 5% of each transaction amount (cash advance fee waived for electronic transfers to a USAA Bank deposit account). No penalty APR. Late and returned payment fees up to $35. The late fee is waived automatically if no late fee was waived in the prior twelve billing periods."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "USAA membership is required to apply."
+    },
+    "rewards": {
+      "currency": "usaa_rewards_points",
+      "currency_label": "USAA Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on other purchases."
+      },
+      "categories": [
+        {
+          "label": "Top eligible spend category each month (including gas stations, groceries, dining and more)",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Points never expire. Redeem through options including Cash Rewards (1 point = $0.01) and Shop with Rewards (1 point = $0.008).",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "walmart-plus-credit",
+        "title": "Walmart+ membership credit",
+        "category": "other",
+        "source": "issuer",
+        "description": "One-time statement credit of up to $98 plus applicable taxes for an annual Walmart+ membership purchased online with the card by May 31, 2027, posted within 90 days."
+      },
+      {
+        "id": "credit-limit-review",
+        "title": "Credit limit increase review",
+        "category": "other",
+        "source": "issuer",
+        "description": "Credit limit increase review in as few as six months after account opening with on-time payments."
+      },
+      {
+        "id": "late-fee-waiver",
+        "title": "Automatic late fee waiver",
+        "category": "other",
+        "source": "issuer",
+        "description": "One late fee waived automatically every twelve billing periods."
+      },
+      {
+        "id": "auto-deductible-reimbursement",
+        "title": "Auto deductible reimbursement",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Auto deductible reimbursement listed on the USAA card page. Not available in WA State. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "trip-cancellation-interruption",
+        "title": "Trip cancellation and interruption",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Trip cancellation and interruption listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "auto-rental-cdw",
+        "title": "Auto rental collision damage waiver",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Auto rental collision damage waiver listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Cell phone protection listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "purchase-security",
+        "title": "Purchase security",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Purchase security listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usaa.com/banking/credit-cards-public/build-credit/eagle-ascend/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usaa.com/banking/credit-cards-public/build-credit/eagle-ascend/",
+      "https://www.usaa.com/banking/credit-cards-public/build-credit/eagle-ascend/rates-and-fees/",
+      "https://www.usaa.com/banking/credit-cards-public/"
+    ],
+    "notes": "Launched in July 2026 as a credit-building card. The 2% rate applies to the top eligible spend category each month; USAA lists gas stations, groceries and dining among them, and the full category list is not on the public page text. Rewards are earned as points at 1 point per $1. No credit score band is published.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-usaa-eagle-navigator-visa-signature",
     "schema_version": "1.0.0",
     "name": "USAA Eagle Navigator Visa Signature",
