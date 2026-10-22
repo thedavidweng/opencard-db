@@ -1,0 +1,92 @@
+{
+  "id": "ca-cibc-aeroplan-visa-business",
+  "schema_version": "1.0.0",
+  "name": "CIBC Aeroplan Visa Business Card",
+  "localized_names": {
+    "en": "CIBC Aeroplan Visa Business Card"
+  },
+  "country": "ca",
+  "issuer": "CIBC",
+  "issuer_id": "cibc",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 180,
+    "currency": "CAD",
+    "first_year": 180,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 12.99,
+      "max": 18.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 14.5,
+      "max": 21.5,
+      "type": "variable"
+    },
+    "notes": "Purchases 12.99%, 15.99% or 18.99%; cash advances, balance transfers and convenience cheques 14.5%, 17.5% or 21.5%, assigned based on credit."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "aeroplan",
+    "currency_label": "Aeroplan points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Aeroplan point per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Air Canada direct purchases including Air Canada Vacations",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Participating Hyatt hotels and resorts",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Travel",
+        "points_per_dollar": 1.5,
+        "cap": null
+      },
+      {
+        "label": "Transportation",
+        "points_per_dollar": 1.5,
+        "cap": null
+      },
+      {
+        "label": "Dining, shipping, internet, cable and phone",
+        "points_per_dollar": 1.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Aeroplan points redeem for Air Canada and partner flights and other Aeroplan rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/aerogold-visa-card-business.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/aerogold-visa-card-business.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none. Bonus earn rates apply on the first $80,000 in net annual card purchases on the account. Hyatt earns 1 World of Hyatt bonus point per $1 in addition to Aeroplan points."
+}

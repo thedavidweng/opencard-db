@@ -1,0 +1,99 @@
+{
+  "id": "ca-cibc-costco-mastercard",
+  "schema_version": "1.0.0",
+  "name": "CIBC Costco Mastercard",
+  "localized_names": {
+    "en": "CIBC Costco Mastercard"
+  },
+  "country": "ca",
+  "issuer": "CIBC",
+  "issuer_id": "cibc",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.75,
+      "max": 21.75,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.49,
+      "max": 22.49,
+      "type": "variable"
+    },
+    "notes": "21.75% on purchases; 22.49% on cash (21.99% for Quebec residents)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum annual income of $15,000. The card also serves as the Costco membership card."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other qualifying purchases."
+    },
+    "categories": [
+      {
+        "label": "Restaurants",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Costco gas stations in Canada (first $5,000 a year in gas)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Other gas and EV charging (first $5,000 a year in gas)",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Costco.ca (first $8,000 a year)",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 8000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash back is issued once a year in January as a Cash Back Gift Certificate redeemable at Costco warehouses in Canada.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/costco-mastercard.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/costco-mastercard.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
