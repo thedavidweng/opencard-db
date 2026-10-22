@@ -1,0 +1,67 @@
+{
+  "id": "us-becu-low-rate-visa",
+  "schema_version": "1.0.0",
+  "name": "BECU Low Rate Visa Credit Card",
+  "localized_names": {
+    "en": "BECU Low Rate Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "BECU",
+  "issuer_id": "becu",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 12.49,
+      "max": 23.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 12.49,
+      "max": 23.49,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR on purchases for 12 months from account opening and on balance transfers made in the first 90 days, then 12.49% to 23.49% variable APR, per the rate schedule effective October 1, 2026."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "BECU membership required."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised on the product page."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.becu.org/everyday-banking/credit-card/low-rate-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.becu.org/everyday-banking/credit-card/low-rate-credit-card",
+    "https://www.becu.org/-/media/Files/PDF/461.pdf"
+  ],
+  "notes": "No balance transfer fee and no cash advance fee. No Visa network package is stated, so network_tier is none."
+}
