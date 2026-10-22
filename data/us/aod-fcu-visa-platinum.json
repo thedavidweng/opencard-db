@@ -1,0 +1,68 @@
+{
+  "id": "us-aod-fcu-visa-platinum",
+  "schema_version": "1.0.0",
+  "name": "AOD FCU Visa Platinum",
+  "localized_names": {
+    "en": "AOD FCU Visa Platinum"
+  },
+  "country": "us",
+  "issuer": "AOD Federal Credit Union",
+  "issuer_id": "aod-fcu",
+  "network": "visa",
+  "network_tier": "platinum",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 8.49,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "APR as low as 8.49%, per the AOD FCU credit cards page. Cash advance fee $5.00 or 1% (max $25)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "AOD FCU membership required."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas and restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash rebate is paid monthly as a statement credit.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.aodfcu.com/visa-platinum-card-no-link/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.aodfcu.com/visa-platinum-card-no-link/",
+    "https://www.aodfcu.com/credit-cards/"
+  ],
+  "notes": "Credit lines start at $300. Tier comes from the product name, Visa Platinum."
+}

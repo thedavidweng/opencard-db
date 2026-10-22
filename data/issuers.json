@@ -462,6 +462,16 @@
       "domains": [
         "becu.org"
       ]
+    },
+    {
+      "id": "aod-fcu",
+      "name": "AOD Federal Credit Union",
+      "aliases": [
+        "AOD FCU"
+      ],
+      "domains": [
+        "aodfcu.com"
+      ]
     }
   ]
 }
