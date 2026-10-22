@@ -1,0 +1,78 @@
+{
+  "id": "us-ulta-beauty-rewards-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Ulta Beauty Rewards Credit Card",
+  "localized_names": {
+    "en": "Ulta Beauty Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "Comenity Capital Bank (Bread Financial)",
+  "issuer_id": "comenity",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 32.25,
+      "max": 32.25,
+      "type": "variable"
+    },
+    "notes": "Variable APR as of the January 2026 print date of the filed agreement. Late fee up to $41. Minimum interest charge $3."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Store card usable only at Ulta Beauty."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ulta_beauty_rewards_points",
+    "currency_label": "Ulta Beauty Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Store card that may only be used at Ulta Beauty."
+    },
+    "categories": [
+      {
+        "label": "Ulta Beauty purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points you can redeem for savings through Ulta Beauty Rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "first-purchase-discount",
+      "title": "20% off your first purchase",
+      "category": "other",
+      "source": "co-brand",
+      "description": "20% off your first qualifying purchase at Ulta Beauty when you open and use your card."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.ulta.com/rewards/credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.ulta.com/rewards/credit-card",
+    "https://c.comenity.net/ac/ultabeautyrewards/public/home",
+    "https://c.comenity.net/ac/ultabeautyrewards/public/credit-card-agreement",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/Comenity_Capital_Bank/Ulta_Beauty_Rewards%C2%AE_Credit_Card_-_Current_Credit_Card_Agreements-256760.pdf"
+  ],
+  "notes": "Private-label store card issued by Comenity Capital Bank (Bread Financial). The 2 points per $1 includes the 1 point every Ulta Beauty Rewards member earns plus 1 additional point for using the card; Platinum and Diamond members earn more."
+}
