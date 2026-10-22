@@ -610,6 +610,16 @@
       "domains": [
         "cibc.com"
       ]
+    },
+    {
+      "id": "vancity",
+      "name": "Vancity",
+      "aliases": [
+        "vancouver-city-savings-credit-union"
+      ],
+      "domains": [
+        "vancity.com"
+      ]
     }
   ]
 }
