@@ -124,6 +124,12 @@ export const SHARED_ART_FAMILIES: readonly (readonly string[])[] = [
     "us-capital-one-quicksilver-cash-rewards",
     "us-capital-one-quicksilver-secured-cash-rewards",
   ],
+  // The archived official U.S. Bank product pages for both Club Carlson
+  // Visa Signature cards (2016-05-08) show the same 222x139-ccsig.png face.
+  [
+    "us-us-bank-club-carlson-premier-visa-signature",
+    "us-us-bank-club-carlson-rewards-visa-signature",
+  ],
 ];
 
 export function cardImageUrl(card: Card): string | null {

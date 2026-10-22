@@ -26,12 +26,18 @@
   },
   "benefits": [],
   "official_url": "https://www.usbank.com/credit-cards/",
+  "image": {
+    "url": "https://web.archive.org/web/20150906140545im_/https://www.usbank.com/images/credit-card/222x139-ccsig.png",
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
   "last_verified": "2026-07-26",
   "sources": [
-    "https://www.usbank.com/credit-cards/"
+    "https://www.usbank.com/credit-cards/",
+    "https://web.archive.org/web/20160508162403/https://www.usbank.com/credit-cards/club-carlson-premier-rewards-visa-signature-credit-card.html"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required."
+  "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson℠ Premier Rewards Visa Signature® Card\". The official Club Carlson Rewards Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update."
 }
