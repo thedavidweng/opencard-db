@@ -652,6 +652,36 @@
       ]
     },
     {
+      "id": "mbna",
+      "name": "MBNA",
+      "aliases": [
+        "mbna-canada"
+      ],
+      "domains": [
+        "mbna.ca"
+      ]
+    },
+    {
+      "id": "tangerine",
+      "name": "Tangerine",
+      "aliases": [
+        "tangerine-bank"
+      ],
+      "domains": [
+        "tangerine.ca"
+      ]
+    },
+    {
+      "id": "national-bank",
+      "name": "National Bank",
+      "aliases": [
+        "nbc"
+      ],
+      "domains": [
+        "nbc.ca"
+      ]
+    },
+    {
       "id": "simplii",
       "name": "Simplii Financial",
       "aliases": [

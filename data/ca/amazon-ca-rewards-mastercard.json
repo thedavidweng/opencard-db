@@ -1,0 +1,85 @@
+{
+  "id": "ca-amazon-ca-rewards-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Amazon.ca Rewards Mastercard",
+  "localized_names": {
+    "en": "Amazon.ca Rewards Mastercard"
+  },
+  "country": "ca",
+  "issuer": "MBNA",
+  "issuer_id": "mbna",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.74,
+      "max": 21.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "Rates shown on the MBNA page for the Ontario region; MBNA states that rates and fees may vary across regions."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Open to Canadian residents who are of the age of majority in their province or territory of residence."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back on eligible purchases everywhere else Mastercard is accepted."
+    },
+    "categories": [
+      {
+        "label": "Amazon.ca and Whole Foods Market stores (eligible Prime members; 1.5% for non-Prime members)",
+        "points_per_dollar": 2.5,
+        "cap": null
+      },
+      {
+        "label": "Foreign currency transactions (eligible Prime members)",
+        "points_per_dollar": 2.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Use your rewards at Amazon.ca and apply rewards directly to eligible Amazon.ca items.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 6,
+    "description": "5% back at Amazon.ca, Whole Foods Market stores, grocery stores and restaurants for 6 months after approval, on the first $3,000 in eligible purchases.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.mbna.ca/en/credit-cards/retail-store/amazon-rewards-mastercard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.mbna.ca/en/credit-cards/retail-store/amazon-rewards-mastercard"
+  ],
+  "notes": "Earn rates differ for Prime and non-Prime members; Prime rates are shown in the categories. The insurance documents list Platinum and World Mastercard versions, so network_tier is none."
+}
