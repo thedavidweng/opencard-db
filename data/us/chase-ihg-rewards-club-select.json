@@ -8,8 +8,8 @@
   "country": "us",
   "issuer": "Chase",
   "issuer_id": "chase",
-  "network": "visa",
-  "network_tier": "signature",
+  "network": "mastercard",
+  "network_tier": "world",
   "type": "credit",
   "segment": "personal",
   "status": "discontinued",
@@ -52,14 +52,21 @@
   },
   "benefits": [],
   "official_url": "https://creditcards.chase.com/",
+  "image": {
+    "url": "https://web.archive.org/web/20180211084048im_/https://creditcards.chase.com/R-Marketplace/1110008/images/cardart/ihg_card.png",
+    "attribution": "© Chase",
+    "local_path": null
+  },
   "bin_hints": [],
   "last_verified": "2026-10-20",
   "sources": [
     "https://creditcards.chase.com/",
-    "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select"
+    "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
+    "https://web.archive.org/web/20180127130104/https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club",
+    "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Chase catalog and quarterly sample-agreement registry do not establish the historical Select card's precise application-withdrawal date or an explicit conversion to IHG Premier. The current IHG One Rewards Premier Select product is separately named and does not prove that lineage. Removed unsupported 2018-04-05 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Chase catalog and quarterly sample-agreement registry do not establish the historical Select card's precise application-withdrawal date or an explicit conversion to IHG Premier. The current IHG One Rewards Premier Select product is separately named and does not prove that lineage. Removed unsupported 2018-04-05 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Network correction (checked 2026-10-21): the record previously said Visa Signature, but the retained 2018-01-27 archive of the official Chase product page for the IHG® Rewards Club Select Credit Card lists the same $0 intro / $49 annual fee and 5x IHG / 2x gas, grocery and restaurant / 1x earning stored here, files the card under \"MasterCard Credit Cards (1)\" and shows card art whose face reads WORLD MasterCard. Chase's 2018 Q4 credit card agreement submission to the CFPB contains IHG agreements only as \"IHG MasterCard World\" and \"IHG MasterCard World Elite\" (no IHG Visa agreement). Network is therefore mastercard and network_tier world for this IHG Rewards Club-era generation. The earlier Chase Priority Club Visa generations predate this product name and are not described by this record. The CFPB World agreement's $29 sample fee does not match the $49 product-page fee and is not used for annual_fee. Historical artwork provenance (checked 2026-10-21): the linked image is the ihg_card.png asset used by that official 2018 Chase page with alt text \"IHG(Registered Trademark) Rewards Club Select Credit Card\", resolved to a 2018-02-11 archive capture and visually inspected as the IHG Rewards Club World MasterCard; it is a low-resolution 289x181 historical image and is not evidence of lifecycle."
 }
