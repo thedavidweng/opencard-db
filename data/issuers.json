@@ -670,6 +670,16 @@
       "domains": [
         "tangerine.ca"
       ]
+    },
+    {
+      "id": "national-bank",
+      "name": "National Bank",
+      "aliases": [
+        "nbc"
+      ],
+      "domains": [
+        "nbc.ca"
+      ]
     }
   ]
 }
