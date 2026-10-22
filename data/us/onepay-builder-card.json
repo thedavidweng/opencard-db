@@ -1,0 +1,73 @@
+{
+  "id": "us-onepay-builder-card",
+  "schema_version": "1.0.0",
+  "name": "OnePay Builder Card",
+  "localized_names": {
+    "en": "OnePay Builder Card"
+  },
+  "country": "us",
+  "issuer": "Coastal Community Bank",
+  "issuer_id": "coastal-community-bank",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "charge",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Secured charge card with no interest charged; all charges are due and payable by the Payment Due Date each month."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "There is no fee for foreign transactions."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "No credit check and no security deposit; the card is secured by the Checking balance of a OnePay deposit account, which generally sets the amount available for purchases."
+  },
+  "rewards": {
+    "currency": "onepay_points",
+    "currency_label": "OnePay Points (redeemable as cash back)",
+    "structure": "choice",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "OnePay Rewards earn OnePay Points at eligible merchants with the OnePay debit card or Builder Card; no flat base rate is stated."
+    },
+    "categories": [
+      {
+        "label": "Chosen monthly category of Walmart, dining or gas",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 150,
+          "currency": "USD",
+          "period": "month"
+        }
+      }
+    ],
+    "redemption_notes": "You're able to redeem the points you've earned for cash back directly into your deposit account through the OnePay app once you have 25 OnePay Points or more.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.onepay.com/banking",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.onepay.com/banking",
+    "https://www.onepay.com/legal/ccb-builder-credit-card-agreement",
+    "https://www.onepay.com/legal"
+  ],
+  "notes": "Issued by Coastal Community Bank, member FDIC, under the OnePay Builder Credit Card Agreement (CCB) and distributed and serviced by OneProgress Services LLC (OnePay). OnePay also publishes a Lead Bank version of the agreement. After the $150 monthly cap, the chosen category earns 1 point per $10 spent for the rest of the month. A $3.00 Cash Out Fee is charged on the deposit account for ATM withdrawals with the card (waived for Allpoint ATMs). No Mastercard network package is stated, so network_tier is none."
+}
