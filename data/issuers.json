@@ -410,6 +410,16 @@
       "domains": [
         "creditonebank.com"
       ]
+    },
+    {
+      "id": "ubs",
+      "name": "UBS Bank USA",
+      "aliases": [
+        "UBS"
+      ],
+      "domains": [
+        "ubs.com"
+      ]
     }
   ]
 }
