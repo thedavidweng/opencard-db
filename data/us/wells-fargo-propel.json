@@ -28,12 +28,18 @@
   },
   "benefits": [],
   "official_url": "https://www.wellsfargo.com/credit-cards/",
+  "image": {
+    "url": "https://web.archive.org/web/20180104021430im_/https://www01.wellsfargomedia.com/assets/images/photography/product/credit-cards/propel_american_express_card.png",
+    "attribution": "© Wells Fargo",
+    "local_path": null
+  },
   "last_verified": "2026-07-28",
   "sources": [
-    "https://www.wellsfargo.com/credit-cards/"
+    "https://www.wellsfargo.com/credit-cards/",
+    "https://web.archive.org/web/20180104021512/https://www.wellsfargo.com/credit-cards/find-a-credit-card/all/"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required."
+  "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and conversion terms remain unknown; a readable product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2018-01-04 archive of the official Wells Fargo all-credit-cards page lists this product with an image whose alt text is \"Wells Fargo Propel American Express Card details\". The linked image resolves to a 2018-01-04 archive capture of the Wells Fargo-hosted asset and was visually inspected as the white Propel American Express card with the copper stagecoach-horses design. It is a low-resolution 290x150 historical image and documents the product as marketed at that date only; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update."
 }
