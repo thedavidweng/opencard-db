@@ -1,0 +1,113 @@
+{
+  "id": "us-usaa-cashback-rewards-plus-amex",
+  "schema_version": "1.0.0",
+  "name": "USAA Cashback Rewards Plus American Express",
+  "localized_names": {
+    "en": "USAA Cashback Rewards Plus American Express"
+  },
+  "country": "us",
+  "issuer": "USAA Federal Savings Bank",
+  "issuer_id": "usaa",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.4,
+      "max": 27.4,
+      "type": "variable"
+    },
+    "notes": "0% intro APR through the May 2028 billing cycle on balance transfers and convenience checks that post by January 31, 2027. Balance transfer, convenience check and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Bank deposit account). No penalty APR is stated."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "USAA membership is required to apply."
+  },
+  "rewards": {
+    "currency": "usd_cash",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on other qualifying purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas stations",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 3000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Military base purchases",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 5000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Groceries",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 3000,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Redeem some or all of your cash back. Your cashback rewards never expire.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "USD",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Earn a $200 reward bonus after spending $1,000 on qualifying purchases by January 31, 2027.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell phone protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.usaa.com/banking/credit-cards-public/cash-back/rewards-plus/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.usaa.com/banking/credit-cards-public/cash-back/rewards-plus/",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+  ],
+  "notes": "Category caps apply to the first $3,000 (gas stations), $5,000 (military base) and $3,000 (groceries) in purchases yearly, then 1%."
+}

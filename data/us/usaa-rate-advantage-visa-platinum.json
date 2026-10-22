@@ -1,0 +1,76 @@
+{
+  "id": "us-usaa-rate-advantage-visa-platinum",
+  "schema_version": "1.0.0",
+  "name": "USAA Rate Advantage Visa Platinum",
+  "localized_names": {
+    "en": "USAA Rate Advantage Visa Platinum"
+  },
+  "country": "us",
+  "issuer": "USAA Federal Savings Bank",
+  "issuer_id": "usaa",
+  "network": "visa",
+  "network_tier": "platinum",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 10.4,
+      "max": 24.4,
+      "type": "variable"
+    },
+    "notes": "0% intro APR through the May 2028 billing cycle on balance transfers and convenience checks that post by January 31, 2027. Balance transfer, convenience check and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Bank deposit account). No penalty APR is stated."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "USAA membership is required to apply."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell phone protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.usaa.com/banking/credit-cards-public/low-interest/rate-advantage/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.usaa.com/banking/credit-cards-public/low-interest/rate-advantage/",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+  ],
+  "notes": "Low-interest card; the product page lists no rewards program."
+}
