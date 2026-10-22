@@ -94,3 +94,20 @@ jobs:
             fi
           done
           [ "$failed" = 0 ] || echo "::warning::some jsDelivr purges were not confirmed; @main may serve stale files until the cache expires"
+          # jsDelivr can resolve @main to the previous commit for a minute or
+          # two after a push and re-cache the old file. Verify meta.json
+          # against the committed export and re-purge until it matches.
+          want=$(jq -r .generated_at exports/meta.json)
+          for attempt in 1 2 3 4 5 6; do
+            got=$(curl -fsS -m 30 "https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/exports/meta.json" | jq -r .generated_at || true)
+            if [ "$got" = "$want" ]; then
+              echo "jsDelivr @main serves current exports (generated_at $want)"
+              exit 0
+            fi
+            echo "jsDelivr @main meta.json generated_at '${got}' != '${want}' (attempt $attempt); waiting and re-purging exports"
+            sleep 45
+            for f in $files; do
+              case "$f" in exports/*) curl -fsS --retry 2 -m 60 -o /dev/null "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f" || true ;; esac
+            done
+          done
+          echo "::warning::jsDelivr @main still serves stale exports/meta.json after re-purging; it should refresh when the CDN cache expires"
