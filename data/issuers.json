@@ -660,6 +660,16 @@
       "domains": [
         "mbna.ca"
       ]
+    },
+    {
+      "id": "tangerine",
+      "name": "Tangerine",
+      "aliases": [
+        "tangerine-bank"
+      ],
+      "domains": [
+        "tangerine.ca"
+      ]
     }
   ]
 }

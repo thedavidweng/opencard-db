@@ -1,0 +1,80 @@
+{
+  "id": "ca-tangerine-money-back-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Tangerine Money-Back Credit Card",
+  "localized_names": {
+    "en": "Tangerine Money-Back Credit Card"
+  },
+  "country": "ca",
+  "issuer": "Tangerine",
+  "issuer_id": "tangerine",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.95,
+      "max": 20.95,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.95,
+      "max": 22.95,
+      "type": "variable"
+    },
+    "notes": "20.95% purchase interest rate and 22.95% cash advance interest rate."
+  },
+  "fx_fee": {
+    "percent": 2.5,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Gross annual income of $12,000 or more, at least the age of majority, a Canadian resident with no bankruptcy in the past 7 years."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% back on everything else."
+    },
+    "categories": [
+      {
+        "label": "Two categories of your choice (third with savings account deposit), chosen from grocery, restaurants, gas, entertainment, furniture, hotel-motel, drug store, recurring bill payments, home improvement, public transportation and parking, fitness and sports clubs, e-games and foreign currency spend",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back can be applied to your Credit Card against the balance owing, or deposited to your Tangerine Savings Account, which gives a third 2% category.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 2,
+    "description": "Extra 10% cash back for 2 months, up to $100, on top of regular cash back.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.tangerine.ca/en/products/spending/creditcard/money-back",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.tangerine.ca/en/products/spending/creditcard/money-back"
+  ],
+  "notes": "Categories can be changed every 90 days. The issuer page does not name a network package tier, so network_tier is none."
+}
