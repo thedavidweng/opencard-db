@@ -462,6 +462,14 @@
       "domains": [
         "becu.org"
       ]
+    },
+    {
+      "id": "alliant",
+      "name": "Alliant Credit Union",
+      "aliases": [],
+      "domains": [
+        "alliantcreditunion.org"
+      ]
     }
   ]
 }
