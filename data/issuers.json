@@ -400,6 +400,17 @@
         "crossriver.com",
         "upgrade.com"
       ]
+    },
+    {
+      "id": "elan",
+      "name": "Elan Financial Services",
+      "aliases": [
+        "Elan"
+      ],
+      "domains": [
+        "elanfinancialservices.com",
+        "fidelity.com"
+      ]
     }
   ]
 }
