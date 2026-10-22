@@ -142,7 +142,7 @@
   },
   "official_url": "https://www.card.fnbo.com/amtrakguestrewards/apply",
   "image": {
-    "url": null,
+    "url": "https://s7d1.scene7.com/is/image/fnnistage/amtrak-white-cardart?ts=1726788261446&$TransparentPNG$&hei=200&dpr=off",
     "attribution": "© First National Bank of Omaha",
     "local_path": null
   },
@@ -152,6 +152,6 @@
     "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "https://www.card.fnbo.com/amtrakguestrewards"
   ],
-  "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted.",
+  "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted. Artwork verified 2026-10-20: The FNBO product comparison column explicitly labels this white card Amtrak Guest Rewards Mastercard, distinct from the blue Preferred column. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
   "segment": "personal"
 }

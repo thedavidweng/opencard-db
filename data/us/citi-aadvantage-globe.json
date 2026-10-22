@@ -197,7 +197,7 @@
   },
   "official_url": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
   "image": {
-    "url": null,
+    "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2025/08/globe-card.png",
     "attribution": "© Citi",
     "local_path": null
   },
@@ -206,5 +206,5 @@
   "sources": [
     "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/"
   ],
-  "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text. Base rate of 1X on all other purchases is standard for Citi AAdvantage cards but not explicitly listed on this page for the Globe card — noted as inferred from card family pattern."
+  "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text. Base rate of 1X on all other purchases is standard for Citi AAdvantage cards but not explicitly listed on this page for the Globe card — noted as inferred from card family pattern. Artwork verified 2026-10-20: The official American Airlines co-brand Globe page directly associates this clean card image with alt text naming Citi / AAdvantage Globe Mastercard. Retained the existing Citi attribution. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update."
 }
