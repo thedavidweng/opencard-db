@@ -1,0 +1,77 @@
+{
+  "id": "us-shop-your-way-5321-visa",
+  "schema_version": "1.0.0",
+  "name": "Shop Your Way 5321 Visa Credit Card",
+  "localized_names": {
+    "en": "Shop Your Way 5321 Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "First Bank & Trust",
+  "issuer_id": "first-bank-trust",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 34.99,
+      "type": "variable"
+    },
+    "notes": "Variable purchase APR 19.99% to 34.99% based on creditworthiness, as of 10/1/2026."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Shop Your Way points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in points on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas, EV charging, tolls, car washes, transit and rideshare",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Groceries, dining and travel (flights, hotels, rental cars)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Shop Your Way partner network",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeem for gift cards or statement credit.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.shopyourway.com/credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.shopyourway.com/credit-card"
+  ],
+  "notes": "Issued by First Bank & Trust, Brookings, SD, and serviced by Imprint. No Visa network package is stated, so network_tier is none."
+}
