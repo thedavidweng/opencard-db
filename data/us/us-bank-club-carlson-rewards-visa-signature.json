@@ -11,9 +11,9 @@
   "segment": "personal",
   "status": "discontinued",
   "annual_fee": {
-    "amount": 0.0,
+    "amount": 50.0,
     "currency": "USD",
-    "first_year": 0.0,
+    "first_year": 50.0,
     "waiver_conditions": null
   },
   "rewards": {
@@ -34,10 +34,11 @@
   "last_verified": "2026-07-26",
   "sources": [
     "https://www.usbank.com/credit-cards/",
-    "https://web.archive.org/web/20160508145027/https://www.usbank.com/credit-cards/club-carlson-rewards-visa-signature-credit-card.html"
+    "https://web.archive.org/web/20160508145027/https://www.usbank.com/credit-cards/club-carlson-rewards-visa-signature-credit-card.html",
+    "https://web.archive.org/web/20160508202332/https://applications.usbank.com/oad/catalog/terms.controller?locationCode=21603&productId=05&sourceCode=33351"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson(SM) Rewards Visa Signature® Card\". The official Club Carlson Premier Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update."
+  "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and the remaining financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson(SM) Rewards Visa Signature® Card\". The official Club Carlson Premier Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update. Annual fee correction (checked 2026-10-21): the record previously stored a $0 fee, which conflicted with the official product page's renewal bonus. The retained 2016-05-08 archive of U.S. Bank's official Club Carlson(SM) Rewards Visa Signature® Card Terms and Conditions, linked as Pricing & Terms from that product page, lists \"Annual Membership Fee\" $50 and no introductory annual fee, so annual_fee is $50 with first_year $50 as of those 2016 terms; fee history in other years was not checked."
 }

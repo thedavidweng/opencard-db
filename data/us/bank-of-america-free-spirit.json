@@ -12,7 +12,7 @@
   "network_tier": "world",
   "type": "credit",
   "segment": "personal",
-  "status": "active",
+  "status": "discontinued",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -114,7 +114,11 @@
   "bin_hints": [],
   "last_verified": "2026-07-24",
   "sources": [
-    "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/"
+    "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/",
+    "https://web.archive.org/web/20250905020846/https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/"
   ],
-  "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference."
+  "secondary_sources": [
+    "https://www.usatoday.com/story/money/2026/05/04/spirit-airlines-free-spirit-credit-card/89931545007/"
+  ],
+  "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference. Status correction (checked 2026-10-21): the official Bank of America product URL now answers HTTP 302 to the generic credit-cards catalog (Wayback first records the 302 on 2026-06-27; the last 200 capture is 2025-09-05), and the live catalog no longer lists a Spirit card. Contemporary reporting quoting a Bank of America spokesperson (USA Today, 2026-05-04, secondary source) states the issuer is not accepting new Spirit card applications after Spirit suspended operations. Status is discontinued; the exact application-withdrawal date is not established by an issuer notice and discontinued_date is left unset."
 }
