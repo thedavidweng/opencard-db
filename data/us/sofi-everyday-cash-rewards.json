@@ -1,0 +1,77 @@
+{
+  "id": "us-sofi-everyday-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "SoFi Everyday Cash Rewards Credit Card",
+  "localized_names": {
+    "en": "SoFi Everyday Cash Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "SoFi",
+  "issuer_id": "sofi",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": "excellent",
+    "notes": "SoFi recommends this card for customers with excellent credit."
+  },
+  "rewards": {
+    "currency": "sofi_rewards_points",
+    "currency_label": "SoFi rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back rewards on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Dining",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "SoFi Travel purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Groceries",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards points can be redeemed toward active SoFi accounts, such as SoFi Checking and Savings or SoFi Invest accounts.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.sofi.com/credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.sofi.com/credit-card/"
+  ],
+  "notes": "Issued by SoFi Bank, N.A. under license from Mastercard. APRs and the foreign transaction fee are on the individual product page, which blocks automated access, so they are null. No Mastercard network package is stated, so network_tier is none."
+}

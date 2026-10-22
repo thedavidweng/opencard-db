@@ -379,6 +379,16 @@
       "domains": [
         "53.com"
       ]
+    },
+    {
+      "id": "sofi",
+      "name": "SoFi",
+      "aliases": [
+        "SoFi Bank"
+      ],
+      "domains": [
+        "sofi.com"
+      ]
     }
   ]
 }
