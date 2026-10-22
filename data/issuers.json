@@ -650,6 +650,16 @@
       "domains": [
         "brimfinancial.com"
       ]
+    },
+    {
+      "id": "mbna",
+      "name": "MBNA",
+      "aliases": [
+        "mbna-canada"
+      ],
+      "domains": [
+        "mbna.ca"
+      ]
     }
   ]
 }

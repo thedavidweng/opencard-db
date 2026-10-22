@@ -1,0 +1,84 @@
+{
+  "id": "ca-mbna-rewards-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "MBNA Rewards World Elite Mastercard",
+  "localized_names": {
+    "en": "MBNA Rewards World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "MBNA",
+  "issuer_id": "mbna",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 120,
+    "currency": "CAD",
+    "first_year": 120,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "Rates shown on the MBNA page for the Ontario region; MBNA states that rates and fees may vary across regions."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Personal annual income greater than $80,000 or household annual income of $150,000 or more."
+  },
+  "rewards": {
+    "currency": "mbna_rewards_points",
+    "currency_label": "MBNA Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point for every $1 on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Restaurant, grocery, digital media, membership and household utility purchases",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 50000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "The redemption value for travel is 100 points per $1, while cash and charity donations are 120 points per $1.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 30000,
+    "unit": "points",
+    "spend_required": 2000,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "20,000 bonus points after $2,000 or more in eligible purchases within the first 90 days, and 10,000 bonus points once enrolled for paperless e-statements within the first 90 days.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.mbna.ca/en/credit-cards/rewards/mbna-rewards-world-elite-mastercard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.mbna.ca/en/credit-cards/rewards/mbna-rewards-world-elite-mastercard"
+  ],
+  "notes": "Additional cardholder fee is $50. Birthday Bonus Points each year equal to 10% of points earned in the prior 12 months, up to 15,000 points. Network tier is World Elite Mastercard per the card name."
+}
