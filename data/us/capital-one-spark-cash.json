@@ -134,14 +134,14 @@
   },
   "official_url": "https://www.capitalone.com/small-business/credit-cards/spark-cash/",
   "image": {
-    "url": "https://ecm.capitalone.com/WCM/card/products/compressed-1.5x-spark-cash-card-art.png",
+    "url": "https://ecm.capitalone.com/WCM/card/products/spark-cash-plus.png",
     "attribution": "© Capital One",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-19",
   "sources": [
     "https://www.capitalone.com/small-business/credit-cards/spark-cash/"
   ],
-  "notes": "Verified against the official Capital One product page on 2026-07-26. Also marketed as 'Spark 2% Cash'. Earns unlimited 2% cash back on every purchase plus 5% cash back on hotels and rental cars booked through Capital One Business Travel. Introductory $0 annual fee for the first year, then $95. Business (small-business) card; segment set to 'business'."
+  "notes": "Verified against the official Capital One product page on 2026-07-26. Also marketed as 'Spark 2% Cash'. Earns unlimited 2% cash back on every purchase plus 5% cash back on hotels and rental cars booked through Capital One Business Travel. Introductory $0 annual fee for the first year, then $95. Business (small-business) card; segment set to 'business'. Artwork re-verified on 2026-10-19 from this product page's CreditCard JSON-LD. The prior image is explicitly labeled Spark 1.5% Cash Select in the comparison panel and belongs to that different product. No historical terms or lifecycle re-verification is implied."
 }
