@@ -612,6 +612,16 @@
       ]
     },
     {
+      "id": "pc-financial",
+      "name": "PC Financial",
+      "aliases": [
+        "presidents-choice-bank"
+      ],
+      "domains": [
+        "pcfinancial.ca"
+      ]
+    },
+    {
       "id": "vancity",
       "name": "Vancity",
       "aliases": [
