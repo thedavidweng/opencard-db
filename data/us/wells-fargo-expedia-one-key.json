@@ -138,7 +138,7 @@
   },
   "official_url": "https://creditcards.wellsfargo.com/one-key-credit-card/",
   "image": {
-    "url": null,
+    "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v10-7-26/images/Products/OneKey/onekeycash_card.png",
     "attribution": "© Wells Fargo",
     "local_path": null
   },
@@ -148,6 +148,6 @@
     "https://creditcards.wellsfargo.com/one-key-credit-card/",
     "https://www.wellsfargo.com/credit-cards/terms/onekey/?FPID=21231JIXE50000&product_code=CC&subproduct_code=OW&cx_nm=CXNAME_CSMPD&sub_channel=WEB&vendor_code=WF"
   ],
-  "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages.",
+  "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages. Artwork verified 2026-10-20 from this exact product page: its Art, Art_M and ArtSticky image elements explicitly identify the Wells Fargo One Key Mastercard, distinct from the separate One Key+ comparison image. The clean blue vertical card image was fetched successfully and visually inspected; attribution follows the page copyright, Wells Fargo. Financial terms and offer dates were not reverified in this artwork-only update.",
   "segment": "personal"
 }
