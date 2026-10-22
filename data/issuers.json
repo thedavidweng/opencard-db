@@ -452,6 +452,14 @@
         "cfna.com",
         "firestonecompleteautocare.com"
       ]
+    },
+    {
+      "id": "alliant",
+      "name": "Alliant Credit Union",
+      "aliases": [],
+      "domains": [
+        "alliantcreditunion.org"
+      ]
     }
   ]
 }
