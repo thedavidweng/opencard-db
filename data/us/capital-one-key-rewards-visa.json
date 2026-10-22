@@ -1,0 +1,61 @@
+{
+  "id": "us-capital-one-key-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "Key Rewards Visa",
+  "localized_names": {
+    "en": "Key Rewards Visa"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "key_rewards",
+    "currency_label": "Key Rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Up to 5% back in rewards; the official listing does not break the rate down by merchant."
+    },
+    "categories": [],
+    "redemption_notes": "Intro 10% back on in-store purchases per the official listing.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.capitalone.com/credit-cards/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/"
+  ],
+  "notes": "Williams-Sonoma family Key Rewards Visa issued by Capital One, listed on Capital One's credit card catalog with a $0 annual fee, up to 5% back in rewards and intro 10% back on in-store purchases. The catalog also lists brand versions (Pottery Barn, Williams Sonoma, West Elm); this record covers the unbranded Key Rewards Visa. No product page with the full earn structure or APR was found, so those fields are null. network_tier is recorded as none because the listing does not name the Visa package."
+}

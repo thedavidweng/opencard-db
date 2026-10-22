@@ -1,0 +1,80 @@
+{
+  "id": "us-capital-one-rei-co-op-mastercard",
+  "schema_version": "1.0.0",
+  "name": "REI Co-op Mastercard",
+  "localized_names": {
+    "en": "REI Co-op Mastercard"
+  },
+  "country": "us",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "Purchase and transfer APR 17.49% to 28.49% variable; cash advance APR 28.49% variable."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Capital One states that it doesn't charge foreign transaction fees on any of its U.S.-issued credit cards."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "REI Co-op Mastercard Rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5% in card rewards on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "REI Co-op purchases at REI stores and REI.com, and donations to the REI Cooperative Action Fund",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards can be redeemed as soon as they post and don't expire for the life of the account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "usd",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 2,
+    "description": "$100 REI gift card after the first purchase outside of REI within 60 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.capitalone.com/credit-cards/rei/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.capitalone.com/credit-cards/rei/"
+  ],
+  "notes": "Available to REI Co-op members. The product page lists no annual fee and no foreign transaction fees. network_tier is recorded as none because the page does not name the Mastercard package."
+}
