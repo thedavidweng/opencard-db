@@ -251,6 +251,7 @@
     "us-citi-strata-elite",
     "us-citi-strata-premier",
     "us-column-bilt-blue",
+    "us-column-bilt-obsidian",
     "us-first-latam-airlines",
     "us-hsbc-elite",
     "us-hsbc-premier-world-elite",
@@ -264,6 +265,9 @@
     "us-wells-fargo-expedia-one-key",
     "us-wells-fargo-propel-world",
     "us-wells-fargo-signify-business-cash"
+  ],
+  "world_legend": [
+    "us-column-bilt-palladium"
   ],
   "standard": [
     "us-first-latam-airlines-standard"
