@@ -1,0 +1,67 @@
+{
+  "id": "us-sofi-smart-card",
+  "schema_version": "1.0.0",
+  "name": "SoFi Smart Card",
+  "localized_names": {
+    "en": "SoFi Smart Card"
+  },
+  "country": "us",
+  "issuer": "SoFi Bank, N.A.",
+  "issuer_id": "sofi",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "SoFi states the Smart Card has no interest charges; the balance must be paid in full each month. Late payment fee up to $41."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": "limited",
+    "notes": "Secured credit card backed by SoFi Checking and Savings balances, which set the spending limit (maximum credit limit $500,000). No minimum security deposit. Requires a SoFi Checking and Savings account. Soft credit pull to apply; approval results in a hard pull."
+  },
+  "rewards": {
+    "currency": "sofi_member_rewards",
+    "currency_label": "SoFi Member Rewards points (cash back)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No earn rate on other purchases is stated."
+    },
+    "categories": [
+      {
+        "label": "Eligible grocery stores",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.sofi.com/smart-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.sofi.com/smart-card/"
+  ],
+  "notes": "Issued by SoFi Bank, N.A. Cash back is issued as SoFi Member Rewards points (5 points per $1 at eligible grocery stores; superstores, warehouse clubs, convenience stores and grocery and meal-kit delivery services are excluded). The foreign transaction fee is not shown on the public page, so it is null. The Mastercard network package is not named, so network_tier is none."
+}

@@ -721,6 +721,18 @@
       "domains": [
         "wealthsimple.com"
       ]
+    },
+    {
+      "id": "regions",
+      "name": "Regions Bank",
+      "aliases": [
+        "Regions"
+      ],
+      "domains": [
+        "regions.com",
+        "files.consumerfinance.gov",
+        "consumerfinance.gov"
+      ]
     }
   ]
 }
