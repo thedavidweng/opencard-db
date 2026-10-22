@@ -109,14 +109,14 @@
   },
   "official_url": "https://www.discover.com/credit-cards/student-credit-card/chrome-card/",
   "image": {
-    "url": null,
-    "attribution": "© Discover",
+    "url": "https://ecm.capitalone.com/WCM/dfs-card/images/student-chrome-card-marquee/rdesktop.png",
+    "attribution": "© Capital One",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-19",
   "sources": [
     "https://www.discover.com/credit-cards/student-credit-card/chrome-card/"
   ],
-  "notes": "Verified against official Discover product page 2026-07-24. APR (16.49%-25.49% variable, 0% intro 6 months) and no-annual-fee confirmed. FX fee not stated on page (terms_url empty). No signup bonus; Cashback Match is first-year promo. 2% cash back at gas stations and restaurants applies to up to $1,000 in combined purchases each quarter (the $1,000 cap is shared across both categories, not per-category), then 1%. Image URL cleared: prior asset was wrong-product card art on a Capital One CDN."
+  "notes": "Verified against official Discover product page 2026-07-24. APR (16.49%-25.49% variable, 0% intro 6 months) and no-annual-fee confirmed. FX fee not stated on page (terms_url empty). No signup bonus; Cashback Match is first-year promo. 2% cash back at gas stations and restaurants applies to up to $1,000 in combined purchases each quarter (the $1,000 cap is shared across both categories, not per-category), then 1%. Official artwork rechecked 2026-10-19: the Student Chrome product page displays this silver card in its hero image with alt text Discover it Student Chrome Credit Card. The page footer attributes copyright to Capital One. Historical financial terms above were not reverified in this artwork-only update."
 }

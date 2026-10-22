@@ -128,16 +128,16 @@
   },
   "official_url": "https://www.discover.com/credit-cards/secured/",
   "image": {
-    "url": null,
-    "attribution": "© Discover",
+    "url": "https://ecm.capitalone.com/WCM/dfs-card/products/cardart-cashit-with-shadow/rdesktop.png",
+    "attribution": "© Capital One",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-19",
   "sources": [
     "https://www.discover.com/credit-cards/secured/",
     "https://www.discover.com/credit-cards/secured-credit-card/?iq_id=dp-dbr-inet-acceptance-pdisplay"
   ],
-  "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Image URL cleared: prior asset was a Capital One CDN card-art file for the Discover it Cash Back (unsecured) product, not the Secured card.",
+  "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Official artwork rechecked 2026-10-19: the Secured product page itself displays this blue Discover it card as its hero image. This is a shared card design, not a claim that the asset is exclusive to Secured; the association is established by the Secured page, not its filename or CDN host. The page footer attributes copyright to Capital One. Historical financial terms above were not reverified in this artwork-only update.",
   "segment": "personal"
 }
