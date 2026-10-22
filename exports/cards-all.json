@@ -57453,6 +57453,118 @@
     "art_grade": "none"
   },
   {
+    "id": "us-usaa-rewards-visa-signature",
+    "schema_version": "1.0.0",
+    "name": "USAA Rewards Visa Signature",
+    "localized_names": {
+      "en": "USAA Rewards Visa Signature"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "discontinued",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 15.15,
+        "max": 29.15,
+        "type": "variable"
+      },
+      "notes": "Rates as of the archived October 2025 USAA rates and fees page. The APR applies to purchases, balance transfers and cash advances. No penalty APR. Balance transfer and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Federal Savings Bank deposit account)."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "USAA membership is required to apply."
+    },
+    "rewards": {
+      "currency": "usaa_rewards_points",
+      "currency_label": "USAA Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X points on other purchases."
+      },
+      "categories": [
+        {
+          "label": "Dining",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Gas stations",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Choose from a range of exciting redemption options. Redeem some or all of your points. Enjoy reward points that never expire.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "auto-rental-coverage",
+        "title": "Auto rental coverage",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Auto rental coverage listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "travel-accident-insurance",
+        "title": "Travel accident insurance",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Travel accident insurance listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "trip-cancellation-interruption",
+        "title": "Trip cancellation and interruption coverage",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Trip cancellation and interruption coverage listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "baggage-delay",
+        "title": "Baggage delay and reimbursement",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Baggage delay and reimbursement listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty protection on U.S. manufacturers' warranties listed on the USAA card page. Certain terms, conditions and exclusions apply; see the Credit Card Benefits Guide."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://web.archive.org/web/20250223211205/https://www.usaa.com/banking/credit-cards-public/rewards/visa-signature/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://web.archive.org/web/20250223211205/https://www.usaa.com/banking/credit-cards-public/rewards/visa-signature/",
+      "https://web.archive.org/web/20251009050717/https://www.usaa.com/banking/credit-cards-public/rewards/visa-signature/rates-and-fees/",
+      "https://www.usaa.com/sitemap/",
+      "https://www.usaa.com/banking/credit-cards-public/"
+    ],
+    "notes": "No longer offered to new applicants. The live usaa.com product page now redirects to the general credit card page, and the current USAA credit card lineup and XML sitemap no longer list this card, though the usaa.com HTML site map still names it. Terms come from archived official USAA pages (product page February 2025, rates and fees October 2025); no discontinuation date is published. The February 2025 page listed 2,500 bonus points after the first purchase. If approved for a credit limit under $3,000, USAA issued a USAA Visa Platinum Credit Card with the same terms and fees.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-usaa-secured-amex",
     "schema_version": "1.0.0",
     "name": "USAA Secured American Express",
