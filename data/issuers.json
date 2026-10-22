@@ -411,6 +411,17 @@
       "domains": [
         "creditonebank.com"
       ]
+    },
+    {
+      "id": "elan",
+      "name": "Elan Financial Services",
+      "aliases": [
+        "Elan"
+      ],
+      "domains": [
+        "elanfinancialservices.com",
+        "fidelity.com"
+      ]
     }
   ]
 }
