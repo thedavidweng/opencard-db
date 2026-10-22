@@ -1,0 +1,81 @@
+{
+  "id": "us-harvard-alumni-world-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Harvard Alumni World Mastercard",
+  "localized_names": {
+    "en": "Harvard Alumni World Mastercard"
+  },
+  "country": "us",
+  "issuer": "Harvard Federal Credit Union",
+  "issuer_id": "harvard-fcu",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 13.24,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 12 months on purchases and balance transfers (2% balance transfer fee), then standard APR as low as 13.24% to 18.00%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Exclusively for Harvard alumni; includes membership in Harvard FCU."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Harvard Alumni Card points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per dollar on all other purchases ($1 back per $100 spent)."
+    },
+    "categories": [
+      {
+        "label": "Gas, groceries and dining",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gifts to Harvard University",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeem for cash back as a statement credit or Harvard FCU deposit; 25% more value when redeemed for travel. Points do not expire while the account is open.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 10000,
+    "unit": "points",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "10,000 bonus points after $500 in purchases in the first 90 days of card membership.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://harvardcard.com/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://harvardcard.com/",
+    "https://harvardfcu.org/harvardalumnicard/terms-and-conditions/"
+  ],
+  "notes": "Issued by Harvard Federal Credit Union."
+}

@@ -1,0 +1,61 @@
+{
+  "id": "us-alliant-visa-platinum",
+  "schema_version": "1.0.0",
+  "name": "Alliant Visa Platinum Credit Card",
+  "localized_names": {
+    "en": "Alliant Visa Platinum Credit Card"
+  },
+  "country": "us",
+  "issuer": "Alliant Credit Union",
+  "issuer_id": "alliant",
+  "network": "visa",
+  "network_tier": "platinum",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 13.99,
+      "max": 25.99,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 12 months on purchases and balance transfers, then 13.99% to 25.99% variable APR. Balance transfer fee 2% ($5 minimum)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Alliant membership required."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised on the product page."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.alliantcreditunion.org/credit-cards/visa-platinum-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.alliantcreditunion.org/credit-cards/visa-platinum-card"
+  ],
+  "notes": "Foreign transaction fee is not stated on the product page, so it is null."
+}

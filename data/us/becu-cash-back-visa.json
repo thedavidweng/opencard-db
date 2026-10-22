@@ -1,0 +1,75 @@
+{
+  "id": "us-becu-cash-back-visa",
+  "schema_version": "1.0.0",
+  "name": "BECU Cash Back Visa Credit Card",
+  "localized_names": {
+    "en": "BECU Cash Back Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "BECU",
+  "issuer_id": "becu",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.49,
+      "max": 25.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 16.49,
+      "max": 25.49,
+      "type": "variable"
+    },
+    "notes": "Variable APR 16.49% to 25.49% for purchases, balance transfers and cash advances, per the rate schedule effective October 1, 2026."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "BECU membership required."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back is applied as a statement credit to the card balance.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "USD",
+    "spend_required": 2000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 cash back after $2,000 in purchases within the first 3 months of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.becu.org/everyday-banking/credit-card/cash-back-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.becu.org/everyday-banking/credit-card/cash-back-credit-card",
+    "https://www.becu.org/-/media/Files/PDF/461.pdf"
+  ],
+  "notes": "No balance transfer fee. No Visa network package is stated, so network_tier is none."
+}
