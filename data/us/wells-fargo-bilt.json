@@ -11,7 +11,10 @@
   "network": "mastercard",
   "network_tier": "world_elite",
   "type": "credit",
-  "status": "active",
+  "segment": "personal",
+  "status": "discontinued",
+  "discontinued_date": "2026-02-07",
+  "replaced_by": "us-column-bilt-blue",
   "annual_fee": {
     "amount": 0.0,
     "currency": "USD",
@@ -37,6 +40,7 @@
   "rewards": {
     "currency": "bilt_points",
     "currency_label": "Bilt Points",
+    "rate_type": "points_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.0,
@@ -63,8 +67,7 @@
         }
       }
     ],
-    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment.",
-    "rate_type": "points_multiplier"
+    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment."
   },
   "signup_bonus": null,
   "benefits": [
@@ -87,7 +90,7 @@
       "title": "Lyft bonus points",
       "category": "other",
       "source": "issuer",
-      "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides. Blue cardholders earn 3X total on Lyft."
+      "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides, on top of the card 1.0 base rate. On the Bilt Card 2.0 Blue card the total is 3X."
     },
     {
       "id": "bilt-travel-portal-bonus",
@@ -114,16 +117,18 @@
   },
   "official_url": "https://www.biltrewards.com/card",
   "image": {
-    "url": "https://img.bilt.com/43819/1769037123-card-2-banner.png",
-    "attribution": "© Wells Fargo",
+    "url": null,
+    "attribution": null,
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-24",
+  "last_verified": "2026-10-21",
   "sources": [
     "https://www.biltrewards.com/card",
-    "https://www.bilt.com/card"
+    "https://www.bilt.com/card",
+    "https://web.archive.org/web/20260115073349/https://www.bilt.com/card",
+    "https://support.biltrewards.com/hc/en-us/articles/40834037331085-Bilt-Card-2-0-Transition",
+    "https://support.biltrewards.com/hc/en-us/articles/42897766682381-Bilt-Card-2-0-Program-Overview"
   ],
-  "notes": "Verified against official Bilt Rewards page 2026-07-24. Page now describes Bilt Card 2.0 with three tiers (Blue/Obsidian/Palladium); this record maps to the no-annual-fee Bilt Blue Card. APR and FX fee not stated on fetched pages. No signup bonus advertised.",
-  "segment": "personal"
+  "notes": "Legacy Bilt Card 1.0, issued by Wells Fargo. Discontinued: Bilt states that the Wells Fargo Bilt Mastercard (card 1.0) could be used through 2026-02-06 and was retired after that date, and that all card 1.0 cards were deactivated on 2026-02-07 when the Bilt Card 2.0 lineup went live — Bilt Blue (us-column-bilt-blue, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year), all issued by Column N.A. and serviced by Cardless. The earn structure recorded here is card 1.0's: 3X dining, 2X travel, 1X on other purchases and 1X on rent (capped at 100,000 points per calendar year). The live Bilt card pages now describe the 2.0 lineup, so the pre-launch product page is cited via its 2026-01-15 Internet Archive snapshot. APR and foreign transaction fee were not visible on the fetched card 1.0 pages (honest nulls); the 2.0 tiers charge no foreign transaction fee. The image published at the old image URL is a Bilt Card 2.0 marketing banner showing the three 2.0 cards rather than the card 1.0 Wells Fargo Bilt Mastercard, so image.url is nulled and the API serves the generic fallback art."
 }
