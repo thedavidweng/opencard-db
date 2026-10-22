@@ -2,33 +2,58 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>OpenCard DB social image source, 1200 by 630</title>
-<!-- Render at 1200x630 and screenshot to og.png, e.g. with Playwright:
-     page.setViewportSize({ width: 1200, height: 630 }); page.screenshot({ path: "og.png" }) -->
-<link rel="stylesheet" href="style.css">
+<meta name="robots" content="noindex">
+<title>OpenCard DB social image source</title>
+<!--
+  Source for og.png, the 1200 by 630 social preview image.
+  Render it from the repository root with headless Chromium, for example
+
+    npx playwright screenshot --viewport-size=1200,630 site/og.html site/og.png
+
+  The page uses the self-hosted Geist fonts in site/fonts and no network
+  resources, so the output is the same on any machine with Chromium.
+-->
 <style>
-  html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; background: #ffffff; color-scheme: light; }
-  .og { box-sizing: border-box; width: 1200px; height: 630px; padding: 84px 96px; display: flex; flex-direction: column; justify-content: space-between; border-top: 6px solid #2b5ce6; }
-  .og .brand { font-size: 26px; gap: 14px; color: #0f0f11; }
-  .og .mark { width: 36px; height: 36px; }
-  .og h1 { font-size: 84px; max-width: 13ch; letter-spacing: -0.045em; color: #0f0f11; }
-  .og .bar { display: flex; align-items: center; justify-content: space-between; color: #55555e; font-size: 24px; }
-  .og .q { display: flex; align-items: center; gap: 14px; width: 560px; height: 68px; padding: 0 22px; border: 1px solid #d4d4da; border-radius: 14px; font-size: 22px; color: #6b6b74; background: #fff; box-shadow: 0 1px 2px rgba(15,15,17,.04), 0 4px 16px rgba(15,15,17,.05); }
-  .og .q svg { width: 24px; height: 24px; }
-  .og .url { font-family: var(--mono); font-size: 20px; color: #6b6b74; }
+  @font-face { font-family: "Geist"; src: url("fonts/geist-latin.woff2") format("woff2"); font-weight: 100 900; }
+  @font-face { font-family: "Geist Mono"; src: url("fonts/geist-mono-latin.woff2") format("woff2"); font-weight: 100 900; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #ffffff; }
+  body { -webkit-font-smoothing: antialiased; font-family: "Geist", system-ui, sans-serif; color: #0f0f11; }
+  .og { position: relative; width: 1200px; height: 630px; box-sizing: border-box; padding: 72px 80px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 600; letter-spacing: -0.01em; }
+  .brand svg { width: 32px; height: 32px; }
+  h1 { position: absolute; left: 80px; top: 226px; margin: 0; width: 660px; font-size: 74px; line-height: 1.02; font-weight: 600; letter-spacing: -0.045em; }
+  .url { position: absolute; right: 80px; top: 79px; font: 400 18px/1 "Geist Mono", ui-monospace, monospace; color: #6b6b74; letter-spacing: -0.01em; }
+  .cards { position: absolute; right: -56px; top: 150px; width: 460px; height: 372px; filter: drop-shadow(0 1px 2px rgba(15,15,17,.04)) drop-shadow(0 12px 32px rgba(15,15,17,.06)); }
 </style>
 </head>
 <body>
 <div class="og">
-  <span class="brand">
-    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 9.5h19" stroke="currentColor" stroke-width="1.6"/><rect x="5.5" y="13" width="5" height="2.4" rx="1" fill="#2b5ce6"/></svg>
+  <div class="brand">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3" fill="none" stroke="#0f0f11" stroke-width="1.6"/><path d="M2.5 9.5h19" stroke="#0f0f11" stroke-width="1.6"/><rect x="5.5" y="13" width="5" height="2.4" rx="1" fill="#2b5ce6"/></svg>
     OpenCard DB
-  </span>
-  <h1>The open database of credit cards.</h1>
-  <div class="bar">
-    <span class="q"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.75" cy="8.75" r="5.75" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Search credit cards by name or issuer</span>
-    <span class="url">thedavidweng.github.io/opencard-db</span>
   </div>
+
+  <h1>The open database<br>of credit cards.</h1>
+
+  <!-- Three card outlines in ISO 7810 proportions (85.60 by 53.98 mm). -->
+  <svg class="cards" viewBox="0 0 520 420" aria-hidden="true">
+    <g transform="translate(150 6)">
+      <rect width="380" height="240" rx="18" fill="#f4f4f6" stroke="#e8e8ec" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(75 92)">
+      <rect width="380" height="240" rx="18" fill="#fafafa" stroke="#dcdce2" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(0 178)">
+      <rect width="380" height="240" rx="18" fill="#ffffff" stroke="#c9c9d1" stroke-width="1.5"/>
+      <rect x="32" y="40" width="50" height="38" rx="7" fill="none" stroke="#b5b5be" stroke-width="1.5"/>
+      <path d="M32 59h14M68 59h14M57 40v38" stroke="#c9c9d1" stroke-width="1.2"/>
+      <rect x="32" y="150" width="160" height="10" rx="5" fill="#e8e8ec"/>
+      <rect x="32" y="176" width="96" height="10" rx="5" fill="#e8e8ec"/>
+      <rect x="296" y="182" width="52" height="24" rx="5" fill="#2b5ce6"/>
+    </g>
+  </svg>
+
+  <div class="url">thedavidweng.github.io/opencard-db</div>
 </div>
 </body>
 </html>
