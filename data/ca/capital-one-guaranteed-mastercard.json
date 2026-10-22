@@ -1,0 +1,66 @@
+{
+  "id": "ca-capital-one-guaranteed-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Capital One Guaranteed Mastercard",
+  "localized_names": {
+    "en": "Capital One Guaranteed Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Capital One",
+  "issuer_id": "capital-one",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.9,
+      "max": 29.9,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 21.9,
+      "max": 29.9,
+      "type": "variable"
+    },
+    "notes": "Standard rate of 21.9% or 29.9% for purchases, balance transfers and cash advances, depending on the version offered."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Built for building credit; security funds may be required."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised for this card."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.capitalone.ca/credit-cards/guaranteed-mastercard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.capitalone.ca/credit-cards/guaranteed-mastercard/"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
