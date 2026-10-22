@@ -21,24 +21,24 @@
   },
   "apr": {
     "purchase": {
-      "min": 20.5,
-      "max": 24.5,
+      "min": 20.75,
+      "max": 24.75,
       "type": "variable"
     },
     "cash_advance": {
-      "min": 26.5,
-      "max": 26.5,
+      "min": 26.75,
+      "max": 26.75,
       "type": "variable"
     },
-    "notes": "APR for Purchases and Balance Transfers is 20.50% or 24.50% when you open your account, based on creditworthiness; thereafter varies with the Prime Rate (margin of 13.75% or 17.75%). Cash Advance APR is 26.50% (margin of 19.75%). Minimum interest charge $0.70. As of July 24, 2026."
+    "notes": "APR for Purchases and Balance Transfers is 20.75% or 24.75% when you open your account, based on creditworthiness; thereafter varies with the Prime Rate (margin of 13.75% or 17.75%). Cash Advance APR is 26.75% (margin of 19.75%). Minimum interest charge $0.70. As of September 30, 2026 (agreement ID 65903E, Rev 09/2026)."
   },
   "fx_fee": {
     "percent": 0.0,
     "notes": "No foreign transaction fees (Foreign Transaction: None)."
   },
   "credit_required": {
-    "score_band": "excellent",
-    "notes": "Relationship-based product for high-net-worth clients; not publicly marketed with a credit-score band."
+    "score_band": "unknown",
+    "notes": "The official agreement bases APR on creditworthiness but does not publish a qualifying credit-score band."
   },
   "rewards": {
     "currency": "city_national_rewards",
@@ -91,10 +91,10 @@
   "official_url": "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
   "image": null,
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-20",
   "sources": [
     "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
     "https://www.cnb.com/personal-banking/lending/credit-cards"
   ],
-  "notes": "Requires in-branch application or calling (800) 773-7100. Relationship-based product for high-net-worth clients. Pricing verified from the Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 07/2026, as of July 24, 2026): $400 annual fee, $95 additional card fee, purchase APR 20.50%\u201324.50% variable, cash advance APR 26.50% variable, no foreign transaction fee. Earn rates are not in the agreement \u2014 they live in the separately provided City National Rewards Program Terms (www.cnb.com/rewards), so rewards.base_rate.points_per_dollar is null. No public landing page; the live cnb.com credit-cards page returned HTTP 403 to automated fetch, so the card agreement PDF is the primary source."
+  "notes": "Pricing verified from the official Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 09/2026, as of September 30, 2026): $400 annual fee, $95 additional card fee, purchase and balance-transfer APR 20.75% or 24.75% variable, cash-advance APR 26.75% variable, no foreign transaction fee and $0.70 minimum interest charge. The agreement explicitly restricts use to personal, family or household purposes. The inherited invite_only status is not independently verified by this agreement; current application availability, invitation/relationship requirements and eligibility remain unknown. Removed unsupported high-net-worth and mandatory in-branch/telephone application assertions. Rewards earn rates are not in this agreement and remain null pending separate official Rewards Program Terms. No historical-to-current product conversion or artwork is inferred."
 }
