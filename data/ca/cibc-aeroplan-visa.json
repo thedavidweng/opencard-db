@@ -1,0 +1,72 @@
+{
+  "id": "ca-cibc-aeroplan-visa",
+  "schema_version": "1.0.0",
+  "name": "CIBC Aeroplan Visa Card",
+  "localized_names": {
+    "en": "CIBC Aeroplan Visa Card"
+  },
+  "country": "ca",
+  "issuer": "CIBC",
+  "issuer_id": "cibc",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash (cash advances, balance transfers and CIBC Convenience Cheques) for non-Quebec residents, 21.99% for Quebec residents."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "aeroplan",
+    "currency_label": "Aeroplan points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.67,
+      "description": "1 Aeroplan point per $1.50 on all other purchases (about 0.67 per $1)."
+    },
+    "categories": [
+      {
+        "label": "Gas, EV charging, groceries and Air Canada direct purchases",
+        "points_per_dollar": 1,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Aeroplan points redeem for Air Canada and partner flights and other Aeroplan rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/aeroplan-visa-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/aeroplan-visa-card.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none. Bonus earn rates apply on the first $40,000 in net annual card purchases on the account."
+}

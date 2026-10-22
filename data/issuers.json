@@ -600,6 +600,16 @@
       "domains": [
         "neofinancial.com"
       ]
+    },
+    {
+      "id": "cibc",
+      "name": "CIBC",
+      "aliases": [
+        "canadian-imperial-bank-of-commerce"
+      ],
+      "domains": [
+        "cibc.com"
+      ]
     }
   ]
 }

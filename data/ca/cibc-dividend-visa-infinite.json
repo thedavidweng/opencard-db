@@ -1,0 +1,90 @@
+{
+  "id": "ca-cibc-dividend-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "CIBC Dividend Visa Infinite Card",
+  "localized_names": {
+    "en": "CIBC Dividend Visa Infinite Card"
+  },
+  "country": "ca",
+  "issuer": "CIBC",
+  "issuer_id": "cibc",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 120,
+    "currency": "CAD",
+    "first_year": 120,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash (cash advances, balance transfers and CIBC Convenience Cheques) for non-Quebec residents, 21.99% for Quebec residents."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Grocery, gas and EV charging",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Transit and rideshare, dining and recurring payments",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "CIBC by Expedia travel",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back of $10 or more can be redeemed at any time as a credit to the account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "CAD",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 4,
+    "description": "10% cash back on up to $2,000 in net purchases in the first 4 statements (up to $200), plus a first-year annual fee rebate.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/dividend-visa-infinite-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/dividend-visa-infinite-card.html"
+  ],
+  "notes": "Network tier is Visa Infinite per the card name. Accelerated rates stop after $50,000 in total net annual purchases or $20,000 in the accelerated categories, whichever comes first; limits reset after the December statement."
+}

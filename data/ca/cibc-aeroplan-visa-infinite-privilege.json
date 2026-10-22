@@ -1,0 +1,82 @@
+{
+  "id": "ca-cibc-aeroplan-visa-infinite-privilege",
+  "schema_version": "1.0.0",
+  "name": "CIBC Aeroplan Visa Infinite Privilege Card",
+  "localized_names": {
+    "en": "CIBC Aeroplan Visa Infinite Privilege Card"
+  },
+  "country": "ca",
+  "issuer": "CIBC",
+  "issuer_id": "cibc",
+  "network": "visa",
+  "network_tier": "infinite_privilege",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 599,
+    "currency": "CAD",
+    "first_year": 599,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash (cash advances, balance transfers and CIBC Convenience Cheques) for non-Quebec residents, 21.99% for Quebec residents."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "aeroplan",
+    "currency_label": "Aeroplan points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.25,
+      "description": "1.25 Aeroplan points per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Air Canada direct purchases including Air Canada Vacations",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Participating Hyatt hotels and resorts",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas, EV charging, groceries, travel and dining",
+        "points_per_dollar": 1.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Aeroplan points redeem for Air Canada and partner flights and other Aeroplan rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/aeroplan-visa-infinite-privilege-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.cibc.com/en/personal-banking/credit-cards/all-credit-cards/aeroplan-visa-infinite-privilege-card.html"
+  ],
+  "notes": "Network tier is Visa Infinite Privilege per the card name. Bonus earn rates apply up to the annual net purchase limits in the program terms."
+}
