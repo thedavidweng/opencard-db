@@ -9,11 +9,12 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "business",
-  "status": "unknown",
+  "status": "discontinued",
+  "replaced_by": "us-amex-business-gold",
   "annual_fee": {
-    "amount": null,
+    "amount": 175.0,
     "currency": "USD",
-    "first_year": null,
+    "first_year": 0.0,
     "waiver_conditions": null
   },
   "rewards": {
@@ -39,10 +40,20 @@
       "converted_sha256": "c17793e4612c4b3066529679bf3ffbc5b3a7897ad037cbee3e46e7df081d5440"
     }
   },
-  "last_verified": "2026-07-28",
+  "last_verified": "2026-10-21",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
-    "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf"
+    "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf",
+    "https://web.archive.org/web/20181016045658/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex",
+    "https://web.archive.org/web/20181201133823/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex",
+    "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/business-gold/Business_Gold_Rewards_10-04-2018.pdf"
   ],
-  "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://rankt.com/cards/amex_business_gold_rewards/; https://static.rankt.com/v1/public/static/images/cards/amex_business_gold_rewards.png. Match: classic engraved-border gold 'AMERICAN EXPRESS BUSINESS' face (pre-2018 Business Gold Rewards design, not the later metal Business Gold Card), from rankt's listing for this exact card. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
+  "secondary_sources": [
+    "https://rankt.com/cards/amex_business_gold_rewards/",
+    "https://static.rankt.com/v1/public/static/images/cards/amex_business_gold_rewards.png",
+    "https://www.doctorofcredit.com/new-american-express-business-gold-rewards-card-now-live/",
+    "https://www.doctorofcredit.com/f-a-qs-about-new-american-express-business-gold-card/",
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+  ],
+  "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. Lifecycle (checked 2026-10-21): American Express's Business Gold product page, archived 2018-10-16, offers \"The Business Gold Rewards Card from American Express\" (3X in one chosen category, \"$0 intro annual fee for the first year, then $175\"); the same URL archived 2018-12-01 instead offers the \"New! American Express® Business Gold Card\" at $295, so Business Gold Rewards stopped being offered and was replaced by us-amex-business-gold between those captures. The issuer Cardmember Agreement as of 10/04/2018 (Business Gold Rewards Card, American Express National Bank) also states the $175 annual membership fee. Doctor of Credit (secondary source) reports the new card launched on November 8, 2018 and that existing Business Gold Rewards cardholders were not automatically moved to it; that date is not on an issuer page that could be retrieved, so discontinued_date is left unset. Rewards and other financial fields remain unverified. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page and image URL are listed in secondary_sources. Match: classic engraved-border gold 'AMERICAN EXPRESS BUSINESS' face (pre-2018 Business Gold Rewards design, not the later metal Business Gold Card), from rankt's listing for this exact card. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }
