@@ -154,7 +154,7 @@
   },
   "official_url": "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
   "image": {
-    "url": null,
+    "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-front/AA2_card_rRGB_AviatorRed_WE_359x246_4074_072418.png",
     "attribution": "© Barclays",
     "local_path": null
   },
@@ -162,8 +162,9 @@
   "last_verified": "2026-07-24",
   "sources": [
     "https://cards.barclaycardus.com/banking/credit-card/american-airlines/child/american-lp-ticketing/",
-    "https://cards.barclaycardus.com/credit-card/744a9f7a-4f12-4480-8481-e72155061cd8"
+    "https://cards.barclaycardus.com/credit-card/744a9f7a-4f12-4480-8481-e72155061cd8",
+    "https://cards.barclaycardus.com/"
   ],
-  "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026.",
+  "notes": "World Elite Mastercard. Annual fee $99. 60,000 AAdvantage miles bonus after first purchase (no minimum spend). No foreign transaction fees. Card may be closed to new applications as of late 2025 with Citi taking over AA portfolio in 2026. Artwork verified 2026-10-21: the official Barclays US homepage cardmember hero for https://cards.barclaycardus.com/?p=aviator (\"Welcome, Aviator\") pairs this card-front image with a Learn more link to the AAdvantage Aviator Red World Elite Mastercard product path. The file name also names Aviator Red WE. Retained the existing Barclays attribution. The official image returned HTTP 200 and was visually inspected as the matching red-and-black AAdvantage Aviator World Elite Mastercard; it is a 359x246 asset dated 2018 in its file name. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
   "segment": "personal"
 }
