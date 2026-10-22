@@ -1,0 +1,77 @@
+{
+  "id": "us-credit-one-bank-platinum-x5-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Credit One Bank Platinum X5 Visa Signature Card",
+  "localized_names": {
+    "en": "Credit One Bank Platinum X5 Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "Credit One Bank",
+  "issuer_id": "credit-one-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 31.74,
+      "max": 31.74,
+      "type": "variable"
+    },
+    "notes": "29.74% variable APR for purchases; 31.74% APR for cash advances."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign Transaction Fee: None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% cash back rewards on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas, grocery, internet, cable, satellite TV and mobile phone service",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 5000,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.creditonebank.com/credit-cards/platinum-x5-visa",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.creditonebank.com/credit-cards/platinum-x5-visa",
+    "https://www.creditonebank.com/terms/8o?pc=WS44"
+  ],
+  "notes": "5% applies to the first $5,000 of eligible purchases each year, then 1%. \"Platinum X5\" is the product name; the card is a Visa Signature."
+}

@@ -402,6 +402,16 @@
       ]
     },
     {
+      "id": "credit-one-bank",
+      "name": "Credit One Bank",
+      "aliases": [
+        "Credit One"
+      ],
+      "domains": [
+        "creditonebank.com"
+      ]
+    },
+    {
       "id": "elan",
       "name": "Elan Financial Services",
       "aliases": [

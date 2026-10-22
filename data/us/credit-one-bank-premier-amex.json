@@ -1,0 +1,67 @@
+{
+  "id": "us-credit-one-bank-premier-amex",
+  "schema_version": "1.0.0",
+  "name": "Credit One Bank Premier American Express Card",
+  "localized_names": {
+    "en": "Credit One Bank Premier American Express Card"
+  },
+  "country": "us",
+  "issuer": "Credit One Bank",
+  "issuer_id": "credit-one-bank",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 39,
+    "currency": "USD",
+    "first_year": 39,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 31.74,
+      "max": 31.74,
+      "type": "variable"
+    },
+    "notes": "29.74% variable APR for purchases; 31.74% APR for cash advances."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign Transaction Fee: None."
+  },
+  "credit_required": {
+    "score_band": "fair",
+    "notes": "Recommended for consumers with average credit."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% cash back rewards on all purchases."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.creditonebank.com/credit-cards/american-express-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.creditonebank.com/credit-cards/american-express-card",
+    "https://www.creditonebank.com/terms/7dh?pc=WKT3"
+  ],
+  "notes": ""
+}
