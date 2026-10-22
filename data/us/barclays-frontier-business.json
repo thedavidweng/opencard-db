@@ -12,7 +12,7 @@
   "network_tier": "none",
   "type": "credit",
   "segment": "business",
-  "status": "discontinued",
+  "status": "unknown",
   "annual_fee": {
     "amount": 49.0,
     "currency": "USD",
@@ -86,13 +86,11 @@
     "attribution": null,
     "local_path": null
   },
-  "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-  ],
   "bin_hints": [],
   "last_verified": "2026-07-26",
   "sources": [
-    "https://www.barclaycardus.com/"
+    "https://www.barclaycardus.com/",
+    "https://www.flyfrontier.com/frontiermiles/terms-and-conditions/"
   ],
-  "notes": "DOC 2018 marked as discontinued. Frontier-Barclays partnership extended to 2037 per SEC filings but business card availability unclear. The Frontier Airlines MasterCard BusinessCard carried a $49 annual fee, earned 2x miles on Frontier ticket purchases and 1x on other purchases, with 12,500 bonus miles on activation. Cardholders spending more than $60,000 per calendar year were upgraded to elite status. The official product page is no longer available; barclaycardus.com is cited as the issuer's homepage."
+  "notes": "Frontier's official FRONTIER Miles terms name the Frontier Airlines Business Mastercard and identify Barclays Bank Delaware as its issuer. The terms direct cardholders to their Barclays cardholder agreement for card-specific earning terms. This acknowledgement does not establish that the current program reference is the same generation as the inherited 2018 record. Current application availability, withdrawal date, conversion and successor remain unknown; the prior discontinued classification relied on a secondary source. The inherited $49 fee, 2x/1x earning rates, 12,500-mile activation offer and other financial terms have not been verified against an official agreement for that historical generation. No matching historical official artwork has been established. Historical secondary reference (not an official source for lifecycle or terms): https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
 }
