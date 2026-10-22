@@ -1,0 +1,108 @@
+{
+  "id": "ca-td-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "TD Rewards Visa Card",
+  "localized_names": {
+    "en": "TD Rewards Visa Card"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "td_rewards",
+    "currency_label": "TD Rewards Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 TD Rewards Point per $1 on other purchases."
+    },
+    "categories": [
+      {
+        "label": "Travel booked through Expedia For TD",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Groceries (first $5,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Dining (first $5,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Public transit (first $5,000 a year)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Recurring bill payments and streaming, digital gaming and media (first $5,000 a year)",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "TD Rewards Points redeem for travel booked through Expedia For TD, other travel purchases, cash credits and other rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/travel-rewards/rewards-visa-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/ca/en/personal-banking/products/credit-cards/travel-rewards/rewards-visa-card"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

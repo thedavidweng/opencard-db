@@ -1,0 +1,66 @@
+{
+  "id": "ca-td-business-select-rate-visa",
+  "schema_version": "1.0.0",
+  "name": "TD Business Select Rate Visa Card",
+  "localized_names": {
+    "en": "TD Business Select Rate Visa Card"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "Choose $0 annual fee with an 11.99% rate, or a $49 annual fee with an 8.99% rate."
+  },
+  "apr": {
+    "purchase": {
+      "min": 8.99,
+      "max": 11.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 8.99,
+      "max": 11.99,
+      "type": "variable"
+    },
+    "notes": "11.99% on purchases and cash advances with no annual fee, or 8.99% with the $49 annual fee option."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised for this card."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/ca/en/business-banking/small-business/credit-cards/business-select-rate-visa-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/ca/en/business-banking/small-business/credit-cards/business-select-rate-visa-card"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

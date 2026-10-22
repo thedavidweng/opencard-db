@@ -1,0 +1,112 @@
+{
+  "id": "ca-td-cash-back-visa",
+  "schema_version": "1.0.0",
+  "name": "TD Cash Back Visa Card",
+  "localized_names": {
+    "en": "TD Cash Back Visa Card"
+  },
+  "country": "ca",
+  "issuer": "TD",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash Back Dollars",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% in Cash Back Dollars on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Grocery (first $5,000 a year)",
+        "points_per_dollar": 1,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Gas and EV charging (first $5,000 a year)",
+        "points_per_dollar": 1,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Public transit (first $5,000 a year)",
+        "points_per_dollar": 1,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Recurring bill payments (first $5,000 a year)",
+        "points_per_dollar": 1,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Streaming, digital gaming and media (first $5,000 a year)",
+        "points_per_dollar": 1,
+        "cap": {
+          "amount": 5000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Cash Back Dollars can be redeemed at any time to help pay down the account balance.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/cash-back/cash-back-visa-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/ca/en/personal-banking/products/credit-cards/cash-back/cash-back-visa-card"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
