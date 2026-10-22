@@ -88,15 +88,20 @@
     "other": []
   },
   "official_url": "https://www.us.hsbc.com/credit-cards/products/elite/",
-  "image": null,
+  "image": {
+    "url": "https://web.archive.org/web/20190503030713im_/https://www.us.hsbc.com/content/dam/hsbc/us/images/credit-card-comparison/cc_prem_elite_card_img_542x347.png",
+    "attribution": "© HSBC",
+    "local_path": null
+  },
   "bin_hints": [],
   "last_verified": "2026-10-20",
   "sources": [
     "https://www.us.hsbc.com/credit-cards/products/elite/",
-    "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
+    "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip",
+    "https://web.archive.org/web/20190626114404/https://www.us.hsbc.com/credit-cards/"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"HSBC Bank USA/Premier World Elite MasterCard Cardmember Agreement and Disclosure.pdf\" explicitly names this personal product and HSBC Bank USA, N.A. on its 10/2018 agreement cover. Current HSBC Elite product and terms pages establish the current product, not the date or terms of a historical conversion. Removed unsupported 2021-01-01, early-2021 rename and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date."
+  "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"HSBC Bank USA/Premier World Elite MasterCard Cardmember Agreement and Disclosure.pdf\" explicitly names this personal product and HSBC Bank USA, N.A. on its 10/2018 agreement cover. Current HSBC Elite product and terms pages establish the current product, not the date or terms of a historical conversion. Removed unsupported 2021-01-01, early-2021 rename and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Historical artwork provenance (checked 2026-10-21): the retained 2019-06-26 archive of the official HSBC US credit cards comparison page places this image (cc_prem_elite_card_img_542x347.png) directly above the product heading \"HSBC Premier World Elite Mastercard® credit card\". The linked image resolves to a 2019-05-03 archive capture of the HSBC-hosted asset and was visually inspected as the black HSBC Premier Mastercard with the geometric lion design. It is a 542x347 historical image documenting the product as marketed at that date; it is not evidence of lifecycle, successor or the financial fields, which were not reverified in this artwork-only update."
 }

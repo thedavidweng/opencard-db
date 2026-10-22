@@ -73,8 +73,8 @@
   },
   "official_url": "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf",
   "image": {
-    "url": null,
-    "attribution": null,
+    "url": "https://web.archive.org/web/20150919162659im_/https://tdaclientrewards.tdbank.com/DATAHELIX/TD/MEMBRE_GROUPE/4_cardArt.jpg",
+    "attribution": "© TD Bank",
     "local_path": null
   },
   "secondary_sources": [
@@ -83,8 +83,9 @@
   "bin_hints": [],
   "last_verified": "2026-10-19",
   "sources": [
-    "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf"
+    "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf",
+    "https://web.archive.org/web/20150930103800/https://tdaclientrewards.tdbank.com/"
   ],
-  "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits.",
+  "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits. Historical artwork provenance (checked 2026-10-21): the retained 2015-09-30 archive of the official TD Ameritrade Client Rewards site shows this image with alt text \"TD Ameritrade Client Rewards Card Visa card\". The linked image resolves to a 2015-09-19 archive capture of the TD Bank-hosted asset and was visually inspected as the white TD Ameritrade Client Rewards card; the pictured face carries a Visa Signature mark, which is recorded here as an observation only and does not change network_tier. It is a low-resolution 200x126 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
   "segment": "personal"
 }
