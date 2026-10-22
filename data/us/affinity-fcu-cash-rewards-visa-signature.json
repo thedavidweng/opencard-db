@@ -1,0 +1,90 @@
+{
+  "id": "us-affinity-fcu-cash-rewards-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Affinity FCU Cash Rewards Visa Signature",
+  "localized_names": {
+    "en": "Affinity FCU Cash Rewards Visa Signature"
+  },
+  "country": "us",
+  "issuer": "Affinity Federal Credit Union",
+  "issuer_id": "affinity-fcu",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.0,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR 16.00% to 18.00% per the Visa Signature application disclosure."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Affinity membership required ($5 membership eligibility account)."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back (points)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back (1 point per $1) on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Amazon purchases (bookstore MCC)",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "monthly"
+        }
+      },
+      {
+        "label": "U.S. supermarkets, restaurants and gas stations",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Streaming and rideshare services such as Netflix, Spotify and Uber",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points never expire and redeem for cash back, travel and other rewards.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 150,
+    "unit": "USD",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$150 cash back after $3,000 in purchases within the first 90 days, plus 10,000 bonus points for spending $25,000 in the first year.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.affinityfcu.com/personal-banking/banking/credit-card/cash-rewards-visa",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.affinityfcu.com/personal-banking/banking/credit-card/cash-rewards-visa",
+    "https://www.affinityfcu.com/Privacy-Disclosures/Visa-Signature-App-Discl.pdf"
+  ],
+  "notes": "Cash back accrues as points (1 point = 1% per $1). The Amazon 5% rate applies to purchases coded under the bookstore merchant category."
+}

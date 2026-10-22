@@ -464,6 +464,47 @@
       ]
     },
     {
+      "id": "alliant",
+      "name": "Alliant Credit Union",
+      "aliases": [],
+      "domains": [
+        "alliantcreditunion.org"
+      ]
+    },
+    {
+      "id": "harvard-fcu",
+      "name": "Harvard Federal Credit Union",
+      "aliases": [
+        "Harvard FCU",
+        "HUECU"
+      ],
+      "domains": [
+        "harvardfcu.org",
+        "huecu.org",
+        "harvardcard.com"
+      ]
+    },
+    {
+      "id": "affinity-fcu",
+      "name": "Affinity Federal Credit Union",
+      "aliases": [
+        "Affinity FCU"
+      ],
+      "domains": [
+        "affinityfcu.com"
+      ]
+    },
+    {
+      "id": "aod-fcu",
+      "name": "AOD Federal Credit Union",
+      "aliases": [
+        "AOD FCU"
+      ],
+      "domains": [
+        "aodfcu.com"
+      ]
+    },
+    {
       "id": "wescom",
       "name": "Wescom Financial",
       "aliases": [

@@ -1,0 +1,69 @@
+{
+  "id": "us-affinity-fcu-business-first-visa",
+  "schema_version": "1.0.0",
+  "name": "Affinity Business First Visa Credit Card",
+  "localized_names": {
+    "en": "Affinity Business First Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "Affinity Federal Credit Union",
+  "issuer_id": "affinity-fcu",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Affinity membership required ($5 membership eligibility account)."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Affinity Rewards points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 spent; up to 6x bonus points when shopping through the rewards website."
+    },
+    "categories": [],
+    "redemption_notes": "Points never expire and redeem for travel, cash back, gift cards and merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 5000,
+    "unit": "points",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "5,000 bonus points after the first purchase on the account.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.affinityfcu.com/business-banking/business-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.affinityfcu.com/business-banking/business-credit-card"
+  ],
+  "notes": "APR and foreign transaction fee are not stated on the product page, so they are null. No Visa network package is stated, so network_tier is none."
+}
