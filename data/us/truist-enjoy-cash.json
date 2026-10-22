@@ -1,0 +1,86 @@
+{
+  "id": "us-truist-enjoy-cash",
+  "schema_version": "1.0.0",
+  "name": "Truist Enjoy Cash Credit Card",
+  "localized_names": {
+    "en": "Truist Enjoy Cash Credit Card"
+  },
+  "country": "us",
+  "issuer": "Truist",
+  "issuer_id": "truist",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 27.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "notes": "0% intro APR on purchases for 12 months after account opening and for 12 months on balances transferred within 90 days of account opening, then 18.99% to 27.99% variable APR. Cash advance APR 27.99% (Prime plus 20.99%). Balance transfer fee 3% ($10 minimum)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas and EV charging",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "month"
+        }
+      },
+      {
+        "label": "Utilities and groceries",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 1000,
+          "currency": "USD",
+          "period": "month"
+        }
+      }
+    ],
+    "redemption_notes": "A 10% to 50% Loyalty Cash Bonus applies, based on the Truist deposit relationship, when cash rewards are redeemed into an eligible Truist deposit account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.truist.com/credit-cards/enjoy-cash",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.truist.com/credit-cards/enjoy-cash",
+    "https://www.truist.com/content/dam/truist-bank/us/en/documents/disclosures/credit-card/truist-enjoy-cash-credit-card-disclosure.pdf"
+  ],
+  "notes": "Applicants choose one of two earning options at application and cannot change it later: 3% on gas and EV charging and 2% on utilities and groceries (combined $1,000 monthly spend cap) with 1% on everything else, or a flat 1.5% on all eligible purchases. This record models the tiered option. The product page links both Visa Signature and Visa Traditional benefit guides, so the package depends on the account and network_tier is none."
+}

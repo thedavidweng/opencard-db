@@ -329,6 +329,16 @@
       ]
     },
     {
+      "id": "truist",
+      "name": "Truist",
+      "aliases": [
+        "Truist Bank"
+      ],
+      "domains": [
+        "truist.com"
+      ]
+    },
+    {
       "id": "merrick-bank",
       "name": "Merrick Bank",
       "aliases": [
