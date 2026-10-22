@@ -1,0 +1,66 @@
+{
+  "id": "us-bmo-platinum",
+  "schema_version": "1.0.0",
+  "name": "BMO Platinum Credit Card",
+  "localized_names": {
+    "en": "BMO Platinum Credit Card"
+  },
+  "country": "us",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.49,
+      "max": 26.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months from account opening on purchases, and for 15 months from the date of first transfer on balance transfers completed within 90 days of account opening, then 16.49% to 26.49% variable APR. Cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-platinum-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-platinum-credit-card/",
+    "https://www.bmo.com/en-us/pdf/credit/standardcreditcards.pdf"
+  ],
+  "notes": "\"Platinum\" is the product name; No Mastercard network package is stated on the product page, so network_tier is none."
+}

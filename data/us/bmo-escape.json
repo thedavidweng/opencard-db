@@ -1,0 +1,125 @@
+{
+  "id": "us-bmo-escape",
+  "schema_version": "1.0.0",
+  "name": "BMO Escape Credit Card",
+  "localized_names": {
+    "en": "BMO Escape Credit Card"
+  },
+  "country": "us",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 150,
+    "currency": "USD",
+    "first_year": 150,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "18.49% to 27.49% variable APR on purchases and balance transfers. Cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "bmo_rewards_points",
+    "currency_label": "BMO Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on everything else."
+    },
+    "categories": [
+      {
+        "label": "Airfare and dining",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 3000,
+          "currency": "USD",
+          "period": "calendar_quarter"
+        }
+      },
+      {
+        "label": "Hotels, tours, travel agencies and cruises",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 3000,
+          "currency": "USD",
+          "period": "calendar_quarter"
+        }
+      },
+      {
+        "label": "Rideshare, taxis and car rentals",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 3000,
+          "currency": "USD",
+          "period": "calendar_quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Redeem points for a statement credit, travel (flights, hotels, cruises, vacation packages and car rentals) or gift cards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 45000,
+    "unit": "points",
+    "spend_required": 5000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "45,000 bonus points after spending $5,000 within 3 months of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "priority-pass",
+      "title": "Priority Pass membership",
+      "category": "other",
+      "source": "issuer",
+      "description": "Free digital Priority Pass annual membership with 2 free lounge visits."
+    },
+    {
+      "id": "trusted-traveler-credit",
+      "title": "Trusted Traveler fee credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Trusted Traveler fee credit of up to $100 every 4 years."
+    },
+    {
+      "id": "hotel-credit",
+      "title": "Hotel credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$20 monthly statement credit (up to $240 a year) when you spend $200 in a month at hotels worldwide."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-escape-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-escape-credit-card/",
+    "https://www.bmo.com/en-us/pdf/credit/escape.pdf"
+  ],
+  "notes": "Metal card. Bonus categories earn the higher rate on up to $3,000 in purchases per category each calendar quarter, then 1x. No Mastercard network package is stated on the product page, so network_tier is none."
+}

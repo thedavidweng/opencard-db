@@ -1,0 +1,85 @@
+{
+  "id": "us-bmo-platinum-rewards",
+  "schema_version": "1.0.0",
+  "name": "BMO Platinum Rewards Credit Card",
+  "localized_names": {
+    "en": "BMO Platinum Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "19.49% to 27.49% variable purchase APR. 0% intro APR for 12 months from the date of first transfer on balance transfers completed within 90 days of account opening, then 19.49% to 27.49%. Cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "bmo_rewards_points",
+    "currency_label": "BMO Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on everything else."
+    },
+    "categories": [
+      {
+        "label": "Gas, EV charging and grocery",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 1500,
+          "currency": "USD",
+          "period": "calendar_quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Redeem points for a statement credit, travel (flights, hotels, cruises, vacation packages and car rentals) or gift cards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 15000,
+    "unit": "points",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "15,000 bonus points after spending $1,500 within 3 months of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-platinum-rewards-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-platinum-rewards-credit-card/",
+    "https://www.bmo.com/en-us/pdf/credit/standardcreditcards.pdf"
+  ],
+  "notes": "A 15% anniversary points bonus applies when you spend at least $15,000 a year. \"Platinum\" is the product name; No Mastercard network package is stated on the product page, so network_tier is none."
+}
