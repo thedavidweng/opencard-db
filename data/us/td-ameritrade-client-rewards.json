@@ -13,6 +13,7 @@
   "type": "credit",
   "status": "discontinued",
   "discontinued_date": "2021-10-06",
+  "replaced_by": "us-td-cash",
   "annual_fee": {
     "amount": null,
     "currency": "USD",
@@ -45,17 +46,11 @@
     "currency_label": "Reward points",
     "structure": "multi",
     "base_rate": {
-      "points_per_dollar": 1,
-      "description": "Earn 1 point per dollar on all other purchases."
+      "points_per_dollar": null,
+      "description": "Historical earning rates are not documented in the remaining official transition FAQ."
     },
-    "categories": [
-      {
-        "label": "TD Ameritrade brokerage deposits",
-        "points_per_dollar": 2,
-        "cap": null
-      }
-    ],
-    "redemption_notes": "Points could be redeemed for cash back deposited into a TD Ameritrade brokerage account or for other rewards. Redemption details per the archived FAQ.",
+    "categories": [],
+    "redemption_notes": "The official transition FAQ states that September 24 was the last day to redeem Client Rewards for a 10% bonus into an eligible TD Ameritrade account. Remaining Client Rewards transferred to TD Cash on October 6, 2021; this redemption bonus was not a purchase earning multiplier.",
     "rate_type": "points_multiplier"
   },
   "signup_bonus": null,
@@ -86,10 +81,10 @@
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-19",
   "sources": [
     "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf"
   ],
-  "notes": "Discontinued October 6, 2021 due to TD Ameritrade acquisition by Charles Schwab. Replaced by TD Cash Credit Card. Rewards and benefits are minimal/reconstructed from the archived FAQ PDF; exact rates and fee structure are no longer fully documented.",
+  "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits.",
   "segment": "personal"
 }
