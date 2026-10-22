@@ -401,6 +401,16 @@
         "crossriver.com",
         "upgrade.com"
       ]
+    },
+    {
+      "id": "credit-one-bank",
+      "name": "Credit One Bank",
+      "aliases": [
+        "Credit One"
+      ],
+      "domains": [
+        "creditonebank.com"
+      ]
     }
   ]
 }

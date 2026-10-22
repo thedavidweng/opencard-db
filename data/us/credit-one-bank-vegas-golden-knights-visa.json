@@ -1,0 +1,73 @@
+{
+  "id": "us-credit-one-bank-vegas-golden-knights-visa",
+  "schema_version": "1.0.0",
+  "name": "Credit One Bank Vegas Golden Knights Visa Card",
+  "localized_names": {
+    "en": "Credit One Bank Vegas Golden Knights Visa Card"
+  },
+  "country": "us",
+  "issuer": "Credit One Bank",
+  "issuer_id": "credit-one-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 31.74,
+      "max": 31.74,
+      "type": "variable"
+    },
+    "notes": "29.74% variable APR for purchases; 31.74% APR for cash advances."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign Transaction Fee: None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Cash back is earned only on the eligible categories below."
+    },
+    "categories": [
+      {
+        "label": "Eligible gas and grocery purchases, and mobile phone, internet, cable and satellite TV services",
+        "points_per_dollar": 1,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.creditonebank.com/credit-cards/vegas-golden-knights-visa",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.creditonebank.com/credit-cards/vegas-golden-knights-visa",
+    "https://www.creditonebank.com/terms/7de?pc=WGM6"
+  ],
+  "notes": "The annual fee depends on creditworthiness: $0 for excellent credit, $39 for average credit, and $75 the first year then $99 annually (billed at $8.25 per month) for rebuilding credit, so annual_fee is null. No Visa network package is stated, so network_tier is none."
+}
