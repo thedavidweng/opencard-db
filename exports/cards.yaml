@@ -1736,11 +1736,12 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "unknown",
+    "status": "discontinued",
+    "replaced_by": "us-amex-business-gold",
     "annual_fee": {
-      "amount": null,
+      "amount": 175,
       "currency": "USD",
-      "first_year": null,
+      "first_year": 0,
       "waiver_conditions": null
     },
     "rewards": {
@@ -1766,12 +1767,22 @@
         "converted_sha256": "c17793e4612c4b3066529679bf3ffbc5b3a7897ad037cbee3e46e7df081d5440"
       }
     },
-    "last_verified": "2026-07-28",
+    "last_verified": "2026-10-21",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
-      "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf"
+      "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf",
+      "https://web.archive.org/web/20181016045658/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex",
+      "https://web.archive.org/web/20181201133823/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-business-gold-card-amex",
+      "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/business-gold/Business_Gold_Rewards_10-04-2018.pdf"
     ],
-    "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://rankt.com/cards/amex_business_gold_rewards/; https://static.rankt.com/v1/public/static/images/cards/amex_business_gold_rewards.png. Match: classic engraved-border gold 'AMERICAN EXPRESS BUSINESS' face (pre-2018 Business Gold Rewards design, not the later metal Business Gold Card), from rankt's listing for this exact card. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "secondary_sources": [
+      "https://rankt.com/cards/amex_business_gold_rewards/",
+      "https://static.rankt.com/v1/public/static/images/cards/amex_business_gold_rewards.png",
+      "https://www.doctorofcredit.com/new-american-express-business-gold-rewards-card-now-live/",
+      "https://www.doctorofcredit.com/f-a-qs-about-new-american-express-business-gold-card/",
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    ],
+    "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. Lifecycle (checked 2026-10-21): American Express's Business Gold product page, archived 2018-10-16, offers \"The Business Gold Rewards Card from American Express\" (3X in one chosen category, \"$0 intro annual fee for the first year, then $175\"); the same URL archived 2018-12-01 instead offers the \"New! American Express® Business Gold Card\" at $295, so Business Gold Rewards stopped being offered and was replaced by us-amex-business-gold between those captures. The issuer Cardmember Agreement as of 10/04/2018 (Business Gold Rewards Card, American Express National Bank) also states the $175 annual membership fee. Doctor of Credit (secondary source) reports the new card launched on November 8, 2018 and that existing Business Gold Rewards cardholders were not automatically moved to it; that date is not on an issuer page that could be retrieved, so discontinued_date is left unset. Rewards and other financial fields remain unverified. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page and image URL are listed in secondary_sources. Match: classic engraved-border gold 'AMERICAN EXPRESS BUSINESS' face (pre-2018 Business Gold Rewards design, not the later metal Business Gold Card), from rankt's listing for this exact card. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
     "art_grade": "issuer"
   },
   {
@@ -6889,7 +6900,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "personal",
-    "status": "unknown",
+    "status": "discontinued",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -6919,11 +6930,16 @@
         "converted_sha256": "cb2371ce69400531f9a60949afa151f30e6e18da5ac043ab8d346605f5faa3d4"
       }
     },
-    "last_verified": "2026-10-19",
+    "last_verified": "2026-10-21",
     "sources": [
       "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html"
     ],
-    "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. This is not a credit-card withdrawal or conversion notice and does not support the previously recorded February 16, 2018 card withdrawal date. The old card URL returns a generic shell and the checked servicing URL returns 404; card availability, withdrawal date and successor remain unknown. Historical fees and rewards remain unverified. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/amex-plenti-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/Plenti-AMEX.png. Match: Amex EveryDay-style Plenti Credit Card from American Express face on the card's review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "secondary_sources": [
+      "https://www.uscreditcardguide.com/amex-plenti-credit-card/",
+      "https://www.uscreditcardguide.com/wp-content/uploads/Plenti-AMEX.png",
+      "https://www.doctorofcredit.com/amex-plenti-credit-card-will-discontinued-february-2018/"
+    ],
+    "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. That page is not a card-specific withdrawal notice, but this card's only rewards currency was Plenti points, so with every Plenti account closed the Plenti Credit Card cannot still be offered: status is discontinued (checked 2026-10-21). The card-specific end date comes only from a cardholder letter quoted by Doctor of Credit (secondary source: \"On February 16, 2018, the Plenti Credit Card will be discontinued, and as a result, your Card Account will be cancelled\"); with no issuer-domain copy, discontinued_date is left unset. No successor or conversion was offered per that letter, so replaced_by is unset. The old card URL returns a generic shell and the checked servicing URL returns 404. Historical fees and rewards remain unverified. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page and image URL are listed in secondary_sources. Match: Amex EveryDay-style Plenti Credit Card from American Express face on the card's review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
     "art_grade": "issuer"
   },
   {
@@ -7268,11 +7284,12 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "unknown",
+    "status": "discontinued",
+    "replaced_by": "us-amex-marriott-bonvoy-business",
     "annual_fee": {
-      "amount": null,
+      "amount": 95,
       "currency": "USD",
-      "first_year": null,
+      "first_year": 0,
       "waiver_conditions": null
     },
     "rewards": {
@@ -7298,12 +7315,19 @@
         "converted_sha256": "8bc6169bc6c332762c3f0931def25a1f2dcf06d1b692fcf8cae0c1f7a61ca721"
       }
     },
-    "last_verified": "2026-07-28",
+    "last_verified": "2026-10-21",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0",
-      "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf"
+      "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf",
+      "https://web.archive.org/web/20190111052632/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/compare-credit-cards/compare-travel-rewards-credit-cards",
+      "https://web.archive.org/web/20190311003639/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/compare-credit-cards/compare-travel-rewards-credit-cards"
     ],
-    "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. This establishes historical product identity, not a later withdrawal or conversion date. The retained Bonvoy Business terms URL returns 404 and is successor-branded; it does not establish this historical product or a transition. Exact lifecycle and successor remain unknown. Financial fields remain unverified and unchanged; this identity-only source repair does not advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://web.archive.org/web/20190722182521im_/https://www.nerdwallet.com/c1/images/1108_2d9c06a9e241a5b3af85cd0b66a9740e_L.jpg. Match: purple 'spg Starwood Preferred Guest BUSINESS' American Express face from NerdWallet's 2019 card listing (archived 2019-07-22), the pre-Marriott-Bonvoy SPG Business design. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "secondary_sources": [
+      "https://web.archive.org/web/20190722182521im_/https://www.nerdwallet.com/c1/images/1108_2d9c06a9e241a5b3af85cd0b66a9740e_L.jpg",
+      "https://www.hospitalitynet.org/news/4091620.html",
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    ],
+    "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. Lifecycle (checked 2026-10-21): American Express's own business travel-card comparison page, archived 2019-01-11, lists the Starwood Preferred Guest® Business Credit Card with a \"$0 intro annual fee for the first year, then $95\"; the same page archived 2019-03-11 lists the Marriott Bonvoy Business™ Card in that slot instead, so the SPG Business product was withdrawn and replaced by us-amex-marriott-bonvoy-business between those captures. The annual fee ($95, $0 first year) is taken from the 2019-01-11 capture. The joint American Express/Marriott press release of 2019-01-23 (republished by Hospitality Net, secondary source) dates the rebrand to February 13, 2019; that date is not on an issuer-domain page that could be retrieved, so discontinued_date is left unset. Other financial fields remain unverified. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The image URL is listed in secondary_sources. Match: purple 'spg Starwood Preferred Guest BUSINESS' American Express face from NerdWallet's 2019 card listing (archived 2019-07-22), the pre-Marriott-Bonvoy SPG Business design. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
     "art_grade": "issuer"
   },
   {
@@ -9022,7 +9046,7 @@
     "secondary_sources": [
       "https://www.usatoday.com/story/money/2026/05/04/spirit-airlines-free-spirit-credit-card/89931545007/"
     ],
-    "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference. Status correction (checked 2026-10-21): the official Bank of America product URL now answers HTTP 302 to the generic credit-cards catalog (Wayback first records the 302 on 2026-06-27; the last 200 capture is 2025-09-05), and the live catalog no longer lists a Spirit card. Contemporary reporting quoting a Bank of America spokesperson (USA Today, 2026-05-04, secondary source) states the issuer is not accepting new Spirit card applications after Spirit suspended operations. Status is discontinued; the exact application-withdrawal date is not established by an issuer notice and discontinued_date is left unset.",
+    "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference. Status correction (checked 2026-10-21): the official Bank of America product URL now answers HTTP 302 to the generic credit-cards catalog (Wayback first records the 302 on 2026-06-27; the last 200 capture is 2025-09-05), and the live catalog no longer lists a Spirit card. Contemporary reporting quoting a Bank of America spokesperson (USA Today, 2026-05-04, secondary source) states the issuer is not accepting new Spirit card applications after Spirit suspended operations. Status is discontinued; the exact application-withdrawal date is not established by an issuer notice and discontinued_date is left unset. official_url caveat (checked 2026-10-21): the 2025-09-05 Internet Archive capture of the official_url/sources page is titled \"Free Spirit® World Elite Mastercard® from Bank of America\" and describes the sibling Free Spirit® Travel More World Elite Mastercard®, not this no-annual-fee Free Spirit® Travel Mastercard®. No standalone official page for this card was found, so the Spirit product URL is kept only as the issuer's Spirit co-brand page (official_url is required); it is not evidence for this card's fees, rewards or network tier.",
     "art_grade": "none"
   },
   {
@@ -14463,7 +14487,7 @@
     "issuer": "Capital One",
     "issuer_id": "capital-one",
     "network": "mastercard",
-    "network_tier": "world",
+    "network_tier": "world_elite",
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
@@ -14493,18 +14517,24 @@
     },
     "benefits": [],
     "official_url": "https://www.capitalone.com/credit-cards/",
-    "image": null,
+    "image": {
+      "url": "https://web.archive.org/web/20170930115820im_/https://www.capitalone.com/assets/credit-cards/img/4yKPqhJJAIW8gYAyysoqEO/7c6e9a90ddfff65e5bae4d2ac96c09f3/www-blue-steel-mc-worldelite-240x151.png",
+      "attribution": "© Capital One",
+      "local_path": null
+    },
     "bin_hints": [],
     "last_verified": "2026-10-20",
     "sources": [
       "https://www.capitalone.com/credit-cards/",
-      "https://www.capitalone.com/credit-cards/savor/"
+      "https://www.capitalone.com/credit-cards/savor/",
+      "https://web.archive.org/web/20170504203433/https://www.capitalone.com/credit-cards/premier-dining-rewards/",
+      "https://web.archive.org/web/20170930115820/https://www.capitalone.com/credit-cards/premier-dining-rewards/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Capital One catalog and Savor page establish a current Savor product, not the historical Premier Dining Rewards rebrand/conversion chain. Removed the unsupported replaced_by relationship and the unverified launch/rebrand chronology. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
-    "art_grade": "none"
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Capital One catalog and Savor page establish a current Savor product, not the historical Premier Dining Rewards rebrand/conversion chain. Removed the unsupported replaced_by relationship and the unverified launch/rebrand chronology. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Network tier correction (checked 2026-10-21): Capital One's own Premier Dining Rewards product page, archived 2017-05-04 and 2017-09-30, states \"The Premier Dining Rewards card also comes with World Elite Mastercard® Benefits\" and links the \"Complete Guide to World Elite Mastercard Benefits\", so network_tier is world_elite (was world). Card art: image.url is the issuer asset that the 2017-09-30 page's own product data assigns to \"Premier Dining Rewards\" (www-blue-steel-mc-worldelite-240x151.png, 240x151, reading 'world elite' with the Mastercard mark), served via its Internet Archive capture.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-capital-one-quicksilver",
@@ -28304,7 +28334,7 @@
     "sources": [
       "https://www.anacardusa.com/en/"
     ],
-    "notes": "Verified from official ANA CARD U.S.A. product page. Corrections: name updated from 'Home' to 'ANA CARD U.S.A. Plus'; first_year updated from $85 to $0 (campaign: $0 Intro Annual Fee for the 1st year); issuer updated from 'First Bankcard' to 'First National Bank of Omaha' (page states 'Cards are issued by First National Bank of Omaha (FNBO®)'). Signup bonus of 10,000 miles includes 5,000 after first purchase; remaining 5,000 likely from campaign spend (page says 'Earn up to 10,000 Bonus Miles'). Campaign also mentions '$100 e-gift card for flying ANA/ANA Group North America routes'.",
+    "notes": "Verified from official ANA CARD U.S.A. product page. Corrections: name updated from 'Home' to 'ANA CARD U.S.A. Plus'; first_year updated from $85 to $0 (campaign: $0 Intro Annual Fee for the 1st year); issuer updated from 'First Bankcard' to 'First National Bank of Omaha' (page states 'Cards are issued by First National Bank of Omaha (FNBO®)'). Signup bonus of 10,000 miles includes 5,000 after first purchase; remaining 5,000 likely from campaign spend (page says 'Earn up to 10,000 Bonus Miles'). Campaign also mentions '$100 e-gift card for flying ANA/ANA Group North America routes'. Network tier and art check (2026-10-21): the official benefits page shows the card face as a blue 'ANA CARD U.S.A.' design with a 'VISA Business' mark (wp-content/uploads/2025/02/card-new.png), but this is a consumer card: the same site states \"Visa and Visa Signature are registered trademarks\", and FNBO's Summary of Credit Terms linked from the apply page (https://www.firstbankcard.com/lynx/#/soct/K4L5YMT6Q53DK) says \"you may receive a Platinum Edition® Visa® Card, a Visa Signature® Card, or we may decline to open an account for you\". The 'Business' face therefore does not match this record and is not used. Because the tier depends on credit approval (Platinum Edition or Signature) and network_tier holds one value, signature is retained as the upper tier; it is not guaranteed for every account.",
     "segment": "personal",
     "art_grade": "none"
   },
@@ -29621,9 +29651,10 @@
     "last_verified": "2026-07-23",
     "sources": [
       "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
-      "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html"
+      "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html",
+      "https://web.archive.org/web/20260108130049/https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html"
     ],
-    "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (managed by Mercury Financial) in Aug 2024. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page. Visa Signature. $0 annual fee.",
+    "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (program managed by Mercury Financial) in 2024: Best Western's press release dated September 17, 2024 announces the launch of the two Best Western Rewards® Visa Signature® cards with Mercury Financial, and the official card page (archived 2026-01-08) states \"This card is issued by First Bank & Trust, Brookings, SD\". The earlier \"Aug 2024\" month is not on either page. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page. Visa Signature. $0 annual fee. The card id keeps its legacy 'fnbo' prefix for id stability; the issuer and issuer_id fields carry the current issuer. Whether FNBO-era accounts were moved to First Bank & Trust or closed is not stated on these pages.",
     "art_grade": "none"
   },
   {
@@ -29761,9 +29792,10 @@
     "last_verified": "2026-07-24",
     "sources": [
       "https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html",
-      "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html"
+      "https://www.bestwestern.com/en_US/about/press-media/2024-press-releases/bwh-mercury-financial-partnership.html",
+      "https://web.archive.org/web/20260108130049/https://www.bestwestern.com/en_US/offers/hotel-discounts/best-western-rewards-visa.html"
     ],
-    "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (managed by Mercury Financial) in Aug 2024. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page (no standalone First Bank & Trust public page). Visa Signature.",
+    "notes": "Issuer changed from FNBO to First Bank & Trust, Brookings, SD (program managed by Mercury Financial) in 2024: Best Western's press release dated September 17, 2024 announces the launch of the two Best Western Rewards® Visa Signature® cards with Mercury Financial, and the official card page (archived 2026-01-08) states \"This card is issued by First Bank & Trust, Brookings, SD\". The earlier \"Aug 2024\" month is not on either page. FNBO no longer issues this card. The bestwestern.com page is the only official product/application page (no standalone First Bank & Trust public page). Visa Signature. The card id keeps its legacy 'fnbo' prefix for id stability; the issuer and issuer_id fields carry the current issuer. Whether FNBO-era accounts were moved to First Bank & Trust or closed is not stated on these pages.",
     "art_grade": "none"
   },
   {
