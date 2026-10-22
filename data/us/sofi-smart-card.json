@@ -6,7 +6,7 @@
     "en": "SoFi Smart Card"
   },
   "country": "us",
-  "issuer": "SoFi Bank, N.A.",
+  "issuer": "SoFi",
   "issuer_id": "sofi",
   "network": "mastercard",
   "network_tier": "none",
