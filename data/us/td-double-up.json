@@ -1,0 +1,69 @@
+{
+  "id": "us-td-double-up",
+  "schema_version": "1.0.0",
+  "name": "TD Double Up Credit Card",
+  "localized_names": {
+    "en": "TD Double Up Credit Card"
+  },
+  "country": "us",
+  "issuer": "TD Bank",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 billing cycles on balance transfers completed within the first 90 days of account opening and for 12 billing cycles on purchases, then 18.49%, 21.49%, 23.49%, 26.49% or 28.49% variable APR based on creditworthiness."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee is 3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back on all eligible purchases, with no rotating categories or caps."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "USD",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 cash back (20,000 bonus points) as a statement credit after spending $1,500 within the first 90 days after account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.td.com/us/en/personal-banking/credit-cards/double-up",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.td.com/us/en/personal-banking/credit-cards/double-up"
+  ],
+  "notes": ""
+}
