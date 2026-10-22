@@ -535,6 +535,16 @@
         "robinhood.com",
         "aven.com"
       ]
+    },
+    {
+      "id": "lead-bank",
+      "name": "Lead Bank",
+      "aliases": [],
+      "domains": [
+        "lead.bank",
+        "nibbles.com",
+        "revolut.com"
+      ]
     }
   ]
 }
