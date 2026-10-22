@@ -60,7 +60,7 @@
         "cap": null
       }
     ],
-    "redemption_notes": "Cash back is redeemed as a credit to the account.",
+    "redemption_notes": "Cash back can be redeemed at any time once at least $25 has accrued.",
     "rate_type": "cashback_percent"
   },
   "signup_bonus": null,
