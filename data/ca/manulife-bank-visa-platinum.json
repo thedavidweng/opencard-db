@@ -1,0 +1,85 @@
+{
+  "id": "ca-manulife-bank-visa-platinum",
+  "schema_version": "1.0.0",
+  "name": "Manulife Bank Visa Platinum Card",
+  "localized_names": {
+    "en": "Manulife Bank Visa Platinum Card"
+  },
+  "country": "ca",
+  "issuer": "Manulife Bank",
+  "issuer_id": "manulife-bank",
+  "network": "visa",
+  "network_tier": "platinum",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances and balance transfers."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "manulife_better_rewards",
+    "currency_label": "Manulife Better Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% rewards on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Health, wellness and medical purchases",
+        "points_per_dollar": 1.5,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Travel, dining and entertainment",
+        "points_per_dollar": 1,
+        "cap": {
+          "amount": 15000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "You can redeem your rewards anytime towards an eligible purchase or statement credit as long as the account is in good standing. Rewards cannot be used towards the minimum monthly payment.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.manulifebank.ca/personal-banking/credit-cards/visa-platinum.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.manulifebank.ca/personal-banking/credit-cards/visa-platinum.html"
+  ],
+  "notes": "Applications are open to existing Manulife Bank customers through online banking; the page says new customers will be welcomed soon. Earn rates are percent rewards paid as Manulife Better Rewards points (1% equals 1 point per $1). Network tier is Visa Platinum per the card name."
+}

@@ -1,0 +1,93 @@
+{
+  "id": "ca-manulife-bank-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "Manulife Bank Visa Infinite Card",
+  "localized_names": {
+    "en": "Manulife Bank Visa Infinite Card"
+  },
+  "country": "ca",
+  "issuer": "Manulife Bank",
+  "issuer_id": "manulife-bank",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 139,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "Annual fee waived in the first year."
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances and balance transfers."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum individual income of $60,000 or household income of $100,000."
+  },
+  "rewards": {
+    "currency": "manulife_better_rewards",
+    "currency_label": "Manulife Better Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% rewards on everyday essentials and all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Health, wellness and medical purchases",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 25000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Travel, dining and entertainment",
+        "points_per_dollar": 1.5,
+        "cap": {
+          "amount": 25000,
+          "currency": "CAD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "You can redeem your rewards anytime towards an eligible purchase or statement credit as long as the account is in good standing.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 3,
+    "description": "10% rewards on eligible purchases for the first 3 statements.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.manulifebank.ca/personal-banking/credit-cards/visa-infinite.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.manulifebank.ca/personal-banking/credit-cards/visa-infinite.html"
+  ],
+  "notes": "Applications are open to existing Manulife Bank customers through online banking; the page says new customers will be welcomed soon. Earn rates are percent rewards paid as Manulife Better Rewards points (1% equals 1 point per $1). Additional cardholder fee is $50. Network tier is Visa Infinite per the card name."
+}
