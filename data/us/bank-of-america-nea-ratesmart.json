@@ -1,0 +1,61 @@
+{
+  "id": "us-bank-of-america-nea-ratesmart",
+  "schema_version": "1.0.0",
+  "name": "NEA RateSmart Mastercard Credit Card",
+  "localized_names": {
+    "en": "NEA RateSmart Mastercard Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 13.74,
+      "max": 23.74,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 21 billing cycles on purchases and on balance transfers made within the first 60 days of account opening, then a variable APR currently 13.74% to 23.74%. 5% balance transfer fee. No penalty APR."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bankofamerica.com/content/documents/creditcard/national_education_association_ratesmart_mastercard_english.pdf",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bankofamerica.com/content/documents/creditcard/national_education_association_ratesmart_mastercard_english.pdf",
+    "https://www.neamb.com/products/the-nea-ratesmart-card"
+  ],
+  "notes": "For National Education Association members. Issued and administered by Bank of America, N.A.; the product page is hosted by NEA Member Benefits at neamb.com."
+}
