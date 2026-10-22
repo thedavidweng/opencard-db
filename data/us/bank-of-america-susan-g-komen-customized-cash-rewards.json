@@ -1,0 +1,88 @@
+{
+  "id": "us-bank-of-america-susan-g-komen-customized-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "Susan G. Komen Customized Cash Rewards Visa Credit Card",
+  "localized_names": {
+    "en": "Susan G. Komen Customized Cash Rewards Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.74,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for the first 15 billing cycles on purchases and on balance transfers made within the first 60 days, then a variable APR currently 17.74% to 27.74%. 3% intro balance transfer fee for the first 60 days, then 5%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Choice category (gas and EV charging, online shopping, dining, travel, drug stores, or home improvement and furnishings)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 2500,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      },
+      {
+        "label": "Grocery stores and wholesale clubs",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 2500,
+          "currency": "USD",
+          "period": "quarter"
+        }
+      }
+    ],
+    "redemption_notes": "Redeem cash back as a statement credit, a deposit into a Bank of America checking or savings account, or a credit to an eligible Merrill account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "USD",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$200 online cash rewards bonus after at least $1,000 in purchases in the first 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/susan-komen-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/susan-komen-credit-card/"
+  ],
+  "notes": "The 3% choice category and 2% grocery and wholesale club rates apply to the first $2,500 in combined purchases each quarter, then 1%. In the first year a 3% first-year bonus raises the choice category to 6%. Bank of America makes a contribution to Susan G. Komen for each new account that is used within, and remains open for, the first 90 days."
+}

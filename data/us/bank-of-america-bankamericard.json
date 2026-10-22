@@ -1,0 +1,67 @@
+{
+  "id": "us-bank-of-america-bankamericard",
+  "schema_version": "1.0.0",
+  "name": "BankAmericard Credit Card",
+  "localized_names": {
+    "en": "BankAmericard Credit Card"
+  },
+  "country": "us",
+  "issuer": "Bank of America",
+  "issuer_id": "bank-of-america",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.24,
+      "max": 26.24,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for the first 21 billing cycles on purchases and on balance transfers made within 60 days of account opening, then a variable APR currently 15.24% to 26.24%. 5% balance transfer fee. No penalty APR."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bankofamerica.com/credit-cards/products/bankamericard-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bankofamerica.com/credit-cards/products/bankamericard-credit-card/",
+    "https://www.bankofamerica.com/content/documents/creditcard/bankamericard_english.pdf"
+  ],
+  "notes": "The sample BankAmericard credit card agreement covers both Visa and Mastercard accounts, so the card is recorded as Visa with Mastercard as an additional network. No network package is stated, so network_tier is none.",
+  "additional_networks": [
+    {
+      "network": "mastercard",
+      "network_tier": "none"
+    }
+  ]
+}
