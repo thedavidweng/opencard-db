@@ -1,9 +1,9 @@
 {
   "id": "us-city-national-bank-crystal-visa-infinite",
   "schema_version": "1.0.0",
-  "name": "City National Bank Crystal Visa Infinite\u00ae Credit Card",
+  "name": "City National Bank Crystal Visa Infinite® Credit Card",
   "localized_names": {
-    "en": "City National Bank Crystal Visa Infinite\u00ae Credit Card"
+    "en": "City National Bank Crystal Visa Infinite® Credit Card"
   },
   "country": "us",
   "issuer": "City National Bank",
@@ -56,7 +56,7 @@
   "benefits": [
     {
       "id": "city-national-rewards",
-      "title": "City National Rewards\u00ae Program",
+      "title": "City National Rewards® Program",
       "category": "other",
       "source": "issuer",
       "description": "Access to the City National Rewards program and Householding Program; services and awards described in separately provided Rewards Program Terms (www.cnb.com/rewards)."
@@ -70,7 +70,7 @@
     },
     {
       "id": "visa-infinite-benefits",
-      "title": "Visa Infinite\u00ae benefits",
+      "title": "Visa Infinite® benefits",
       "category": "other",
       "source": "network",
       "description": "Card is a Visa Infinite product; third-party and network-provided benefits and services may apply but are not described in the card agreement and may be added, deleted or changed without notice.",
@@ -89,12 +89,24 @@
     ]
   },
   "official_url": "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
-  "image": null,
+  "image": {
+    "url": null,
+    "attribution": "© City National Bank",
+    "local_path": "images/us-city-national-bank-crystal-visa-infinite.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "5abc7250f452ee1b883a8d54cc0b2ecb543c3b6000ec6b6ddc83dd6b38453523",
+      "width": 782,
+      "height": 494,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "8e2f38768023a748593e5b1b42f03949c7172dd811143563f3f8b08e12826107"
+    }
+  },
   "bin_hints": [],
   "last_verified": "2026-10-20",
   "sources": [
     "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
     "https://www.cnb.com/personal-banking/lending/credit-cards"
   ],
-  "notes": "Pricing verified from the official Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 09/2026, as of September 30, 2026): $400 annual fee, $95 additional card fee, purchase and balance-transfer APR 20.75% or 24.75% variable, cash-advance APR 26.75% variable, no foreign transaction fee and $0.70 minimum interest charge. The agreement explicitly restricts use to personal, family or household purposes. The inherited invite_only status is not independently verified by this agreement; current application availability, invitation/relationship requirements and eligibility remain unknown. Removed unsupported high-net-worth and mandatory in-branch/telephone application assertions. Rewards earn rates are not in this agreement and remain null pending separate official Rewards Program Terms. No historical-to-current product conversion or artwork is inferred."
+  "notes": "Pricing verified from the official Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 09/2026, as of September 30, 2026): $400 annual fee, $95 additional card fee, purchase and balance-transfer APR 20.75% or 24.75% variable, cash-advance APR 26.75% variable, no foreign transaction fee and $0.70 minimum interest charge. The agreement explicitly restricts use to personal, family or household purposes. The inherited invite_only status is not independently verified by this agreement; current application availability, invitation/relationship requirements and eligibility remain unknown. Removed unsupported high-net-worth and mandatory in-branch/telephone application assertions. Rewards earn rates are not in this agreement and remain null pending separate official Rewards Program Terms. No historical-to-current product conversion or artwork is inferred. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/cnb-city-national-bank-crystal-visa-infinite-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/city-national-bank-crystal-visa-infinite-card-16-9-e1618775549895.png. Match: City National Bank Crystal Visa Infinite face (2021 upload). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

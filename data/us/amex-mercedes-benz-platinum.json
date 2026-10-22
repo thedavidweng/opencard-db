@@ -28,12 +28,27 @@
   },
   "benefits": [],
   "official_url": "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": "images/us-amex-mercedes-benz-platinum.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "842f614b3260fe017f75d79c413eaba6902f9a40f49c01bb1e1280f9cbc8b103",
+      "width": 534,
+      "height": 344,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "924e29f491dd170cf0dcea2986b524bdfbf57a065f3086ef1a0225863c8084fd"
+    }
+  },
   "last_verified": "2026-07-28",
   "sources": [
     "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html"
   ],
   "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+    "https://www.uscreditcardguide.com/amex-platinum-card-for-mercedes-benz/",
+    "https://www.uscreditcardguide.com/wp-content/uploads/Screen-Shot-2017-08-31-at-10.20.50-.png"
   ],
-  "notes": "Discontinued January 2019. Converted to standard Platinum Card."
+  "notes": "Discontinued January 2019. Converted to standard Platinum Card. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Platinum Card face with the Mercedes-Benz star (2017 capture) on the discontinued Platinum Card for Mercedes-Benz review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

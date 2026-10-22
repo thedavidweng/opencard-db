@@ -26,10 +26,23 @@
   },
   "benefits": [],
   "official_url": "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf",
+  "image": {
+    "url": null,
+    "attribution": "© American Express",
+    "local_path": "images/us-amex-starwood-preferred-guest-business.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "538675fdf102f182ef2d19560b9bfa1d01f6b3f355bbe6c4149b980a28a55bd2",
+      "width": 224,
+      "height": 142,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "8bc6169bc6c332762c3f0931def25a1f2dcf06d1b692fcf8cae0c1f7a61ca721"
+    }
+  },
   "last_verified": "2026-07-28",
   "sources": [
     "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0",
     "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf"
   ],
-  "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. This establishes historical product identity, not a later withdrawal or conversion date. The retained Bonvoy Business terms URL returns 404 and is successor-branded; it does not establish this historical product or a transition. Exact lifecycle and successor remain unknown. Financial fields remain unverified and unchanged; this identity-only source repair does not advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/."
+  "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. This establishes historical product identity, not a later withdrawal or conversion date. The retained Bonvoy Business terms URL returns 404 and is successor-branded; it does not establish this historical product or a transition. Exact lifecycle and successor remain unknown. Financial fields remain unverified and unchanged; this identity-only source repair does not advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://web.archive.org/web/20190722182521im_/https://www.nerdwallet.com/c1/images/1108_2d9c06a9e241a5b3af85cd0b66a9740e_L.jpg. Match: purple 'spg Starwood Preferred Guest BUSINESS' American Express face from NerdWallet's 2019 card listing (archived 2019-07-22), the pre-Marriott-Bonvoy SPG Business design. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

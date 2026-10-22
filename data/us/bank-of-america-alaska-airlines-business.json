@@ -29,13 +29,28 @@
   },
   "benefits": [],
   "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
+  "image": {
+    "url": null,
+    "attribution": "© Bank of America",
+    "local_path": "images/us-bank-of-america-alaska-airlines-business.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "1d5c9290ac64d1f288ea6a0ca4f9af80f73800c63830f7953e02fc2ff5d8245f",
+      "width": 500,
+      "height": 315,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "0dd1332e110216d6da6473069b01a0f10b636777672bb2eca3f9e79812da61bb"
+    }
+  },
   "secondary_sources": [
-    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+    "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+    "https://www.uscreditcardguide.com/boa-alaska-business-credit-card/",
+    "https://www.uscreditcardguide.com/wp-content/uploads/assets-images-site-sb-credit-cards-card-arts-en-bofa_alaska-CSX98c324d2.png"
   ],
   "last_verified": "2026-10-19",
   "sources": [
     "https://www.bankofamerica.com/credit-cards/",
     "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
   ],
-  "notes": "Historical Alaska business record retained. The current issuer product page confirms an Atmos Rewards Visa Signature Business card, but does not explicitly document conversion from this historical record or its withdrawal date. Unsupported exact date and successor link are removed pending an official conversion notice. Historical fees/rewards are retained, not re-verified. No current Atmos artwork is assigned to this predecessor."
+  "notes": "Historical Alaska business record retained. The current issuer product page confirms an Atmos Rewards Visa Signature Business card, but does not explicitly document conversion from this historical record or its withdrawal date. Unsupported exact date and successor link are removed pending an official conversion notice. Historical fees/rewards are retained, not re-verified. No current Atmos artwork is assigned to this predecessor. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Alaska Airlines Mileage Plan 'BUSINESS CARD' Visa face; the filename is Bank of America's own small-business card-art asset name (bofa_alaska). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }

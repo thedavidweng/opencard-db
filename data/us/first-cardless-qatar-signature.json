@@ -118,8 +118,16 @@
   "official_url": "https://qatarairways.cardless.com/compare",
   "image": {
     "url": null,
-    "attribution": null,
-    "local_path": null
+    "attribution": "© Cardless / Qatar Airways",
+    "local_path": "images/us-first-cardless-qatar-signature.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "2368a863583bed224d0bd3606668758a18c464e059988c0a1d9410e290980ab2",
+      "width": 560,
+      "height": 354,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "40df20d7b1b6b89a33752bd1b1f7d7a746a3f69d92704a02f9ec4b997e1dd79d"
+    }
   },
   "bin_hints": [],
   "last_verified": "2026-07-25",
@@ -127,5 +135,5 @@
     "https://qatarairways.cardless.com/compare",
     "https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf"
   ],
-  "notes": "Verified from the official Cardless compare page on 2026-07-25. The page lists two cards; this entry is the lower-tier Signature card ($99 annual fee), distinct from the Infinite card ($499, us-first-cardless-qatar-infinite). Signature grants first-year Privilege Club Silver (oneworld Ruby) and earns 2 Qpoints for every 2,000 Avios; the Infinite grants Gold and a richer benefit set. Per-category Avios earn multipliers (Qatar Airways purchases, dining, everywhere else) are not exposed as machine-readable numbers on the official compare page (JS-rendered; headline states \"up to 5x Avios\"), so categories are left empty and the base rate is null. APR not shown on the compare page; the Rates & Fees PDF (legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf) is the official pricing document. No official card art was confidently identifiable for the Signature variant, so image is null."
+  "notes": "Verified from the official Cardless compare page on 2026-07-25. The page lists two cards; this entry is the lower-tier Signature card ($99 annual fee), distinct from the Infinite card ($499, us-first-cardless-qatar-infinite). Signature grants first-year Privilege Club Silver (oneworld Ruby) and earns 2 Qpoints for every 2,000 Avios; the Infinite grants Gold and a richer benefit set. Per-category Avios earn multipliers (Qatar Airways purchases, dining, everywhere else) are not exposed as machine-readable numbers on the official compare page (JS-rendered; headline states \"up to 5x Avios\"), so categories are left empty and the base rate is null. APR not shown on the compare page; the Rates & Fees PDF (legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf) is the official pricing document. No official card art was confidently identifiable for the Signature variant, so image is null. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/cardless-qatar-airways-signature-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/cardlessqrsignature.png. Match: purple Qatar Airways Privilege Club Visa Signature face (the Signature tier, not the Infinite). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }
