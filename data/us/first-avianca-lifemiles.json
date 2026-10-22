@@ -112,8 +112,8 @@
   },
   "official_url": "https://www.cardless.com/cards/avianca/lifemiles",
   "image": {
-    "url": null,
-    "attribution": null,
+    "url": "https://www.cardless.com/_next/static/media/card-angled-standard.85056e73.png",
+    "attribution": "© First Electronic Bank",
     "local_path": null
   },
   "bin_hints": [],
@@ -122,5 +122,5 @@
     "https://www.cardless.com/cards/avianca/lifemiles",
     "https://www.cardless.com/rates-and-fees-99-avianca"
   ],
-  "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. APR not re-verified on 2026-07-24 (Rates & Fees PDF returned binary content)."
+  "notes": "Issuer is First Electronic Bank (Member FDIC) via fintech Cardless. American Express network. APR not re-verified on 2026-07-24 (Rates & Fees PDF returned binary content). Artwork verified 2026-10-21: The official Cardless Avianca LifeMiles product page serves this angled red card render with alt text \"Avianca® Credit Card\" on the record's own official_url, which also states the $99 annual fee stored here, tying the artwork to this product generation. The page footer states the card is issued by First Electronic Bank, so attribution is set to that issuer. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update."
 }

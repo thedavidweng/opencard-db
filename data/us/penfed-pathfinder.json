@@ -157,7 +157,7 @@
   },
   "official_url": "https://www.penfed.org/credit-cards/pathfinder-rewards",
   "image": {
-    "url": null,
+    "url": "https://www.penfed.org/content/dam/penfed/en/products/credit-cards/cards/pathfinder-rewards.webp",
     "attribution": "© PenFed",
     "local_path": null
   },
@@ -167,6 +167,6 @@
     "https://www.penfed.org/credit-cards/pathfinder-rewards",
     "https://www.penfed.org/content/dam/penfed/en/general/pdf/credit-cards/Pathfinder_RWDTC.pdf"
   ],
-  "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included.",
+  "notes": "Visa Signature. Annual fee $95, waived for PenFed Honors Advantage Members. No foreign transaction fees. Priority Pass Select membership included. Artwork verified 2026-10-21: The official PenFed Pathfinder Rewards product page serves this card image with alt text \"Pathfinder® Rewards Visa Signature® Card\". Retained the existing PenFed attribution. The image was rendered from the official page and visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
   "segment": "personal"
 }
