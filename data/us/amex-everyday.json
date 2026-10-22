@@ -1,0 +1,77 @@
+{
+  "id": "us-amex-everyday",
+  "schema_version": "1.0.0",
+  "name": "Amex EveryDay Credit Card",
+  "localized_names": {
+    "en": "Amex EveryDay Credit Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per eligible dollar; 20% extra points on purchases in any billing period with 20 or more separate purchases."
+    },
+    "categories": [
+      {
+        "label": "U.S. supermarkets (first $6,000 per calendar year, then 1X)",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "calendar_year"
+        }
+      },
+      {
+        "label": "Eligible travel booked through AmexTravel.com or the Amex Travel App",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards points can be redeemed for travel, gift cards, statement credits and transfers to partners.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/us/credit-cards/card/amex-everyday/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/us/credit-cards/card/amex-everyday/",
+    "https://www.americanexpress.com/us/credit-cards/card-application/apply/supplementary/terms/amex-everyday-credit-card/36182-9-0"
+  ],
+  "notes": "Issued by American Express National Bank. Earn rates come from the card's published benefit terms. The public prospect offer terms currently show \"Offer No Longer Available\", so APR and foreign transaction fee are left null."
+}
