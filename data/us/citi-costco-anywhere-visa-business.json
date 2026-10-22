@@ -1,0 +1,95 @@
+{
+  "id": "us-citi-costco-anywhere-visa-business",
+  "schema_version": "1.0.0",
+  "name": "Costco Anywhere Visa Business Card by Citi",
+  "localized_names": {
+    "en": "Costco Anywhere Visa Business Card by Citi"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "No annual fee with a paid, active Costco membership."
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.99,
+      "max": 26.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.99,
+      "max": 28.99,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 18.99% to 26.99% variable based on creditworthiness; cash advance APR 28.99% variable; penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Fee for foreign purchases: None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "Costco cash back reward certificate",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas at Costco",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 7000,
+          "currency": "USD",
+          "period": "year, combined with other eligible gas and EV charging (1% thereafter)"
+        }
+      },
+      {
+        "label": "Other eligible gas and EV charging",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 7000,
+          "currency": "USD",
+          "period": "year, combined with gas at Costco (1% thereafter)"
+        }
+      },
+      {
+        "label": "Restaurants and eligible travel, including Costco Travel",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "All other Costco and Costco.com purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back is issued as an annual reward certificate after the February billing statement closes, redeemable for cash or merchandise at U.S. Costco warehouses.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/costco-anywhere-visa-business-card"
+  ],
+  "notes": "Business version of the Costco Anywhere Visa Card by Citi. network_tier is recorded as none because the official page does not name the network package."
+}

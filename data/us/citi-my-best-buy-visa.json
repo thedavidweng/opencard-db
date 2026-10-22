@@ -1,0 +1,83 @@
+{
+  "id": "us-citi-my-best-buy-visa",
+  "schema_version": "1.0.0",
+  "name": "My Best Buy Visa Card",
+  "localized_names": {
+    "en": "My Best Buy Visa Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": "Annual fee $0 to $59 based on creditworthiness."
+  },
+  "apr": {
+    "purchase": {
+      "min": 30.99,
+      "max": 30.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Pricing as of 9/22/26: purchase and balance transfer APR 30.99% variable; cash APR 29.99% variable."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "The product page lists no foreign transaction fees for the Visa card."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "best_buy_rewards",
+    "currency_label": "My Best Buy rewards",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% back in rewards on other purchases."
+    },
+    "categories": [
+      {
+        "label": "Best Buy purchases when the rewards option is chosen",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Gas",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery, dining and takeout",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points are redeemable for Best Buy reward certificates and gift cards.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-best-buy-credit-cards",
+    "https://www.citi.com/credit-cards/view-all-credit-cards"
+  ],
+  "notes": "Visa version of the My Best Buy card, usable wherever Visa is accepted. Annual fee ranges from $0 to $59 by creditworthiness, so annual_fee.amount is null. network_tier is recorded as none because the official page does not name the network package."
+}

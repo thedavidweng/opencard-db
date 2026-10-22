@@ -1,0 +1,81 @@
+{
+  "id": "us-citi-macys-credit-card",
+  "schema_version": "1.0.0",
+  "name": "Macy's Credit Card",
+  "localized_names": {
+    "en": "Macy's Credit Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "macys_star_rewards_points",
+    "currency_label": "Macy's Star Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 points per $1 at Macy's for Silver members (3 for Gold, 5 for Platinum)."
+    },
+    "categories": [
+      {
+        "label": "Macy's purchases, Gold status ($500 to $1,199 annual Macy's card spend)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Macy's purchases, Platinum status ($1,200+ annual Macy's card spend)",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "1,000 points = $10 in Star Money, usable on anything at Macy's except gift cards, services and fees.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "30% off macys.com purchases the day the card is opened (in-store discount varies), up to $100.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-macys-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-macys-credit-card",
+    "https://www.citi.com/credit-cards/view-all-credit-cards"
+  ],
+  "notes": "Closed-loop Macy's store card issued through Citi; usable only at Macy's, so network is other. New cards open at Silver status. APR is not shown on the product page."
+}

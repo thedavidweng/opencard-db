@@ -1,0 +1,96 @@
+{
+  "id": "us-citi-macys-american-express",
+  "schema_version": "1.0.0",
+  "name": "Macy's American Express Card",
+  "localized_names": {
+    "en": "Macy's American Express Card"
+  },
+  "country": "us",
+  "issuer": "Citi",
+  "issuer_id": "citi",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "macys_star_rewards_points",
+    "currency_label": "Macy's Star Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 spent everywhere else."
+    },
+    "categories": [
+      {
+        "label": "Restaurants, including delivery",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas stations and supermarkets",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Macy's purchases, Silver status",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Macy's purchases, Gold status",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Macy's purchases, Platinum status",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "1,000 points = $10 in Star Money at Macy's.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "30% off macys.com purchases the day the card is opened (in-store discount varies), up to $100.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citi.com/credit-cards/citi-macys-credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citi.com/credit-cards/citi-macys-credit-card",
+    "https://www.citi.com/credit-cards/view-all-credit-cards"
+  ],
+  "notes": "American Express network version of the Macy's card, issued through Citi. Amex Offers are listed as a benefit. APR is not shown on the product page. network_tier none: American Express network cards have no separate package."
+}
