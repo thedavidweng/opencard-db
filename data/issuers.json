@@ -379,6 +379,17 @@
       "domains": [
         "53.com"
       ]
+    },
+    {
+      "id": "cross-river-bank",
+      "name": "Cross River Bank",
+      "aliases": [
+        "Upgrade"
+      ],
+      "domains": [
+        "crossriver.com",
+        "upgrade.com"
+      ]
     }
   ]
 }
