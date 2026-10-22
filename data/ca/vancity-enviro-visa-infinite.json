@@ -1,0 +1,85 @@
+{
+  "id": "ca-vancity-enviro-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "Vancity enviro Visa Infinite Card",
+  "localized_names": {
+    "en": "Vancity enviro Visa Infinite Card"
+  },
+  "country": "ca",
+  "issuer": "Vancity",
+  "issuer_id": "vancity",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 120,
+    "currency": "CAD",
+    "first_year": 120,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.5,
+      "max": 19.5,
+      "type": "variable"
+    },
+    "notes": "Annual interest rate 19.50%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "At least 19 with a BC address, and one of $60,000 personal income, $100,000 household income, $15,000 annual card spend, or $250,000 in investable funds."
+  },
+  "rewards": {
+    "currency": "vancity_rewards_points",
+    "currency_label": "Vancity Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.25,
+      "description": "1.25 points per $1 on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Select local businesses",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Public transit and ferries",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Groceries",
+        "points_per_dollar": 2.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Vancity Rewards points redeem for cash back, travel, charitable donations and gift cards; cash back requires a Vancity deposit account.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "airport-lounge-passes",
+      "title": "Airport lounge passes",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Two complimentary airport lounge visits a year for the primary cardholder."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.vancity.com/bank/credit-cards/enviro-infinite/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.vancity.com/bank/credit-cards/enviro-infinite/"
+  ],
+  "notes": "Network tier is Visa Infinite per the card name."
+}
