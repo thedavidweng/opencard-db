@@ -1755,7 +1755,7 @@
     "benefits": [],
     "official_url": "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-amex-business-gold-rewards.webp",
       "attribution": "© American Express",
       "local_path": "images/us-amex-business-gold-rewards.webp",
       "provenance": {
@@ -6289,7 +6289,7 @@
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-amex-mercedes-benz.webp",
       "attribution": "© American Express",
       "local_path": "images/us-amex-mercedes-benz.webp",
       "provenance": {
@@ -6344,7 +6344,7 @@
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-amex-mercedes-benz-platinum.webp",
       "attribution": "© American Express",
       "local_path": "images/us-amex-mercedes-benz-platinum.webp",
       "provenance": {
@@ -6918,7 +6918,7 @@
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-amex-plenti.webp",
       "attribution": "© American Express",
       "local_path": "images/us-amex-plenti.webp",
       "provenance": {
@@ -7303,7 +7303,7 @@
     "benefits": [],
     "official_url": "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-amex-starwood-preferred-guest-business.webp",
       "attribution": "© American Express",
       "local_path": "images/us-amex-starwood-preferred-guest-business.webp",
       "provenance": {
@@ -7640,7 +7640,7 @@
     "benefits": [],
     "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-bank-of-america-alaska-airlines-business.webp",
       "attribution": "© Bank of America",
       "local_path": "images/us-bank-of-america-alaska-airlines-business.webp",
       "provenance": {
@@ -7740,7 +7740,7 @@
     "benefits": [],
     "official_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-bank-of-america-alaska-airlines-visa-signature.webp",
       "attribution": "© Bank of America",
       "local_path": "images/us-bank-of-america-alaska-airlines-visa-signature.webp",
       "provenance": {
@@ -19740,7 +19740,7 @@
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-chase-ink-plus-business.webp",
       "attribution": "© JPMorgan Chase & Co.",
       "local_path": "images/us-chase-ink-plus-business.webp",
       "provenance": {
@@ -26003,7 +26003,7 @@
     },
     "official_url": "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-city-national-bank-crystal-visa-infinite.webp",
       "attribution": "© City National Bank",
       "local_path": "images/us-city-national-bank-crystal-visa-infinite.webp",
       "provenance": {
@@ -28933,7 +28933,7 @@
     },
     "official_url": "https://qatarairways.cardless.com/compare",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-first-cardless-qatar-signature.webp",
       "attribution": "© Cardless / Qatar Airways",
       "local_path": "images/us-first-cardless-qatar-signature.webp",
       "provenance": {
@@ -30919,7 +30919,7 @@
     "travel_perks": null,
     "official_url": "https://www.penfed.org/credit-cards/",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-penfed-premium-travel-rewards.webp",
       "attribution": "© Pentagon Federal Credit Union",
       "local_path": "images/us-penfed-premium-travel-rewards.webp",
       "provenance": {
@@ -31613,7 +31613,7 @@
     },
     "official_url": "https://www.verizon.com/financial-services/verizon-visa-card/",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-synchrony-verizon-visa.webp",
       "attribution": "© Verizon / Synchrony",
       "local_path": "images/us-synchrony-verizon-visa.webp",
       "provenance": {
@@ -31800,7 +31800,7 @@
     },
     "official_url": "https://www.synchrony.com/s/partner/virgin-red-rewards-card/benefits",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-synchrony-virgin-red-rewards.webp",
       "attribution": "© Synchrony",
       "local_path": "images/us-synchrony-virgin-red-rewards.webp",
       "provenance": {
@@ -35654,7 +35654,7 @@
     },
     "official_url": "https://www.biltrewards.com/card",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-wells-fargo-bilt.webp",
       "attribution": "© Bilt Technologies, Inc.",
       "local_path": "images/us-wells-fargo-bilt.webp",
       "provenance": {
@@ -35713,7 +35713,7 @@
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
     "image": {
-      "url": null,
+      "url": "https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/images/us-wells-fargo-business-platinum.webp",
       "attribution": "© Wells Fargo",
       "local_path": "images/us-wells-fargo-business-platinum.webp",
       "provenance": {
