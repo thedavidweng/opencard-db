@@ -391,6 +391,17 @@
       ]
     },
     {
+      "id": "cross-river-bank",
+      "name": "Cross River Bank",
+      "aliases": [
+        "Upgrade"
+      ],
+      "domains": [
+        "crossriver.com",
+        "upgrade.com"
+      ]
+    },
+    {
       "id": "credit-one-bank",
       "name": "Credit One Bank",
       "aliases": [

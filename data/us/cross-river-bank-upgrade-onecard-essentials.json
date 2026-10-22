@@ -1,0 +1,68 @@
+{
+  "id": "us-cross-river-bank-upgrade-onecard-essentials",
+  "schema_version": "1.0.0",
+  "name": "Upgrade OneCard Essentials",
+  "localized_names": {
+    "en": "Upgrade OneCard Essentials"
+  },
+  "country": "us",
+  "issuer": "Cross River Bank",
+  "issuer_id": "cross-river-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas, groceries, streaming and monthly subscriptions, and utilities (excluding Target and Walmart)",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "No caps or limits on cash back.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.upgrade.com/credit-card/onecard-essentials/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.upgrade.com/credit-card/onecard-essentials/",
+    "https://www.upgrade.com/bank-partners/"
+  ],
+  "notes": "Upgrade is a financial technology company, not a bank; its bank-partners page names Cross River Bank as the issuer of Upgrade credit cards. The product page says the card offers Visa Signature benefits. No security deposit is required. Optional Pay Over Time plans carry a fixed monthly fee of up to 1.72% of the transaction. APRs and the foreign transaction fee are in the application disclosures, which could not be retrieved, so they are null."
+}
