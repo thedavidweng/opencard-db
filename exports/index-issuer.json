@@ -80,6 +80,7 @@
     "us-bmo-premium-rewards"
   ],
   "brim-financial": [
+    "ca-brim-air-france-klm-world-elite-mastercard",
     "ca-brim-mastercard",
     "ca-brim-world-elite-mastercard"
   ],
@@ -343,6 +344,19 @@
     "us-becu-cash-back-visa",
     "us-becu-low-rate-visa"
   ],
+  "comenity": [
+    "us-bh-payboo-credit-card",
+    "us-comenity-aaa-daily-advantage",
+    "us-comenity-aaa-travel-advantage",
+    "us-comenity-bread-cashback-amex",
+    "us-comenity-bread-rewards-amex",
+    "us-comenity-nfl-extra-points",
+    "us-comenity-playstation-visa",
+    "us-comenity-virgin-america-premium-visa-signature",
+    "us-comenity-virgin-america-visa-signature",
+    "us-ulta-beauty-rewards-credit-card",
+    "us-ulta-beauty-rewards-mastercard"
+  ],
   "brex": [
     "us-brex-card"
   ],
@@ -447,16 +461,6 @@
     "us-column-bilt-obsidian",
     "us-column-bilt-palladium"
   ],
-  "comenity": [
-    "us-comenity-aaa-daily-advantage",
-    "us-comenity-aaa-travel-advantage",
-    "us-comenity-bread-cashback-amex",
-    "us-comenity-bread-rewards-amex",
-    "us-comenity-nfl-extra-points",
-    "us-comenity-playstation-visa",
-    "us-comenity-virgin-america-premium-visa-signature",
-    "us-comenity-virgin-america-visa-signature"
-  ],
   "credit-one-bank": [
     "us-credit-one-bank-amex-rebuilding-credit",
     "us-credit-one-bank-omni-rewards-amex",
@@ -497,7 +501,8 @@
     "us-fnbo-bp-rewards-visa",
     "us-fnbo-ducks-unlimited-rewards",
     "us-fnbo-evergreen",
-    "us-fnbo-evergreen-business-edition"
+    "us-fnbo-evergreen-business-edition",
+    "us-jal-usa-card"
   ],
   "first-tech-fcu": [
     "us-first-tech-choice-rewards-world-mastercard"
@@ -535,6 +540,11 @@
     "us-nibbles-rewards-world-mastercard",
     "us-revolut-secured-mastercard"
   ],
+  "capital-bank": [
+    "us-opensky-launch-secured-visa",
+    "us-opensky-plus-secured-visa",
+    "us-opensky-secured-visa"
+  ],
   "penfed": [
     "us-penfed-gold-visa",
     "us-penfed-pathfinder",
@@ -547,8 +557,12 @@
     "us-pnc-cash-rewards-visa-signature-business",
     "us-pnc-cash-unlimited-visa"
   ],
+  "regions": [
+    "us-regions-cash-rewards-visa-signature"
+  ],
   "sofi": [
     "us-sofi-everyday-cash-rewards",
+    "us-sofi-smart-card",
     "us-sofi-unlimited-2"
   ],
   "stanford-fcu": [
@@ -632,6 +646,13 @@
     "us-us-bank-smartly",
     "us-us-bank-state-farm-business-cash-rewards",
     "us-us-bank-state-farm-premier-cash-rewards"
+  ],
+  "usaa": [
+    "us-usaa-cashback-rewards-plus-amex",
+    "us-usaa-eagle-navigator-visa-signature",
+    "us-usaa-preferred-cash-rewards-visa-signature",
+    "us-usaa-rate-advantage-visa-platinum",
+    "us-usaa-secured-amex"
   ],
   "webbank": [
     "us-web-bank-gemini"
