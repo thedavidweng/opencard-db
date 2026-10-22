@@ -513,6 +513,17 @@
       "domains": [
         "wescom.org"
       ]
+    },
+    {
+      "id": "patriot-bank",
+      "name": "Patriot Bank, N.A.",
+      "aliases": [
+        "Patriot Bank"
+      ],
+      "domains": [
+        "bankpatriot.com",
+        "mercury.com"
+      ]
     }
   ]
 }
