@@ -8815,7 +8815,7 @@
     "network_tier": "world",
     "type": "credit",
     "segment": "personal",
-    "status": "active",
+    "status": "discontinued",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -8917,9 +8917,13 @@
     "bin_hints": [],
     "last_verified": "2026-07-24",
     "sources": [
-      "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/"
+      "https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/",
+      "https://web.archive.org/web/20250905020846/https://www.bankofamerica.com/credit-cards/products/spirit-airlines-credit-card/"
     ],
-    "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference.",
+    "secondary_sources": [
+      "https://www.usatoday.com/story/money/2026/05/04/spirit-airlines-free-spirit-credit-card/89931545007/"
+    ],
+    "notes": "No-annual-fee entry-level Spirit co-brand: Free Spirit Travel Mastercard (World Mastercard issued by Bank of America). Earns 2X on Spirit Airlines purchases, 1X on all else. No foreign transaction fee. 5,000 anniversary bonus points after $10,000 annual spend. The official BofA product page redirects to the general credit-cards listing and is no longer serviceable; card details verified via Frequent Miler and Bankrate. Following Spirit Airlines' 2025 restructuring the card is no longer available to new applicants and Free Spirit points are reported to no longer be redeemable (2026); record retained for historical/BIN reference. Status correction (checked 2026-10-21): the official Bank of America product URL now answers HTTP 302 to the generic credit-cards catalog (Wayback first records the 302 on 2026-06-27; the last 200 capture is 2025-09-05), and the live catalog no longer lists a Spirit card. Contemporary reporting quoting a Bank of America spokesperson (USA Today, 2026-05-04, secondary source) states the issuer is not accepting new Spirit card applications after Spirit suspended operations. Status is discontinued; the exact application-withdrawal date is not established by an issuer notice and discontinued_date is left unset.",
     "art_grade": "none"
   },
   {
@@ -18688,8 +18692,8 @@
     "country": "us",
     "issuer": "Chase",
     "issuer_id": "chase",
-    "network": "visa",
-    "network_tier": "signature",
+    "network": "mastercard",
+    "network_tier": "world",
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
@@ -18732,17 +18736,24 @@
     },
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
+    "image": {
+      "url": "https://web.archive.org/web/20180211084048im_/https://creditcards.chase.com/R-Marketplace/1110008/images/cardart/ihg_card.png",
+      "attribution": "© Chase",
+      "local_path": null
+    },
     "bin_hints": [],
     "last_verified": "2026-10-20",
     "sources": [
       "https://creditcards.chase.com/",
-      "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select"
+      "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select",
+      "https://web.archive.org/web/20180127130104/https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club",
+      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Chase catalog and quarterly sample-agreement registry do not establish the historical Select card's precise application-withdrawal date or an explicit conversion to IHG Premier. The current IHG One Rewards Premier Select product is separately named and does not prove that lineage. Removed unsupported 2018-04-05 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
-    "art_grade": "none"
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Chase catalog and quarterly sample-agreement registry do not establish the historical Select card's precise application-withdrawal date or an explicit conversion to IHG Premier. The current IHG One Rewards Premier Select product is separately named and does not prove that lineage. Removed unsupported 2018-04-05 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Network correction (checked 2026-10-21): the record previously said Visa Signature, but the retained 2018-01-27 archive of the official Chase product page for the IHG® Rewards Club Select Credit Card lists the same $0 intro / $49 annual fee and 5x IHG / 2x gas, grocery and restaurant / 1x earning stored here, files the card under \"MasterCard Credit Cards (1)\" and shows card art whose face reads WORLD MasterCard. Chase's 2018 Q4 credit card agreement submission to the CFPB contains IHG agreements only as \"IHG MasterCard World\" and \"IHG MasterCard World Elite\" (no IHG Visa agreement). Network is therefore mastercard and network_tier world for this IHG Rewards Club-era generation. The earlier Chase Priority Club Visa generations predate this product name and are not described by this record. The CFPB World agreement's $29 sample fee does not match the $49 product-page fee and is not used for annual_fee. Historical artwork provenance (checked 2026-10-21): the linked image is the ihg_card.png asset used by that official 2018 Chase page with alt text \"IHG(Registered Trademark) Rewards Club Select Credit Card\", resolved to a 2018-02-11 archive capture and visually inspected as the IHG Rewards Club World MasterCard; it is a low-resolution 289x181 historical image and is not evidence of lifecycle.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-chase-ihg-traveler",
@@ -31853,7 +31864,7 @@
       "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf",
       "https://web.archive.org/web/20150930103800/https://tdaclientrewards.tdbank.com/"
     ],
-    "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits. Historical artwork provenance (checked 2026-10-21): the retained 2015-09-30 archive of the official TD Ameritrade Client Rewards site shows this image with alt text \"TD Ameritrade Client Rewards Card Visa card\". The linked image resolves to a 2015-09-19 archive capture of the TD Bank-hosted asset and was visually inspected as the white TD Ameritrade Client Rewards card; the pictured face carries a Visa Signature mark, which is recorded here as an observation only and does not change network_tier. It is a low-resolution 200x126 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
+    "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits. Historical artwork provenance (checked 2026-10-21): the retained 2015-09-30 archive of the official TD Ameritrade Client Rewards site shows this image with alt text \"TD Ameritrade Client Rewards Card Visa card\". The linked image resolves to a 2015-09-19 archive capture of the TD Bank-hosted asset and was visually inspected as the white TD Ameritrade Client Rewards card; the pictured face carries a Visa Signature mark, which is recorded here as an observation only and does not change network_tier. It is a low-resolution 200x126 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update. Network tier review (checked 2026-10-21): the stored network_tier none conflicts with the Visa Signature mark on the archived card art, but the tier is left unchanged because no terms document settles it. TD's 2018 Q4 agreement submission to the CFPB names only the \"TD Ameritrade Client Rewards VISA® Card\" with no tier. The 2015-2018 official product pages list generic Visa benefits. TD also published a Visa Signature vs. Visa Platinum comparison for its card lineup, so the art alone cannot rule out credit-line-based tiering. The schema requires a network_tier string and has no unknown value, so this needs a product-specific terms or benefits document before it can be changed.",
     "segment": "personal",
     "art_grade": "issuer"
   },
@@ -33462,9 +33473,9 @@
     "segment": "personal",
     "status": "discontinued",
     "annual_fee": {
-      "amount": 0,
+      "amount": 75,
       "currency": "USD",
-      "first_year": 0,
+      "first_year": 75,
       "waiver_conditions": null
     },
     "rewards": {
@@ -33485,12 +33496,13 @@
     "last_verified": "2026-07-26",
     "sources": [
       "https://www.usbank.com/credit-cards/",
-      "https://web.archive.org/web/20160508162403/https://www.usbank.com/credit-cards/club-carlson-premier-rewards-visa-signature-credit-card.html"
+      "https://web.archive.org/web/20160508162403/https://www.usbank.com/credit-cards/club-carlson-premier-rewards-visa-signature-credit-card.html",
+      "https://web.archive.org/web/20160508164340/https://applications.usbank.com/oad/catalog/terms.controller?locationCode=21603&productId=03&sourceCode=33351"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson℠ Premier Rewards Visa Signature® Card\". The official Club Carlson Rewards Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and the remaining financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson℠ Premier Rewards Visa Signature® Card\". The official Club Carlson Rewards Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update. Annual fee correction (checked 2026-10-21): the record previously stored a $0 fee, which conflicted with the official product page's renewal bonus. The retained 2016-05-08 archive of U.S. Bank's official Club Carlson(SM) Premier Rewards Visa Signature® Card Terms and Conditions, linked as Pricing & Terms from that product page, lists \"Annual Membership Fee\" $75 and no introductory annual fee, so annual_fee is $75 with first_year $75 as of those 2016 terms; fee history in other years was not checked.",
     "art_grade": "issuer"
   },
   {
@@ -33544,9 +33556,9 @@
     "segment": "personal",
     "status": "discontinued",
     "annual_fee": {
-      "amount": 0,
+      "amount": 50,
       "currency": "USD",
-      "first_year": 0,
+      "first_year": 50,
       "waiver_conditions": null
     },
     "rewards": {
@@ -33567,12 +33579,13 @@
     "last_verified": "2026-07-26",
     "sources": [
       "https://www.usbank.com/credit-cards/",
-      "https://web.archive.org/web/20160508145027/https://www.usbank.com/credit-cards/club-carlson-rewards-visa-signature-credit-card.html"
+      "https://web.archive.org/web/20160508145027/https://www.usbank.com/credit-cards/club-carlson-rewards-visa-signature-credit-card.html",
+      "https://web.archive.org/web/20160508202332/https://applications.usbank.com/oad/catalog/terms.controller?locationCode=21603&productId=05&sourceCode=33351"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson(SM) Rewards Visa Signature® Card\". The official Club Carlson Premier Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update.",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and the remaining financial fields are retained as unverified historical data. Exact lifecycle and successor remain unknown; a product-specific official archive or conversion notice is still required. Historical artwork provenance (checked 2026-10-21): the retained 2016-05-08 archive of the official U.S. Bank product page for this card shows the image 222x139-ccsig.png with alt text \"Club Carlson(SM) Rewards Visa Signature® Card\". The official Club Carlson Premier Visa Signature page uses the identical asset, so the two records share it as an issuer-confirmed shared plastic (SHARED_ART_FAMILIES). The linked image resolves to a 2015-09-06 archive capture of the U.S. Bank-hosted asset and was visually inspected as the black Club Carlson Visa Signature card. It is a low-resolution 222x139 historical image; it is not evidence of lifecycle or the financial fields, which were not reverified in this artwork-only update. Annual fee correction (checked 2026-10-21): the record previously stored a $0 fee, which conflicted with the official product page's renewal bonus. The retained 2016-05-08 archive of U.S. Bank's official Club Carlson(SM) Rewards Visa Signature® Card Terms and Conditions, linked as Pricing & Terms from that product page, lists \"Annual Membership Fee\" $50 and no introductory annual fee, so annual_fee is $50 with first_year $50 as of those 2016 terms; fee history in other years was not checked.",
     "art_grade": "issuer"
   },
   {
