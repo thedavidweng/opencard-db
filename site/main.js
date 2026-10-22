@@ -43,19 +43,36 @@
 
   function order(c) { var i = ["us", "ca", "cn"].indexOf(c); return i < 0 ? 99 : i; }
 
+  function listCountries(codes) {
+    var names = codes.slice().sort(function (a, b) { return order(a) - order(b); }).map(function (c) {
+      return c === "us" ? "the US" : (COUNTRIES[c] || c.toUpperCase());
+    });
+    if (names.length < 2) return names.join("");
+    return names.slice(0, -1).join(", ") + " and " + names[names.length - 1];
+  }
+
   function renderMeta() {
-    var parts = [];
-    if (meta.count != null) parts.push(meta.count.toLocaleString("en-US") + " cards");
-    if (meta.countries) parts.push(meta.countries.slice().sort(function (a, b) { return order(a) - order(b); }).map(function (c) { return COUNTRY_SHORT[c] || c.toUpperCase(); }).join(" · "));
-    if (meta.version) parts.push("v" + meta.version);
-    if (parts.length) $all('[data-live="summary"]').forEach(function (n) { n.textContent = parts.join(" · "); });
-    if (meta.version) $all('[data-live="tag"]').forEach(function (n) { n.textContent = "v" + meta.version; });
+    if (meta.version) {
+      $all('[data-live="tag"]').forEach(function (n) { n.textContent = "v" + meta.version; });
+      $all('[data-live="version"]').forEach(function (n) {
+        n.textContent = "v" + meta.version;
+        n.setAttribute("aria-label", "Latest release, v" + meta.version);
+        n.hidden = false;
+      });
+    }
+    if (meta.count != null) {
+      var facts = meta.count.toLocaleString("en-US") + " cards" +
+        (meta.countries && meta.countries.length ? " from " + listCountries(meta.countries) : "");
+      $all('[data-live="facts"]').forEach(function (n) {
+        n.textContent = (meta.version ? "The latest release is v" + meta.version + ". " : "") + "The catalog holds " + facts + ".";
+        n.hidden = false;
+      });
+    }
     if (meta.built) {
       var d = new Date(meta.built);
       if (!isNaN(d)) {
         $all('[data-live="built"]').forEach(function (n) {
-          n.textContent = "Catalog built " + d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) +
-            (meta.version ? " · latest release v" + meta.version : "") + ".";
+          n.textContent = "Catalog built " + d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" }) + ".";
         });
       }
     }
@@ -175,9 +192,9 @@
         return new Intl.NumberFormat("en-US", { style: "currency", currency: f.currency || "USD", minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }).format(n);
       } catch (e) { return n + " " + (f.currency || ""); }
     };
-    if (f.amount === 0) return "No annual fee";
+    if (f.amount === 0) return fmt(0) + " annual fee";
     var s = fmt(f.amount) + " annual fee";
-    if (f.first_year === 0) s += ", $0 first year".replace("$0", fmt(0));
+    if (f.first_year === 0) s += ", " + fmt(0) + " in the first year";
     return s;
   }
 
@@ -233,18 +250,19 @@
     m.appendChild(el("span", null, [card.issuer, COUNTRY_SHORT[card.country] || card.country.toUpperCase()].join(" · ")));
     m.appendChild(el("span", null, [NETWORKS[card.network] || card.network, tier].filter(Boolean).join(" ")));
     m.appendChild(el("span", null, fee(card)));
-    m.appendChild(el("span", "status status-" + card.status, STATUS[card.status] || card.status));
+    // Status only when it's notable; "Active" on every row is noise.
+    if (card.status !== "active") m.appendChild(el("span", "status", STATUS[card.status] || card.status));
     main.appendChild(m);
     li.appendChild(main);
 
     var links = el("div", "r-links");
     var a1 = el("a", null, "JSON");
     a1.href = name.href; a1.target = "_blank"; a1.rel = "noopener";
-    a1.setAttribute("aria-label", card.name + " — API JSON");
+    a1.setAttribute("aria-label", "API JSON for " + card.name);
     a1.tabIndex = -1; // reachable via the row link; keeps Tab order short
     var a2 = el("a", null, "Source");
     a2.href = sourcePath(card); a2.target = "_blank"; a2.rel = "noopener";
-    a2.setAttribute("aria-label", card.name + " — source file on GitHub");
+    a2.setAttribute("aria-label", "Source file for " + card.name + " on GitHub");
     links.appendChild(a1);
     links.appendChild(a2);
     li.appendChild(links);
@@ -284,12 +302,12 @@
   function noResults(q) {
     var f = document.createDocumentFragment();
     var p1 = el("p");
-    p1.appendChild(document.createTextNode("No cards match "));
+    p1.appendChild(document.createTextNode("Nothing matched "));
     p1.appendChild(el("strong", null, "\u201c" + q + "\u201d"));
     p1.appendChild(document.createTextNode("."));
     var p2 = el("p");
-    p2.appendChild(document.createTextNode("Try an issuer or network, or "));
-    var a = el("a", null, "request the card");
+    p2.appendChild(document.createTextNode("Try searching by issuer or network instead. If the card is missing, you can "));
+    var a = el("a", null, "request it");
     a.href = "https://github.com/" + REPO + "/issues/new?template=add-card.yml";
     p2.appendChild(a);
     p2.appendChild(document.createTextNode("."));
@@ -312,7 +330,7 @@
     var res = search(q);
     if (!res.length) {
       noResults(q.trim());
-      setStatus("No results", true);
+      setStatus("0 cards", true);
       return;
     }
     list.textContent = "";
@@ -427,8 +445,9 @@
       if (e.key === "ArrowUp") { e.preventDefault(); focusRow(rowLinks().length - 1); }
     });
 
-    $all("button[data-q]", examples).forEach(function (b) {
-      b.addEventListener("click", function () {
+    $all("a[data-q]", examples).forEach(function (b) {
+      b.addEventListener("click", function (e) {
+        e.preventDefault();
         input.value = b.getAttribute("data-q");
         input.focus();
         run();
