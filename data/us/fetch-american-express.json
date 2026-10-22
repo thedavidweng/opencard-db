@@ -1,0 +1,69 @@
+{
+  "id": "us-fetch-american-express",
+  "schema_version": "1.0.0",
+  "name": "Fetch American Express Card",
+  "localized_names": {
+    "en": "Fetch American Express Card"
+  },
+  "country": "us",
+  "issuer": "First Electronic Bank",
+  "issuer_id": "first-electronic-bank",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Fetch Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 5,
+      "description": "5 Fetch Points per dollar on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Grocery and retail",
+        "points_per_dollar": 10,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Fetch Points redeem for gift cards, charitable donations, sweepstakes entries and Fetch merchandise.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://fetch.com/blog/smart-shopping/best-credit-card-for-groceries",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://fetch.com/blog/smart-shopping/best-credit-card-for-groceries",
+    "https://media-assets.imprint.co/partners/ftch/legal/rewards-terms-en",
+    "https://business.fetch.com/newsroom/introducing-the-fetch-american-express-card"
+  ],
+  "notes": "Serviced by Imprint Payments, Inc. Includes access to Amex Offers. No American Express network package applies, so network_tier is none."
+}
