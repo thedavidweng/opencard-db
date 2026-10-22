@@ -1,0 +1,75 @@
+{
+  "id": "us-wescom-bruin-edge-visa",
+  "schema_version": "1.0.0",
+  "name": "Wescom Bruin Edge Visa Credit Card",
+  "localized_names": {
+    "en": "Wescom Bruin Edge Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "Wescom Financial",
+  "issuer_id": "wescom",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.65,
+      "max": 26.65,
+      "type": "variable"
+    },
+    "notes": "0% intro APR on purchases and balance transfers for the first six months, then 16.65% to 26.65% variable APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Wescom membership required."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "MyRewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "1.5 MyRewards points per $1 on purchases (1.5% cash back)."
+    },
+    "categories": [
+      {
+        "label": "UCLA Store and UCLAStore.com, select ASUCLA restaurants, Brookside Golf Course, Rose Bowl Stadium and Pauley Pavilion concessions, UCLA tickets",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "MyRewards points redeem for cash back, gift cards, merchandise and travel; redemption values may vary.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 2500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "50,000 bonus MyRewards points (enough for $500 cash back) after $2,500 in purchases in the first three months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.wescom.org/bruinedge",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.wescom.org/bruinedge"
+  ],
+  "notes": "UCLA affinity card. No Visa network package is stated, so network_tier is none."
+}
