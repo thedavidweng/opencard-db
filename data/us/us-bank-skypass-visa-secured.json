@@ -12,11 +12,11 @@
   "network_tier": "classic",
   "type": "credit",
   "segment": "personal",
-  "status": "active",
+  "status": "discontinued",
   "annual_fee": {
-    "amount": 0.0,
+    "amount": null,
     "currency": "USD",
-    "first_year": 0.0,
+    "first_year": null,
     "waiver_conditions": null
   },
   "apr": {
@@ -25,7 +25,7 @@
       "max": null,
       "type": "variable"
     },
-    "notes": "Variable APR applies; rate not displayed on the product page. Refer to the Cardmember Agreement for current terms."
+    "notes": "Historical APR is not documented on the remaining official product page. Existing cardholders should consult their Cardmember Agreement."
   },
   "fx_fee": {
     "percent": null,
@@ -41,8 +41,8 @@
     "structure": "single",
     "rate_type": "miles_multiplier",
     "base_rate": {
-      "points_per_dollar": 1,
-      "description": "Earn SKYPASS miles on eligible purchases; refer to the Cardmember Agreement for the earning rate."
+      "points_per_dollar": null,
+      "description": "Historical earning rates are not documented on the remaining official product page."
     },
     "redemption_notes": "Miles accumulate in a Korean Air SKYPASS frequent flyer account and can be redeemed for Korean Air awards. No mileage caps on any SKYPASS Visa card."
   },
@@ -78,11 +78,11 @@
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-26",
+  "last_verified": "2026-10-19",
   "sources": [
     "https://www.skypassvisa.com/credit/visaSecuredCard.do",
     "https://www.skypassvisa.com/credit/contactUs.do",
     "https://www.skypassvisa.com/credit/faqs.do"
   ],
-  "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. The visaSecuredCard.do product page redirects to the SKYPASS Visa welcome page, so specific fees/APR/earning rates are not displayed; the card is confirmed as an active product via the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Classic Visa for servicing). Secured card for credit building requiring a refundable deposit."
+  "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. On 2026-10-19 the official visaSecuredCard.do page explicitly states in its meta description: 'This product is no longer available.' Unlike the SkyBlue product page, the secured page offers no product-specific application link or current offer. The contact page lists existing-account servicing, not availability to new applicants. No official withdrawal date or successor is stated, so neither is inferred. Historical annual fees and earning rates are not documented on the remaining pages and are left unknown. This verification covers the unavailable-product notice and servicing identity, not a refresh of historical terms. Existing artwork attribution and official Source order are retained."
 }
