@@ -381,6 +381,16 @@
       ]
     },
     {
+      "id": "sofi",
+      "name": "SoFi",
+      "aliases": [
+        "SoFi Bank"
+      ],
+      "domains": [
+        "sofi.com"
+      ]
+    },
+    {
       "id": "cross-river-bank",
       "name": "Cross River Bank",
       "aliases": [
