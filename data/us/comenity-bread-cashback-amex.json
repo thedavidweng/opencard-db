@@ -1,0 +1,67 @@
+{
+  "id": "us-comenity-bread-cashback-amex",
+  "schema_version": "1.0.0",
+  "name": "Bread Cashback American Express Credit Card",
+  "localized_names": {
+    "en": "Bread Cashback American Express Credit Card"
+  },
+  "country": "us",
+  "issuer": "Comenity Capital Bank",
+  "issuer_id": "comenity",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.99,
+      "max": 33.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 33.49,
+      "max": 33.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 18.99% to 33.49% and cash advance APR 33.49%, variable with the Prime Rate, per the rate and fee summary printed October 2026."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back on purchases, with no caps, opt-ins or categories."
+    },
+    "categories": [],
+    "redemption_notes": "Redeem as a statement credit or direct deposit. Rewards never expire.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.breadfinancial.com/en/bread-financial-cashback-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.breadfinancial.com/en/bread-financial-cashback-card.html",
+    "https://c.comenity.net/legaldocs/breadcashback/legal-documents/schumerbox"
+  ],
+  "notes": "Issued by Comenity Capital Bank (Bread Financial) under license from American Express."
+}
