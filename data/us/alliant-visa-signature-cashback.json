@@ -1,0 +1,76 @@
+{
+  "id": "us-alliant-visa-signature-cashback",
+  "schema_version": "1.0.0",
+  "name": "Alliant Visa Signature Cashback Credit Card",
+  "localized_names": {
+    "en": "Alliant Visa Signature Cashback Credit Card"
+  },
+  "country": "us",
+  "issuer": "Alliant Credit Union",
+  "issuer_id": "alliant",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Alliant membership required."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cash back on every purchase."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back is paid as a statement credit or as a deposit into an Alliant checking or savings account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "visa-signature-luxury-hotel-collection",
+      "title": "Visa Signature Luxury Hotel Collection",
+      "category": "other",
+      "source": "network",
+      "description": "Special guest status at 900+ Visa Signature Luxury Hotel properties."
+    },
+    {
+      "id": "visa-signature-concierge",
+      "title": "Visa Signature Concierge",
+      "category": "other",
+      "source": "network",
+      "description": "Visa Signature Concierge service."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.alliantcreditunion.org/credit-cards/visa-signature-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.alliantcreditunion.org/credit-cards/visa-signature-card"
+  ],
+  "notes": "The purchase APR is not stated as text on the product page, so it is null."
+}
