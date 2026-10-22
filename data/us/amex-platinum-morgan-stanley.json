@@ -128,7 +128,7 @@
   },
   "official_url": "https://global.americanexpress.com/card-benefits/view-all/morgan-stanley-platinum-card",
   "image": {
-    "url": null,
+    "url": "https://apply.americanexpress.com/wp-content/themes/openforum/morgan-stanley/images/chg_plat_metal_morgan.svg",
     "attribution": "© American Express",
     "local_path": null
   },
@@ -136,7 +136,8 @@
   "last_verified": "2026-07-25",
   "sources": [
     "https://global.americanexpress.com/card-benefits/view-all/morgan-stanley-platinum-card",
-    "https://www.morganstanley.com/what-we-do/wealth-management/cashplus"
+    "https://www.morganstanley.com/what-we-do/wealth-management/cashplus",
+    "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38"
   ],
-  "notes": "The Platinum Card from American Express Exclusively for Morgan Stanley, issued by American Express National Bank; available only to eligible Morgan Stanley Smith Barney brokerage clients. Annual fee $895, verified 2026-07-25 against the Amex application listing and Morgan Stanley CashPlus disclosures. The card's headline Morgan Stanley perk is a recurring $895 Annual Engagement Bonus for Platinum CashPlus clients (current disclosure footnote; an older $695 figure appears only in legacy marketing video content). No standalone Membership Rewards welcome offer was published on the official pages reviewed (signup_bonus null). APR not published on the reviewed pages; standard Platinum earn structure (5x flights/prepaid hotels, 1x base) reflected. network_tier is none for Amex."
+  "notes": "The Platinum Card from American Express Exclusively for Morgan Stanley, issued by American Express National Bank; available only to eligible Morgan Stanley Smith Barney brokerage clients. Annual fee $895, verified 2026-07-25 against the Amex application listing and Morgan Stanley CashPlus disclosures. The card's headline Morgan Stanley perk is a recurring $895 Annual Engagement Bonus for Platinum CashPlus clients (current disclosure footnote; an older $695 figure appears only in legacy marketing video content). No standalone Membership Rewards welcome offer was published on the official pages reviewed (signup_bonus null). APR not published on the reviewed pages; standard Platinum earn structure (5x flights/prepaid hotels, 1x base) reflected. network_tier is none for Amex. The official Amex application page linked by Morgan Stanley CashPlus was checked 2026-10-20 and explicitly associates this artwork with the Morgan Stanley Platinum Card. This artwork-only check does not reverify the stored financial terms."
 }

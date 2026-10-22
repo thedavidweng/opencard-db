@@ -148,7 +148,7 @@
   },
   "official_url": "https://creditcards.wellsfargo.com/attune-credit-card/",
   "image": {
-    "url": null,
+    "url": "https://cardbenefits.wf.com/wp-content/uploads/2025/01/Attune-Card_344x217.png",
     "attribution": "© Wells Fargo",
     "local_path": null
   },
@@ -158,6 +158,6 @@
     "https://creditcards.wellsfargo.com/attune-credit-card/",
     "https://cardbenefits.wf.com/product/mastercard_attune/"
   ],
-  "notes": "Wells Fargo Attune® Card. World Elite Mastercard (confirmed from benefits page). Product URL redirected to general credit cards listing page without Attune-specific content. Benefits page (cardbenefits.wf.com) successfully fetched and verified rewards structure and benefits. Annual fee, APR, FX fee, and signup bonus preserved from prior verification (2026-07-23) as they were not visible on fetched pages. Corrected name from generic page title to 'Wells Fargo Attune® Card' based on benefits page.",
+  "notes": "Wells Fargo Attune® Card. World Elite Mastercard (confirmed from benefits page). Product URL redirected to general credit cards listing page without Attune-specific content. Benefits page (cardbenefits.wf.com) successfully fetched and verified rewards structure and benefits. Annual fee, APR, FX fee, and signup bonus preserved from prior verification (2026-07-23) as they were not visible on fetched pages. Corrected name from generic page title to 'Wells Fargo Attune® Card' based on benefits page. The retained official Attune benefits page was checked 2026-10-20 and labels this image Product showcase. Wells Fargo Attune Mastercard. The visible card face matches Attune. This artwork-only check does not reverify financial terms or application availability.",
   "segment": "personal"
 }

@@ -111,7 +111,7 @@
   },
   "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
   "image": {
-    "url": null,
+    "url": "https://www.td.com/content/dam/tdct/images/personal-banking/aeroplan-infinite-visa-card-fr-comp39-en.jpeg",
     "attribution": "© The Toronto-Dominion Bank",
     "local_path": null
   },
@@ -121,6 +121,6 @@
     "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
     "https://www.td.com/ca/en/personal-banking/products/credit-cards"
   ],
-  "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada.",
+  "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada. Official TD Aeroplan Visa Infinite product-page artwork was checked 2026-10-20; the image displays the TD Aeroplan Visa Infinite card. This artwork-only check does not reverify the stored financial terms.",
   "segment": "personal"
 }
