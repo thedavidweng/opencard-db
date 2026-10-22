@@ -59,6 +59,7 @@
     "us-city-national-bank-visa-crystal-commercial",
     "us-discover-it-cash-back",
     "us-discover-it-chrome",
+    "us-discover-it-miles",
     "us-discover-it-secured",
     "us-discover-it-student-cash-back",
     "us-discover-it-student-chrome",
@@ -192,12 +193,12 @@
     "us-wells-fargo-active-cash",
     "us-wells-fargo-autograph",
     "us-wells-fargo-autograph-journey",
-    "us-wells-fargo-reflect",
     "us-wells-fargo-visa-signature"
   ],
   "traditional": [
     "us-bank-of-america-allways-rewards",
-    "us-penfed-gold-visa"
+    "us-penfed-gold-visa",
+    "us-wells-fargo-reflect"
   ],
   "world": [
     "us-bank-of-america-business-advantage-travel-rewards",
@@ -245,12 +246,12 @@
     "us-chase-ink-business-preferred",
     "us-chase-ink-business-unlimited",
     "us-citi-aadvantage-business-world-elite",
-    "us-citi-aadvantage-executive",
     "us-citi-aadvantage-globe",
     "us-citi-aadvantage-platinum-select-world-elite",
     "us-citi-strata-elite",
     "us-citi-strata-premier",
     "us-column-bilt-blue",
+    "us-column-bilt-obsidian",
     "us-first-latam-airlines",
     "us-hsbc-elite",
     "us-hsbc-premier-world-elite",
@@ -264,6 +265,10 @@
     "us-wells-fargo-expedia-one-key",
     "us-wells-fargo-propel-world",
     "us-wells-fargo-signify-business-cash"
+  ],
+  "world_legend": [
+    "us-citi-aadvantage-executive",
+    "us-column-bilt-palladium"
   ],
   "standard": [
     "us-first-latam-airlines-standard"

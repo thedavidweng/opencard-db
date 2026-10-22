@@ -214,7 +214,9 @@
     "us-city-national-bank-visa-crystal-commercial"
   ],
   "column": [
-    "us-column-bilt-blue"
+    "us-column-bilt-blue",
+    "us-column-bilt-obsidian",
+    "us-column-bilt-palladium"
   ],
   "comenity": [
     "us-comenity-aaa-daily-advantage",
@@ -227,6 +229,7 @@
   "discover": [
     "us-discover-it-cash-back",
     "us-discover-it-chrome",
+    "us-discover-it-miles",
     "us-discover-it-secured",
     "us-discover-it-student-cash-back",
     "us-discover-it-student-chrome"

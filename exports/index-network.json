@@ -238,6 +238,8 @@
     "us-citi-strata-elite",
     "us-citi-strata-premier",
     "us-column-bilt-blue",
+    "us-column-bilt-obsidian",
+    "us-column-bilt-palladium",
     "us-first-latam-airlines",
     "us-first-latam-airlines-standard",
     "us-fnbo-amtrak-guest-rewards",
@@ -259,6 +261,7 @@
   "discover": [
     "us-discover-it-cash-back",
     "us-discover-it-chrome",
+    "us-discover-it-miles",
     "us-discover-it-secured",
     "us-discover-it-student-cash-back",
     "us-discover-it-student-chrome"

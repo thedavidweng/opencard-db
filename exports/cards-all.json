@@ -352,7 +352,7 @@
     },
     "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
     "image": {
-      "url": null,
+      "url": "https://www.td.com/content/dam/tdct/images/personal-banking/aeroplan-infinite-visa-card-fr-comp39-en.jpeg",
       "attribution": "© The Toronto-Dominion Bank",
       "local_path": null
     },
@@ -362,9 +362,9 @@
       "https://www.td.com/ca/en/personal-banking/products/credit-cards/aeroplan/aeroplan-visa-infinite-card",
       "https://www.td.com/ca/en/personal-banking/products/credit-cards"
     ],
-    "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada.",
+    "notes": "Exact earn grid and annual fee subject to TD updates; co-brand partner is Aeroplan / Air Canada. Official TD Aeroplan Visa Infinite product-page artwork was checked 2026-10-20; the image displays the TD Aeroplan Visa Infinite card. This artwork-only check does not reverify the stored financial terms.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "cn-ccb-unionpay-diamond",
@@ -743,7 +743,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "active",
+    "status": "unknown",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -825,9 +825,9 @@
       "hotel_status": null,
       "other": []
     },
-    "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/amazon-business-card/",
+    "official_url": "https://www.americanexpress.com/us/customer-service/faq.amazon-program-update.html",
     "image": {
-      "url": null,
+      "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/policies/Card_Art/amazon_bus_d1_240x152.jpg",
       "attribution": "© American Express",
       "local_path": null
     },
@@ -835,10 +835,12 @@
     "last_verified": "2026-07-24",
     "sources": [
       "https://www.americanexpress.com/amazonrewards",
-      "https://www.amazon.com/gp/help/customer/display.html?nodeId=G4QL7QHAK89CPE6P"
+      "https://www.amazon.com/gp/help/customer/display.html?nodeId=G4QL7QHAK89CPE6P",
+      "https://www.americanexpress.com/us/customer-service/faq.amazon-program-update.html",
+      "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
     ],
-    "notes": "No-annual-fee, non-Prime Amazon co-brand business card (the Prime variant earns 5% instead of 3%). Earns 3% back (or 60-day interest-free payment terms) on the first $120,000/year in eligible U.S. purchases at Amazon Business, Amazon.com, AWS, and Whole Foods Market (1% thereafter), 2% at U.S. restaurants/gas/wireless, and 1% on all other purchases. Rewards are Amazon reward points (~1 cent each) redeemable as statement credit or toward Amazon purchases — not Membership Rewards. The Amex product URL redirects to the general business-cards gallery (the card is applied for through Amazon), so earn rates were verified via the American Express Amazon Rewards Program Agreement and the Amazon help center. Prior image was wrong-product art (Business Platinum) and was cleared. Welcome offer and foreign-transaction fee not confirmed.",
-    "art_grade": "none"
+    "notes": "No-annual-fee, non-Prime Amazon co-brand business card (the Prime variant earns 5% instead of 3%). Earns 3% back (or 60-day interest-free payment terms) on the first $120,000/year in eligible U.S. purchases at Amazon Business, Amazon.com, AWS, and Whole Foods Market (1% thereafter), 2% at U.S. restaurants/gas/wireless, and 1% on all other purchases. Rewards are Amazon reward points (~1 cent each) redeemable as statement credit or toward Amazon purchases — not Membership Rewards. The Amex product URL redirects to the general business-cards gallery (the card is applied for through Amazon), so earn rates were verified via the American Express Amazon Rewards Program Agreement and the Amazon help center. Prior image was wrong-product art (Business Platinum) and was cleared. Welcome offer and foreign-transaction fee not confirmed. Official-source audit (2026-10-20): the American Express program-update FAQ says the Amazon co-brand relationship is ending and accounts are expected to move to U.S. Bank on August 14, 2026, with exceptions and an exact Replacement Date to be provided by U.S. Bank. This is an announced transition, not evidence that every account transferred on that date; current lifecycle is unknown, with no exact discontinued_date or unverified replacement-card ID assigned. The retained rewards and fees are the historical July 24, 2026 snapshot, not current U.S. Bank terms; the earlier application-channel note is historical. American Express's insurance directory explicitly associates the non-Prime Amazon Business label with this artwork, separately from Amazon Business Prime. The image is issuer-hosted historical artwork, not proof of current card availability, current design, or separate reuse permission.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-blue-business-cash",
@@ -1730,8 +1732,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "discontinued",
-    "replaced_by": "us-amex-business-gold",
+    "status": "unknown",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -1747,15 +1748,13 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
+    "official_url": "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf",
     "last_verified": "2026-07-28",
     "sources": [
-      "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0"
+      "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
+      "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf"
     ],
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
-    "notes": "Old name for Business Gold Card. Product refreshed multiple times.",
+    "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/.",
     "art_grade": "none"
   },
   {
@@ -4219,7 +4218,7 @@
     },
     "official_url": "https://www.americanexpress.com/us/credit-cards/card/amex-everyday-preferred/",
     "image": {
-      "url": null,
+      "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/amex-everyday-preferred.png",
       "attribution": "© American Express",
       "local_path": null
     },
@@ -4231,7 +4230,7 @@
       "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2025-q4-pdf-cmas/cps-lending/amex-everyday-preferred-12-31-2025.pdf"
     ],
     "notes": "Key facts (annual fee, APR formula, FX fee, signup bonus, 50% extra points) verified from official Amex cardmember agreement and terms page. Earn categories (3X U.S. supermarkets up to $6,000/year then 1X, 2X U.S. gas stations, 1X all other) confirmed from the official product page metadata. Previous image URL pointed to the wrong card art (platinum-card.png) and has been set to null.",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-gold",
@@ -4660,7 +4659,7 @@
     },
     "official_url": "https://www.americanexpress.com/us/credit-cards/card/hilton-honors/",
     "image": {
-      "url": null,
+      "url": "https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/category/cardarts/hilton-honors.png",
       "attribution": "© American Express",
       "local_path": null
     },
@@ -4672,7 +4671,7 @@
     ],
     "notes": "Product name is not a Network Tier; network_tier is none for Amex network packages. Annual fee is $0 (no annual fee). APR and signup bonus not visible on product page; preserved from prior terms verification. Benefits, rewards, annual fee, and FX fee verified on official Amex product page on 2026-07-24.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-hilton-honors-aspire",
@@ -5386,7 +5385,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "active",
+    "status": "unknown",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -5482,7 +5481,7 @@
     },
     "official_url": "https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/lowes-credit-cards/",
     "image": {
-      "url": null,
+      "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/policies/images/lowes_sbs_240x152.jpg",
       "attribution": "© American Express",
       "local_path": null
     },
@@ -5490,10 +5489,12 @@
     "last_verified": "2026-07-25",
     "sources": [
       "https://www.lowes.com/l/Credit/business-credit-center",
-      "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2024-q2-pdf-cmas/gcs-small-business/lowes-business-rewards-card-07-04-2024.pdf"
+      "https://www.americanexpress.com/content/dam/amex/en-us/company/legal/cardmember-agreements/public-site-2024-q2-pdf-cmas/gcs-small-business/lowes-business-rewards-card-07-04-2024.pdf",
+      "https://www.synchrony.com/contenthub/newsroom/synchrony-expands-partnership-with-lowes.html",
+      "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
     ],
-    "notes": "No-annual-fee Lowe's co-brand business card issued by American Express (usable anywhere Amex is accepted). Earns 2% cash back at Lowe's, U.S. restaurants, U.S. office supply stores, and U.S. wireless telephone services, and 1% on all other eligible purchases. Intro offer: 5% back at Lowe's for the first six months. Cardholders also get an automatic 5% discount on eligible Lowe's purchases. Rewards are Lowe's Business Rewards points (~1 cent each), redeemable as statement credits or Lowe's/Amex gift cards — not Membership Rewards (corrected). Amex-branded protections (car rental, extended warranty, purchase protection, Global Assist) and up to 99 free employee cards. The Amex product URL redirects to the general business-cards gallery (card is applied for through Lowe's), so earn rates and benefits were verified via the American Express cardmember agreement and Business Insider. Prior image was wrong-product art (Business Platinum) and was cleared.",
-    "art_grade": "none"
+    "notes": "No-annual-fee Lowe's co-brand business card issued by American Express (usable anywhere Amex is accepted). Earns 2% cash back at Lowe's, U.S. restaurants, U.S. office supply stores, and U.S. wireless telephone services, and 1% on all other eligible purchases. Intro offer: 5% back at Lowe's for the first six months. Cardholders also get an automatic 5% discount on eligible Lowe's purchases. Rewards are Lowe's Business Rewards points (~1 cent each), redeemable as statement credits or Lowe's/Amex gift cards — not Membership Rewards (corrected). Amex-branded protections (car rental, extended warranty, purchase protection, Global Assist) and up to 99 free employee cards. The Amex product URL redirects to the general business-cards gallery (card is applied for through Lowe's), so earn rates and benefits were verified via the American Express cardmember agreement and Business Insider. Prior image was wrong-product art (Business Platinum) and was cleared. Official-source audit (2026-10-20): Synchrony's April 30, 2026 announcement identifies the newly available MyLowe's Pro Rewards American Express Card as issued by Synchrony, with American Express continuing as the payment network. That is not proof of the old American Express-issued Lowe's Business Rewards account's exact closure or conversion date. This record retains the historical American Express issuer and July 25, 2026 financial snapshot; current lifecycle is unknown, and no unverified successor ID or discontinuation date is assigned. The earlier Lowe's application-channel note is historical and does not describe the new Synchrony offer. American Express's insurance directory associates the Lowe's Business Rewards label with the linked legacy artwork. The issuer-hosted image does not revalidate financial terms, current design, current availability, or separate reuse permission.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-marriott-bonvoy-bevy",
@@ -6595,7 +6596,7 @@
     },
     "official_url": "https://global.americanexpress.com/card-benefits/view-all/morgan-stanley-platinum-card",
     "image": {
-      "url": null,
+      "url": "https://apply.americanexpress.com/wp-content/themes/openforum/morgan-stanley/images/chg_plat_metal_morgan.svg",
       "attribution": "© American Express",
       "local_path": null
     },
@@ -6603,10 +6604,11 @@
     "last_verified": "2026-07-25",
     "sources": [
       "https://global.americanexpress.com/card-benefits/view-all/morgan-stanley-platinum-card",
-      "https://www.morganstanley.com/what-we-do/wealth-management/cashplus"
+      "https://www.morganstanley.com/what-we-do/wealth-management/cashplus",
+      "https://apply.americanexpress.com/amex-morgan-stanley-credit-cards/?page_url=38"
     ],
-    "notes": "The Platinum Card from American Express Exclusively for Morgan Stanley, issued by American Express National Bank; available only to eligible Morgan Stanley Smith Barney brokerage clients. Annual fee $895, verified 2026-07-25 against the Amex application listing and Morgan Stanley CashPlus disclosures. The card's headline Morgan Stanley perk is a recurring $895 Annual Engagement Bonus for Platinum CashPlus clients (current disclosure footnote; an older $695 figure appears only in legacy marketing video content). No standalone Membership Rewards welcome offer was published on the official pages reviewed (signup_bonus null). APR not published on the reviewed pages; standard Platinum earn structure (5x flights/prepaid hotels, 1x base) reflected. network_tier is none for Amex.",
-    "art_grade": "none"
+    "notes": "The Platinum Card from American Express Exclusively for Morgan Stanley, issued by American Express National Bank; available only to eligible Morgan Stanley Smith Barney brokerage clients. Annual fee $895, verified 2026-07-25 against the Amex application listing and Morgan Stanley CashPlus disclosures. The card's headline Morgan Stanley perk is a recurring $895 Annual Engagement Bonus for Platinum CashPlus clients (current disclosure footnote; an older $695 figure appears only in legacy marketing video content). No standalone Membership Rewards welcome offer was published on the official pages reviewed (signup_bonus null). APR not published on the reviewed pages; standard Platinum earn structure (5x flights/prepaid hotels, 1x base) reflected. network_tier is none for Amex. The official Amex application page linked by Morgan Stanley CashPlus was checked 2026-10-20 and explicitly associates this artwork with the Morgan Stanley Platinum Card. This artwork-only check does not reverify the stored financial terms.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-platinum-schwab",
@@ -6812,9 +6814,9 @@
         "Schwab Appreciation Bonus ($100-$200 based on holdings)"
       ]
     },
-    "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-platinum-card/ep-IDAE?print=false",
+    "official_url": "https://www.schwab.com/credit-cards",
     "image": {
-      "url": null,
+      "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/Q32024-New-Card-Art/NEW_plat_metal_charles_schwab_di.jpg",
       "attribution": "© American Express",
       "local_path": null
     },
@@ -6822,10 +6824,12 @@
     "last_verified": "2026-07-25",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-platinum-card/ep-IDAE?print=false",
-      "https://clientcontent.schwabcdn.com/credit-cards/faq"
+      "https://clientcontent.schwabcdn.com/credit-cards/faq",
+      "https://www.schwab.com/credit-cards",
+      "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
     ],
-    "notes": "The Platinum Card from American Express Exclusively for Charles Schwab. Annual fee $895. Name and welcome offer re-verified 2026-07-25 against the Amex application offer terms: current standard offer is 80,000 Membership Rewards points after $12,000 spend in 6 months (the previously listed elevated 150,000-point offer expired 7/8/2026). No standalone /card/ product page exists for this partner card; the Amex terms/disclosures application page is the official source. network_tier is none for Amex.",
-    "art_grade": "none"
+    "notes": "The Platinum Card from American Express Exclusively for Charles Schwab, issued by American Express National Bank. Schwab's co-brand product page identifies this card separately from the Investor card and requires an eligible Schwab account; it is an official product source in addition to the retained Amex disclosures and Schwab FAQ. Financial fields and last_verified remain the July 2026 snapshot, not a complete current verification. The inherited assertion about an elevated offer's expiry has not been independently established by this identity audit. Current product-specific disclosures are still needed to reverify all financial terms and artwork. network_tier is none for Amex. Artwork-only verification on 2026-10-20: the American Express car-rental insurance directory labels this exact co-brand and links the 240x152 issuer-hosted image used here. This low-resolution benefit-directory artwork does not establish current design availability, application status or a full financial-terms refresh. Copyright attribution identifies the issuer; it is not a separate permission grant.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-plenti",
@@ -6838,8 +6842,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2018-02-16",
+    "status": "unknown",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -6856,14 +6859,11 @@
     },
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html",
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html"
     ],
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
-    "notes": "Card discontinued February 2018. Plenti rewards program ended July 2018.",
+    "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. This is not a credit-card withdrawal or conversion notice and does not support the previously recorded February 16, 2018 card withdrawal date. The old card URL returns a generic shell and the checked servicing URL returns 404; card availability, withdrawal date and successor remain unknown. Historical fees and rewards remain unverified.",
     "art_grade": "none"
   },
   {
@@ -6877,8 +6877,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "discontinued",
-    "discontinued_date": "2026-03-25",
+    "status": "unknown",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -6894,16 +6893,18 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/graphite-business-cash-unlimited-card/",
-    "last_verified": "2026-07-28",
+    "official_url": "https://web.archive.org/web/20250110024850/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-plum-card-amex/",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.americanexpress.com/en-us/business/trends-and-insights/articles/graphite-business-cash-unlimited-card/"
+      "https://web.archive.org/web/20250110024850/https://www.americanexpress.com/us/credit-cards/business/business-credit-cards/american-express-plum-card-amex/"
     ],
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
-    "notes": "Discontinued March 2026 when Graphite card launched. Early-payment discount card for businesses.",
-    "art_grade": "none"
+    "notes": "The January 10, 2025 archived official Plum product page confirms the historical product and early-payment discount. The live product URL now redirects to the business-card catalog. The Graphite launch article (https://www.americanexpress.com/en-us/business/trends-and-insights/articles/graphite-business-cash-unlimited-card/) does not mention Plum, its withdrawal, or a conversion, so it is context rather than a source for Plum. No accessible official notice establishes current availability, an exact withdrawal date, or a successor; lifecycle remains unknown. Historical fees and rewards have not been comprehensively reverified. Historical artwork checked 2026-10-20: the retained official product-page capture dated 2025-01-10 directly references this Plum card image. The image resolves to its own 2025-01-09 archive capture and was visually verified as the matching American Express Business Plum design. Image provenance does not verify present availability or the stored financial fields.",
+    "image": {
+      "url": "https://web.archive.org/web/20250109115034im_/https://icm.aexp-static.com/Internet/Acquisition/US_en/AppContent/OneSite/open/category/cardarts/plum.png",
+      "attribution": "© American Express",
+      "local_path": null
+    },
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-premier-rewards-gold",
@@ -6916,9 +6917,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2018-10-01",
-    "replaced_by": "us-amex-gold",
+    "status": "unknown",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -6934,15 +6933,14 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.americanexpress.com/us/credit-cards/features-benefits/calculator/premier-gold/",
+    "official_url": "https://www.americanexpress.com/us/campaigns/gold-card/gold-update-faqs.html",
     "last_verified": "2026-07-28",
     "sources": [
-      "https://www.americanexpress.com/us/credit-cards/features-benefits/calculator/premier-gold/"
+      "https://www.americanexpress.com/us/credit-cards/features-benefits/calculator/premier-gold/",
+      "https://www.americanexpress.com/us/campaigns/gold-card/gold-update-faqs.html"
     ],
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
-    "notes": "Renamed to American Express Gold Card in October 2018.",
+    "notes": "Historical Premier Rewards Gold record. The American Express Gold update FAQ explicitly says the name changes from Premier Rewards Gold to American Express Gold Card, establishing the successor identity. Its October 4, 2018 benefit and metal-card availability dates are not an exact withdrawal date; discontinued_date remains absent and lifecycle status remains unknown. This retained historical FAQ is not current pricing evidence. The inherited historical financial terms and July last_verified snapshot are not reverified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/.",
+    "replaced_by": "us-amex-gold",
     "art_grade": "none"
   },
   {
@@ -7065,8 +7063,8 @@
     },
     "apr": {
       "purchase": {
-        "min": 19.49,
-        "max": 28.49,
+        "min": 19.74,
+        "max": 28.74,
         "type": "variable"
       },
       "cash_advance": {
@@ -7074,7 +7072,7 @@
         "max": 28.74,
         "type": "variable"
       },
-      "notes": "0% introductory APR for first 6 months from account opening. Then 19.49% to 28.49% variable based on creditworthiness. Cash Advance APR 28.74%. Penalty APR 29.99%. Variable APRs will not exceed 29.99%. 0% introductory plan fee for first 6 months, then up to 1.33%. Accurate as of 07/24/26."
+      "notes": "Schwab's official Investor product page lists 0% introductory purchase APR for 6 months, then 19.74% to 28.74% variable based on creditworthiness and other factors. Purchase APR checked 2026-10-20. Cash advance APR and plan-fee fields remain the unverified July 2026 snapshot; this partial correction does not reverify those terms."
     },
     "fx_fee": {
       "percent": 2.7,
@@ -7118,7 +7116,7 @@
         "title": "0% Introductory APR for 6 Months",
         "category": "other",
         "source": "issuer",
-        "description": "0% introductory APR on purchases for first 6 months from account opening, plus 0% introductory plan fee for first 6 months. After that, APR 19.49% to 28.49% variable and plan fee up to 1.33%."
+        "description": "0% introductory APR on purchases for first 6 months from account opening, then 19.74% to 28.74% variable based on creditworthiness and other factors. Plan-fee terms are not reverified by this purchase APR source."
       },
       {
         "id": "venue-collection-concessions-credit",
@@ -7138,20 +7136,22 @@
         "2.7% foreign transaction fee"
       ]
     },
-    "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false",
+    "official_url": "https://www.schwab.com/credit-cards",
     "image": {
-      "url": null,
+      "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/policies/images/schwab_cob_ch_240x152.png",
       "attribution": "© American Express",
       "local_path": null
     },
     "bin_hints": [],
     "last_verified": "2026-07-24",
     "sources": [
-      "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false"
+      "https://www.americanexpress.com/us/credit-cards/card-application/apply/partner/print/personal-card/csb/charles-schwab-investor-credit-card/ep-ADAP?print=false",
+      "https://www.schwab.com/credit-cards",
+      "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
     ],
-    "notes": "Charles Schwab Investor Credit Card from American Express. $0 annual fee. 1.5% flat cash back auto-deposited to Schwab brokerage. 2.7% foreign transaction fee. 0% intro APR for 6 months. $200 statement credit after $1,000 in first 3 months (corrected from prior $300 — page shows $200). Issued by American Express National Bank.",
+    "notes": "Charles Schwab Investor Credit Card from American Express, issued by American Express National Bank. Schwab's co-brand product page identifies the Investor card separately from the Schwab Platinum card and requires an eligible Schwab account. The inherited Amex ep-ADAP application URL is retained as a historical reference, not a readable current offer. Purchase APR is corrected from the readable product page; other financial fields and last_verified remain the July 2026 snapshot, not a complete current verification. Current product-specific disclosures are still needed to reverify those terms. The separate linked InvestorCard.jpg returned an HTML authorization error rather than image bytes and could not be used. Artwork-only verification on 2026-10-20: the American Express car-rental insurance directory labels this exact co-brand and links the 240x152 issuer-hosted image used here. This low-resolution benefit-directory artwork does not establish current design availability, application status or a full financial-terms refresh. Copyright attribution identifies the issuer; it is not a separate permission grant.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-simplycash-plus-business",
@@ -7165,7 +7165,6 @@
     "type": "credit",
     "segment": "business",
     "status": "discontinued",
-    "discontinued_date": "2019-07-01",
     "replaced_by": "us-amex-blue-business-cash",
     "annual_fee": {
       "amount": null,
@@ -7183,15 +7182,20 @@
     },
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/business/credit-cards/simplycash-plus-vs-blue-business-cash/",
-    "last_verified": "2026-07-28",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.americanexpress.com/us/business/credit-cards/simplycash-plus-vs-blue-business-cash/"
+      "https://www.americanexpress.com/us/business/credit-cards/simplycash-plus-vs-blue-business-cash/",
+      "https://www.americanexpress.com/us/credit-cards/features-benefits/policies/car-rental-loss-and-damage-insurance-terms.html"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Replaced by Blue Business Cash Card in July 2019.",
-    "art_grade": "none"
+    "notes": "American Express states that SimplyCash Plus is being replaced by Blue Business Cash and is no longer accepting new applications. The official comparison page does not state the exact application-withdrawal or account-conversion date; its July 5, 2019 rate date applies to the successor's APR, not this card's lifecycle. Historical fees and rewards remain unverified. On 2026-10-20, the American Express insurance directory supplied matching issuer-hosted SimplyCash Plus historical artwork; this does not establish a current design, financial terms or an exact withdrawal/conversion date.",
+    "image": {
+      "url": "https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/Q32024-New-Card-Art/SimplyCashPlusupdated.jpg",
+      "attribution": "© American Express"
+    },
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-starwood-preferred-guest-business",
@@ -7204,9 +7208,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "discontinued",
-    "discontinued_date": "2019-02-12",
-    "replaced_by": "us-amex-marriott-bonvoy-business",
+    "status": "unknown",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -7222,15 +7224,13 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0",
+    "official_url": "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf",
     "last_verified": "2026-07-28",
     "sources": [
-      "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0"
+      "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0",
+      "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf"
     ],
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
-    "notes": "Converted to Marriott Bonvoy Business Card in February 2019.",
+    "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. This establishes historical product identity, not a later withdrawal or conversion date. The retained Bonvoy Business terms URL returns 404 and is successor-branded; it does not establish this historical product or a transition. Exact lifecycle and successor remain unknown. Financial fields remain unverified and unchanged; this identity-only source repair does not advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/.",
     "art_grade": "none"
   },
   {
@@ -7498,7 +7498,7 @@
     },
     "official_url": "https://www.bankofamerica.com/credit-cards/products/air-france-credit-card/",
     "image": {
-      "url": null,
+      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/1bdx_cmsig_v-250.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
@@ -7508,8 +7508,8 @@
       "https://www.bankofamerica.com/credit-cards/products/air-france-credit-card/",
       "https://wwws.airfrance.us/information/flyingblue/carte-bancaire-partenaire"
     ],
-    "notes": "Issued by Bank of America. Visa Signature. Annual fee $89 (not $0 as previously scaffolded). No foreign transaction fees.",
-    "art_grade": "none"
+    "notes": "Issued by Bank of America. Visa Signature. Annual fee $89 (not $0 as previously scaffolded). No foreign transaction fees. Artwork-only verification 2026-10-20: the rendered Bank of America product page displays this clean card image beside the exact product heading and offer. Image attribution retained; financial terms, verification date and product lifecycle were not reverified by this artwork check.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-alaska-airlines-business",
@@ -7526,8 +7526,6 @@
     "type": "credit",
     "segment": "business",
     "status": "discontinued",
-    "discontinued_date": "2025-08-20",
-    "replaced_by": "us-bank-of-america-atmos-rewards-business",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -7543,15 +7541,16 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.bankofamerica.com/credit-cards/",
+    "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.bankofamerica.com/credit-cards/"
+      "https://www.bankofamerica.com/credit-cards/",
+      "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
     ],
-    "notes": "Rebranded to Atmos Rewards Business in August 2025.",
+    "notes": "Historical Alaska business record retained. The current issuer product page confirms an Atmos Rewards Visa Signature Business card, but does not explicitly document conversion from this historical record or its withdrawal date. Unsupported exact date and successor link are removed pending an official conversion notice. Historical fees/rewards are retained, not re-verified. No current Atmos artwork is assigned to this predecessor.",
     "art_grade": "none"
   },
   {
@@ -7569,8 +7568,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2025-08-20",
-    "replaced_by": "us-bank-of-america-atmos-rewards-ascent",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -7586,15 +7583,16 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.bankofamerica.com/credit-cards/",
+    "official_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.bankofamerica.com/credit-cards/"
+      "https://www.bankofamerica.com/credit-cards/",
+      "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html"
     ],
-    "notes": "Rebranded to Atmos Rewards Ascent in August 2025. Lower-tier version for credit limits under $5,000.",
+    "notes": "Historical lower-tier Alaska record retained. The official August 20, 2025 Atmos announcement names Alaska Airlines Visa Signature, not this Platinum Plus generation. It does not prove this record's exact withdrawal date or successor; both are unknown and unsupported values are removed. Historical credit-limit threshold, fees and rewards are retained, not re-verified. No Signature or successor artwork is borrowed.",
     "art_grade": "none"
   },
   {
@@ -7612,7 +7610,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2025-08-20",
     "replaced_by": "us-bank-of-america-atmos-rewards-ascent",
     "annual_fee": {
       "amount": null,
@@ -7629,15 +7626,16 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.bankofamerica.com/credit-cards/",
+    "official_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.bankofamerica.com/credit-cards/"
+      "https://www.bankofamerica.com/credit-cards/",
+      "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html"
     ],
-    "notes": "Rebranded to Atmos Rewards Ascent in August 2025. Standard version for credit limits $5,000+.",
+    "notes": "Bank of America's August 20, 2025 announcement explicitly says the Alaska Airlines Visa Signature card transforms into Atmos Rewards Ascent Visa Signature. Existing benefits continue without interruption; replacement card faces arrive at expiration. The announcement date does not establish the exact application-withdrawal date, which is unknown. Historical fees/rewards and the credit-limit-tier note are retained, not re-verified. No successor artwork is used.",
     "art_grade": "none"
   },
   {
@@ -7920,7 +7918,7 @@
     },
     "official_url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-credit-card/",
     "image": {
-      "url": null,
+      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/1bbt_sigcm_v_atmos_ascent_250.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
@@ -7931,7 +7929,7 @@
       "https://www.bankofamerica.com/content/documents/creditcard/atmos_rewards_ascent_visa_signature_english.pdf"
     ],
     "notes": "Atmos Rewards is the August 2025 rebrand of Alaska Airlines credit cards. Visa Signature. $95 annual fee. 70K bonus + $99 Companion Fare after $2,500 in 90 days.",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-atmos-rewards-business",
@@ -8250,7 +8248,7 @@
     },
     "official_url": "https://www.bankofamerica.com/credit-cards/products/alaska-airlines-infinite-credit-card/",
     "image": {
-      "url": null,
+      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/1bed_rewcm_v_atmos_visafront_infinite_250.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
@@ -8263,7 +8261,7 @@
     ],
     "notes": "Atmos Rewards Summit Visa Infinite card. $395 annual fee. 100,000 bonus points after $6,000 in first 90 days (corrected from prior 80K/$4K based on press release). 3X on dining, foreign purchases, and Alaska/Hawaiian. 8 Alaska Lounge passes/year. 25K Global Companion Award annually (100K after $60K spend). Product page was temporarily unavailable; verified from BofA newsroom press release dated Aug 20, 2025. APR retained from prior verification.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-business-advantage-customized-cash",
@@ -9031,7 +9029,7 @@
     },
     "official_url": "https://www.bankofamerica.com/credit-cards/products/norwegian-cruise-lines-credit-card/",
     "image": {
-      "url": null,
+      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/radz_wldcm_mc_250.png",
       "attribution": "© Bank of America",
       "local_path": null
     },
@@ -9040,8 +9038,8 @@
     "sources": [
       "https://www.bankofamerica.com/credit-cards/products/norwegian-cruise-lines-credit-card/"
     ],
-    "notes": "Norwegian Cruise Line® World Mastercard®. No annual fee, no foreign transaction fees. 3X Norwegian, 2X air/hotel, 1X other. 20K bonus points ($200 off cruise) after $1,000 in 90 days. WorldPoints® rewards redeemable for stateroom upgrades, onboard credits, travel, cash and gift cards. Official product page was temporarily unavailable at last verification; rewards/fees/benefits sourced from Bank of America page content.",
-    "art_grade": "none"
+    "notes": "Norwegian Cruise Line® World Mastercard®. No annual fee, no foreign transaction fees. 3X Norwegian, 2X air/hotel, 1X other. 20K bonus points ($200 off cruise) after $1,000 in 90 days. WorldPoints® rewards redeemable for stateroom upgrades, onboard credits, travel, cash and gift cards. Official product page was temporarily unavailable at last verification; rewards/fees/benefits sourced from Bank of America page content. Artwork-only verification 2026-10-20: the rendered Bank of America product page displays this clean card image beside the exact product heading and offer. Image attribution retained; financial terms, verification date and product lifecycle were not reverified by this artwork check.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-platinum-plus",
@@ -9559,8 +9557,8 @@
     },
     "official_url": "https://www.bankofamerica.com/credit-cards/products/travel-rewards-credit-card/",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://www.bankofamerica.com/content/images/ContextualSiteGraphics/CreditCardArt/en_US/Approved_PCM/8blm_trvsigcm_v_250x158.png",
+      "attribution": "© Bank of America",
       "local_path": null
     },
     "bin_hints": [],
@@ -9572,7 +9570,7 @@
     ],
     "notes": "Credit score requirements and non-listed travel perks were not stated in the official Bank of America sources.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-unlimited-cash-rewards",
@@ -10164,8 +10162,7 @@
     "network_tier": "world",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2016-09-01",
+    "status": "unknown",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -10247,15 +10244,12 @@
       "attribution": null,
       "local_path": null
     },
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
     "bin_hints": [],
     "last_verified": "2026-07-26",
     "sources": [
       "https://web.archive.org/web/20190823001527/https://cards.barclaycardus.com/banking/about-us/newsroom/barclaycard-arrival-world-mastercard-travel-rewards-card/"
     ],
-    "notes": "Discontinued 2016. No-annual-fee version of Arrival+. Earned 2x miles on travel and 1x on all other purchases with 10% miles back on redemption. No foreign transaction fees. The official product page is no longer live; verified from a Wayback Machine snapshot of the Barclays newsroom announcement page (Aug 2019).",
+    "notes": "Historical Arrival World Mastercard record, distinct from Arrival Plus. Official-source evidence boundary: the retained issuer-newsroom archive identifies the product but does not establish a precise withdrawal date; its August 2019 capture is not a product closure date. The inherited financial terms (2x travel, 1x other purchases, 10% redemption rebate, $0 annual fee and no foreign transaction fees) remain historical metadata, not a current verification. Exact lifecycle and successor are unknown. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/.",
     "art_grade": "none"
   },
   {
@@ -10272,8 +10266,7 @@
     "network_tier": "world_elite",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2019-01-01",
+    "status": "unknown",
     "annual_fee": {
       "amount": 89,
       "currency": "USD",
@@ -10358,20 +10351,17 @@
     },
     "official_url": "https://web.archive.org/web/20190119224625/https://cards.barclaycardus.com/banking/cards/barclaycard-arrival-plus-world-elite-mastercard/",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://web.archive.org/web/20190118135018im_/https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-front/ArrivalPlusWE_NewMC_card_flat_230x157.png",
+      "attribution": "© Barclays Bank Delaware",
       "local_path": null
     },
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
     "bin_hints": [],
     "last_verified": "2026-07-26",
     "sources": [
       "https://web.archive.org/web/20190119224625/https://cards.barclaycardus.com/banking/cards/barclaycard-arrival-plus-world-elite-mastercard/"
     ],
-    "notes": "Closed to new applicants in 2019. Still exists for legacy cardholders. Earned unlimited 2x miles on every purchase with 5% miles back on redemption. $89 annual fee waived first year. No foreign transaction fees. Verified from Wayback Machine snapshot of the official Barclays product page (Jan 2019).",
-    "art_grade": "none"
+    "notes": "Historical Arrival Plus World Elite Mastercard record. Official-source evidence boundary: the retained January 2019 issuer-page archive identifies the product but does not establish a precise withdrawal date or current legacy servicing. The inherited financial terms (2x miles, 5% redemption rebate, $89 annual fee waived first year, no foreign transaction fees) remain historical metadata, not a current verification. Exact withdrawal date, successor and current servicing are unknown. Historical artwork provenance: the retained 2019-01-19 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2019-01-18 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 230x157 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-barclays-breeze",
@@ -10672,8 +10662,7 @@
     "network_tier": "world",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2017-11-30",
+    "status": "unknown",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -10751,20 +10740,17 @@
     },
     "official_url": "https://web.archive.org/web/20170214231009/https://home.barclaycardus.com/cards/barclaycard-cashforward.html",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://web.archive.org/web/20170930123759im_/https://home.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/OCB_card_rRGB_CashForward_WM_Angled359x246_L.png",
+      "attribution": "© Barclays Bank Delaware",
       "local_path": null
     },
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
     "bin_hints": [],
     "last_verified": "2026-07-26",
     "sources": [
       "https://web.archive.org/web/20170214231009/https://home.barclaycardus.com/cards/barclaycard-cashforward.html"
     ],
-    "notes": "Discontinued November 2017. 1.5% cashback with 5% redemption bonus when redeeming into a Barclays account. No annual fee, 3% foreign transaction fee. Verified from Wayback Machine snapshot of the official Barclays product page (Feb 2017).",
-    "art_grade": "none"
+    "notes": "Historical CashForward World Mastercard record. Official-source evidence boundary: the retained February 2017 issuer-page archive identifies the product but does not establish a precise withdrawal date. The inherited financial terms (1.5% cash rewards, 5% redemption bonus, $0 annual fee and 3% foreign transaction fee) remain historical metadata, not a current verification. Exact lifecycle and successor are unknown. Historical artwork provenance: the retained 2017-02-14 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2017-09-30 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 359x246 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-barclays-diamond-resorts-international",
@@ -10780,8 +10766,7 @@
     "network_tier": "world",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2021-03-10",
+    "status": "unknown",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -10879,20 +10864,17 @@
     },
     "official_url": "https://web.archive.org/web/20210227185747/https://cards.barclaycardus.com/banking/cards/diamond-resorts-international-mastercard/",
     "image": {
-      "url": null,
-      "attribution": null,
+      "url": "https://web.archive.org/web/20210224104515im_/https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-front/DRI_Diamond_Flat_230x157.png",
+      "attribution": "© Barclays Bank Delaware",
       "local_path": null
     },
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
     "bin_hints": [],
     "last_verified": "2026-07-26",
     "sources": [
       "https://web.archive.org/web/20210227185747/https://cards.barclaycardus.com/banking/cards/diamond-resorts-international-mastercard/"
     ],
-    "notes": "Discontinued after Diamond Resorts acquired by Hilton Grand Vacations. The card was a World Mastercard (not Visa as sometimes reported). Earned 2x Diamond Plus Points on Diamond Resorts purchases, 1x elsewhere. $0 annual fee, 3% foreign transaction fee. Verified from Wayback Machine snapshot of the official Barclays product page (Feb 2021).",
-    "art_grade": "none"
+    "notes": "Historical Diamond Resorts World Mastercard record. Official-source evidence boundary: the retained February 2021 issuer-page archive identifies the product but does not establish a precise withdrawal date or a card closure caused by a corporate acquisition. The inherited financial terms (2x Diamond Resorts purchases, 1x elsewhere, $0 annual fee and 3% foreign transaction fee) remain historical metadata, not a current verification. Exact lifecycle and successor are unknown. Historical artwork provenance: the retained 2021-02-27 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2021-02-24 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 230x157 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-barclays-emirates-skywards-premium-world-elite",
@@ -11440,7 +11422,7 @@
     "network_tier": "none",
     "type": "credit",
     "segment": "business",
-    "status": "discontinued",
+    "status": "unknown",
     "annual_fee": {
       "amount": 49,
       "currency": "USD",
@@ -11514,15 +11496,13 @@
       "attribution": null,
       "local_path": null
     },
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
     "bin_hints": [],
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.barclaycardus.com/"
+      "https://www.barclaycardus.com/",
+      "https://www.flyfrontier.com/frontiermiles/terms-and-conditions/"
     ],
-    "notes": "DOC 2018 marked as discontinued. Frontier-Barclays partnership extended to 2037 per SEC filings but business card availability unclear. The Frontier Airlines MasterCard BusinessCard carried a $49 annual fee, earned 2x miles on Frontier ticket purchases and 1x on other purchases, with 12,500 bonus miles on activation. Cardholders spending more than $60,000 per calendar year were upgraded to elite status. The official product page is no longer available; barclaycardus.com is cited as the issuer's homepage.",
+    "notes": "Frontier's official FRONTIER Miles terms name the Frontier Airlines Business Mastercard and identify Barclays Bank Delaware as its issuer. The terms direct cardholders to their Barclays cardholder agreement for card-specific earning terms. This acknowledgement does not establish that the current program reference is the same generation as the inherited 2018 record. Current application availability, withdrawal date, conversion and successor remain unknown; the prior discontinued classification relied on a secondary source. The inherited $49 fee, 2x/1x earning rates, 12,500-mile activation offer and other financial terms have not been verified against an official agreement for that historical generation. No matching historical official artwork has been established. Historical secondary reference (not an official source for lifecycle or terms): https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
     "art_grade": "none"
   },
   {
@@ -13288,7 +13268,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2021-10-22",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -13401,7 +13380,7 @@
     "sources": [
       "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber"
     ],
-    "notes": "Discontinued October 2021. Cardholders product-changed to Barclays View Mastercard. The Uber Visa was a no-annual-fee Visa Signature card earning 4% back on dining/Uber Eats, 3% on travel/Uber rides, 2% on online purchases, 1% elsewhere. No foreign transaction fees. Verified from Wayback Machine snapshot of the official Barclays product page (Aug 2020).",
+    "notes": "Historical Uber Visa record. The retained August 2020 Wayback URL checked 2026-10-20 returns generic Barclays welcome/browser-update content, not readable Uber product terms. It does not verify the stored financial fields, exact withdrawal date, or a conversion to Barclays View Mastercard. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor, financial terms and historical artwork remain unknown; a readable official product archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -14379,7 +14358,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "replaced_by": "us-capital-one-savor",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -14408,14 +14386,15 @@
     "official_url": "https://www.capitalone.com/credit-cards/",
     "image": null,
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-20",
     "sources": [
-      "https://www.capitalone.com/credit-cards/"
+      "https://www.capitalone.com/credit-cards/",
+      "https://www.capitalone.com/credit-cards/savor/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Launched March 2017, rebranded to Savor then SavorOne. Current successor is Capital One Savor.",
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Capital One catalog and Savor page establish a current Savor product, not the historical Premier Dining Rewards rebrand/conversion chain. Removed the unsupported replaced_by relationship and the unverified launch/rebrand chronology. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
     "art_grade": "none"
   },
   {
@@ -15469,16 +15448,16 @@
     },
     "official_url": "https://www.capitalone.com/small-business/credit-cards/spark-cash/",
     "image": {
-      "url": "https://ecm.capitalone.com/WCM/card/products/compressed-1.5x-spark-cash-card-art.png",
+      "url": "https://ecm.capitalone.com/WCM/card/products/spark-cash-plus.png",
       "attribution": "© Capital One",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://www.capitalone.com/small-business/credit-cards/spark-cash/"
     ],
-    "notes": "Verified against the official Capital One product page on 2026-07-26. Also marketed as 'Spark 2% Cash'. Earns unlimited 2% cash back on every purchase plus 5% cash back on hotels and rental cars booked through Capital One Business Travel. Introductory $0 annual fee for the first year, then $95. Business (small-business) card; segment set to 'business'.",
+    "notes": "Verified against the official Capital One product page on 2026-07-26. Also marketed as 'Spark 2% Cash'. Earns unlimited 2% cash back on every purchase plus 5% cash back on hotels and rental cars booked through Capital One Business Travel. Introductory $0 annual fee for the first year, then $95. Business (small-business) card; segment set to 'business'. Artwork re-verified on 2026-10-19 from this product page's CreditCard JSON-LD. The prior image is explicitly labeled Spark 1.5% Cash Select in the comparison panel and belongs to that different product. No historical terms or lifecycle re-verification is implied.",
     "art_grade": "issuer"
   },
   {
@@ -15516,17 +15495,17 @@
       "redemption_notes": "Miles redeemed through Capital One Travel or transferred to partners."
     },
     "benefits": [],
-    "official_url": "https://www.capitalone.com/credit-cards/",
+    "official_url": "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
     "image": null,
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.capitalone.com/credit-cards/"
+      "https://www.capitalone.com/about/newsroom/venture-business-rebrand/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Rebranded to Venture Business.",
+    "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles will now be known as Venture Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. Historical card artwork remains unverified; no successor artwork is used.",
     "art_grade": "none"
   },
   {
@@ -15564,17 +15543,17 @@
       "redemption_notes": "Miles redeemed through Capital One Travel or transferred to partners."
     },
     "benefits": [],
-    "official_url": "https://www.capitalone.com/credit-cards/",
+    "official_url": "https://www.capitalone.com/about/newsroom/venture-business-rebrand/",
     "image": null,
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.capitalone.com/credit-cards/"
+      "https://www.capitalone.com/about/newsroom/venture-business-rebrand/"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Rebranded to VentureOne Business.",
+    "notes": "Capital One's April 14, 2026 announcement explicitly states that Spark Miles Select will now be known as VentureOne Business. This record preserves the predecessor brand and its historical terms; the announcement does not establish an exact withdrawal date. The former generic credit-card catalog source did not document this predecessor or its rebrand. Historical card artwork remains unverified; no successor artwork is used.",
     "art_grade": "none"
   },
   {
@@ -17485,8 +17464,7 @@
     "network_tier": "signature",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2017-08-15",
+    "status": "unknown",
     "annual_fee": {
       "amount": 95,
       "currency": "USD",
@@ -17598,11 +17576,13 @@
     "sources": [
       "https://web.archive.org/web/20160809154338/https://creditcards.chase.com/a1/fairmont/LP"
     ],
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
-    "notes": "Applications closed after AccorHotels acquisition. Cards converted to Chase Sapphire Preferred on August 15, 2017.",
-    "art_grade": "none"
+    "notes": "Historical Fairmont Visa Signature record. Official-source evidence boundary: the retained August 2016 issuer-page archive identifies the product but does not establish a precise card closure date, conversion to Sapphire Preferred, or a closure caused by an acquisition. The inherited historical financial terms remain unverified; precise withdrawal/conversion dates and successor are unknown. Historical artwork provenance: the retained 2016-08-09 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2016-08-09 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 234x147 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed.",
+    "image": {
+      "url": "https://web.archive.org/web/20160809000636im_/https://creditcards.chase.com/T120-001/1200001/images/card_art.png",
+      "attribution": "© JPMorgan Chase & Co.",
+      "local_path": null
+    },
+    "art_grade": "issuer"
   },
   {
     "id": "us-chase-freedom-flex",
@@ -18697,8 +18677,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2018-04-05",
-    "replaced_by": "us-chase-ihg-premier",
     "annual_fee": {
       "amount": 49,
       "currency": "USD",
@@ -18739,14 +18717,15 @@
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-20",
     "sources": [
-      "https://creditcards.chase.com/"
+      "https://creditcards.chase.com/",
+      "https://creditcards.chase.com/travel-credit-cards/ihg-rewards-club/premier-select"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued 2018 when Chase launched IHG Premier and Traveler cards.",
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Chase catalog and quarterly sample-agreement registry do not establish the historical Select card's precise application-withdrawal date or an explicit conversion to IHG Premier. The current IHG One Rewards Premier Select product is separately named and does not prove that lineage. Removed unsupported 2018-04-05 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
     "art_grade": "none"
   },
   {
@@ -19561,8 +19540,6 @@
     "type": "credit",
     "segment": "business",
     "status": "discontinued",
-    "discontinued_date": "2016-11-03",
-    "replaced_by": "us-chase-ink-business-preferred",
     "annual_fee": {
       "amount": 95,
       "currency": "USD",
@@ -19607,14 +19584,15 @@
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-20",
     "sources": [
-      "https://creditcards.chase.com/"
+      "https://creditcards.chase.com/",
+      "https://creditcards.chase.com/business-credit-cards/ink/business-preferred"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued when Ink Business Preferred launched.",
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Ink Business Preferred product page and Chase sample-agreement registry do not establish the historical Ink Plus card's withdrawal date or an explicit conversion. Removed unsupported 2016-11-03 and Ink Business Preferred replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
     "art_grade": "none"
   },
   {
@@ -20173,8 +20151,7 @@
     "network_tier": "infinite",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
-    "discontinued_date": "2018-07-26",
+    "status": "unknown",
     "annual_fee": {
       "amount": 395,
       "currency": "USD",
@@ -20320,11 +20297,13 @@
     "sources": [
       "https://web.archive.org/web/20160531161213/https://creditcards.chase.com/a1/ritzcarlton/aep2CN"
     ],
-    "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
-    ],
-    "notes": "Closed to new applicants July 26, 2018. Marriott merged Ritz Carlton Rewards into Bonvoy.",
-    "art_grade": "none"
+    "notes": "Historical Ritz-Carlton Rewards record. Official-source evidence boundary: the retained May 2016 issuer-page archive establishes historical product identity, not a precise application-withdrawal date. A loyalty-program consolidation does not establish credit-card withdrawal or conversion. The inherited historical financial terms remain unverified; current application eligibility, exact withdrawal date and successor are unknown. Historical artwork provenance: the retained 2016-05-31 issuer-page archive identifies this historical product beside its card image. The linked image actually resolves to a 2016-08-06 archive capture; it is historical artwork, not evidence of current availability or successor identity. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. The retained issuer asset is a low-resolution 229x189 pixel historical image, not a high-resolution mirror; exact-product higher-resolution artwork remains needed.",
+    "image": {
+      "url": "https://web.archive.org/web/20160806012749im_/https://creditcards.chase.com/T110-039/1100119/images/card_art_main_home_030216.png",
+      "attribution": "© JPMorgan Chase & Co.",
+      "local_path": null
+    },
+    "art_grade": "issuer"
   },
   {
     "id": "us-chase-sapphire-preferred",
@@ -20454,7 +20433,7 @@
     },
     "official_url": "https://creditcards.chase.com/rewards-credit-cards/sapphire/preferred",
     "image": {
-      "url": null,
+      "url": "https://creditcards.chase.com/content/dam/jpmc-marketplace/card-art/sapphire-preferredcard2026.png",
       "attribution": "© JPMorgan Chase Bank, N.A.",
       "local_path": null
     },
@@ -20466,7 +20445,7 @@
     ],
     "notes": "Signup bonus refreshed 2026-07-24 from Chase official product page (75k after $5k/3mo). Cross-checked against credit-card-bonuses-api as a discovery clue only; official Chase page remains Source.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-chase-sapphire-reserve",
@@ -22957,8 +22936,6 @@
     "type": "credit",
     "segment": "business",
     "status": "discontinued",
-    "discontinued_date": "2020-01-23",
-    "replaced_by": "us-chase-united-business",
     "annual_fee": {
       "amount": 95,
       "currency": "USD",
@@ -22999,14 +22976,15 @@
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-20",
     "sources": [
-      "https://creditcards.chase.com/"
+      "https://creditcards.chase.com/",
+      "https://creditcards.chase.com/business-credit-cards/united/united-business-card"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Closed to new applicants January 2020, replaced by United Business Card.",
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current United Business product page and Chase sample-agreement registry do not prove an exact withdrawal date or conversion for the historical MileagePlus Explorer Business product. Removed unsupported 2020-01-23 and United Business replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
     "art_grade": "none"
   },
   {
@@ -23297,8 +23275,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2020-09-21",
-    "replaced_by": "us-chase-united-gateway",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -23339,14 +23315,16 @@
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-20",
     "sources": [
-      "https://creditcards.chase.com/"
+      "https://creditcards.chase.com/",
+      "https://creditcards.chase.com/travel-credit-cards/united/united-gateway",
+      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued 2020, replaced by United Gateway Card.",
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Chase Bank USA/United TravelBank Visa Agreement.pdf\" associates this historical product with Chase; its body is a general cardmember agreement. The current Gateway product page is not a conversion notice. Removed unsupported 2020-09-21 and Gateway replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
     "art_grade": "none"
   },
   {
@@ -23884,36 +23862,36 @@
   {
     "id": "us-citi-aadvantage-executive",
     "schema_version": "1.0.0",
-    "name": "Citi® / AAdvantage® Executive World Elite Mastercard®",
+    "name": "Citi® / AAdvantage® Executive World Legend Mastercard®",
     "localized_names": {
-      "en": "Citi® / AAdvantage® Executive World Elite Mastercard®"
+      "en": "Citi® / AAdvantage® Executive World Legend Mastercard®"
     },
     "country": "us",
     "issuer": "Citi",
     "issuer_id": "citi",
     "network": "mastercard",
-    "network_tier": "world_elite",
+    "network_tier": "world_legend",
     "type": "credit",
     "segment": "personal",
     "status": "active",
     "annual_fee": {
-      "amount": 595,
+      "amount": 695,
       "currency": "USD",
-      "first_year": 595,
+      "first_year": 695,
       "waiver_conditions": null
     },
     "apr": {
       "purchase": {
-        "min": 19.49,
-        "max": 29.49,
-        "type": "variable"
-      },
-      "cash_advance": {
-        "min": 29.74,
+        "min": 19.74,
         "max": 29.74,
         "type": "variable"
       },
-      "notes": "The variable APR for purchases and balance transfers is 19.49% – 29.49%, based on your creditworthiness. The variable APR for cash advances is 29.74%. The variable Penalty APR is up to 29.99%. Minimum interest charge – $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee – either $5 or 5% of the amount of each transfer, whichever is greater. The annual fee for Authorized Users is $175 for up to 3 Authorized Users and $175 for each Authorized User thereafter."
+      "cash_advance": {
+        "min": 29.99,
+        "max": 29.99,
+        "type": "variable"
+      },
+      "notes": "The variable APR for purchases and balance transfers is 19.74% – 29.74%, based on your creditworthiness. The variable APR for cash advances is 29.99%. The variable Penalty APR is up to 29.99%. Minimum interest charge – $0.50. Cash advance fee – either $10 or 5% of the amount of each cash advance, whichever is greater. Balance transfer fee – either $5 or 5% of the amount of each transfer, whichever is greater. The annual fee for Authorized Users is $175 for up to 3 Authorized Users and $175 for each Authorized User thereafter."
     },
     "fx_fee": {
       "percent": 0,
@@ -23934,7 +23912,7 @@
       "categories": [
         {
           "label": "Eligible hotels (aadvantagehotels.com) and car rentals (aadvantagecars.com)",
-          "points_per_dollar": 10,
+          "points_per_dollar": 12,
           "cap": null
         },
         {
@@ -23943,17 +23921,17 @@
           "cap": null
         }
       ],
-      "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster.",
+      "redemption_notes": "Earn 1 Loyalty Point for every 1 eligible AAdvantage® mile earned from purchases to reach AAdvantage® status faster. After $150,000 in purchases in a calendar year, earn a total of 5 AAdvantage miles per $1 on eligible American Airlines purchases for the remainder of that year.",
       "rate_type": "miles_multiplier"
     },
     "signup_bonus": {
-      "amount": 70000,
+      "amount": 125000,
       "unit": "AAdvantage® bonus miles",
-      "spend_required": 7000,
+      "spend_required": 15000,
       "spend_currency": "USD",
-      "months": 3,
-      "description": "Earn 70,000 American Airlines AAdvantage® bonus miles and enjoy the only credit card with Admirals Club® membership. Bonus miles earned after $7,000 in purchases within the first 3 months of account opening.",
-      "as_of": "2026-07-24"
+      "months": 5,
+      "description": "Earn 125,000 AAdvantage bonus miles after $15,000 in purchases within the first 5 months of account opening. This page-specific limited-time offer may vary elsewhere. Not available after a new-account bonus for an Executive account in the past 48 months, or after conversion of another Citi account on which a new-account bonus was earned in the last 48 months into an Executive account.",
+      "as_of": "2026-10-19"
     },
     "benefits": [
       {
@@ -23961,14 +23939,14 @@
         "title": "Complimentary Admirals Club® membership",
         "category": "lounge",
         "source": "co-brand",
-        "description": "Primary cardmembers can enjoy access to Admirals Club® lounges worldwide – a value of up to $850. Enjoy complimentary drinks and snacks, stay connected with free Wi-Fi, get access to conference rooms and much more."
+        "description": "Primary cardmembers and up to two guests or immediate family members can enjoy unlimited visits to more than 100 Admirals Club and partner lounges worldwide; membership value up to $1,400."
       },
       {
         "id": "additional-loyalty-points",
-        "title": "Up to 20,000 additional Loyalty Points",
+        "title": "Up to 40,000 additional Loyalty Points",
         "category": "other",
         "source": "co-brand",
-        "description": "Earn a 10,000 Loyalty Point bonus after reaching 50,000 Loyalty Points in a status qualification year. Earn another 10,000 Loyalty Point bonus after reaching 90,000 Loyalty Points in the same status qualification year."
+        "description": "Earn a 10,000 Loyalty Point bonus after reaching each of 50,000, 90,000, 165,000 and 240,000 Loyalty Points in the same status qualification year."
       },
       {
         "id": "global-entry-tsa-precheck-credit",
@@ -23982,7 +23960,7 @@
         "title": "Enhanced airport experience",
         "category": "other",
         "source": "co-brand",
-        "description": "Enjoy an enhanced airport experience including priority check-in, screening, and boarding when flying with American Airlines."
+        "description": "Priority check-in, airport screening where available, and priority boarding when flying American Airlines for you and up to eight companions on the same reservation."
       },
       {
         "id": "first-checked-bag-free",
@@ -23992,11 +23970,11 @@
         "description": "Your first checked bag is free on domestic American Airlines itineraries for you and up to eight companions traveling with you on the same reservation, a savings of up to $900 per round trip."
       },
       {
-        "id": "save-25-inflight",
-        "title": "Save 25% on inflight food and beverage purchases",
+        "id": "inflight-admirals-club-credit",
+        "title": "Up to $100 back on inflight and eligible Admirals Club purchases",
         "category": "other",
         "source": "co-brand",
-        "description": "25% savings on inflight food and beverage purchases on American Airlines flights when you use your credit card."
+        "description": "Every calendar year, earn up to $100 in statement credits on inflight and eligible Admirals Club purchases when you use your card."
       },
       {
         "id": "no-foreign-transaction-fees",
@@ -24021,22 +23999,36 @@
       },
       {
         "id": "lyft-credit",
-        "title": "Up to $120 Lyft credit",
+        "title": "Up to $180 in Lyft credits",
         "category": "other",
         "source": "issuer",
-        "description": "After taking 3 eligible rides in a calendar month, you will earn a $10 Lyft credit, for a total of up to $120 back in Lyft credits annually."
+        "description": "After three eligible rides in a calendar month, earn a $15 Lyft credit, for up to $180 in Lyft credits annually."
       },
       {
-        "id": "grubhub-credits",
-        "title": "Up to $120 back on eligible Grubhub purchases",
+        "id": "american-airlines-vacations-credit",
+        "title": "Up to $500 back on eligible American Airlines Vacations purchases",
         "category": "other",
         "source": "issuer",
-        "description": "Earn a statement credit of up to $10 per monthly billing statement on eligible Grubhub purchases, for a total of up to $120 every 12 billing statements."
+        "description": "Every calendar year, earn up to $250 in statement credits January through June and up to $250 July through December on eligible American Airlines Vacations travel packages or experiences."
+      },
+      {
+        "id": "omni-champion-free-night",
+        "title": "Omni Champion Status and Free Night Award",
+        "category": "other",
+        "source": "issuer",
+        "description": "Primary cardmembers are eligible to enroll in Omni Hotels and Resorts Champion Status. Once per calendar year, earn an Omni Free Night Award after a qualifying stay of two or more consecutive nights booked directly through Omni Hotels and Resorts on omnihotels.com. Enrollment in Champion Status is required."
+      },
+      {
+        "id": "avis-presidents-club-status",
+        "title": "Complimentary Avis President's Club status",
+        "category": "other",
+        "source": "issuer",
+        "description": "Primary cardmembers are eligible to enroll in complimentary Avis President's Club status through August 31, 2028 via the AAdvantage Rewards page in their AAdvantage account."
       }
     ],
     "travel_perks": {
       "lounge_access": {
-        "notes": "Complimentary Admirals Club® membership – access to Admirals Club® lounges worldwide (value up to $850)"
+        "notes": "Complimentary Admirals Club membership for the primary cardmember with up to two guests or immediate family members; membership value up to $1,400."
       },
       "tsa_precheck_credit": {
         "amount": 120,
@@ -24049,30 +24041,33 @@
         "period": "every_4_years"
       },
       "free_checked_bags": "First checked bag free on domestic American Airlines itineraries for you and up to 8 companions (savings up to $900 per round trip)",
-      "hotel_status": null,
+      "hotel_status": "Omni Hotels and Resorts Champion Status for primary cardmembers; enrollment required.",
       "other": [
-        "Enhanced airport experience: priority check-in, screening, and boarding on AA flights",
-        "Save 25% on inflight food and beverage purchases on AA flights",
+        "Priority check-in, airport screening where available, and priority boarding on American Airlines for you and up to eight companions on the same reservation",
+        "Up to $100 in statement credits per calendar year for inflight and eligible Admirals Club purchases",
         "No foreign transaction fees",
         "Travel protection: Trip Cancellation & Interruption, Trip Delay, Lost Baggage, Worldwide Car Rental Insurance",
-        "Up to $120 back on Avis and Budget car rentals per calendar year",
-        "Up to $120 Lyft credit annually",
-        "Up to $120 back on Grubhub purchases per 12 billing statements"
+        "Up to $120 back on eligible prepaid Avis and Budget car rentals per calendar year",
+        "Up to $180 in Lyft credits annually: $15 after three eligible rides per calendar month",
+        "Up to $500 in eligible American Airlines Vacations credits per calendar year, split into two $250 half-year limits",
+        "Omni Free Night Award once per calendar year after a qualifying two-or-more-night direct stay; Champion Status enrollment required",
+        "Avis President's Club status through August 31, 2028; enrollment required"
       ]
     },
     "official_url": "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
     "image": {
-      "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2024/05/CardArt-8.png",
+      "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2026/08/CardArt-Exec.png",
       "attribution": "© Citi",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://creditcards.aa.com/citi-executive-card-american-airlines-direct/",
-      "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/"
+      "https://creditcards.aa.com/credit-cards/citi-executive-card-american-airlines-direct/",
+      "https://www.citi.com/credit-cards/citi-aadvantage-executive-world-legend-mastercard"
     ],
-    "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text.",
+    "notes": "Verified against the official American Airlines Executive product page and Citi World Legend product page on 2026-10-19. Pricing and the page-specific 125,000-mile offer are from the AA page; Citi corroborates World Legend identity, 12x hotels/cars, elevated AA earning after $150,000 spend, and current benefits. No exact historical upgrade/conversion date is established. The former 25% inflight savings and Grubhub credit are not represented as current benefits; current official pages instead list the $100 inflight/Admirals Club credit. Matching clean card artwork is served by the official AA product page; copyright remains Citi.",
     "art_grade": "issuer"
   },
   {
@@ -24274,7 +24269,7 @@
     },
     "official_url": "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/",
     "image": {
-      "url": null,
+      "url": "https://creditcards.aa.com/credit-cards/wp-content/uploads/sites/2/2025/08/globe-card.png",
       "attribution": "© Citi",
       "local_path": null
     },
@@ -24283,8 +24278,8 @@
     "sources": [
       "https://creditcards.aa.com/credit-cards/citi-globe-card-american-airlines-direct/"
     ],
-    "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text. Base rate of 1X on all other purchases is standard for Citi AAdvantage cards but not explicitly listed on this page for the Globe card — noted as inferred from card family pattern.",
-    "art_grade": "none"
+    "notes": "Verified from official product page on 2026-07-24. All fees, APR, rewards, and benefits extracted from page text. Base rate of 1X on all other purchases is standard for Citi AAdvantage cards but not explicitly listed on this page for the Globe card — noted as inferred from card family pattern. Artwork verified 2026-10-20: The official American Airlines co-brand Globe page directly associates this clean card image with alt text naming Citi / AAdvantage Globe Mastercard. Retained the existing Citi attribution. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-citi-aadvantage-mileup",
@@ -25706,7 +25701,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2024-05-09",
     "replaced_by": "us-citi-strata-premier",
     "annual_fee": {
       "amount": 95,
@@ -25723,15 +25717,15 @@
       }
     },
     "benefits": [],
-    "official_url": "https://www.citi.com/credit-cards/citi-premier-credit-card",
+    "official_url": "https://www.citigroup.com/global/news/press-release/2024/citi-enhances-the-citi-premier-card-with-new-benefits-to-make-travel-adventures-more-rewarding",
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-19",
     "sources": [
-      "https://www.citi.com/credit-cards/citi-premier-credit-card"
+      "https://www.citigroup.com/global/news/press-release/2024/citi-enhances-the-citi-premier-card-with-new-benefits-to-make-travel-adventures-more-rewarding"
     ],
-    "notes": "Renamed to Citi Strata Premier in May 2024.",
+    "notes": "Citi's May 13, 2024 issuer announcement describes Citi Strata Premier as an enhancement and new name for the existing Citi Premier Card, supporting the recorded successor. It does not establish the previously recorded May 9 withdrawal date; the exact withdrawal date is unknown. Historical Visa Signature metadata and predecessor fees/rewards are retained, not re-verified by this Mastercard-era announcement. No successor artwork is used.",
     "art_grade": "none"
   },
   {
@@ -25757,24 +25751,24 @@
     },
     "apr": {
       "purchase": {
-        "min": 20.5,
-        "max": 24.5,
+        "min": 20.75,
+        "max": 24.75,
         "type": "variable"
       },
       "cash_advance": {
-        "min": 26.5,
-        "max": 26.5,
+        "min": 26.75,
+        "max": 26.75,
         "type": "variable"
       },
-      "notes": "APR for Purchases and Balance Transfers is 20.50% or 24.50% when you open your account, based on creditworthiness; thereafter varies with the Prime Rate (margin of 13.75% or 17.75%). Cash Advance APR is 26.50% (margin of 19.75%). Minimum interest charge $0.70. As of July 24, 2026."
+      "notes": "APR for Purchases and Balance Transfers is 20.75% or 24.75% when you open your account, based on creditworthiness; thereafter varies with the Prime Rate (margin of 13.75% or 17.75%). Cash Advance APR is 26.75% (margin of 19.75%). Minimum interest charge $0.70. As of September 30, 2026 (agreement ID 65903E, Rev 09/2026)."
     },
     "fx_fee": {
       "percent": 0,
       "notes": "No foreign transaction fees (Foreign Transaction: None)."
     },
     "credit_required": {
-      "score_band": "excellent",
-      "notes": "Relationship-based product for high-net-worth clients; not publicly marketed with a credit-score band."
+      "score_band": "unknown",
+      "notes": "The official agreement bases APR on creditworthiness but does not publish a qualifying credit-score band."
     },
     "rewards": {
       "currency": "city_national_rewards",
@@ -25827,12 +25821,12 @@
     "official_url": "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
     "image": null,
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-20",
     "sources": [
       "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
       "https://www.cnb.com/personal-banking/lending/credit-cards"
     ],
-    "notes": "Requires in-branch application or calling (800) 773-7100. Relationship-based product for high-net-worth clients. Pricing verified from the Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 07/2026, as of July 24, 2026): $400 annual fee, $95 additional card fee, purchase APR 20.50%–24.50% variable, cash advance APR 26.50% variable, no foreign transaction fee. Earn rates are not in the agreement — they live in the separately provided City National Rewards Program Terms (www.cnb.com/rewards), so rewards.base_rate.points_per_dollar is null. No public landing page; the live cnb.com credit-cards page returned HTTP 403 to automated fetch, so the card agreement PDF is the primary source.",
+    "notes": "Pricing verified from the official Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 09/2026, as of September 30, 2026): $400 annual fee, $95 additional card fee, purchase and balance-transfer APR 20.75% or 24.75% variable, cash-advance APR 26.75% variable, no foreign transaction fee and $0.70 minimum interest charge. The agreement explicitly restricts use to personal, family or household purposes. The inherited invite_only status is not independently verified by this agreement; current application availability, invitation/relationship requirements and eligibility remain unknown. Removed unsupported high-net-worth and mandatory in-branch/telephone application assertions. Rewards earn rates are not in this agreement and remain null pending separate official Rewards Program Terms. No historical-to-current product conversion or artwork is inferred.",
     "art_grade": "none"
   },
   {
@@ -25929,15 +25923,20 @@
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
+        "min": 26.74,
+        "max": 34.74,
         "type": "variable"
       },
-      "notes": "APR not disclosed on the fetched product page or cardholder agreement; see the account pricing disclosure for current APR."
+      "cash_advance": {
+        "min": 31.74,
+        "max": 34.74,
+        "type": "variable"
+      },
+      "notes": "Purchase APR varies with the U.S. Prime Rate: Prime + 19.99% to 27.99% (Prime 6.75% as of 2026-01-14), maximum 35.99%. A 10.00% introductory APR applies to new card purchases for the first 12 billing cycles after account opening. Balance transfer APR 26.74% to 34.74%; cash advance APR 31.74% to 34.74%."
     },
     "fx_fee": {
-      "percent": null,
-      "notes": "Foreign transaction fee not stated on the fetched product page or cardholder agreement."
+      "percent": 0,
+      "notes": "No foreign transaction fee — the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
     },
     "credit_required": {
       "score_band": null,
@@ -25946,14 +25945,15 @@
     "rewards": {
       "currency": "bilt_points",
       "currency_label": "Bilt Points",
+      "rate_type": "points_multiplier",
       "structure": "multi",
       "base_rate": {
         "points_per_dollar": 1,
-        "description": "1X on everything else."
+        "description": "1X on other everyday purchases."
       },
       "categories": [
         {
-          "label": "Bilt dining partners",
+          "label": "Bilt partner restaurants",
           "points_per_dollar": 4,
           "cap": null
         },
@@ -25973,50 +25973,109 @@
           "cap": null
         },
         {
+          "label": "Other travel",
+          "points_per_dollar": 1,
+          "cap": null
+        },
+        {
           "label": "Rent & mortgage (housing-only rewards selected)",
           "points_per_dollar": 1.25,
           "cap": null
         }
       ],
-      "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), the Bilt Travel Portal, future rent or mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. Multipliers (excluding rent and mortgage) are inclusive of the Bilt loyalty membership and the Bilt Card multiplier earns. Housing multiplier (up to 1.25X) is determined each billing cycle based on everyday spend relative to the housing payment.",
-      "rate_type": "points_multiplier"
+      "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), the Bilt Travel Portal, future rent or mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. Category rates are the headline totals published by Bilt and are inclusive of the Bilt loyalty membership and the Bilt Card multiplier earn; Bilt partner restaurant rates are \"up to\" and vary by restaurant. Under Housing-only rewards the housing multiplier (0.5X to 1.25X) is set each billing cycle from everyday spend relative to the housing payment, with a 250-point floor."
     },
-    "signup_bonus": null,
+    "signup_bonus": {
+      "amount": 100,
+      "unit": "bilt_cash",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$100 in Bilt Cash credited to the Bilt account upon approval — no spend requirement. Bilt Cash is a dollar-denominated Bilt rewards credit redeemable at Bilt partner merchants and toward housing point unlocks; it expires December 31 each year with up to $100 carried over.",
+      "as_of": "2026-10-21"
+    },
     "benefits": [
       {
         "id": "no-housing-transaction-fee",
         "title": "No transaction fee on rent, mortgage and HOA",
         "category": "waiver",
         "source": "issuer",
-        "description": "Earn rewards on rent and mortgage payments made through Bilt with no transaction fee. Payments can be made via ACH (account and routing number), Venmo, PayPal, or a mailed check, bypassing landlord or servicer card fees. No transaction minimum applies to earn on housing with Bilt Card 2.0."
+        "description": "Earn rewards on rent, mortgage and HOA payments made through Bilt with no transaction fee. Pay via ACH (account and routing number), Venmo, PayPal, or a mailed check to bypass landlord or servicer card fees. Bilt Card 2.0 has no transaction minimum to earn on housing."
+      },
+      {
+        "id": "no-foreign-transaction-fee",
+        "title": "No foreign transaction fees",
+        "category": "waiver",
+        "source": "issuer",
+        "description": "Purchases made outside the U.S. carry no foreign transaction fee; the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
       },
       {
         "id": "bilt-neighborhood-dining",
         "title": "Bilt Neighborhood Dining bonus points",
         "category": "acceleration",
         "source": "issuer",
-        "description": "At Bilt Neighborhood Dining restaurants (20,000+ participating locations) you earn bonus Bilt Points per dollar on top of the card's standard earn rate. The bonus varies by restaurant and is shown in the Bilt app at the time of visit. No activation required."
+        "description": "At Bilt Neighborhood Dining restaurants (20,000+ participating locations) you earn bonus Bilt Points per dollar on top of the card's standard earn rate, up to 4X in total on the Blue Card. The bonus varies by restaurant and is shown in the Bilt app at the time of visit. No activation required."
       },
       {
         "id": "lyft-bonus",
         "title": "Lyft bonus points",
         "category": "acceleration",
         "source": "issuer",
-        "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides; combined with the base rate, Blue cardholders earn 3X total on Lyft."
+        "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides; combined with the 1X everyday base rate, Blue cardholders earn 3X total on Lyft. Uncapped."
       },
       {
         "id": "bilt-travel-portal-bonus",
         "title": "Bilt Travel Portal bonus points",
         "category": "acceleration",
         "source": "issuer",
-        "description": "Booking through the Bilt Travel Portal earns +2X on hotels and +1X on flights in bonus Bilt Points on top of the card's base rate."
+        "description": "Booking through the Bilt Travel Portal earns +2X on hotels and +1X on flights in bonus Bilt Points on top of the card's base rate — 3X total on hotels and 2X total on flights."
       },
       {
         "id": "transfer-partners",
         "title": "28 airline and hotel transfer partners",
         "category": "other",
         "source": "issuer",
-        "description": "Points transfer at a 1:1 ratio to 28 Bilt travel partners, including major domestic and international airline programs and leading hotel loyalty programs."
+        "description": "Bilt Points transfer at a 1:1 ratio to Bilt's 28 airline and hotel transfer partners, including major domestic and international airline programs and leading hotel loyalty programs."
+      },
+      {
+        "id": "cellular-wireless-telephone-protection",
+        "title": "Cellular Wireless Telephone Protection",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for covered damage or theft of your cellphone.",
+        "details": {
+          "conditions": "See the Bilt Blue Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "purchase-assurance",
+        "title": "Purchase Assurance",
+        "category": "insurance",
+        "source": "network",
+        "description": "Mastercard Purchase Assurance coverage for eligible purchases.",
+        "details": {
+          "conditions": "See the Bilt Blue Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "masterrental-coverage",
+        "title": "MasterRental Coverage",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for covered damage or theft to your rental car.",
+        "details": {
+          "conditions": "See the Bilt Blue Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "mastercard-id-theft-protection",
+        "title": "Mastercard ID Theft Protection",
+        "category": "other",
+        "source": "network",
+        "description": "Mastercard ID Theft Protection monitors for possible identity theft and provides resolution services. Enrollment is required to receive the benefit.",
+        "details": {
+          "conditions": "Enroll at mastercardus.idprotectiononline.com; see the Bilt Blue Card Guide to Benefits."
+        }
       },
       {
         "id": "world-elite-mastercard-benefits",
@@ -26036,17 +26095,621 @@
         "World Elite Mastercard Travel & Lifestyle Services"
       ]
     },
-    "official_url": "https://www.bilt.com/card",
-    "image": null,
+    "official_url": "https://www.bilt.com/card/blue",
+    "image": {
+      "url": "https://img.bilt.com/43819/1790799681-bilt-tahoe.webp",
+      "attribution": "© Bilt Technologies, Inc.",
+      "local_path": "images/us-column-bilt-blue.webp",
+      "provenance": {
+        "source": "issuer-site",
+        "source_sha256": "d0b57b7d055624b1d5345da09300c8b92c2a6c8a20e140a1650cc82cab92d8d8",
+        "converted_sha256": "55ed641b3e9f1811c1cc1aa7aaae13b73b66dda7f0cd17cc50063fc65c8a1384",
+        "width": 500,
+        "height": 317,
+        "exported_at": "2026-10-21"
+      }
+    },
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-21",
     "sources": [
+      "https://www.bilt.com/card/blue",
       "https://www.bilt.com/card",
-      "https://legal.cardless.com/cardholder_agreement/bilt_blue/cardholder_agreement.pdf",
-      "https://www.biltrewards.com/terms/blue-card-guide-to-benefits"
+      "https://legal.cardless.com/schumer/bilt/rates_and_fees.pdf",
+      "https://www.biltrewards.com/terms/blue-card-guide-to-benefits",
+      "https://www.biltrewards.com/terms/bilt-card-offer-terms"
     ],
-    "notes": "Current Bilt Card 2.0 base card (Bilt Blue), verified 2026-07-25. The Blue Card Cardholder Agreement states the account is issued by Column N.A., serviced by Cardless, Inc.; this is the current generation replacing the legacy Wells Fargo Bilt Card (us-wells-fargo-bilt). The Blue Card Guide to Benefits brands it a 'Bilt Blue World Elite Mastercard'. Bilt Card 2.0 has three tiers, all no transaction fee on housing: Bilt Blue (no annual fee, this record), Bilt Obsidian ($95/year, +$100 annual Bilt Travel Hotel credit, 3X dining/grocery, up to 6X Bilt dining), and Bilt Palladium ($495/year, up to 5X Bilt dining, 4X Lyft, $200 annual Bilt Cash, $400 annual Bilt Travel Hotel credit, Priority Pass at 1,300+ airports). APR and foreign transaction fee were not stated on the fetched product page or cardholder agreement (honest nulls). No signup bonus advertised. Category rates reflect the headline earn shown on bilt.com/card and are inclusive of the Bilt loyalty membership plus the card multiplier.",
-    "art_grade": "none"
+    "notes": "Bilt Card 2.0 base card, verified 2026-10-21 against bilt.com/card/blue, the bilt.com/card comparison table, the Bilt Cards Rates & Fees disclosure and the Bilt Card Offer Terms. Issued by Column N.A., Member FDIC and serviced by Cardless, Inc.; a World Elite Mastercard. This record replaces the legacy Wells Fargo Bilt Card (us-wells-fargo-bilt), which is discontinued. Bilt Card 2.0 has three tiers: Bilt Blue (this record, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year). All three tiers charge no transaction fee on housing and no foreign transaction fee. APR is the Prime-based variable range published in the Rates & Fees disclosure, with a 10.00% introductory APR for the first 12 billing cycles on new card purchases. Welcome offer is $100 in Bilt Cash with no spend requirement. Category rates are the headline totals published by Bilt, inclusive of the Bilt loyalty membership and the card multiplier earn; Bilt partner restaurant rates are \"up to\" and vary by restaurant.",
+    "art_grade": "issuer"
+  },
+  {
+    "id": "us-column-bilt-obsidian",
+    "schema_version": "1.0.0",
+    "name": "Bilt Obsidian Card",
+    "localized_names": {
+      "en": "Bilt Obsidian Card"
+    },
+    "country": "us",
+    "issuer": "Column N.A.",
+    "issuer_id": "column",
+    "network": "mastercard",
+    "network_tier": "world_elite",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 95,
+      "currency": "USD",
+      "first_year": 95,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 26.74,
+        "max": 34.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 31.74,
+        "max": 34.74,
+        "type": "variable"
+      },
+      "notes": "Purchase APR varies with the U.S. Prime Rate: Prime + 19.99% to 27.99% (Prime 6.75% as of 2026-01-14), maximum 35.99%. A 10.00% introductory APR applies to new card purchases for the first 12 billing cycles after account opening. Balance transfer APR 26.74% to 34.74%; cash advance APR 31.74% to 34.74%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fee — the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "Approval decisions are made by the issuing bank based on credit profile; Bilt does not publish minimum score requirements. No credit score impact to apply and see if approved."
+    },
+    "rewards": {
+      "currency": "bilt_points",
+      "currency_label": "Bilt Points",
+      "rate_type": "points_multiplier",
+      "structure": "choice",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1X on other everyday purchases."
+      },
+      "categories": [
+        {
+          "label": "Bilt partner restaurants",
+          "points_per_dollar": 6,
+          "cap": null
+        },
+        {
+          "label": "Selected 3X category (dining or grocery; grocery capped at $25,000/year)",
+          "points_per_dollar": 3,
+          "cap": {
+            "amount": 25000,
+            "currency": "USD",
+            "period": "calendar_year"
+          }
+        },
+        {
+          "label": "Hotels through Bilt Travel",
+          "points_per_dollar": 4,
+          "cap": null
+        },
+        {
+          "label": "Lyft (linked account, total)",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Flights through Bilt Travel",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Other travel",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Rent & mortgage (housing-only rewards selected)",
+          "points_per_dollar": 1.25,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), the Bilt Travel Portal, future rent or mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. Category rates are the headline totals published by Bilt and are inclusive of the Bilt loyalty membership and the Bilt Card multiplier earn; Bilt partner restaurant rates are \"up to\" and vary by restaurant. The 3X category is chosen annually: dining is the default, may be switched to grocery within 30 days of account opening, and can be changed once each January thereafter; grocery purchases beyond $25,000 in a calendar year earn 1X. Under Housing-only rewards the housing multiplier (0.5X to 1.25X) is set each billing cycle from everyday spend relative to the housing payment, with a 250-point floor."
+    },
+    "signup_bonus": {
+      "amount": 200,
+      "unit": "bilt_cash",
+      "spend_required": null,
+      "spend_currency": null,
+      "months": null,
+      "description": "$200 in Bilt Cash credited to the Bilt account upon approval — no spend requirement. Bilt Cash is a dollar-denominated Bilt rewards credit redeemable at Bilt partner merchants and toward housing point unlocks; it expires December 31 each year with up to $100 carried over.",
+      "as_of": "2026-10-21"
+    },
+    "benefits": [
+      {
+        "id": "no-housing-transaction-fee",
+        "title": "No transaction fee on rent, mortgage and HOA",
+        "category": "waiver",
+        "source": "issuer",
+        "description": "Earn rewards on rent, mortgage and HOA payments made through Bilt with no transaction fee. Pay via ACH (account and routing number), Venmo, PayPal, or a mailed check to bypass landlord or servicer card fees. Bilt Card 2.0 has no transaction minimum to earn on housing."
+      },
+      {
+        "id": "no-foreign-transaction-fee",
+        "title": "No foreign transaction fees",
+        "category": "waiver",
+        "source": "issuer",
+        "description": "Purchases made outside the U.S. carry no foreign transaction fee; the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
+      },
+      {
+        "id": "bilt-travel-hotel-credit",
+        "title": "$100 annual Bilt Travel Hotel credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Two $50 statement credits per year (January–June and July–December) applied to qualifying hotel bookings of 2 nights or more made through the Bilt Travel Portal. Credits do not roll over between halves of the year or to the next year, and stack with Bilt Points and Bilt Cash."
+      },
+      {
+        "id": "point-accelerator",
+        "title": "Point Accelerator",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "Redeem $200 in Bilt Cash to add 1X on everyday spending for the next $5,000 of qualifying purchases — up to 5 times per year ($25,000 of eligible purchases annually). On the Obsidian Card this lifts the chosen 3X category to 4X, 2X travel to 3X and the 1X base rate to 2X until the $5,000 is used or the year ends."
+      },
+      {
+        "id": "bilt-neighborhood-dining",
+        "title": "Bilt Neighborhood Dining bonus points",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "At Bilt Neighborhood Dining restaurants (20,000+ participating locations) you earn bonus Bilt Points per dollar on top of the card's standard earn rate, up to 6X in total on the Obsidian Card when dining is the selected 3X category. The bonus varies by restaurant and is shown in the Bilt app at the time of visit. No activation required."
+      },
+      {
+        "id": "lyft-bonus",
+        "title": "Lyft bonus points",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides; combined with the 1X everyday base rate, Obsidian cardholders earn 3X total on Lyft. Uncapped."
+      },
+      {
+        "id": "bilt-travel-portal-bonus",
+        "title": "Bilt Travel Portal bonus points",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "Booking through the Bilt Travel Portal earns +2X on hotels and +1X on flights in bonus Bilt Points on top of the card's base rate — 4X total on hotels and 3X total on flights."
+      },
+      {
+        "id": "transfer-partners",
+        "title": "28 airline and hotel transfer partners",
+        "category": "other",
+        "source": "issuer",
+        "description": "Bilt Points transfer at a 1:1 ratio to Bilt's 28 airline and hotel transfer partners, including major domestic and international airline programs and leading hotel loyalty programs."
+      },
+      {
+        "id": "cellular-wireless-telephone-protection",
+        "title": "Cellular Wireless Telephone Protection",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for covered damage or theft of your cellphone.",
+        "details": {
+          "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "trip-cancellation-and-interruption-protection",
+        "title": "Trip Cancellation and Interruption Protection",
+        "category": "insurance",
+        "source": "network",
+        "description": "Coverage for eligible trip cancellation and interruption.",
+        "details": {
+          "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "trip-delay-reimbursement",
+        "title": "Trip Delay Reimbursement",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for qualifying trip delays.",
+        "details": {
+          "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "purchase-assurance",
+        "title": "Purchase Assurance",
+        "category": "insurance",
+        "source": "network",
+        "description": "Mastercard Purchase Assurance coverage for eligible purchases.",
+        "details": {
+          "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "masterrental-coverage",
+        "title": "MasterRental Coverage",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for covered damage or theft to your rental car.",
+        "details": {
+          "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended Warranty",
+        "category": "insurance",
+        "source": "network",
+        "description": "Extended warranty coverage for eligible purchases of covered items.",
+        "details": {
+          "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "lost-or-damaged-luggage-insurance",
+        "title": "Lost or Damaged Luggage Insurance",
+        "category": "insurance",
+        "source": "network",
+        "description": "Coverage for eligible loss or damage of checked luggage.",
+        "details": {
+          "conditions": "See the Bilt Obsidian Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "world-elite-mastercard-benefits",
+        "title": "World Elite Mastercard benefits",
+        "category": "other",
+        "source": "network",
+        "description": "As a World Elite Mastercard, the Bilt Obsidian Card includes Mastercard Travel & Lifestyle Services and other World Elite Mastercard benefits per the card's Guide to Benefits."
+      },
+      {
+        "id": "mastercard-id-theft-protection",
+        "title": "Mastercard ID Theft Protection",
+        "category": "other",
+        "source": "network",
+        "description": "Mastercard ID Theft Protection monitors for possible identity theft and provides resolution services. Enrollment is required to receive the benefit.",
+        "details": {
+          "conditions": "Enroll at mastercardus.idprotectiononline.com; see the Bilt Obsidian Card Guide to Benefits."
+        }
+      }
+    ],
+    "travel_perks": {
+      "lounge_access": null,
+      "tsa_precheck_credit": null,
+      "global_entry_credit": null,
+      "free_checked_bags": null,
+      "hotel_status": null,
+      "other": [
+        "World Elite Mastercard Travel & Lifestyle Services"
+      ]
+    },
+    "official_url": "https://www.bilt.com/card/obsidian",
+    "image": {
+      "url": "https://img.bilt.com/43819/1790799681-bilt-vail.webp",
+      "attribution": "© Bilt Technologies, Inc.",
+      "local_path": "images/us-column-bilt-obsidian.webp",
+      "provenance": {
+        "source": "issuer-site",
+        "source_sha256": "1a88e7a82acfc8b6c9e3f23494514f4d1722034d6f25813950e2156486ee143a",
+        "converted_sha256": "b044508d7cc8a84d14edb965111c3f1aee00d64749db0016f0f04462b5453ad9",
+        "width": 500,
+        "height": 317,
+        "exported_at": "2026-10-21"
+      }
+    },
+    "bin_hints": [],
+    "last_verified": "2026-10-21",
+    "sources": [
+      "https://www.bilt.com/card/obsidian",
+      "https://www.bilt.com/card",
+      "https://legal.cardless.com/schumer/bilt/rates_and_fees.pdf",
+      "https://www.biltrewards.com/terms/obsidian-card-guide-to-benefits",
+      "https://www.biltrewards.com/terms/bilt-card-offer-terms"
+    ],
+    "notes": "Bilt Card 2.0 middle tier, verified 2026-10-21 against bilt.com/card/obsidian, the bilt.com/card comparison table, the Bilt Cards Rates & Fees disclosure and the Bilt Card Offer Terms. Issued by Column N.A., Member FDIC and serviced by Cardless, Inc.; a World Elite Mastercard. $95 annual fee with a $50 per-year authorized user fee. The card's headline feature is an annually chosen 3X category (dining or grocery, grocery capped at $25,000 per year) on top of 4X hotels and 3X flights through the Bilt Travel Portal, 3X on Lyft, 2X other travel and a 1X base rate. Bilt partner restaurants reach up to 6X. Welcome offer is $200 in Bilt Cash with no spend requirement; there is no spend-based points bonus. Includes a $100 annual Bilt Travel Hotel credit (two $50 statement credits, 2-night minimum) and the Point Accelerator. Travel protections per the official bilt.com/card comparison table: cellular wireless telephone protection, purchase assurance, MasterRental coverage, trip cancellation and interruption protection, trip delay reimbursement, extended warranty and lost or damaged luggage insurance. Priority Pass lounge access is not included on this tier. APR is the Prime-based variable range published in the Rates & Fees disclosure, with a 10.00% introductory APR for the first 12 billing cycles on new card purchases.",
+    "art_grade": "issuer"
+  },
+  {
+    "id": "us-column-bilt-palladium",
+    "schema_version": "1.0.0",
+    "name": "Bilt Palladium Card",
+    "localized_names": {
+      "en": "Bilt Palladium Card"
+    },
+    "country": "us",
+    "issuer": "Column N.A.",
+    "issuer_id": "column",
+    "network": "mastercard",
+    "network_tier": "world_legend",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 495,
+      "currency": "USD",
+      "first_year": 495,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 26.74,
+        "max": 34.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 31.74,
+        "max": 34.74,
+        "type": "variable"
+      },
+      "notes": "Purchase APR varies with the U.S. Prime Rate: Prime + 19.99% to 27.99% (Prime 6.75% as of 2026-01-14), maximum 35.99%. A 10.00% introductory APR applies to new card purchases for the first 12 billing cycles after account opening. Balance transfer APR 26.74% to 34.74%; cash advance APR 31.74% to 34.74%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fee — the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "Approval decisions are made by the issuing bank based on credit profile; Bilt does not publish minimum score requirements. No credit score impact to apply and see if approved."
+    },
+    "rewards": {
+      "currency": "bilt_points",
+      "currency_label": "Bilt Points",
+      "rate_type": "points_multiplier",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "2X on other everyday purchases."
+      },
+      "categories": [
+        {
+          "label": "Bilt partner restaurants",
+          "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Hotels through Bilt Travel",
+          "points_per_dollar": 4,
+          "cap": null
+        },
+        {
+          "label": "Lyft (linked account, total)",
+          "points_per_dollar": 4,
+          "cap": null
+        },
+        {
+          "label": "Flights through Bilt Travel",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Other travel",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Rent & mortgage (housing-only rewards selected)",
+          "points_per_dollar": 1.25,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), the Bilt Travel Portal, future rent or mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. Category rates are the headline totals published by Bilt and are inclusive of the Bilt loyalty membership and the Bilt Card multiplier earn; Bilt partner restaurant rates are \"up to\" and vary by restaurant. The Palladium Card pays 2X on all everyday purchases (rent and mortgage excluded) with no bonus-category selection required. Under Housing-only rewards the housing multiplier (0.5X to 1.25X) is set each billing cycle from everyday spend relative to the housing payment, with a 250-point floor."
+    },
+    "signup_bonus": {
+      "amount": 50000,
+      "unit": "points",
+      "spend_required": 4000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "50,000 Bilt Points and Bilt Gold elite status after spending $4,000 on purchases excluding rent or mortgage within the first 90 days of account opening. A further $300 in Bilt Cash is credited upon approval with no spend requirement.",
+      "as_of": "2026-10-21"
+    },
+    "benefits": [
+      {
+        "id": "no-housing-transaction-fee",
+        "title": "No transaction fee on rent, mortgage and HOA",
+        "category": "waiver",
+        "source": "issuer",
+        "description": "Earn rewards on rent, mortgage and HOA payments made through Bilt with no transaction fee. Pay via ACH (account and routing number), Venmo, PayPal, or a mailed check to bypass landlord or servicer card fees. Bilt Card 2.0 has no transaction minimum to earn on housing."
+      },
+      {
+        "id": "no-foreign-transaction-fee",
+        "title": "No foreign transaction fees",
+        "category": "waiver",
+        "source": "issuer",
+        "description": "Purchases made outside the U.S. carry no foreign transaction fee; the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
+      },
+      {
+        "id": "annual-bilt-cash",
+        "title": "$200 annual Bilt Cash benefit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "$200 in Bilt Cash is credited to the Bilt account upon account opening and on January 1 of each subsequent calendar year while the account is open and in good standing. It is separate from the $300 welcome bonus. Bilt Cash expires December 31 each year with up to $100 carried over."
+      },
+      {
+        "id": "bilt-travel-hotel-credit",
+        "title": "$400 annual Bilt Travel Hotel credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Two $200 statement credits per year (January–June and July–December) applied to qualifying hotel bookings of 2 nights or more made through the Bilt Travel Portal. Credits do not roll over between halves of the year or to the next year, and stack with Bilt Points and Bilt Cash."
+      },
+      {
+        "id": "priority-pass-lounge-access",
+        "title": "Priority Pass lounge access",
+        "category": "lounge",
+        "source": "network",
+        "description": "Complimentary Priority Pass membership with access to 1,300+ airport lounges worldwide, for the cardholder and two guests. Authorized users on the account also receive Priority Pass access."
+      },
+      {
+        "id": "point-accelerator",
+        "title": "Point Accelerator",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "Redeem $200 in Bilt Cash to add 1X on everyday spending for the next $5,000 of qualifying purchases — up to 5 times per year ($25,000 of eligible purchases annually). On the Palladium Card this lifts the 2X base rate to 3X until the $5,000 is used or the year ends."
+      },
+      {
+        "id": "bilt-neighborhood-dining",
+        "title": "Bilt Neighborhood Dining bonus points",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "At Bilt Neighborhood Dining restaurants (20,000+ participating locations) you earn bonus Bilt Points per dollar on top of the card's 2X everyday rate, up to 5X in total on the Palladium Card. The bonus varies by restaurant and is shown in the Bilt app at the time of visit. No activation required."
+      },
+      {
+        "id": "lyft-bonus",
+        "title": "Lyft bonus points",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides; combined with the 2X everyday base rate, Palladium cardholders earn 4X total on Lyft. Uncapped."
+      },
+      {
+        "id": "bilt-travel-portal-bonus",
+        "title": "Bilt Travel Portal bonus points",
+        "category": "acceleration",
+        "source": "issuer",
+        "description": "Booking through the Bilt Travel Portal earns +2X on hotels and +1X on flights in bonus Bilt Points on top of the card's base rate — 4X total on hotels and 3X total on flights."
+      },
+      {
+        "id": "transfer-partners",
+        "title": "28 airline and hotel transfer partners",
+        "category": "other",
+        "source": "issuer",
+        "description": "Bilt Points transfer at a 1:1 ratio to Bilt's 28 airline and hotel transfer partners, including major domestic and international airline programs and leading hotel loyalty programs."
+      },
+      {
+        "id": "cellular-wireless-telephone-protection",
+        "title": "Cellular Wireless Telephone Protection",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for covered damage or theft of your cellphone.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "trip-cancellation-and-interruption-protection",
+        "title": "Trip Cancellation and Interruption Protection",
+        "category": "insurance",
+        "source": "network",
+        "description": "Coverage for eligible trip cancellation and interruption.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "trip-delay-reimbursement",
+        "title": "Trip Delay Reimbursement",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for qualifying trip delays.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended Warranty",
+        "category": "insurance",
+        "source": "network",
+        "description": "Extended warranty coverage for eligible purchases of covered items.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "baggage-delay-insurance",
+        "title": "Baggage Delay Insurance",
+        "category": "insurance",
+        "source": "network",
+        "description": "Coverage for qualifying baggage delays.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "lost-or-damaged-luggage-insurance",
+        "title": "Lost or Damaged Luggage Insurance",
+        "category": "insurance",
+        "source": "network",
+        "description": "Coverage for eligible loss or damage of checked luggage.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "price-drop-protection",
+        "title": "Price Drop Protection",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for the price difference on an eligible purchase when the price drops after purchase.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "purchase-assurance",
+        "title": "Purchase Assurance",
+        "category": "insurance",
+        "source": "network",
+        "description": "Mastercard Purchase Assurance coverage for eligible purchases.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "masterrental-coverage",
+        "title": "MasterRental Coverage",
+        "category": "insurance",
+        "source": "network",
+        "description": "Reimbursement for covered damage or theft to your rental car.",
+        "details": {
+          "conditions": "See the Bilt Palladium Card Guide to Benefits."
+        }
+      },
+      {
+        "id": "mastercard-id-theft-protection",
+        "title": "Mastercard ID Theft Protection",
+        "category": "other",
+        "source": "network",
+        "description": "Mastercard ID Theft Protection monitors for possible identity theft and provides resolution services. Enrollment is required to receive the benefit.",
+        "details": {
+          "conditions": "Enroll at mastercardus.idprotectiononline.com; see the Bilt Palladium Card Guide to Benefits."
+        }
+      }
+    ],
+    "travel_perks": {
+      "lounge_access": {
+        "program": "Priority Pass",
+        "visits_per_year": null,
+        "notes": "1,300+ airport lounges worldwide; complimentary for the cardholder and two guests, and included for authorized users."
+      },
+      "tsa_precheck_credit": null,
+      "global_entry_credit": null,
+      "free_checked_bags": null,
+      "hotel_status": null,
+      "other": [
+        "World Legend Mastercard benefits"
+      ]
+    },
+    "official_url": "https://www.bilt.com/card/palladium",
+    "image": {
+      "url": "https://img.bilt.com/43819/1790799681-bilt-aspen.webp",
+      "attribution": "© Bilt Technologies, Inc.",
+      "local_path": "images/us-column-bilt-palladium.webp",
+      "provenance": {
+        "source": "issuer-site",
+        "source_sha256": "609858e50f5ede5fe01c03e014625f9e1c3e60c8f4c5560812ae8118edb3bb72",
+        "converted_sha256": "995edb6ff5de4c4fcb810eb8cd671b3ef98d6baec666225f742b4fd4809a1211",
+        "width": 500,
+        "height": 317,
+        "exported_at": "2026-10-21"
+      }
+    },
+    "bin_hints": [],
+    "last_verified": "2026-10-21",
+    "sources": [
+      "https://www.bilt.com/card/palladium",
+      "https://www.bilt.com/card",
+      "https://legal.cardless.com/schumer/bilt/rates_and_fees.pdf",
+      "https://www.biltrewards.com/terms/palladium-card-guide-to-benefits",
+      "https://www.biltrewards.com/terms/bilt-card-offer-terms"
+    ],
+    "notes": "Bilt Card 2.0 premium tier, verified 2026-10-21 against bilt.com/card/palladium, the bilt.com/card comparison table, the Bilt Cards Rates & Fees disclosure and the Bilt Card Offer Terms. Issued by Column N.A., Member FDIC and serviced by Cardless, Inc.; a World Legend Mastercard. $495 annual fee with a $95 per-year authorized user fee. Pays a flat 2X on everyday purchases (rent and mortgage excluded) with no bonus-category selection, stacking to 4X on hotels and 3X on flights through the Bilt Travel Portal, 4X on Lyft and up to 5X at Bilt partner restaurants. Welcome offer is 50,000 Bilt Points plus Bilt Gold elite status after $4,000 in non-housing purchases in the first 90 days, plus $300 in Bilt Cash on approval; annual benefits add $200 in Bilt Cash, a $400 Bilt Travel Hotel credit (two $200 statement credits, 2-night minimum) and Priority Pass lounge access at 1,300+ airports. A limited edition mirror-finish card design is also offered while supplies last. APR is the Prime-based variable range published in the Rates & Fees disclosure, with a 10.00% introductory APR for the first 12 billing cycles on new card purchases.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-comenity-aaa-daily-advantage",
@@ -26537,7 +27200,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2018-01-04",
     "annual_fee": {
       "amount": 149,
       "currency": "USD",
@@ -26592,14 +27254,14 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-20",
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
     "sources": [
       "https://d.comenity.net/legaldocs/virginamericavisa/legal-documents/termsandconditions"
     ],
-    "notes": "Discontinued January 4, 2018 following Alaska Airlines' acquisition of Virgin America. $149 annual fee. No change/cancel fees on Virgin America flights, earn up to 15,000 elite status points per year.",
+    "notes": "Historical discontinued record. The retained official Comenity agreement explicitly names Virgin America Visa, Visa Signature, Premium Visa and Premium Visa Signature accounts for personal, family or household use, issued by Comenity Capital Bank. The agreement is not dated and does not establish an exact application-withdrawal or account-closure date, a successor, or conversion/non-conversion to Alaska Airlines. The unsupported 2018-01-04 date has been removed. Historical fees and benefits retained from the existing record have not been reverified from a dated issuer fee schedule. Accessible legacy legal text does not establish current application availability.",
     "art_grade": "none"
   },
   {
@@ -26617,7 +27279,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2018-01-04",
     "annual_fee": {
       "amount": 49,
       "currency": "USD",
@@ -26657,14 +27318,14 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-20",
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
     "sources": [
       "https://d.comenity.net/legaldocs/virginamericavisa/legal-documents/termsandconditions"
     ],
-    "notes": "Discontinued January 4, 2018 following Alaska Airlines' acquisition of Virgin America. $49 annual fee. Cards were not converted to Alaska Airlines products.",
+    "notes": "Historical discontinued record. The retained official Comenity agreement explicitly names Virgin America Visa, Visa Signature, Premium Visa and Premium Visa Signature accounts for personal, family or household use, issued by Comenity Capital Bank. The agreement is not dated and does not establish an exact application-withdrawal or account-closure date, a successor, or conversion/non-conversion to Alaska Airlines. The unsupported 2018-01-04 date has been removed. Historical fees and benefits retained from the existing record have not been reverified from a dated issuer fee schedule. Accessible legacy legal text does not establish current application availability.",
     "art_grade": "none"
   },
   {
@@ -26908,6 +27569,89 @@
     "art_grade": "issuer"
   },
   {
+    "id": "us-discover-it-miles",
+    "schema_version": "1.0.0",
+    "name": "Discover it Miles",
+    "country": "us",
+    "issuer": "Discover",
+    "issuer_id": "discover",
+    "network": "discover",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 17.74,
+        "max": 26.74,
+        "type": "variable"
+      },
+      "notes": "0% introductory APR for 15 months on purchases and balance transfers; 17.74% to 26.74% variable APR thereafter. A balance transfer fee applies; the product page does not state the amount. Terms are offer-specific."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": "Not stated on the cited product page; confirm the terms of the specific offer."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "miles",
+      "currency_label": "Discover miles",
+      "structure": "single",
+      "rate_type": "miles_multiplier",
+      "base_rate": {
+        "points_per_dollar": 1.5,
+        "description": "Unlimited 1.5 miles per dollar on every purchase."
+      },
+      "redemption_notes": "100 miles = $1 for cash or travel statement credit, with no minimum redemption. Miles do not expire for the life of the account. The issuer notes that redemption rates may vary and are subject to change."
+    },
+    "signup_bonus": {
+      "amount": null,
+      "unit": "other",
+      "spend_required": null,
+      "spend_currency": "USD",
+      "months": 12,
+      "description": "Discover Match for new cardholders: matches miles earned from account approval through the first 365 days, credited within two billing periods. No purchase minimum or match cap. Rewards processed after the match period, statement credits, rewards transfers from deposit accounts, and closed accounts are excluded. Promotional offer may not be available in the future.",
+      "as_of": "2026-10-19"
+    },
+    "benefits": [
+      {
+        "id": "discover-match",
+        "title": "Discover Match",
+        "category": "other",
+        "source": "issuer",
+        "description": "Automatic miles-for-miles match of eligible first-year miles for new cardholders, subject to the offer terms."
+      },
+      {
+        "id": "card-lock",
+        "title": "Card lock",
+        "category": "other",
+        "source": "issuer",
+        "description": "Lock or unlock the card in the mobile app. Returns, credits, payments, interest, balance transfers, dispute adjustments, fees and certain other transactions may continue while locked."
+      }
+    ],
+    "official_url": "https://www.discover.com/credit-cards/travel/",
+    "image": {
+      "url": "https://ecm.capitalone.com/WCM/dfs-card/products/it-miles-card-header/rdesktop.png",
+      "attribution": "© Capital One",
+      "local_path": null
+    },
+    "last_verified": "2026-10-19",
+    "sources": [
+      "https://www.discover.com/credit-cards/travel/"
+    ],
+    "notes": "Discover-branded personal travel rewards card, distinct from Discover it Cash Back. The official Discover page links to a Capital One-hosted application and card artwork and carries a Capital One copyright notice. Current product information only; no claim that all historical versions have identical terms. No foreign-transaction fee, cash-advance APR, credit-score requirement or travel-insurance benefit is inferred from another Discover card.",
+    "art_grade": "issuer"
+  },
+  {
     "id": "us-discover-it-secured",
     "schema_version": "1.0.0",
     "name": "Discover it Secured Cash Back Credit Card",
@@ -27037,19 +27781,19 @@
     },
     "official_url": "https://www.discover.com/credit-cards/secured/",
     "image": {
-      "url": null,
-      "attribution": "© Discover",
+      "url": "https://ecm.capitalone.com/WCM/dfs-card/products/cardart-cashit-with-shadow/rdesktop.png",
+      "attribution": "© Capital One",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://www.discover.com/credit-cards/secured/",
       "https://www.discover.com/credit-cards/secured-credit-card/?iq_id=dp-dbr-inet-acceptance-pdisplay"
     ],
-    "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Image URL cleared: prior asset was a Capital One CDN card-art file for the Discover it Cash Back (unsecured) product, not the Secured card.",
+    "notes": "Verified against official discover.com product page 2026-07-25. Rewards: 5% cash back on rotating quarterly bonus categories (activation required, up to a quarterly maximum) plus 1% on all other purchases. First-year Unlimited Cashback Match is a dollar-for-dollar match of all cash back earned (variable, not a fixed sign-up bonus) — captured in benefits and redemption_notes rather than signup_bonus. Annual fee $0. APR and FX fee not visible on the fetched page. Official artwork rechecked 2026-10-19: the Secured product page itself displays this blue Discover it card as its hero image. This is a shared card design, not a claim that the asset is exclusive to Secured; the association is established by the Secured page, not its filename or CDN host. The page footer attributes copyright to Capital One. Historical financial terms above were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-discover-it-student-cash-back",
@@ -27275,17 +28019,17 @@
     },
     "official_url": "https://www.discover.com/credit-cards/student-credit-card/chrome-card/",
     "image": {
-      "url": null,
-      "attribution": "© Discover",
+      "url": "https://ecm.capitalone.com/WCM/dfs-card/images/student-chrome-card-marquee/rdesktop.png",
+      "attribution": "© Capital One",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-25",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://www.discover.com/credit-cards/student-credit-card/chrome-card/"
     ],
-    "notes": "Verified against official Discover product page 2026-07-24. APR (16.49%-25.49% variable, 0% intro 6 months) and no-annual-fee confirmed. FX fee not stated on page (terms_url empty). No signup bonus; Cashback Match is first-year promo. 2% cash back at gas stations and restaurants applies to up to $1,000 in combined purchases each quarter (the $1,000 cap is shared across both categories, not per-category), then 1%. Image URL cleared: prior asset was wrong-product card art on a Capital One CDN.",
-    "art_grade": "none"
+    "notes": "Verified against official Discover product page 2026-07-24. APR (16.49%-25.49% variable, 0% intro 6 months) and no-annual-fee confirmed. FX fee not stated on page (terms_url empty). No signup bonus; Cashback Match is first-year promo. 2% cash back at gas stations and restaurants applies to up to $1,000 in combined purchases each quarter (the $1,000 cap is shared across both categories, not per-category), then 1%. Official artwork rechecked 2026-10-19: the Student Chrome product page displays this silver card in its hero image with alt text Discover it Student Chrome Credit Card. The page footer attributes copyright to Capital One. Historical financial terms above were not reverified in this artwork-only update.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-first-ana-card-usa-plus",
@@ -28398,7 +29142,7 @@
     },
     "official_url": "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "image": {
-      "url": null,
+      "url": "https://s7d1.scene7.com/is/image/fnnistage/amtrak-white-cardart?ts=1726788261446&$TransparentPNG$&hei=200&dpr=off",
       "attribution": "© First National Bank of Omaha",
       "local_path": null
     },
@@ -28408,9 +29152,9 @@
       "https://www.card.fnbo.com/amtrakguestrewards/apply",
       "https://www.card.fnbo.com/amtrakguestrewards"
     ],
-    "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted.",
+    "notes": "Issued by FNBO. $0 annual fee. No foreign transaction fees. Standard Amtrak Guest Rewards Mastercard (not Preferred). CORRECTION: companion coupon, one-class upgrade, station lounge pass, and earn tier status faster are listed on the official product page as benefits of the standard Mastercard, not Preferred-only as previously noted. Artwork verified 2026-10-20: The FNBO product comparison column explicitly labels this white card Amtrak Guest Rewards Mastercard, distinct from the blue Preferred column. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-fnbo-amtrak-guest-rewards-preferred",
@@ -28558,7 +29302,7 @@
     },
     "official_url": "https://www.card.fnbo.com/amtrakguestrewards/apply",
     "image": {
-      "url": null,
+      "url": "https://s7d1.scene7.com/is/image/fnnistage/amtrak-preferred-blue-cardart?ts=1726788261467&$TransparentPNG$&hei=200&dpr=off",
       "attribution": "© First National Bank of Omaha",
       "local_path": null
     },
@@ -28568,9 +29312,9 @@
       "https://www.card.fnbo.com/amtrakguestrewards/apply",
       "https://media.amtrak.com/2022/10/amtrak-and-first-national-bank-of-omaha-launch-two-new-amtrak-guest-rewards-mastercards/"
     ],
-    "notes": "Issued by FNBO. $99 annual fee. Preferred tier with companion coupon, one-class upgrade, station lounge pass, and 20% onboard rebate. No foreign transaction fees. APR not re-verified on 2026-07-24 (Summary of Credit Terms is JS-rendered).",
+    "notes": "Issued by FNBO. $99 annual fee. Preferred tier with companion coupon, one-class upgrade, station lounge pass, and 20% onboard rebate. No foreign transaction fees. APR not re-verified on 2026-07-24 (Summary of Credit Terms is JS-rendered). Artwork verified 2026-10-20: The FNBO product comparison column explicitly labels this blue card Amtrak Guest Rewards Preferred Mastercard, distinct from the white standard column. The official image returned HTTP 200 and was visually inspected as the matching isolated card. Financial terms, lifecycle and offer dates were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-fnbo-best-western-rewards",
@@ -29247,8 +29991,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2021-01-01",
-    "replaced_by": "us-hsbc-elite",
     "annual_fee": {
       "amount": 395,
       "currency": "USD",
@@ -29326,14 +30068,15 @@
     "official_url": "https://www.us.hsbc.com/credit-cards/products/elite/",
     "image": null,
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-20",
     "sources": [
-      "https://www.us.hsbc.com/credit-cards/products/elite/"
+      "https://www.us.hsbc.com/credit-cards/products/elite/",
+      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Renamed to HSBC Elite Credit Card in early 2021. This card was the World Elite Mastercard tier predecessor to the current HSBC Elite credit card. Rewards and benefits shown are minimal/historical; the successor product (us-hsbc-elite) carries the current, richer benefits structure.",
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"HSBC Bank USA/Premier World Elite MasterCard Cardmember Agreement and Disclosure.pdf\" explicitly names this personal product and HSBC Bank USA, N.A. on its 10/2018 agreement cover. Current HSBC Elite product and terms pages establish the current product, not the date or terms of a historical conversion. Removed unsupported 2021-01-01, early-2021 rename and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
     "art_grade": "none"
   },
   {
@@ -29922,8 +30665,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2018-01-16",
-    "replaced_by": "us-penfed-pathfinder",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -29973,14 +30714,15 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-20",
     "sources": [
-      "https://www.penfed.org/credit-cards/"
+      "https://www.penfed.org/credit-cards/",
+      "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued January 2018, replaced by PenFed Pathfinder Rewards.",
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Pentagon Federal Credit Union/PenFed Premium Travel Rewards American Express Affinity Groups.pdf\" explicitly names this historical American Express product. Another archived agreement names both Pathfinder and Premium Travel Rewards American Express cards; co-listing is not a conversion notice and does not prove transition to the current Pathfinder Visa product. Removed unsupported 2018-01-16 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
     "art_grade": "none"
   },
   {
@@ -31005,6 +31747,7 @@
     "type": "credit",
     "status": "discontinued",
     "discontinued_date": "2021-10-06",
+    "replaced_by": "us-td-cash",
     "annual_fee": {
       "amount": null,
       "currency": "USD",
@@ -31037,17 +31780,11 @@
       "currency_label": "Reward points",
       "structure": "multi",
       "base_rate": {
-        "points_per_dollar": 1,
-        "description": "Earn 1 point per dollar on all other purchases."
+        "points_per_dollar": null,
+        "description": "Historical earning rates are not documented in the remaining official transition FAQ."
       },
-      "categories": [
-        {
-          "label": "TD Ameritrade brokerage deposits",
-          "points_per_dollar": 2,
-          "cap": null
-        }
-      ],
-      "redemption_notes": "Points could be redeemed for cash back deposited into a TD Ameritrade brokerage account or for other rewards. Redemption details per the archived FAQ.",
+      "categories": [],
+      "redemption_notes": "The official transition FAQ states that September 24 was the last day to redeem Client Rewards for a 10% bonus into an eligible TD Ameritrade account. Remaining Client Rewards transferred to TD Cash on October 6, 2021; this redemption bonus was not a purchase earning multiplier.",
       "rate_type": "points_multiplier"
     },
     "signup_bonus": null,
@@ -31078,11 +31815,11 @@
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://tdaclientrewards.tdbank.com/products/TDA/pdfs/tda-faq.pdf"
     ],
-    "notes": "Discontinued October 6, 2021 due to TD Ameritrade acquisition by Charles Schwab. Replaced by TD Cash Credit Card. Rewards and benefits are minimal/reconstructed from the archived FAQ PDF; exact rates and fee structure are no longer fully documented.",
+    "notes": "The official transition FAQ says the program ended and eligible accounts converted to TD Cash on October 6, 2021, after Charles Schwab acquired TD Ameritrade. The opening answer, next-steps answer and rewards section repeat the 2021 conversion date; the mail-arrival answer inconsistently prints October 6, 2020. Historical purchase earning rates and fees are not documented in this FAQ and are left unknown rather than reconstructed. The FAQ documents brokerage-account redemption, not a 2x earning category for brokerage deposits.",
     "segment": "personal",
     "art_grade": "none"
   },
@@ -31343,7 +32080,7 @@
     },
     "official_url": "https://www.td.com/us/en/personal-banking/credit-cards/cash-card",
     "image": {
-      "url": null,
+      "url": "https://www.td.com/content/dam/tdb/images/personal-banking/navigation/f26-q3-usbc-nav-bar-cash.png",
       "attribution": "© TD Bank",
       "local_path": null
     },
@@ -31355,7 +32092,7 @@
     ],
     "notes": "Verified from official product page. Customizable 3-2-1% cash back: choose two spend categories each quarter for 3% and 2%, plus 1% on all other purchases. Default at opening is 3% Dining and 2% Grocery Stores. No annual fee. 0% intro APR on purchases for 12 billing cycles and on balance transfers for 15 billing cycles. Foreign transaction fee 3%.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-td-first-class",
@@ -32460,8 +33197,6 @@
     "type": "credit",
     "segment": "business",
     "status": "discontinued",
-    "discontinued_date": "2022-04-01",
-    "replaced_by": "us-us-bank-business-triple-cash-rewards",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -32485,7 +33220,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued April 2022; business cards converted to U.S. Bank Business Triple Cash Rewards.",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Business Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -32500,8 +33235,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2022-04-01",
-    "replaced_by": "us-us-bank-altitude-go",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -32525,7 +33258,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued April 2022; converted to U.S. Bank Altitude Go. Co-brand with Radisson Hotels (formerly Club Carlson).",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -32540,8 +33273,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2022-04-01",
-    "replaced_by": "us-us-bank-altitude-go",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -32565,7 +33296,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued April 2022; converted to U.S. Bank Altitude Go. Co-brand with Radisson Hotels (formerly Club Carlson).",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -32580,8 +33311,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2022-04-01",
-    "replaced_by": "us-us-bank-altitude-go",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -32605,7 +33334,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued April 2022; converted to U.S. Bank Altitude Go. Co-brand with Radisson Hotels (formerly Club Carlson).",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -32620,8 +33349,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2022-04-01",
-    "replaced_by": "us-us-bank-altitude-go",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -32645,7 +33372,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued April 2022; converted to U.S. Bank Altitude Go. Co-brand with Radisson Hotels (formerly Club Carlson).",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -32962,7 +33689,7 @@
     },
     "official_url": "https://www.skypassvisa.com/credit/visaSkyBlueCard.do",
     "image": {
-      "url": null,
+      "url": "https://www.skypassvisa.com/credit/skypass/images/spv-nav-card.png",
       "attribution": "© U.S. Bank",
       "local_path": null
     },
@@ -32972,7 +33699,7 @@
       "https://www.skypassvisa.com/credit/visaSkyBlueCard.do"
     ],
     "notes": "Verified from official product page. APR and foreign transaction fee not stated on page. network_tier corrected from 'signature' to null — page refers to 'Visa Guide to Benefits' (not 'Visa Signature Guide to Benefits') and card name is 'SKYPASS SkyBlue Visa® Card' without Signature designation.",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-us-bank-skypass-business",
@@ -33303,11 +34030,11 @@
     "network_tier": "classic",
     "type": "credit",
     "segment": "personal",
-    "status": "discontinued",
+    "status": "unknown",
     "annual_fee": {
-      "amount": 0,
+      "amount": null,
       "currency": "USD",
-      "first_year": 0,
+      "first_year": null,
       "waiver_conditions": null
     },
     "apr": {
@@ -33355,19 +34082,20 @@
       "hotel_status": null,
       "other": []
     },
-    "official_url": "https://www.skypassvisa.com/credit/contactUs.do",
+    "official_url": "https://www.skypassvisa.com/credit/visaClassicCard.do",
     "image": {
       "url": null,
       "attribution": "© U.S. Bank",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-28",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://www.skypassvisa.com/credit/contactUs.do",
-      "https://www.skypassvisa.com/credit/faqs.do"
+      "https://www.skypassvisa.com/credit/faqs.do",
+      "https://www.skypassvisa.com/credit/visaClassicCard.do"
     ],
-    "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. No longer available for new applications; not listed in site navigation. Still serviced for existing cardholders per the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Visa Secured). The SkyBlue Visa is also marked 'no longer available' on its product page.",
+    "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. The official Classic page title identifies the product and 1 mile per $1 in net purchases, but the page has no Classic-specific application, current fee disclosure, withdrawal notice or successor notice. The contact page provides existing-cardholder servicing, not evidence of current application availability. Hidden navigation and notices for SkyBlue or Secured do not establish Classic lifecycle. Availability and historical annual fee remain unknown; no corresponding Classic artwork was verified.",
     "art_grade": "none"
   },
   {
@@ -33384,11 +34112,11 @@
     "network_tier": "classic",
     "type": "credit",
     "segment": "personal",
-    "status": "active",
+    "status": "discontinued",
     "annual_fee": {
-      "amount": 0,
+      "amount": null,
       "currency": "USD",
-      "first_year": 0,
+      "first_year": null,
       "waiver_conditions": null
     },
     "apr": {
@@ -33397,7 +34125,7 @@
         "max": null,
         "type": "variable"
       },
-      "notes": "Variable APR applies; rate not displayed on the product page. Refer to the Cardmember Agreement for current terms."
+      "notes": "Historical APR is not documented on the remaining official product page. Existing cardholders should consult their Cardmember Agreement."
     },
     "fx_fee": {
       "percent": null,
@@ -33413,8 +34141,8 @@
       "structure": "single",
       "rate_type": "miles_multiplier",
       "base_rate": {
-        "points_per_dollar": 1,
-        "description": "Earn SKYPASS miles on eligible purchases; refer to the Cardmember Agreement for the earning rate."
+        "points_per_dollar": null,
+        "description": "Historical earning rates are not documented on the remaining official product page."
       },
       "redemption_notes": "Miles accumulate in a Korean Air SKYPASS frequent flyer account and can be redeemed for Korean Air awards. No mileage caps on any SKYPASS Visa card."
     },
@@ -33450,13 +34178,13 @@
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-26",
+    "last_verified": "2026-10-19",
     "sources": [
       "https://www.skypassvisa.com/credit/visaSecuredCard.do",
       "https://www.skypassvisa.com/credit/contactUs.do",
       "https://www.skypassvisa.com/credit/faqs.do"
     ],
-    "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. The visaSecuredCard.do product page redirects to the SKYPASS Visa welcome page, so specific fees/APR/earning rates are not displayed; the card is confirmed as an active product via the contact page (grouped with SKYPASS SkyBlue Visa and SKYPASS Classic Visa for servicing). Secured card for credit building requiring a refundable deposit.",
+    "notes": "Co-brand credit card with Korean Air SKYPASS, issued by U.S. Bank. On 2026-10-19 the official visaSecuredCard.do page explicitly states in its meta description: 'This product is no longer available.' Unlike the SkyBlue product page, the secured page offers no product-specific application link or current offer. The contact page lists existing-account servicing, not availability to new applicants. No official withdrawal date or successor is stated, so neither is inferred. Historical annual fees and earning rates are not documented on the remaining pages and are left unknown. This verification covers the unavailable-product notice and servicing identity, not a refresh of historical terms. Existing artwork attribution and official Source order are retained.",
     "art_grade": "none"
   },
   {
@@ -33955,7 +34683,7 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/attune-credit-card/",
     "image": {
-      "url": null,
+      "url": "https://cardbenefits.wf.com/wp-content/uploads/2025/01/Attune-Card_344x217.png",
       "attribution": "© Wells Fargo",
       "local_path": null
     },
@@ -33965,9 +34693,9 @@
       "https://creditcards.wellsfargo.com/attune-credit-card/",
       "https://cardbenefits.wf.com/product/mastercard_attune/"
     ],
-    "notes": "Wells Fargo Attune® Card. World Elite Mastercard (confirmed from benefits page). Product URL redirected to general credit cards listing page without Attune-specific content. Benefits page (cardbenefits.wf.com) successfully fetched and verified rewards structure and benefits. Annual fee, APR, FX fee, and signup bonus preserved from prior verification (2026-07-23) as they were not visible on fetched pages. Corrected name from generic page title to 'Wells Fargo Attune® Card' based on benefits page.",
+    "notes": "Wells Fargo Attune® Card. World Elite Mastercard (confirmed from benefits page). Product URL redirected to general credit cards listing page without Attune-specific content. Benefits page (cardbenefits.wf.com) successfully fetched and verified rewards structure and benefits. Annual fee, APR, FX fee, and signup bonus preserved from prior verification (2026-07-23) as they were not visible on fetched pages. Corrected name from generic page title to 'Wells Fargo Attune® Card' based on benefits page. The retained official Attune benefits page was checked 2026-10-20 and labels this image Product showcase. Wells Fargo Attune Mastercard. The visible card face matches Attune. This artwork-only check does not reverify financial terms or application availability.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-autograph",
@@ -34302,7 +35030,10 @@
     "network": "mastercard",
     "network_tier": "world_elite",
     "type": "credit",
-    "status": "active",
+    "segment": "personal",
+    "status": "discontinued",
+    "discontinued_date": "2026-02-07",
+    "replaced_by": "us-column-bilt-blue",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -34328,6 +35059,7 @@
     "rewards": {
       "currency": "bilt_points",
       "currency_label": "Bilt Points",
+      "rate_type": "points_multiplier",
       "structure": "multi",
       "base_rate": {
         "points_per_dollar": 1,
@@ -34354,8 +35086,7 @@
           }
         }
       ],
-      "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment.",
-      "rate_type": "points_multiplier"
+      "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), Bilt Travel Portal, future rent/mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment."
     },
     "signup_bonus": null,
     "benefits": [
@@ -34378,7 +35109,7 @@
         "title": "Lyft bonus points",
         "category": "other",
         "source": "issuer",
-        "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides. Blue cardholders earn 3X total on Lyft."
+        "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides, on top of the card 1.0 base rate. On the Bilt Card 2.0 Blue card the total is 3X."
       },
       {
         "id": "bilt-travel-portal-bonus",
@@ -34405,19 +35136,21 @@
     },
     "official_url": "https://www.biltrewards.com/card",
     "image": {
-      "url": "https://img.bilt.com/43819/1769037123-card-2-banner.png",
-      "attribution": "© Wells Fargo",
+      "url": null,
+      "attribution": null,
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-10-21",
     "sources": [
       "https://www.biltrewards.com/card",
-      "https://www.bilt.com/card"
+      "https://www.bilt.com/card",
+      "https://web.archive.org/web/20260115073349/https://www.bilt.com/card",
+      "https://support.biltrewards.com/hc/en-us/articles/40834037331085-Bilt-Card-2-0-Transition",
+      "https://support.biltrewards.com/hc/en-us/articles/42897766682381-Bilt-Card-2-0-Program-Overview"
     ],
-    "notes": "Verified against official Bilt Rewards page 2026-07-24. Page now describes Bilt Card 2.0 with three tiers (Blue/Obsidian/Palladium); this record maps to the no-annual-fee Bilt Blue Card. APR and FX fee not stated on fetched pages. No signup bonus advertised.",
-    "segment": "personal",
-    "art_grade": "issuer"
+    "notes": "Legacy Bilt Card 1.0, issued by Wells Fargo. Discontinued: Bilt states that the Wells Fargo Bilt Mastercard (card 1.0) could be used through 2026-02-06 and was retired after that date, and that all card 1.0 cards were deactivated on 2026-02-07 when the Bilt Card 2.0 lineup went live — Bilt Blue (us-column-bilt-blue, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year), all issued by Column N.A. and serviced by Cardless. The earn structure recorded here is card 1.0's: 3X dining, 2X travel, 1X on other purchases and 1X on rent (capped at 100,000 points per calendar year). The live Bilt card pages now describe the 2.0 lineup, so the pre-launch product page is cited via its 2026-01-15 Internet Archive snapshot. APR and foreign transaction fee were not visible on the fetched card 1.0 pages (honest nulls); the 2.0 tiers charge no foreign transaction fee. The image published at the old image URL is a Bilt Card 2.0 marketing banner showing the three 2.0 cards rather than the card 1.0 Wells Fargo Bilt Mastercard, so image.url is nulled and the API serves the generic fallback art.",
+    "art_grade": "none"
   },
   {
     "id": "us-wells-fargo-business-platinum",
@@ -34431,8 +35164,6 @@
     "type": "credit",
     "segment": "business",
     "status": "discontinued",
-    "discontinued_date": "2022-01-01",
-    "replaced_by": "us-wells-fargo-signify-business-cash",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -34458,7 +35189,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Not accepting new applications per Wells Fargo FAQ. Replaced by Signify Business Cash.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -34473,8 +35204,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2021-09-01",
-    "replaced_by": "us-wells-fargo-active-cash",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -34500,7 +35229,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Student card discontinued ~2021, converted to Active Cash.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -34515,8 +35244,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2021-09-01",
-    "replaced_by": "us-wells-fargo-active-cash",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -34542,7 +35269,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Replaced by Active Cash. 1.5% cash back.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The current agreement index lists Cash Wise World Elite Mastercard; that does not establish a conversion from this historical Visa record. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -34959,7 +35686,7 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/one-key-credit-card/",
     "image": {
-      "url": null,
+      "url": "https://creditcards.wellsfargo.com/W-Card-MarketPlace/v10-7-26/images/Products/OneKey/onekeycash_card.png",
       "attribution": "© Wells Fargo",
       "local_path": null
     },
@@ -34969,9 +35696,9 @@
       "https://creditcards.wellsfargo.com/one-key-credit-card/",
       "https://www.wellsfargo.com/credit-cards/terms/onekey/?FPID=21231JIXE50000&product_code=CC&subproduct_code=OW&cx_nm=CXNAME_CSMPD&sub_channel=WEB&vendor_code=WF"
     ],
-    "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages.",
+    "notes": "Issued by Wells Fargo Bank, N.A. World Elite Mastercard (confirmed from Guide to Benefits link text). $0 annual fee. APR: 18.49%, 23.49%, or 28.49% variable. Credit score band changed from 'good_to_excellent' to 'unknown' — not explicitly stated on official pages. Artwork verified 2026-10-20 from this exact product page: its Art, Art_M and ArtSticky image elements explicitly identify the Wells Fargo One Key Mastercard, distinct from the separate One Key+ comparison image. The clean blue vertical card image was fetched successfully and visually inspected; attribution follows the page copyright, Wells Fargo. Financial terms and offer dates were not reverified in this artwork-only update.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-propel",
@@ -34985,8 +35712,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2023-05-24",
-    "replaced_by": "us-wells-fargo-autograph",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -35012,7 +35737,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Stopped accepting new applications 2021, fully deactivated Aug 2023. Replaced by Autograph.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -35027,8 +35752,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2023-05-24",
-    "replaced_by": "us-wells-fargo-autograph",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -35054,7 +35777,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued, replaced by Propel then Autograph.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -35069,8 +35792,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2023-05-24",
-    "replaced_by": "us-wells-fargo-autograph",
     "annual_fee": {
       "amount": 175,
       "currency": "USD",
@@ -35096,7 +35817,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Discontinued April 2021. Premium $175 AF card.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -35110,7 +35831,7 @@
     "issuer": "Wells Fargo",
     "issuer_id": "wells-fargo",
     "network": "visa",
-    "network_tier": "signature",
+    "network_tier": "traditional",
     "type": "credit",
     "status": "active",
     "annual_fee": {
@@ -35121,12 +35842,12 @@
     },
     "apr": {
       "purchase": {
-        "min": 17.49,
-        "max": 28.24,
+        "min": 17.74,
+        "max": 28.49,
         "type": "variable"
       },
       "cash_advance": null,
-      "notes": "0% intro APR for 21 months from account opening on purchases and qualifying balance transfers. 17.49%, 23.99% or 28.24% variable APR thereafter. Balance transfers made within 120 days from account opening qualify for the introductory rate."
+      "notes": "0% intro APR for 21 months from account opening on purchases and qualifying balance transfers. 17.74%, 24.24% or 28.49% variable APR thereafter. Balance transfers made within 120 days from account opening qualify for the introductory rate."
     },
     "fx_fee": {
       "percent": 3,
@@ -35196,19 +35917,21 @@
     },
     "official_url": "https://creditcards.wellsfargo.com/reflect-visa-credit-card/",
     "image": {
-      "url": null,
+      "url": "https://creditcards.wellsfargo.com/rv/next/images/cards/reflect.webp?v=c2c5c7f",
       "attribution": "© Wells Fargo",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-24",
+    "last_verified": "2026-10-18",
     "sources": [
       "https://creditcards.wellsfargo.com/reflect-visa-credit-card/",
-      "https://creditcards.wellsfargo.com/reflect-visa-credit-card/?sub_channel=WEB&vendor_code=WF"
+      "https://creditcards.wellsfargo.com/reflect-visa-credit-card/?sub_channel=WEB&vendor_code=WF",
+      "https://www.wellsfargo.com/credit-cards/reflect-visa/terms/?sub_channel=WEB&vendor_code=WF&lp_cx_nm=RVAA00003_CSMPD_RV&FPID=013000IGF80000&product_code=CC&subproduct_code=VV&cx_nm=RVAA00003_CSMPD_RV",
+      "https://www.visa.com/en-us/card-finder/credit-card/traditional"
     ],
-    "notes": "Verified against official Wells Fargo product page 2026-07-24. Name updated to 'Wells Fargo Reflect® Card'. APR (17.49%-28.24% variable, 0% intro 21 months) and 3% FX fee confirmed from page.",
+    "notes": "Product page and Important Credit Terms checked 2026-10-18: 17.74%, 24.24% or 28.49% variable purchase APR after the 21-month 0% introductory period, no annual fee and 3% foreign currency conversion fee. Image URL is the Reflect card art referenced by the official product page; artwork remains Wells Fargo copyright. Visa's official card finder lists Reflect under Visa Traditional and identifies its benefitLevel as Traditional.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-rewards",
@@ -35222,8 +35945,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2021-09-01",
-    "replaced_by": "us-wells-fargo-autograph",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -35249,7 +35970,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Not accepting new applications since fall 2021. 5X bonus for 6 months.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   },
   {
@@ -35402,8 +36123,6 @@
     "type": "credit",
     "segment": "personal",
     "status": "discontinued",
-    "discontinued_date": "2021-09-01",
-    "replaced_by": "us-wells-fargo-autograph",
     "annual_fee": {
       "amount": 0,
       "currency": "USD",
@@ -35429,7 +36148,7 @@
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Not accepting new applications since fall 2021. 50% bonus on airfare redemption.",
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
     "art_grade": "none"
   }
 ]
