@@ -1,0 +1,100 @@
+{
+  "id": "ca-amex-gold-rewards",
+  "schema_version": "1.0.0",
+  "name": "American Express Gold Rewards Card (Canada)",
+  "localized_names": {
+    "en": "American Express Gold Rewards Card (Canada)"
+  },
+  "country": "ca",
+  "issuer": "Amex Bank of Canada",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 250,
+    "currency": "CAD",
+    "first_year": 250,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "notes": "Preferred annual interest rate 21.99% on purchases and funds advances; higher rates apply after missed payments."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident with a Canadian credit file."
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on everything else."
+    },
+    "categories": [
+      {
+        "label": "Travel (flights, hotels, car rentals, cruises)",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas, grocery and drugstore purchases in Canada",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Membership Rewards points redeem through Use Points for Purchases (1,000 points = $10 on eligible purchases), travel, gift cards and 1:1 transfers to partner loyalty programs.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 60000,
+    "unit": "points",
+    "spend_required": 12000,
+    "spend_currency": "CAD",
+    "months": 12,
+    "description": "5,000 Membership Rewards points for each monthly billing period with $1,000 in spend during the first year (up to 60,000 points).",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "annual-travel-credit",
+      "title": "$100 Annual Travel Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$100 CAD annual travel credit on a single travel booking of $100 or more."
+    },
+    {
+      "id": "nexus-credit",
+      "title": "NEXUS statement credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$50 CAD statement credit for a NEXUS application or renewal fee."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/en-ca/credit-cards/gold-rewards-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/en-ca/credit-cards/gold-rewards-card/"
+  ],
+  "notes": "American Express Canada cards have no network package tier, so network_tier is none."
+}

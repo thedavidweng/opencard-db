@@ -1,0 +1,66 @@
+{
+  "id": "ca-amex-essential",
+  "schema_version": "1.0.0",
+  "name": "American Express Essential Credit Card",
+  "localized_names": {
+    "en": "American Express Essential Credit Card"
+  },
+  "country": "ca",
+  "issuer": "Amex Bank of Canada",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 25,
+    "currency": "CAD",
+    "first_year": 25,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 12.99,
+      "max": 12.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 12.99,
+      "max": 12.99,
+      "type": "variable"
+    },
+    "notes": "Preferred annual interest rate 12.99% on purchases and funds advances; higher rates apply after missed payments."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident with a Canadian credit file."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Low-interest card; no purchase earn rate is advertised."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/en-ca/credit-cards/essential-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/en-ca/credit-cards/essential-credit-card/"
+  ],
+  "notes": "American Express Canada cards have no network package tier, so network_tier is none."
+}

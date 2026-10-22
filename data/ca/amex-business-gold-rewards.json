@@ -1,0 +1,69 @@
+{
+  "id": "ca-amex-business-gold-rewards",
+  "schema_version": "1.0.0",
+  "name": "American Express Business Gold Rewards Card (Canada)",
+  "localized_names": {
+    "en": "American Express Business Gold Rewards Card (Canada)"
+  },
+  "country": "ca",
+  "issuer": "Amex Bank of Canada",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "charge",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 199,
+    "currency": "CAD",
+    "first_year": 199,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Charge card: Due in Full balances must be paid each month. Preferred interest rate of 21.99% applies to Flexible Payment Option balances; 30% applies to delinquent Due in Full charges."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident with a Canadian credit file."
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points on everything; plus 10,000 bonus points for each calendar quarter with $20,000 in purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Membership Rewards points redeem through Use Points for Purchases (1,000 points = $10 on eligible purchases), travel, gift cards and 1:1 transfers to partner loyalty programs.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 7500,
+    "spend_currency": "CAD",
+    "months": 3,
+    "description": "50,000 Membership Rewards points after $7,500 in the first 3 months, plus 20,000 points after $30,000 in the first year.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/en-ca/charge-cards/small-business-gold-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/en-ca/charge-cards/small-business-gold-card/"
+  ],
+  "notes": "American Express Canada cards have no network package tier, so network_tier is none."
+}
