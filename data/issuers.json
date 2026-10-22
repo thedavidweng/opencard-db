@@ -630,6 +630,16 @@
       "domains": [
         "vancity.com"
       ]
+    },
+    {
+      "id": "rogers-bank",
+      "name": "Rogers Bank",
+      "aliases": [
+        "rogers"
+      ],
+      "domains": [
+        "rogersbank.com"
+      ]
     }
   ]
 }
