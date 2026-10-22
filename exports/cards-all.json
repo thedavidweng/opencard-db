@@ -92,7 +92,7 @@
     },
     "official_url": "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
     "image": {
-      "url": null,
+      "url": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/American_Express_Cobalt_Card.png",
       "attribution": "© American Express",
       "local_path": null
     },
@@ -102,9 +102,9 @@
       "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
       "https://www.americanexpress.com/ca/en/credit-cards/"
     ],
-    "notes": "Cobalt is the product name, not a Network Tier.",
+    "notes": "Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "ca-scotiabank-passport-visa-infinite",
@@ -1749,13 +1749,26 @@
     },
     "benefits": [],
     "official_url": "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf",
+    "image": {
+      "url": null,
+      "attribution": "© American Express",
+      "local_path": "images/us-amex-business-gold-rewards.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "7c666fc51840b9fb9506253a829745e63d2f8acb3d7b600b26f5d645a7951a57",
+        "width": 300,
+        "height": 189,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "c17793e4612c4b3066529679bf3ffbc5b3a7897ad037cbee3e46e7df081d5440"
+      }
+    },
     "last_verified": "2026-07-28",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/businessgold-card/61467-9-0",
       "https://www.americanexpress.com/content/dam/amex/us/rewards/membership-rewards/consolidated-terms-3-2-20.pdf"
     ],
-    "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/.",
-    "art_grade": "none"
+    "notes": "Historical Business Gold Rewards record. The issuer Membership Rewards terms list Business Gold Rewards Card as automatically enrolled with no additional program enrollment fee; this is not a statement of the card annual fee. The retained standalone Business Gold terms URL returns 404 and does not establish an old-name conversion or successor. The historical financial terms remain unverified; exact lifecycle and successor are unknown. This identity-only source repair does not reverify financial terms or advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://rankt.com/cards/amex_business_gold_rewards/; https://static.rankt.com/v1/public/static/images/cards/amex_business_gold_rewards.png. Match: classic engraved-border gold 'AMERICAN EXPRESS BUSINESS' face (pre-2018 Business Gold Rewards design, not the later metal Business Gold Card), from rankt's listing for this exact card. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-business-green",
@@ -6260,15 +6273,30 @@
     },
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html",
+    "image": {
+      "url": null,
+      "attribution": "© American Express",
+      "local_path": "images/us-amex-mercedes-benz.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "89485e8b047ebea7c2f1c32971892b2249fed87564ba217b234e12226ad78490",
+        "width": 240,
+        "height": 152,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "949ebd821b4eb7f09aabeccd434754900bba73565f9f74184fc673621d433b67"
+      }
+    },
     "last_verified": "2026-07-28",
     "sources": [
       "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html"
     ],
     "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+      "https://www.uscreditcardguide.com/amex-mercedes-benz-credit-card/",
+      "https://www.uscreditcardguide.com/wp-content/uploads/mercedes-credit.png"
     ],
-    "notes": "Discontinued January 2019. Converted to Amex Everyday Preferred per Amex FAQ.",
-    "art_grade": "none"
+    "notes": "Discontinued January 2019. Converted to Amex Everyday Preferred per Amex FAQ. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Mercedes-Benz Credit Card from American Express face on the discontinued card's review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-mercedes-benz-platinum",
@@ -6300,15 +6328,30 @@
     },
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html",
+    "image": {
+      "url": null,
+      "attribution": "© American Express",
+      "local_path": "images/us-amex-mercedes-benz-platinum.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "842f614b3260fe017f75d79c413eaba6902f9a40f49c01bb1e1280f9cbc8b103",
+        "width": 534,
+        "height": 344,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "924e29f491dd170cf0dcea2986b524bdfbf57a065f3086ef1a0225863c8084fd"
+      }
+    },
     "last_verified": "2026-07-28",
     "sources": [
       "https://www.americanexpress.com/us/customer-service/account-management/mercedes-benz-faq.html"
     ],
     "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+      "https://www.uscreditcardguide.com/amex-platinum-card-for-mercedes-benz/",
+      "https://www.uscreditcardguide.com/wp-content/uploads/Screen-Shot-2017-08-31-at-10.20.50-.png"
     ],
-    "notes": "Discontinued January 2019. Converted to standard Platinum Card.",
-    "art_grade": "none"
+    "notes": "Discontinued January 2019. Converted to standard Platinum Card. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Platinum Card face with the Mercedes-Benz star (2017 capture) on the discontinued Platinum Card for Mercedes-Benz review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-platinum",
@@ -6859,12 +6902,25 @@
     },
     "benefits": [],
     "official_url": "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html",
+    "image": {
+      "url": null,
+      "attribution": "© American Express",
+      "local_path": "images/us-amex-plenti.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "8719f4a52a40726e5ce6cb7f82913851e213a69269dd4a2209254b1b90a45c22",
+        "width": 480,
+        "height": 304,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "cb2371ce69400531f9a60949afa151f30e6e18da5ac043ab8d346605f5faa3d4"
+      }
+    },
     "last_verified": "2026-10-19",
     "sources": [
       "https://www.americanexpress.com/us/legal/plenti/the-plenti-program.html"
     ],
-    "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. This is not a credit-card withdrawal or conversion notice and does not support the previously recorded February 16, 2018 card withdrawal date. The old card URL returns a generic shell and the checked servicing URL returns 404; card availability, withdrawal date and successor remain unknown. Historical fees and rewards remain unverified.",
-    "art_grade": "none"
+    "notes": "American Express states that the Plenti loyalty program ended on July 10, 2018, with all Plenti program accounts closed and unredeemed points expired. This is not a credit-card withdrawal or conversion notice and does not support the previously recorded February 16, 2018 card withdrawal date. The old card URL returns a generic shell and the checked servicing URL returns 404; card availability, withdrawal date and successor remain unknown. Historical fees and rewards remain unverified. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/amex-plenti-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/Plenti-AMEX.png. Match: Amex EveryDay-style Plenti Credit Card from American Express face on the card's review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-amex-plum",
@@ -7225,13 +7281,26 @@
     },
     "benefits": [],
     "official_url": "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf",
+    "image": {
+      "url": null,
+      "attribution": "© American Express",
+      "local_path": "images/us-amex-starwood-preferred-guest-business.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "538675fdf102f182ef2d19560b9bfa1d01f6b3f355bbe6c4149b980a28a55bd2",
+        "width": 224,
+        "height": 142,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "8bc6169bc6c332762c3f0931def25a1f2dcf06d1b692fcf8cae0c1f7a61ca721"
+      }
+    },
     "last_verified": "2026-07-28",
     "sources": [
       "https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/marriott-bonvoy-business-american-express-card/61467-9-0",
       "https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/starwood-preferred-guest-business/Starwood_Pref_Guest_Business_Card_09-30-2018.pdf"
     ],
-    "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. This establishes historical product identity, not a later withdrawal or conversion date. The retained Bonvoy Business terms URL returns 404 and is successor-branded; it does not establish this historical product or a transition. Exact lifecycle and successor remain unknown. Financial fields remain unverified and unchanged; this identity-only source repair does not advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/.",
-    "art_grade": "none"
+    "notes": "Historical Starwood Preferred Guest Business record. The issuer Cardmember Agreement as of 09/30/2018 names Starwood Business Card and American Express National Bank; its rewards supplement explicitly names Starwood Preferred Guest Business Credit Card. This establishes historical product identity, not a later withdrawal or conversion date. The retained Bonvoy Business terms URL returns 404 and is successor-branded; it does not establish this historical product or a transition. Exact lifecycle and successor remain unknown. Financial fields remain unverified and unchanged; this identity-only source repair does not advance last_verified. Historical discovery reference only, not official evidence: https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://web.archive.org/web/20190722182521im_/https://www.nerdwallet.com/c1/images/1108_2d9c06a9e241a5b3af85cd0b66a9740e_L.jpg. Match: purple 'spg Starwood Preferred Guest BUSINESS' American Express face from NerdWallet's 2019 card listing (archived 2019-07-22), the pre-Marriott-Bonvoy SPG Business design. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-apple-card",
@@ -7542,16 +7611,31 @@
     },
     "benefits": [],
     "official_url": "https://business.bankofamerica.com/en/credit-cards/atmos-rewards",
+    "image": {
+      "url": null,
+      "attribution": "© Bank of America",
+      "local_path": "images/us-bank-of-america-alaska-airlines-business.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "1d5c9290ac64d1f288ea6a0ca4f9af80f73800c63830f7953e02fc2ff5d8245f",
+        "width": 500,
+        "height": 315,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "0dd1332e110216d6da6473069b01a0f10b636777672bb2eca3f9e79812da61bb"
+      }
+    },
     "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+      "https://www.uscreditcardguide.com/boa-alaska-business-credit-card/",
+      "https://www.uscreditcardguide.com/wp-content/uploads/assets-images-site-sb-credit-cards-card-arts-en-bofa_alaska-CSX98c324d2.png"
     ],
     "last_verified": "2026-10-19",
     "sources": [
       "https://www.bankofamerica.com/credit-cards/",
       "https://business.bankofamerica.com/en/credit-cards/atmos-rewards"
     ],
-    "notes": "Historical Alaska business record retained. The current issuer product page confirms an Atmos Rewards Visa Signature Business card, but does not explicitly document conversion from this historical record or its withdrawal date. Unsupported exact date and successor link are removed pending an official conversion notice. Historical fees/rewards are retained, not re-verified. No current Atmos artwork is assigned to this predecessor.",
-    "art_grade": "none"
+    "notes": "Historical Alaska business record retained. The current issuer product page confirms an Atmos Rewards Visa Signature Business card, but does not explicitly document conversion from this historical record or its withdrawal date. Unsupported exact date and successor link are removed pending an official conversion notice. Historical fees/rewards are retained, not re-verified. No current Atmos artwork is assigned to this predecessor. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Alaska Airlines Mileage Plan 'BUSINESS CARD' Visa face; the filename is Bank of America's own small-business card-art asset name (bofa_alaska). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-alaska-airlines-visa-platinum-plus",
@@ -7627,16 +7711,31 @@
     },
     "benefits": [],
     "official_url": "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html",
+    "image": {
+      "url": null,
+      "attribution": "© Bank of America",
+      "local_path": "images/us-bank-of-america-alaska-airlines-visa-signature.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "c811aadaf09aa39b55c145b35a3111ced2ae2f3e59f96831d64ee74ee97caf3c",
+        "width": 226,
+        "height": 142,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "1495ae9a57eb0758b2f6c1a86053ca64ed3151f5d85780fe4bd951f2f810f6a8"
+      }
+    },
     "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+      "https://web.archive.org/web/20180515140730/https://www.nerdwallet.com/best/credit-cards/airline",
+      "https://web.archive.org/web/20180515140730im_/https://c1.nerdwallet.com/images/2015_9a1245b4eb3a111c59b0753e196fae74_L.jpg"
     ],
     "last_verified": "2026-10-19",
     "sources": [
       "https://www.bankofamerica.com/credit-cards/",
       "https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/alaska-airlines-and-bank-of-america-present-a-new-premium-credit.html"
     ],
-    "notes": "Bank of America's August 20, 2025 announcement explicitly says the Alaska Airlines Visa Signature card transforms into Atmos Rewards Ascent Visa Signature. Existing benefits continue without interruption; replacement card faces arrive at expiration. The announcement date does not establish the exact application-withdrawal date, which is unknown. Historical fees/rewards and the credit-limit-tier note are retained, not re-verified. No successor artwork is used.",
-    "art_grade": "none"
+    "notes": "Bank of America's August 20, 2025 announcement explicitly says the Alaska Airlines Visa Signature card transforms into Atmos Rewards Ascent Visa Signature. Existing benefits continue without interruption; replacement card faces arrive at expiration. The announcement date does not establish the exact application-withdrawal date, which is unknown. Historical fees/rewards and the credit-limit-tier note are retained, not re-verified. No successor artwork is used. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Alaska Airlines Mileage Plan Visa Signature face shown for the Alaska Airlines Visa Signature card on NerdWallet's airline-card page (archived 2018-05-15), Bank of America era. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-bank-of-america-allways-rewards",
@@ -19606,6 +19705,19 @@
     },
     "benefits": [],
     "official_url": "https://creditcards.chase.com/",
+    "image": {
+      "url": null,
+      "attribution": "© JPMorgan Chase & Co.",
+      "local_path": "images/us-chase-ink-plus-business.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "882b6a75279910258b9a06817b215affa824cb51dcae73b146bb8178a1fb3fcc",
+        "width": 332,
+        "height": 210,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "e27bedb37ef544f12a3988b2e65d255fa3626a6cf0751aea0b628a04f53d302b"
+      }
+    },
     "bin_hints": [],
     "last_verified": "2026-10-20",
     "sources": [
@@ -19613,10 +19725,12 @@
       "https://creditcards.chase.com/business-credit-cards/ink/business-preferred"
     ],
     "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+      "https://www.uscreditcardguide.com/chase-ink-plus-credit-card/",
+      "https://www.uscreditcardguide.com/wp-content/uploads/plus_card.png"
     ],
-    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Ink Business Preferred product page and Chase sample-agreement registry do not establish the historical Ink Plus card's withdrawal date or an explicit conversion. Removed unsupported 2016-11-03 and Ink Business Preferred replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
-    "art_grade": "none"
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The current Ink Business Preferred product page and Chase sample-agreement registry do not establish the historical Ink Plus card's withdrawal date or an explicit conversion. Removed unsupported 2016-11-03 and Ink Business Preferred replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: 'Ink Business Plus' Chase Visa face on the discontinued Ink Plus review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-chase-marriott-bonvoy-bold",
@@ -25854,15 +25968,27 @@
       ]
     },
     "official_url": "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
-    "image": null,
+    "image": {
+      "url": null,
+      "attribution": "© City National Bank",
+      "local_path": "images/us-city-national-bank-crystal-visa-infinite.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "5abc7250f452ee1b883a8d54cc0b2ecb543c3b6000ec6b6ddc83dd6b38453523",
+        "width": 782,
+        "height": 494,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "8e2f38768023a748593e5b1b42f03949c7172dd811143563f3f8b08e12826107"
+      }
+    },
     "bin_hints": [],
     "last_verified": "2026-10-20",
     "sources": [
       "https://www.cnb.com/content/dam/cnb/personal-banking/lending/credit-cards/crystal-visa-infinite-credit-card/documents/Crystal-Visa-Infinite-Credit-Card-Agreement-65903E.pdf",
       "https://www.cnb.com/personal-banking/lending/credit-cards"
     ],
-    "notes": "Pricing verified from the official Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 09/2026, as of September 30, 2026): $400 annual fee, $95 additional card fee, purchase and balance-transfer APR 20.75% or 24.75% variable, cash-advance APR 26.75% variable, no foreign transaction fee and $0.70 minimum interest charge. The agreement explicitly restricts use to personal, family or household purposes. The inherited invite_only status is not independently verified by this agreement; current application availability, invitation/relationship requirements and eligibility remain unknown. Removed unsupported high-net-worth and mandatory in-branch/telephone application assertions. Rewards earn rates are not in this agreement and remain null pending separate official Rewards Program Terms. No historical-to-current product conversion or artwork is inferred.",
-    "art_grade": "none"
+    "notes": "Pricing verified from the official Crystal Visa Infinite Credit Card Agreement (ID 65903E, Rev 09/2026, as of September 30, 2026): $400 annual fee, $95 additional card fee, purchase and balance-transfer APR 20.75% or 24.75% variable, cash-advance APR 26.75% variable, no foreign transaction fee and $0.70 minimum interest charge. The agreement explicitly restricts use to personal, family or household purposes. The inherited invite_only status is not independently verified by this agreement; current application availability, invitation/relationship requirements and eligibility remain unknown. Removed unsupported high-net-worth and mandatory in-branch/telephone application assertions. Rewards earn rates are not in this agreement and remain null pending separate official Rewards Program Terms. No historical-to-current product conversion or artwork is inferred. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/cnb-city-national-bank-crystal-visa-infinite-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/city-national-bank-crystal-visa-infinite-card-16-9-e1618775549895.png. Match: City National Bank Crystal Visa Infinite face (2021 upload). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-city-national-bank-visa-crystal-commercial",
@@ -28774,8 +28900,16 @@
     "official_url": "https://qatarairways.cardless.com/compare",
     "image": {
       "url": null,
-      "attribution": null,
-      "local_path": null
+      "attribution": "© Cardless / Qatar Airways",
+      "local_path": "images/us-first-cardless-qatar-signature.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "2368a863583bed224d0bd3606668758a18c464e059988c0a1d9410e290980ab2",
+        "width": 560,
+        "height": 354,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "40df20d7b1b6b89a33752bd1b1f7d7a746a3f69d92704a02f9ec4b997e1dd79d"
+      }
     },
     "bin_hints": [],
     "last_verified": "2026-07-25",
@@ -28783,8 +28917,8 @@
       "https://qatarairways.cardless.com/compare",
       "https://legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf"
     ],
-    "notes": "Verified from the official Cardless compare page on 2026-07-25. The page lists two cards; this entry is the lower-tier Signature card ($99 annual fee), distinct from the Infinite card ($499, us-first-cardless-qatar-infinite). Signature grants first-year Privilege Club Silver (oneworld Ruby) and earns 2 Qpoints for every 2,000 Avios; the Infinite grants Gold and a richer benefit set. Per-category Avios earn multipliers (Qatar Airways purchases, dining, everywhere else) are not exposed as machine-readable numbers on the official compare page (JS-rendered; headline states \"up to 5x Avios\"), so categories are left empty and the base rate is null. APR not shown on the compare page; the Rates & Fees PDF (legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf) is the official pricing document. No official card art was confidently identifiable for the Signature variant, so image is null.",
-    "art_grade": "none"
+    "notes": "Verified from the official Cardless compare page on 2026-07-25. The page lists two cards; this entry is the lower-tier Signature card ($99 annual fee), distinct from the Infinite card ($499, us-first-cardless-qatar-infinite). Signature grants first-year Privilege Club Silver (oneworld Ruby) and earns 2 Qpoints for every 2,000 Avios; the Infinite grants Gold and a richer benefit set. Per-category Avios earn multipliers (Qatar Airways purchases, dining, everywhere else) are not exposed as machine-readable numbers on the official compare page (JS-rendered; headline states \"up to 5x Avios\"), so categories are left empty and the base rate is null. APR not shown on the compare page; the Rates & Fees PDF (legal.cardless.com/schumer/premium-99-qatar/rates_and_fees.pdf) is the official pricing document. No official card art was confidently identifiable for the Signature variant, so image is null. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/cardless-qatar-airways-signature-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/cardlessqrsignature.png. Match: purple Qatar Airways Privilege Club Visa Signature face (the Signature tier, not the Infinite). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-first-latam-airlines",
@@ -30750,8 +30884,16 @@
     "official_url": "https://www.penfed.org/credit-cards/",
     "image": {
       "url": null,
-      "attribution": null,
-      "local_path": null
+      "attribution": "© Pentagon Federal Credit Union",
+      "local_path": "images/us-penfed-premium-travel-rewards.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "2552cd4c460694e7f4f95ba582622b1d344c0d40265a5b9660371b4320b312dc",
+        "width": 500,
+        "height": 315,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "92537fb12064f99227681f1d8d49faece771b049bc8c34218c82028f97e4646c"
+      }
     },
     "bin_hints": [],
     "last_verified": "2026-10-20",
@@ -30760,10 +30902,12 @@
       "https://files.consumerfinance.gov/a/assets/bulk_agreements/2018_Q4.zip"
     ],
     "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+      "https://wallethub.com/d/penfed-premium-travel-rewards-american-express-credit-card-324c",
+      "https://cdn.wallethub.com/common/product/images/creditcards/500/penfed-premium-travel-rewards-american-express-credit-card-0719324c.jpg"
     ],
-    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Pentagon Federal Credit Union/PenFed Premium Travel Rewards American Express Affinity Groups.pdf\" explicitly names this historical American Express product. Another archived agreement names both Pathfinder and Premium Travel Rewards American Express cards; co-listing is not a conversion notice and does not prove transition to the current Pathfinder Visa product. Removed unsupported 2018-01-16 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date.",
-    "art_grade": "none"
+    "notes": "Historical discontinued record; this retained status and the historical fees, rewards and benefits are inherited from the existing record, not independently reverified in this provenance-only update. The issuer-submitted CFPB 2018_Q4 archive member \"Pentagon Federal Credit Union/PenFed Premium Travel Rewards American Express Affinity Groups.pdf\" explicitly names this historical American Express product. Another archived agreement names both Pathfinder and Premium Travel Rewards American Express cards; co-listing is not a conversion notice and does not prove transition to the current Pathfinder Visa product. Removed unsupported 2018-01-16 and replaced_by claims. Exact application-withdrawal/account-closure dates and successor remain unknown pending a dated issuer notice. Any current-product Source is a comparator, not evidence of a conversion; an archive quarter is not a discontinuation date. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: black PenFed Credit Union American Express face with the vertical 'Premium Travel Rewards' legend, from WalletHub's listing for this exact card (the same design appears in a smaller capture on askmrcreditcard.com's PenFed Premium Travel Rewards review). The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-pnc-cash-rewards-visa-signature-business",
@@ -31434,16 +31578,24 @@
     "official_url": "https://www.verizon.com/financial-services/verizon-visa-card/",
     "image": {
       "url": null,
-      "attribution": "© Synchrony",
-      "local_path": null
+      "attribution": "© Verizon / Synchrony",
+      "local_path": "images/us-synchrony-verizon-visa.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "13e09149cd79ec281251032ee760954f85d53f3be16b3dfc7aebead2fd97b6f5",
+        "width": 198,
+        "height": 315,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "be0dd1546abdde7473182e3dac94a027185fbfcff5ee3e83ece806003c1ec98f"
+      }
     },
     "bin_hints": [],
     "last_verified": "2026-07-25",
     "sources": [
       "https://www.verizon.com/financial-services/verizon-visa-card/"
     ],
-    "notes": "Verified from official product page. Rewards currency is Verizon Dollars. Eligibility: must be Verizon Fios Account Owner with at least one active Fios service or Verizon wireless customer who is Account Owner or Account Manager with up to 12 phone lines. Upon credit card approval, all new card holders will receive a Verizon Visa Signature Card. Purchase APR not stated on page.",
-    "art_grade": "none"
+    "notes": "Verified from official product page. Rewards currency is Verizon Dollars. Eligibility: must be Verizon Fios Account Owner with at least one active Fios service or Verizon wireless customer who is Account Owner or Account Manager with up to 12 phone lines. Upon credit card approval, all new card holders will receive a Verizon Visa Signature Card. Purchase APR not stated on page. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://wallethub.com/d/verizon-credit-card-3285c; https://cdn.wallethub.com/common/product/images/creditcards/500/verizon-credit-card-08343285c.png. Match: vertical black Verizon Visa face with the red Verizon check mark (the Visa mark is on the back of this design), from WalletHub's Verizon Visa listing. The 500x315 original (sha256 a73b1149c1675fc743f62ab2344ba777f74254a8bc967caa77501c928ec4466c) was cropped to the card's 198x315 bounds to remove transparent padding; source_sha256 is of the cropped PNG. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-synchrony-virgin-red-rewards",
@@ -31614,7 +31766,15 @@
     "image": {
       "url": null,
       "attribution": "© Synchrony",
-      "local_path": null
+      "local_path": "images/us-synchrony-virgin-red-rewards.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "25723031bba3cea65f9e154f07667f95b7ada65e5786e4598fe6450977717803",
+        "width": 2232,
+        "height": 1410,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "61bc4779eee793991df8376567f252a3d8801dcec6080903dce1b85bea715bdc"
+      }
     },
     "bin_hints": [],
     "last_verified": "2026-07-24",
@@ -31623,9 +31783,9 @@
       "https://virginredrewardscard.syf.com/benefitsdetails",
       "https://apply.syf.com/cs/groups/public/documents/et_tcdoc/e074512.html"
     ],
-    "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page.",
+    "notes": "Issued by Synchrony Bank. World Elite Mastercard confirmed by page ('World Elite Concierge' and benefits details page title 'VIRGIN RED REWARDS WORLD ELITE MASTERCARD'). Annual fee $99 confirmed. No foreign transaction fees confirmed. APR and signup bonus preserved from prior verification (2026-07-23) as terms_url fetch failed on 2026-07-24. Streaming services list confirmed from benefits details page. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://www.uscreditcardguide.com/synchrony-virgin-red-rewards-credit-card/; https://www.uscreditcardguide.com/wp-content/uploads/vrrcc.png. Match: Virgin Red Rewards Mastercard face on the Synchrony Virgin Red Rewards review page. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
     "segment": "personal",
-    "art_grade": "none"
+    "art_grade": "issuer"
   },
   {
     "id": "us-synchrony-walmart-onepay-cashrewards",
@@ -33431,9 +33591,9 @@
     "segment": "personal",
     "status": "discontinued",
     "annual_fee": {
-      "amount": 0,
+      "amount": 50,
       "currency": "USD",
-      "first_year": 0,
+      "first_year": 50,
       "waiver_conditions": null
     },
     "rewards": {
@@ -33448,12 +33608,13 @@
     "official_url": "https://www.usbank.com/credit-cards/",
     "last_verified": "2026-07-26",
     "sources": [
-      "https://www.usbank.com/credit-cards/"
+      "https://www.usbank.com/credit-cards/",
+      "https://web.archive.org/web/20160508164340/https://applications.usbank.com/oad/catalog/terms.controller?locationCode=21603&productId=03&sourceCode=33351"
     ],
     "secondary_sources": [
       "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
     ],
-    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required.",
+    "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and the remaining financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required. Annual fee correction (checked 2026-10-21): the record previously stored $0. The retained 2016-05-08 archive of U.S. Bank's official Club Carlson(SM) Premier Rewards Visa Signature® Terms and Conditions also covers this card, because declined Premier applications \"may be processed for the Club Carlson Platinum Rewards Visa® card\". It lists \"Annual Membership Fee ... Club Carlson Platinum Rewards Visa Card: $50\" with no introductory annual fee, so annual_fee is $50 with first_year $50 as of those 2016 terms. Fee history in other years was not checked.",
     "art_grade": "none"
   },
   {
@@ -35458,8 +35619,16 @@
     "official_url": "https://www.biltrewards.com/card",
     "image": {
       "url": null,
-      "attribution": null,
-      "local_path": null
+      "attribution": "© Bilt Technologies, Inc.",
+      "local_path": "images/us-wells-fargo-bilt.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "6b43b2da78b34c0662fd916888d753bf49715bcc72856f1d3894067900c256b9",
+        "width": 1000,
+        "height": 635,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "e4d51fd35a555b110f7fb47038486e5ddd64e524572f5e712819a9ac0d16a2dd"
+      }
     },
     "bin_hints": [],
     "last_verified": "2026-10-21",
@@ -35470,8 +35639,12 @@
       "https://support.biltrewards.com/hc/en-us/articles/40834037331085-Bilt-Card-2-0-Transition",
       "https://support.biltrewards.com/hc/en-us/articles/42897766682381-Bilt-Card-2-0-Program-Overview"
     ],
-    "notes": "Legacy Bilt Card 1.0, issued by Wells Fargo. Discontinued: Bilt states that the Wells Fargo Bilt Mastercard (card 1.0) could be used through 2026-02-06 and was retired after that date, and that all card 1.0 cards were deactivated on 2026-02-07 when the Bilt Card 2.0 lineup went live — Bilt Blue (us-column-bilt-blue, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year), all issued by Column N.A. and serviced by Cardless. The earn structure recorded here is card 1.0's: 3X dining, 2X travel, 1X on other purchases and 1X on rent (capped at 100,000 points per calendar year). The live Bilt card pages now describe the 2.0 lineup, so the pre-launch product page is cited via its 2026-01-15 Internet Archive snapshot. APR and foreign transaction fee were not visible on the fetched card 1.0 pages (honest nulls); the 2.0 tiers charge no foreign transaction fee. The image published at the old image URL is a Bilt Card 2.0 marketing banner showing the three 2.0 cards rather than the card 1.0 Wells Fargo Bilt Mastercard, so image.url is nulled and the API serves the generic fallback art.",
-    "art_grade": "none"
+    "secondary_sources": [
+      "https://www.uscreditcardguide.com/bilt-mastercard-credit-card/",
+      "https://www.uscreditcardguide.com/wp-content/uploads/Bilt_card_art.png"
+    ],
+    "notes": "Legacy Bilt Card 1.0, issued by Wells Fargo. Discontinued: Bilt states that the Wells Fargo Bilt Mastercard (card 1.0) could be used through 2026-02-06 and was retired after that date, and that all card 1.0 cards were deactivated on 2026-02-07 when the Bilt Card 2.0 lineup went live — Bilt Blue (us-column-bilt-blue, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year), all issued by Column N.A. and serviced by Cardless. The earn structure recorded here is card 1.0's: 3X dining, 2X travel, 1X on other purchases and 1X on rent (capped at 100,000 points per calendar year). The live Bilt card pages now describe the 2.0 lineup, so the pre-launch product page is cited via its 2026-01-15 Internet Archive snapshot. APR and foreign transaction fee were not visible on the fetched card 1.0 pages (honest nulls); the 2.0 tiers charge no foreign transaction fee. The image published at the old image URL is a Bilt Card 2.0 marketing banner showing the three 2.0 cards rather than the card 1.0 Wells Fargo Bilt Mastercard, so image.url is nulled and the API serves the generic fallback art. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: brushed-black BILT World Elite Mastercard (card 1.0) face, visibly distinct from the Column-issued Bilt 2.0 artwork. The 4772x3029 original (sha256 dfef0d2bc1d5a0fe2b17d2cfcbfde4a9d795d3179bd48d3efa28cc25442f9d38) was downscaled to 1000 px wide (Lanczos) before upload to keep the lossless WebP reasonable; source_sha256 is of that downscaled PNG. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-business-platinum",
@@ -35503,15 +35676,30 @@
     },
     "benefits": [],
     "official_url": "https://www.wellsfargo.com/credit-cards/",
+    "image": {
+      "url": null,
+      "attribution": "© Wells Fargo",
+      "local_path": "images/us-wells-fargo-business-platinum.webp",
+      "provenance": {
+        "source": "other",
+        "source_sha256": "7e200c2f9073b5042e3c5837b5415d647061f84d008f2f4e4a7ddae0337ba594",
+        "width": 290,
+        "height": 150,
+        "exported_at": "2026-10-21",
+        "converted_sha256": "8eb6be0bcc4e9b72030d9111d3365d01033bac01d5d363b94e39d00096d83736"
+      }
+    },
     "last_verified": "2026-07-26",
     "sources": [
       "https://www.wellsfargo.com/credit-cards/"
     ],
     "secondary_sources": [
-      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
+      "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/",
+      "https://www.uscreditcardguide.com/wells-fargo-business-platinum-credit-card/",
+      "https://www.uscreditcardguide.com/wp-content/uploads/bd-product-image-platinum-card_290x150.png"
     ],
-    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required.",
-    "art_grade": "none"
+    "notes": "Historical Wells Fargo record. The current official card catalog and agreement index checked 2026-10-20 do not establish this historical generation's withdrawal date or a product-specific successor. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, conversion terms and historical artwork remain unknown; a readable product-specific official archive or conversion notice is still required. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is listed in secondary_sources. Match: Wells Fargo Business Platinum Visa face; the filename is Wells Fargo's own product-image asset name. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields.",
+    "art_grade": "issuer"
   },
   {
     "id": "us-wells-fargo-cash-back-college",
