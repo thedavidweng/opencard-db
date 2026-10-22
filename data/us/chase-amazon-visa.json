@@ -1,0 +1,86 @@
+{
+  "id": "us-chase-amazon-visa",
+  "schema_version": "1.0.0",
+  "name": "Amazon Visa",
+  "localized_names": {
+    "en": "Amazon Visa"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.99,
+      "max": 27.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR 18.99% to 27.74% variable based on creditworthiness; cash advance APR 28.74% variable; penalty APR up to 29.99%. Variable APRs are based on the 7.00% Prime Rate."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Pricing & Terms list foreign transaction fees as None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "Amazon rewards (cash back)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Amazon.com, Audible.com, Whole Foods Market and Chase Travel purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas stations, restaurants, and local transit and commuting (including rideshare)",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards can be redeemed at Amazon.com checkout with no minimum, or for cash back, gift cards and travel at Chase.com.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 50,
+    "unit": "usd",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "$50 Amazon Gift Card loaded into the Amazon account Gift Card Balance on approval of the credit card application.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://creditcards.chase.com/cash-back-credit-cards/amazon-rewards",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC59318.html"
+  ],
+  "notes": "Amazon Visa without a Prime membership requirement, distinct from the Prime Visa (us-chase-amazon-prime). Fees, APRs and earn rates come from the Chase product page and its Pricing & Terms page checked on the verification date. network_tier is recorded as none because neither the product page nor the Pricing & Terms page names the network package."
+}

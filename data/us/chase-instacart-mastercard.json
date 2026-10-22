@@ -1,0 +1,95 @@
+{
+  "id": "us-chase-instacart-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Instacart Mastercard",
+  "localized_names": {
+    "en": "Instacart Mastercard"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR 18.49% to 27.99% variable based on creditworthiness; cash advance APR 28.74% variable; penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Pricing & Terms list foreign transaction fees as None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Qualifying Instacart.com and Instacart app purchases",
+        "points_per_dollar": 5,
+        "cap": {
+          "amount": 6000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Chase Travel purchases",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Restaurants (including orders on Instacart powered by Uber Eats), gas stations and select streaming services",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 50,
+    "unit": "usd",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "$50 Instacart credit loaded into the Instacart account automatically upon approval.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://creditcards.chase.com/cash-back-credit-cards/instacart",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://creditcards.chase.com/cash-back-credit-cards/instacart",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC60680.html"
+  ],
+  "notes": "Issued by JPMorgan Chase Bank, N.A. Earn rates and fees come from the Chase product page and Pricing & Terms page. The product page footnote names both World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none."
+}

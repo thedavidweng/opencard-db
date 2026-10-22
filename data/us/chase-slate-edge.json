@@ -1,0 +1,67 @@
+{
+  "id": "us-chase-slate-edge",
+  "schema_version": "1.0.0",
+  "name": "Slate Edge Credit Card",
+  "localized_names": {
+    "en": "Slate Edge Credit Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 29.24,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.24,
+      "max": 29.24,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 29.24% variable; cash advance APR 29.24% variable; penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Pricing & Terms list a foreign transaction fee of 3% of the amount of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": "fair",
+    "notes": "Chase markets Slate Edge as best for fair credit customers."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards are advertised on the product page."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://creditcards.chase.com/credit-building-credit-cards/slate/edge",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://creditcards.chase.com/credit-building-credit-cards/slate/edge",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64148.html"
+  ],
+  "notes": "Credit-building card from Chase with no annual fee and no purchase rewards. network_tier is recorded as none because neither the product page nor the Pricing & Terms page names the network package."
+}

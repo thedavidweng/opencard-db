@@ -1,0 +1,113 @@
+{
+  "id": "us-chase-disney-inspire",
+  "schema_version": "1.0.0",
+  "name": "Disney Inspire Visa Card",
+  "localized_names": {
+    "en": "Disney Inspire Visa Card"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 149,
+    "currency": "USD",
+    "first_year": 149,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 18.49% to 27.99% variable; cash advance APR 28.74% variable; penalty APR up to 29.99%. 0% promotional APR for 6 months on select Disney vacation packages, then the variable purchase APR."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Pricing & Terms list foreign transaction fees as None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "disney_rewards_dollars",
+    "currency_label": "Disney Rewards Dollars",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% in Disney Rewards Dollars on all other card purchases."
+    },
+    "categories": [
+      {
+        "label": "Purchases made directly at DisneyPlus.com, Hulu.com or Stream.ESPN.com",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Gas stations and most other U.S. Disney locations",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores and restaurants",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Rewards Dollars can be redeemed through Pay Yourself Back for statement credits toward purchases at most U.S. Disney locations and Disney sites, or toward airline tickets purchased with the card.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 200,
+    "unit": "usd",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$300 Disney Gift Card eGift upon approval, plus a $200 statement credit after spending $1,000 on purchases in the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "disney-streaming-credit",
+      "title": "Disney streaming credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$10 statement credit each month after spending $10 or more on qualifying subscriptions at DisneyPlus.com, Hulu.com or Stream.ESPN.com. Yearly activation required."
+    },
+    {
+      "id": "disney-resort-rewards",
+      "title": "Disney resort and cruise spend bonus",
+      "category": "other",
+      "source": "issuer",
+      "description": "$200 Disney Rewards Dollars after spending $2,000 per anniversary year on U.S. Disney Resort stays and Disney Cruise Line bookings."
+    },
+    {
+      "id": "theme-park-ticket-credit",
+      "title": "Theme park ticket credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$100 statement credit after spending $200 per anniversary year on U.S. Disney theme park tickets."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://creditcards.chase.com/rewards-credit-cards/disney/inspire",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://creditcards.chase.com/rewards-credit-cards/disney/inspire",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC64083.html"
+  ],
+  "notes": "Issued by JPMorgan Chase Bank, N.A. network_tier is recorded as none because neither the product page nor the Pricing & Terms page names the network package."
+}
