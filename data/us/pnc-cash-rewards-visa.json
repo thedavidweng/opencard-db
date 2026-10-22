@@ -1,0 +1,97 @@
+{
+  "id": "us-pnc-cash-rewards-visa",
+  "schema_version": "1.0.0",
+  "name": "PNC Cash Rewards Visa Credit Card",
+  "localized_names": {
+    "en": "PNC Cash Rewards Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "PNC Bank",
+  "issuer_id": "pnc",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for the first 15 months on qualifying balance transfers, then a variable APR of 18.74% to 28.74%."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas stations",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 8000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Dining at restaurants",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 8000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Grocery stores",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 8000,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": "Redeem at $25 or more as a statement credit or a deposit into an eligible PNC account. Rewards do not expire while the account is open.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 250,
+    "unit": "USD",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "$250 bonus after $1,000 or more in purchases during the first 3 months following account opening. One new account opening bonus per customer per product within 24 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.pnc.com/en/personal-banking/banking/credit-cards/pnc-cash-rewards-visa-credit-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.pnc.com/en/personal-banking/banking/credit-cards/pnc-cash-rewards-visa-credit-card.html"
+  ],
+  "notes": "The 4%, 3% and 2% rates apply to the first $8,000 in combined purchases in these categories each year, then 1%."
+}

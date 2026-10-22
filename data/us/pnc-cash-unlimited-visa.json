@@ -1,0 +1,61 @@
+{
+  "id": "us-pnc-cash-unlimited-visa",
+  "schema_version": "1.0.0",
+  "name": "PNC Cash Unlimited Visa Credit Card",
+  "localized_names": {
+    "en": "PNC Cash Unlimited Visa Credit Card"
+  },
+  "country": "us",
+  "issuer": "PNC Bank",
+  "issuer_id": "pnc",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months on balance transfers made within 90 days of account opening, then a variable APR of 18.74% to 28.74%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "Unlimited 2% cash back on every purchase."
+    },
+    "categories": [],
+    "redemption_notes": "Redeem as a statement credit or a deposit into an eligible PNC account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.pnc.com/en/personal-banking/banking/credit-cards/pnc-cash-unlimited-visa-credit-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.pnc.com/en/personal-banking/banking/credit-cards/pnc-cash-unlimited-visa-credit-card.html"
+  ],
+  "notes": "The product page names the card PNC Cash Unlimited Visa and mentions Visa Signature only in a trademark footer, so network_tier is none."
+}
