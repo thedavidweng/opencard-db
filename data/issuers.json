@@ -640,6 +640,16 @@
       "domains": [
         "rogersbank.com"
       ]
+    },
+    {
+      "id": "brim-financial",
+      "name": "Brim Financial",
+      "aliases": [
+        "brim"
+      ],
+      "domains": [
+        "brimfinancial.com"
+      ]
     }
   ]
 }

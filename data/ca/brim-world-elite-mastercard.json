@@ -1,0 +1,61 @@
+{
+  "id": "ca-brim-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Brim World Elite Mastercard",
+  "localized_names": {
+    "en": "Brim World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Brim Financial",
+  "issuer_id": "brim-financial",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "CAD",
+    "first_year": 89,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "The product page does not state interest rates."
+  },
+  "fx_fee": {
+    "percent": 1.5,
+    "notes": "1.5% foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "brim_rewards_points",
+    "currency_label": "Brim Rewards points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 spent."
+    },
+    "categories": [],
+    "redemption_notes": "Points can be redeemed against any transaction or as cash back on the statement; earning is uncapped.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://brimfinancial.com/personal-credit-cards",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://brimfinancial.com/personal-credit-cards"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name. Includes premium insurance with trip cancellation and trip interruption coverage."
+}
