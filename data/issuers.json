@@ -690,6 +690,16 @@
       "domains": [
         "simplii.com"
       ]
+    },
+    {
+      "id": "canadian-tire-bank",
+      "name": "Canadian Tire Bank",
+      "aliases": [
+        "ctfs"
+      ],
+      "domains": [
+        "ctfs.com"
+      ]
     }
   ]
 }
