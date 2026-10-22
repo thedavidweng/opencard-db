@@ -1,0 +1,66 @@
+{
+  "id": "ca-rbc-avion-visa-platinum",
+  "schema_version": "1.0.0",
+  "name": "RBC Avion Visa Platinum",
+  "localized_names": {
+    "en": "RBC Avion Visa Platinum"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "visa",
+  "network_tier": "platinum",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 120,
+    "currency": "CAD",
+    "first_year": 120,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.99,
+      "max": 20.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "20.99% on purchases; 22.99% on cash advances. Quebec residents may have a different purchase rate."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "avion_points",
+    "currency_label": "Avion points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Avion point per $1 on qualifying purchases."
+    },
+    "categories": [],
+    "redemption_notes": "Avion points redeem for travel, gift cards, merchandise, statement credits and transfers to partner programs.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-visa-platinum-avion.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/credit-cards/travel/rbc-visa-platinum-avion.html"
+  ],
+  "notes": "Network tier is Visa Platinum per the card name."
+}

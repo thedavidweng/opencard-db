@@ -1,0 +1,77 @@
+{
+  "id": "ca-rbc-british-airways-visa-infinite",
+  "schema_version": "1.0.0",
+  "name": "RBC British Airways Visa Infinite",
+  "localized_names": {
+    "en": "RBC British Airways Visa Infinite"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 165,
+    "currency": "CAD",
+    "first_year": 165,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.5,
+      "max": 20.5,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "20.50% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum personal income of $60,000 or household income of $100,000."
+  },
+  "rewards": {
+    "currency": "avios",
+    "currency_label": "Avios",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Avios per $1 on all other qualifying purchases."
+    },
+    "categories": [
+      {
+        "label": "British Airways purchases",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Dining and food delivery",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Avios redeem for British Airways and partner flights and upgrades.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/credit-cards/travel/rbc-british-airways-visa-infinite.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/credit-cards/travel/rbc-british-airways-visa-infinite.html"
+  ],
+  "notes": "Network tier is Visa Infinite per the card name."
+}

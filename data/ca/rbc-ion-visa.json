@@ -1,0 +1,82 @@
+{
+  "id": "ca-rbc-ion-visa",
+  "schema_version": "1.0.0",
+  "name": "RBC ION Visa",
+  "localized_names": {
+    "en": "RBC ION Visa"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.99,
+      "max": 20.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "20.99% on purchases; 22.99% on cash advances. Quebec residents may have a different purchase rate."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "avion_points",
+    "currency_label": "Avion points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Avion point per $1 on all other qualifying purchases."
+    },
+    "categories": [
+      {
+        "label": "Groceries",
+        "points_per_dollar": 1.5,
+        "cap": null
+      },
+      {
+        "label": "Gas and EV charging, daily transit and rideshare",
+        "points_per_dollar": 1.5,
+        "cap": null
+      },
+      {
+        "label": "Streaming, digital gaming and digital subscriptions",
+        "points_per_dollar": 1.5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Avion points redeem for travel, gift cards, merchandise, statement credits and transfers to partner programs.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-visa.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-visa.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
