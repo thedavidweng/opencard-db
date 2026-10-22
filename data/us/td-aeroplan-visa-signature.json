@@ -1,0 +1,92 @@
+{
+  "id": "us-td-aeroplan-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "TD Aeroplan Visa Signature Credit Card",
+  "localized_names": {
+    "en": "TD Aeroplan Visa Signature Credit Card"
+  },
+  "country": "us",
+  "issuer": "TD Bank",
+  "issuer_id": "td",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "unknown",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": "Waived for the first year."
+  },
+  "apr": {
+    "purchase": {
+      "min": 15.99,
+      "max": 24.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 27.24,
+      "max": 27.24,
+      "type": "variable"
+    },
+    "notes": "TD Bank, N.A. terms accurate as of September 12, 2019. Purchase and balance transfer APR is 15.99%, 20.99% or 24.99% based on creditworthiness (Prime plus 10.74%, 15.74% or 19.74%); cash advance APR is Prime plus 21.99%. Balance transfer fee is $5 or 3%, whichever is greater. Cash advance fee is $10 or 5%, whichever is greater. Late and returned payment fees are up to $37."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fee listed as None in the September 2019 terms."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Aeroplan Miles",
+    "structure": "multi",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Aeroplan Mile per dollar on all other net purchases."
+    },
+    "categories": [
+      {
+        "label": "Air Canada purchases made online at aircanada.com, through the Air Canada app or through Air Canada call centers",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "September 2019 terms: miles are redeemed through the Aeroplan program and do not expire while the card account is open and in good standing."
+  },
+  "signup_bonus": {
+    "amount": 25000,
+    "unit": "miles",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Historical offer in the September 2019 terms and the December 2018 product page: 25,000 bonus miles after $1,000 in total net purchases within the first 3 billing cycles.",
+    "as_of": "2019-09-12"
+  },
+  "benefits": [
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "The September 2019 terms list no foreign transaction fee."
+    }
+  ],
+  "official_url": "https://web.archive.org/web/20181213224405/https://www.td.com/us/en/personal-banking/credit-cards/aeroplan-credit-card/",
+  "image": {
+    "url": "https://web.archive.org/web/20181213224405im_/https://www.td.com/us/en/personal-banking/images/aeroplan_1-10_tcm371-259511.jpg",
+    "attribution": "© TD Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.feeds.td.com/en/document/oao/pdf/CC_AER.pdf",
+    "https://web.archive.org/web/20181213224405/https://www.td.com/us/en/personal-banking/credit-cards/aeroplan-credit-card/"
+  ],
+  "notes": "Historical U.S. card issued by TD Bank, N.A. in U.S. dollars, distinct from the Canadian TD Aeroplan cards. Fees, APRs, earning rates and the welcome offer come from TD's Important Credit Card Terms and Conditions (accurate as of September 12, 2019, still hosted on TD's document server) and match the December 13, 2018 archive of the official product page. The terms say approved applicants receive a Visa Signature card with a credit limit of $5,000 or more and a Visa Platinum card below $5,000, with identical account terms; network_tier records the Visa Signature package the product was marketed under. Status is unknown because TD's current U.S. credit card catalog (checked 2026-10-22) no longer lists the card and no official notice of its withdrawal, closing date or conversion was found; catalog absence is not treated as lifecycle evidence. Card art is the official product-page asset from the 2018 capture, visually inspected as the black TD Aeroplan Visa Signature card."
+}
