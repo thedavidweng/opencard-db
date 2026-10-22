@@ -1,0 +1,90 @@
+{
+  "id": "us-bmo-cash-back",
+  "schema_version": "1.0.0",
+  "name": "BMO Cash Back Credit Card",
+  "localized_names": {
+    "en": "BMO Cash Back Credit Card"
+  },
+  "country": "us",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "19.49% to 27.49% variable purchase APR. 0% intro APR for 12 months from the date of first transfer on balance transfers completed within 90 days of account opening, then 19.49% to 27.49%. Cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "Unlimited 1% cash back on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Streaming, cable TV and satellite services",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Gas, EV charging and grocery",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 1500,
+          "currency": "USD",
+          "period": "calendar_quarter"
+        }
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 12,
+    "description": "Double cash back on purchases in the first 12 months for applications received between September 1 and November 1, 2026.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-cash-back-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-cash-back-credit-card/",
+    "https://www.bmo.com/en-us/pdf/credit/standardcreditcards.pdf"
+  ],
+  "notes": "The 3% rate applies to up to $1,500 in gas, EV charging and grocery purchases each calendar quarter, then 1%. No Mastercard network package is stated on the product page, so network_tier is none."
+}

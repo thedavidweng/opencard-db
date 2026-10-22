@@ -348,6 +348,17 @@
         "merrickbank.com",
         "ollocard.com"
       ]
+    },
+    {
+      "id": "bmo",
+      "name": "BMO",
+      "aliases": [
+        "BMO Bank",
+        "Bank of Montreal"
+      ],
+      "domains": [
+        "bmo.com"
+      ]
     }
   ]
 }

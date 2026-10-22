@@ -1,0 +1,90 @@
+{
+  "id": "us-bmo-premium-rewards",
+  "schema_version": "1.0.0",
+  "name": "BMO Premium Rewards Credit Card",
+  "localized_names": {
+    "en": "BMO Premium Rewards Credit Card"
+  },
+  "country": "us",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "18.49% to 27.49% variable APR on purchases and balance transfers. Cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "bmo_rewards_points",
+    "currency_label": "BMO Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on everything else."
+    },
+    "categories": [
+      {
+        "label": "Gas, EV charging, grocery and dining",
+        "points_per_dollar": 4,
+        "cap": {
+          "amount": 2000,
+          "currency": "USD",
+          "period": "calendar_quarter"
+        }
+      },
+      {
+        "label": "Hotels and airfare",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for a statement credit, travel (flights, hotels, cruises, vacation packages and car rentals) or gift cards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 35000,
+    "unit": "points",
+    "spend_required": 5000,
+    "spend_currency": "USD",
+    "months": 2,
+    "description": "35,000 bonus points after spending $5,000 within 2 months of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-premium-rewards-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-premium-rewards-credit-card/",
+    "https://www.bmo.com/en-us/pdf/credit/premium.pdf"
+  ],
+  "notes": "The product page states a cap of up to $2,000 in combined spend each calendar quarter for the bonus categories. A 10% anniversary points bonus applies. No Mastercard network package is stated on the product page, so network_tier is none."
+}
