@@ -1,0 +1,83 @@
+{
+  "id": "us-amex-corporate-platinum",
+  "schema_version": "1.0.0",
+  "name": "American Express Corporate Platinum Card",
+  "localized_names": {
+    "en": "American Express Corporate Platinum Card"
+  },
+  "country": "us",
+  "issuer": "American Express",
+  "issuer_id": "amex",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "corporate",
+  "status": "active",
+  "annual_fee": {
+    "amount": 550,
+    "currency": "USD",
+    "first_year": 550,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "membership_rewards",
+    "currency_label": "Membership Rewards points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Rewards depend on the company's corporate Membership Rewards enrollment; no earn rate is stated on the product page."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "airline-fee-credit",
+      "title": "Airline fee credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $200 in statement credits per calendar year for incidental fees with one selected qualifying airline."
+    },
+    {
+      "id": "clear-plus-credit",
+      "title": "CLEAR+ credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $219 per calendar year in statement credits for an auto-renewing CLEAR+ membership."
+    },
+    {
+      "id": "uber-cash",
+      "title": "Uber Cash on business rides",
+      "category": "other",
+      "source": "issuer",
+      "description": "5% Uber Cash on business Uber rides and Uber Eats orders charged to the card, with enrollment."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.americanexpress.com/en-us/business/corporate/cards/platinum-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.americanexpress.com/en-us/business/corporate/cards/platinum-card/"
+  ],
+  "notes": "Corporate card issued through a company program for employees. APR and foreign transaction fee are not stated on the product page."
+}
