@@ -1,0 +1,72 @@
+{
+  "id": "us-us-bank-edward-jones-flex-balance",
+  "schema_version": "1.0.0",
+  "name": "Edward Jones Everyday Solutions Flex Balance Mastercard",
+  "localized_names": {
+    "en": "Edward Jones Everyday Solutions Flex Balance Mastercard"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.24,
+      "max": 28.24,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR on purchases and on balance transfers made within 60 days of opening for the first 15 billing cycles, then 17.24% to 28.24% variable; cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fee 0%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "edward_jones_loyalty_points",
+    "currency_label": "Edward Jones Loyalty Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No base earn rate is stated."
+    },
+    "categories": [
+      {
+        "label": "Prepaid travel booked through the Travel Rewards Center",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Loyalty Points have their maximum value when deposited into an eligible Edward Jones account (15,000 points worth up to $150); other redemptions such as statement credits, travel or gift cards may be worth less. Points expire 5 years after the calendar quarter in which they were earned.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://alliance.usbank.com/en-us/edward-jones/credit-cards/flex-balance-mastercard.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://alliance.usbank.com/en-us/edward-jones/credit-cards/flex-balance-mastercard.html"
+  ],
+  "notes": "Issued by U.S. Bank National Association for Edward Jones clients. No Mastercard package is stated, so network_tier is none."
+}

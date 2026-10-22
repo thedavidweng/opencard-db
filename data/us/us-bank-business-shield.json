@@ -1,0 +1,75 @@
+{
+  "id": "us-us-bank-business-shield",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Business Shield Visa Card",
+  "localized_names": {
+    "en": "U.S. Bank Business Shield Visa Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.49,
+      "max": 25.49,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR on purchases for the first 12 billing cycles and on balance transfers made within 30 days of opening, then 16.49% to 25.49% variable."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No base earn rate is stated."
+    },
+    "categories": [
+      {
+        "label": "Prepaid airfare, car and hotel reservations booked in the Travel Center",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash rewards redeem as a statement credit, deposit to a U.S. Bank account, Rewards Card, charitable contribution or Real-Time Rewards.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "travel-center-credit",
+      "title": "Annual travel statement credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$50 statement credit after $5,000 in qualified Travel Center bookings in each 12-month period from account opening."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.usbank.com/business-banking/business-credit-cards/business-shield-credit-card.html"
+  ],
+  "notes": "The former U.S. Bank Business Platinum card URL now redirects to this page. The page names the card a Visa card without a package, so network_tier is none."
+}

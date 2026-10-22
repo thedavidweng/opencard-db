@@ -1,0 +1,89 @@
+{
+  "id": "us-us-bank-state-farm-business-cash-rewards",
+  "schema_version": "1.0.0",
+  "name": "State Farm Business Cash Rewards Visa Signature Card",
+  "localized_names": {
+    "en": "State Farm Business Cash Rewards Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.74,
+      "max": 26.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR on purchases for 12 billing cycles and on balance transfers made within 60 days of opening, then 17.74% to 26.74% variable; cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fee 0%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Insurance premium payments (first $4,000 annually)",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 4000,
+          "currency": "USD",
+          "period": "year"
+        }
+      },
+      {
+        "label": "Gas and EV charging stations (transactions of $200 or less), cell phone service providers, office supply stores and dining",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem as a statement credit, deposit to a U.S. Bank savings or checking account, or a Rewards Card ($25 minimum).",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "software-credit",
+      "title": "Software credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$100 software credit (see the issuer page for terms)."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://alliance.usbank.com/en-us/statefarm/credit-cards/business-cash-rewards-visa-signature-credit-card.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://alliance.usbank.com/en-us/statefarm/credit-cards/business-cash-rewards-visa-signature-credit-card.html"
+  ],
+  "notes": "Issued by U.S. Bank National Association."
+}

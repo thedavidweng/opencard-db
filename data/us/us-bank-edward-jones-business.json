@@ -1,0 +1,80 @@
+{
+  "id": "us-us-bank-edward-jones-business",
+  "schema_version": "1.0.0",
+  "name": "Edward Jones Everyday Solutions Business World Elite Mastercard",
+  "localized_names": {
+    "en": "Edward Jones Everyday Solutions Business World Elite Mastercard"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR on purchases for the first 12 billing cycles, then 18.74% to 28.74% variable; cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign transaction fee 0%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "edward_jones_loyalty_points",
+    "currency_label": "Edward Jones Loyalty Points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 Loyalty Points per $1 on every eligible net purchase."
+    },
+    "categories": [
+      {
+        "label": "Prepaid travel booked through the Travel Rewards Center",
+        "points_per_dollar": 6,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Loyalty Points have their maximum value when deposited into an eligible Edward Jones account (15,000 points worth up to $150); other redemptions such as statement credits, travel or gift cards may be worth less. Points expire 5 years after the calendar quarter in which they were earned.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "points",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "20,000 Loyalty Points after $1,500 in eligible net purchases within 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://alliance.usbank.com/en-us/edward-jones/credit-cards/business-world-elite-mastercard.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://alliance.usbank.com/en-us/edward-jones/credit-cards/business-world-elite-mastercard.html"
+  ],
+  "notes": "Issued by U.S. Bank National Association for Edward Jones clients."
+}

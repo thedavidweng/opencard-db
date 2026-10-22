@@ -1,0 +1,81 @@
+{
+  "id": "us-us-bank-aaa-cashback-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "AAA Cashback Visa Signature Card",
+  "localized_names": {
+    "en": "AAA Cashback Visa Signature Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on everything else."
+    },
+    "categories": [
+      {
+        "label": "Grocery stores, gas stations and dining",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "AAA membership, travel and insurance",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem as a statement credit or ACH deposit, or instantly with Real-Time Rewards.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 6,
+    "description": "4% cash back on AAA purchases, travel and insurance for the first 6 months, up to $6,000 in purchases; then 2%.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://card.creditcard.acg.aaa.com/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://card.creditcard.acg.aaa.com/",
+    "https://card.creditcard.acg.aaa.com/credit/rewardsCashback.do"
+  ],
+  "notes": "Issued by U.S. Bank NA dba ACG Card Services for members of participating AAA clubs. The purchase APR is not shown on the program pages."
+}
