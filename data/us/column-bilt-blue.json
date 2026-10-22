@@ -21,15 +21,20 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 26.74,
+      "max": 34.74,
       "type": "variable"
     },
-    "notes": "APR not disclosed on the fetched product page or cardholder agreement; see the account pricing disclosure for current APR."
+    "cash_advance": {
+      "min": 31.74,
+      "max": 34.74,
+      "type": "variable"
+    },
+    "notes": "Purchase APR varies with the U.S. Prime Rate: Prime + 19.99% to 27.99% (Prime 6.75% as of 2026-01-14), maximum 35.99%. A 10.00% introductory APR applies to new card purchases for the first 12 billing cycles after account opening. Balance transfer APR 26.74% to 34.74%; cash advance APR 31.74% to 34.74%."
   },
   "fx_fee": {
-    "percent": null,
-    "notes": "Foreign transaction fee not stated on the fetched product page or cardholder agreement."
+    "percent": 0.0,
+    "notes": "No foreign transaction fee — the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
   },
   "credit_required": {
     "score_band": null,
@@ -38,14 +43,15 @@
   "rewards": {
     "currency": "bilt_points",
     "currency_label": "Bilt Points",
+    "rate_type": "points_multiplier",
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1.0,
-      "description": "1X on everything else."
+      "description": "1X on other everyday purchases."
     },
     "categories": [
       {
-        "label": "Bilt dining partners",
+        "label": "Bilt partner restaurants",
         "points_per_dollar": 4.0,
         "cap": null
       },
@@ -65,50 +71,109 @@
         "cap": null
       },
       {
+        "label": "Other travel",
+        "points_per_dollar": 1.0,
+        "cap": null
+      },
+      {
         "label": "Rent & mortgage (housing-only rewards selected)",
         "points_per_dollar": 1.25,
         "cap": null
       }
     ],
-    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), the Bilt Travel Portal, future rent or mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. Multipliers (excluding rent and mortgage) are inclusive of the Bilt loyalty membership and the Bilt Card multiplier earns. Housing multiplier (up to 1.25X) is determined each billing cycle based on everyday spend relative to the housing payment.",
-    "rate_type": "points_multiplier"
+    "redemption_notes": "Bilt Points redeemable via 28 airline and hotel transfer partners (1:1 ratio), the Bilt Travel Portal, future rent or mortgage payments, Lyft rides, fitness classes, statement credits, eligible student loan payments, and toward a home down payment. Category rates are the headline totals published by Bilt and are inclusive of the Bilt loyalty membership and the Bilt Card multiplier earn; Bilt partner restaurant rates are \"up to\" and vary by restaurant. Under Housing-only rewards the housing multiplier (0.5X to 1.25X) is set each billing cycle from everyday spend relative to the housing payment, with a 250-point floor."
   },
-  "signup_bonus": null,
+  "signup_bonus": {
+    "amount": 100,
+    "unit": "bilt_cash",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "$100 in Bilt Cash credited to the Bilt account upon approval — no spend requirement. Bilt Cash is a dollar-denominated Bilt rewards credit redeemable at Bilt partner merchants and toward housing point unlocks; it expires December 31 each year with up to $100 carried over.",
+    "as_of": "2026-10-21"
+  },
   "benefits": [
     {
       "id": "no-housing-transaction-fee",
       "title": "No transaction fee on rent, mortgage and HOA",
       "category": "waiver",
       "source": "issuer",
-      "description": "Earn rewards on rent and mortgage payments made through Bilt with no transaction fee. Payments can be made via ACH (account and routing number), Venmo, PayPal, or a mailed check, bypassing landlord or servicer card fees. No transaction minimum applies to earn on housing with Bilt Card 2.0."
+      "description": "Earn rewards on rent, mortgage and HOA payments made through Bilt with no transaction fee. Pay via ACH (account and routing number), Venmo, PayPal, or a mailed check to bypass landlord or servicer card fees. Bilt Card 2.0 has no transaction minimum to earn on housing."
+    },
+    {
+      "id": "no-foreign-transaction-fee",
+      "title": "No foreign transaction fees",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "Purchases made outside the U.S. carry no foreign transaction fee; the foreign transaction fee is listed as \"None\" in the Bilt Cards Rates & Fees disclosure."
     },
     {
       "id": "bilt-neighborhood-dining",
       "title": "Bilt Neighborhood Dining bonus points",
       "category": "acceleration",
       "source": "issuer",
-      "description": "At Bilt Neighborhood Dining restaurants (20,000+ participating locations) you earn bonus Bilt Points per dollar on top of the card's standard earn rate. The bonus varies by restaurant and is shown in the Bilt app at the time of visit. No activation required."
+      "description": "At Bilt Neighborhood Dining restaurants (20,000+ participating locations) you earn bonus Bilt Points per dollar on top of the card's standard earn rate, up to 4X in total on the Blue Card. The bonus varies by restaurant and is shown in the Bilt app at the time of visit. No activation required."
     },
     {
       "id": "lyft-bonus",
       "title": "Lyft bonus points",
       "category": "acceleration",
       "source": "issuer",
-      "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides; combined with the base rate, Blue cardholders earn 3X total on Lyft."
+      "description": "Linking Bilt and Lyft accounts earns an additional 2X Bilt Points per dollar on eligible rides; combined with the 1X everyday base rate, Blue cardholders earn 3X total on Lyft. Uncapped."
     },
     {
       "id": "bilt-travel-portal-bonus",
       "title": "Bilt Travel Portal bonus points",
       "category": "acceleration",
       "source": "issuer",
-      "description": "Booking through the Bilt Travel Portal earns +2X on hotels and +1X on flights in bonus Bilt Points on top of the card's base rate."
+      "description": "Booking through the Bilt Travel Portal earns +2X on hotels and +1X on flights in bonus Bilt Points on top of the card's base rate — 3X total on hotels and 2X total on flights."
     },
     {
       "id": "transfer-partners",
       "title": "28 airline and hotel transfer partners",
       "category": "other",
       "source": "issuer",
-      "description": "Points transfer at a 1:1 ratio to 28 Bilt travel partners, including major domestic and international airline programs and leading hotel loyalty programs."
+      "description": "Bilt Points transfer at a 1:1 ratio to Bilt's 28 airline and hotel transfer partners, including major domestic and international airline programs and leading hotel loyalty programs."
+    },
+    {
+      "id": "cellular-wireless-telephone-protection",
+      "title": "Cellular Wireless Telephone Protection",
+      "category": "insurance",
+      "source": "network",
+      "description": "Reimbursement for covered damage or theft of your cellphone.",
+      "details": {
+        "conditions": "See the Bilt Blue Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "purchase-assurance",
+      "title": "Purchase Assurance",
+      "category": "insurance",
+      "source": "network",
+      "description": "Mastercard Purchase Assurance coverage for eligible purchases.",
+      "details": {
+        "conditions": "See the Bilt Blue Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "masterrental-coverage",
+      "title": "MasterRental Coverage",
+      "category": "insurance",
+      "source": "network",
+      "description": "Reimbursement for covered damage or theft to your rental car.",
+      "details": {
+        "conditions": "See the Bilt Blue Card Guide to Benefits."
+      }
+    },
+    {
+      "id": "mastercard-id-theft-protection",
+      "title": "Mastercard ID Theft Protection",
+      "category": "other",
+      "source": "network",
+      "description": "Mastercard ID Theft Protection monitors for possible identity theft and provides resolution services. Enrollment is required to receive the benefit.",
+      "details": {
+        "conditions": "Enroll at mastercardus.idprotectiononline.com; see the Bilt Blue Card Guide to Benefits."
+      }
     },
     {
       "id": "world-elite-mastercard-benefits",
@@ -128,14 +193,28 @@
       "World Elite Mastercard Travel & Lifestyle Services"
     ]
   },
-  "official_url": "https://www.bilt.com/card",
-  "image": null,
+  "official_url": "https://www.bilt.com/card/blue",
+  "image": {
+    "url": "https://img.bilt.com/43819/1790799681-bilt-tahoe.webp",
+    "attribution": "© Bilt Technologies, Inc.",
+    "local_path": "images/us-column-bilt-blue.webp",
+    "provenance": {
+      "source": "issuer-site",
+      "source_sha256": "d0b57b7d055624b1d5345da09300c8b92c2a6c8a20e140a1650cc82cab92d8d8",
+      "converted_sha256": "55ed641b3e9f1811c1cc1aa7aaae13b73b66dda7f0cd17cc50063fc65c8a1384",
+      "width": 500,
+      "height": 317,
+      "exported_at": "2026-10-21"
+    }
+  },
   "bin_hints": [],
-  "last_verified": "2026-07-25",
+  "last_verified": "2026-10-21",
   "sources": [
+    "https://www.bilt.com/card/blue",
     "https://www.bilt.com/card",
-    "https://legal.cardless.com/cardholder_agreement/bilt_blue/cardholder_agreement.pdf",
-    "https://www.biltrewards.com/terms/blue-card-guide-to-benefits"
+    "https://legal.cardless.com/schumer/bilt/rates_and_fees.pdf",
+    "https://www.biltrewards.com/terms/blue-card-guide-to-benefits",
+    "https://www.biltrewards.com/terms/bilt-card-offer-terms"
   ],
-  "notes": "Current Bilt Card 2.0 base card (Bilt Blue), verified 2026-07-25. The Blue Card Cardholder Agreement states the account is issued by Column N.A., serviced by Cardless, Inc.; this is the current generation replacing the legacy Wells Fargo Bilt Card (us-wells-fargo-bilt). The Blue Card Guide to Benefits brands it a 'Bilt Blue World Elite Mastercard'. Bilt Card 2.0 has three tiers, all no transaction fee on housing: Bilt Blue (no annual fee, this record), Bilt Obsidian ($95/year, +$100 annual Bilt Travel Hotel credit, 3X dining/grocery, up to 6X Bilt dining), and Bilt Palladium ($495/year, up to 5X Bilt dining, 4X Lyft, $200 annual Bilt Cash, $400 annual Bilt Travel Hotel credit, Priority Pass at 1,300+ airports). APR and foreign transaction fee were not stated on the fetched product page or cardholder agreement (honest nulls). No signup bonus advertised. Category rates reflect the headline earn shown on bilt.com/card and are inclusive of the Bilt loyalty membership plus the card multiplier."
+  "notes": "Bilt Card 2.0 base card, verified 2026-10-21 against bilt.com/card/blue, the bilt.com/card comparison table, the Bilt Cards Rates & Fees disclosure and the Bilt Card Offer Terms. Issued by Column N.A., Member FDIC and serviced by Cardless, Inc.; a World Elite Mastercard. This record replaces the legacy Wells Fargo Bilt Card (us-wells-fargo-bilt), which is discontinued. Bilt Card 2.0 has three tiers: Bilt Blue (this record, $0 annual fee), Bilt Obsidian (us-column-bilt-obsidian, $95/year) and Bilt Palladium (us-column-bilt-palladium, $495/year). All three tiers charge no transaction fee on housing and no foreign transaction fee. APR is the Prime-based variable range published in the Rates & Fees disclosure, with a 10.00% introductory APR for the first 12 billing cycles on new card purchases. Welcome offer is $100 in Bilt Cash with no spend requirement. Category rates are the headline totals published by Bilt, inclusive of the Bilt loyalty membership and the card multiplier earn; Bilt partner restaurant rates are \"up to\" and vary by restaurant."
 }
