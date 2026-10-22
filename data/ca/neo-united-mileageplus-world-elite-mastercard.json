@@ -1,0 +1,80 @@
+{
+  "id": "ca-neo-united-mileageplus-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "United MileagePlus Neo World Elite Mastercard",
+  "localized_names": {
+    "en": "United MileagePlus Neo World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Neo Financial",
+  "issuer_id": "neo-financial",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "CAD",
+    "first_year": 89,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Purchase rate 19.99% to 29.99%, based on credit assessment."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $80,000 annual income."
+  },
+  "rewards": {
+    "currency": "mileageplus_miles",
+    "currency_label": "MileagePlus miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.75,
+      "description": "0.75 miles per $1 on everything else."
+    },
+    "categories": [
+      {
+        "label": "United Airlines and Star Alliance flights",
+        "points_per_dollar": 1.25,
+        "cap": null
+      },
+      {
+        "label": "Dining and groceries",
+        "points_per_dollar": 1,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "MileagePlus miles redeem for United and Star Alliance flights.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "miles",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 3,
+    "description": "20,000 MileagePlus miles in the first three months, plus a 5,000-mile annual renewal bonus each year after.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.neofinancial.com/credit-cards/neo-united-mastercard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.neofinancial.com/credit-cards/neo-united-mastercard"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name."
+}

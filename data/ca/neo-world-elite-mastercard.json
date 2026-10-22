@@ -1,0 +1,77 @@
+{
+  "id": "ca-neo-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Neo World Elite Mastercard",
+  "localized_names": {
+    "en": "Neo World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Neo Financial",
+  "issuer_id": "neo-financial",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 149,
+    "currency": "CAD",
+    "first_year": 149,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Purchase rate 19.99% to 29.99% (19.99% to 25.24% in Quebec), based on credit assessment and province."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $80,000 personal or $150,000 household annual income."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cashback",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cashback on everything else."
+    },
+    "categories": [
+      {
+        "label": "Groceries (subject to a monthly spend limit)",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Recurring payments (subject to a monthly spend limit)",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Gas (subject to a monthly spend limit)",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cashback can reduce the credit account balance, be added to a Neo Everyday account, or be redeemed for merchandise at the Neo Store.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.neofinancial.com/credit-cards/neo-world-elite-mastercard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.neofinancial.com/credit-cards/neo-world-elite-mastercard"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name. Category cashback is subject to a monthly spend limit shown in the Neo app; spending above it earns 1%."
+}
