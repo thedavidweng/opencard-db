@@ -1,0 +1,82 @@
+{
+  "id": "ca-rbc-cash-back-preferred-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "RBC Cash Back Preferred World Elite Mastercard",
+  "localized_names": {
+    "en": "RBC Cash Back Preferred World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 120,
+    "currency": "CAD",
+    "first_year": 120,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum personal income of $80,000 or household income of $150,000."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other everyday purchases."
+    },
+    "categories": [
+      {
+        "label": "Groceries, dining and food delivery",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Gas, EV charging, rideshare and transit",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Streaming and gaming",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back is redeemed as a credit to the account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/credit-cards/cash-back/rbc-preferred-world-elite-mastercard.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/credit-cards/cash-back/rbc-preferred-world-elite-mastercard.html"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name."
+}

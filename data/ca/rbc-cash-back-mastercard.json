@@ -1,0 +1,77 @@
+{
+  "id": "ca-rbc-cash-back-mastercard",
+  "schema_version": "1.0.0",
+  "name": "RBC Cash Back Mastercard",
+  "localized_names": {
+    "en": "RBC Cash Back Mastercard"
+  },
+  "country": "ca",
+  "issuer": "RBC Royal Bank",
+  "issuer_id": "rbc",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 22.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian resident who has reached the age of majority in their province or territory."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Groceries",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas, EV charging, rideshare and transit",
+        "points_per_dollar": 1,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back is redeemed as a credit to the account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.rbcroyalbank.com/credit-cards/cash-back/rbc-cashback-mastercard.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.rbcroyalbank.com/credit-cards/cash-back/rbc-cashback-mastercard.html"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}

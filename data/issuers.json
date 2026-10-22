@@ -578,6 +578,17 @@
       "domains": [
         "sfcu.org"
       ]
+    },
+    {
+      "id": "rbc",
+      "name": "RBC Royal Bank",
+      "aliases": [
+        "royal-bank-of-canada"
+      ],
+      "domains": [
+        "rbcroyalbank.com",
+        "rbc.com"
+      ]
     }
   ]
 }
