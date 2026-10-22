@@ -1,0 +1,80 @@
+{
+  "id": "us-stanford-fcu-tech-card-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "Stanford FCU Tech Card Visa Signature",
+  "localized_names": {
+    "en": "Stanford FCU Tech Card Visa Signature"
+  },
+  "country": "us",
+  "issuer": "Stanford Federal Credit Union",
+  "issuer_id": "stanford-fcu",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 13.49,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 13.49% to 18.00%, variable with the Prime Rate, effective 10/14/26. No balance transfer or cash advance fees."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Stanford FCU membership required."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Stanford FCU Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X points per $1 everywhere else."
+    },
+    "categories": [
+      {
+        "label": "Amazon, Google and Apple",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Dining and groceries",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points redeem for cash, gift cards, airfare, hotels and merchandise; Ambassador-level members receive a 2% cash bonus.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 25000,
+    "unit": "points",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "25,000 bonus points ($250 cash back) after $1,500 in purchases in the first 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.sfcu.org/cards/tech-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.sfcu.org/cards/tech-card"
+  ],
+  "notes": "The product page says the card carries Visa Signature benefits. The page is behind a bot check and was read from the rendered page."
+}

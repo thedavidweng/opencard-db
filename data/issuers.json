@@ -513,6 +513,16 @@
       "domains": [
         "wescom.org"
       ]
+    },
+    {
+      "id": "stanford-fcu",
+      "name": "Stanford Federal Credit Union",
+      "aliases": [
+        "Stanford FCU"
+      ],
+      "domains": [
+        "sfcu.org"
+      ]
     }
   ]
 }
