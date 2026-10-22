@@ -1,0 +1,99 @@
+{
+  "id": "us-chase-doordash-rewards-mastercard",
+  "schema_version": "1.0.0",
+  "name": "DoorDash Rewards Mastercard",
+  "localized_names": {
+    "en": "DoorDash Rewards Mastercard"
+  },
+  "country": "us",
+  "issuer": "Chase",
+  "issuer_id": "chase",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.49,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR 18.49% to 27.99% variable based on creditworthiness; cash advance APR 28.74% variable; penalty APR up to 29.99%."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Pricing & Terms list foreign transaction fees as None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "usd",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "DoorDash and Caviar orders",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Dining purchased directly from a restaurant",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores, online or in-store",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "Approved applicants receive a free year of DashPass ($96 value) that auto-renews at the then-current annual fee.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "dashpass-anniversary",
+      "title": "DashPass anniversary bonus",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Complimentary DashPass membership each year with $10,000 in annual card spend."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://creditcards.chase.com/cash-back-credit-cards/doordash",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://creditcards.chase.com/cash-back-credit-cards/doordash",
+    "https://sites.chase.com/services/creatives/pricingandterms.html/content/dam/pricingandterms/LGC61934.html"
+  ],
+  "notes": "Issued by JPMorgan Chase Bank, N.A. The product page lists Mastercard World Elite benefits including World Elite Concierge, which supports network_tier world_elite."
+}
