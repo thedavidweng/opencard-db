@@ -1,0 +1,153 @@
+{
+  "id": "us-us-bank-altitude-reserve",
+  "schema_version": "1.0.0",
+  "name": "U.S. Bank Altitude Reserve Visa Infinite Card",
+  "localized_names": {
+    "en": "U.S. Bank Altitude Reserve Visa Infinite Card"
+  },
+  "country": "us",
+  "issuer": "U.S. Bank",
+  "issuer_id": "us-bank",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "discontinued",
+  "annual_fee": {
+    "amount": 400,
+    "currency": "USD",
+    "first_year": 400,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Archived 2024-03-02 product page: the purchase/balance-transfer variable APR value was not rendered in the capture (placeholder only); variable cash advance APR 29.99%. Cash advance fee 5% ($10 minimum); convenience check fee 3% ($5 minimum)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees when making purchases outside the United States (archived 2024-03-02 product page)."
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "In general, our credit card products are for established credit with a credit score in the good to excellent range."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "U.S. Bank Altitude Reserve Points",
+    "structure": "multi",
+    "rate_type": "points_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1X point on all other eligible Net Purchases."
+    },
+    "categories": [
+      {
+        "label": "Prepaid hotels and car rentals booked directly in the Altitude Rewards Center",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Eligible travel purchases made directly with travel merchants (airlines, hotels, car rentals, taxicabs, limousines, passenger trains, cruise lines)",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Mobile wallet purchases (Apple Pay, Google Pay, Samsung Pay)",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Archived 2024-03-02 terms: points are worth 50% more when redeemed for travel; points never expire; Real-Time Rewards redemption available after card registration. A transaction that is both mobile wallet and travel earns the additional points once (as mobile wallet)."
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 4500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Archived offer (2024-03-02): 50,000 bonus points after $4,500 in eligible Net Purchases within 90 days of account opening. The card no longer accepts new applications, so this offer is historical.",
+    "as_of": "2024-03-02"
+  },
+  "benefits": [
+    {
+      "id": "annual-travel-dining-credit",
+      "title": "Up to $325 annual travel and dining credits",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Automatic statement credits totaling up to $325 per cardmember year for purchases made directly with travel merchants and at restaurants, fast-food restaurants or bars."
+    },
+    {
+      "id": "priority-pass-select",
+      "title": "Priority Pass Select membership",
+      "category": "lounge",
+      "source": "issuer",
+      "description": "Complimentary Priority Pass Select membership with 8 free visits to participating airport lounges and experiences; enrollment with no membership fee is limited to one cardmember per account and further lounge visit fees apply."
+    },
+    {
+      "id": "tsa-precheck-global-entry-credit",
+      "title": "TSA PreCheck or Global Entry credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $100 in statement credits to reimburse the TSA PreCheck or Global Entry application fee once every four years."
+    },
+    {
+      "id": "visa-infinite-luxury-hotel-collection",
+      "title": "Visa Infinite Luxury Hotel Collection",
+      "category": "other",
+      "source": "network",
+      "description": "Access to the Visa Infinite Luxury Hotel Collection benefits at participating properties."
+    },
+    {
+      "id": "no-foreign-transaction-fees",
+      "title": "No foreign transaction fees",
+      "category": "other",
+      "source": "issuer",
+      "description": "No foreign transaction fees when making purchases outside the United States."
+    }
+  ],
+  "travel_perks": {
+    "lounge_access": {
+      "program": "Priority Pass Select",
+      "visits_per_year": null,
+      "notes": "Archived page: complimentary membership with 8 free visits; the capture does not state whether the 8 visits reset annually. Enrollment limited to one cardmember per account."
+    },
+    "tsa_precheck_credit": {
+      "amount": 100,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "global_entry_credit": {
+      "amount": 100,
+      "currency": "USD",
+      "period": "every_4_years"
+    },
+    "free_checked_bags": null,
+    "hotel_status": null,
+    "other": [
+      "Up to $325 annual travel and dining credits",
+      "No foreign transaction fees"
+    ]
+  },
+  "official_url": "https://web.archive.org/web/20240302032351/https://www.usbank.com/credit-cards/altitude-reserve-visa-infinite-credit-card.html",
+  "image": {
+    "url": "https://web.archive.org/web/20240227191950im_/https://www.usbank.com/dam/images/rps/large/Altitude_Reserve_382x609.png",
+    "attribution": "© U.S. Bank",
+    "local_path": null
+  },
+  "bin_hints": [],
+  "last_verified": "2026-10-21",
+  "sources": [
+    "https://web.archive.org/web/20240302032351/https://www.usbank.com/credit-cards/altitude-reserve-visa-infinite-credit-card.html",
+    "https://www.usbank.com/credit-cards/benefits.html"
+  ],
+  "notes": "Status evidence: the official U.S. Bank card benefits page (checked 2026-10-21) lists U.S. Bank Altitude Reserve Visa Infinite Card under \"Personal Credit Cards (no longer accepting new applications)\", and the former product URL now redirects to the generic credit card catalog. U.S. Bank does not state the date applications closed, so discontinued_date is omitted. Fees, earning rates, benefits and the welcome offer come from the retained 2024-03-02 archive of the official product page and describe the product as marketed then; current terms for existing cardmembers were not verified and may have changed. The purchase APR was not rendered in the archived capture and is left null. The vertical card image is the official product-page asset (alt text \"U.S. Bank's premium credit card with up to 5 times bonus points on prepaid hotels and car rentals\"); it resolves to a 2024-02-27 archive capture and was visually inspected as the grey Altitude Reserve Visa Infinite card."
+}
