@@ -113,8 +113,8 @@
   },
   "official_url": "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber",
   "image": {
-    "url": null,
-    "attribution": null,
+    "url": "https://cards.barclaycardus.com/content/dam/bcuspublic/card-plastic/card-angled/Uber_Biolumin_Cards_359x246.png",
+    "attribution": "© Barclays",
     "local_path": null
   },
   "secondary_sources": [
@@ -123,7 +123,8 @@
   "bin_hints": [],
   "last_verified": "2026-07-26",
   "sources": [
-    "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber"
+    "https://web.archive.org/web/20200816075034/https://cards.barclaycardus.com/?p=uber",
+    "https://cards.barclaycardus.com/"
   ],
-  "notes": "Historical Uber Visa record. The retained August 2020 Wayback URL checked 2026-10-20 returns generic Barclays welcome/browser-update content, not readable Uber product terms. It does not verify the stored financial fields, exact withdrawal date, or a conversion to Barclays View Mastercard. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor, financial terms and historical artwork remain unknown; a readable official product archive or conversion notice is still required."
+  "notes": "Historical Uber Visa record. The retained August 2020 Wayback URL checked 2026-10-20 returns generic Barclays welcome/browser-update content, not readable Uber product terms. It does not verify the stored financial fields, exact withdrawal date, or a conversion to Barclays View Mastercard. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and financial terms remain unknown; a readable official product archive or conversion notice is still required. Artwork provenance (checked 2026-10-21): the official Barclays US homepage cardmember hero for https://cards.barclaycardus.com/?p=uber, the same vanity URL as this record's archived official_url, labels this card image \"Uber Visa Card\". It was visually inspected as the black Uber Visa card with the dotted-light pattern. The same page separately labels a later black design \"Uber Credit Card\" (Uber_Visa_Card_2019_Angle_2A_v2.png); that design was not used here. Attribution set to Barclays as the issuer hosting the asset. This is artwork evidence only; it does not verify lifecycle or the financial fields."
 }
