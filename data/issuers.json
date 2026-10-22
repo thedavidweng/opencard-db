@@ -360,6 +360,17 @@
       ]
     },
     {
+      "id": "bmo",
+      "name": "BMO",
+      "aliases": [
+        "BMO Bank",
+        "Bank of Montreal"
+      ],
+      "domains": [
+        "bmo.com"
+      ]
+    },
+    {
       "id": "fifth-third",
       "name": "Fifth Third Bank",
       "aliases": [

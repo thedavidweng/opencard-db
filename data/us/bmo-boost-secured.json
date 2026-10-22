@@ -1,0 +1,66 @@
+{
+  "id": "us-bmo-boost-secured",
+  "schema_version": "1.0.0",
+  "name": "BMO Boost Secured Credit Card",
+  "localized_names": {
+    "en": "BMO Boost Secured Credit Card"
+  },
+  "country": "us",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 25,
+    "currency": "USD",
+    "first_year": 25,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 25.49,
+      "max": 25.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 30.74,
+      "max": 30.74,
+      "type": "variable"
+    },
+    "notes": "25.49% standard APR on purchases and balance transfers. Cash advance APR 30.74%."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Secured card. Requires a Secured Credit Card Savings account with a minimum $300 deposit."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-boost-secured-credit-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-us/main/personal/credit-cards/bmo-boost-secured-credit-card/",
+    "https://www.bmo.com/en-us/pdf/credit/BMO-boost-credit-card-SOCT.pdf"
+  ],
+  "notes": "No Mastercard network package is stated on the product page, so network_tier is none."
+}
