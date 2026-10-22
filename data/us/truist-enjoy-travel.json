@@ -1,0 +1,89 @@
+{
+  "id": "us-truist-enjoy-travel",
+  "schema_version": "1.0.0",
+  "name": "Truist Enjoy Travel Credit Card",
+  "localized_names": {
+    "en": "Truist Enjoy Travel Credit Card"
+  },
+  "country": "us",
+  "issuer": "Truist",
+  "issuer_id": "truist",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 27.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "notes": "18.99% to 27.99% variable APR. Cash advance APR 27.99% (Prime plus 20.99%)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "truist_travel_miles",
+    "currency_label": "Truist travel miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x miles on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Airfare, car rentals and hotels",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem miles for cash back, gift cards, hotel stays, airline tickets and merchandise. A 10% to 50% Loyalty Travel Bonus applies, based on the Truist deposit relationship, when rewards are redeemed for travel.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "miles",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "20,000 bonus miles after spending $1,500 within 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "tsa-precheck-global-entry",
+      "title": "TSA PreCheck or Global Entry credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit of up to $85 for the TSA PreCheck or Global Entry fee once every four years."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.truist.com/credit-cards/enjoy-travel",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.truist.com/credit-cards/enjoy-travel",
+    "https://www.truist.com/content/dam/truist-bank/us/en/documents/disclosures/credit-card/truist-enjoy-travel-credit-card-disclosure.pdf"
+  ],
+  "notes": "The product page links both Visa Signature and Visa Traditional benefit guides, so the package depends on the account and network_tier is none."
+}

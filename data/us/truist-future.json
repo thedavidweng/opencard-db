@@ -1,0 +1,66 @@
+{
+  "id": "us-truist-future",
+  "schema_version": "1.0.0",
+  "name": "Truist Future Credit Card",
+  "localized_names": {
+    "en": "Truist Future Credit Card"
+  },
+  "country": "us",
+  "issuer": "Truist",
+  "issuer_id": "truist",
+  "network": "visa",
+  "network_tier": "traditional",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 16.99,
+      "max": 25.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 27.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months on purchases and on balances transferred within 90 days of account opening, then 16.99% to 25.99% variable APR. Cash advance APR 27.99% (Prime plus 20.99%). Balance transfer fee 3% ($10 minimum)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.truist.com/credit-cards/future",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.truist.com/credit-cards/future",
+    "https://www.truist.com/content/dam/truist-bank/us/en/documents/disclosures/credit-card/truist-future-credit-card-disclosure.pdf"
+  ],
+  "notes": "Truist describes this as its lowest-rate card. The product page links the Visa Traditional benefits guide."
+}
