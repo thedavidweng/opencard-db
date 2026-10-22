@@ -1,0 +1,78 @@
+{
+  "id": "us-credit-one-bank-wander-amex",
+  "schema_version": "1.0.0",
+  "name": "Credit One Bank Wander American Express Card",
+  "localized_names": {
+    "en": "Credit One Bank Wander American Express Card"
+  },
+  "country": "us",
+  "issuer": "Credit One Bank",
+  "issuer_id": "credit-one-bank",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 29.74,
+      "max": 29.74,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 31.74,
+      "max": 31.74,
+      "type": "variable"
+    },
+    "notes": "29.74% variable APR for purchases; 31.74% APR for cash advances."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "Foreign Transaction Fee: None."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Recommended for consumers with average to excellent credit."
+  },
+  "rewards": {
+    "currency": "credit_one_rewards_points",
+    "currency_label": "Credit One rewards points (% cash back)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back rewards on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Hotels and car rentals booked through the Credit One Bank travel partner",
+        "points_per_dollar": 10,
+        "cap": null
+      },
+      {
+        "label": "Dining, gas and travel",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back rewards are awarded as points redeemable for statement credits, gift cards, travel, merchandise and more.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.creditonebank.com/credit-cards/wander-american-express",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.creditonebank.com/credit-cards/wander-american-express",
+    "https://www.creditonebank.com/terms/7as?pc=WXD8"
+  ],
+  "notes": ""
+}
