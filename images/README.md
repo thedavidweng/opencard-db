@@ -7,6 +7,7 @@
 - Optional **local mirrors** may be stored here when an official URL is unstable, unavailable, or lower quality than digital wallet art.
 - **Graduation-level local mirror:** Apple Pay `cardBackgroundCombined@2x.png` converted to **lossless WebP** (see below). Prefer this over screenshots or unknown crops.
 - The API always returns a usable `image.url`. Cards without artwork get the **generic fallback**: `images/default-card.webp`, served at `GET /v1/assets/default-card.webp`.
+- **Repo-hosted art gets a derived URL at build time.** Source JSON keeps `image.url: null` for a local mirror; `npm run build:indexes` / `build:exports` fill `image.url` in the exports and the API with `https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/<image.local_path>` (override the base with `OPENCARD_IMAGE_BASE_URL` for forks). An explicit `image.url` always wins. `@main` is used rather than a release tag (a tag would 404 for art added since the last release); the Deploy workflow purges jsDelivr's `@main` cache for changed images and exports on every push to `main`.
 
 ## Default / generic card face
 

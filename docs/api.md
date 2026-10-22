@@ -121,6 +121,13 @@ API list/get/search responses always enrich missing `image.url` to the absolute 
 
 If the card already has a non-empty `image.url` (official issuer URL), it is left unchanged.
 
+Cards whose art is committed to the repo (`image.local_path`, e.g.
+`images/<card-id>.webp`) keep `image.url: null` in source JSON; the build
+derives `image.url` as
+`https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@main/<local_path>`, so
+the exports and the API return the real art (not the placeholder). See
+[`images/README.md`](../images/README.md).
+
 ### Card art grade
 
 Every card object — in the static `exports/` (`cards-all.json`, `cards-by-id.json`,
