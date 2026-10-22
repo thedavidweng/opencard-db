@@ -1,0 +1,61 @@
+{
+  "id": "us-mercury-io-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Mercury IO Mastercard",
+  "localized_names": {
+    "en": "Mercury IO Mastercard"
+  },
+  "country": "us",
+  "issuer": "Patriot Bank, N.A.",
+  "issuer_id": "patriot-bank",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "charge",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "No interest is charged; balances are repaid automatically from Mercury accounts (daily, or 30-day terms once balances reach $15K)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Exclusively for Mercury business account holders; the credit limit is based on balances held with Mercury and linked accounts."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cashback",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% cashback on all spend."
+    },
+    "categories": [],
+    "redemption_notes": "Cashback is deposited automatically into the Mercury account after the balance is paid.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://mercury.com/credit",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://mercury.com/credit"
+  ],
+  "notes": "Business charge card issued by Patriot Bank, N.A. for Mercury. An international transaction fee applies to non-USD transactions; the rate is not stated, so fx is null. No Mastercard network package is stated, so network_tier is none."
+}

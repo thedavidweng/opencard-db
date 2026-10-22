@@ -1,0 +1,61 @@
+{
+  "id": "us-step-visa-card",
+  "schema_version": "1.0.0",
+  "name": "Step Visa Card",
+  "localized_names": {
+    "en": "Step Visa Card"
+  },
+  "country": "us",
+  "issuer": "Evolve Bank & Trust",
+  "issuer_id": "evolve-bank-trust",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": "limited",
+    "notes": "No credit check; available to 18-year-olds with no credit history."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No purchase rewards stated",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "No purchase rewards rates are stated on the product page; Step Points are awarded for monthly credit score improvement."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://step.com/build-credit",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://step.com/build-credit"
+  ],
+  "notes": "Secured credit card from Step: purchases are limited to the Step Spending Account balance and paid off automatically each month with SmartPay. Fees are not stated on the product page, so annual_fee is null. No Visa network package is stated, so network_tier is none."
+}

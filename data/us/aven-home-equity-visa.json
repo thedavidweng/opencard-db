@@ -1,0 +1,62 @@
+{
+  "id": "us-aven-home-equity-visa",
+  "schema_version": "1.0.0",
+  "name": "Aven Home Equity Visa Card",
+  "localized_names": {
+    "en": "Aven Home Equity Visa Card"
+  },
+  "country": "us",
+  "issuer": "Coastal Community Bank",
+  "issuer_id": "coastal-community-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": "Variable APR based on the Prime Rate plus a margin; the card is a line of credit secured by home equity, so no single published range applies. 2.5% fee on balance transfers and cash outs."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Homeowners only; the credit line is secured by home equity, with limits up to $400,000."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "Aven Points",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2 points per $1 (2% cash back) with AutoPay on; 1.5 points per $1 with AutoPay off."
+    },
+    "categories": [],
+    "redemption_notes": "Points redeem as cash back.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.aven.com/home-equity-visa-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.aven.com/home-equity-visa-card",
+    "https://www.aven.com/"
+  ],
+  "notes": "Serviced by Aven. A home equity line of credit accessed by Visa card. No Visa network package is stated, so network_tier is none."
+}
