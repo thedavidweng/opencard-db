@@ -1,0 +1,101 @@
+{
+  "id": "us-truist-enjoy-beyond",
+  "schema_version": "1.0.0",
+  "name": "Truist Enjoy Beyond Credit Card",
+  "localized_names": {
+    "en": "Truist Enjoy Beyond Credit Card"
+  },
+  "country": "us",
+  "issuer": "Truist",
+  "issuer_id": "truist",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 27.99,
+      "max": 27.99,
+      "type": "variable"
+    },
+    "notes": "18.99% to 27.99% variable APR. Cash advance APR 27.99% (Prime plus 20.99%)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fee."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "truist_rewards_points",
+    "currency_label": "Truist rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x points on all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Airfare, hotels and car rentals",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Dining",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "A Loyalty Cash Bonus based on the Truist deposit relationship applies when cash rewards are redeemed into a Truist deposit account.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 30000,
+    "unit": "points",
+    "spend_required": 1500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "30,000 bonus points after spending $1,500 on purchases within 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "travel-experience-credit",
+      "title": "Annual travel experience credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $100 annual statement credit for items such as ground transport, streaming services and ticket agencies."
+    },
+    {
+      "id": "tsa-precheck-global-entry",
+      "title": "TSA PreCheck or Global Entry credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit of up to $120 for the TSA PreCheck or Global Entry fee once every four years."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.truist.com/credit-cards/enjoy-beyond",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.truist.com/credit-cards/enjoy-beyond",
+    "https://www.truist.com/content/dam/truist-bank/us/en/documents/disclosures/credit-card/truist-enjoy-beyond-credit-card-disclosure.pdf"
+  ],
+  "notes": "The product page links both Visa Signature and Visa Traditional benefit guides, so the package depends on the account and network_tier is none."
+}
