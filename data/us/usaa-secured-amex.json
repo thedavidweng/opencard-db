@@ -1,0 +1,76 @@
+{
+  "id": "us-usaa-secured-amex",
+  "schema_version": "1.0.0",
+  "name": "USAA Secured American Express",
+  "localized_names": {
+    "en": "USAA Secured American Express"
+  },
+  "country": "us",
+  "issuer": "USAA Federal Savings Bank",
+  "issuer_id": "usaa",
+  "network": "amex",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 27.4,
+      "max": 27.4,
+      "type": "variable"
+    },
+    "notes": "No penalty APR. Balance transfer and cash advance fee is 5% of each transaction amount."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": "limited",
+    "notes": "For limited or no credit history. Credit limit $250 to $5,000, secured by a refundable interest-earning certificate of deposit. USAA membership is required."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell phone protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.usaa.com/banking/credit-cards-public/build-credit/secured-american-express/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.usaa.com/banking/credit-cards-public/build-credit/secured-american-express/",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+  ],
+  "notes": "The product page lists no rewards program."
+}

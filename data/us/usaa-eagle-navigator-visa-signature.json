@@ -1,0 +1,106 @@
+{
+  "id": "us-usaa-eagle-navigator-visa-signature",
+  "schema_version": "1.0.0",
+  "name": "USAA Eagle Navigator Visa Signature",
+  "localized_names": {
+    "en": "USAA Eagle Navigator Visa Signature"
+  },
+  "country": "us",
+  "issuer": "USAA Federal Savings Bank",
+  "issuer_id": "usaa",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 95,
+    "currency": "USD",
+    "first_year": 95,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.4,
+      "max": 26.65,
+      "type": "variable"
+    },
+    "notes": "Balance transfer, convenience check and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Bank deposit account)."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "USAA membership is required to apply."
+  },
+  "rewards": {
+    "currency": "usaa_rewards_points",
+    "currency_label": "USAA Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2X points on other qualifying purchases."
+    },
+    "categories": [
+      {
+        "label": "Travel and transit (air, hotel, car and vacation rentals, rideshare, tolls and more)",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem points for travel, cash back, gift cards and more. Reward points never expire.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 50000,
+    "unit": "points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": null,
+    "description": "Earn 50,000 bonus points after spending $3,000 on qualifying purchases by January 31, 2027.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "cell-phone-protection",
+      "title": "Cell phone protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    },
+    {
+      "id": "extended-warranty",
+      "title": "Extended warranty protection",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+    },
+    {
+      "id": "tsa-precheck-global-entry-credit",
+      "title": "TSA PreCheck or Global Entry credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Statement credit up to $120 every four years toward the TSA PreCheck or Global Entry application or renewal fee."
+    },
+    {
+      "id": "annual-booking-bonus",
+      "title": "10,000 bonus points each calendar year",
+      "category": "other",
+      "source": "issuer",
+      "description": "Earn 10,000 bonus points once every calendar year after a single USAA Rewards Center booking that includes at least $100 in spend, a hotel or car rental, and redeems at least 100 points (equals $100 in travel)."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.usaa.com/banking/credit-cards-public/rewards/travel-eagle-navigator/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.usaa.com/banking/credit-cards-public/rewards/travel-eagle-navigator/",
+    "https://www.usaa.com/banking/credit-cards-public/rewards/",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+  ],
+  "notes": "The page also lists travel accident insurance and auto deductible reimbursement (not offered in Washington State); see the Credit Card Benefits Guide."
+}
