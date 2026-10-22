@@ -140,7 +140,10 @@
         "aaa.com",
         "nfl.com",
         "playstation.com",
-        "breadfinancial.com"
+        "breadfinancial.com",
+        "ulta.com",
+        "bhphotovideo.com",
+        "files.consumerfinance.gov"
       ]
     },
     {
@@ -723,13 +726,14 @@
       ]
     },
     {
-      "id": "usaa",
-      "name": "USAA Federal Savings Bank",
+      "id": "capital-bank",
+      "name": "Capital Bank, N.A.",
       "aliases": [
-        "USAA"
+        "opensky",
+        "Capital Bank"
       ],
       "domains": [
-        "usaa.com",
+        "openskycc.com",
         "files.consumerfinance.gov",
         "consumerfinance.gov"
       ]

@@ -1,0 +1,66 @@
+{
+  "id": "us-opensky-launch-secured-visa",
+  "schema_version": "1.0.0",
+  "name": "opensky Launch Secured Visa",
+  "localized_names": {
+    "en": "opensky Launch Secured Visa"
+  },
+  "country": "us",
+  "issuer": "Capital Bank, N.A.",
+  "issuer_id": "capital-bank",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 36,
+    "currency": "USD",
+    "first_year": 24,
+    "waiver_conditions": "Annual fee is billed monthly: $24 during the first year paid as $2 per month, then $36 per year paid as $3 per month."
+  },
+  "apr": {
+    "purchase": {
+      "min": 28.24,
+      "max": 28.24,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.24,
+      "max": 28.24,
+      "type": "variable"
+    },
+    "notes": "Cash advance fee $6 or 5%, whichever is greater. Late payment fee up to $41. Terms accurate as of 03/11/2026."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3% of each transaction in U.S. dollars."
+  },
+  "credit_required": {
+    "score_band": "limited",
+    "notes": "Secured card. A refundable security deposit equal to the credit line funds a Pledged Deposit Account."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Launch_Application_TC_SKY1-013-463230.pdf",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Launch_Application_TC_SKY1-013-463230.pdf",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Launch_CH_Agreement_SKY1-013-463230.pdf"
+  ],
+  "notes": "Issued by Capital Bank, N.A. Annual fee figures are the monthly installments times 12 ($2 x 12 in year one, $3 x 12 after). Data comes from the issuer-filed terms in the CFPB Credit Card Agreement Database. The Visa network package is not named, so network_tier is none. Rewards are null because the filed terms describe none and openskycc.com product pages could not be loaded (bot protection), so any rewards program is unverified."
+}
