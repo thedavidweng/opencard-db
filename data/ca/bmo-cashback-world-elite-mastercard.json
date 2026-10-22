@@ -1,0 +1,87 @@
+{
+  "id": "ca-bmo-cashback-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "BMO CashBack World Elite Mastercard",
+  "localized_names": {
+    "en": "BMO CashBack World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 139,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "Annual fee waived in the first year."
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 23.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $80,000 individual or $150,000 household annual income."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Groceries",
+        "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Transit including rideshare, taxis and public transportation",
+        "points_per_dollar": 4,
+        "cap": null
+      },
+      {
+        "label": "Gas and EV charging",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Recurring bill payments",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back can be redeemed any time from $1, or automatically from $25, as a statement credit or deposit to a BMO chequing, savings or InvestorLine account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-cashback-world-elite-mastercard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-cashback-world-elite-mastercard/"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name. Category spend caps are not stated on the product page."
+}

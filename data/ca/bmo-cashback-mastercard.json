@@ -1,0 +1,85 @@
+{
+  "id": "ca-bmo-cashback-mastercard",
+  "schema_version": "1.0.0",
+  "name": "BMO CashBack Mastercard",
+  "localized_names": {
+    "en": "BMO CashBack Mastercard"
+  },
+  "country": "ca",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 23.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian citizen or permanent resident who has reached the age of majority and has not declared bankruptcy in the past seven years."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Groceries",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Recurring bill payments",
+        "points_per_dollar": 1,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Cash back can be redeemed any time from $1, or automatically from $25, as a statement credit or deposit to a BMO chequing, savings or InvestorLine account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 3,
+    "description": "5% cash back in the first 3 months.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/main/personal/credit-cards/bmo-cashback-mastercard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/main/personal/credit-cards/bmo-cashback-mastercard/"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none. Category spend caps are not stated on the product page."
+}

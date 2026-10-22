@@ -1,0 +1,87 @@
+{
+  "id": "ca-bmo-viporter-mastercard",
+  "schema_version": "1.0.0",
+  "name": "BMO VIPorter Mastercard",
+  "localized_names": {
+    "en": "BMO VIPorter Mastercard"
+  },
+  "country": "ca",
+  "issuer": "BMO",
+  "issuer_id": "bmo",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 89,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "Annual fee waived in the first year."
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 23.99,
+      "max": 23.99,
+      "type": "variable"
+    },
+    "notes": "21.99% on purchases; 23.99% on cash advances."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Canadian citizen or permanent resident who has reached the age of majority and has not declared bankruptcy in the past seven years."
+  },
+  "rewards": {
+    "currency": "viporter_points",
+    "currency_label": "VIPorter points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.5,
+      "description": "0.5 points per $1 everywhere else."
+    },
+    "categories": [
+      {
+        "label": "Porter purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Gas and transportation",
+        "points_per_dollar": 1,
+        "cap": null
+      },
+      {
+        "label": "Groceries and dining",
+        "points_per_dollar": 1,
+        "cap": null
+      },
+      {
+        "label": "Hotel accommodations",
+        "points_per_dollar": 1,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "VIPorter points redeem toward Porter Airlines flights and getaways.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-viporter-mastercard/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-viporter-mastercard/"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none."
+}
