@@ -1,0 +1,62 @@
+{
+  "id": "us-bh-payboo-credit-card",
+  "schema_version": "1.0.0",
+  "name": "B&H Payboo Credit Card",
+  "localized_names": {
+    "en": "B&H Payboo Credit Card"
+  },
+  "country": "us",
+  "issuer": "Comenity Capital Bank (Bread Financial)",
+  "issuer_id": "comenity",
+  "network": "other",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 35.99,
+      "max": 35.99,
+      "type": "fixed"
+    },
+    "notes": "Purchase APR 35.99% with no margin listed in the filed agreement (printed January 2026); penalty APR up to 39.99% (variable). Late fee up to $41. A $2.99 paper statement fee applies each month a paper statement is mailed and the balance exceeds $3.50 (avoidable with paperless statements)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Store card usable at B&H."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "Save the Tax instant savings",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Choose Save the Tax (you pay the tax, B&H pays you back instantly, only on shipments to states with sales tax) or deferred-interest special financing for 6 months on a minimum purchase of $199 or 12 months on $599. Promotional plan transactions do not earn rewards."
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.bhphotovideo.com/credit-cards",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.bhphotovideo.com/credit-cards",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/Comenity_Capital_Bank/B%26H_Payboo_Credit_Card_-_Current_Credit_Card_Agreements-287966.pdf"
+  ],
+  "notes": "Private-label store card issued by Comenity Capital Bank (Bread Financial). The Save the Tax benefit is an instant savings equal to the sales tax on eligible orders shipped to states with sales tax, not a fixed earn rate, so no rate is recorded."
+}

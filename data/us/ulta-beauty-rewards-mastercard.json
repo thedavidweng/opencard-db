@@ -1,0 +1,98 @@
+{
+  "id": "us-ulta-beauty-rewards-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Ulta Beauty Rewards Mastercard",
+  "localized_names": {
+    "en": "Ulta Beauty Rewards Mastercard"
+  },
+  "country": "us",
+  "issuer": "Comenity Capital Bank (Bread Financial)",
+  "issuer_id": "comenity",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 23.34,
+      "max": 32.25,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 33.25,
+      "max": 33.25,
+      "type": "variable"
+    },
+    "notes": "Variable APRs as of the January 2026 print date of the filed agreement; balance transfers use the purchase APR. Balance transfer and cash advance fees are $10 or 5%, whichever is greater. Late fee up to $41."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "3.0% of each foreign transaction."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ulta_beauty_rewards_points",
+    "currency_label": "Ulta Beauty Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 0.33,
+      "description": "1 point for every $3 spent outside of Ulta Beauty."
+    },
+    "categories": [
+      {
+        "label": "Ulta Beauty purchases",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points you can redeem for savings through Ulta Beauty Rewards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 500,
+    "unit": "points",
+    "spend_required": 500,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "Enjoy 500 Welcome Bonus Points when you spend $500 in the first 90 days outside of Ulta Beauty.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "first-purchase-discount",
+      "title": "20% off your first purchase",
+      "category": "other",
+      "source": "co-brand",
+      "description": "20% off your first qualifying purchase at Ulta Beauty when you open and use your card."
+    },
+    {
+      "id": "beyond-ulta-beauty-rewards",
+      "title": "Beyond Ulta Beauty Rewards",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Earn cashback from exclusive deals through Beyond Ulta Beauty Rewards."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.ulta.com/rewards/credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.ulta.com/rewards/credit-card",
+    "https://c.comenity.net/ac/ultabeautyrewards/public/home",
+    "https://c.comenity.net/ac/ultabeautyrewards/public/credit-card-agreement",
+    "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/Comenity_Capital_Bank/Ulta_Beauty_Rewards%C2%AE_Mastercard%C2%AE_Credit_Card_-_Current_Credit_Card_Agreements-256759.pdf"
+  ],
+  "notes": "Issued by Comenity Capital Bank (Bread Financial). The filed agreement covers both the Ulta Beauty Rewards Mastercard and the Ulta Beauty Rewards World Mastercard; which one is issued is not stated publicly, so network_tier is none. Applicants not eligible for the Mastercard may be considered for the store card."
+}
