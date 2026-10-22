@@ -1,0 +1,82 @@
+{
+  "id": "ca-pc-insiders-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "PC Insiders World Elite Mastercard",
+  "localized_names": {
+    "en": "PC Insiders World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "PC Financial",
+  "issuer_id": "pc-financial",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 120,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "First-year annual fee waived; PC Optimum points can be redeemed toward the annual fee."
+  },
+  "apr": {
+    "purchase": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.97,
+      "max": 22.97,
+      "type": "variable"
+    },
+    "notes": "Standard rates: 21.99% on purchases; 22.97% on cash advances (21.97% in Quebec)."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Minimum $80,000 personal or $150,000 household annual income."
+  },
+  "rewards": {
+    "currency": "pc_optimum_points",
+    "currency_label": "PC Optimum points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 10,
+      "description": "10 points per $1 (1% back) on dining, transit and everywhere else."
+    },
+    "categories": [
+      {
+        "label": "Shoppers Drug Mart and Pharmaprix (5% back)",
+        "points_per_dollar": 50,
+        "cap": null
+      },
+      {
+        "label": "Participating grocery stores (4% back, plus 2% more on eligible pickup orders)",
+        "points_per_dollar": 40,
+        "cap": null
+      },
+      {
+        "label": "Joe Fresh stores (4% back)",
+        "points_per_dollar": 40,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "10,000 PC Optimum points redeem for a $7 statement credit toward the card balance, or for rewards in stores.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.pcfinancial.ca/en/credit-cards/insiders/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.pcfinancial.ca/en/credit-cards/insiders/"
+  ],
+  "notes": "Network tier is World Elite Mastercard per the card name. Includes a PC Express Pass subscription; an existing PC Optimum Insiders subscription is cancelled on approval. Earn rates are shown on the page as percent back in PC Optimum points; 10 points per $1 equals 1% back, so rates are recorded as points per $1. Gas earns points per litre at Esso and Mobil stations, which is not a per-dollar rate."
+}

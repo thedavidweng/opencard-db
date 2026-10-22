@@ -610,6 +610,16 @@
       "domains": [
         "cibc.com"
       ]
+    },
+    {
+      "id": "pc-financial",
+      "name": "PC Financial",
+      "aliases": [
+        "presidents-choice-bank"
+      ],
+      "domains": [
+        "pcfinancial.ca"
+      ]
     }
   ]
 }
