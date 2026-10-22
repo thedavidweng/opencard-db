@@ -11,9 +11,9 @@
   "segment": "personal",
   "status": "discontinued",
   "annual_fee": {
-    "amount": 0.0,
+    "amount": 50.0,
     "currency": "USD",
-    "first_year": 0.0,
+    "first_year": 50.0,
     "waiver_conditions": null
   },
   "rewards": {
@@ -28,10 +28,11 @@
   "official_url": "https://www.usbank.com/credit-cards/",
   "last_verified": "2026-07-26",
   "sources": [
-    "https://www.usbank.com/credit-cards/"
+    "https://www.usbank.com/credit-cards/",
+    "https://web.archive.org/web/20160508164340/https://applications.usbank.com/oad/catalog/terms.controller?locationCode=21603&productId=03&sourceCode=33351"
   ],
   "secondary_sources": [
     "https://www.doctorofcredit.com/spreadsheet-current-recent-credit-card-signup-bonuses-major-issuers/"
   ],
-  "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required."
+  "notes": "Historical Club Carlson record. Official U.S. Bank servicing material checked 2026-10-20 lists Radisson Rewards Visa, but does not establish this Club Carlson generation, its withdrawal date, or a conversion to another card. The existing discontinued status and the remaining financial fields are retained as unverified historical data. Exact lifecycle, successor and historical artwork remain unknown; a product-specific official archive or conversion notice is still required. Annual fee correction (checked 2026-10-21): the record previously stored $0. The retained 2016-05-08 archive of U.S. Bank's official Club Carlson(SM) Premier Rewards Visa Signature® Terms and Conditions also covers this card, because declined Premier applications \"may be processed for the Club Carlson Platinum Rewards Visa® card\". It lists \"Annual Membership Fee ... Club Carlson Platinum Rewards Visa Card: $50\" with no introductory annual fee, so annual_fee is $50 with first_year $50 as of those 2016 terms. Fee history in other years was not checked."
 }
