@@ -1,0 +1,80 @@
+{
+  "id": "us-barclays-gm-rewards-mastercard",
+  "schema_version": "1.0.0",
+  "name": "GM Rewards Mastercard",
+  "localized_names": {
+    "en": "GM Rewards Mastercard"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 22.49,
+      "max": 32.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 33.49,
+      "max": 33.49,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR 22.49% to 32.49% variable; cash advance APR 33.49% variable. 0% intro APR for 9 billing cycles on qualifying GM purchases over $499 made within 30 days of opening, then 0% promotional APR for 6 billing cycles on qualifying GM purchases over $499."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Foreign transaction fee: 3%."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "gm_rewards_points",
+    "currency_label": "GM Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 3,
+      "description": "3x points per $1 on all other purchases, including groceries, gas, restaurants and travel."
+    },
+    "categories": [
+      {
+        "label": "Eligible GM purchases (card earn, before up to 3x GM Rewards member earn)",
+        "points_per_dollar": 7,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points are redeemable for items related to Chevrolet, Buick, GMC, Cadillac and other GM products and services.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 30000,
+    "unit": "points",
+    "spend_required": 1000,
+    "spend_currency": "USD",
+    "months": 3,
+    "description": "30,000 bonus points after spending $1,000 in the first 90 days of account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://cards.barclaycardus.com/banking/cards/general-motors/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://cards.barclaycardus.com/banking/cards/general-motors/"
+  ],
+  "notes": "Issued by Barclays Bank Delaware. The page footnote names World Mastercard and World Elite Mastercard as trademarks without saying which package the card carries, so network_tier is recorded as none. A separate GM Business card exists and is not covered here."
+}

@@ -1,0 +1,135 @@
+{
+  "id": "us-barclays-wyndham-rewards-earner-premier",
+  "schema_version": "1.0.0",
+  "name": "Wyndham Rewards Earner Premier Card",
+  "localized_names": {
+    "en": "Wyndham Rewards Earner Premier Card"
+  },
+  "country": "us",
+  "issuer": "Barclays",
+  "issuer_id": "barclays",
+  "network": "visa",
+  "network_tier": "signature",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 395,
+    "currency": "USD",
+    "first_year": 395,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.49,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 29.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 19.49% to 29.99% variable; cash advance APR 29.99% variable. 0% promotional APR for 6 billing cycles on Wyndham Timeshare Purchases; 0% intro APR for 15 billing cycles on balance transfers posted within 45 days of opening."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees on international purchases."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "wyndham_rewards_points",
+    "currency_label": "Wyndham Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point per $1 on all other purchases (excluding Wyndham Vacation Club down payments)."
+    },
+    "categories": [
+      {
+        "label": "Hotels by Wyndham, including Wyndham Travel Bundles",
+        "points_per_dollar": 8,
+        "cap": null
+      },
+      {
+        "label": "Dining, grocery stores (excluding Target and Walmart) and travel",
+        "points_per_dollar": 4,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Free nights from 3,750 points with 25% fewer points required; points also redeem for online shopping and gift cards.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": {
+    "amount": 120000,
+    "unit": "points",
+    "spend_required": 6000,
+    "spend_currency": "USD",
+    "months": 4,
+    "description": "90,000 bonus points after spending $6,000 and paying the annual fee within the first 120 days, plus 30,000 bonus points after spending $750 at Hotels by Wyndham in the first 180 days.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [
+    {
+      "id": "anniversary-bonus-points",
+      "title": "Anniversary bonus points",
+      "category": "other",
+      "source": "co-brand",
+      "description": "30,000 bonus points each anniversary year after payment of the annual fee."
+    },
+    {
+      "id": "diamond-status",
+      "title": "Wyndham Rewards Diamond status",
+      "category": "other",
+      "source": "co-brand",
+      "description": "Automatic Wyndham Rewards Diamond member level."
+    },
+    {
+      "id": "hotel-credit",
+      "title": "Wyndham hotel statement credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$100 statement credit after spending $100 or more at eligible Wyndham hotel brands each calendar year."
+    },
+    {
+      "id": "meal-delivery-credit",
+      "title": "Meal delivery credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $10 in statement credits each month (up to $120 per calendar year) on qualifying meal delivery purchases."
+    },
+    {
+      "id": "streaming-credit",
+      "title": "Streaming credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $100 in statement credits each calendar year on qualifying streaming service purchases."
+    },
+    {
+      "id": "wholesale-club-credit",
+      "title": "Wholesale club membership credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$65 statement credit each calendar year after qualifying wholesale club membership purchases."
+    },
+    {
+      "id": "tsa-precheck-global-entry",
+      "title": "TSA PreCheck or Global Entry credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "Up to $120 statement credit every 4 years for the application fee."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-premier-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://cards.barclaycardus.com/banking/cards/wyndham-rewards-earner-premier-card/"
+  ],
+  "notes": "Issued by Barclays Bank Delaware. The page's offer terms refer to the Wyndham Rewards Visa Signature credit card, so network_tier is signature."
+}
