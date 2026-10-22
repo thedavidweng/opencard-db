@@ -2,105 +2,33 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>OpenCard DB og:image source (1200x630)</title>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>OpenCard DB social image source, 1200 by 630</title>
+<!-- Render at 1200x630 and screenshot to og.png, e.g. with Playwright:
+     page.setViewportSize({ width: 1200, height: 630 }); page.screenshot({ path: "og.png" }) -->
 <link rel="stylesheet" href="style.css">
 <style>
-  /* Render at exactly 1200x630 and screenshot:
-     playwright screenshot --viewport-size=1200,630 og.html og.png */
-  html, body { width: 1200px; height: 630px; overflow: hidden; }
-  .og {
-    position: relative;
-    width: 1200px;
-    height: 630px;
-    background: var(--plum);
-    display: flex;
-    align-items: center;
-    padding: 0 90px;
-  }
-  .og #rosette-large {
-    position: absolute;
-    width: 900px;
-    height: 900px;
-    top: -140px;
-    right: -260px;
-    opacity: 0.3;
-    fill: none;
-    stroke: var(--gold);
-    stroke-width: 0.7;
-  }
-  .og-copy { position: relative; max-width: 640px; }
-  .og-brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 34px;
-    color: var(--ivory);
-    font-weight: 600;
-    font-size: 26px;
-  }
-  .og-brand .brand-mark { width: 40px; height: 40px; }
-  .og h1 {
-    margin: 0 0 26px;
-    font-weight: 780;
-    font-stretch: 122%;
-    font-size: 74px;
-    line-height: 1.04;
-    letter-spacing: -0.028em;
-    color: var(--ivory);
-  }
-  .og p {
-    margin: 0;
-    font-family: var(--font-mono);
-    font-size: 19px;
-    letter-spacing: 0.04em;
-    color: var(--gold);
-    white-space: nowrap;
-  }
-  .og-card {
-    position: absolute;
-    right: 74px;
-    bottom: -60px;
-    width: 400px;
-    transform: rotate(-6deg);
-  }
+  html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; background: #ffffff; color-scheme: light; }
+  .og { box-sizing: border-box; width: 1200px; height: 630px; padding: 84px 96px; display: flex; flex-direction: column; justify-content: space-between; border-top: 6px solid #2b5ce6; }
+  .og .brand { font-size: 26px; gap: 14px; color: #0f0f11; }
+  .og .mark { width: 36px; height: 36px; }
+  .og h1 { font-size: 84px; max-width: 13ch; letter-spacing: -0.045em; color: #0f0f11; }
+  .og .bar { display: flex; align-items: center; justify-content: space-between; color: #55555e; font-size: 24px; }
+  .og .q { display: flex; align-items: center; gap: 14px; width: 560px; height: 68px; padding: 0 22px; border: 1px solid #d4d4da; border-radius: 14px; font-size: 22px; color: #6b6b74; background: #fff; box-shadow: 0 1px 2px rgba(15,15,17,.04), 0 4px 16px rgba(15,15,17,.05); }
+  .og .q svg { width: 24px; height: 24px; }
+  .og .url { font-family: var(--mono); font-size: 20px; color: #6b6b74; }
 </style>
-<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <div class="og">
-  <svg id="rosette-large" viewBox="0 0 900 900" aria-hidden="true"></svg>
-  <div class="og-copy">
-    <div class="og-brand">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <rect x="1.5" y="1.5" width="29" height="29" rx="7" fill="none" stroke="currentColor" stroke-width="1.4"/>
-        <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="1"/>
-        <circle cx="16" cy="16" r="6.2" fill="none" stroke="currentColor" stroke-width="1"/>
-        <circle cx="16" cy="16" r="3.4" fill="none" stroke="currentColor" stroke-width="1"/>
-      </svg>
-      OpenCard&nbsp;DB
-    </div>
-    <h1>The open database of credit&nbsp;cards.</h1>
-    <p>US · CA · CN &nbsp;·&nbsp; JSON · CSV · YAML &nbsp;·&nbsp; free CDN</p>
-  </div>
-  <div class="og-card">
-    <div class="specimen" aria-hidden="true">
-      <svg class="specimen-engraving" id="rosette-card" viewBox="0 0 640 400"></svg>
-      <div class="specimen-top">
-        <span class="specimen-brand">OPENCARD&nbsp;DB</span>
-        <span class="specimen-tag">SPECIMEN</span>
-      </div>
-      <div class="chip"></div>
-      <div class="specimen-number">•••• &nbsp;•••• &nbsp;•••• &nbsp;0189</div>
-      <div class="specimen-bottom">
-        <div>
-          <span class="specimen-label">Cardholder</span>
-          <span class="specimen-value">OPEN SOURCE COMMUNITY</span>
-        </div>
-      </div>
-    </div>
+  <span class="brand">
+    <svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 9.5h19" stroke="currentColor" stroke-width="1.6"/><rect x="5.5" y="13" width="5" height="2.4" rx="1" fill="#2b5ce6"/></svg>
+    OpenCard DB
+  </span>
+  <h1>The open database of credit cards.</h1>
+  <div class="bar">
+    <span class="q"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.75" cy="8.75" r="5.75" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Search credit cards by name or issuer</span>
+    <span class="url">thedavidweng.github.io/opencard-db</span>
   </div>
 </div>
-<script src="main.js"></script>
 </body>
 </html>

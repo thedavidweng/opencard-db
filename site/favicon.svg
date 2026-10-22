@@ -1,10 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#241522"/>
-  <g fill="none" stroke="#e8b64c" stroke-width="1.6">
-    <rect x="7" y="7" width="50" height="50" rx="10" stroke-opacity="0.55" stroke-width="1.2"/>
-    <circle cx="32" cy="32" r="17"/>
-    <circle cx="32" cy="32" r="12.5"/>
-    <circle cx="32" cy="32" r="8"/>
-    <circle cx="32" cy="32" r="3.5"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>.f{fill:#0f0f11}.s{stroke:#ffffff}@media (prefers-color-scheme:dark){.f{fill:#ededf0}.s{stroke:#0a0a0b}}</style>
+  <rect class="f" x="1" y="5" width="30" height="22" rx="5"/>
+  <path class="s" d="M1 12h30" stroke-width="2.4"/>
+  <rect x="5.5" y="18.5" width="8" height="3.5" rx="1.4" fill="#2b5ce6"/>
 </svg>
