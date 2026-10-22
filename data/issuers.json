@@ -337,6 +337,16 @@
       "domains": [
         "truist.com"
       ]
+    },
+    {
+      "id": "citizens",
+      "name": "Citizens",
+      "aliases": [
+        "Citizens Bank"
+      ],
+      "domains": [
+        "citizensbank.com"
+      ]
     }
   ]
 }

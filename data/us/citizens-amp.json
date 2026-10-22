@@ -1,0 +1,66 @@
+{
+  "id": "us-citizens-amp",
+  "schema_version": "1.0.0",
+  "name": "Citizens Amp Mastercard",
+  "localized_names": {
+    "en": "Citizens Amp Mastercard"
+  },
+  "country": "us",
+  "issuer": "Citizens",
+  "issuer_id": "citizens",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 27.49,
+      "max": 27.49,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 28.49,
+      "max": 28.49,
+      "type": "variable"
+    },
+    "notes": "27.49% variable APR on purchases and balance transfers. Cash advance APR 28.49%. Balance transfer fee $10 or 5%, whichever is greater. No penalty APR."
+  },
+  "fx_fee": {
+    "percent": 3,
+    "notes": "Either $1.50 or 3% of the U.S. dollar amount of each transaction, whichever is greater."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Marketed for building a credit foundation."
+  },
+  "rewards": {
+    "currency": "none",
+    "currency_label": "No rewards program",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null
+    },
+    "categories": [],
+    "redemption_notes": null,
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.citizensbank.com/credit-cards/amp.aspx",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.citizensbank.com/credit-cards/amp.aspx",
+    "https://www.citizensbank.com/dam/8c526d5a-c9d2-4a88-8950-b3fa00fb401f/cc-amp-passive-tc-original-file.pdf"
+  ],
+  "notes": "No Mastercard network package is stated, so network_tier is none."
+}
