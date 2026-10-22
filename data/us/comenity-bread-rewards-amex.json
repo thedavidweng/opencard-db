@@ -21,11 +21,16 @@
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
+      "min": 18.99,
+      "max": 33.49,
       "type": "variable"
     },
-    "notes": null
+    "cash_advance": {
+      "min": 33.49,
+      "max": 33.49,
+      "type": "variable"
+    },
+    "notes": "Purchase APR 18.99% to 33.49% and cash advance APR 33.49%, variable with the Prime Rate, per the rate and fee summary printed October 2026."
   },
   "fx_fee": {
     "percent": 0,
@@ -61,7 +66,8 @@
   "bin_hints": [],
   "last_verified": "2026-10-22",
   "sources": [
-    "https://www.breadfinancial.com/en/bread-rewards-credit-card.html"
+    "https://www.breadfinancial.com/en/bread-rewards-credit-card.html",
+    "https://d.comenity.net/legaldocs/breadrewards/legal-documents/schumerbox"
   ],
-  "notes": "Earn 25% extra points in every billing cycle with 20 or more separate purchases. Issued by Comenity Capital Bank (Bread Financial) under license from American Express. APRs are not stated on the product page, so they are null."
+  "notes": "Earn 25% extra points in every billing cycle with 20 or more separate purchases. Issued by Comenity Capital Bank (Bread Financial) under license from American Express."
 }
