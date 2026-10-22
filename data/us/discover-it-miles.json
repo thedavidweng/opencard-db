@@ -1,0 +1,82 @@
+{
+  "id": "us-discover-it-miles",
+  "schema_version": "1.0.0",
+  "name": "Discover it Miles",
+  "country": "us",
+  "issuer": "Discover",
+  "issuer_id": "discover",
+  "network": "discover",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 17.74,
+      "max": 26.74,
+      "type": "variable"
+    },
+    "notes": "0% introductory APR for 15 months on purchases and balance transfers; 17.74% to 26.74% variable APR thereafter. A balance transfer fee applies; the product page does not state the amount. Terms are offer-specific."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": "Not stated on the cited product page; confirm the terms of the specific offer."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "miles",
+    "currency_label": "Discover miles",
+    "structure": "single",
+    "rate_type": "miles_multiplier",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5 miles per dollar on every purchase."
+    },
+    "redemption_notes": "100 miles = $1 for cash or travel statement credit, with no minimum redemption. Miles do not expire for the life of the account. The issuer notes that redemption rates may vary and are subject to change."
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": "other",
+    "spend_required": null,
+    "spend_currency": "USD",
+    "months": 12,
+    "description": "Discover Match for new cardholders: matches miles earned from account approval through the first 365 days, credited within two billing periods. No purchase minimum or match cap. Rewards processed after the match period, statement credits, rewards transfers from deposit accounts, and closed accounts are excluded. Promotional offer may not be available in the future.",
+    "as_of": "2026-10-19"
+  },
+  "benefits": [
+    {
+      "id": "discover-match",
+      "title": "Discover Match",
+      "category": "other",
+      "source": "issuer",
+      "description": "Automatic miles-for-miles match of eligible first-year miles for new cardholders, subject to the offer terms."
+    },
+    {
+      "id": "card-lock",
+      "title": "Card lock",
+      "category": "other",
+      "source": "issuer",
+      "description": "Lock or unlock the card in the mobile app. Returns, credits, payments, interest, balance transfers, dispute adjustments, fees and certain other transactions may continue while locked."
+    }
+  ],
+  "official_url": "https://www.discover.com/credit-cards/travel/",
+  "image": {
+    "url": "https://ecm.capitalone.com/WCM/dfs-card/products/it-miles-card-header/rdesktop.png",
+    "attribution": "© Capital One",
+    "local_path": null
+  },
+  "last_verified": "2026-10-19",
+  "sources": [
+    "https://www.discover.com/credit-cards/travel/"
+  ],
+  "notes": "Discover-branded personal travel rewards card, distinct from Discover it Cash Back. The official Discover page links to a Capital One-hosted application and card artwork and carries a Capital One copyright notice. Current product information only; no claim that all historical versions have identical terms. No foreign-transaction fee, cash-advance APR, credit-score requirement or travel-insurance benefit is inferred from another Discover card."
+}
