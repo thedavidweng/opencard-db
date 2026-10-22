@@ -91,7 +91,7 @@
   },
   "official_url": "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
   "image": {
-    "url": null,
+    "url": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/American_Express_Cobalt_Card.png",
     "attribution": "© American Express",
     "local_path": null
   },
@@ -101,6 +101,6 @@
     "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
     "https://www.americanexpress.com/ca/en/credit-cards/"
   ],
-  "notes": "Cobalt is the product name, not a Network Tier.",
+  "notes": "Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
   "segment": "personal"
 }

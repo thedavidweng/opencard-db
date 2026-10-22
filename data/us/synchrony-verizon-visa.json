@@ -104,13 +104,21 @@
   "official_url": "https://www.verizon.com/financial-services/verizon-visa-card/",
   "image": {
     "url": null,
-    "attribution": "© Synchrony",
-    "local_path": null
+    "attribution": "© Verizon / Synchrony",
+    "local_path": "images/us-synchrony-verizon-visa.webp",
+    "provenance": {
+      "source": "other",
+      "source_sha256": "13e09149cd79ec281251032ee760954f85d53f3be16b3dfc7aebead2fd97b6f5",
+      "width": 198,
+      "height": 315,
+      "exported_at": "2026-10-21",
+      "converted_sha256": "be0dd1546abdde7473182e3dac94a027185fbfcff5ee3e83ece806003c1ec98f"
+    }
   },
   "bin_hints": [],
   "last_verified": "2026-07-25",
   "sources": [
     "https://www.verizon.com/financial-services/verizon-visa-card/"
   ],
-  "notes": "Verified from official product page. Rewards currency is Verizon Dollars. Eligibility: must be Verizon Fios Account Owner with at least one active Fios service or Verizon wireless customer who is Account Owner or Account Manager with up to 12 phone lines. Upon credit card approval, all new card holders will receive a Verizon Visa Signature Card. Purchase APR not stated on page."
+  "notes": "Verified from official product page. Rewards currency is Verizon Dollars. Eligibility: must be Verizon Fios Account Owner with at least one active Fios service or Verizon wireless customer who is Account Owner or Account Manager with up to 12 phone lines. Upon credit card approval, all new card holders will receive a Verizon Visa Signature Card. Purchase APR not stated on page. Card art provenance (checked 2026-10-21, secondary source, lower confidence): no usable official issuer image was found, so this is a local upload under the repo's option-C convention (image.provenance.source \"other\"; the sha256 is of the downloaded file). The source page is recorded here because secondary_sources is reserved for discontinued cards: https://wallethub.com/d/verizon-credit-card-3285c; https://cdn.wallethub.com/common/product/images/creditcards/500/verizon-credit-card-08343285c.png. Match: vertical black Verizon Visa face with the red Verizon check mark (the Visa mark is on the back of this design), from WalletHub's Verizon Visa listing. The 500x315 original (sha256 a73b1149c1675fc743f62ab2344ba777f74254a8bc967caa77501c928ec4466c) was cropped to the card's 198x315 bounds to remove transparent padding; source_sha256 is of the cropped PNG. The artwork remains the copyright of the issuer; it is for identification only and is not evidence of lifecycle or financial fields."
 }
