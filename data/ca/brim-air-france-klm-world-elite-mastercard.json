@@ -1,0 +1,73 @@
+{
+  "id": "ca-brim-air-france-klm-world-elite-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Air France KLM World Elite Mastercard",
+  "localized_names": {
+    "en": "Air France KLM World Elite Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Brim Financial",
+  "issuer_id": "brim-financial",
+  "network": "mastercard",
+  "network_tier": "world_elite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 132,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": "First year annual fee free! Upon your one year anniversary, the annual fee will be CAD $132.00. Each additional cardmember is $50 a year."
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 21.99,
+      "type": null
+    },
+    "cash_advance": {
+      "min": 21.5,
+      "max": 21.99,
+      "type": null
+    },
+    "notes": "Preferred annual rates are 19.99% on purchases and balance transfers and 21.50% on cash advances. If the Total Minimum Payment is missed for any 2 billing periods within 12 months, the standard rate of 21.99% applies to all three. Cash advance fee is $3.50 in Canada or $5 outside Canada. Cardmember Agreement in effect as of March 15, 2024."
+  },
+  "fx_fee": {
+    "percent": 1.5,
+    "notes": "Foreign Currency Conversion Fee is 1.5% of the converted amount, on both credits and debits, per the Cardmember Agreement."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "flying_blue_miles",
+    "currency_label": "Flying Blue Miles",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 Mile per $1 spent everywhere else."
+    },
+    "categories": [
+      {
+        "label": "Restaurants and bars",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Earn Miles on everyday spend that contribute to your Flying Blue Rewards. Redeem for as low as 15,000 Miles one-way to Europe.",
+    "rate_type": "miles_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://brim.flyingblue.ca/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://brim.flyingblue.ca/",
+    "https://static.brimfinancial.com/afklm/pdf_files/AFKLM%20Cardholder%20Agreement_English.pdf"
+  ],
+  "notes": "Issued and administered by Brim Financial. Network tier is World Elite Mastercard per the card name in the Cardmember Agreement. The product page also lists up to 30 Miles per $1 at Merchant Partners, and a 60XP welcome bonus for new cardholders plus 30XP on each card anniversary renewal. XP are Flying Blue status points, not Miles, so signup_bonus is null."
+}

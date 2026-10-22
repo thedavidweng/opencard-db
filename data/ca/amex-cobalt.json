@@ -14,26 +14,31 @@
   "type": "credit",
   "status": "active",
   "annual_fee": {
-    "amount": 155.88,
+    "amount": 191.88,
     "currency": "CAD",
-    "first_year": 0,
-    "waiver_conditions": "Monthly fee model; first months often promotional — confirm on Amex Canada."
+    "first_year": 191.88,
+    "waiver_conditions": "No first-year waiver is shown on the product page. Card Fee: $15.99/month (Equals $191.88 annually) for non-Quebec residents. $191.88/year for Quebec residents. Additional Cards: No annual fee."
   },
   "apr": {
     "purchase": {
-      "min": null,
-      "max": null,
-      "type": "variable"
+      "min": 21.99,
+      "max": 21.99,
+      "type": null
     },
-    "notes": "See Amex Canada product page for current rates."
+    "cash_advance": {
+      "min": 21.99,
+      "max": 21.99,
+      "type": null
+    },
+    "notes": "The preferred rate for purchases is 21.99% and funds advances is 21.99%. If you have 2 separate Missed Payments in a 12-month period, the applicable rates for your account will be 25.99%. If you have 3 or more separate Missed Payments, the applicable rates will be 29.99%."
   },
   "fx_fee": {
     "percent": 2.5,
-    "notes": "Foreign conversion fee typically applies; confirm current percentage."
+    "notes": "Purchases made in a foreign currency are converted to Canadian dollars, and a 2.5% foreign currency conversion commission applies (product page FAQ)."
   },
   "credit_required": {
-    "score_band": "good",
-    "notes": "Canadian credit approval criteria apply."
+    "score_band": null,
+    "notes": "You are a Canadian resident and have a Canadian credit file. You are of the age of majority in your province or territory where you live."
   },
   "rewards": {
     "currency": "membership_rewards",
@@ -41,26 +46,41 @@
     "structure": "multi",
     "base_rate": {
       "points_per_dollar": 1,
-      "description": "1x on other purchases"
+      "description": "1X points on everything else, for online shopping, and more."
     },
     "categories": [
       {
-        "label": "Groceries, dining, transit, and select streaming (earn rates per Amex Canada)",
+        "label": "Eats & drinks, such as eligible restaurants or food delivery in Canada",
         "points_per_dollar": 5,
+        "cap": null
+      },
+      {
+        "label": "Eligible streaming subscriptions in Canada",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Eligible gas, transit & ride share purchases in Canada",
+        "points_per_dollar": 2,
+        "cap": null
+      },
+      {
+        "label": "Amex Travel Online eligible hotel or car rental bookings (1 additional point)",
+        "points_per_dollar": 2,
         "cap": null
       }
     ],
-    "redemption_notes": "Membership Rewards Canada transfer and travel redemption options.",
+    "redemption_notes": "Redeem your Membership Rewards points with Use Points for Purchases to cover eligible Card purchases. 1,000 points = $10 for all eligible purchases.",
     "rate_type": "points_multiplier"
   },
   "signup_bonus": {
-    "amount": null,
+    "amount": 15000,
     "unit": "points",
-    "spend_required": null,
+    "spend_required": 750,
     "spend_currency": "CAD",
-    "months": null,
-    "description": "Welcome bonus varies; verify on American Express Canada apply page.",
-    "as_of": "2026-07-23"
+    "months": 12,
+    "description": "Earn up to 15,000 Membership Rewards points by earning 1,250 points for each monthly billing period in which you spend $750 on your Card in your first year as a new Cobalt Cardmember. Current or former Cardmembers with this Card are not eligible.",
+    "as_of": "2026-10-22"
   },
   "benefits": [
     {
@@ -89,18 +109,17 @@
     "hotel_status": null,
     "other": []
   },
-  "official_url": "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
+  "official_url": "https://www.americanexpress.com/en-ca/credit-cards/cobalt-card/",
   "image": {
     "url": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/American_Express_Cobalt_Card.png",
     "attribution": "© American Express",
     "local_path": null
   },
   "bin_hints": [],
-  "last_verified": "2026-07-23",
+  "last_verified": "2026-10-22",
   "sources": [
-    "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
-    "https://www.americanexpress.com/ca/en/credit-cards/"
+    "https://www.americanexpress.com/en-ca/credit-cards/cobalt-card/"
   ],
-  "notes": "The fee is charged as $12.99 monthly (recorded here as $155.88 a year). Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
+  "notes": "The Card Fee is $15.99 a month for non-Quebec residents, recorded here as $191.88 a year (15.99 x 12); Quebec residents are billed $191.88 a year. The product page does not show caps on the 5X, 3X or 2X categories, so cap is null. The welcome offer is 1,250 points per qualifying monthly billing period, so spend_required is the $750 monthly threshold. The page also lists up to $60 in Instacart statement credits within a 12 month period until December 31, 2027. Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
   "segment": "personal"
 }
