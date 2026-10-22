@@ -58,23 +58,39 @@ jobs:
           fi
       # jsDelivr caches branch (@main) files for up to 7 days and does not
       # refresh on push, so the exports (and repo-hosted card art, whose
-      # derived image.url points at @main) can go stale. Purge them after the
-      # KV upload. Best-effort: a purge failure warns, never fails the deploy.
+      # derived image.url points at @main) can go stale. Ask jsDelivr's purge
+      # API to drop them after the KV upload. Best-effort: a failed or
+      # throttled purge warns, never fails the deploy.
       - name: Purge jsDelivr @main cache
+        env:
+          BEFORE: ${{ github.event.before }}
         run: |
           files="exports/meta.json exports/cards-all.json exports/cards-by-id.json exports/index-country.json exports/index-issuer.json exports/index-network.json exports/index-network-tier.json exports/cards.csv exports/cards.yaml"
-          if git rev-parse -q --verify HEAD^ >/dev/null; then
-            changed=$(git diff --name-only --diff-filter=AMR HEAD^ HEAD -- images/ | grep -E '\.(webp|png|jpe?g|svg)$' || true)
-            files="$files $changed"
+          # Images changed by this push: diff the whole push range when the
+          # previous tip is fetchable, else fall back to HEAD^ (squash merge).
+          base=""
+          if [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] \
+            && git fetch -q --depth=1 origin "$BEFORE"; then
+            base="$BEFORE"
+          elif git rev-parse -q --verify HEAD^ >/dev/null; then
+            base="HEAD^"
+          fi
+          if [ -n "$base" ]; then
+            if changed=$(git diff --name-only --diff-filter=AMR "$base" HEAD -- images/); then
+              files="$files $(printf '%s\n' "$changed" | grep -E '\.(webp|png|jpe?g|svg)$' || true)"
+            else
+              echo "::warning::could not diff images/ against $base; purging exports only"
+            fi
           fi
           failed=0
           for f in $files; do
             url="https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$f"
-            if curl -fsS --retry 2 -m 30 -o /dev/null "$url"; then
-              echo "purged $f"
+            if resp=$(curl -fsS --retry 2 -m 60 "$url") \
+              && printf '%s' "$resp" | jq -e '.status == "finished" and ([.paths[]?.throttled] | any | not)' >/dev/null; then
+              echo "purge finished: $f"
             else
-              echo "::warning::jsDelivr purge failed for $f"
+              echo "::warning::jsDelivr purge not confirmed for $f: ${resp:-request failed}"
               failed=1
             fi
           done
-          [ "$failed" = 0 ] || echo "::warning::some jsDelivr purges failed; @main may serve stale files until the cache expires"
+          [ "$failed" = 0 ] || echo "::warning::some jsDelivr purges were not confirmed; @main may serve stale files until the cache expires"

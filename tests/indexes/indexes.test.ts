@@ -3,7 +3,7 @@ import { describe, it } from "node:test";
 import {
   ART_GRADES,
   buildIndexArtifacts,
-  DEFAULT_IMAGE_BASE_URL,
+  imageBaseUrl,
   deriveArtGrade,
   withRepoImageUrl,
 } from "../../scripts/build-indexes.ts";
@@ -71,7 +71,7 @@ describe("index build contract", () => {
         derived += 1;
         assert.equal(
           out?.url,
-          `${DEFAULT_IMAGE_BASE_URL}/${src.local_path}`,
+          `${imageBaseUrl()}/${src.local_path}`,
           `${card.id}: url derived from local_path`,
         );
       } else {
