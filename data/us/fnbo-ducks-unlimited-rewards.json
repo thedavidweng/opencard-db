@@ -1,0 +1,79 @@
+{
+  "id": "us-fnbo-ducks-unlimited-rewards",
+  "schema_version": "1.0.0",
+  "name": "Ducks Unlimited Rewards Visa Card",
+  "localized_names": {
+    "en": "Ducks Unlimited Rewards Visa Card"
+  },
+  "country": "us",
+  "issuer": "FNBO",
+  "issuer_id": "fnbo",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "fnbo_rewards_points",
+    "currency_label": "FNBO rewards points (% back)",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1.5,
+      "description": "Unlimited 1.5% back, earned as points, on everyday purchases."
+    },
+    "categories": [
+      {
+        "label": "Ducks Unlimited purchases",
+        "points_per_dollar": 3,
+        "cap": {
+          "amount": 10000,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 35,
+    "unit": "USD",
+    "spend_required": null,
+    "spend_currency": null,
+    "months": 3,
+    "description": "One-time $35 statement credit after your first purchase within the first 3 billing cycles after account opening.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.card.fnbo.com/landing/ducksunlimited/visa-platinum",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.card.fnbo.com/landing/ducksunlimited/visa-platinum"
+  ],
+  "notes": "3% back applies to the first $10,000 in Ducks Unlimited purchases during each 12 consecutive billing cycles after account opening. A portion of purchases funds wetlands and waterfowl conservation. APRs, fees and the foreign transaction fee are in the Summary of Credit Terms, which the product page loads with script, so they are null here. No Visa network package is stated, so network_tier is none."
+}
