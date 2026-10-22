@@ -13,6 +13,7 @@ import {
   DEFAULT_CARD_CONTENT_TYPE,
   DEFAULT_CARD_WEBP_BASE64,
 } from "../worker/src/default-card-asset.ts";
+import { searchMatch } from "../worker/src/search.ts";
 
 export type MemoryKv = Map<string, string>;
 
@@ -114,17 +115,6 @@ function matchesFilters(card: Card, url: URL): boolean {
   if (networkTier && card.network_tier !== networkTier) return false;
   if (status && card.status !== status) return false;
   return true;
-}
-
-function searchMatch(card: Card, q: string): boolean {
-  const needle = q.toLowerCase();
-  if (card.name.toLowerCase().includes(needle)) return true;
-  if (card.issuer.toLowerCase().includes(needle)) return true;
-  if (card.id.toLowerCase().includes(needle)) return true;
-  for (const v of Object.values(card.localized_names ?? {})) {
-    if (v.toLowerCase().includes(needle)) return true;
-  }
-  return false;
 }
 
 function parsePagination(url: URL): { limit: number; offset: number } {

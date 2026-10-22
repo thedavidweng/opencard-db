@@ -208,6 +208,50 @@ describe("API contract /v1", () => {
     );
   });
 
+  async function searchIds(q: string, extra = ""): Promise<string[]> {
+    const res = await handleTestRequest(
+      new Request(
+        `https://example.test/v1/search?q=${encodeURIComponent(q)}&limit=100${extra}`,
+        { headers: { "User-Agent": "OpenCardTest/1.0" } },
+      ),
+      { kv },
+    );
+    assert.equal(res.status, 200);
+    const body = await res.json();
+    return body.data.map((c: { id: string }) => c.id);
+  }
+
+  for (const q of ["rogers wemc", "rogers elite", "Rogers World Elite", "ROGERS® red"]) {
+    it(`token search finds the Rogers card for "${q}"`, async () => {
+      assert.ok(
+        (await searchIds(q)).includes("ca-rogers-red-world-elite-mastercard"),
+      );
+    });
+  }
+
+  it("aliases only match cards on that network and tier", async () => {
+    const ids = await searchIds("wemc", "&country=ca");
+    assert.ok(ids.length > 0);
+    const byId = JSON.parse(kv.get("cards:by-id") ?? "{}");
+    for (const id of ids) {
+      assert.equal(byId[id].network, "mastercard");
+      assert.equal(byId[id].network_tier, "world_elite");
+    }
+  });
+
+  it("matches Chinese names by substring", async () => {
+    assert.ok((await searchIds("招商银行")).includes("cn-cmb-classic-platinum"));
+    assert.ok((await searchIds("经典白金")).includes("cn-cmb-classic-platinum"));
+    assert.ok(
+      (await searchIds("china merchants")).includes("cn-cmb-classic-platinum"),
+    );
+  });
+
+  it("returns nothing for a nonsense query", async () => {
+    assert.deepEqual(await searchIds("zzqx wemc"), []);
+    assert.deepEqual(await searchIds("®"), []);
+  });
+
   it("returns 429 when rate limited", async () => {
     resetTestRateLimits();
     const env = {
