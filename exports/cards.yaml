@@ -513,26 +513,31 @@
     "type": "credit",
     "status": "active",
     "annual_fee": {
-      "amount": 155.88,
+      "amount": 191.88,
       "currency": "CAD",
-      "first_year": 0,
-      "waiver_conditions": "Monthly fee model; first months often promotional — confirm on Amex Canada."
+      "first_year": 191.88,
+      "waiver_conditions": "No first-year waiver is shown on the product page. Card Fee: $15.99/month (Equals $191.88 annually) for non-Quebec residents. $191.88/year for Quebec residents. Additional Cards: No annual fee."
     },
     "apr": {
       "purchase": {
-        "min": null,
-        "max": null,
-        "type": "variable"
+        "min": 21.99,
+        "max": 21.99,
+        "type": null
       },
-      "notes": "See Amex Canada product page for current rates."
+      "cash_advance": {
+        "min": 21.99,
+        "max": 21.99,
+        "type": null
+      },
+      "notes": "The preferred rate for purchases is 21.99% and funds advances is 21.99%. If you have 2 separate Missed Payments in a 12-month period, the applicable rates for your account will be 25.99%. If you have 3 or more separate Missed Payments, the applicable rates will be 29.99%."
     },
     "fx_fee": {
       "percent": 2.5,
-      "notes": "Foreign conversion fee typically applies; confirm current percentage."
+      "notes": "Purchases made in a foreign currency are converted to Canadian dollars, and a 2.5% foreign currency conversion commission applies (product page FAQ)."
     },
     "credit_required": {
-      "score_band": "good",
-      "notes": "Canadian credit approval criteria apply."
+      "score_band": null,
+      "notes": "You are a Canadian resident and have a Canadian credit file. You are of the age of majority in your province or territory where you live."
     },
     "rewards": {
       "currency": "membership_rewards",
@@ -540,26 +545,41 @@
       "structure": "multi",
       "base_rate": {
         "points_per_dollar": 1,
-        "description": "1x on other purchases"
+        "description": "1X points on everything else, for online shopping, and more."
       },
       "categories": [
         {
-          "label": "Groceries, dining, transit, and select streaming (earn rates per Amex Canada)",
+          "label": "Eats & drinks, such as eligible restaurants or food delivery in Canada",
           "points_per_dollar": 5,
+          "cap": null
+        },
+        {
+          "label": "Eligible streaming subscriptions in Canada",
+          "points_per_dollar": 3,
+          "cap": null
+        },
+        {
+          "label": "Eligible gas, transit & ride share purchases in Canada",
+          "points_per_dollar": 2,
+          "cap": null
+        },
+        {
+          "label": "Amex Travel Online eligible hotel or car rental bookings (1 additional point)",
+          "points_per_dollar": 2,
           "cap": null
         }
       ],
-      "redemption_notes": "Membership Rewards Canada transfer and travel redemption options.",
+      "redemption_notes": "Redeem your Membership Rewards points with Use Points for Purchases to cover eligible Card purchases. 1,000 points = $10 for all eligible purchases.",
       "rate_type": "points_multiplier"
     },
     "signup_bonus": {
-      "amount": null,
+      "amount": 15000,
       "unit": "points",
-      "spend_required": null,
+      "spend_required": 750,
       "spend_currency": "CAD",
-      "months": null,
-      "description": "Welcome bonus varies; verify on American Express Canada apply page.",
-      "as_of": "2026-07-23"
+      "months": 12,
+      "description": "Earn up to 15,000 Membership Rewards points by earning 1,250 points for each monthly billing period in which you spend $750 on your Card in your first year as a new Cobalt Cardmember. Current or former Cardmembers with this Card are not eligible.",
+      "as_of": "2026-10-22"
     },
     "benefits": [
       {
@@ -588,19 +608,18 @@
       "hotel_status": null,
       "other": []
     },
-    "official_url": "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
+    "official_url": "https://www.americanexpress.com/en-ca/credit-cards/cobalt-card/",
     "image": {
       "url": "https://icm.aexp-static.com/Internet/internationalcardshop/en_ca/images/cards/American_Express_Cobalt_Card.png",
       "attribution": "© American Express",
       "local_path": null
     },
     "bin_hints": [],
-    "last_verified": "2026-07-23",
+    "last_verified": "2026-10-22",
     "sources": [
-      "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
-      "https://www.americanexpress.com/ca/en/credit-cards/"
+      "https://www.americanexpress.com/en-ca/credit-cards/cobalt-card/"
     ],
-    "notes": "The fee is charged as $12.99 monthly (recorded here as $155.88 a year). Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
+    "notes": "The Card Fee is $15.99 a month for non-Quebec residents, recorded here as $191.88 a year (15.99 x 12); Quebec residents are billed $191.88 a year. The product page does not show caps on the 5X, 3X or 2X categories, so cap is null. The welcome offer is 1,250 points per qualifying monthly billing period, so spend_required is the $750 monthly threshold. The page also lists up to $60 in Instacart statement credits within a 12 month period until December 31, 2027. Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
     "segment": "personal",
     "art_grade": "issuer"
   },
@@ -2126,6 +2145,80 @@
       "https://www.bmo.com/en-ca/main/personal/credit-cards/bmo-viporter-world-elite-mastercard/"
     ],
     "notes": "Network tier is World Elite Mastercard per the card name.",
+    "art_grade": "none"
+  },
+  {
+    "id": "ca-brim-air-france-klm-world-elite-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Air France KLM World Elite Mastercard",
+    "localized_names": {
+      "en": "Air France KLM World Elite Mastercard"
+    },
+    "country": "ca",
+    "issuer": "Brim Financial",
+    "issuer_id": "brim-financial",
+    "network": "mastercard",
+    "network_tier": "world_elite",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 132,
+      "currency": "CAD",
+      "first_year": 0,
+      "waiver_conditions": "First year annual fee free! Upon your one year anniversary, the annual fee will be CAD $132.00. Each additional cardmember is $50 a year."
+    },
+    "apr": {
+      "purchase": {
+        "min": 19.99,
+        "max": 21.99,
+        "type": null
+      },
+      "cash_advance": {
+        "min": 21.5,
+        "max": 21.99,
+        "type": null
+      },
+      "notes": "Preferred annual rates are 19.99% on purchases and balance transfers and 21.50% on cash advances. If the Total Minimum Payment is missed for any 2 billing periods within 12 months, the standard rate of 21.99% applies to all three. Cash advance fee is $3.50 in Canada or $5 outside Canada. Cardmember Agreement in effect as of March 15, 2024."
+    },
+    "fx_fee": {
+      "percent": 1.5,
+      "notes": "Foreign Currency Conversion Fee is 1.5% of the converted amount, on both credits and debits, per the Cardmember Agreement."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "flying_blue_miles",
+      "currency_label": "Flying Blue Miles",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1 Mile per $1 spent everywhere else."
+      },
+      "categories": [
+        {
+          "label": "Restaurants and bars",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Earn Miles on everyday spend that contribute to your Flying Blue Rewards. Redeem for as low as 15,000 Miles one-way to Europe.",
+      "rate_type": "miles_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://brim.flyingblue.ca/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://brim.flyingblue.ca/",
+      "https://static.brimfinancial.com/afklm/pdf_files/AFKLM%20Cardholder%20Agreement_English.pdf"
+    ],
+    "notes": "Issued and administered by Brim Financial. Network tier is World Elite Mastercard per the card name in the Cardmember Agreement. The product page also lists up to 30 Miles per $1 at Merchant Partners, and a 60XP welcome bonus for new cardholders plus 30XP on each card anniversary renewal. XP are Flying Blue status points, not Miles, so signup_bonus is null.",
     "art_grade": "none"
   },
   {
@@ -25127,6 +25220,69 @@
     "art_grade": "none"
   },
   {
+    "id": "us-bh-payboo-credit-card",
+    "schema_version": "1.0.0",
+    "name": "B&H Payboo Credit Card",
+    "localized_names": {
+      "en": "B&H Payboo Credit Card"
+    },
+    "country": "us",
+    "issuer": "Comenity Capital Bank (Bread Financial)",
+    "issuer_id": "comenity",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 35.99,
+        "max": 35.99,
+        "type": "fixed"
+      },
+      "notes": "Purchase APR 35.99% with no margin listed in the filed agreement (printed January 2026); penalty APR up to 39.99% (variable). Late fee up to $41. A $2.99 paper statement fee applies each month a paper statement is mailed and the balance exceeds $3.50 (avoidable with paperless statements)."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": "Store card usable at B&H."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "Save the Tax instant savings",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "Choose Save the Tax (you pay the tax, B&H pays you back instantly, only on shipments to states with sales tax) or deferred-interest special financing for 6 months on a minimum purchase of $199 or 12 months on $599. Promotional plan transactions do not earn rewards."
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.bhphotovideo.com/credit-cards",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.bhphotovideo.com/credit-cards",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/Comenity_Capital_Bank/B%26H_Payboo_Credit_Card_-_Current_Credit_Card_Agreements-287966.pdf"
+    ],
+    "notes": "Private-label store card issued by Comenity Capital Bank (Bread Financial). The Save the Tax benefit is an instant savings equal to the sales tax on eligible orders shipped to states with sales tax, not a fixed earn rate, so no rate is recorded.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-bmo-boost-secured",
     "schema_version": "1.0.0",
     "name": "BMO Boost Secured Credit Card",
@@ -46599,6 +46755,76 @@
     "art_grade": "none"
   },
   {
+    "id": "us-jal-usa-card",
+    "schema_version": "1.0.0",
+    "name": "JAL USA Card",
+    "localized_names": {
+      "en": "JAL USA Card"
+    },
+    "country": "us",
+    "issuer": "First National Bank of Omaha",
+    "issuer_id": "fnbo",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 35,
+      "currency": "USD",
+      "first_year": 35,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 23.49,
+        "max": 23.49,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "Variable APRs based on the Prime Rate (6.75% as of the 08/31/2026 determination date). Purchase and balance transfer APR is Prime plus 16.74%; cash advance APR is Prime plus 21.99%. No penalty APR. Balance transfer fee is $10 or 5%, cash advance fee is $5 or 5%, whichever is greater. Late fee up to $40. Minimum interest charge $1.75."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "Foreign transaction fee is None per the Summary of Credit Terms."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "Applicants must be JAL Mileage Bank members, 18 or older, with a U.S. address."
+    },
+    "rewards": {
+      "currency": "jal_mileage_bank",
+      "currency_label": "JAL Mileage Bank miles",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 0.5,
+        "description": "Basic Rewards: earn 1 point for each $2.00 spent on Net Purchases; each point equals 1 JMB Airmile."
+      },
+      "categories": [],
+      "redemption_notes": "Each Point earned in the Credit Card Rewards Program will equate to 1 JMB Airmile, which will be redeemable only through the JMB Program.",
+      "rate_type": "miles_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.site.jalusacardsupport.com/en/application",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.site.jalusacardsupport.com/en/application",
+      "https://www.firstbankcard.com/lynx/api/v1/lynx/soct/SCYC3VX14X7T8",
+      "https://www.card.fnbo.com/content/dam/global/documents/customer-reward-terms/322.pdf",
+      "https://www.card.fnbo.com/content/dam/global/documents/customer-reward-terms/323.pdf"
+    ],
+    "notes": "Issued by First National Bank of Omaha (FNBO) under a license from Mastercard. The Summary of Credit Terms says approved applicants may receive a Platinum Edition Mastercard or a World Mastercard, so network_tier is none. Recorded values are the Basic Rewards option with a $35 annual fee. The optional Premium Rewards option adds a $50 annual Credit Card Rewards Program fee and earns 2 points per $1 on JAL Purchases (JAL flight tickets bought directly from JAL) and 1 point per $1 on other Net Purchases. A separate set of credit terms for campaign-code applications shows no annual fee for the first year, then $35.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-kroger-rewards-world-elite-mastercard",
     "schema_version": "1.0.0",
     "name": "Kroger Family of Companies Rewards World Elite Mastercard",
@@ -47715,6 +47941,207 @@
     "art_grade": "none"
   },
   {
+    "id": "us-opensky-launch-secured-visa",
+    "schema_version": "1.0.0",
+    "name": "opensky Launch Secured Visa",
+    "localized_names": {
+      "en": "opensky Launch Secured Visa"
+    },
+    "country": "us",
+    "issuer": "Capital Bank, N.A.",
+    "issuer_id": "capital-bank",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 36,
+      "currency": "USD",
+      "first_year": 24,
+      "waiver_conditions": "Annual fee is billed monthly: $24 during the first year paid as $2 per month, then $36 per year paid as $3 per month."
+    },
+    "apr": {
+      "purchase": {
+        "min": 28.24,
+        "max": 28.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.24,
+        "max": 28.24,
+        "type": "variable"
+      },
+      "notes": "Cash advance fee $6 or 5%, whichever is greater. Late payment fee up to $41. Terms accurate as of 03/11/2026."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "3% of each transaction in U.S. dollars."
+    },
+    "credit_required": {
+      "score_band": "limited",
+      "notes": "Secured card. A refundable security deposit equal to the credit line funds a Pledged Deposit Account."
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Launch_Application_TC_SKY1-013-463230.pdf",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Launch_Application_TC_SKY1-013-463230.pdf",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Launch_CH_Agreement_SKY1-013-463230.pdf"
+    ],
+    "notes": "Issued by Capital Bank, N.A. Annual fee figures are the monthly installments times 12 ($2 x 12 in year one, $3 x 12 after). Data comes from the issuer-filed terms in the CFPB Credit Card Agreement Database. The Visa network package is not named, so network_tier is none. Rewards are null because the filed terms describe none and openskycc.com product pages could not be loaded (bot protection), so any rewards program is unverified.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-opensky-plus-secured-visa",
+    "schema_version": "1.0.0",
+    "name": "opensky Plus Secured Visa",
+    "localized_names": {
+      "en": "opensky Plus Secured Visa"
+    },
+    "country": "us",
+    "issuer": "Capital Bank, N.A.",
+    "issuer_id": "capital-bank",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 28.24,
+        "max": 28.24,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.24,
+        "max": 28.24,
+        "type": "variable"
+      },
+      "notes": "Cash advance fee $10 or 3%, whichever is greater. Late payment fee up to $41. Terms accurate as of 01/14/2026."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "3% of each transaction in U.S. dollars."
+    },
+    "credit_required": {
+      "score_band": "limited",
+      "notes": "Secured card. A refundable security deposit equal to the credit line funds a Pledged Deposit Account (no interest paid); after one year the cardholder may request a credit limit decrease to no less than $300."
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Plus_TC_018-443465.pdf",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Plus_TC_018-443465.pdf",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Plus_Card_Agreement_PLUS_V018-443465.pdf"
+    ],
+    "notes": "Issued by Capital Bank, N.A. Data comes from the issuer-filed terms in the CFPB Credit Card Agreement Database. The Visa network package is not named, so network_tier is none. Rewards are null because the filed terms describe none and openskycc.com product pages could not be loaded (bot protection), so any rewards program is unverified.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-opensky-secured-visa",
+    "schema_version": "1.0.0",
+    "name": "opensky Secured Visa",
+    "localized_names": {
+      "en": "opensky Secured Visa"
+    },
+    "country": "us",
+    "issuer": "Capital Bank, N.A.",
+    "issuer_id": "capital-bank",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 35,
+      "currency": "USD",
+      "first_year": 35,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 23.89,
+        "max": 23.89,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 23.89,
+        "max": 23.89,
+        "type": "variable"
+      },
+      "notes": "Cash advance fee $6 or 5%, whichever is greater. Late payment fee up to $41. Terms accurate as of 01/14/2026."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "3% of each transaction in U.S. dollars."
+    },
+    "credit_required": {
+      "score_band": "limited",
+      "notes": "Secured card. A refundable security deposit equal to the credit line funds a Pledged Deposit Account (no interest paid); after one year the cardholder may request a credit limit decrease to no less than $200."
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Application_TC_SKY1-073-302916.pdf",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/opensky_Application_TC_SKY1-073-302916.pdf",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/CAPITAL_BANK_NATIONAL_ASSOCIATION/openskyCard_CH_Agreement_SKY1-073-302916.pdf"
+    ],
+    "notes": "Issued by Capital Bank, N.A. Data comes from the issuer-filed terms in the CFPB Credit Card Agreement Database. The Visa network package is not named, so network_tier is none. Rewards are null because the filed terms describe none and openskycc.com product pages could not be loaded (bot protection), so any rewards program is unverified.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-penfed-gold-visa",
     "schema_version": "1.0.0",
     "name": "PenFed Gold Visa® Card",
@@ -48697,6 +49124,83 @@
     "art_grade": "none"
   },
   {
+    "id": "us-regions-cash-rewards-visa-signature",
+    "schema_version": "1.0.0",
+    "name": "Regions Cash Rewards Visa Signature",
+    "localized_names": {
+      "en": "Regions Cash Rewards Visa Signature"
+    },
+    "country": "us",
+    "issuer": "Regions Bank",
+    "issuer_id": "regions",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 28.74,
+        "max": 28.74,
+        "type": "variable"
+      },
+      "notes": "0% intro APR for 12 months on purchases that post in the same period and on balance transfers that post within 60 days of account opening. Balance transfer and cash advance fees are $10 or 4%, whichever is greater. Late fee up to $39. The filed agreement (pricing as of April 1, 2026) shows 18.49% to 28.49%; the product page shows the current 18.74% to 28.74%."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fee."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "regions_relationship_rewards",
+      "currency_label": "Regions Relationship Rewards points (cash back)",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 1.5,
+        "description": "Unlimited 1.5% cash back on all qualifying purchases."
+      },
+      "categories": [],
+      "redemption_notes": "Relationship Rewards can be redeemed for a direct deposit into a Regions account, a statement credit, travel, gift cards, and more.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 200,
+      "unit": "USD",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "Earn $200 bonus Cash Rewards if you spend $1,000 in the first 90 days, or earn a $100 bonus when you spend $500 in the first 90 days. If earned, the bonus is awarded 91-100 days from account opening.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.regions.com/personal-banking/credit-cards/cash-rewards-credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.regions.com/personal-banking/credit-cards/cash-rewards-credit-card",
+      "https://www.regions.com/personal-banking/credit-cards",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/REGIONS_BANK/F03-BE40-8-Unsecured-556853.pdf"
+    ],
+    "notes": "Issued by Regions Bank. Cash back is earned as Regions Relationship Rewards points.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-revolut-secured-mastercard",
     "schema_version": "1.0.0",
     "name": "Revolut Secured Mastercard Credit Card",
@@ -48975,6 +49479,74 @@
       "https://www.sofi.com/credit-card/"
     ],
     "notes": "Issued by SoFi Bank, N.A. under license from Mastercard. APRs and the foreign transaction fee are on the individual product page, which blocks automated access, so they are null. No Mastercard network package is stated, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-sofi-smart-card",
+    "schema_version": "1.0.0",
+    "name": "SoFi Smart Card",
+    "localized_names": {
+      "en": "SoFi Smart Card"
+    },
+    "country": "us",
+    "issuer": "SoFi",
+    "issuer_id": "sofi",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": "SoFi states the Smart Card has no interest charges; the balance must be paid in full each month. Late payment fee up to $41."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": null
+    },
+    "credit_required": {
+      "score_band": "limited",
+      "notes": "Secured credit card backed by SoFi Checking and Savings balances, which set the spending limit (maximum credit limit $500,000). No minimum security deposit. Requires a SoFi Checking and Savings account. Soft credit pull to apply; approval results in a hard pull."
+    },
+    "rewards": {
+      "currency": "sofi_member_rewards",
+      "currency_label": "SoFi Member Rewards points (cash back)",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "No earn rate on other purchases is stated."
+      },
+      "categories": [
+        {
+          "label": "Eligible grocery stores",
+          "points_per_dollar": 5,
+          "cap": null
+        }
+      ],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.sofi.com/smart-card/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.sofi.com/smart-card/"
+    ],
+    "notes": "Issued by SoFi Bank, N.A. Cash back is issued as SoFi Member Rewards points (5 points per $1 at eligible grocery stores; superstores, warehouse clubs, convenience stores and grocery and meal-kit delivery services are excluded). The foreign transaction fee is not shown on the public page, so it is null. The Mastercard network package is not named, so network_tier is none.",
     "art_grade": "none"
   },
   {
@@ -53012,6 +53584,184 @@
     "art_grade": "none"
   },
   {
+    "id": "us-ulta-beauty-rewards-credit-card",
+    "schema_version": "1.0.0",
+    "name": "Ulta Beauty Rewards Credit Card",
+    "localized_names": {
+      "en": "Ulta Beauty Rewards Credit Card"
+    },
+    "country": "us",
+    "issuer": "Comenity Capital Bank (Bread Financial)",
+    "issuer_id": "comenity",
+    "network": "other",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 32.25,
+        "max": 32.25,
+        "type": "variable"
+      },
+      "notes": "Variable APR as of the January 2026 print date of the filed agreement. Late fee up to $41. Minimum interest charge $3."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": "Store card usable only at Ulta Beauty."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "ulta_beauty_rewards_points",
+      "currency_label": "Ulta Beauty Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "Store card that may only be used at Ulta Beauty."
+      },
+      "categories": [
+        {
+          "label": "Ulta Beauty purchases",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Points you can redeem for savings through Ulta Beauty Rewards.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "first-purchase-discount",
+        "title": "20% off your first purchase",
+        "category": "other",
+        "source": "co-brand",
+        "description": "20% off your first qualifying purchase at Ulta Beauty when you open and use your card."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.ulta.com/rewards/credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.ulta.com/rewards/credit-card",
+      "https://c.comenity.net/ac/ultabeautyrewards/public/home",
+      "https://c.comenity.net/ac/ultabeautyrewards/public/credit-card-agreement",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/Comenity_Capital_Bank/Ulta_Beauty_Rewards%C2%AE_Credit_Card_-_Current_Credit_Card_Agreements-256760.pdf"
+    ],
+    "notes": "Private-label store card issued by Comenity Capital Bank (Bread Financial). The 2 points per $1 includes the 1 point every Ulta Beauty Rewards member earns plus 1 additional point for using the card; Platinum and Diamond members earn more.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-ulta-beauty-rewards-mastercard",
+    "schema_version": "1.0.0",
+    "name": "Ulta Beauty Rewards Mastercard",
+    "localized_names": {
+      "en": "Ulta Beauty Rewards Mastercard"
+    },
+    "country": "us",
+    "issuer": "Comenity Capital Bank (Bread Financial)",
+    "issuer_id": "comenity",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 23.34,
+        "max": 32.25,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 33.25,
+        "max": 33.25,
+        "type": "variable"
+      },
+      "notes": "Variable APRs as of the January 2026 print date of the filed agreement; balance transfers use the purchase APR. Balance transfer and cash advance fees are $10 or 5%, whichever is greater. Late fee up to $41."
+    },
+    "fx_fee": {
+      "percent": 3,
+      "notes": "3.0% of each foreign transaction."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": null
+    },
+    "rewards": {
+      "currency": "ulta_beauty_rewards_points",
+      "currency_label": "Ulta Beauty Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 0.33,
+        "description": "1 point for every $3 spent outside of Ulta Beauty."
+      },
+      "categories": [
+        {
+          "label": "Ulta Beauty purchases",
+          "points_per_dollar": 2,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Points you can redeem for savings through Ulta Beauty Rewards.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 500,
+      "unit": "points",
+      "spend_required": 500,
+      "spend_currency": "USD",
+      "months": 3,
+      "description": "Enjoy 500 Welcome Bonus Points when you spend $500 in the first 90 days outside of Ulta Beauty.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "first-purchase-discount",
+        "title": "20% off your first purchase",
+        "category": "other",
+        "source": "co-brand",
+        "description": "20% off your first qualifying purchase at Ulta Beauty when you open and use your card."
+      },
+      {
+        "id": "beyond-ulta-beauty-rewards",
+        "title": "Beyond Ulta Beauty Rewards",
+        "category": "other",
+        "source": "co-brand",
+        "description": "Earn cashback from exclusive deals through Beyond Ulta Beauty Rewards."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.ulta.com/rewards/credit-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.ulta.com/rewards/credit-card",
+      "https://c.comenity.net/ac/ultabeautyrewards/public/home",
+      "https://c.comenity.net/ac/ultabeautyrewards/public/credit-card-agreement",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/Comenity_Capital_Bank/Ulta_Beauty_Rewards%C2%AE_Mastercard%C2%AE_Credit_Card_-_Current_Credit_Card_Agreements-256759.pdf"
+    ],
+    "notes": "Issued by Comenity Capital Bank (Bread Financial). The filed agreement covers both the Ulta Beauty Rewards Mastercard and the Ulta Beauty Rewards World Mastercard; which one is issued is not stated publicly, so network_tier is none. Applicants not eligible for the Mastercard may be considered for the store card.",
+    "art_grade": "none"
+  },
+  {
     "id": "us-us-bank-aaa-cashback-visa-signature",
     "schema_version": "1.0.0",
     "name": "AAA Cashback Visa Signature Card",
@@ -56320,6 +57070,467 @@
       "https://alliance.usbank.com/en-us/statefarm/credit-cards1/premier-cash-rewards-visa-signature-credit-card-agency.html"
     ],
     "notes": "Issued by U.S. Bank National Association. Applying through a State Farm agent adds 2% cash back on insurance premiums in the first year (up to 5% total).",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-usaa-cashback-rewards-plus-amex",
+    "schema_version": "1.0.0",
+    "name": "USAA Cashback Rewards Plus American Express",
+    "localized_names": {
+      "en": "USAA Cashback Rewards Plus American Express"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 15.4,
+        "max": 27.4,
+        "type": "variable"
+      },
+      "notes": "0% intro APR through the May 2028 billing cycle on balance transfers and convenience checks that post by January 31, 2027. Balance transfer, convenience check and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Bank deposit account). No penalty APR is stated."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "USAA membership is required to apply."
+    },
+    "rewards": {
+      "currency": "usd_cash",
+      "currency_label": "Cash back",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 1,
+        "description": "1% cash back on other qualifying purchases."
+      },
+      "categories": [
+        {
+          "label": "Gas stations",
+          "points_per_dollar": 5,
+          "cap": {
+            "amount": 3000,
+            "currency": "USD",
+            "period": "year"
+          }
+        },
+        {
+          "label": "Military base purchases",
+          "points_per_dollar": 5,
+          "cap": {
+            "amount": 5000,
+            "currency": "USD",
+            "period": "year"
+          }
+        },
+        {
+          "label": "Groceries",
+          "points_per_dollar": 3,
+          "cap": {
+            "amount": 3000,
+            "currency": "USD",
+            "period": "year"
+          }
+        }
+      ],
+      "redemption_notes": "Redeem some or all of your cash back. Your cashback rewards never expire.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 200,
+      "unit": "USD",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": null,
+      "description": "Earn a $200 reward bonus after spending $1,000 on qualifying purchases by January 31, 2027.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usaa.com/banking/credit-cards-public/cash-back/rewards-plus/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usaa.com/banking/credit-cards-public/cash-back/rewards-plus/",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+    ],
+    "notes": "Category caps apply to the first $3,000 (gas stations), $5,000 (military base) and $3,000 (groceries) in purchases yearly, then 1%.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-usaa-eagle-navigator-visa-signature",
+    "schema_version": "1.0.0",
+    "name": "USAA Eagle Navigator Visa Signature",
+    "localized_names": {
+      "en": "USAA Eagle Navigator Visa Signature"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 95,
+      "currency": "USD",
+      "first_year": 95,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 18.4,
+        "max": 26.65,
+        "type": "variable"
+      },
+      "notes": "Balance transfer, convenience check and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Bank deposit account)."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "USAA membership is required to apply."
+    },
+    "rewards": {
+      "currency": "usaa_rewards_points",
+      "currency_label": "USAA Rewards points",
+      "structure": "multi",
+      "base_rate": {
+        "points_per_dollar": 2,
+        "description": "2X points on other qualifying purchases."
+      },
+      "categories": [
+        {
+          "label": "Travel and transit (air, hotel, car and vacation rentals, rideshare, tolls and more)",
+          "points_per_dollar": 3,
+          "cap": null
+        }
+      ],
+      "redemption_notes": "Redeem points for travel, cash back, gift cards and more. Reward points never expire.",
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": {
+      "amount": 50000,
+      "unit": "points",
+      "spend_required": 3000,
+      "spend_currency": "USD",
+      "months": null,
+      "description": "Earn 50,000 bonus points after spending $3,000 on qualifying purchases by January 31, 2027.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      },
+      {
+        "id": "tsa-precheck-global-entry-credit",
+        "title": "TSA PreCheck or Global Entry credit",
+        "category": "credit",
+        "source": "issuer",
+        "description": "Statement credit up to $120 every four years toward the TSA PreCheck or Global Entry application or renewal fee."
+      },
+      {
+        "id": "annual-booking-bonus",
+        "title": "10,000 bonus points each calendar year",
+        "category": "other",
+        "source": "issuer",
+        "description": "Earn 10,000 bonus points (equals $100 in travel) once every calendar year after a single USAA Rewards Center booking that includes at least $100 in spend, a hotel or car rental, and redeems at least 100 points."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usaa.com/banking/credit-cards-public/rewards/travel-eagle-navigator/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usaa.com/banking/credit-cards-public/rewards/travel-eagle-navigator/",
+      "https://www.usaa.com/banking/credit-cards-public/rewards/",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+    ],
+    "notes": "The page also lists travel accident insurance and auto deductible reimbursement (not offered in Washington State); see the Credit Card Benefits Guide.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-usaa-preferred-cash-rewards-visa-signature",
+    "schema_version": "1.0.0",
+    "name": "USAA Preferred Cash Rewards Visa Signature",
+    "localized_names": {
+      "en": "USAA Preferred Cash Rewards Visa Signature"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "visa",
+    "network_tier": "signature",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 15.4,
+        "max": 27.4,
+        "type": "variable"
+      },
+      "notes": "0% intro APR through the May 2028 billing cycle on balance transfers and convenience checks that post by January 31, 2027. Balance transfer, convenience check and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Bank deposit account). No penalty APR is stated."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "USAA membership is required to apply."
+    },
+    "rewards": {
+      "currency": "usd_cash",
+      "currency_label": "Cash back",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": 1.5,
+        "description": "Unlimited 1.5% cash back on purchases with no category restrictions."
+      },
+      "categories": [],
+      "redemption_notes": "Redeem some or all of your cash back. Your cashback rewards never expire.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": {
+      "amount": 200,
+      "unit": "USD",
+      "spend_required": 1000,
+      "spend_currency": "USD",
+      "months": null,
+      "description": "Earn a $200 reward bonus after spending $1,000 on qualifying purchases by January 31, 2027.",
+      "as_of": "2026-10-22"
+    },
+    "benefits": [
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usaa.com/banking/credit-cards-public/cash-back/preferred-cash/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usaa.com/banking/credit-cards-public/cash-back/preferred-cash/",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+    ],
+    "notes": "If you apply for a USAA Visa Signature Credit Card and are approved for a credit limit less than $3,000, USAA issues a USAA Visa Platinum Credit Card with the same terms and fees.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-usaa-rate-advantage-visa-platinum",
+    "schema_version": "1.0.0",
+    "name": "USAA Rate Advantage Visa Platinum",
+    "localized_names": {
+      "en": "USAA Rate Advantage Visa Platinum"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "visa",
+    "network_tier": "platinum",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 10.4,
+        "max": 24.4,
+        "type": "variable"
+      },
+      "notes": "0% intro APR through the May 2028 billing cycle on balance transfers and convenience checks that post by January 31, 2027. Balance transfer, convenience check and cash advance fee is 5% of each transaction (cash advance fee waived for electronic transfers to a USAA Bank deposit account). No penalty APR is stated."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "USAA membership is required to apply."
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usaa.com/banking/credit-cards-public/low-interest/rate-advantage/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usaa.com/banking/credit-cards-public/low-interest/rate-advantage/",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+    ],
+    "notes": "Low-interest card; the product page lists no rewards program.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-usaa-secured-amex",
+    "schema_version": "1.0.0",
+    "name": "USAA Secured American Express",
+    "localized_names": {
+      "en": "USAA Secured American Express"
+    },
+    "country": "us",
+    "issuer": "USAA Federal Savings Bank",
+    "issuer_id": "usaa",
+    "network": "amex",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 27.4,
+        "max": 27.4,
+        "type": "variable"
+      },
+      "notes": "No penalty APR. Balance transfer and cash advance fee is 5% of each transaction amount."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "No foreign transaction fees."
+    },
+    "credit_required": {
+      "score_band": "limited",
+      "notes": "For limited or no credit history. Credit limit $250 to $5,000, secured by a refundable interest-earning certificate of deposit. USAA membership is required."
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "cell-phone-protection",
+        "title": "Cell phone protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Cell phone protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      },
+      {
+        "id": "extended-warranty",
+        "title": "Extended warranty protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Extended warranty protection listed on the USAA card page; see the Credit Card Benefits Guide for terms."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.usaa.com/banking/credit-cards-public/build-credit/secured-american-express/",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.usaa.com/banking/credit-cards-public/build-credit/secured-american-express/",
+      "https://files.consumerfinance.gov/a/assets/credit-card-agreements/pdf/Q22026/USAA_FEDERAL_SAVINGS_BANK/bk-credit-card-combined-agreement-398902.pdf"
+    ],
+    "notes": "The product page lists no rewards program.",
     "art_grade": "none"
   },
   {
