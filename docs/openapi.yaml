@@ -193,16 +193,21 @@ paths:
       tags: [catalog]
       summary: Search cards
       description: >
-        Same filters as `/v1/cards`, plus an optional `q` substring match
-        (case-insensitive) over `name`, `localized_names`, `issuer`, and `id`.
+        Same filters as `/v1/cards`, plus an optional free-text `q`. A card
+        matches when every space-separated word in `q` is the start of a word in
+        its name, localized names, issuer, issuer id, card id, network or tier.
+        Case, accents, punctuation and trademark marks are ignored. Words in
+        non-Latin scripts such as Chinese can match anywhere in a name. Common
+        abbreviations such as wemc, wmc, vi, vip, vs, plat and amex also match
+        the cards on that network and tier.
       parameters:
         - name: q
           in: query
           required: false
-          description: Substring query.
+          description: Free-text query. Every word must match.
           schema:
             type: string
-          example: sapphire
+          example: rogers wemc
         - $ref: "#/components/parameters/Country"
         - $ref: "#/components/parameters/Issuer"
         - $ref: "#/components/parameters/IssuerId"

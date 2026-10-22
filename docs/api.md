@@ -167,7 +167,9 @@ Single Card by Card Id (e.g. `us-chase-sapphire-preferred`). **404** if missing.
 
 ### `GET /v1/search`
 
-Same filters as list, plus optional `q` substring match on `name`, `localized_names`, `issuer`, and `id`.
+Same filters as list, plus an optional free-text `q`. The query is split on spaces, and a card matches when every word in the query is the start of a word in the card's name, localized names, issuer, issuer id, card id, network or tier. Case, accents, punctuation and the ® ™ © marks are ignored. Words written in Chinese or another non-Latin script can match anywhere inside a name, because those names have no spaces between words.
+
+Common abbreviations also match. They are `wemc` and `wem` for World Elite Mastercard, `wmc` for World Mastercard, `wlmc` for World Legend Mastercard, `vi` for Visa Infinite, `vip` for Visa Infinite Privilege, `vs` for Visa Signature, `plat` for any Platinum tier, and `amex` for American Express. So `q=rogers wemc` finds the Rogers Red World Elite Mastercard.
 
 ### `GET /v1/indexes/{name}`
 

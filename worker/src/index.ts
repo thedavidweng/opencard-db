@@ -10,6 +10,7 @@ import {
   DEFAULT_CARD_WEBP_BASE64,
 } from "./default-card-asset";
 import { checkRateLimit } from "./rate-limit";
+import { searchMatch } from "./search";
 // Env comes from .cloudflare/types/index.d.ts, generated from cloudflare.config.ts by
 // `npm run types` (Cloudflare's recommended practice: never hand-write Env).
 import type { Card, Meta } from "./types";
@@ -113,18 +114,6 @@ function matchesFilters(card: Card, url: URL): boolean {
   if (networkTier && card.network_tier !== networkTier) return false;
   if (status && card.status !== status) return false;
   return true;
-}
-
-function searchMatch(card: Card, q: string): boolean {
-  const needle = q.toLowerCase();
-  if (card.name.toLowerCase().includes(needle)) return true;
-  if (card.issuer.toLowerCase().includes(needle)) return true;
-  if (card.id.toLowerCase().includes(needle)) return true;
-  const names = card.localized_names ?? {};
-  for (const v of Object.values(names)) {
-    if (v.toLowerCase().includes(needle)) return true;
-  }
-  return false;
 }
 
 function parsePagination(url: URL): { limit: number; offset: number } {

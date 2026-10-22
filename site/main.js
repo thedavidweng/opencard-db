@@ -17,7 +17,15 @@
   var PAGE = 20;
 
   var NETWORKS = { visa: "Visa", mastercard: "Mastercard", amex: "American Express", discover: "Discover", unionpay: "UnionPay", other: "Other network" };
-  var TIERS = { classic: "Classic", standard: "Standard", traditional: "Traditional", signature: "Signature", infinite: "Infinite", platinum: "Platinum", world: "World", world_elite: "World Elite", world_legend: "World Legend", diamond: "Diamond" };
+  var TIERS = { classic: "Classic", standard: "Standard", traditional: "Traditional", signature: "Signature", infinite: "Infinite", platinum: "Platinum", world: "World", world_elite: "World Elite", world_legend: "World Legend", diamond: "Diamond", infinite_privilege: "Infinite Privilege", gold: "Gold" };
+  // Common abbreviations by network and tier ("*" means any tier). Keep in step
+  // with SEARCH_ALIASES and TIER_ALIASES in worker/src/search.ts.
+  var ALIASES = {
+    mastercard: { world_elite: ["wemc", "wem"], world: ["wmc"], world_legend: ["wlmc"] },
+    visa: { infinite: ["vi"], infinite_privilege: ["vip"], signature: ["vs"] },
+    amex: { "*": ["amex"] }
+  };
+  var TIER_ALIASES = { platinum: ["plat"] };
   var COUNTRIES = { us: "United States", ca: "Canada", cn: "China" };
   var COUNTRY_SHORT = { us: "US", ca: "Canada", cn: "China" };
   var STATUS = { active: "Active", discontinued: "Discontinued", invite_only: "Invite only", unknown: "Status unknown" };
@@ -121,6 +129,11 @@
       .trim();
   }
 
+  function aliases(card) {
+    var byNetwork = ALIASES[card.network] || {};
+    return [].concat(byNetwork["*"] || [], byNetwork[card.network_tier] || [], TIER_ALIASES[card.network_tier] || []);
+  }
+
   function index(card) {
     var tier = card.network_tier && card.network_tier !== "none" ? TIERS[card.network_tier] || card.network_tier : "";
     var fields = {
@@ -130,7 +143,9 @@
         NETWORKS[card.network] || card.network, card.network, tier,
         card.country, COUNTRIES[card.country], card.country === "us" ? "usa" : "",
         card.id, STATUS[card.status], card.segment, card.type,
-        card.rewards && card.rewards.currency_label
+        card.rewards && card.rewards.currency_label,
+        aliases(card).join(" "),
+        card.localized_names ? Object.keys(card.localized_names).map(function (k) { return card.localized_names[k]; }).join(" ") : ""
       ].join(" "))
     };
     return { card: card, f: fields, words: (" " + fields.name + " " + fields.issuer + " " + fields.other + " ") };
