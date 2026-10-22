@@ -1,0 +1,66 @@
+{
+  "id": "ca-neo-mastercard",
+  "schema_version": "1.0.0",
+  "name": "Neo Mastercard",
+  "localized_names": {
+    "en": "Neo Mastercard"
+  },
+  "country": "ca",
+  "issuer": "Neo Financial",
+  "issuer_id": "neo-financial",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "CAD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 19.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 31.99,
+      "type": "variable"
+    },
+    "notes": "Purchase rate 19.99% to 29.99% and cash advance rate 22.99% to 31.99% (Quebec 19.99% to 24.99% and 22.99% to 25.99%), based on credit assessment."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Any credit history or income; applicants may be offered a secured credit limit instead."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cashback",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": null,
+      "description": "Cashback is earned at participating Neo partners; no flat base rate is stated."
+    },
+    "categories": [],
+    "redemption_notes": "Cashback can reduce the credit account balance, be added to a Neo Everyday account, or be redeemed for merchandise at the Neo Store.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.neofinancial.com/credit-cards/neo-mastercard",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.neofinancial.com/credit-cards/neo-mastercard"
+  ],
+  "notes": "The issuer page does not name a network package tier, so network_tier is none. A secured version requires refundable security funds and the Build membership."
+}

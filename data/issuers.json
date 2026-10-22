@@ -589,6 +589,16 @@
         "rbcroyalbank.com",
         "rbc.com"
       ]
+    },
+    {
+      "id": "neo-financial",
+      "name": "Neo Financial",
+      "aliases": [
+        "neo"
+      ],
+      "domains": [
+        "neofinancial.com"
+      ]
     }
   ]
 }
