@@ -523,6 +523,18 @@
       "domains": [
         "firsttechfed.com"
       ]
+    },
+    {
+      "id": "coastal-community-bank",
+      "name": "Coastal Community Bank",
+      "aliases": [
+        "Coastal Bank"
+      ],
+      "domains": [
+        "coastalbank.com",
+        "robinhood.com",
+        "aven.com"
+      ]
     }
   ]
 }
