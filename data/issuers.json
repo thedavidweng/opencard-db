@@ -513,6 +513,16 @@
       "domains": [
         "wescom.org"
       ]
+    },
+    {
+      "id": "first-tech-fcu",
+      "name": "First Tech Federal Credit Union",
+      "aliases": [
+        "First Tech"
+      ],
+      "domains": [
+        "firsttechfed.com"
+      ]
     }
   ]
 }

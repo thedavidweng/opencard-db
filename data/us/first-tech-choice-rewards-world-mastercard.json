@@ -1,0 +1,80 @@
+{
+  "id": "us-first-tech-choice-rewards-world-mastercard",
+  "schema_version": "1.0.0",
+  "name": "First Tech Choice Rewards World Mastercard",
+  "localized_names": {
+    "en": "First Tech Choice Rewards World Mastercard"
+  },
+  "country": "us",
+  "issuer": "First Tech Federal Credit Union",
+  "issuer_id": "first-tech-fcu",
+  "network": "mastercard",
+  "network_tier": "world",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 11.75,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 18.0,
+      "max": 18.0,
+      "type": "variable"
+    },
+    "notes": "Purchase and balance transfer APR currently 11.75% to 18.00%, variable with the Prime Rate; cash advance APR 18.00%. No balance transfer or cash advance fees."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "First Tech membership required."
+  },
+  "rewards": {
+    "currency": "points",
+    "currency_label": "First Tech Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1x points (1% cash back) on everything else."
+    },
+    "categories": [
+      {
+        "label": "Gas, groceries and household essentials",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Points never expire and redeem as cash back.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": 20000,
+    "unit": "points",
+    "spend_required": 3000,
+    "spend_currency": "USD",
+    "months": 2,
+    "description": "20,000 bonus points (worth $200) after $3,000 in purchases within 60 days of account opening, awarded as a statement credit.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.firsttechfed.com/borrow/credit-cards/choice-rewards",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.firsttechfed.com/borrow/credit-cards/choice-rewards"
+  ],
+  "notes": "Tier comes from the product name, Choice Rewards World Mastercard."
+}
