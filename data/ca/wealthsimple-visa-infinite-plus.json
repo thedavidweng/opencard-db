@@ -1,0 +1,74 @@
+{
+  "id": "ca-wealthsimple-visa-infinite-plus",
+  "schema_version": "1.0.0",
+  "name": "Wealthsimple Visa Infinite+ Credit Card",
+  "localized_names": {
+    "en": "Wealthsimple Visa Infinite+ Credit Card"
+  },
+  "country": "ca",
+  "issuer": "Wealthsimple",
+  "issuer_id": "wealthsimple",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 240,
+    "currency": "CAD",
+    "first_year": 240,
+    "waiver_conditions": "Fee waived with a monthly direct deposit of $4,000 or more to a Wealthsimple chequing account, or with $100,000 or more in individual assets with Wealthsimple."
+  },
+  "apr": {
+    "purchase": {
+      "min": 20.99,
+      "max": 20.99,
+      "type": "variable"
+    },
+    "cash_advance": {
+      "min": 22.99,
+      "max": 22.99,
+      "type": "variable"
+    },
+    "notes": "20.99% on purchases and 22.99% on cash advances and cash-like transactions; rates rise to 25.99% and 27.99% after 2 consecutive missed minimum payments."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": "Personal income of at least $80,000 or household income of at least $150,000, plus an active Wealthsimple chequing account."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "single",
+    "base_rate": {
+      "points_per_dollar": 2,
+      "description": "2% cash back on every purchase; does not apply to cash-like transactions, refunds, or fees and adjustments."
+    },
+    "categories": [],
+    "redemption_notes": "Cash back can be redeemed at any point to almost any Wealthsimple account.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": {
+    "amount": null,
+    "unit": null,
+    "spend_required": null,
+    "spend_currency": null,
+    "months": null,
+    "description": "New Wealthsimple clients earn 5% cash back on everything for the first 5 weeks, then 2%.",
+    "as_of": "2026-10-22"
+  },
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.wealthsimple.com/en-ca/credit-card",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.wealthsimple.com/en-ca/credit-card"
+  ],
+  "notes": "The fee is charged as $20 monthly for clients with under $100,000 in individual assets (recorded here as $240 a year); Quebec clients are charged annually. No foreign exchange fees from Wealthsimple. Requires an active Wealthsimple chequing account; Wealthsimple matches applicants to the Visa Infinite+ or Visa Infinite Privilege card. Network tier is Visa Infinite per the card name."
+}
