@@ -337,6 +337,17 @@
       "domains": [
         "truist.com"
       ]
+    },
+    {
+      "id": "merrick-bank",
+      "name": "Merrick Bank",
+      "aliases": [
+        "Ollo"
+      ],
+      "domains": [
+        "merrickbank.com",
+        "ollocard.com"
+      ]
     }
   ]
 }

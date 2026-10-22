@@ -1,0 +1,78 @@
+{
+  "id": "us-merrick-bank-ollo-everyday-rewards",
+  "schema_version": "1.0.0",
+  "name": "Ollo Everyday Rewards Mastercard",
+  "localized_names": {
+    "en": "Ollo Everyday Rewards Mastercard"
+  },
+  "country": "us",
+  "issuer": "Merrick Bank",
+  "issuer_id": "merrick-bank",
+  "network": "mastercard",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": null,
+    "currency": "USD",
+    "first_year": null,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 24.99,
+      "max": 29.99,
+      "type": "variable"
+    },
+    "notes": "Standard pricing may include a variable APR of 24.99% to 29.99%; the solicitation states the rate that applies. Balance transfer fee 4% or $5, cash advance fee 5% or $10, whichever is greater. No rate increase after a late payment."
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Gas stations and public EV chargers",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Grocery stores",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Drugstores",
+        "points_per_dollar": 3,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "No limit on the cash back you can earn.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.ollocard.com/credit-cards/everyday-cash-back-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.ollocard.com/credit-cards/everyday-cash-back-card/",
+    "https://www.ollocard.com/resources/cardmember-agreement/"
+  ],
+  "notes": "Ollo cards are offered by invitation only, and pricing varies by solicitation. The Ollo cardmember agreement names Merrick Bank as the issuer. Ally Credit Card accounts were transitioned to Ollo. Standard pricing lists an annual fee of $0 to $39, so annual_fee is null."
+}
