@@ -721,6 +721,19 @@
       "domains": [
         "wealthsimple.com"
       ]
+    },
+    {
+      "id": "capital-bank",
+      "name": "Capital Bank, N.A.",
+      "aliases": [
+        "opensky",
+        "Capital Bank"
+      ],
+      "domains": [
+        "openskycc.com",
+        "files.consumerfinance.gov",
+        "consumerfinance.gov"
+      ]
     }
   ]
 }
