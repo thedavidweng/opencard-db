@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "card_count": 528,
+  "card_count": 530,
   "countries": [
     "ca",
     "cn",
@@ -9,7 +9,7 @@
   "art_grades": {
     "apple-pay": 0,
     "issuer": 233,
-    "none": 295
+    "none": 297
   },
-  "generated_at": "2026-10-22T16:03:50.197Z"
+  "generated_at": "2026-10-22T20:49:34.199Z"
 }

@@ -513,7 +513,7 @@
     "type": "credit",
     "status": "active",
     "annual_fee": {
-      "amount": 12.99,
+      "amount": 155.88,
       "currency": "CAD",
       "first_year": 0,
       "waiver_conditions": "Monthly fee model; first months often promotional — confirm on Amex Canada."
@@ -600,7 +600,7 @@
       "https://www.americanexpress.com/ca/en/credit-cards/cobalt/",
       "https://www.americanexpress.com/ca/en/credit-cards/"
     ],
-    "notes": "Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
+    "notes": "The fee is charged as $12.99 monthly (recorded here as $155.88 a year). Cobalt is the product name, not a Network Tier. Card art: image.url is the official American Express Canada card-art asset (American_Express_Cobalt_Card.png, 200x126) served on the official Cobalt Card product page, checked 2026-10-21.",
     "segment": "personal",
     "art_grade": "issuer"
   },
@@ -8240,6 +8240,109 @@
       "https://www.td.com/ca/en/personal-banking/products/credit-cards/travel-rewards/rewards-visa-card"
     ],
     "notes": "The issuer page does not name a network package tier, so network_tier is none.",
+    "art_grade": "none"
+  },
+  {
+    "id": "ca-td-us-dollar-visa",
+    "schema_version": "1.0.0",
+    "name": "TD U.S. Dollar Visa Card",
+    "localized_names": {
+      "en": "TD U.S. Dollar Visa Card"
+    },
+    "country": "ca",
+    "issuer": "TD",
+    "issuer_id": "td",
+    "network": "visa",
+    "network_tier": "none",
+    "type": "credit",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 39,
+      "currency": "CAD",
+      "first_year": 39,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": 21.99,
+        "max": 21.99,
+        "type": "variable"
+      },
+      "cash_advance": {
+        "min": 22.99,
+        "max": 22.99,
+        "type": "variable"
+      },
+      "notes": "21.99% on purchases; 22.99% on cash advances."
+    },
+    "fx_fee": {
+      "percent": null,
+      "notes": "No foreign currency conversion fees on purchases and bill payments made in U.S. dollars. Purchases and cash advances in other currencies are converted to U.S. dollars and are subject to a foreign currency conversion charge."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "Canadian resident who has reached the age of majority in their province or territory."
+    },
+    "rewards": {
+      "currency": "none",
+      "currency_label": "No rewards program",
+      "structure": "single",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "No purchase rewards are advertised for this card."
+      },
+      "categories": [],
+      "redemption_notes": null,
+      "rate_type": "points_multiplier"
+    },
+    "signup_bonus": null,
+    "benefits": [
+      {
+        "id": "trip-interruption-insurance",
+        "title": "Trip Interruption Insurance",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Up to $5,000 of coverage per insured person, to a maximum of $25,000 for all insured persons on the same trip."
+      },
+      {
+        "id": "common-carrier-travel-accident-insurance",
+        "title": "Common Carrier Travel Accident Insurance",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Up to $500,000 of coverage for covered losses while travelling on a common carrier."
+      },
+      {
+        "id": "delayed-lost-baggage-insurance",
+        "title": "Delayed and Lost Baggage Insurance",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Up to $1,000 overall coverage per insured person toward essentials if baggage is delayed more than 6 hours or lost."
+      },
+      {
+        "id": "auto-rental-collision-loss-damage",
+        "title": "Auto Rental Collision/Loss Damage Insurance",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Collision/Loss Damage coverage when the full cost of a car rental is charged to the card."
+      },
+      {
+        "id": "purchase-security-extended-warranty",
+        "title": "Purchase Security and Extended Warranty Protection",
+        "category": "insurance",
+        "source": "issuer",
+        "description": "Coverage for most eligible new items purchased with the card should they be stolen or damaged within 90 days of purchase, plus extended warranty protection."
+      }
+    ],
+    "travel_perks": null,
+    "official_url": "https://www.td.com/ca/en/personal-banking/products/credit-cards/us-dollar/us-dollar-visa-card",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.td.com/ca/en/personal-banking/products/credit-cards/us-dollar/us-dollar-visa-card"
+    ],
+    "notes": "The annual fee is billed in U.S. dollars (US$39); annual_fee.currency is CAD because the validator requires CAD fees on CA cards, so read the amount as US$39. The issuer page does not name a network package tier, so network_tier is none.",
     "art_grade": "none"
   },
   {
@@ -47535,6 +47638,80 @@
       "https://nibbles.com/"
     ],
     "notes": "Nibbles is a program manager; the card is issued by Lead Bank and is a World Mastercard Program, per the Nibbles site.",
+    "art_grade": "none"
+  },
+  {
+    "id": "us-onepay-builder-card",
+    "schema_version": "1.0.0",
+    "name": "OnePay Builder Card",
+    "localized_names": {
+      "en": "OnePay Builder Card"
+    },
+    "country": "us",
+    "issuer": "Coastal Community Bank",
+    "issuer_id": "coastal-community-bank",
+    "network": "mastercard",
+    "network_tier": "none",
+    "type": "charge",
+    "segment": "personal",
+    "status": "active",
+    "annual_fee": {
+      "amount": 0,
+      "currency": "USD",
+      "first_year": 0,
+      "waiver_conditions": null
+    },
+    "apr": {
+      "purchase": {
+        "min": null,
+        "max": null,
+        "type": "variable"
+      },
+      "notes": "Secured charge card with no interest charged; all charges are due and payable by the Payment Due Date each month."
+    },
+    "fx_fee": {
+      "percent": 0,
+      "notes": "There is no fee for foreign transactions."
+    },
+    "credit_required": {
+      "score_band": null,
+      "notes": "No credit check and no security deposit; the card is secured by the Checking balance of a OnePay deposit account, which generally sets the amount available for purchases."
+    },
+    "rewards": {
+      "currency": "onepay_points",
+      "currency_label": "OnePay Points (redeemable as cash back)",
+      "structure": "choice",
+      "base_rate": {
+        "points_per_dollar": null,
+        "description": "OnePay Rewards earn OnePay Points at eligible merchants with the OnePay debit card or Builder Card; no flat base rate is stated."
+      },
+      "categories": [
+        {
+          "label": "Chosen monthly category of Walmart, dining or gas",
+          "points_per_dollar": 3,
+          "cap": {
+            "amount": 150,
+            "currency": "USD",
+            "period": "month"
+          }
+        }
+      ],
+      "redemption_notes": "You're able to redeem the points you've earned for cash back directly into your deposit account through the OnePay app once you have 25 OnePay Points or more.",
+      "rate_type": "cashback_percent"
+    },
+    "signup_bonus": null,
+    "benefits": [],
+    "travel_perks": null,
+    "official_url": "https://www.onepay.com/banking",
+    "image": null,
+    "bin_hints": [],
+    "last_verified": "2026-10-22",
+    "sources": [
+      "https://www.onepay.com/banking",
+      "https://www.onepay.com/legal/ccb-builder-credit-card-agreement",
+      "https://www.onepay.com/legal"
+    ],
+    "notes": "Issued by Coastal Community Bank, member FDIC, under the OnePay Builder Credit Card Agreement (CCB) and distributed and serviced by OneProgress Services LLC (OnePay). OnePay also publishes a Lead Bank version of the agreement. After the $150 monthly cap, the chosen category earns 1 point per $10 spent for the rest of the month. A $3.00 Cash Out Fee is charged on the deposit account for ATM withdrawals with the card (waived for Allpoint ATMs). No Mastercard network package is stated, so network_tier is none.",
     "art_grade": "none"
   },
   {
