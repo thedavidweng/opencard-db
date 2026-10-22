@@ -1,0 +1,67 @@
+{
+  "id": "us-discover-it-nhl",
+  "schema_version": "1.0.0",
+  "name": "NHL Discover it Credit Card",
+  "localized_names": {
+    "en": "NHL Discover it Credit Card"
+  },
+  "country": "us",
+  "issuer": "Discover",
+  "issuer_id": "discover",
+  "network": "discover",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "personal",
+  "status": "active",
+  "annual_fee": {
+    "amount": 0,
+    "currency": "USD",
+    "first_year": 0,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": 18.74,
+      "max": 28.74,
+      "type": "variable"
+    },
+    "notes": "0% intro APR for 15 months on purchases and balance transfers, then 18.74% to 28.74% variable APR. Balance transfer fee applies."
+  },
+  "fx_fee": {
+    "percent": null,
+    "notes": null
+  },
+  "credit_required": {
+    "score_band": "good_to_excellent",
+    "notes": "Discover states the card is generally available to people with good to excellent credit."
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back on all other purchases."
+    },
+    "categories": [
+      {
+        "label": "Rotating quarterly categories (activation required)",
+        "points_per_dollar": 5,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Unlimited Cashback Match matches all cash back earned at the end of the first year, dollar for dollar, with no limit.",
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.discover.com/credit-cards/cash-back/nhl-card/",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.discover.com/credit-cards/cash-back/nhl-card/"
+  ],
+  "notes": "The 5% quarterly categories apply up to a quarterly maximum that the product page does not state. Card designs are available for NHL teams across the league."
+}
