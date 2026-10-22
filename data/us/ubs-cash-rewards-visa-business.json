@@ -1,0 +1,71 @@
+{
+  "id": "us-ubs-cash-rewards-visa-business",
+  "schema_version": "1.0.0",
+  "name": "UBS Cash Rewards Visa Business Card",
+  "localized_names": {
+    "en": "UBS Cash Rewards Visa Business Card"
+  },
+  "country": "us",
+  "issuer": "UBS Bank USA",
+  "issuer_id": "ubs",
+  "network": "visa",
+  "network_tier": "none",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 150,
+    "currency": "USD",
+    "first_year": 150,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "cash_back",
+    "currency_label": "Cash back",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1% cash back after the first $100,000 in eligible purchases each year."
+    },
+    "categories": [
+      {
+        "label": "All eligible purchases, up to the first $100,000 each year",
+        "points_per_dollar": 2,
+        "cap": {
+          "amount": 100000,
+          "currency": "USD",
+          "period": "year"
+        }
+      }
+    ],
+    "redemption_notes": null,
+    "rate_type": "cashback_percent"
+  },
+  "signup_bonus": null,
+  "benefits": [],
+  "travel_perks": null,
+  "official_url": "https://www.ubs.com/us/en/wealth-management/our-solutions/banking/cards/business.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.ubs.com/us/en/wealth-management/our-solutions/banking/cards/business.html"
+  ],
+  "notes": "Offered to UBS Wealth Management clients. No Visa network package is stated for this card, so network_tier is none. APRs are in the cardmember agreement PDFs, which block automated access, so they are null."
+}

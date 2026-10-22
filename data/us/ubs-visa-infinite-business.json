@@ -1,0 +1,87 @@
+{
+  "id": "us-ubs-visa-infinite-business",
+  "schema_version": "1.0.0",
+  "name": "UBS Visa Infinite Business Card",
+  "localized_names": {
+    "en": "UBS Visa Infinite Business Card"
+  },
+  "country": "us",
+  "issuer": "UBS Bank USA",
+  "issuer_id": "ubs",
+  "network": "visa",
+  "network_tier": "infinite",
+  "type": "credit",
+  "segment": "business",
+  "status": "active",
+  "annual_fee": {
+    "amount": 650,
+    "currency": "USD",
+    "first_year": 650,
+    "waiver_conditions": null
+  },
+  "apr": {
+    "purchase": {
+      "min": null,
+      "max": null,
+      "type": "variable"
+    },
+    "notes": null
+  },
+  "fx_fee": {
+    "percent": 0,
+    "notes": "No foreign transaction fees."
+  },
+  "credit_required": {
+    "score_band": null,
+    "notes": null
+  },
+  "rewards": {
+    "currency": "ubs_rewards_points",
+    "currency_label": "UBS Rewards points",
+    "structure": "multi",
+    "base_rate": {
+      "points_per_dollar": 1,
+      "description": "1 point for all other eligible purchases."
+    },
+    "categories": [
+      {
+        "label": "Air travel and hotel stays",
+        "points_per_dollar": 3,
+        "cap": null
+      },
+      {
+        "label": "Eligible business expenses",
+        "points_per_dollar": 2,
+        "cap": null
+      }
+    ],
+    "redemption_notes": "Redeem for travel, gift cards and merchandise; points do not expire while the card is open.",
+    "rate_type": "points_multiplier"
+  },
+  "signup_bonus": null,
+  "benefits": [
+    {
+      "id": "annual-credit",
+      "title": "$500 Annual Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$500 annual credit based on annual spend."
+    },
+    {
+      "id": "airline-fee-credit",
+      "title": "$500 Airline Fee Credit",
+      "category": "credit",
+      "source": "issuer",
+      "description": "$500 credit for qualifying air travel expenses."
+    }
+  ],
+  "travel_perks": null,
+  "official_url": "https://www.ubs.com/us/en/wealth-management/our-solutions/banking/cards/business.html",
+  "image": null,
+  "bin_hints": [],
+  "last_verified": "2026-10-22",
+  "sources": [
+    "https://www.ubs.com/us/en/wealth-management/our-solutions/banking/cards/business.html"
+  ],
+  "notes": "Offered to UBS Wealth Management clients. APRs are in the cardmember agreement PDFs, which block automated access, so they are null."
+}
