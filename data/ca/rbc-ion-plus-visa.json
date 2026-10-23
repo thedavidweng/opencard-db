@@ -17,7 +17,7 @@
     "amount": 48,
     "currency": "CAD",
     "first_year": 48,
-    "waiver_conditions": null
+    "waiver_conditions": "Annual fee is rebated for students or anyone 24 or younger who opens an RBC Advantage Banking Account for Students."
   },
   "apr": {
     "purchase": {
@@ -34,7 +34,7 @@
   },
   "fx_fee": {
     "percent": null,
-    "notes": null
+    "notes": "RBC does not publish the foreign transaction fee on the product page; confirm the current percentage in the RBC cardholder agreement."
   },
   "credit_required": {
     "score_band": null,
@@ -68,15 +68,50 @@
     "redemption_notes": "Avion points redeem for travel, gift cards, merchandise, statement credits and transfers to partner programs.",
     "rate_type": "points_multiplier"
   },
-  "signup_bonus": null,
-  "benefits": [],
+  "signup_bonus": {
+    "amount": 28000,
+    "unit": "points",
+    "spend_required": 1500,
+    "spend_currency": "CAD",
+    "months": 6,
+    "description": "Up to 28,000 Avion points: 7,000 on approval, 14,000 after spending $1,500 in the first 6 months, and a 7,000 one-time anniversary bonus. Offer advertised for applications by 2026-11-04.",
+    "as_of": "2026-10-23"
+  },
+  "benefits": [
+    {
+      "id": "mobile-device-insurance",
+      "title": "Mobile Device Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Up to two years of coverage to a maximum of $1,000 if an eligible mobile device is lost, stolen, accidentally damaged, or suffers mechanical failure when purchased with the card."
+    },
+    {
+      "id": "purchase-security-extended-warranty",
+      "title": "Purchase Security and Extended Warranty Insurance",
+      "category": "insurance",
+      "source": "issuer",
+      "description": "Protects eligible purchases against loss, theft, or damage within 90 days and doubles the manufacturer warranty by up to one additional year, to a maximum of five years."
+    },
+    {
+      "id": "annual-fee-rebate",
+      "title": "Student Annual Fee Rebate",
+      "category": "waiver",
+      "source": "issuer",
+      "description": "The annual fee is rebated for students or anyone 24 or younger who opens an RBC Advantage Banking Account for Students."
+    }
+  ],
   "travel_perks": null,
   "official_url": "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-plus-visa.html",
-  "image": null,
+  "image": {
+    "url": "https://www.rbcroyalbank.com/credit-cards/canada/rewards/images/rbc-ion-plus-visa.webp",
+    "attribution": "© Royal Bank of Canada",
+    "local_path": null
+  },
   "bin_hints": [],
-  "last_verified": "2026-10-22",
+  "last_verified": "2026-10-23",
   "sources": [
-    "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-plus-visa.html"
+    "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-plus-visa.html",
+    "https://www.rbcroyalbank.com/credit-cards/rewards/rbc-ion-plus-visa/rbc-ion-plus-visa-certificate-of-insurance.pdf"
   ],
   "notes": "The issuer page does not name a network package tier, so network_tier is none."
 }
