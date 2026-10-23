@@ -12,7 +12,7 @@ Website: [thedavidweng.github.io/opencard-db](https://thedavidweng.github.io/ope
 
 - One JSON file per card under [`data/`](data), reviewed through pull requests
 - Exports in JSON, CSV, and YAML, rebuilt automatically for every release
-- Live counts in [`exports/meta.json`](exports/meta.json) (189 cards across 3 countries at the time of writing)
+- Live counts in [`exports/meta.json`](exports/meta.json) (cards across 3 countries; the badge above reads it live)
 - No signup, no API key, no rate limits on the CDN path
 
 ## Getting the data
@@ -22,11 +22,14 @@ Website: [thedavidweng.github.io/opencard-db](https://thedavidweng.github.io/ope
 Pin a release tag on jsDelivr. Tagged URLs never change and are served from a global CDN with no quotas:
 
 ```
-https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/cards-all.json
-https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/cards.csv
-https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/meta.json
-https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.2.0/exports/index-country.json
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.4.0/exports/cards-all.json
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.4.0/exports/cards.csv
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.4.0/exports/meta.json
+https://cdn.jsdelivr.net/gh/thedavidweng/opencard-db@v0.4.0/exports/index-country.json
 ```
+
+`v0.4.0` is the tag these examples were last updated for. Take the current tag from the
+[release badge](https://github.com/thedavidweng/opencard-db/releases) — any published tag works.
 
 The same files are attached to every [GitHub Release](https://github.com/thedavidweng/opencard-db/releases) as downloadable assets. The full list of exports (7 index JSONs plus `cards.csv` and `cards.yaml`) lives in the committed [`exports/`](exports/) directory. Releases, changelogs, and version bumps are automated; see [`docs/RELEASING.md`](docs/RELEASING.md).
 
