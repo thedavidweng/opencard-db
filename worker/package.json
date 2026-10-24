@@ -13,6 +13,6 @@
   "devDependencies": {
     "cf": "1.0.0-beta.14",
     "typescript": "^7.0.2",
-    "wrangler": "4.149.0"
+    "wrangler": "4.151.1"
   }
 }
