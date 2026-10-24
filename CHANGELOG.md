@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/thedavidweng/opencard-db/compare/v0.4.0...v0.4.1) (2026-10-24)
+
+
+### Documentation
+
+* point the CDN examples at v0.4.0 and drop the stale card count ([#599](https://github.com/thedavidweng/opencard-db/issues/599)) ([e86a80a](https://github.com/thedavidweng/opencard-db/commit/e86a80a74cdf661484e95c24c72052b2ce7893ef))
+
 ## [0.4.0](https://github.com/thedavidweng/opencard-db/compare/v0.3.3...v0.4.0) (2026-10-22)
 
 
