@@ -21,4 +21,4 @@ The current mapping from [scripts/build-indexes.ts](../../scripts/build-indexes.
 
 When reproducing issues, cite the exact key-to-file mapping from the current index-generation source instead of guessing mappings.
 
-The pinned cf beta.13 consumes `cf dev --mode selfhost --persist-to <dir>` without forwarding the persistence option; its Wrangler delegate does not support that flag either. For this version, `<dir>` MUST be the absolute path to `worker/.wrangler/state`, the dev server's default. Seed that directory, then run `cf dev --mode selfhost`. Re-check custom-directory support when upgrading cf.
+The pinned cf (1.0.0-beta.18) rejects `--persist-to` on `cf dev` itself: `--persist-to is not supported by cf dev.` The dev server always uses `worker/.wrangler/state`. So seed that directory with `cf kv keys put --local --persist-to <absolute path to worker/.wrangler/state>`, then start `cf dev --mode selfhost`. Verified at beta.18: `/v1/health` and `/v1/meta` return 200 with the seeded card count.
