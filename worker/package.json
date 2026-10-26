@@ -11,9 +11,9 @@
     "typecheck": "npm run types && tsc --noEmit"
   },
   "devDependencies": {
-    "cf": "1.0.0-beta.18",
+    "cf": "1.0.0-beta.23",
     "typescript": "^7.0.2",
-    "wrangler": "4.151.3"
+    "wrangler": "4.153.0"
   },
   "overrides": {
     "undici": "^7.30.1",
