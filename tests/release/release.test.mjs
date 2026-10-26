@@ -7,7 +7,32 @@ import { PullRequestBody } from 'release-please/build/src/util/pull-request-body
 import { Version } from 'release-please/build/src/version.js';
 const { Manifest } = releasePlease;
 
-// Match the release-please version bundled in the pinned v5 action.
+// These tests run the library that the release workflow actually executes, so the
+// dev dependency must be the exact release-please version bundled inside the pinned
+// action. `bundled-release-please.json` is the single record of that pairing; both
+// sides are asserted below so either one drifting alone fails the suite.
+const fixture = JSON.parse(
+  await readFile(new URL('./bundled-release-please.json', import.meta.url), 'utf8'),
+);
+
+test('installed release-please is the version bundled in the pinned action', async () => {
+  const installed = JSON.parse(
+    await readFile(new URL('../../node_modules/release-please/package.json', import.meta.url), 'utf8'),
+  );
+  assert.equal(installed.version, fixture.bundledReleasePlease);
+});
+
+test('the fixture records the action revision the workflow actually pins', async () => {
+  const workflow = await readFile(
+    new URL('../../.github/workflows/release-please.yml', import.meta.url),
+    'utf8',
+  );
+  const pin = workflow.match(/uses:\s*googleapis\/release-please-action@([0-9a-f]{40})\s*#\s*(v\S+)/);
+  assert.ok(pin, 'release-please-action must be pinned by full commit SHA with a tag comment');
+  assert.equal(pin[1], fixture.commit);
+  assert.equal(pin[2], fixture.tag);
+});
+
 const github = {
   repository: { owner: 'thedavidweng', repo: 'opencard-db', defaultBranch: 'main' },
   async getFileJson(path) {
