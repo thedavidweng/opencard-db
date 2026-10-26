@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.4.1](https://github.com/thedavidweng/opencard-db/compare/v0.4.0...v0.4.1) (2026-10-26)
+
+
+### Cards
+
+* **update:** ca-rbc-avion-visa-infinite ([#612](https://github.com/thedavidweng/opencard-db/issues/612)) ([1290dae](https://github.com/thedavidweng/opencard-db/commit/1290dae342c624dafb99e3eee35521b3edbc1f08))
+* **update:** ca-rbc-ion-plus-visa ([#602](https://github.com/thedavidweng/opencard-db/issues/602)) ([#611](https://github.com/thedavidweng/opencard-db/issues/611)) ([2055f17](https://github.com/thedavidweng/opencard-db/commit/2055f177886fe92b9024452d1cba89abaa9a01c1))
+
+
+### Bug Fixes
+
+* **worker:** override undici and zod past dev-tool advisories ([#609](https://github.com/thedavidweng/opencard-db/issues/609)) ([e844b39](https://github.com/thedavidweng/opencard-db/commit/e844b39ae946169709c80be46d5f72ccee044b54))
+
+
+### Documentation
+
+* point the CDN examples at v0.4.0 and drop the stale card count ([#599](https://github.com/thedavidweng/opencard-db/issues/599)) ([e86a80a](https://github.com/thedavidweng/opencard-db/commit/e86a80a74cdf661484e95c24c72052b2ce7893ef))
+
 ## [0.4.0](https://github.com/thedavidweng/opencard-db/compare/v0.3.3...v0.4.0) (2026-10-22)
 
 
