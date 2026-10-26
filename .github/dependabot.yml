@@ -20,7 +20,12 @@ updates:
     schedule:
       interval: weekly
 
-    # Cloudflare Worker package.
+    # Test fixture mirror, not a shipped dependency: `release-please` is pinned to the
+    # exact version bundled inside the SHA-pinned release-please-action, and
+    # `tests/release/release.test.mjs` fails if the two disagree. Upgrade it together
+    # with the action pin, never on its own.
+    ignore:
+      - dependency-name: "release-please"
     groups:
       non-major:
         update-types:

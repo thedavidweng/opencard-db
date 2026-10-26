@@ -29,8 +29,17 @@ component from `package.json` (`opencard-db`). A catalog-only manifest PR has no
 branch component, so that inferred name causes release creation to be skipped.
 The empty config name keeps both components empty without changing the actual
 npm package name. `tests/release/release.test.mjs` exercises the pinned action's
-release-please version against catalog-only, CLI-only and combined PRs. Update
-that exact dev dependency when changing the action's bundled library version.
+release-please version against catalog-only, CLI-only and combined PRs.
+
+The `release-please` dev dependency is a **test fixture mirror**, not a shipped
+package: it must equal the version bundled inside the SHA-pinned
+`googleapis/release-please-action`. Dependabot is configured to ignore that one
+package so the pairing cannot drift, and `tests/release/bundled-release-please.json`
+records the current pairing. `release.test.mjs` asserts both directions, so a
+bump of either the dev dependency or the workflow's action pin fails the suite.
+To upgrade: confirm a newer stable action tag exists, read the
+`release-please` version from that tag's `package-lock.json`, then update the
+action pin, the fixture file and the dev dependency in one change.
 
 ## Version bumps
 
