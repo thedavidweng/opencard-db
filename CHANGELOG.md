@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.2](https://github.com/thedavidweng/opencard-db/compare/v0.4.1...v0.4.2) (2026-10-27)
+
+
+### Documentation
+
+* **local-worker:** correct the cf dev persistence instructions ([#614](https://github.com/thedavidweng/opencard-db/issues/614)) ([612b13e](https://github.com/thedavidweng/opencard-db/commit/612b13e30f0c53ad6a35931bc2957434173457ef))
+* **local-worker:** drop the stale cf version pin from the persist note ([#621](https://github.com/thedavidweng/opencard-db/issues/621)) ([945f6dd](https://github.com/thedavidweng/opencard-db/commit/945f6dd8d9cd9d64b32d53cf4d9abaf22e569c3d))
+
 ## [0.4.1](https://github.com/thedavidweng/opencard-db/compare/v0.4.0...v0.4.1) (2026-10-26)
 
 
