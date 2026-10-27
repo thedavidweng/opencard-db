@@ -21,4 +21,4 @@ The current mapping from [scripts/build-indexes.ts](../../scripts/build-indexes.
 
 When reproducing issues, cite the exact key-to-file mapping from the current index-generation source instead of guessing mappings.
 
-The pinned cf (1.0.0-beta.18) rejects `--persist-to` on `cf dev` itself: `--persist-to is not supported by cf dev.` The dev server always uses `worker/.wrangler/state`. So seed that directory with `cf kv keys put --local --persist-to <absolute path to worker/.wrangler/state>`, then start `cf dev --mode selfhost`. Verified at beta.18: `/v1/health` and `/v1/meta` return 200 with the seeded card count.
+`cf dev` rejects `--persist-to` itself: `--persist-to is not supported by cf dev.` The dev server always uses `worker/.wrangler/state`. So seed that directory with `cf kv keys put --local --persist-to <absolute path to worker/.wrangler/state>`, then start `cf dev --mode selfhost`. Verified with the current pinned cf: `/v1/health` and `/v1/meta` return 200 with the seeded card count.
