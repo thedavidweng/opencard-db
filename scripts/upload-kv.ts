@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
  * Upload pre-built index artifacts (dist/indexes, from `bun run build:indexes`)
- * to the production Cloudflare KV namespace via the worker's pinned wrangler.
+ * to the production Cloudflare KV namespace via the worker's pinned cf CLI.
  *
- * The namespace id comes from worker/wrangler.jsonc (env.production), the
- * single source of truth; KV_NAMESPACE_ID overrides it for self-hosters.
- * Auth: CLOUDFLARE_API_TOKEN in CI, or a local `wrangler login` session.
+ * The namespace id and account id come from production mode in
+ * worker/cloudflare.config.ts. KV_NAMESPACE_ID overrides the namespace id
+ * for self-hosters. Auth: CLOUDFLARE_API_TOKEN in CI, or a local `cf auth login`
+ * session. CLOUDFLARE_ACCOUNT_ID overrides the account id from the config.
  */
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { spawnSync } from "node:child_process";
+import path from "node:path";
 import { repoRoot } from "./lib.ts";
 
 const pairs: [string, string][] = [
@@ -22,70 +22,64 @@ const pairs: [string, string][] = [
   ["index:network_tier", "index-network-tier.json"],
 ];
 
-/** Strip // and /* comments so wrangler.jsonc parses as JSON. */
-function parseJsonc(text: string): unknown {
-  const noComments = text
-    .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/^\s*\/\/.*$/gm, "");
-  return JSON.parse(noComments);
-}
-
-type ProductionConfig = {
-  account_id?: string;
-  kv_namespaces?: Array<{ binding: string; id: string }>;
+type ProductionIds = {
+  accountId: string;
+  kvId: string;
 };
 
-async function productionConfig(): Promise<ProductionConfig> {
-  try {
-    const raw = await readFile(
-      path.join(repoRoot(), "worker", "wrangler.jsonc"),
-      "utf-8",
-    );
-    const config = parseJsonc(raw) as { env?: { production?: ProductionConfig } };
-    return config.env?.production ?? {};
-  } catch {
-    return {};
+function productionIds(): ProductionIds {
+  const workerDir = path.join(repoRoot(), "worker");
+  const result = spawnSync(
+    "bun",
+    [
+      "-e",
+      [
+        'import config from "./cloudflare.config.ts";',
+        'const resolved = await config({ mode: "production", isPreview: false });',
+        "const kv = resolved.worker?.env?.OPENCARD_KV;",
+        'if (!kv || kv.type !== "kv" || typeof kv.id !== "string" || kv.id.length === 0) {',
+        '  throw new Error("production mode has no OPENCARD_KV id in cloudflare.config.ts");',
+        "}",
+        "if (typeof resolved.accountId !== \"string\" || resolved.accountId.length === 0) {",
+        '  throw new Error("production mode has no accountId in cloudflare.config.ts");',
+        "}",
+        "console.log(JSON.stringify({ accountId: resolved.accountId, kvId: kv.id }));",
+      ].join("\n"),
+    ],
+    { cwd: workerDir, encoding: "utf8" },
+  );
+  if (result.status !== 0) {
+    process.stderr.write(result.stderr ?? "");
+    process.exit(result.status ?? 1);
   }
+  return JSON.parse(result.stdout) as ProductionIds;
 }
 
-async function main(): Promise<void> {
-  const production = await productionConfig();
-  const ns =
-    process.env.KV_NAMESPACE_ID ||
-    production.kv_namespaces?.find((n) => n.binding === "OPENCARD_KV")?.id;
-  if (!ns) {
-    console.error(
-      "No KV namespace id: set KV_NAMESPACE_ID or define env.production in worker/wrangler.jsonc",
-    );
-    process.exit(1);
-  }
-  // `kv key put` reads no environment section of the config, so pin the
-  // account explicitly: a CI token with access to several accounts otherwise
-  // fails wrangler's non-interactive account selection.
+function main(): void {
+  const production = productionIds();
+  const ns = process.env.KV_NAMESPACE_ID || production.kvId;
   const env = { ...process.env };
-  if (!env.CLOUDFLARE_ACCOUNT_ID && production.account_id) {
-    env.CLOUDFLARE_ACCOUNT_ID = production.account_id;
+  if (!env.CLOUDFLARE_ACCOUNT_ID) {
+    env.CLOUDFLARE_ACCOUNT_ID = production.accountId;
   }
   const indexDir = path.join(repoRoot(), "dist", "indexes");
+  const cf = path.join(repoRoot(), "worker", "node_modules", ".bin", "cf");
 
   for (const [key, file] of pairs) {
     const filePath = path.join(indexDir, file);
     console.log(`Putting ${key} from ${file}...`);
     const result = spawnSync(
-      "npx",
+      cf,
       [
-        "wrangler",
         "kv",
-        "key",
+        "keys",
         "put",
         key,
-        "--path",
+        "--file",
         filePath,
         "--namespace-id",
         ns,
-        "--remote",
       ],
-      // cwd worker/ resolves the pinned wrangler from worker/node_modules.
       { stdio: "inherit", env, cwd: path.join(repoRoot(), "worker") },
     );
     if (result.status !== 0) {
@@ -95,4 +89,4 @@ async function main(): Promise<void> {
   console.log("ok: uploaded KV keys");
 }
 
-await main();
+main();

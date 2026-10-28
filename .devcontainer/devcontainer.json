@@ -1,5 +1,5 @@
 {
   "name": "opencard-db",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:26",
   "postCreateCommand": "npm ci"
 }
