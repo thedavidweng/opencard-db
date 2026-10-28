@@ -63,7 +63,7 @@ cd ..
 
 Or run `node --experimental-strip-types scripts/upload-kv.ts` after setting the
 env vars (`KV_NAMESPACE_ID` overrides the production id the script would
-otherwise read from `worker/wrangler.jsonc`).
+otherwise read from production mode in `worker/cloudflare.config.ts`).
 
 ## 3. Deploy the Worker
 
@@ -101,7 +101,7 @@ RATE_LIMIT_ENABLED: bindings.text("true"),
 ## GitHub Actions secrets (official deploy)
 
 The account id and production KV namespace id are committed in
-`worker/wrangler.jsonc` (`env.production`); they are identifiers, not
+`worker/cloudflare.config.ts` (production mode); they are identifiers, not
 credentials. The deploy workflow needs one secret:
 
 | Secret | Purpose |

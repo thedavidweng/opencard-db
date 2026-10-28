@@ -1,5 +1,5 @@
 /**
- * Re-export pure request handling for Node contract tests without wrangler.
+ * Re-export pure request handling for Node contract tests.
  * Mirrors worker routing logic against an in-memory KV map.
  */
 import {
