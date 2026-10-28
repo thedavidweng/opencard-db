@@ -2,7 +2,7 @@
 
 `cf dev --mode selfhost` starts with empty local KV; catalog endpoints return a "not loaded. Deploy indexes to KV." 404 until indexes are seeded. `/v1/health` and `/v1/assets/default-card.webp` do not need seeding.
 
-1. `npm run build:indexes` in the root; generated files go under `dist/indexes/`.
+1. `bun run build:indexes` in the root; generated files go under `dist/indexes/`.
 2. With the dev server stopped, from `worker/`, load seven KV keys using `npx cf kv keys put <key> --namespace-id <selfhost-id-from-cloudflare.config.ts> --file ../dist/indexes/<matching-file> --local --persist-to <dir>`.
 3. From `worker/`, start `npx cf dev --mode selfhost`.
 4. The dev-server and `cf kv keys put` invocations MUST use the same persistence directory. Use an absolute path for `<dir>`.

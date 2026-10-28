@@ -1,13 +1,13 @@
 # FAQ: Common validation errors
 
-`npm run validate` (the **Validate** check) runs the JSON Schema plus a set of
+`bun run validate` (the **Validate** check) runs the JSON Schema plus a set of
 semantic lints. When it fails it prints one `error: <file>: <message>` line per
 problem. Find your message below for what it means and the exact fix.
 
 Run it locally before pushing:
 
 ```bash
-npm run validate
+bun run validate
 ```
 
 ---

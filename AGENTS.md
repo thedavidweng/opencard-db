@@ -2,8 +2,8 @@
 
 Community-maintained credit-card JSON database with validated CDN exports and an optional Cloudflare Worker API.
 
-- Runtime: **Node.js >=24**. The root and `worker/` packages use **npm** with separately committed lockfiles.
-- Standard root checks: `npm run validate && npm run build:indexes && npm test`.
+- Runtime: **Bun 1.4.4** and **Node.js >=24**. The root and `worker/` packages use Bun with separately committed lockfiles.
+- Standard root checks: `bun run validate && bun run build:indexes && bun run test`.
 - Consult relevant references before changing:
   - [Data/schema/Worker development](docs/agents/development.md).
   - [Local Worker KV setup](docs/agents/local-worker.md).

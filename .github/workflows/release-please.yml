@@ -93,12 +93,16 @@ jobs:
         with:
           node-version: "24"
           check-latest: true
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: "1.4.4"
+          no-cache: true
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
       - name: Validate cards
-        run: npm run validate
+        run: bun run validate
       - name: Build exports
-        run: npm run build:exports
+        run: bun run build:exports
       - name: Commit refreshed exports to the release PR
         env:
           GH_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
@@ -145,11 +149,15 @@ jobs:
         with:
           node-version: "24"
           check-latest: true
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: "1.4.4"
+          no-cache: true
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
       - name: Verify committed exports match the tag's data
         run: |
-          npm run build:exports
+          bun run build:exports
           # generated_at is a build timestamp and always differs; any other
           # diff means the tag was cut with stale exports.
           if ! git diff -I '"generated_at"' --exit-code -- exports/; then

@@ -25,7 +25,7 @@ Insurance entries should prefer structured `details` (coverage, duration, deduct
 
 ## Registries & semantic lints (2026-07)
 
-`npm run validate` enforces more than the JSON Schema:
+`bun run validate` enforces more than the JSON Schema:
 
 - **`issuer_id` registry** — must resolve to an entry in `data/issuers.json`. New issuer? Add it there in the same PR. Known aliases (e.g. `first-bankcard`) are rejected with the canonical id (`fnbo`) suggested.
 - **`network_tier` allowlist** — must be one of `data/network-tiers.json`. Bare package slugs only: `infinite`, never `visa_infinite`; one atomic value, never `signature_or_platinum`.

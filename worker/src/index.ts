@@ -12,7 +12,7 @@ import {
 import { checkRateLimit } from "./rate-limit";
 import { searchMatch } from "./search";
 // Env comes from .cloudflare/types/index.d.ts, generated from cloudflare.config.ts by
-// `npm run types` (Cloudflare's recommended practice: never hand-write Env).
+// `bun run types` (Cloudflare's recommended practice: never hand-write Env).
 import type { Card, Meta } from "./types";
 
 function defaultCardAssetResponse(): Response {

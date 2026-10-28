@@ -47,7 +47,7 @@ npx opencard-export --help              # show help
 - `--passes-dir <path>` — override the Wallet directory (advanced / testing).
 - `--no-color` — disable ANSI color (also honors `NO_COLOR`).
 
-In a clone, run `npm ci` first so `npx opencard-export` uses this checkout's
+In a clone, run `bun install --frozen-lockfile` first so `npx opencard-export` uses this checkout's
 CLI (the root package exposes the local bin). Without a clone, `npx` fetches
 the published package from npm.
 

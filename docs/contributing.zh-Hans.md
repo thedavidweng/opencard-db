@@ -52,15 +52,15 @@ OpenCard DB 的卡片数据**只接受 Pull Request（PR）**，没有公开写�
 ```bash
 git clone https://github.com/thedavidweng/opencard-db.git
 cd opencard-db
-npm ci
+bun install --frozen-lockfile
 
 # 生成一张新卡的脚手架（交互式，或直接传参）：
-npm run new:card -- --country us --slug my-card --name "My Card"
+bun run new:card --country us --slug my-card --name "My Card"
 
 # 编辑 data/us/my-card.json，然后：
-npm run validate
-npm test
-npm run optimize:images   # 仅当你在 images/ 下新增了图片时
+bun run validate
+bun run test
+bun run optimize:images   # 仅当你在 images/ 下新增了图片时
 ```
 
 用 `card(add): us-my-card`（或修改已有卡时用 `card(update): …`）作为 PR 标题，并填好

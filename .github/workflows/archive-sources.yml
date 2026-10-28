@@ -48,10 +48,12 @@ jobs:
         with:
           node-version: "24"
           check-latest: true
-          cache: npm
 
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: "1.4.4"
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Archive changed card sources
         run: |
@@ -102,10 +104,12 @@ jobs:
         with:
           node-version: "24"
           check-latest: true
-          cache: npm
 
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: "1.4.4"
       - name: Install dependencies
-        run: npm ci
+        run: bun install --frozen-lockfile
 
       - name: Archive a weekly batch of sources
         run: |

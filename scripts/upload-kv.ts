@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Upload pre-built index artifacts (dist/indexes, from `npm run build:indexes`)
+ * Upload pre-built index artifacts (dist/indexes, from `bun run build:indexes`)
  * to the production Cloudflare KV namespace via the worker's pinned wrangler.
  *
  * The namespace id comes from worker/wrangler.jsonc (env.production), the

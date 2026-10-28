@@ -64,20 +64,20 @@ Best if you'll add several cards or want to validate before pushing.
 ```bash
 git clone https://github.com/thedavidweng/opencard-db.git
 cd opencard-db
-npm ci
+bun install --frozen-lockfile
 
-# After npm ci, `npx opencard-export` is the local CLI (not the npm copy).
+# After bun install --frozen-lockfile, `npx opencard-export` is the local CLI (not the npm copy).
 # From a Mac with the card in Apple Pay:
 #   npx opencard-export --export --repo .
 #   npx opencard-export --export --pr    # commit + open the PR (needs gh)
 
 # Scaffold a new card (interactive, or pass flags):
-npm run new:card -- --country us --slug my-card --name "My Card"
+bun run new:card --country us --slug my-card --name "My Card"
 
 # Edit data/us/my-card.json, then:
-npm run validate
-npm test
-npm run optimize:images   # only if you added files under images/
+bun run validate
+bun run test
+bun run optimize:images   # only if you added files under images/
 ```
 
 Open a PR with title `card(add): us-my-card` (or `card(update): …` when editing an
@@ -87,7 +87,7 @@ existing card) and fill in the PR form.
 [`npx opencard-export --export`](packages/opencard-export). It scans your Wallet,
 compares against the live DB, names the exported face after the matched Card Id, and
 prints the attribution to record — then add it under `images/` and run
-`npm run optimize:images`. Everything runs locally; nothing is uploaded.
+`bun run optimize:images`. Everything runs locally; nothing is uploaded.
 
 ---
 
@@ -95,7 +95,7 @@ prints the attribution to record — then add it under `images/` and run
 
 | Check | Purpose |
 |-------|---------|
-| **Validate** | Schema + semantic lints (`npm run validate`). See the [FAQ](docs/faq.md). |
+| **Validate** | Schema + semantic lints (`bun run validate`). See the [FAQ](docs/faq.md). |
 | **Labels** | Classifies the PR (`new-card`, `US`/`CA`/`CN`, …). Always green. |
 | **Form check** | Verifies the PR title + form fields; posts a sticky comment listing anything to fix. |
 | **Optimize Images** | Runs only if you uploaded a raster under `images/`. |

@@ -8,7 +8,7 @@
     "deploy": "cf deploy --mode selfhost",
     "deploy:production": "cf deploy --mode production",
     "types": "cf workers types --mode production",
-    "typecheck": "npm run types && tsc --noEmit"
+    "typecheck": "bun run types && tsc --noEmit"
   },
   "devDependencies": {
     "cf": "1.0.0-beta.23",
