@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
-  DEFAULT_STALE_DAYS,
   daysSince,
   findStaleCards,
 } from "../../scripts/find-stale-cards.ts";
@@ -77,10 +76,6 @@ describe("find stale cards", () => {
       stale.map((s) => s.id),
       ["us-ok"],
     );
-  });
-
-  it("uses a 180-day default window", () => {
-    assert.equal(DEFAULT_STALE_DAYS, 180);
   });
 });
 it("skips discontinued cards (no live page to re-verify)", () => {

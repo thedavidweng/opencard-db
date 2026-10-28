@@ -16,8 +16,6 @@ import {
   runArtChain,
   sha256,
   verifyClaim,
-  WEBP_EFFORT,
-  WEBP_LOSSLESS,
 } from "../../scripts/optimize-images.ts";
 
 const SHA_A = "a".repeat(64);
@@ -47,11 +45,6 @@ const prov = (over: Partial<ArtProvenance> = {}): ArtProvenance => ({
 });
 
 describe("optimize images: conversion", () => {
-  it("uses lossless WebP settings (Apple Pay @2x norm)", () => {
-    assert.equal(WEBP_LOSSLESS, true);
-    assert.equal(WEBP_EFFORT, 6);
-  });
-
   it("converts png uploads to lossless webp without downscaling", async () => {
     const dir = path.join("/tmp", `opencard-img-${Date.now()}`);
     await mkdir(dir, { recursive: true });
@@ -67,6 +60,7 @@ describe("optimize images: conversion", () => {
       .png()
       .toFile(png);
 
+    const originalPixels = await sharp(png).raw().toBuffer();
     const result = await optimizeImages(dir);
     assert.equal(result.written.length, 1);
     assert.ok(result.written[0].endsWith(".webp"));
@@ -77,6 +71,7 @@ describe("optimize images: conversion", () => {
     assert.equal(meta.width, 320);
     assert.equal(meta.height, 202);
     assert.equal(meta.format, "webp");
+    assert.ok((await sharp(result.written[0]).raw().toBuffer()).equals(originalPixels), "conversion preserves pixels");
 
     await rm(dir, { recursive: true, force: true });
   });

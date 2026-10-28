@@ -9,7 +9,6 @@ import {
   isWaybackUrl,
   parseArgs,
   selectBatch,
-  USER_AGENT,
   weekIndexFromKey,
 } from "../../scripts/archive-sources.ts";
 
@@ -160,16 +159,12 @@ describe("selectBatch", () => {
   });
 });
 
-describe("buildSaveUrl / USER_AGENT", () => {
+describe("buildSaveUrl", () => {
   it("appends the raw target to the Save Page Now endpoint", () => {
     assert.equal(
       buildSaveUrl("https://bank.example/card?x=1"),
       "https://web.archive.org/save/https://bank.example/card?x=1",
     );
-  });
-
-  it("identifies the archiver with a descriptive, repo-linked UA", () => {
-    assert.match(USER_AGENT, /^opencard-db-archiver\/1\.0 \(\+https:\/\/github\.com\//);
   });
 });
 

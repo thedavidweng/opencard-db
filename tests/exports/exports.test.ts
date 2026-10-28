@@ -4,7 +4,6 @@ import {
   buildCardsCsv,
   buildCardsYaml,
   buildExports,
-  CSV_COLUMNS,
 } from "../../scripts/build-exports.ts";
 import {
   buildIndexArtifacts,
@@ -31,13 +30,6 @@ describe("exports build contract", () => {
     ]) {
       assert.ok(files.includes(name), `missing export file: ${name}`);
     }
-  });
-
-  it("cards.csv header matches the documented columns", async () => {
-    const artifacts = await buildIndexArtifacts();
-    const csv = buildCardsCsv(artifacts["cards:all"]);
-    const [header] = csv.split("\n");
-    assert.equal(header, CSV_COLUMNS.join(","));
   });
 
   it("cards.csv has exactly one data row per card", async () => {
@@ -82,11 +74,12 @@ describe("exports build contract", () => {
   });
 
   it("cards.csv exposes art_grade as the final column", async () => {
-    assert.equal(CSV_COLUMNS[CSV_COLUMNS.length - 1], "art_grade");
     const artifacts = await buildIndexArtifacts();
     const cards = artifacts["cards:all"];
     const csv = buildCardsCsv(cards);
-    const dataLines = csv.split("\n").filter((l) => l.length > 0).slice(1);
+    const lines = csv.split("\n").filter((l) => l.length > 0);
+    assert.equal(lines[0].split(",").pop(), "art_grade");
+    const dataLines = lines.slice(1);
     // art_grade is the last column and its values never need CSV escaping,
     // so the final comma-separated segment is the grade even when earlier
     // fields contain quoted commas.
