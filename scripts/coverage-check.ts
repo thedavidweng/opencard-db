@@ -8,7 +8,7 @@
  * (see issue #26). Every OpenCard DB record is independently verified against
  * official issuer/network pages.
  *
- * Usage: npm run coverage:check [-- --strict]   (--strict: exit 1 on gaps)
+ * Usage: bun run coverage:check [--strict]   (--strict: exit 1 on gaps)
  */
 import { loadAllCards } from "./lib.ts";
 

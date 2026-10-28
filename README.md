@@ -109,7 +109,7 @@ Contributions welcome, whether it is a new card, a data correction, or card art.
 
 1. Copy [`templates/card.template.json`](templates/card.template.json) into `data/{country}/`
 2. Fill in the fields and cite your sources
-3. Run `npm run validate`
+3. Run `bun run validate`
 4. Open a pull request
 
 CI validates the schema, checks sources, and labels the PR automatically. Reviewers follow [`docs/REVIEWING.md`](docs/REVIEWING.md).
@@ -119,10 +119,10 @@ CI validates the schema, checks sources, and labels the PR automatically. Review
 ```bash
 git clone https://github.com/thedavidweng/opencard-db.git
 cd opencard-db
-npm ci
-npm run validate
-npm test
-npm run build:indexes   # writes dist/indexes/
+bun install --frozen-lockfile
+bun run validate
+bun run test
+bun run build:indexes   # writes dist/indexes/
 ```
 
 ## Repository layout

@@ -14,14 +14,14 @@ You get an unlimited (within **your** Free plan quotas) private API. No paid Clo
 ## Prerequisites
 
 - Cloudflare account (Free)
-- Node.js >=24 (matching root `package.json` engines)
+- Bun 1.4.4 and Node.js >=24 (matching root `package.json` engines)
 - This repository
 
 ## 1. Create a KV namespace
 
 ```bash
 cd worker
-npm ci
+bun install --frozen-lockfile
 npx cf auth login
 npx cf kv namespaces create --title OPENCARD_KV
 ```
@@ -39,9 +39,9 @@ id: mode === "production" ? "<official-namespace-id>" : "<your-namespace-id>",
 From the repo root:
 
 ```bash
-npm ci
-npm run validate
-npm run build:indexes
+bun install --frozen-lockfile
+bun run validate
+bun run build:indexes
 ```
 
 Upload keys (few bulk keys only — fits Free write budget):
@@ -70,7 +70,7 @@ otherwise read from `worker/wrangler.jsonc`).
 ```bash
 cd worker
 # Self-host defaults: MODE=selfhost, rate limits off
-npm run deploy
+bun run deploy
 ```
 
 > **A fresh deploy returns 404 until KV is seeded.** `/v1/health` and
@@ -81,7 +81,7 @@ npm run deploy
 > namespace), build and upload the indexes:
 >
 > ```bash
-> npm run build:indexes          # from the repo root → dist/indexes/
+> bun run build:indexes          # from the repo root → dist/indexes/
 > export CLOUDFLARE_API_TOKEN=…
 > export CLOUDFLARE_ACCOUNT_ID=…
 > export KV_NAMESPACE_ID=<your-namespace-id>

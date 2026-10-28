@@ -37,10 +37,10 @@ If **Form check** is red, expand the sticky comment and follow the numbered fixe
 
 1. File path: `data/{country}/{slug}.json`
 2. `id` must be `{country}-{slug}` (stable forever once merged)
-3. Valid against root `schema.json` (`npm run validate`)
+3. Valid against root `schema.json` (`bun run validate`)
 4. At least one official **Source** URL (product page and/or terms)
 5. `last_verified` set to the date you checked official pages
-6. Images are optional. Prefer official issuer URLs when stable; for local mirrors, Apple Pay @2x → lossless WebP is the graduation-level bar (`images/README.md`). CI: `npm run optimize:images`
+6. Images are optional. Prefer official issuer URLs when stable; for local mirrors, Apple Pay @2x → lossless WebP is the graduation-level bar (`images/README.md`). CI: `bun run optimize:images`
 
 ## Dead links & archiving
 
@@ -71,10 +71,10 @@ validator unwraps archived official pages, so a snapshot counts as a valid Sourc
 
 ```bash
 # edit data/us/my-card.json
-npm run validate
-npm test
-npm run optimize:images   # if you added files under images/
-npx opencard-export --export --repo .   # Apple Pay art (after npm ci)
+bun run validate
+bun run test
+bun run optimize:images   # if you added files under images/
+npx opencard-export --export --repo .   # Apple Pay art (after bun install --frozen-lockfile)
 ```
 
 ## PR title cheatsheet
@@ -105,7 +105,7 @@ Examples: `card(add): us-chase-sapphire-preferred`, `feat(pr-checks): detect dup
 
 ## Coverage vs public card lists
 
-`npm run coverage:check` fetches two public card lists at runtime and reports which of
+`bun run coverage:check` fetches two public card lists at runtime and reports which of
 their active cards this DB does not cover yet. Those lists are **discovery references
 only** — never `sources`, never copied into the repo (fields, URLs, images, or values).
 Every record here is verified against official issuer/network pages instead

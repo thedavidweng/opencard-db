@@ -2,7 +2,7 @@
 /**
  * Scaffold a new card JSON from templates/card.template.json.
  *
- *   npm run new:card -- --country us --slug my-card --name "My Card"
+ *   bun run new:card --country us --slug my-card --name "My Card"
  *
  * Missing flags are asked for interactively. Pure helpers (slug/path/scaffold)
  * are exported so they can be unit-tested without touching the filesystem.
@@ -90,7 +90,7 @@ export function parseFlags(argv: string[]): Flags {
   return out;
 }
 
-const USAGE = `Usage: npm run new:card -- --country us --slug my-card --name "My Card"
+const USAGE = `Usage: bun run new:card --country us --slug my-card --name "My Card"
 
 Flags (any omitted flag is asked for interactively):
   --country   2-letter market code (us, ca, cn, …)
@@ -159,7 +159,7 @@ async function main(): Promise<void> {
   await writeFile(target, JSON.stringify(card, null, 2) + "\n", "utf8");
 
   console.log(`created ${rel} (id: ${country}-${slug})`);
-  console.log("next: fill fields, npm run validate");
+  console.log("next: fill fields, bun run validate");
 }
 
 const isDirectRun =
