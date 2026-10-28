@@ -6,4 +6,4 @@ Root tasks from `package.json`: `validate`, `build:indexes`, `test`. Worker task
 
 The Worker uses `worker/cloudflare.config.ts` for `selfhost` (self-host baseline) and `production` (official instance) deployment modes. `Env` types generate into `worker/.cloudflare/types/index.d.ts` via `bun run --cwd worker types`; worker `typecheck` generates them before TypeScript validation. KV uploads use the pinned `cf` CLI (`cf kv keys put`); namespace and account ids come from production mode in `cloudflare.config.ts`.
 
-**Node.js >=24 is required (owner decision A).** The root `package.json` engines field is the support floor. Do not lower it. CI installs Node 26.12.1, which satisfies that floor.
+**Node.js >=24 is required (owner decision A).** The root `package.json` engines field is the support floor. Do not lower it. CI installs the latest Node LTS (`lts/*`), which satisfies that floor.
