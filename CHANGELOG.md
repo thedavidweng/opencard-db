@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/thedavidweng/opencard-db/compare/v0.4.1...v0.4.2) (2026-10-29)
+
+
+### Bug Fixes
+
+* **release:** stop docs-only merges from opening a catalog release PR ([#622](https://github.com/thedavidweng/opencard-db/issues/622)) ([80608c8](https://github.com/thedavidweng/opencard-db/commit/80608c8d3916f0ad45afc47ace8e1c393bf4f924))
+
 ## [0.4.1](https://github.com/thedavidweng/opencard-db/compare/v0.4.0...v0.4.1) (2026-10-26)
 
 
