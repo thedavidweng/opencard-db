@@ -73,11 +73,6 @@ jobs:
           # the upstream base commit and degrade gracefully (no archive step).
           fetch-depth: 0
 
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version: lts/*
-          check-latest: true
-
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: "1.4.4"
@@ -101,8 +96,8 @@ jobs:
           #  3. archive any replaced base-branch WebP under images/archive/ and
           #     append the old art's provenance to image.history[],
           #  4. fill image.provenance.converted_sha256 + image.local_path.
-          node --experimental-strip-types scripts/optimize-images.ts
-          written=$(node -e "const j=require('/tmp/opt.json'); console.log((j.written||[]).length)")
+          bun scripts/optimize-images.ts
+          written=$(bun -e "const j=require('/tmp/opt.json'); console.log((j.written||[]).length)")
           echo "written=$written" >> "$GITHUB_OUTPUT"
 
       - name: Refresh exports so npx lineage matches this PR
