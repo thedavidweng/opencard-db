@@ -44,11 +44,6 @@ jobs:
           fetch-depth: 0 # need github.event.before for the diff
           persist-credentials: false
 
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version: lts/*
-          check-latest: true
-
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: "1.4.4"
@@ -87,7 +82,7 @@ jobs:
           printf '%s\n' "$CARD_FILES"
 
           CHANGED_FILES="$CARD_FILES" \
-            node --experimental-strip-types scripts/archive-sources.ts --changed
+            bun scripts/archive-sources.ts --changed
 
   # Weekly rotation: refresh a deterministic slice of the whole corpus.
   rotate:
@@ -100,11 +95,6 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
-        with:
-          node-version: lts/*
-          check-latest: true
-
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: "1.4.4"
@@ -113,5 +103,5 @@ jobs:
 
       - name: Archive a weekly batch of sources
         run: |
-          node --experimental-strip-types scripts/archive-sources.ts \
+          bun scripts/archive-sources.ts \
             --batch 40 --offset-key "$(date -u +%Y-%m-%d)"
