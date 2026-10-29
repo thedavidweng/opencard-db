@@ -60,7 +60,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          bun <<'NODE' > /tmp/issue-body.md
+          bun - <<'NODE' > /tmp/issue-body.md
           const fs = require("fs");
           const report = JSON.parse(fs.readFileSync("/tmp/missing.json", "utf8"));
 

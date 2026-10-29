@@ -164,7 +164,7 @@ jobs:
           # `exit 1` below that flags "images still need a local optimize pass".
           # Guard every gh call with `|| true` so we always reach that exit.
           list=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${PR}/comments" --paginate || true)
-          id=$(echo "$list" | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const j=JSON.parse(d);const x=j.find(c=>String(c.body).includes('opencard-image-opt')); console.log(x?x.id:'')}catch{console.log('')}})")
+          id=$(echo "$list" | bun -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const j=JSON.parse(d);const x=j.find(c=>String(c.body).includes('opencard-image-opt')); console.log(x?x.id:'')}catch{console.log('')}})")
           if [ -n "$id" ]; then
             gh api -X PATCH "repos/${GITHUB_REPOSITORY}/issues/comments/${id}" -F body=@/tmp/img-comment.md || true
           else
