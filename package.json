@@ -31,7 +31,7 @@
     "sharp": "^0.35.5"
   },
   "devDependencies": {
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "opencard-export": "file:packages/opencard-export",
     "release-please": "17.6.0",
     "typescript": "^7.0.2"
