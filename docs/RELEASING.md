@@ -52,7 +52,7 @@ To force a specific version, put `Release-As: 1.0.0` on its own line in a commit
 
 Two pieces need human setup once. Both are optional to start; the workflow degrades gracefully without them.
 
-**1. `RELEASE_PLEASE_TOKEN` secret (required for unattended operation).** PRs opened with the default Actions token do not trigger CI, so the release PR's required checks would sit in "expected" forever and only an admin merge could land it. Create a fine-grained PAT scoped to this repository with read/write on Contents and Pull requests, then save it as the `RELEASE_PLEASE_TOKEN` repository secret. The exports refresh workflow uses the same secret for the same reason.
+**1. Release App credentials (required for unattended operation).** PRs opened with the default Actions token do not trigger CI, so the release PR's required checks would sit in "expected" forever and only an admin merge could land it. release-please therefore runs through the shared workflow in `thedavidweng/.github` with a short-lived token from the `thedavidweng-release` GitHub App. Set the `RELEASE_APP_ID` and `RELEASE_APP_CLIENT_ID` repository variables and the `RELEASE_APP_PRIVATE_KEY` repository secret. The weekly exports workflow (`exports.yml`) uses the same App token for the same reason.
 
 **2. npm trusted publishing (required only for CLI publishing).** The first `opencard-export` publish must be manual: `cd packages/opencard-export && npm login && npm publish --access public`. After that, open `https://www.npmjs.com/package/opencard-export/access`, add a Trusted Publisher pointing at this repository and the `release-please.yml` workflow, and set the repository variable `NPM_PUBLISH` to `true`. From then on the workflow publishes via OIDC, with no npm token stored anywhere.
 
