@@ -58,7 +58,7 @@ Two pieces need human setup once. The App credentials are required: the shared r
 
 ## Notes for maintainers
 
-- `main` requires a pull request with passing checks but no approval. The release PR is force-updated on every merge to `main`, so merge it once its checks are green.
+- `main` requires a pull request with passing checks but no approval. The release PR is force-updated on every merge to `main`. Before merging it, confirm that the latest `refresh-exports` run succeeded (it either pushed refreshed exports or found none to push), then wait for the checks on the resulting PR head to pass. Merging while `refresh-exports` is still running can tag stale exports.
 - Do not push manual commits to the release PR branch. release-please recreates the branch from `main` on its next run and drops them (the exports refresh commit is re-added automatically; yours will not be).
 - The release PR is opened by `thedavidweng-release[bot]`, so any maintainer can review and approve it through the normal path; no admin bypass is needed.
 - Emergency manual path if the automation is down: run `bun run build:exports`, **commit the result to `main` first** (quick PR or admin push), tag that commit, then `gh release create vX.Y.Z exports/*.json exports/cards.csv exports/cards.yaml --generate-notes`. The exports must be in the tagged commit or the jsDelivr tag pin serves stale data; Release assets alone do not fix that. Afterwards set the new version in `.release-please-manifest.json` and `package.json` so the next automated release PR starts from the right baseline.
