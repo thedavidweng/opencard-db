@@ -50,17 +50,17 @@ To force a specific version, put `Release-As: 1.0.0` on its own line in a commit
 
 ## One-time setup
 
-Two pieces need human setup once. Both are optional to start; the workflow degrades gracefully without them.
+Two pieces need human setup once. The App credentials are required: the shared release workflow has no `GITHUB_TOKEN` fallback, so release-please fails without them. npm trusted publishing is optional and only needed to publish the CLI.
 
-**1. `RELEASE_PLEASE_TOKEN` secret (required for unattended operation).** PRs opened with the default Actions token do not trigger CI, so the release PR's required checks would sit in "expected" forever and only an admin merge could land it. Create a fine-grained PAT scoped to this repository with read/write on Contents and Pull requests, then save it as the `RELEASE_PLEASE_TOKEN` repository secret. The exports refresh workflow uses the same secret for the same reason.
+**1. Release App credentials (required for unattended operation).** PRs opened with the default Actions token do not trigger CI, so the release PR's required checks would sit in "expected" forever and only an admin merge could land it. release-please therefore runs through the shared workflow in `thedavidweng/.github` with a short-lived token from the `thedavidweng-release` GitHub App. Set the `RELEASE_APP_ID` and `RELEASE_APP_CLIENT_ID` repository variables and the `RELEASE_APP_PRIVATE_KEY` repository secret. The weekly exports workflow (`exports.yml`) uses the same App token for the same reason.
 
 **2. npm trusted publishing (required only for CLI publishing).** The first `opencard-export` publish must be manual: `cd packages/opencard-export && npm login && npm publish --access public`. After that, open `https://www.npmjs.com/package/opencard-export/access`, add a Trusted Publisher pointing at this repository and the `release-please.yml` workflow, and set the repository variable `NPM_PUBLISH` to `true`. From then on the workflow publishes via OIDC, with no npm token stored anywhere.
 
 ## Notes for maintainers
 
-- Branch protection dismisses stale approvals, and the release PR is force-updated on every merge to `main`. Approve and merge it in one sitting; an approval left overnight will be dismissed by the next card merge.
+- `main` requires a pull request with passing checks but no approval. The release PR is force-updated on every merge to `main`. Before merging it, confirm that the latest `refresh-exports` run succeeded (it either pushed refreshed exports or found none to push), then wait for the checks on the resulting PR head to pass. Merging while `refresh-exports` is still running can tag stale exports.
 - Do not push manual commits to the release PR branch. release-please recreates the branch from `main` on its next run and drops them (the exports refresh commit is re-added automatically; yours will not be).
-- The release PR is authored by whoever owns the PAT, and GitHub does not let an author approve their own PR. With a second maintainer this is a real review gate; a solo maintainer merges the release PR with their admin bypass.
+- The release PR is opened by `thedavidweng-release[bot]`, so any maintainer can review and approve it through the normal path; no admin bypass is needed.
 - Emergency manual path if the automation is down: run `bun run build:exports`, **commit the result to `main` first** (quick PR or admin push), tag that commit, then `gh release create vX.Y.Z exports/*.json exports/cards.csv exports/cards.yaml --generate-notes`. The exports must be in the tagged commit or the jsDelivr tag pin serves stale data; Release assets alone do not fix that. Afterwards set the new version in `.release-please-manifest.json` and `package.json` so the next automated release PR starts from the right baseline.
 - Bump behavior, changelog sections, and the PR text live in `release-please-config.json`. Current versions live in `.release-please-manifest.json`.
 - The tag in README's CDN examples is documentation, not a pin the automation maintains: nothing reads it, so it drifts silently (it sat on `v0.2.0` through 0.3.x and 0.4.0). When a catalog release lands, bump that literal in the same week. Do not add a test asserting it equals `package.json`: release-please rewrites the release PR branch, so the assertion would deadlock every release.
