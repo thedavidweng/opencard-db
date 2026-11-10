@@ -14,13 +14,12 @@ name: Release Please
 # merge commit that gets tagged always carries current exports. No pre-tag
 # manual refresh is needed anymore.
 #
-# TOKEN: set the RELEASE_PLEASE_TOKEN secret to a fine-grained PAT (this repo;
-# contents: read/write, pull requests: read/write). PRs and tags created with
-# the default GITHUB_TOKEN do not trigger other workflows (GitHub's
-# anti-recursion rule), which would leave the release PR's required checks
-# (validate / Labels / Form check) stuck in "expected" and the PR unmergeable
-# without admin rights. The fallback to github.token below keeps the workflow
-# functional (degraded) if the secret is missing. See docs/RELEASING.md.
+# TOKEN: release-please runs in the shared thedavidweng/.github workflow with
+# a thedavidweng-release GitHub App token, and refresh-exports mints its own
+# App token. PRs, tags and pushes made with the default GITHUB_TOKEN do not
+# trigger other workflows (GitHub's anti-recursion rule), which would leave
+# the release PR's required checks (validate / Labels / Form check) stuck in
+# "expected". App tokens do trigger them. See docs/RELEASING.md.
 #
 # RECURSION SAFETY: this workflow triggers on pushes to main only. The
 # refresh-exports job pushes to the release PR branch (release-please--*),
@@ -42,26 +41,16 @@ concurrency:
 
 jobs:
   release-please:
-    permissions:
-      contents: write
-      pull-requests: write
-      issues: write
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    outputs:
-      prs_created: ${{ steps.rp.outputs.prs_created }}
-      pr: ${{ steps.rp.outputs.pr }}
-      release_created: ${{ steps.rp.outputs.release_created }}
-      tag_name: ${{ steps.rp.outputs.tag_name }}
-      cli_release_created: ${{ steps.rp.outputs['packages/opencard-export--release_created'] }}
-      cli_tag_name: ${{ steps.rp.outputs['packages/opencard-export--tag_name'] }}
-    steps:
-      - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
-        id: rp
-        with:
-          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
-          config-file: release-please-config.json
-          manifest-file: .release-please-manifest.json
+    name: Release Please
+    # Token, action pins and outputs live in the shared workflow; it mints a
+    # thedavidweng-release GitHub App token, so release PRs and tags start
+    # other workflows (PR checks, tag-push releases) like any other push.
+    permissions: {}
+    uses: thedavidweng/.github/.github/workflows/release-please.yml@907a093fd4fbde1ef2be3ef24d415d58560067b8 # v1
+    with:
+      app-id: ${{ vars.RELEASE_APP_ID }}
+    secrets:
+      app-private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
 
   # Rebuild exports/ on the release PR branch so the tagged commit serves
   # current data on jsDelivr. release-please force-recreates its branch from
@@ -77,9 +66,7 @@ jobs:
   # chore-typed bulk data edit could reach the tag with stale exports.
   refresh-exports:
     permissions:
-      contents: write
-      pull-requests: write
-      issues: write
+      contents: read
     timeout-minutes: 60
     needs: release-please
     if: needs.release-please.outputs.prs_created == 'true' && needs.release-please.outputs.pr != ''
@@ -88,7 +75,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ fromJSON(needs.release-please.outputs.pr).headBranchName }}
-          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
+          persist-credentials: false
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: lts/*
@@ -103,9 +90,21 @@ jobs:
         run: bun run validate
       - name: Build exports
         run: bun run build:exports
+      # Mint the App token only after the dependency scripts have run, so
+      # they never see it. An App token (not GITHUB_TOKEN) makes the exports
+      # push re-run the release PR's required checks.
+      - name: Mint App token
+        id: app-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: read
       - name: Commit refreshed exports to the release PR
         env:
-          GH_TOKEN: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          GH_REPO: ${{ github.repository }}
           PR: ${{ fromJSON(needs.release-please.outputs.pr).number }}
           BRANCH: ${{ fromJSON(needs.release-please.outputs.pr).headBranchName }}
         run: |
@@ -124,7 +123,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore(exports): refresh generated exports for release"
-          git push origin "HEAD:$BRANCH"
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          echo "::add-mask::$auth"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $auth" \
+            push "https://github.com/$GH_REPO.git" "HEAD:$BRANCH"
 
   # Attach the exports committed at the tag to the GitHub Release as a
   # direct-download mirror of the jsDelivr tag-pinned files. The committed
@@ -181,7 +183,7 @@ jobs:
   publish-cli:
     timeout-minutes: 60
     needs: release-please
-    if: needs.release-please.outputs.cli_release_created == 'true' && vars.NPM_PUBLISH == 'true'
+    if: fromJSON(needs.release-please.outputs.outputs-json)['packages/opencard-export--release_created'] == 'true' && vars.NPM_PUBLISH == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -190,7 +192,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          ref: ${{ needs.release-please.outputs.cli_tag_name }}
+          ref: ${{ fromJSON(needs.release-please.outputs.outputs-json)['packages/opencard-export--tag_name'] }}
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: lts/*

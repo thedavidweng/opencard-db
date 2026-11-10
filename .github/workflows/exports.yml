@@ -7,10 +7,9 @@ name: Refresh exports
 #
 # Why a PR instead of a direct push: main's branch protection requires status
 # checks, which rejects direct pushes from github-actions[bot] (GH006). The
-# PR is opened with RELEASE_PLEASE_TOKEN (a PAT) when configured so CI runs
-# on it and a maintainer can merge normally. With the default GITHUB_TOKEN
-# fallback the PR does not trigger CI (GitHub's anti-recursion rule) and
-# needs a close/re-open or an admin merge.
+# PR is opened with a thedavidweng-release GitHub App token so CI runs on it
+# and a maintainer can merge normally. A PR opened with GITHUB_TOKEN would not
+# trigger CI (GitHub's anti-recursion rule).
 
 on:
   schedule:
@@ -35,12 +34,13 @@ permissions:
 jobs:
   refresh:
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
         with:
           bun-version: "1.4.4"
@@ -50,10 +50,19 @@ jobs:
         run: bun run validate
       - name: Build exports
         run: bun run build:exports
+      # Minted after the dependency scripts have run, so they never see it.
+      - name: Mint App token
+        id: app-token
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        with:
+          client-id: ${{ vars.RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
       - name: Open refresh PR if exports changed
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
-          token: ${{ secrets.RELEASE_PLEASE_TOKEN || github.token }}
+          token: ${{ steps.app-token.outputs.token }}
           add-paths: exports/
           branch: bot/refresh-exports
           commit-message: "chore(exports): refresh generated exports"
