@@ -62,7 +62,18 @@
   "benefits": [],
   "travel_perks": null,
   "official_url": "https://www.paypal.com/us/digital-wallet/manage-money/paypal-cashback-mastercard",
-  "image": null,
+  "image": {
+    "provenance": {
+      "source": "apple-pay",
+      "source_sha256": "a4c439a54a6e6d821a49a606828ee75f63a4592833bc425810a11d8497def872",
+      "width": 1536,
+      "height": 969,
+      "exported_at": "2026-11-20",
+      "converted_sha256": "6491422f76ede4cec0dd9e2937adcf3b42ce2b86997b52fee246c751dd6729b8"
+    },
+    "local_path": "images/us-synchrony-paypal-cashback-mastercard.webp",
+    "attribution": "© PayPal / Synchrony (Apple Pay digital card art)"
+  },
   "bin_hints": [],
   "last_verified": "2026-10-22",
   "sources": [
