@@ -51,7 +51,18 @@
   "benefits": [],
   "travel_perks": null,
   "official_url": "https://robinhood.com/creditcard/",
-  "image": null,
+  "image": {
+    "provenance": {
+      "source": "apple-pay",
+      "source_sha256": "72ed99db2b0549936d5658d20e545d5c74665920ad1f6f45db51684f4c2ef041",
+      "width": 1536,
+      "height": 969,
+      "exported_at": "2026-11-20",
+      "converted_sha256": "cc40fc726bb8e2955885a918ee860987dc0265f44f323509e76cba84221fc564"
+    },
+    "local_path": "images/us-robinhood-gold-card.webp",
+    "attribution": "© Robinhood / Coastal Community Bank (Apple Pay digital card art)"
+  },
   "bin_hints": [],
   "last_verified": "2026-10-22",
   "sources": [
